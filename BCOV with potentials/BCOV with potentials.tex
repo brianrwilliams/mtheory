@@ -1,0 +1,92 @@
+% Created 2020-08-18 Tue 22:24
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{macros}
+\author{Surya Raghavendran}
+\date{\today}
+\title{Holomorphic M-theory and the $\SU(4)$-invariant twist of type $\IIA$ }
+\hypersetup{
+ pdfauthor={Surya Raghavendran},
+ pdftitle={BCOV with potentials},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.3 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+BCOV with potentials refers to a modification of minimal BCOV theory where we impose certain constraints on the fields so as to make the Poisson BV structure of the theory invertible. These constraints amount to requiring that certain fields lie in the image of the divergence operator \(\del\), or better yet replacing $\del$-closed fields in a summand \(\PV^{d,\bullet}\) with all of \(\PV^{d,\bullet}\) and using a fixed choice of splitting of \(\del: \PV^{d,\bullet}\to \PV^{d-1,\bullet}\) to rewrite \(\PV^{d,\bullet}\cong\im\del\oplus\ker\del\).
+
+Under the conjectures of Costello-Li that describe twisted type II supergravity in terms of BCOV theory, these primitives correspond to certain components of Ramond-Ramond fields, which are chosen as potentials for Ramond-Ramond field strengths.
+
+\section{BCOV theory with potentials on a CY4}
+\label{sec:org3d6a090}
+
+Let \(X\) be a CY4. BCOV theory on \(X\) with potentials will be the \(\mb{Z}/2\) graded BV theory defined as follows. Fix splittings \(C_1: (\im\del\subset\PV^{3,\bullet})\to \PV^{4,\bullet}\) of  \[0\to\ker\del\to \PV^{4,\bullet}\to(\im\del\subset\PV^{3,\bullet}\to 0\] and \(C_2: (\im\del\subset\PV^{2,\bullet})\to\PV^{3,\bullet}\) of \[0\to\ker\del\to\PV^{3,\bullet}\to(\im\del\subset\PV^{2,\bullet}(X))\to 0.\] And let \(\phi_{C_1} : \PV^{4,\bullet}\cong(\ker\del\subset\PV^{4,\bullet})\oplus(\im\del\subset\PV^{3,\bullet})\), \(\phi_{C_2}: \PV^{3,\bullet}\cong(\ker\del\subset\PV^{3,\bullet})\oplus(\im\del\subset\PV^{2,\bullet})\) be the resulting isomorphisms.
+\begin{itemize}
+\item The fields of the theory are
+ \[\begin{aligned} \mc E_{mBCOV}^{C_1,C_2} = \PV^{0,\bullet} \oplus (\ker\del\subset\PV^{1,\bullet})\oplus & (\im\del\subset\PV^{2,\bullet} \oplus\ker\del\subset\PV^{3,\bullet})\\ \oplus &(\im\del\subset\PV^{3,\bullet}\oplus\ker\del\subset\PV^{4,\bullet})\end{aligned}\]
+\item The Poisson kernel is given by $(\del\otimes 1)\delta_{Diag}$
+\item The \(L_\infty\) structure is defined as follows
+\begin{itemize}
+\item \(\ell_1=\delbar\)
+\item \(\ell_2\) is a certain modification of the Schouten bracket, defined as follows. Let \([-,-]\) denote the usual Schouten bracket of polyvector fields. Then
+
+\begin{enumerate}
+\item \(\mu\in\PV^{0,\bullet}, \nu\in\ker\del\subset\PV^{1,\bullet}\), \(\ell_2(\mu,\nu)=[\mu,\nu]\).
+\item \(\mu\in\PV^{0,\bullet}, \nu\in\im\del\subset\PV^{2,\bullet}\), \(\ell_2(\mu,\nu)=(-1)^{|\mu|-1}\del[\mu,\phi^{_1}_{C_1}\nu]\) and \(\ell_2(\nu,\mu)=\del[\mu,\phi^{-1}_{C_1}\nu]\)
+\item \(\mu\in\PV^{0,\bullet}, \nu\in(\im\del\subset\PV^{3,\bullet})\oplus(\ker\del\subset\PV^{4,\bullet})\), \(\ell_2(\mu,\nu)=(-1)^{|\mu|-1}\phi_{C_1}[\mu, \phi^{-1}_{C_2}\nu]\) and \(\ell_2(\nu, \mu)=\phi_{C_1}[\mu, \phi^{-1}_{C_2}\nu]\).
+\item \(\mu,\nu\in\ker\del\subset\PV^{1,\bullet}\), \(\ell_2(\mu,\nu)=[\mu,\nu]\).
+\item \(\mu\in\ker\del\subset\PV^{1,\bullet}, \nu\in(\im\del\subset\PV^{2,\bullet})\oplus(\ker\del\subset\PV^{3,\bullet})\), \(\ell_2(\mu,\nu)=(-1)^{|\mu|-1}\phi_{C_1}[\mu, \phi^{-1}_{C_1}\nu]\) and \(\ell_2(\nu, \mu)=\phi_{C_1}[\phi^{-1}_{C_1}\nu, \mu]\)
+\item \(\mu\in\ker\del\subset\PV^{1,\bullet}, \nu\in(\im\del\subset\PV^{3,\bullet})\oplus(\ker\del\subset\PV^{5,\bullet})\), \(\ell_2(\mu,\nu)=(-1)^{|\mu|-1}\phi_{C_2}[\mu, \phi^{-1}_{C_2}\nu]\) and \(\ell_2(\nu, \mu)=\phi_{C_2}[\phi^{-1}_{C_2}\nu, \mu]\)
+\item All other brackets vanish for degree reasons.
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+
+\begin{prop}
+The above in fact defines a (shifted) $L_\infty$-structure.
+\end{prop}
+
+\begin{rmk}
+\begin{itemize}
+\item Note that the complex underlying $\mc E_{mBCOV}^{C_1,C_2}$ does not arise as sections of a graded vector bundle due to the presence of the constraints.
+\item Recall that minimal BCOV theory has fields $\mc E_{mBCOV}=\oplus_{i\leq 3} (\ker\del\subset\PV^{\i,\bullet}$. As we have mentioned above, we may view the underlying complex of $\mc E_{mBCOV}^{C_1,C_2}$ as gotten by replacing $\ker\del\subset\PV^{2/3,\bullet}\subset\mc E_{mBCOV}$ with $\PV^{3/4,\bullet}$ in the same degree, and using the isomorphisms $\phi_{C_1,C_2}$. The $L_\infty$ structure is gotten by simply transporting the ordinary Schouten-Nijenhuis bracket on \[\PV^{0,\bullet}\oplus(\ker\del\subset\PV^{1,\bullet}\oplus\PV^{3,\bullet}[]\oplus\PV^{4,\bullet}[]\] and applying the fact that since $\del$ is a derivation of $[-,-]$, for $\mu\in\ker\del$, $[\mu,\del\gamma]=(-1)^{|\mu|-1}\del[\mu,\gamma]$ and $[\del\gamma,\mu]=\del[\gamma,\mu]$. Hopefully this demystifies the above formulas.
+\item Suppose we were to naively try to define a BV pairing $\omega$ on $\mc E_{mBCOV}^{C_1,C_2}$ by $\omega(-,-)=\int (-)\wedge\del^{-1}(-)$ and write an "action functional" using the above $L_\infty$-structure. Then the resulting action functional would be equivalent to one coming from an honest BV pairing and an $L_\infty$-structure involving a composition of $\del$ and the ordinary Schouten-Nijenhuis bracket. Note that we could have accomplished the same thing by choosing splittings of $\del$ from any $\im\del\subset \PV^{d_1,\bullet}$, $\im\del\subset\PV^{d_2,\bullet}$ such that $d_1+d_2\neq d-1$. However, it seems like these two choices of splittings are favored in a sense (articulated below). 
+\end{itemize}
+\end{rmk}
+
+\section{Dimensional Reduction}
+Let's consider the holomorphic twist of M-theory on $\R\times\C^\times\times\C^4$. We may decompose the fields as
+\begin{itemize}
+\item \[\mu=\mu_{01}+\mu_{10}\in\Omega^\bullet(\R)\otimes\left (\begin{aligned} &( \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4)) \\ \oplus & (\PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4))\end{aligned} \to\PV^{0,\bullet}(\C^\times\times\C^4)\right ).\]
+\item $\gamma=\gamma_{01}+\gamma_{10}\in \Omega^\bullet(\R)\otimes(\Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\oplus\Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4))$.
+\end{itemize}
+
+\begin{prop}
+There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\times\mc E_{mBCOV}^{C_1,C_2}$ given by 
+\begin{itemize}
+\item $[\mu_{01}]\mapsto\mu^1\in\ker\del\subset\PV^{1,\bullet}(\C^4)\subset\mc E_{mBCOV}^{C_1,C_2}$
+\item $[\mu_{10}]\mapsto\mu^3 =\del_{\C^4}(\mu_{10}\Omega^{-1}_{\C^4})\subset\im\del\subset\PV^{3,\bullet}\subset\mc E_{mBCOV}^{C_1,C_2}$ where $\Omega_{\C^4}$ denotes the holomorphic volume form on $\C^4$.
+\item $[\gamma_{01}]\mapsto\mu^2 = \del_{C^4}(\gamma_{01}\vee\Omega^{-1}_{\C^4})\subset\im\del\subset\PV^{2,\bullet}\subset\mc E_{mBCOV}^{C_1,C_2}$.
+\item $[\gamma_{10}]\mapsto\mu^0\in\PV^0\subset\mc E_{mBCOV}^{C_1,C_2}$
+\end{itemize}
+preserving the relevant pairings.
+\end{prop}
+
+That is, the reduction of the holomorphic M theory on a holomorphic circle should be the $\SU(4)$ invariant twist of $\IIA$. 
+\end{document}
