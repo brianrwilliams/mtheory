@@ -15,6 +15,11 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{macros}
+\usepackage{tikz,tikz-cd}
+
+%brian's macros
+\newcommand\bu{\bullet}
+
 \author{Surya Raghavendran}
 \date{\today}
 \title{Holomorphic M-theory and the $\SU(4)$-invariant twist of type $\IIA$ }
@@ -32,6 +37,67 @@
 BCOV with potentials refers to a modification of minimal BCOV theory where we impose certain constraints on the fields so as to make the Poisson BV structure of the theory invertible. These constraints amount to requiring that certain fields lie in the image of the divergence operator \(\del\), or better yet replacing $\del$-closed fields in a summand \(\PV^{d,\bullet}\) with all of \(\PV^{d,\bullet}\) and using a fixed choice of splitting of \(\del: \PV^{d,\bullet}\to \PV^{d-1,\bullet}\) to rewrite \(\PV^{d,\bullet}\cong\im\del\oplus\ker\del\).
 
 Under the conjectures of Costello-Li that describe twisted type II supergravity in terms of BCOV theory, these primitives correspond to certain components of Ramond-Ramond fields, which are chosen as potentials for Ramond-Ramond field strengths.
+
+\section{Warm-up: Kodaira--Spencer theory on a Calabi--Yau surface}
+
+Let $X$ be a Calabi--Yau surface. 
+Minimal Kodaira--Spencer theory is a $\mb Z/2$-graded theory described by two fundamental sets of fields:
+\begin{itemize}
+\item An odd field given by a divergence-free holomorphic vector field $\mu^1$. 
+\item An even field given by a holomorphic function $\mu^0$.
+\end{itemize}
+These fields combine to define a $\mb Z/2$-graded sheaf $\mc E^{\rm hol}$ on $X$. 
+There is a Lie algebra structure the parity reversed sheaf $\Pi \mc E^{\rm hol}$ using the Lie bracket of holomorphic vector fields together with the natural action of holomorphic vector fields on holomorphic functions. 
+
+The sheaf $\mc E^{\rm hol}$ admits the following locally free description:
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} \\
+ & \PV^{0,\bu} \\
+ \PV^{1,\bu} \ar[r, "\partial"] & \PV^{0,\bu} .
+\end{tikzcd}
+\]
+We refer to this locally free description by $\mc E$. 
+The Lie bracket on $\Pi \mc E^{\rm hol}$ described above extends to a Lie bracket on $\Pi \mc E$.
+Together with the differential this gives $\Pi \mc E$ the structure of a local dg Lie algebra. 
+
+The bundle $\mc E$ is equipped with an odd Poisson tensor defined by 
+\[
+\Pi = (\partial \otimes 1) \delta_{\rm Diag} .
+\]
+
+We introduce another theory called minimal Kodaira--Spencer theory ``with potentials" that we will refer to as $\mc E_{\rm pot}$. 
+The underlying vector bundle is 
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} \\
+ & \PV^{0,\bu} \\
+ \PV^{2,\bu}  .
+\end{tikzcd}
+\]
+The parity shifted bundle $\Pi \mc E_{\rm pot}$ also has the structure of a local Lie algebra described in the following way. 
+
+First, we note that any Calabi--Yau service comes equipped with a holomorphic symplectic structure and hence there is a Poisson bracket of holomorphic functions. 
+First, $\PV^{2, \bu}$ has a Lie bracket defined by the equation
+\[
+[\alpha, \alpha']_{\PV^2} = \Omega^{-1} [\Omega \alpha, \Omega \alpha'] .
+\]
+
+The theory $\mc E_{\rm pot}$ is a non-degenerate BV theory with BV pairing defined by the wedge-and-integrate pairing
+\[
+\alpha, \beta \mapsto \int \alpha \wedge \beta  .
+\]
+
+There is a map of bundles $\Phi : \mc E_{\rm Pot} \to \mc E$ which is the identity on $\PV^{0,\bu}$ and given by $\partial : \PV^{2,\bu} \to \PV^{1,\bu}$ on the remaining component. 
+It is a direct calculation to check that $\Phi$ defines a map on the parity shifted local Lie algebras.
+In fact, we have the following.
+
+\begin{prop}
+The map $\Phi$ determines a map of $\mb P_0$-factorization algebras on $X$:
+\[
+\Phi^* : {\rm Obs}_{\mc E} \to {\rm Obs}_{\mc E_{\rm Pot}} .
+\]
+\end{prop}
 
 \section{BCOV theory with potentials on a CY4}
 \label{sec:org3d6a090}
