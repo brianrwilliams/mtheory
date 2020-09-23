@@ -102,7 +102,7 @@ The map $\Phi$ determines a map of $\mb P_0$-factorization algebras on $X$:
 \label{sec:org3d6a090}
 Let \(X\) be a Calabi-Yau 4 fold. Minimal Kodaira-Spencer theory on $X$ is a $\Z/2$-graded theory with the following fundamental fields:
 \begin{itemize}
-\item The even fields are a holomorphic function $\mu^0$ and a $\del$-closed holomorphic bivector $\mu^0$.
+\item The even fields are a holomorphic function $\mu^0$ and a $\del$-closed holomorphic bivector $\mu^2$.
 \item The odd fields are a divergence-free holomorphic vector field $\mu^1$ and a $\del$-closed holomorphic section of $\wedge^3 T_X$. 
 \end{itemize}
 
@@ -125,10 +125,10 @@ As in the surface case, there is a closely related BV theory gotten by adding "p
 \[
 \begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
-& & & \PV^{0,\bu} \\
-& & \PV^{1,\bu} \ar[r, "\partial"] & \PV^{0,\bu} \\
-& \PV^{3,\bu} & &  \\ 
-\PV^{4,\bu}&  &  & \\ 
+& & & \mu^{0}\in\PV^{0,\bu} \\
+& & \mu^{1}\in\PV^{1,\bu} \ar[r, "\partial"] & \mu^{c}\in\PV^{0,\bu} \\
+& \gamma^{3}\in\PV^{3,\bu} & &  \\
+\gamma^{4}\in\PV^{4,\bu}&  &  & \\
 \end{tikzcd}
 \]
 
@@ -181,20 +181,30 @@ The above in fact defines a (shifted) $L_\infty$-structure.
 \section{Dimensional Reduction}
 Let's consider the holomorphic twist of M-theory on $\R\times\C^\times\times\C^4$. We may decompose the fields as
 \begin{itemize}
-\item \[\mu=\mu_{01}+\mu_{10}\in\Omega^\bullet(\R)\otimes\left (\begin{aligned} &( \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4)) \\ \oplus & (\PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4))\end{aligned} \to\PV^{0,\bullet}(\C^\times\times\C^4)\right ).\]
+\item \[(\mu^{1}, \mu^{0})=(\mu_{01}+\mu_{10}, \mu^{0})\in\Omega^\bullet(\R)\otimes\left (\begin{aligned} &( \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4)) \\ \oplus & (\PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4))\end{aligned} \to\PV^{0,\bullet}(\C^\times\times\C^4)\right ).\]
 \item $\gamma=\gamma_{01}+\gamma_{10}\in \Omega^\bullet(\R)\otimes(\Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\oplus\Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4))$.
 \end{itemize}
 
 \begin{prop}
-There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\times\mc E_{mBCOV}^{C_1,C_2}$ given by 
+There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\otimes\mc E_{Pot}$ given by
 \begin{itemize}
-\item $[\mu_{01}]\mapsto\mu^1\in\ker\del\subset\PV^{1,\bullet}(\C^4)\subset\mc E_{mBCOV}^{C_1,C_2}$
-\item $[\mu_{10}]\mapsto\mu^3 =\del_{\C^4}(\mu_{10}\Omega^{-1}_{\C^4})\subset\im\del\subset\PV^{3,\bullet}\subset\mc E_{mBCOV}^{C_1,C_2}$ where $\Omega_{\C^4}$ denotes the holomorphic volume form on $\C^4$.
-\item $[\gamma_{01}]\mapsto\mu^2 = \del_{C^4}(\gamma_{01}\vee\Omega^{-1}_{\C^4})\subset\im\del\subset\PV^{2,\bullet}\subset\mc E_{mBCOV}^{C_1,C_2}$.
-\item $[\gamma_{10}]\mapsto\mu^0\in\PV^0\subset\mc E_{mBCOV}^{C_1,C_2}$
+\item $[\gamma_{10}]\mapsto\mu^0\in\PV^{0,\bullet}\subset\mc E_{Pot}$.
+  \item $[\mu_{01}]\mapsto\mu^1\in\PV^{1,\bullet}(\C^4)\subset\mc E_{Pot}$.
+\item $[\mu^{0}]\mapsto\mu^{c}\in\PV^{0, \bullet}(\C^{4})\subset\mc E_{Pot}$.
+\item $[\gamma_{01}]\mapsto\mu^3 = \gamma_{01}\vee\Omega^{-1}_{\C^4}\in\PV^{3,\bullet}\subset\mc E_{Pot}$ where $\Omega_{\C^4}$ denotes the holomorphic volume form on $\C^4$.
+\item $[\mu_{10}]\mapsto\mu^4 =\mu_{10}\vee\Omega^{-1}_{\C^4}\in\PV^{4,\bullet}\subset\mc E_{Pot}$ .
+
+
 \end{itemize}
 preserving the relevant pairings.
 \end{prop}
 
-That is, the reduction of the holomorphic M theory on a holomorphic circle should be the $\SU(4)$ invariant twist of $\IIA$. 
+That is, the reduction of the holomorphic M theory on a holomorphic circle should be the $\SU(4)$ invariant twist of $\IIA$.
+
+\begin{rmk}
+Note that the field $\mu^{c}\in \mc E_{\mr Pot}$ is nonpropating. It must pair against a field in $\PV^{3}$. In order for the field $\mu^{0}$ in M-theory to propogate, it must pair against a field $\gamma^{0}\in \Omega^{0,\bullet}$ which is the ghost for the gauge transformation for $\gamma^{1}$. This suggests an enlargement of $\mc E_{\mr Pot}$ where we add an additional field in $\PV^{3}$ which will be the image of the ghost of $\gamma^{1}$ in M-theory under dimensional reduction.
+\end{rmk}
+
+\surya{ When we discussed dimensional reduction on 9/22 over Zoom, I accidentally switched the roles of $\gamma_{10}$ and $\mu_{10}$. I realized this was wrong - the resulting map cannot be a Lie map. Indeed, there is certainly a nontrivial bracket between $\gamma_{10}$ and $\gamma_{10}$ in M-theory, from expanding the $\gamma\del\gamma\del\gamma$ term. However, there is no nontrivial bracket between $\PV^{3,\bullet}$ and $\PV^{4,\bullet}}$ in $\mc E_{\rm Pot}$ }
+
 \end{document}
