@@ -7,21 +7,7 @@
 
 \linespread{1.5}
 
-\setcounter{tocdepth}{2}
-\numberwithin{equation}{section}
-\newcommand{\nocontentsline}[3]{}
-\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
-\newcommand{\changelocaltocdepth}[1]{%
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
-  \setcounter{tocdepth}{#1}%
-}
-\setcounter{tocdepth}{1}
-
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
-
-\newcommand{\defterm}[1]{\textbf{\emph{#1}}}
-
-\def\PV{{\rm PV}}
 
 \begin{document}
 
@@ -60,7 +46,81 @@ It is equipped with the classical BRST operator
 \]
 where $\d_{\rm CE}$ denotes (roughly) the Chevalley--Eilenberg differential for holomorphic vector fields and $\delta$ is the operator $\left\{\frac13 \int \gamma \partial \gamma \partial \gamma \;, \; \cdot \; \right\}$. 
 
-The anomaly to satisfying the quantum master equation is a class in $H^1 (\oloc(\cE))$. 
+\section{One-loop Feynman diagrams}
+
+To construct the one-loop quantization we must first construct a one-loop effective family. 
+This is a family of functionals $\{I[L]\}_{L>0}$ which satisfies the renormalization group equations. 
+
+The $11$-dimensional theory on $\CC^5 \times \RR$ that we consider is a mixed holomorphic-topological theory. 
+Heuristically, this means that the theory depends holomorphically on $\CC^5$ and topologically on $\RR$. 
+
+%\begin{dfn}
+%Let $X$ be a complex manifold and $M$ a smooth manifold.
+%A {\em mixed holomorphic-topological} elliptic complex on $X \times M$ is an elliptic complex of the form
+%\[
+%\Omega^{0,\bu}(X , V) \Hat{\otimes} \Omega^{\bu} (M, E)
+%\]
+%where $V$ is a holomorphic vector bundle on $X$ and $E$ is a flat vector bundle on $M$. 
+%\end{dfn}
+
+\begin{thm}[\cite{GWR}] \label{thm:oneloop}
+For any mixed holomorphic-topological theory on $\CC^n \times \RR^m$, $n,m \geq 0$, there exists 
+a translation-invariant effective family $\{I[L]\}$ which to first order in $\hbar$ is finite. 
+\end{thm}
+
+We briefly recount the main elements involved in the proof of this theorem. 
+The result relies on the existence of a propagator corresponding to the ``holomorphic-topological" gauge that enjoys particularly desirable analytic properties. 
+At the level of the free theory, the linear BRST operator for the $11$-dimensional theory in question is of the form 
+\[
+\dbar + \partial_\Omega + \d_{\rm dR} .
+\]
+The first term denotes the $\dbar$-operator corresponding to a graded holomorphic vector bundle built from polyvector fields on $X = \CC^5$. 
+The second term term is the holomorphic differential operator action by the divergence operator on the same bundle of polyvector fields. 
+The third term is the de Rham operator along $\RR$. 
+
+The ``holomorphic-topological gauge" refers to the choice of the following gauge fixing operator
+\[
+Q^{\rm GF} = \dbar^* + \d_{\rm dR}^* .
+\]
+
+The heat kernel is
+\begin{align*}
+K_{t} (z, t ; w , s) & = \frac{1}{(2\pi i)^{11/2}} e^{|z-w|^2/4t + (t-s)^2/4t} \times \\
+& \sum_{i=1}^5 \left(\partial_{z^i} - \partial_{w^i} \right) \otimes (\d z^i - \d w^j) \otimes \prod_{j=1}^5 (\d \zbar^j - \d \wbar^j) \otimes (\d t - \d s)
+\end{align*}
+
+The propagator is
+\[
+P_{\epsilon < L} (z, t ; w , s) = \int_{T=\epsilon}^L Q^{\rm GF} K_{t} (z, t ; w , s) \d T .
+\]
+
+\section{The quantum master equation} 
+
+The anomaly to satisfying the scale $L$ quantum master equation is 
+\[
+\Theta[L] =
+Q I[L] + \hbar \triangle_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L .
+\]
+Here $\triangle_L$ is the well-defined regularized scale $L$ BV Laplacian, and $\{-,-\}_L$ is a regularized version of the classical BV bracket.
+The $\hbar \to 0$, $L \to 0$ limit of the above equation is precisely the classical master equation. 
+An effective family $\{I[L]\}$ is a quantum field theory if it satisfies the scale $L$ QME for every $L > 0$. 
+For more complete details we refer to \cite[Chapter 8]{Book2}. 
+
+In general, not every effective theory satisfies the QME. 
+The {\em scale} $L$ {\em anomaly} to satisfying the QME describes the failure of $I[L]$ to satisfy the scale $L$ QME.
+Since $I[L]$ is filtered by powers of $\hbar$, so is the anomaly.
+For theories of cotangent type as considered in this paper, $I[L]$ truncates at order $\hbar$, hence we only need to consider the $\hbar$-linear anomaly which we denote by $\hbar \Theta[L]$. 
+The $L \to 0$ limit of $\Theta[L]$ is defined and determines a cohomological degree $+1$ {\em local functional}
+\[
+\Theta \define \lim_{L \to 0} \Theta [L] \in \oloc(\cE) .
+\]
+Moreover, $\Theta$ is closed for the classical differential $\{S,-\}_{\rm BV}$, hence determines a cohomology class 
+\[
+[\Theta] \in H^1(\oloc(\cE), \{S,-\}_{\rm BV}),
+\]
+see \cite[\S 5.11]{CostelloBook}.
+
+\subsection{The obstruction deformation complex}
 
 There is a decreasing filtration on $\oloc(\cE)$ whose $p$th layer $F^p \oloc(\cE)$ consists of local functionals which are at least $p$-linear in the field $\gamma$. 
 \brian{I'm worried that this isn't a complete filtration.}
@@ -75,6 +135,25 @@ This cohomology is trivial $H^{12}(\fw_5) = H^{13}({\rm BU}(5)) = 0$.
 
 \item \brian{at the next layer it seems like we should be looking at $H^\bu(\fw_5, \fw_5)$.}
 \end{itemize}
+
+\subsection{Characterizing the anomaly cocycle}
+
+
+A general result of Costello \cite[Corollary 16.0.5]{CostelloWittengenus} states that the one-loop anomaly of any BV theory reduces to the weight of a sum of wheel graphs.
+Furthermore, using the holomorphic-topological gauge, the types of wheels that appear are those with a fixed number of vertices as we will soon explain. 
+
+To state the following result, we fix some notation. 
+If $\Gamma$ is a graph with a distinguished internal edge $e$, let $W_{\Gamma,e}(P_{\epsilon<L},K_{\epsilon}, I)$ denote the following modified weight. 
+Instead of placing $P_{\epsilon <L}$ at each internal edge, we place $K_\epsilon$ at the edge labeled $e$ and $P_{\epsilon<L}$ on the remaining internal edges.
+
+\begin{lem}
+The one-loop anomaly cocycle $\Theta \in \oloc(\cE)$ is cohomologous to the $L \to 0$ limit of the expression
+\[
+\lim_{\epsilon \to 0} \sum_{\Gamma \in {\rm Wheel}_7, e} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I) .
+\]
+Here the sum is over all wheels with seven vertices equipped with a distinguished edge $e$. 
+\end{lem}
+
 
 \end{document}
 
