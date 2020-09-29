@@ -42,7 +42,7 @@ Under the conjectures of Costello-Li that describe twisted type II supergravity 
 \section{Warm-up: Kodaira--Spencer theory on a Calabi--Yau surface}
 
 Let $X$ be a Calabi--Yau surface. 
-Minimal Kodaira--Spencer theory is a $\mb Z/2$-graded theory described by two fundamental sets of fields:
+Minimal Kodaira--Spencer theory is a $\mb Z/2$-graded Poisson BV theory described by two fundamental sets of fields:
 \begin{itemize}
 \item An odd field given by a divergence-free holomorphic vector field $\mu^1$. 
 \item An even field given by a holomorphic function $\mu^0$.
@@ -55,7 +55,7 @@ The sheaf $\mc E^{\rm hol}$ admits the following locally free description:
 \begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} \\
  & \PV^{0,\bu} \\
- \PV^{1,\bu} \ar[r, "\partial"] & \PV^{0,\bu} .
+ \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} .
 \end{tikzcd}
 \]
 We refer to this locally free description by $\mc E$. 
@@ -199,7 +199,7 @@ The map $\Phi$ determines a map of $\mb P_0$-factorization algebras on $X$:
 \]
 \end{prop} 
 
-%\iffalse
+\iffalse
 Let \(X\) be a CY4. BCOV theory on \(X\) with potentials will be the \(\mb{Z}/2\) graded BV theory defined as follows. Fix splittings \(C_1: (\im\del\subset\PV^{3,\bullet})\to \PV^{4,\bullet}\) of  \[0\to\ker\del\to \PV^{4,\bullet}\to(\im\del\subset\PV^{3,\bullet}\to 0\] and \(C_2: (\im\del\subset\PV^{2,\bullet})\to\PV^{3,\bullet}\) of \[0\to\ker\del\to\PV^{3,\bullet}\to(\im\del\subset\PV^{2,\bullet}(X))\to 0.\] And let \(\phi_{C_1} : \PV^{4,\bullet}\cong(\ker\del\subset\PV^{4,\bullet})\oplus(\im\del\subset\PV^{3,\bullet})\), \(\phi_{C_2}: \PV^{3,\bullet}\cong(\ker\del\subset\PV^{3,\bullet})\oplus(\im\del\subset\PV^{2,\bullet})\) be the resulting isomorphisms.
 \begin{itemize}
 \item The fields of the theory are
@@ -233,14 +233,44 @@ The above in fact defines a (shifted) $L_\infty$-structure.
 \item Suppose we were to naively try to define a BV pairing $\omega$ on $\mc E_{mBCOV}^{C_1,C_2}$ by $\omega(-,-)=\int (-)\wedge\del^{-1}(-)$ and write an "action functional" using the above $L_\infty$-structure. Then the resulting action functional would be equivalent to one coming from an honest BV pairing and an $L_\infty$-structure involving a composition of $\del$ and the ordinary Schouten-Nijenhuis bracket. Note that we could have accomplished the same thing by choosing splittings of $\del$ from any $\im\del\subset \PV^{d_1,\bullet}$, $\im\del\subset\PV^{d_2,\bullet}$ such that $d_1+d_2\neq d-1$. However, it seems like these two choices of splittings are favored in a sense (articulated below). 
 \end{itemize}
 \end{rmk}
-%\fi
+\fi
 
 \section{Dimensional Reduction}
-Let's consider the holomorphic twist of M-theory on $\R\times\C^\times\times\C^4$. We may decompose the fields as
-\begin{itemize}
-\item \[(\mu^{1}, \mu^{0})=(\mu_{01}+\mu_{10}, \mu^{0})\in\Omega^\bullet(\R)\otimes\left (\begin{aligned} &( \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4)) \\ \oplus & (\PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4))\end{aligned} \to\PV^{0,\bullet}(\C^\times\times\C^4)\right ).\]
-\item $\gamma=\gamma_{01}+\gamma_{10}\in \Omega^\bullet(\R)\otimes(\Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\oplus\Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4))$.
-\end{itemize}
+Let's consider the $11$-dimensional theory on the manifold
+\[
+\R\times\C^\times\times\C^4 .
+\]
+
+The fields decompose as follows.
+For the ``base" direction, fields we labeled by $\mu$, we have
+\[
+\mu = \begin{pmatrix} \mu_{01} \\ \mu_{10} \end{pmatrix} + u \mu_{11d}^0 \in \left (\begin{aligned} & \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4) \\ \oplus & \PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4)\end{aligned} \to u \PV^{0,\bullet}(\C^\times\times\C^4)\right ) \Hat{\otimes} \Omega^\bullet(\R) [1] .
+\]
+
+For the ``fiber" direction, fields we labeled by $\gamma$, we have
+\[
+\gamma = u^{-1} \gamma_{11d}^0 + \begin{pmatrix} \gamma_{01} \\ \gamma_{10} \end{pmatrix} \in \left (u^{-1} \Omega^{0,\bullet}(\C^\times\times\C^4) \to \begin{aligned} & \Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\\ \oplus & \Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4)\end{aligned} \right ) \Hat{\otimes} \Omega^\bullet(\R).
+\]
+
+The ``zero modes" of the reduction along the circle $S^1 \subset \mb C^\times$ will be denoted by the same symbols.
+\brian{write down this sheaf on $\mb C^4 \times \mb R^2$.}
+
+Define the map of sheaves of cochain complexes 
+\[
+\Psi : \pi_* \mc E_{11d} \to \mc E_{\rm pot} \Hat{\otimes} \Omega^\bu(\mb R^2) 
+\] 
+by
+\[
+\begin{array}{cccccccc}
+\Psi (\mu_{01}) & = & \mu_{01} & \in & \PV^{1,\bu}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2) \\
+\Psi (\mu_{10}) & = & \mu_{10} \vee \Omega^{-1}_{\mb C^4} & \in & \PV^{4,\bu}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2) .
+\end{array}
+\]
+
+%\[
+%\gamma=\gamma_{01}+\gamma_{10}\in \Omega^\bullet(\R)\otimes(\Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\oplus\Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4)) .
+%\]
+
 
 \begin{prop}
 There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\otimes\mc E_{Pot}$ given by
@@ -263,5 +293,52 @@ Note that the field $\mu^{c}\in \mc E_{\mr Pot}$ is nonpropating. It must pair a
 \end{rmk}
 
 \surya{ When we discussewd dimensional reduction on 9/22 over Zoom, I accidentally switched the roles of $\gamma_{10}$ and $\mu_{10}$. I realized this was wrong - the resulting map cannot be a Lie map. Indeed, there is certainly a nontrivial bracket between $\gamma_{10}$ and $\gamma_{10}$ in M-theory, from expanding the $\gamma\del\gamma\del\gamma$ term. However, there is no nontrivial bracket between $\PV^{3,\bullet}$ and $\PV^{4,\bullet}$ in $\mc E_{\rm Pot}$ }
+
+\section{Compactification to five dimensions} 
+
+Now, consider placing the $11$-dimensional theory on the manifold
+\[
+X \times Y \times \mb R 
+\]
+where $X$ is compact Calabi--Yau three-fold and $Y$ is a Calabi--Yau surface.
+We consider the compactification of the theory along the projection map 
+\[
+\pi : X \times Y \times \mb R \to Y \times \mb R .
+\]
+Recall, the space of fields of the $11$-dimensional theory is
+\begin{equation}\label{eqn:cotangent1}
+T^* [-1] \bigg(\PV^{\leq 1,\bu}(X \times Y) \Hat{\otimes} \Omega^\bu(\mb R) [1] \bigg) .
+\end{equation}
+
+Since $X$ is compact and Calabi--Yau, we have a sequence of quasi-isomorphisms 
+\[
+\PV^{j, \bu}(X) \cong_{\Omega_X} \Omega^{3-j, \bu} (X) \simeq H^{3-j, \bu}(X) .
+\]
+The first isomorphism is simply contraction with the Calabi--Yau form $\Omega_X \in \Omega^{3,hol}(X)$ and the second quasi-isomorphism follows from formality of $X$. 
+
+In particular, at the level of sheaves one has a quasi-isomorphism
+\[
+\pi_* \bigg(\PV^{\leq 1,\bu}(X \times Y) \Hat{\otimes} \Omega^\bu(\mb R) [1] \bigg) \simeq H^{\geq 2, \bu}(X) \otimes \PV^{\leq 1, \bu} (Y) \Hat{\otimes} \Omega^\bu (\mb R) [1] .
+\]
+This describes the ``base" direction, fields we labeled by $\mu$, of the space of fields (\ref{eqn:cotangent1}) upon compactification. 
+
+We extract the piece of the above sheaf which involves the top cohomology $H^{3,3}(X) \cong H^6(X) \cong \mb C$. 
+This is the sheaf
+\begin{equation}\label{eqn:pair1}
+\PV^{\leq 1, \bu}(Y) \Hat{\otimes} \Omega^\bu (\mb R) [1] .
+\end{equation}
+(Recall, we are only working with sheaves of $\mb Z/2$-graded cochain complexes.)
+
+Likewise, the ``fiber" direction of (\ref{eqn:cotangent1}) becomes, after compactification:
+\[
+\pi_* \bigg(\Omega^{\leq 1, \bu}(X \times Y) \Hat{\otimes} \Omega^\bu(\mb R) \bigg) \simeq H^{\leq 1, \bu}(X) \otimes \Omega^{\leq 1, \bu} (X) \Hat{\otimes} \Omega^\bu (\mb R)  .
+\]
+Under the BV pairing, the piece of this sheaf of cochain complexes with (\ref{eqn:pair1}) is the part involving $H^0(X) \cong \mb C$.
+This is precisely
+\[
+\Omega^{\leq 1}(X) \Hat{\otimes} \Omega^\bu (\mb R) .
+\] 
+
+
 
 \end{document}
