@@ -21,6 +21,9 @@
 %brian's macros
 \newcommand\bu{\bullet}
 \newcommand\dbar{\overline{\partial}}
+\newcommand\CC{{\mb C}}
+\newcommand \RR{{\mb R}}
+\def\Hat{\widehat}
 
 \date{\today}
 \title{Holomorphic M-theory and the $\SU(4)$-invariant twist of type $\IIA$ }
@@ -41,16 +44,17 @@ Under the conjectures of Costello-Li that describe twisted type II supergravity 
 
 \section{Warm-up: Kodaira--Spencer theory on a Calabi--Yau surface}
 
-Let $X$ be a Calabi--Yau surface. 
-Minimal Kodaira--Spencer theory is a $\mb Z/2$-graded Poisson BV theory described by two fundamental sets of fields:
+On a Calabi--Yau surface $X$, minimal Kodaira--Spencer theory is the $\mb Z/2$-graded theory described by two fundamental sets of fields:
 \begin{itemize}
 \item An odd field given by a divergence-free holomorphic vector field $\mu^1$. 
 \item An even field given by a holomorphic function $\mu^0$.
 \end{itemize}
-These fields combine to define a $\mb Z/2$-graded sheaf $\mc E^{\rm hol}$ on $X$. 
-There is a Lie algebra structure the parity reversed sheaf $\Pi \mc E^{\rm hol}$ using the Lie bracket of holomorphic vector fields together with the natural action of holomorphic vector fields on holomorphic functions. 
+%These fields combine to define a $\mb Z/2$-graded sheaf $\mc E^{\rm hol}$ on $X$. 
+%There is a Lie algebra structure the parity reversed sheaf $\Pi \mc E^{\rm hol}$ using the Lie bracket of holomorphic vector fields together with the natural action of holomorphic vector fields on holomorphic functions. 
 
-The sheaf $\mc E^{\rm hol}$ admits the following locally free description:
+%The sheaf $\mc E^{\rm hol}$ admits the following locally free description:
+
+In the BV formalism, minimal Kodaira--Spencer theory on $X$ is a (degenerate) Poisson BV theory with space of fields given by
 \[
 \begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} \\
@@ -58,13 +62,19 @@ The sheaf $\mc E^{\rm hol}$ admits the following locally free description:
  \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} .
 \end{tikzcd}
 \]
-We refer to this locally free description by $\mc E$. 
-The Lie bracket on $\Pi \mc E^{\rm hol}$ described above extends to a Lie bracket on $\Pi \mc E$.
-Together with the differential this gives $\Pi \mc E$ the structure of a local dg Lie algebra. 
+We will denote this sheaf of $\mb Z/2$-graded cochain complexes by $\mc E_{\rm KS}$.
 
-The bundle $\mc E$ is equipped with an odd Poisson tensor defined by 
+There is a local (dg) Lie algebra structure on the parity shifted object $\Pi \mc E_{\rm KS}$. 
+The Lie bracket is defined using the Schouten-Nijenhuis bracket $[-,-]_{\rm NS}$ on polyvector fields and is given by the formula
 \[
-\Pi = (\partial \otimes 1) \delta_{\rm Diag} .
+[u^k \alpha , u^\ell \beta] = u^{k+\ell} [\alpha, \beta]_{\rm NS} .
+\]
+where $k, \ell = 0,1$.
+Together with the differential this equips the parity shifted sheaf of cochain complexes $\Pi \mc E_{\rm KS}$ with the structure of a local (dg) Lie algebra. 
+
+The fields of minimal Kodaira--Spencer theory $\mc E_{\rm KS}$ is equipped with an odd Poisson tensor defined by 
+\[
+\Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
 \]
 
 We introduce another theory on the Calabi--Yau surface $X$ that we call minimal Kodaira--Spencer theory {\em with potentials}.
@@ -79,8 +89,17 @@ The underlying vector bundle is
 We will denote the resulting $\mb Z/2$-graded sheaf of cochain complexes by $\mc E_{\rm pot}$. 
 
 We interpret this as the theory of  ``potentials"  of minimal Kodaira--Spencer theory in the following way. 
-There is a map of bundles $\Phi : \mc E_{\rm Pot} \to \mc E$ which is the identity on $\PV^{0,\bu}$ and given by $\partial : \PV^{2,\bu} \to \PV^{1,\bu}$ on the remaining component. 
+There is a map of sheaves of cochani complexes 
+\[
+\Phi : \mc E_{\rm Pot} \to \mc E_{\rm KS}
+\]
+which is the identity on $\PV^{0,\bu}$ and given by $\partial : \PV^{2,\bu} \to \PV^{1,\bu}$ on the remaining component. 
 It is immediate to see that $\Phi$ defines a map of sheaves of cochain complexes. 
+The theory $\mc E_{\rm pot}$ is equipped with a non-degenerate BV pairing defined by the wedge-and-integrate pairing
+\[
+\omega_{\rm pot} (\alpha, \beta) = \int \alpha \wedge \beta  .
+\]
+It is immediate to verify that $\Phi$ intertwines the resulting bivector $\omega_{\rm pot}^{-1}$ and the Kodaira--Spencer Poisson bivector $\Pi_{\rm KS}$.
 
 In fact, the parity shifted bundle $\Pi \mc E_{\rm pot}$ also has the structure of a local Lie algebra, and the map $\Phi$ intertwines these local Lie algebra structures. 
 
@@ -103,6 +122,9 @@ This further extends to a local Lie algebra structure on the semi-direct product
 which describes the local Lie structure on $\Pi \mc E_{\rm Pot}$. 
 It is immediate to verify that the map $\Phi : \mc E_{\rm pot} \to \mc E$ intertwines the two $L_\infty$-structures. 
 
+This equipped $\mc E_{\rm pot}$ with the structure of an interacting (non-degenerate) BV theory. 
+It's relationship to (minimal) Kodaira--Spencer theory can be summarized as follows. 
+
 %Using the isomorphism $\Omega : \PV^{2, \bu} (X) \cong \Omega^{0,\bu}(X)$ we thus obtain a Lie bracket on $\PV^{2,\bu}(X)$ defined by the equation
 %\[
 %[\alpha, \alpha']_{\PV^2} = \Omega^{-1} [\Omega \alpha, \Omega \alpha'] .
@@ -111,15 +133,10 @@ It is immediate to verify that the map $\Phi : \mc E_{\rm pot} \to \mc E$ intert
 %
 %The sheaf $\PV^{0,\bu}(X)$ is a module for 
 
-Finally, the theory $\mc E_{\rm pot}$ is a non-degenerate BV theory with BV pairing defined by the wedge-and-integrate pairing
-\[
-\alpha, \beta \mapsto \int \alpha \wedge \beta  .
-\]
-
 \begin{prop}
-The map $\Phi$ determines a map of $\mb P_0$-factorization algebras on $X$:
+The map $\Phi : \mc E_{\rm pot} \to \mc E_{\rm KS}$ determines a map of $\mb P_0$-factorization algebras on $X$:
 \[
-\Phi^* : {\rm Obs}_{\mc E} \to {\rm Obs}_{\mc E_{\rm Pot}} .
+\Phi^* : {\rm Obs}_{\mc E_{\rm KS}} \to {\rm Obs}_{\mc E_{\rm Pot}} .
 \]
 \end{prop}
 
@@ -151,10 +168,14 @@ The differential on this sheaf of cochain complexes is given by $\dbar + u \part
 There is a local Lie algebra structure on $\Pi\mc E$ using the Schouten-Nijenhuis bracket $[-,-]_{\rm Sch}$ on polyvector fields.
 On the fields (including the descendants) it is defined by the formula
 \[
-[u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} [\mu^i, \mu^j]_{\rm Sch} .
+[u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} [\mu^i, \mu^j]_{\rm NS} .
 \]
 
-Furthermore, the sheaf $\mc E$ is equipped with an odd Poisson tensor given by $\Pi = (\del\otimes 1)\delta_{\rm Diag}$. Together, this data equips $\mc E$ with the structure of a $\Z/2$-graded Poisson BV theory.
+The space of fields of minimal Kodaira--Spencer theory $\mc E_{\rm KS}$ is equipped with an odd Poisson tensor defined by 
+\[
+\Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
+\]
+Together with the local Lie algebra structure, this data equips $\mc E$ with the structure of a $\Z/2$-graded Poisson BV theory.
 
 As in the surface case, there is a closely related BV theory describing the "potentials" of minimal Kodaira--Spencer theory.
 The underlying sheaf of cochain complexes is 
@@ -162,7 +183,7 @@ The underlying sheaf of cochain complexes is
 \begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
 & & & \mu^{0}\in\PV^{0,\bu} \\
-& & \sum u^k \mu^{1}\in\PV^{1,\bu} \ar[r, "\partial"] & \mu^{c}\in\PV^{0,\bu} \\
+& & \sum u^k \mu^{1}\in\PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} \\
 u^{-1} \gamma^3 + \gamma^3  \in u^{-1} \PV^{4,\bu} \ar[r, "u \partial"] & \PV^{3,\bu} & &  \\
 \gamma^{4} \in\PV^{4,\bu} &  &  & \\
 \end{tikzcd}
@@ -170,17 +191,34 @@ u^{-1} \gamma^3 + \gamma^3  \in u^{-1} \PV^{4,\bu} \ar[r, "u \partial"] & \PV^{3
 We will again refer to this sheaf as $\mc E_{\rm pot}$.
 
 There is a local Lie algebra structure described as follows.
-\brian{It's mostly the Schouten bracket, but there is the additional ``weird" bracket
+\begin{itemize}
+\item 
+There is a self bracket between the $\mu$-fields defined by
 \[
-[\gamma^3, \gamma^{3'}] = [\partial \gamma^3 , \gamma^{3'}] \pm [\gamma^3, \partial \gamma^{3'}] .
+[u^k \mu^i, u^\ell \Tilde{\mu}^j] = u^{k+j} [\mu^i, \Tilde{\mu}^j]_{\rm NS} .
 \]
-}
+\item Next, there is a self-bracket between the $\gamma$-fields defined by 
+\[
+[\gamma^3, \Tilde{\gamma}^3] = [\partial \gamma^3 , \Tilde{\gamma}^{3}]_{\rm NS} \pm [\gamma^3, \partial \Tilde{\gamma}^{3}]_{\rm NS} \in {\rm PV}^{4,\bu} 
+\]
+\item Finally, there are mixed terms in the bracket defined by
+\[
+[u^{-k} \gamma^i , u^\ell \mu^j] = u^{-k + \ell} [\partial \gamma^i, \mu^j]_{\rm NS}
+\]
+\end{itemize}
 
-There is a map of sheaves of cochain complexes $\Phi: \mc E_{\rm pot}\to \mc E$ given by the identity map on $\PV^{1,\bu}$ and $\PV^{0,\bu}$ and the $\del$ operator on $\PV^{3,\bu}$ and $\PV^{4,\bu}$. 
+Together with the wedge and integrate pairing, $\mc E_{\rm pot}$ has the structure of a nondegenerate BV theory.
+
+Like in the case of Kodaira--Spencer theory on a complex surface, there is a  map of sheaves of cochain complexes 
+\[
+\Phi: \mc E_{\rm pot}\to \mc E_{\rm KS} .
+\] 
+It is given by the identity map on $\PV^{1,\bu}$ and $\PV^{0,\bu}$ and the $\del$ operator on $\PV^{3,\bu}$ and $\PV^{4,\bu}$. 
 Explicitly, in formulas
 \[
+\arraycolsep=1.4pt\def\arraystretch{2.2}
 \begin{array}{ccccccccc}
-\Phi(t^k \mu^{i}) & = & u^k \mu^i & \in & u^k \PV^{i, \bu} & i = 0,1 \\
+\Phi(u^k \mu^{i}) & = & u^k \mu^i & \in & u^k \PV^{i, \bu} & i = 0,1 \\
 \Phi(u^{-1} \gamma^3) & = & 0 \\
 \Phi(\gamma^3) & = & \partial \gamma^3 & \in & \PV^{2,\bu} \\
 \Phi(\gamma^4) & = & \partial \gamma^4 & \in & \PV^{3,\bu} .
@@ -189,11 +227,11 @@ Explicitly, in formulas
 
 %We may equip the parity shifted bundle $\Pi\mc E_{\rm pot}$ with the structure of a local dg Lie algebra such that $\Phi$ is a map of Lie algebras. \surya{Will add explicit description of the brackets}. 
 
-Together with the wedge and integrate pairing, $\mc E_{\rm pot}$ has the structure of a nondegenerate BV theory.
+In fact, we have the following result, in analogy with the case of a Calabi-Yau surface.
 
-In fact, we have the following, analogous to the case of a Calabi-Yau surface:
 \begin{prop}
-The map $\Phi$ determines a map of $\mb P_0$-factorization algebras on $X$:
+The map $\Phi$ intertwines the local Lie algebra structures and Poisson BV structures on $\mc E_{\rm KS}$ and $\mc E_{\rm pot}$. 
+So, it induces a map of $\mb P_0$-factorization algebras:
 \[
 \Phi^* : {\rm Obs}_{\mc E} \to {\rm Obs}_{\mc E_{\rm Pot}} .
 \]
@@ -242,57 +280,77 @@ Let's consider the $11$-dimensional theory on the manifold
 \]
 
 The fields decompose as follows.
-For the ``base" direction, fields we labeled by $\mu$, we have
+For the ``base'' direction, fields we labeled by $\mu$, we have
 \[
-\mu = \begin{pmatrix} \mu_{01} \\ \mu_{10} \end{pmatrix} + u \mu_{11d}^0 \in \left (\begin{aligned} & \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4) \\ \oplus & \PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4)\end{aligned} \to u \PV^{0,\bullet}(\C^\times\times\C^4)\right ) \Hat{\otimes} \Omega^\bullet(\R) [1] .
+\mu = \begin{pmatrix} \mu_{01} \\ \mu_{10} \end{pmatrix} + u \mu_{11d}^0 \in \left (\begin{aligned} & \PV^{0,\bullet}(\C^\times)\otimes\PV^{1,\bullet}(\C^4) \\ & \PV^{1,\bullet}(\C^\times)\otimes\PV^{0,\bullet}(\C^4)\end{aligned} \to u \PV^{0,\bullet}(\C^\times\times\C^4)\right ) \Hat{\otimes} \Omega^\bullet(\R) [1] .
 \]
 
-For the ``fiber" direction, fields we labeled by $\gamma$, we have
+For the ``fiber'' direction, fields we labeled by $\gamma$, we have
 \[
-\gamma = u^{-1} \gamma_{11d}^0 + \begin{pmatrix} \gamma_{01} \\ \gamma_{10} \end{pmatrix} \in \left (u^{-1} \Omega^{0,\bullet}(\C^\times\times\C^4) \to \begin{aligned} & \Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\\ \oplus & \Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4)\end{aligned} \right ) \Hat{\otimes} \Omega^\bullet(\R).
+\gamma = u^{-1} \gamma_{11d}^0 + \begin{pmatrix} \gamma_{01} \\ \gamma_{10} \end{pmatrix} \in \left (u^{-1} \Omega^{0,\bullet}(\C^\times\times\C^4) \to \begin{aligned} & \Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\\ & \Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4)\end{aligned} \right ) \Hat{\otimes} \Omega^\bullet(\R).
 \]
 
-The ``zero modes" of the reduction along the circle $S^1 \subset \mb C^\times$ will be denoted by the same symbols.
-\brian{write down this sheaf on $\mb C^4 \times \mb R^2$.}
+We consider the dimensional reduction of the theory along the circle $S^1 \subset \mb C^\times$.
+The dimensional reduction has the affect of replacing $\PV^{i,\bu}(\mb C^\times)$ and $\Omega^{1,\bu}(\mb C^\times)$ by the de Rham along the radial direction in $\mb C^\times$, see Proposition 1.59 of \cite{ESW}. 
+Denote the space of fields of the dimensional reduction by $\oint_{S^1} \mc E_{11d}$. 
 
-Define the map of sheaves of cochain complexes 
+We will use the same symbols for the fields in the dimensionally reduced ten-dimensional theory: for the dimensionally reduced $\mu$-fields we have
 \[
-\Psi : \pi_* \mc E_{11d} \to \mc E_{\rm pot} \Hat{\otimes} \Omega^\bu(\mb R^2) 
+\mu = \begin{pmatrix} \mu_{01} \\ \mu_{10} \end{pmatrix} + u \mu_{11d}^0 \in \left (\begin{aligned} & \PV^{1,\bullet}(\C^4) \\ & \PV^{0,\bullet}(\C^4)\end{aligned} \to u \PV^{0,\bullet}(\C^4)\right ) \Hat{\otimes} \Omega^\bullet(\R^2) [1] .
+\]
+and for the dimensionally reduced $\gamma$-fields we have
+\[
+\gamma = u^{-1} \gamma_{11d}^0 + \begin{pmatrix} \gamma_{01} \\ \gamma_{10} \end{pmatrix} \in \left (u^{-1} \Omega^{0,\bullet}(\C^4) \to \begin{aligned} & \Omega^{1,\bullet}(\C^4)\\ & \Omega^{0,\bullet}(\C^4)\end{aligned} \right ) \Hat{\otimes} \Omega^\bullet(\R^2).
+\]
+
+So far, we have only described how the fields of the $11$-dimensional theory behave upon dimensional reduction. 
+One can rename the fields of the dimensionally reduced theory to match precisely with the fields of the conjectural minimal twist of  Type IIA supergravity with potentials $\mc E_{\rm pot}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2)$. 
+In fact, we have the following stronger result, which identifies the interacting BV theories of the dimensionally reduced theory with the conjectural twist of Type IIA supergravity with potentials. 
+
+\begin{prop}
+There is an equivalence of interacting classical BV theories on $\mb C^2 \times \mb R^2$
+\[
+\Psi : \oint_{S^1} \mc E_{11d} \to \mc E_{\rm pot} (\CC^4) \Hat{\otimes} \Omega^\bu(\mb R^2) 
 \] 
-by
+defined on the fields by
 \[
+\arraycolsep=1.4pt\def\arraystretch{2.2}
 \begin{array}{cccccccc}
 \Psi (\mu_{01}) & = & \mu_{01} & \in & \PV^{1,\bu}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2) \\
-\Psi (\mu_{10}) & = & \mu_{10} \vee \Omega^{-1}_{\mb C^4} & \in & \PV^{4,\bu}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2) .
-\end{array}
+\Psi (\mu_{10}) & = & \Omega^{-1}_{\mb C^4} \vee \mu_{10} & \in & \PV^{4,\bu}(\mb C^4) \Hat{\otimes} \Omega^\bu(\mb R^2) \\ 
+\Psi(u \mu^0_{11d}) & = & u \mu^0_{11d} & \in & u \PV^{0,\bu} (\CC^4) \Hat{\otimes} \Omega^\bu (\RR^4) \\ 
+\Psi (u^{-1} \gamma_{11d}^0) & = & u^{-1} \Omega^{-1}_{\CC^4} \vee \gamma_{11d}^0 & \in & u^{-1} \PV^{4,\bu}(\CC^4) \Hat{\otimes} \Omega^\bu(\RR^2) \\ \Psi(\gamma_{01}) &  = & \Omega^{-1}_{\CC^4} \vee \gamma_{01} & \in & \PV^{3,\bu}(\CC^4) \Hat{\otimes} \Omega^\bu(\RR^2) \\
+\Psi (\gamma_{10}) & = & \gamma_{10} & \in & \PV^{0,\bu}(\CC^4) \Hat{\otimes} \Omega^\bu(\RR^2) .
+\end{array} .
 \]
+\end{prop}  
 
 %\[
 %\gamma=\gamma_{01}+\gamma_{10}\in \Omega^\bullet(\R)\otimes(\Omega^{0,\bullet}(\C^\times)\otimes\Omega^{1,\bullet}(\C^4)\oplus\Omega^{1,\bullet}(\C^\times)\otimes\Omega^{0,\bullet}(\C^4)) .
 %\]
 
-
-\begin{prop}
-There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\otimes\mc E_{Pot}$ given by
-\begin{itemize}
-\item $[\gamma_{10}]\mapsto\mu^0\in\PV^{0,\bullet}\subset\mc E_{Pot}$.
-  \item $[\mu_{01}]\mapsto\mu^1\in\PV^{1,\bullet}(\C^4)\subset\mc E_{Pot}$.
-\item $[\mu^{0}]\mapsto\mu^{c}\in\PV^{0, \bullet}(\C^{4})\subset\mc E_{Pot}$.
-\item $[\gamma_{01}]\mapsto\mu^3 = \gamma_{01}\vee\Omega^{-1}_{\C^4}\in\PV^{3,\bullet}\subset\mc E_{Pot}$ where $\Omega_{\C^4}$ denotes the holomorphic volume form on $\C^4$.
-\item $[\mu_{10}]\mapsto\mu^4 =\mu_{10}\vee\Omega^{-1}_{\C^4}\in\PV^{4,\bullet}\subset\mc E_{Pot}$ .
-
-
-\end{itemize}
-preserving the relevant pairings.
-\end{prop}
+%
+%\begin{prop}
+%There is a homomorphism of $L_\infty$-algebras from the $\delbar_{\C^\times}$-cohomology of M theory on $\R\times\C^\times\times\C$ to $\Omega^\bullet(\R^2)\otimes\mc E_{Pot}$ given by
+%\begin{itemize}
+%\item $[\gamma_{10}]\mapsto\mu^0\in\PV^{0,\bullet}\subset\mc E_{Pot}$.
+%  \item $[\mu_{01}]\mapsto\mu^1\in\PV^{1,\bullet}(\C^4)\subset\mc E_{Pot}$.
+%\item $[\mu^{0}]\mapsto\mu^{c}\in\PV^{0, \bullet}(\C^{4})\subset\mc E_{Pot}$.
+%\item $[\gamma_{01}]\mapsto\mu^3 = \gamma_{01}\vee\Omega^{-1}_{\C^4}\in\PV^{3,\bullet}\subset\mc E_{Pot}$ where $\Omega_{\C^4}$ denotes the holomorphic volume form on $\C^4$.
+%\item $[\mu_{10}]\mapsto\mu^4 =\mu_{10}\vee\Omega^{-1}_{\C^4}\in\PV^{4,\bullet}\subset\mc E_{Pot}$ .
+%
+%
+%\end{itemize}
+%preserving the relevant pairings.
+%\end{prop}
 
 That is, the reduction of the holomorphic M theory on a holomorphic circle should be the $\SU(4)$ invariant twist of $\IIA$.
 
-\begin{rmk}
-Note that the field $\mu^{c}\in \mc E_{\mr Pot}$ is nonpropating. It must pair against a field in $\PV^{3}$. In order for the field $\mu^{0}$ in M-theory to propagate, it must pair against a field $\gamma^{0}\in \Omega^{0,\bullet}$ which is the ghost for the gauge transformation for $\gamma^{1}$. This suggests an enlargement of $\mc E_{\mr Pot}$ where we add an additional field in $\PV^{3}$ which will be the image of the ghost of $\gamma^{1}$ in M-theory under dimensional reduction.
-\end{rmk}
+%\begin{rmk}
+%Note that the field $\mu^{c}\in \mc E_{\mr Pot}$ is nonpropating. It must pair against a field in $\PV^{3}$. In order for the field $\mu^{0}$ in M-theory to propagate, it must pair against a field $\gamma^{0}\in \Omega^{0,\bullet}$ which is the ghost for the gauge transformation for $\gamma^{1}$. This suggests an enlargement of $\mc E_{\mr Pot}$ where we add an additional field in $\PV^{3}$ which will be the image of the ghost of $\gamma^{1}$ in M-theory under dimensional reduction.
+%\end{rmk}
 
-\surya{ When we discussewd dimensional reduction on 9/22 over Zoom, I accidentally switched the roles of $\gamma_{10}$ and $\mu_{10}$. I realized this was wrong - the resulting map cannot be a Lie map. Indeed, there is certainly a nontrivial bracket between $\gamma_{10}$ and $\gamma_{10}$ in M-theory, from expanding the $\gamma\del\gamma\del\gamma$ term. However, there is no nontrivial bracket between $\PV^{3,\bullet}$ and $\PV^{4,\bullet}$ in $\mc E_{\rm Pot}$ }
+%\surya{ When we discussewd dimensional reduction on 9/22 over Zoom, I accidentally switched the roles of $\gamma_{10}$ and $\mu_{10}$. I realized this was wrong - the resulting map cannot be a Lie map. Indeed, there is certainly a nontrivial bracket between $\gamma_{10}$ and $\gamma_{10}$ in M-theory, from expanding the $\gamma\del\gamma\del\gamma$ term. However, there is no nontrivial bracket between $\PV^{3,\bullet}$ and $\PV^{4,\bullet}$ in $\mc E_{\rm Pot}$ }
 
 \section{Compactification to five dimensions} 
 
