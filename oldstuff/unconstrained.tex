@@ -1,0 +1,183 @@
+\documentclass[11pt]{amsart}
+
+\pdfoutput = 1
+
+\usepackage{macros,slashed,amsaddr}
+%\usepackage[dvipsnames]{xcolor}
+
+\linespread{1.5}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+
+\title{Quantization of the unconstrained theory}
+
+\maketitle
+
+Consider the $\ZZ/2$-graded theory on $\CC^5 \times \RR$ with two sets of fundamental fields:
+\begin{align*}
+\mu & \in \Pi \Omega^\bu (\RR) \, \Hat{\otimes} \, \PV^{1,\bu}(\CC^5) \\
+\gamma & \in \Omega^{\bu}(\RR) \, \Hat{\otimes} \, \Omega^{1,\bu}(\CC^5) .
+\end{align*}
+We will denote the full space of fields of the theory by $\cE$. 
+
+This is a non-degenerate BV theory with pairing defined by
+\[
+\int \gamma \wedge (\mu \vdash \Omega) .
+\] 
+
+The action is 
+\[
+S = \int \gamma \bigg(\d \mu + \frac12 [\mu, \mu] \bigg) \vdash \Omega + \frac13 \int \gamma \partial \gamma \partial \gamma .
+\]
+where $[\cdot, \cdot]$ denotes the Lie bracket of vector fields. 
+
+The first term describes a theory of BF type based on the local Lie algebra 
+\[
+\cL = \Omega^\bu(\RR) \, \Hat{\otimes} \, \PV^{1,\bu}(\CC^5) .
+\]
+With the term $\frac13\int \gamma \partial \gamma \partial \gamma$ we will view this theory as a deformation of a BF type theory. 
+
+Let $\oloc(\cE)$ denote the cochain complex of local functionals.
+It is equipped with the classical BRST operator 
+\[
+\{S, -\} = \d + \d_{\rm CE} + \delta 
+\]
+where $\d_{\rm CE}$ denotes (roughly) the Chevalley--Eilenberg differential for holomorphic vector fields and $\delta$ is the operator $\left\{\frac13 \int \gamma \partial \gamma \partial \gamma \;, \; \cdot \; \right\}$. 
+
+\section{One-loop Feynman diagrams}
+
+To construct the one-loop quantization we must first construct a one-loop effective family. 
+This is a family of functionals $\{I[L]\}_{L>0}$ which satisfies the renormalization group equations. 
+
+The $11$-dimensional theory on $\CC^5 \times \RR$ that we consider is a mixed holomorphic-topological theory. 
+Heuristically, this means that the theory depends holomorphically on $\CC^5$ and topologically on $\RR$. 
+
+%\begin{dfn}
+%Let $X$ be a complex manifold and $M$ a smooth manifold.
+%A {\em mixed holomorphic-topological} elliptic complex on $X \times M$ is an elliptic complex of the form
+%\[
+%\Omega^{0,\bu}(X , V) \Hat{\otimes} \Omega^{\bu} (M, E)
+%\]
+%where $V$ is a holomorphic vector bundle on $X$ and $E$ is a flat vector bundle on $M$. 
+%\end{dfn}
+
+\begin{thm}[\cite{GWR}] \label{thm:oneloop}
+For any mixed holomorphic-topological theory on $\CC^n \times \RR^m$, $n,m \geq 0$, there exists 
+a translation-invariant effective family $\{I[L]\}$ which to first order in $\hbar$ is finite. 
+\end{thm}
+
+We briefly recount the main elements involved in the proof of this theorem. 
+The result relies on the existence of a propagator corresponding to the ``holomorphic-topological" gauge that enjoys particularly desirable analytic properties. 
+At the level of the free theory, the linear BRST operator for the $11$-dimensional theory in question is of the form 
+\[
+\dbar + \partial_\Omega + \d_{\rm dR} .
+\]
+The first term denotes the $\dbar$-operator corresponding to a graded holomorphic vector bundle built from polyvector fields on $X = \CC^5$. 
+The second term term is the holomorphic differential operator action by the divergence operator on the same bundle of polyvector fields. 
+The third term is the de Rham operator along $\RR$. 
+
+The ``holomorphic-topological gauge" refers to the choice of the following gauge fixing operator
+\[
+Q^{\rm GF} = \dbar^* + \d_{\rm dR}^* .
+\]
+
+The heat kernel is
+\begin{align*}
+K_{t} (z, t ; w , s) & = \frac{1}{(2\pi i)^{11/2}} e^{|z-w|^2/4t + (t-s)^2/4t} \times \\
+& \sum_{i=1}^5 \left(\partial_{z^i} - \partial_{w^i} \right) \otimes (\d z^i - \d w^j) \otimes \prod_{j=1}^5 (\d \zbar^j - \d \wbar^j) \otimes (\d t - \d s)
+\end{align*}
+
+The propagator is
+\[
+P_{\epsilon < L} (z, t ; w , s) = \int_{T=\epsilon}^L Q^{\rm GF} K_{t} (z, t ; w , s) \d T .
+\]
+
+\section{The quantum master equation} 
+
+The anomaly to satisfying the scale $L$ quantum master equation is 
+\[
+\Theta[L] =
+Q I[L] + \hbar \triangle_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L .
+\]
+Here $\triangle_L$ is the well-defined regularized scale $L$ BV Laplacian, and $\{-,-\}_L$ is a regularized version of the classical BV bracket.
+The $\hbar \to 0$, $L \to 0$ limit of the above equation is precisely the classical master equation. 
+An effective family $\{I[L]\}$ is a quantum field theory if it satisfies the scale $L$ QME for every $L > 0$. 
+For more complete details we refer to \cite[Chapter 8]{Book2}. 
+
+In general, not every effective theory satisfies the QME. 
+The {\em scale} $L$ {\em anomaly} to satisfying the QME describes the failure of $I[L]$ to satisfy the scale $L$ QME.
+Since $I[L]$ is filtered by powers of $\hbar$, so is the anomaly.
+For theories of cotangent type as considered in this paper, $I[L]$ truncates at order $\hbar$, hence we only need to consider the $\hbar$-linear anomaly which we denote by $\hbar \Theta[L]$. 
+The $L \to 0$ limit of $\Theta[L]$ is defined and determines a cohomological degree $+1$ {\em local functional}
+\[
+\Theta \define \lim_{L \to 0} \Theta [L] \in \oloc(\cE) .
+\]
+Moreover, $\Theta$ is closed for the classical differential $\{S,-\}_{\rm BV}$, hence determines a cohomology class 
+\[
+[\Theta] \in H^1(\oloc(\cE), \{S,-\}_{\rm BV}),
+\]
+see \cite[\S 5.11]{CostelloBook}.
+
+\subsection{The obstruction deformation complex}
+
+There is a decreasing filtration on $\oloc(\cE)$ whose $p$th layer $F^p \oloc(\cE)$ consists of local functionals which are at least $p$-linear in the field $\gamma$. 
+\brian{I'm worried that this isn't a complete filtration.}
+
+Roughly, the $p$th layer in the associated graded of this filtration is the local cohomology of holomorphic vector fields on $\CC^5$ with values in a particular local module corresponding to $p$-linear local functionals of the field $\gamma$. 
+
+\begin{itemize}
+\item At the zeroth layer $p=0$, the associated graded is the local Lie algebra cochains $\cloc^\bu(\cL)$. 
+By an argument similar to \brian{Brian and Chris}, we see that at this stage there the class of the anomaly can be  identified with a class in  $H^{12} (\fw_5)$ where $\fw_5$ is the Lie algebra of vector fields on the formal $5$-disk.
+This cohomology is trivial $H^{12}(\fw_5) = H^{13}({\rm BU}(5)) = 0$. 
+\brian{check this first isomorphism, there might be a connecting differential}
+
+\item \brian{at the next layer it seems like we should be looking at $H^\bu(\fw_5, \fw_5)$.}
+\end{itemize}
+
+\subsection{Characterizing the anomaly cocycle}
+
+
+A general result of Costello \cite[Corollary 16.0.5]{CostelloWittengenus} states that the one-loop anomaly of any BV theory reduces to the weight of a sum of wheel graphs.
+Furthermore, using the holomorphic-topological gauge, the types of wheels that appear are those with a fixed number of vertices as we will soon explain. 
+
+To state the following result, we fix some notation. 
+If $\Gamma$ is a graph with a distinguished internal edge $e$, let $W_{\Gamma,e}(P_{\epsilon<L},K_{\epsilon}, I)$ denote the following modified weight. 
+Instead of placing $P_{\epsilon <L}$ at each internal edge, we place $K_\epsilon$ at the edge labeled $e$ and $P_{\epsilon<L}$ on the remaining internal edges.
+
+\begin{lem}
+The one-loop anomaly cocycle $\Theta \in \oloc(\cE)$ is cohomologous to the $L \to 0$ limit of the expression
+\[
+\lim_{\epsilon \to 0} \sum_{\Gamma \in {\rm Wheel}_7, e} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I) .
+\]
+Here the sum is over all wheels with seven vertices equipped with a distinguished edge $e$. 
+\end{lem}
+
+
+\end{document}
+
+
+
+zshhjknbhucvvgbbnhhggFDGFGRTRYYRTDFSXR465768787YHGBCVBNBVBCBVNBCGFH,J.LK;K,HNGDGFgyggcbgnhHKJLK;OLLJGjhhjghuykjogfytcjfukkh
+
+
+
+
+CGFTHFHXCVXBGFVFSGDYGFHDGYGdvffdfgdrt544465y7hgff
+
+ dgfhjgyfhghj dfdgfsdgfdgfgdff 
+ dhgngsfhffdgfgdtd
+ 
+ 
+ tdtdg
+ f
+ hy
+ ftttegfdtrfgdfdfdgfgdffgdtrgdfdfrredfr4wertryutrt45
+ 6
+ 
+ 
+ Laszlofuyryjgfghfjhhfgth
+ dfxgcfdtfhgyugdghjgytfghdfgnhghytfdhghdttrhykuscvbghkiotgf
+
+
