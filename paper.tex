@@ -1,6 +1,6 @@
-% Created 2020-10-14 Wed 13:57
+% Created 2020-10-14 Wed 14:51
 % Intended LaTeX compiler: pdflatex
-\documentclass[11pt]{article}
+\documentclass[11pt]{amsart}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -14,16 +14,22 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+
+\usepackage{macros-mtheory}
+
 \author{Surya and Brian}
 \date{\today}
-\title{Twisted \$M\$-theory and its perturbative quantization.}
+\title{Twisted \(M\)-theory and its perturbative quantization.}
 \hypersetup{
  pdfauthor={Surya and Brian},
- pdftitle={Twisted \$M\$-theory and its perturbative quantization.},
+ pdftitle={Twisted \(M\)-theory and its perturbative quantization.},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
  pdflang={English}}
+
+\def\pv{{\rm PV}}
+
 \begin{document}
 
 \maketitle
@@ -31,35 +37,276 @@
 
 
 \section{Definition of twisted supergravity}
-\label{sec:orgea6ebfa}
+
+\label{sec:org24653eb}
 \subsection{The classical BV theory}
-\label{sec:org23fe8d4}
-\subsection{Moduli theoretic interpretation}
-\label{sec:orgd709323}
+\label{sec:org5c9d94b}
+In this section we define the central theory of study, within the Batalin--Vilkovisky formalism.
+The theory will be defined on any eleven-dimensional manifold of the form $X \times L$ where $X$ is a Calabi--Yau five-fold with volume form $\Omega$ and $L$ is a smooth oriented one-manifold.
+
+Before stating the definition, we recall some general objects in complex geometry that will play a central role.
+For now, let $X$ be any complex manifold and let $V$ be a holomorphic vector bundle on $X$.
+If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of Dolbeault forms of type $j$ on with values in $V$.
+The $\dbar$ operator for $V$ is of the form $\dbar : \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X)$.
+This operator defines the Dolbeault complex of $V$
+\[
+  \Omega^{0,\bu}(X, V) = \left(\Omega^{0,j}(X, V)[-j] \; , \; \dbar\right)
+\]
+which is a free resolution for the sheaf of holomorphic sections of $V$.
+
+Denote by $TX$ the holomorphic tangent bundle of $X$.
+Then, the Lie bracket of holomorphic vector fields extends to a Lie bracket on the Dolbeault $\Omega^{0,\bu}(X, TX)$ thus endowing it with the structure of a dg Lie algebra.
+
+By definition, the Dolbeault complex for the trivial bundle $\Omega^{0,\bu}(X)$ is a dg module for the dg Lie algebra $\Omega^{0,\bu}(X, TX)$.
+We can thus consider the following semi-direct product dg Lie algebra
+\beqn\label{eqn:div1}
+  \Omega^{0,\bu}(X, TX) \oplus \Omega^{0,\bu}(X) [-1] .
+\eeqn
+Notice that $\Omega^{0,\bu}(X)$ has been shifted to a seemingly unnatural cohomological degree, with $(0,j)$-forms sitting in degree $j+1$.
+
+Now, suppose $X$ is a Calabi--Yau manifold with holomorphic volume form $\Omega$.
+The holomorphic divergence operator with respect to $\Omega$ is an operator of the form
+\[
+  \partial_\Omega : \Omega^{0,\bu}(X, TX) \to \Omega^{0,\bu}(X)
+\]
+defined by the formula
+\[
+  \partial_\Omega (\mu) \wedge \Omega = L_\mu (\Omega)
+\]
+where, on the right hand side, we mean the Lie derivative of $\Omega$ with respect to $\mu$.
+
+Using the holomorphic divergence operator $\partial_\Omega$ we can consider the following deformation of the dg Lie algebra (\ref{eqn:div1}).
+The Lie bracket remains the same but the differential is deformed from $\dbar$ to $\dbar + \partial_\Omega$.
+Here, $\partial_{\Omega}$ denotes the holomorphic divergence operator thought of as a degree one operator from $\Omega^{0,\bu}(X, TX)$ to $\Omega^{0,\bu}(X)$.
+We will denote the resulting dg Lie algebra by $\cS(X)$.
+
+It is easy to see that $\cS(X)$ provides a free resolution of the sheaf of holomorphic divergence free vector fields on $X$.
+
+%We will mostly consider the sub dg Lie algebra of $(\ref{eqn:pvlie1})$ consisting of the polyvector fields of type $i\leq 1$:
+%\beqn\label{eqn:pvlie2}
+%  \pv^{\leq 1, \bu} (X)[1] =
+%\eeqn
+
+
+%We note that this deformation is only in the $\ZZ/2$-graded sense.
+
+%For $X$ a Calabi--Yau manifold let $\cS^{\bu,\bu}(X)$ be the $\ZZ/2$-graded dg Lie algebra whose underlying $\ZZ/2$-graded vector space is $\pv^{\bu,\bu}(X)[1]$ (with gradings defined modulo $2$), whose differential is
+%\beqn\label{differential}
+%\dbar + \partial_{\Omega}
+%\eeqn
+%and the bracket is the Nijenhuis--Schouten bracket $\{\cdot,\cdot\}_{\rm NS}$.
+%We notice that in the original $\ZZ$-grading on $\pv^{\bu,\bu}(X)$ the operator $\partial_{\Omega}$ has cohomological degree $-1$, which is why the above deformation is only defined in a $\ZZ/2$-graded sense.
+
+%The differential (\ref{differential}) clearly preserves the subspace $\pv^{\leq 1, \bu}(X)$.
+%We let $\cS^{\leq 1,\bu}(X) \subset \cS^{\bu,\bu}(X)$ denote the $\ZZ/2$-graded sub dg Lie algebra consisting of polyvector fields of type $i\leq 1$ equipped with the differential $\dbar + \partial_{\Omega}$.
+
+%\begin{rmk}
+%  There is a way to regrade $\cS^{\leq 1,\bu}(X)$ while keeping the differential the same in such a way that it has the structure of a $\ZZ$-graded dg Lie algebra.
+%  Explicitly, this is
+%  \[
+%    \begin{array}{ccccc}
+%      \ul{0} & & \ul{1} \\
+%      \pv^{1,\bu}(X) &\xto{\partial_{\Omega}} & \pv^{0,\bu}(X) .
+%    \end{array}
+%  \]
+%  This is a $\ZZ$-graded dg Lie algebra which agrees with $\cS^{\leq 1, \bu}(X)$ as a $\ZZ/2$- graded dg Lie algebra.
+%  This dg Lie algebra is a free resolution for the Lie algebra of holomorphic divergence-free vector fields on $X$.
+%  That is, holomorphic vector fields which preserve the holomorphic volume form $\Omega$.
+% \end{rmk}
+
+
+The space of differential forms on any smooth manifold $L$ is a commutative dg algebra $\Omega^{\bu}(L) = \left(\oplus_{k}\Omega^{k}(L)[-k], \d_{\dR}\right)$.
+By taking the tensor product with the dg Lie algebra $\cS(X)$ we obtain the dg Lie algebra
+\beqn\label{localLie}
+  \cS(X) \; \Hat{\otimes} \; \Omega^{\bu}(L)
+\eeqn
+where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
+We remark that the structure maps of this Lie algebra, namely the differential and bracket, are given by differential and bidifferential operators, respectively.
+In this sense, it fits the definition of a {\em local dg Lie algebra} on the product manifold $X \times L$, see Definition ?? \ref{CG2}.
+
+Associated to any local dg Lie algebra is a classical field theory in the BV formalism that one refers to as ``$BF$-theory''.
+Denote the sheaf of sections of the local dg Lie algebra by $\cL$.
+The fields of the associated BV theory are pairs
+\[
+(A, B) \in \cL[1] \oplus \cL^{!}[-1]\]
+and the action functional reads $\int B F_{A} = \int B (\d_{\cL}A + \frac12 [A,A])$.
+Here $\d_{\cL}$ denotes the differential on $\cL$ and $[\cdot,\cdot]$ is the Lie bracket.
+Notice that the equations of motion for the $A$-field is simply the Maurer--Cartan equation $\d_\cL A + \frac12 [A,A] = 0$.
+For the $B$-field the equations of motion read $\d_\cL B + [A, B] = 0$.
+
+For the case at hand, we consider the BF theory associated to the local dg Lie algebra (\ref{localLie}) defined on the product $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
+Denote by $d \in \ZZ$ the sum $\dim_{\CC}(X) + \dim_{\RR}(L)$.
+
+The fields decompose as follows
+\[
+(\mu, \gamma) = (\mu^{1,\bu} + \mu^{0,\bu}, \gamma^{0,\bu}+\gamma^{1,\bu})
+\]
+where
+\[
+  \begin{array}{ccl}
+    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
+  \end{array}
+\]
+Notice that what we called the ``$A$''-field in the general definition of BF theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
+By force of habit, we will still refer to the theory with these particular fields as $BF$-theory.
+
+While the definition of $\mu$ is independent of the dimension, the field $\gamma$ depends on $d$.
+This is in order for the BV antibracket to be of the appropriate degree.
+Additionally, we have utilized the holomorphic volume form in the definition of the field $\gamma$.
+Indeed, in this presentation the BV antipairing on fields reads
+\[
+  \int_{X \times L} (\mu \vdash \gamma) \wedge \Omega = \int_{X \times L} (\mu^{1,\bu} \vdash \gamma^{1,\bu} + \mu^{0,\bu} \vdash \gamma^{0,\bu}) \wedge \Omega .
+\]
+
+\subsubsection{}
+We will be mostly interested in the case that $X$ is a Calabi--Yau five-fold and $L$ is a real one-dimensional manifold.
+In this case $d = 6$ so the field $\gamma$ takes the form
+\[
+  \gamma \in \left(\Omega^{0,\bu}(X)[6] \oplus \Omega^{1,\bu}(X)[5] \right) \otimes \Omega^\bu(L).
+\]
+
+What is important for us is not simply BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$, but a certain deformation of it.
+We consider a theory whose fields are that of the BF theory but whose action functional is of the form $S_{\rm BF} + J$, where $J$ is a local functional that purely depends on the fields $\gamma$.
+It is defined by the following formula
+\[
+J(\gamma) = \frac13 \int_{X\times L} \gamma \partial \gamma \partial \gamma .
+\]
+
+First off, we notice an inconsistency in the cohomological degrees of the functionals $S_{\rm BF}$ and $J$.
+Being a classical action functional $S_{\rm BF}$ is, of course, ghost degree zero.
+However, we observe that $J$ is of ghost degree $??$.
+In order to make sense of the deformed theory, therefore, we must consider the space of fields as a $\ZZ/2$-graded object rather than a $\ZZ$-graded one.
+
+So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ/2$-graded space of fields takes the form
+\[
+  \begin{array}{ccl}
+    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
+  \end{array}
+\]
+Here, we have used the following convention for $\ZZ/2$-graded complexes.
+If $V$ is a $\ZZ/2$-graded vector space with even part $V^0$ and odd part $V^1$, then $V[1]$ is a $\ZZ/2$-graded vector space with even part $V^1$ and odd part $V^0$.
+
+With the issue of gradings out of the way, we turn to the question of whether this is a well-defined classical BV theory.
+In order for this to be true, we must know that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation $\{S_{\rm BF} + J , S_{\rm BF} + J\} = 0$.
+Of course, we know the undeformed BF-theory satisfies the classical master equation $\{S_{\rm BF}, S_{\rm BF}\} = 0$.
+Additionally, since $\gamma$ does not pair with itself under the antibracket, we also see that $\{J,J\}=0$.
+What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
+
+\begin{lem}
+The functional $J = \frac13 \int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
+In particular, $S_{\rm BF} + J$ is a well-defined classical BV action.
+\end{lem}
+
+\begin{proof}
+It is clear that $J$ is closed for the part of the differential arising from the kinetic term $\{S_{\rm free},\cdot\}$.
+It remains to see that
+\end{proof}
+
+\begin{dfn}
+Let $X$ be a Calabi--Yau five-fold and $L$ a one-dimensional smooth manifold.
+Define the $\ZZ/2$-graded BV theory $\cT$ on
+      \[
+        X \times L
+      \]
+to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS^{\leq 1,\bu}(X) \Hat{\otimes} \Omega^{\bu}(L)$ by the local functional
+
+\end{dfn}
+
+The BV action functional for the theory splits as a sum
+\[
+  S_{\rm BF} + J
+\]
+where $J$ is as in the definition above and $S_{BF}$ is the action functional for the underlying BF theory which takes the form
+\[
+  S_{\rm BF} = \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega .
+\]
+We will furthermore decompose $S_{\rm BF} = S_{\rm free}+I_{\rm BF}$ into its free and interacting pieces.
+
+For this deformation to be a well-defined BV theory, we must know that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation $\{S_{\rm BF} + J , S_{\rm BF} + J\} = 0$.
+Of course, we know the undeformed BF-theory satisfies the classical master equation $\{S_{\rm BF}, S_{\rm BF}\} = 0$.
+Additionally, simply by type reasons do we see that $\{J,J\}=0$.
+What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
+
+\begin{lem}
+  The functional $J = \frac13 \int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
+  In particular, $S_{\rm BF} + J$ is a well-defined classical BV action.
+\end{lem}
+\begin{proof}
+  It is clear that $J$ is closed for the part of the differential arising from the kinetic term $\{S_{\rm free},\cdot\}$.
+  It remains to see that :
+\end{proof}
+
+There is a similar deformation of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$ when $X$ is any {\em odd dimensional} Calabi--Yau manifold and $L$ is a smooth one-dimensional manifold.
+
+
+\subsection{Equations of motion}
+\label{sec:org2973a4d}
+In this section we analyze the equations of motion and provide a moduli theoretic interpretation of the solution space.
+
+\subsection{Evidence for twisted supergravity}
+
+In parts of the remainder of the paper we will provide evidence, and consistency checks, that the eleven-dimensional theory that we have just defined is a candidate for the minimal twist of supergravity.
+In this section, we discuss a more direct relationship by exhibiting the fields of the theory we have outlined as components of the supergravity multiplet that are expected to survive in the twist.
+
 \section{Quantization of holomorphic-topological theories}
-\label{sec:orgec1821a}
+\label{sec:org297a559}
 \subsection{Effective renormalization}
-\label{sec:org2b54a17}
-\subsection{The \$11\$-dimensional theory}
-\label{sec:org553e6b1}
+\label{sec:orga5cd4ed}
+\subsection{The \(11\)-dimensional theory}
+\label{sec:org8b189fc}
 \subsection{The moduli space of quantizations}
-\label{sec:orgefb666b}
+\label{sec:orgf278b4e}
 \section{Relationship to the Type IIA string}
-\label{sec:org22f4829}
+\label{sec:org355a726}
+
+Let $TX$ denote the holomorphic tangent bundle and define
+\[
+\pv^{i,j}(X) \define \Omega^{0,j}(X, \wedge^{i} TX) .\]
+This is the space of $i$-pvvectors of Dolbeault type $j$.
+Using the $\dbar$ operator for the holomorphic bundle $\wedge^{i}TX$ we obtain a cochain complex $\pv^{i,\bu}(X) = \left(\oplus_{j} \pv^{i,j}(X) [-j], \dbar \right)$ which provides a free resolution of the sheaf of holomorphic polyvector fields of type $i$.
+
+
+There is a bracket on the space of holomorphic polyvector fields called the Nijenhuis--Schouten bracket.
+This bracket is defined using holomorphic pvdifferential operators, so extends to a bracket on the Dolbeault complex to define a bracket of the form
+\[
+  \{\cdot, \cdot\}_{\rm NS} \colon \pv^{i,j}(X) \times \pv^{k,\ell}(X) \to \PV^{i+k-1, j+\ell}(X) .
+\]
+This bracket endows the total complex
+\beqn\label{eqn:pvlie1}
+\pv^{\bu,\bu}(X)[1] = \left(\oplus_{i,j} \pv^{i,j}(X)[-i-j+1] , \dbar \right)
+\eeqn
+with the structure of a dg Lie algebra.
+Here, we note that in this dg Lie algebra the space $\pv^{i,j}(X)$ lies in cohomological degree $i+j-1$.
+
+
+So far, $X$ has been an arbitrary complex manifold.
+When $X$ is Calabi--Yau of complex dimension $n$, the holomorphic volume form $\Omega$ defines an isomorphism
+\[
+  \vdash \Omega : \pv^{i,j}(X) \cong \Omega^{n-i, j}(X).
+\]
+In turn, the holomorphic de Rham operator $\partial : \Omega^{p, j}(X) \to \Omega^{p+1,j}$ defines a holomorphic differential operator
+\[
+  \partial_{\Omega} : \pv^{i,j}(X) \to \pv^{i-1,j}(X) .
+\]
+This is the holomorphic analog of the divergence operator with respect to $\Omega$.
+
 \subsection{Kodaira--Spencer theory with potentials}
-\label{sec:org9f736c1}
+\label{sec:org5e18f8e}
 \subsubsection{Warm-up: four-dimensional Kodaira--Spencer theory}
-\label{sec:org0b90e8b}
+\label{sec:org91dc4ca}
 \subsubsection{Eight-dimensional Kodaira--Spencer theory}
-\label{sec:org3b2a900}
+\label{sec:orgeb2dd4d}
 \subsection{The Type IIA topological string}
-\label{sec:org02b0f82}
+\label{sec:org1f7e793}
 \subsection{Reduction of twisted supergravity}
-\label{sec:org59003d2}
+\label{sec:orgcf7b6a4}
 \subsubsection{Calabi--Yau compactifications}
-\label{sec:org55d712d}
+\label{sec:org16a2c98}
 \subsection{Twisted supergravity on a three-fold}
-\label{sec:org7c4a220}
+\label{sec:org774abb4}
 \section{The non-minimal G2 twist}
-\label{sec:orgc520304}
+\label{sec:org590ab85}
+Does math mode \(work here = e^x\)?
 \end{document}
