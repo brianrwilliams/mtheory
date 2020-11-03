@@ -196,15 +196,19 @@ There is a local Lie algebra structure described as follows.
 There is a self bracket between the $\mu$-fields defined by
 \[
 [u^k \mu^i, u^\ell \Tilde{\mu}^j] = u^{k+j} [\mu^i, \Tilde{\mu}^j]_{\rm NS} .
-\]
-\item Next, there is a self-bracket between the $\gamma$-fields defined by 
+    \]
+    This gives brackets $\PV^{1,\bu}\times \PV^{0,\bu}\to \PV^{0,\bu}$ and $\PV^{1,\bu}\times\PV^{1,\bu}\to \PV^{1,\bu}$.
+  \item Next, there is a self-bracket between the $\gamma$-fields defined by
 \[
-[\gamma^3, \Tilde{\gamma}^3] = [\partial \gamma^3 , \Tilde{\gamma}^{3}]_{\rm NS} \pm [\gamma^3, \partial \Tilde{\gamma}^{3}]_{\rm NS} \in {\rm PV}^{4,\bu} 
-\]
+[\gamma^3, \Tilde{\gamma}^3] = [\partial \gamma^3 , \Tilde{\gamma}^{3}]_{\rm NS} \pm [\gamma^3, \partial \Tilde{\gamma}^{3}]_{\rm NS}
+    \]
+This gives a bracket $\PV^{3,\bu}\times \PV^{3,\bu}\to \PV^{4,\bu}$.
 \item Finally, there are mixed terms in the bracket defined by
-\[
-[u^{-k} \gamma^i , u^\ell \mu^j] = u^{-k + \ell} [\partial \gamma^i, \mu^j]_{\rm NS}
-\]
+    \begin{align*}
+      \PV^{4,\bu}\times \PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{4}, \mu^{0}] = [\gamma^{4}, \mu^{0}]_{\rm {NS}}\\
+      \PV^{3,\bu}\times \PV^{0,\bu}\to \PV^{1,\bu}, \ \ \ & [\gamma^{3}, \mu^{0}] = [\del\gamma^{3}, \mu^{0}]_{\rm NS}\\
+      \PV^{3,\bu}\times \PV^{1,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{3}, \mu^{1}] = [\gamma^{3}, \mu^{1}]_{\rm NS}.
+    \end{align*}
 \end{itemize}
 
 Together with the wedge and integrate pairing, $\mc E_{\rm pot}$ has the structure of a nondegenerate BV theory.
