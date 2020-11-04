@@ -121,6 +121,13 @@ By taking the tensor product with the dg Lie algebra $\cS(X)$ we obtain the dg L
   \cS(X) \; \Hat{\otimes} \; \Omega^{\bu}(L)
 \eeqn
 where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
+The differential in this dg Lie algebra is of the form $\dbar \otimes 1 + \partial_\Omega \otimes 1 + 1 \otimes \d_{\rm dR}$, which we will abbreviate by $\dbar + \partial_\Omega + \d_{\rm dR}$.
+The bracket is defined using the bracket on $\cS(X)$ together with the wedge product of forms on $\Omega^\bu(L)$ by the formula
+\[
+  [\mu \otimes \alpha, \nu \otimes \beta] = [\mu, \nu] \otimes (\alpha \wedge \beta) .
+\]
+
+
 We remark that the structure maps of this Lie algebra, namely the differential and bracket, are given by differential and bidifferential operators, respectively.
 In this sense, it fits the definition of a {\em local dg Lie algebra} on the product manifold $X \times L$, see Definition ?? \ref{CG2}.
 
@@ -128,7 +135,8 @@ Associated to any local dg Lie algebra is a classical field theory in the BV for
 Denote the sheaf of sections of the local dg Lie algebra by $\cL$.
 The fields of the associated BV theory are pairs
 \[
-(A, B) \in \cL[1] \oplus \cL^{!}[-1]\]
+  (A, B) \in \cL[1] \oplus \cL^{!}[-2]
+\]
 and the action functional reads $\int B F_{A} = \int B (\d_{\cL}A + \frac12 [A,A])$.
 Here $\d_{\cL}$ denotes the differential on $\cL$ and $[\cdot,\cdot]$ is the Lie bracket.
 Notice that the equations of motion for the $A$-field is simply the Maurer--Cartan equation $\d_\cL A + \frac12 [A,A] = 0$.
@@ -238,7 +246,93 @@ What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \c
   It remains to see that :
 \end{proof}
 
-There is a similar deformation of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$ when $X$ is any {\em odd dimensional} Calabi--Yau manifold and $L$ is a smooth one-dimensional manifold.
+\subsubsection{}
+
+We briefly discuss a generalization of this deformation of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$ when $X$ is any {\em odd dimensional} Calabi--Yau manifold of dimension at least three and $L$ is a smooth one-dimensional manifold.
+
+Suppose $X$ is a Calabi--Yau manifold of complex dimension $2m+1$ where $m > 0$.
+Then, the fields of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^{\bu}(L)$ are of the form
+\[
+  \begin{array}{ccl}
+    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[depends on m] .
+  \end{array}
+\]
+
+The deformation we consider is of the form
+\[
+  J_m (\gamma) = \int_{X \times L} \gamma \underbrace{\partial \gamma \cdots \partial \gamma}_{m} .
+\]
+That is, this deformation is $(m+1)$-linear and contains $m$ holomorphic derivatives.
+As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $J_m$ is closed for the differential $\{S_{\rm BF},\cdot\}$ defining the BF theory.
+
+\begin{lem}
+  The functional $J_m$ is closed for the differential $\{S_{\rm BF}, \cdot \}$.
+\end{lem}
+
+A simple count reveals that the ghost degree of the functional $J_m$ is $depends on m$.
+In particular, when $m \ne 1$, the above lemma implies that the action functional $S_{\rm BF} + J_m$ defines a $\ZZ/2$-graded classical BV theory.
+
+When $m=1$, the action $S_{\rm BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
+Another feature of the case $m=1$ is that the deformed theory is actually a {\em topological} field theory.
+It will be useful to spell out this theory in more detail.
+
+In this case $X$ is a Calabi--Yau three-fold.
+Using the isomorphism
+\[
+ (-) \vee \Omega : \PV^{i,\bu} (X) \cong \Omega^{3-i, \bu}(X)
+\]
+we can identify the $\mu$-fields of the theory in terms of differential forms
+\[
+  \alpha^2 + \alpha^3 \in \left(\Omega^{2,\bu}(X)[1] \oplus \Omega^{3,\bu}(X)\right) \; \Hat{\otimes} \; \Omega^\bu(L)
+\]
+by the formula $\alpha^{3-i} = \mu^{i} \vee \Omega$, for $i=0,1$.
+We will also write $\alpha^{j} = \gamma^{j}$ for $j=0,1$, so the remaining fields are
+\[
+  \alpha^0 + \alpha^1 \in \left(\Omega^{0,\bu}(X)[3] \oplus \Omega^{1,\bu}(X)[2] \right) \; \Hat{\otimes} \; \Omega^\bu(L).
+\]
+
+Let us write the theory as $S_{\rm BF} + c J_1$ where $c$ is a complex number.
+We denote by $\cT_c [X \times L]$ the resulting BV theory which depends on this coupling constant $c$.
+Also, let $\cM_c[X]$ denote the moduli space of solutions on the Calabi--Yau three-fold $X$.
+
+Using this decomposition of the fields we can write the underlying {\em free} theory by the following action functional
+\[
+  \int_{X\times L} \left(\alpha^0 (\dbar + \d_{\rm dR}) \alpha^3 + \alpha^1 (\dbar + \d_{\rm dR}) \alpha^2 \right) + \int_{X \times L} \alpha^0 \partial \alpha^2 + c \int_{X \times L} \alpha^1 \partial \alpha^1 .
+\]
+Here, as above, $\partial$ denotes the holomorphic de Rham operator on $X$.
+
+Now, for $c \ne 0$, we observe that this free action is equivalent to abelian seven-dimensional Chern--Simons theory on $X \times L$.
+Indeed, by the above formula the linear BRST complex of the theory is given by the following cochain complex
+\[
+  \bigg(\Omega^{\bu, \bu} (X) \; \Hat{\otimes} \; \Omega^{\bu}(L) [3] \; , \; \dbar + \Hat{\partial} + \d_{\rm dR} + c \partial_{\Omega^{1} \to \Omega^{2}} \bigg)
+\]
+Here, $\Hat{\partial}$ denotes the components of the holomorphic de Rham differential mapping $\Omega^{0,\bu}(X) \to \Omega^{1,\bu}(X)$ and $\Omega^{2,\bu}(X) \to \Omega^{3,\bu}(X)$, and $\partial_{\Omega^1 \to \Omega^2}$ denotes the component $\Omega^{1,\bu}(X) \to \Omega^{2,\bu}(X)$.
+When $c \ne 0$ we see that this cochain complex is isomorphic to the full (shifted) de Rham complex $\Omega^\bu(X \times L)[3]$.
+
+In the BV formalism, seven-dimensional Chern--Simons theory is described by the fields $\alpha^i \in \Omega^{i,\bu}(X) \Hat{\otimes} \Omega^\bu(L)[3-i]$, $i=0, \ldots 3$ which we can now decompose as a de Rham type field $C^\bu \in \Omega^\bu(X \times L)[3]$ so that $C^j$ has total de Rham degree $j$.
+The BV antipairing is the wedge and integrate pairing $\int C \wedge C'$ and the action reads
+\[
+  \frac{1}{2} \int_{X \times L} C \d C,
+\]
+where $\d$ is the full de Rham differential on $X \times L$.
+Sometimes, this is referred to as ``three-form Chern--Simons theory'' since its fundamental field is a three-form $C^3$ and the equations of motion read $\d C^3 = 0$.
+
+We have seen that when $c \ne 0$, the free theory underlying $\cT_c[X \times L]$ is equivalent to seven-dimensional Chern--Simons theory.
+In particular, the moduli space of solutions $\cM_c[X]$, for $c \ne 0$, has as its free limit the moduli space of circle $3$-bundles on $X$ with connection.
+
+We can consider a different limit of $\cM_c[X]$, namely the one where $c \to 0$.
+This is precisely the cotangent bundle to the moduli space of Calabi--Yau structures $\cM_{CY}[X]$ on the three-fold $X$:
+\[
+  \cM_0[X] = T^* \left(\cM_{\rm CY} [X]\right) .
+\]
+
+In summary, we have seen that $\cM_c[X]$ provides a roof of deformations between the moduli space of Calabi--Yau structures on $X$ and the moduli of circle $3$-bundles:
+\[
+  \begin{tikzcd}
+    & \cM_c[X] \ar[dr, "c \ne 0"', "{\rm free\;limit}"] \ar[dl, "c \to 0"'] & \\ T^* \left(\cM_{\rm CY} [X] \right) & & \left\{ \begin{array}{ccc} \mbox{circle\;3-bundles} \\ {\rm on} \; X \end{array} \right\} .
+  \end{tikzcd}
+\]
 
 
 \subsection{Equations of motion}
@@ -247,8 +341,41 @@ In this section we analyze the equations of motion and provide a moduli theoreti
 
 \subsection{Evidence for twisted supergravity}
 
+\brian{state conjecture about twist.}
+
 In parts of the remainder of the paper we will provide evidence, and consistency checks, that the eleven-dimensional theory that we have just defined is a candidate for the minimal twist of supergravity.
 In this section, we discuss a more direct relationship by exhibiting the fields of the theory we have outlined as components of the supergravity multiplet that are expected to survive in the twist.
+
+We recall that our eleven-dimensional theory is only $\ZZ/2$-graded.
+This is consistent with the minimal twist of supergravity.
+Indeed, since the $R$-symmetry group is trivial there is no way to regrade the twisted theory in such a way that the BRST differential and twisting supercharge are of homogenous $\ZZ$-degree.
+
+The conjecture implies that the even fields of our eleven dimensional theory should correspond to certain components of the fundamental fields supergravity that survive the minimal twist.
+The even components of the field $\mu$ and $\gamma$ are of the form
+\[
+  \mu^{0, i ; j} \; , \; \mu^{1, i ; j} \; , \; \gamma^{0, i ; j} \; , \; \gamma^{1, i ; j}
+\]
+where $i+j$ is an even integer and $i = 0,\ldots 5$ and $j=0,1$.
+Here, as in the previous section, we have used the following index notation:
+\[
+  \begin{array}{ccccc}
+    \mu^{k, i ; j} & \in & \pv^{k,i} (\CC^5) \; \Hat{\otimes} \; \Omega^j(\RR) \\
+    \gamma^{k, i ; j} & \in & \Omega^{k,i}(\CC^5) \; \Hat{\otimes} \; \Omega^j(\RR).
+  \end{array}
+\]
+
+Let us now turn to the field content of eleven-dimensional supergravity.
+In Euclidean signature, in the flat background, the fundamental fields of eleven-dimensional supergravity are
+\[
+  \begin{array}{ccll}
+    e & \in & \Omega^1(\RR^{11}) \otimes \CC^{11} & \mbox{vielbien} \\
+    \omega & \in & \Omega^1(\RR^{11}) \otimes \fs \fo(11) & \mbox{spin connection} \\
+    C & \in & \Omega^3(\RR^{11}) & \mbox{supergravity $3$-form} \\
+    \psi & \in & \Omega^1(\RR^{11}) \otimes S & \mbox{gravitino} .
+  \end{array}
+\]
+We note that the fields above have been complexified from the usual presentation of supergravity in terms of real fields.
+Here, $S$ denotes the $128$ dimensional complex spin representation of $\fs \fo(11)$.
 
 \section{Quantization of holomorphic-topological theories}
 \label{sec:org297a559}
