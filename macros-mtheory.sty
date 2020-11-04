@@ -1,7 +1,9 @@
 %%% GENERAL PACKAGES
-\usepackage{mathrsfs,amsmath, amscd, amsthm,amssymb, verbatim,subfigure, enumerate,graphicx}
-\usepackage[top=1in, bottom=1.25in, left=1in, right=1in,footskip=.5in]{geometry}
+\usepackage{mathrsfs,amsmath, amscd, amsthm,amssymb, verbatim,subfigure, enumerate,graphicx,todonotes}
 
+%%% FORMATTING
+\usepackage[top=1in, bottom=1.25in, left=1.3in, right=1.3in,footskip=.5in]{geometry}
+\linespread{1.25}
 
 %%% FONT PACKAGES
 \usepackage{amsfonts, slashed}
@@ -74,6 +76,11 @@
 \def\eeqnarray{\end{eqnarray}}
 \def\beqnstar{\begin{eqnarray*}}
 \def\eqnestar{\end{eqnarray*}}
+
+%%% COMMENTS
+
+\def\brian{\todo[color={red!100!green!33},author=Brian]}
+\def\surya{\todo[color={blue!100!green!33},author=Surya]}
 
 %%% GENERAL MACROS
 
