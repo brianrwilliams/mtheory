@@ -145,15 +145,15 @@ For the $B$-field the equations of motion read $\d_\cL B + [A, B] = 0$.
 For the case at hand, we consider the BF theory associated to the local dg Lie algebra (\ref{localLie}) defined on the product $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
 Denote by $d \in \ZZ$ the sum $\dim_{\CC}(X) + \dim_{\RR}(L)$.
 
-The fields decompose as follows
+The fields decompose as
 \[
-(\mu, \gamma) = (\mu^{1,\bu} + \mu^{0,\bu}, \gamma^{0,\bu}+\gamma^{1,\bu})
+(\mu, \gamma) = (\mu^1 + \mu^0, \gamma^0 + \gamma^1)
 \]
 where
 \[
   \begin{array}{ccl}
-    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
+    \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^0 + \gamma^1 & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
   \end{array}
 \]
 Notice that what we called the ``$A$''-field in the general definition of BF theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
@@ -164,7 +164,7 @@ This is in order for the BV antibracket to be of the appropriate degree.
 Additionally, we have utilized the holomorphic volume form in the definition of the field $\gamma$.
 Indeed, in this presentation the BV antipairing on fields reads
 \[
-  \int_{X \times L} (\mu \vdash \gamma) \wedge \Omega = \int_{X \times L} (\mu^{1,\bu} \vdash \gamma^{1,\bu} + \mu^{0,\bu} \vdash \gamma^{0,\bu}) \wedge \Omega .
+  \int_{X \times L} (\mu \vdash \gamma) \wedge \Omega = \int_{X \times L} (\mu^1 \vdash \gamma^1 + \mu^0 \vdash \gamma^0) \wedge \Omega .
 \]
 
 \subsubsection{}
@@ -189,15 +189,18 @@ In order to make sense of the deformed theory, therefore, we must consider the s
 So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ/2$-graded space of fields takes the form
 \[
   \begin{array}{ccl}
-    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
+    \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^0+ \gamma^1 & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
   \end{array}
 \]
 Here, we have used the following convention for $\ZZ/2$-graded complexes.
 If $V$ is a $\ZZ/2$-graded vector space with even part $V^0$ and odd part $V^1$, then $V[1]$ is a $\ZZ/2$-graded vector space with even part $V^1$ and odd part $V^0$.
 
 With the issue of gradings out of the way, we turn to the question of whether this is a well-defined classical BV theory.
-In order for this to be true, we must know that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation $\{S_{\rm BF} + J , S_{\rm BF} + J\} = 0$.
+In order for this to be true, we must see that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation
+\[
+  \{S_{\rm BF} + J , S_{\rm BF} + J\} = 0 .
+\]
 Of course, we know the undeformed BF-theory satisfies the classical master equation $\{S_{\rm BF}, S_{\rm BF}\} = 0$.
 Additionally, since $\gamma$ does not pair with itself under the antibracket, we also see that $\{J,J\}=0$.
 What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
@@ -212,41 +215,32 @@ It is clear that $J$ is closed for the part of the differential arising from the
 It remains to see that
 \end{proof}
 
+\begin{rmk}
+  We have actually shown something slightly stronger here.
+  Namely, for any constant $c$ the functional $S_{\rm BF} + c J$ satisfies the classical master equation.
+  This dependence on a coupling constant will be important later on in this paper.
+\end{rmk}
+
 \begin{dfn}
 Let $X$ be a Calabi--Yau five-fold and $L$ a one-dimensional smooth manifold.
 Define the $\ZZ/2$-graded BV theory $\cT$ on
-      \[
-        X \times L
-      \]
-to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS(X) \Hat{\otimes} \Omega^{\bu}(L)$ by the local functional
-
+\[
+  X \times L
+\]
+to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS(X) \Hat{\otimes} \Omega^{\bu}(L)$ by the local functional $J (\gamma) = \frac13 \int_{X \times L} \gamma \partial \gamma \partial \gamma.$
 \end{dfn}
 
-The BV action functional for the theory splits as a sum
-\[
-  S_{\rm BF} + J
-\]
-where $J$ is as in the definition above and $S_{BF}$ is the action functional for the underlying BF theory which takes the form
-\[
-  S_{\rm BF} = \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega .
-\]
-We will furthermore decompose $S_{\rm BF} = S_{\rm free}+I_{\rm BF}$ into its free and interacting pieces.
+%Unpacking this a bit, we see that the BV action functional for the theory $\cT$ splits as a sum
+%\begin{equation}\label{11daction}
+%  S_{\rm BF} + J
+%\end{equation}
+%where $J$ is as in the definition above and $S_{BF}$ is the action functional for the underlying BF theory which takes the form
+%\[
+%  S_{\rm BF} = \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega .
+%\]
+%We will furthermore decompose $S_{\rm BF} = S_{\rm free}+I_{\rm BF}$ into its free and interacting pieces.
 
-For this deformation to be a well-defined BV theory, we must know that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation $\{S_{\rm BF} + J , S_{\rm BF} + J\} = 0$.
-Of course, we know the undeformed BF-theory satisfies the classical master equation $\{S_{\rm BF}, S_{\rm BF}\} = 0$.
-Additionally, simply by type reasons do we see that $\{J,J\}=0$.
-What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
-
-\begin{lem}
-  The functional $J = \frac13 \int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
-  In particular, $S_{\rm BF} + J$ is a well-defined classical BV action.
-\end{lem}
-\begin{proof}
-  It is clear that $J$ is closed for the part of the differential arising from the kinetic term $\{S_{\rm free},\cdot\}$.
-  It remains to see that :
-\end{proof}
-
-\subsubsection{}
+\subsubsection{A generalization of the theory}
 
 We briefly discuss a generalization of this deformation of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$ when $X$ is any {\em odd dimensional} Calabi--Yau manifold of dimension at least three and $L$ is a smooth one-dimensional manifold.
 
@@ -254,14 +248,14 @@ Suppose $X$ is a Calabi--Yau manifold of complex dimension $2m+1$ where $m > 0$.
 Then, the fields of BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^{\bu}(L)$ are of the form
 \[
   \begin{array}{ccl}
-    \mu = \mu^{1,\bu}+\mu^{0,\bu} & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^{0,\bu} + \gamma^{1,\bu} & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[depends on m] .
+    \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^0 + \gamma^1 & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[depends on m] .
   \end{array}
 \]
 
 The deformation we consider is of the form
 \[
-  J_m (\gamma) = \int_{X \times L} \gamma \underbrace{\partial \gamma \cdots \partial \gamma}_{m} .
+  J_m (\gamma) = \frac{1}{m+1} \int_{X \times L} \gamma \underbrace{\partial \gamma \cdots \partial \gamma}_{m} .
 \]
 That is, this deformation is $(m+1)$-linear and contains $m$ holomorphic derivatives.
 As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $J_m$ is closed for the differential $\{S_{\rm BF},\cdot\}$ defining the BF theory.
@@ -273,9 +267,11 @@ As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $
 A simple count reveals that the ghost degree of the functional $J_m$ is \brian{figure out}.
 In particular, when $m \ne 1$, the above lemma implies that the action functional $S_{\rm BF} + J_m$ defines a $\ZZ/2$-graded classical BV theory.
 
+\subsubsection{The case of a CY three-fold}
+
 When $m=1$, the action $S_{\rm BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
 Another feature of the case $m=1$ is that the deformed theory is actually a {\em topological} field theory.
-It will be useful to spell out this theory in more detail.
+It is instructive to spell out this case in more detail.
 
 In this case $X$ is a Calabi--Yau three-fold.
 Using the isomorphism
@@ -287,27 +283,26 @@ we can identify the $\mu$-fields of the theory in terms of differential forms
   \alpha^2 + \alpha^3 \in \left(\Omega^{2,\bu}(X)[1] \oplus \Omega^{3,\bu}(X)\right) \; \Hat{\otimes} \; \Omega^\bu(L)
 \]
 by the formula $\alpha^{3-i} = \mu^{i} \vee \Omega$, for $i=0,1$.
-We will also write $\alpha^{j} = \gamma^{j}$ for $j=0,1$, so the remaining fields are
+We will also write $\alpha^{j} = \gamma^{j}$ for $j=0,1$, so the remaining fields read
 \[
-  \alpha^0 + \alpha^1 \in \left(\Omega^{0,\bu}(X)[3] \oplus \Omega^{1,\bu}(X)[2] \right) \; \Hat{\otimes} \; \Omega^\bu(L).
+  \alpha^0 + \alpha^1 \in \left(\Omega^{0,\bu}(X)[3] \oplus \Omega^{1,\bu}(X)[2] \right) \; \Hat{\otimes} \; \Omega^\bu (L).
 \]
-
-Let us write the theory as $S_{\rm BF} + c J_1$ where $c$ is a complex number.
-We denote by $\cT_c [X \times L]$ the resulting BV theory which depends on this coupling constant $c$.
-Also, let $\cM_c[X]$ denote the moduli space of solutions on the Calabi--Yau three-fold $X$.
-
-Using this decomposition of the fields we can write the underlying {\em free} theory by the following action functional
+Let us write the theory as $S_{\rm BF} + c J_1$ where $c$ is a constant.
+We denote by $\cT_c [X \times L]$ the resulting BV theory which depends on this coupling constant.
+Also, let $\cM_c[X]$ denote the moduli space of solutions on the Calabi--Yau three-fold.
+Using this decomposition of the fields we can write the underlying {\em free} theory by the following action
 \[
-  \int_{X\times L} \left(\alpha^0 (\dbar + \d_{\rm dR}) \alpha^3 + \alpha^1 (\dbar + \d_{\rm dR}) \alpha^2 \right) + \int_{X \times L} \alpha^0 \partial \alpha^2 + c \int_{X \times L} \alpha^1 \partial \alpha^1 .
+  \int_{X\times L} \left(\alpha^0 (\dbar + \d_{\rm dR}) \alpha^3 + \alpha^1 (\dbar + \d_{\rm dR}) \alpha^2 \right) + \int_{X \times L} \alpha^0 \partial \alpha^2 + \frac{c}{2} \int_{X \times L} \alpha^1 \partial \alpha^1
 \]
 Here, as above, $\partial$ denotes the holomorphic de Rham operator on $X$.
 
 Now, for $c \ne 0$, we observe that this free action is equivalent to abelian seven-dimensional Chern--Simons theory on $X \times L$.
-Indeed, by the above formula the linear BRST complex of the theory is given by the following cochain complex
+Indeed, by the above formula the linearized BV complex of the theory is given by the following cochain complex
 \[
   \bigg(\Omega^{\bu, \bu} (X) \; \Hat{\otimes} \; \Omega^{\bu}(L) [3] \; , \; \dbar + \Hat{\partial} + \d_{\rm dR} + c \partial_{\Omega^{1} \to \Omega^{2}} \bigg)
 \]
-Here, $\Hat{\partial}$ denotes the components of the holomorphic de Rham differential mapping $\Omega^{0,\bu}(X) \to \Omega^{1,\bu}(X)$ and $\Omega^{2,\bu}(X) \to \Omega^{3,\bu}(X)$, and $\partial_{\Omega^1 \to \Omega^2}$ denotes the component $\Omega^{1,\bu}(X) \to \Omega^{2,\bu}(X)$.
+Here, $\Hat{\partial}$ denotes the components of the holomorphic de Rham differential $\Omega^{0,\bu}(X) \to \Omega^{1,\bu}(X)$ and $\Omega^{2,\bu}(X) \to \Omega^{3,\bu}(X)$.
+Also, $\partial_{\Omega^1 \to \Omega^2}$ denotes the component $\Omega^{1,\bu}(X) \to \Omega^{2,\bu}(X)$.
 When $c \ne 0$ we see that this cochain complex is isomorphic to the full (shifted) de Rham complex $\Omega^\bu(X \times L)[3]$.
 
 In the BV formalism, seven-dimensional Chern--Simons theory is described by the fields $\alpha^i \in \Omega^{i,\bu}(X) \Hat{\otimes} \Omega^\bu(L)[3-i]$, $i=0, \ldots 3$ which we can now decompose as a de Rham type field $C^\bu \in \Omega^\bu(X \times L)[3]$ so that $C^j$ has total de Rham degree $j$.
@@ -337,7 +332,73 @@ In summary, we have seen that $\cM_c[X]$ provides a roof of deformations between
 
 \subsection{Equations of motion}
 \label{sec:org2973a4d}
-In this section we analyze the equations of motion and provide a moduli theoretic interpretation of the solution space.
+We return to the case of the theory $\cT$ on $X\times L$ where $X$ is a Calabi--Yau five-fold and $L$ is a one-manifold.
+In this section we analyze the equations of motion for the eleven-dimensional theory and provide partial moduli theoretic interpretation of the solution space.
+
+The action functional of the theory (\ref{11daction}) on $X \times L$ is of the form
+\[
+  \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega + \frac{c}{3} \int \gamma \partial \gamma \partial \gamma .
+\]
+Notice that just as in the last section we have included a coupling constant $c$ into the term which deforms the classical BF type theory.
+
+From this, we read off the equations of motion as
+\begin{equation}\label{eqn:eom}
+  \begin{array}{rccc}
+    \left(\dbar + \partial_\Omega + \d_{\rm dR} \right) \mu + \frac12 \{\mu, \mu\}_{\rm NS} + c \partial \gamma \partial \gamma \vdash \Omega & = & 0 \\
+    \left(\dbar + \partial_\Omega + \d_{\rm dR} \right) \gamma + L_\mu (\gamma) & = & 0 .
+  \end{array}
+\end{equation}
+Here, $L_\mu(\gamma)$ denotes the Lie derivative of $\gamma$ with respect to the vector field $\mu$.
+
+On $L = \RR_t$ we proceed to describe the classical phase space of the model which is the space of solutions to the above equations at $t = 0$.
+Upon taking into account the gauge transformations, we will denote the resulting moduli space by $\cM_c[X]$.
+When $X$ is compact, the BV pairing in the bulk eleven-dimensional theory induces a symplectic structure on this moduli space.
+
+Notice that just as in the case of the phase space of the $7$-dimensional theory on a Calabi--Yau three-fold, at $c=0$ this moduli space is precisely the cotangent bundle to the moduli space of Calabi--Yau five-folds $\cM_0 [X] = T^*(\cM_{\rm CY}(X))$.
+
+In the general case, we begin to decompose the two equations of motion above according to their form degree.
+When $c = 0$, the field $\mu^{1,1}$ is a Beltrami differential which provides the parameter describing the deformation of complex structure on the Calabi--Yau $X$.
+For $c \ne 0$, it makes an appearance in the following equation
+\begin{equation}\label{eqn:mu11}
+  \dbar \mu^{1,1} + \frac12 \{\mu^{1,1}, \mu^{1,1}\}_{\rm NS} + c \partial \gamma^{1,0} \partial \gamma^{1,2} \vdash \Omega = 0 .
+\end{equation}
+(Notice that the term $\partial \gamma^{1,1} \partial \gamma^{1,1} = 0$ by form type reasons.)
+
+The field $\gamma^{1,0}$ also appears in the second class of equations of motion in (\ref{eqn:eom}) as
+\[
+  \dbar \gamma^{1,0} + \partial \gamma^{0,1} + L_{\mu^{1,1}} \gamma^{1,0} + L_{\mu^{1,0}} \gamma^{0,1} = 0 .
+\]
+We choose a gauge so that $\gamma^{0,1} = 0$, \brian{Why is this allowed.} so that this equation reads
+\begin{equation}\label{eqn:gamma10}
+  \dbar \gamma^{1,0} + L_{\mu^{1,1}} \gamma^{1,0} = 0 .
+\end{equation}
+
+Denote by $\beta^{2,0} = \partial \gamma^{1,0}$ the $(2,0)$-form obtained from $\gamma^{1,0}$ and consider the sequence of maps of holomorphic vector bundles
+\[
+  \begin{tikzcd}
+    \wedge^{2,0} T^{*1,0} \ar[r, "\beta^{2,0} \wedge"] & \wedge^4 T_X^{*1,0} \ar[r, "\Omega", "\cong"'] & T^{1,0}_X .
+  \end{tikzcd}
+\]
+The image of this map is a holomorphic distribution $F \subset T_X^{1,0}$.
+It follows from the fact that $\partial \beta = 0$ that $F$ defines a holomorphic foliation on $X$.
+
+Using the foliation $F$, the holomorphic tangent bundle splits as $T^{1,0} = F \oplus Q$ where $Q = T^{1,0}_X / F$ is the quotient bundle.
+Using this splitting, we can split the components of $\mu^{1,1}$ according to
+\[
+  T^{1,0}_X \otimes T^{*0,1}_X = (F \otimes\Bar{F}^*) \oplus (F \otimes \Bar{Q}^*) \oplus (Q \otimes \Bar{F}^*) \oplus (Q \otimes \Bar{Q}^*) .
+\]
+
+
+There is a component $\mu_{Q\Bar{Q}}^{1,1}$ of $\mu^{1,1}$ which is a Beltrami differential for the quotient bundle $Q$.
+At the level of the quotient bundle Equation (\ref{eqn:mu11}) becomes
+\[
+  \dbar \mu^{1,1}_{Q \Bar{Q}} + \frac12 \{\mu^{1,1}_{Q \Bar{Q}} , \mu^{1,1}_{Q \Bar{Q}}\}_{\rm NS} = 0 .
+\]
+In other words $\mu^{1,1}_F$ is a Beltrami differential for this quotient bundle and hence determines a deformation of complex structure of $T^{1,0}_X / F$.
+
+
+
+
 
 \subsection{Evidence for twisted supergravity}
 
