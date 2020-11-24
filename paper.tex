@@ -387,13 +387,13 @@ Here, $S$ denotes the $128$ dimensional complex spin representation of $\fs \fo(
 \label{sec:orgf278b4e}
 \section{Relationship to the Type IIA string}
 \label{sec:org355a726}
+In the remainder of the paper, we wish to establish various consistency checks corroborating the claim that the 11d theory of interest describes a twist of 11d supergravity. In this section, we demonstrate that this claim is consistent with a conjectural description of a twist of type IIA supergravity due to \cite{}.
 
-Let $TX$ denote the holomorphic tangent bundle and define
+Before recalling this conjecture, we first fix some notation. For a complex manifold $X$, let $TX$ denote the holomorphic tangent bundle and define
 \[
 \pv^{i,j}(X) \define \Omega^{0,j}(X, \wedge^{i} TX) .\]
 This is the space of $i$-pvvectors of Dolbeault type $j$.
 Using the $\dbar$ operator for the holomorphic bundle $\wedge^{i}TX$ we obtain a cochain complex $\pv^{i,\bu}(X) = \left(\oplus_{j} \pv^{i,j}(X) [-j], \dbar \right)$ which provides a free resolution of the sheaf of holomorphic polyvector fields of type $i$.
-
 
 There is a bracket on the space of holomorphic polyvector fields called the Nijenhuis--Schouten bracket.
 This bracket is defined using holomorphic pvdifferential operators, so extends to a bracket on the Dolbeault complex to define a bracket of the form
@@ -407,8 +407,6 @@ This bracket endows the total complex
 with the structure of a dg Lie algebra.
 Here, we note that in this dg Lie algebra the space $\pv^{i,j}(X)$ lies in cohomological degree $i+j-1$.
 
-
-So far, $X$ has been an arbitrary complex manifold.
 When $X$ is Calabi--Yau of complex dimension $n$, the holomorphic volume form $\Omega$ defines an isomorphism
 \[
   \vdash \Omega : \pv^{i,j}(X) \cong \Omega^{n-i, j}(X).
@@ -419,14 +417,108 @@ In turn, the holomorphic de Rham operator $\partial : \Omega^{p, j}(X) \to \Omeg
 \]
 This is the holomorphic analog of the divergence operator with respect to $\Omega$.
 
+With this in hand, the conjecture of \cite{} is as follows:
+
+\begin{conj}
+  [Costello-Li \cite{}]
+  Let $(M,h_{M})$ be a Kahler surface and $(X, h_{X})$ be a Calabi-Yau 4-fold. Consider perturbative type IIA supergravity on $M\times X$ around a background where the graviton is set to $h_{M}+ h_{X}$, the bosonic ghost for local supersymmetries takes a VEV $Q$ that is invariant for the $\SU(4)$ subgroup of isometries preserving $X\subset M\times X$, and all other background fields are set to zero. The resulting theory admits a description as a Poisson BV theory with fields $\Omega^{\bullet}(M)\otimes \pv^{\bullet, \bullet}(X)[\![t]\!]$ where $t$ is a parameter of degree 2, $L_{\infty}$-structure given by $\ell_{1} = d\otimes 1+ 1\otimes (\dbar+t\partial)$, $\ell_{2} = \wedge\otimes \{-,-\}_{\rm NS}$ and Poisson kernel given by $(1\otimes \partial)\delta_{\Delta(X)}\delta_{\Delta (M)}$.
+\end{conj}
+
+Type II supergravity around such backgrounds where the bosonic ghost takes a nonzero VEV is what the authors call twisted supergravity. In fact, the authors further conjecture that type IIA superstring theory on $M\times X$ around a particular Ramond-Ramond background is equivalent to a topological string theory given by the A-model on $M$ and the B-model on $X$. This implies the above conjecture at the level of closed string field theory. Indeed the above description of twisted supergravity is a combination of Kodaira--Spencer theory on $X$ with the zero-winding sector of Kahler gravity on $M$.
+
+The authors of \cite{} establish a strand of evidence via residual supersymmetry. Namely, they construct an $L_{\infty}$ map from the $Q$-cohomology of the 10d $\cN = (1,1)$ algebra to the fields of the above theory, realizing the former as a collection of ghosts in the latter. This allows us to make sense of further twists of the above twist.
+
+The goal of this section is to identify the above conjectural twist of IIA supergravity with an $S^{1}$ reduction of our 11d theory. In order to do so, we will need to introduce a slight modification of the Kodaira-Spencer theory. We turn to this in the next subsection.
+
 \subsection{Kodaira--Spencer theory with potentials}
-\label{sec:org5e18f8e}
+\label{KSPot}
+
+One property of the description of the twist of type II supergravity in terms of Kodaira--Spencer theory is that the Ramond-Ramond fields of type II do not correspond to fundamental fields in Kodaira--Spencer theory. Rather it is certain components of the Ramond-Ramond field strengths that appear. However, in the identification of type IIA supergravity as the $S^{1}$ reduction of 11d supergravity, certain components of the C-field become components of the Ramond-Ramond 2-form. This suggests that in order to match the dimensional reduction of our 11d theory with a twist of type IIA, we must modify the description of the twist of type IIA to include certain components of Ramond-Ramond fields as potentials for those components of Ramond-Ramond field strengths that one finds in the twisted theory.
+
 \subsubsection{Warm-up: four-dimensional Kodaira--Spencer theory}
 \label{sec:org91dc4ca}
+In the BV formalism, minimal Kodaira--Spencer theory on $X$ is a (degenerate) Poisson BV theory with space of fields given by
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} \\
+ & \PV^{0,\bu} \\
+ \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} .
+\end{tikzcd}
+\]
+We will denote this sheaf of $\ZZ /2$-graded cochain complexes by $\cE_{\rm KS}$.
+
+There is a local (dg) Lie algebra structure on the parity shifted object $\Pi \cE_{\rm KS}$.
+The Lie bracket is defined using the Schouten-Nijenhuis bracket $[-,-]_{\rm NS}$ on polyvector fields and is given by the formula
+\[
+[u^k \alpha , u^\ell \beta] = u^{k+\ell} [\alpha, \beta]_{\rm NS} .
+\]
+where $k, \ell = 0,1$.
+Together with the differential this equips the parity shifted sheaf of cochain complexes $\Pi \cE_{\rm KS}$ with the structure of a local (dg) Lie algebra.
+
+The fields of minimal Kodaira--Spencer theory $\cE_{\rm KS}$ is equipped with an odd Poisson tensor defined by
+\[
+\Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
+\]
+
+We introduce another theory on the Calabi--Yau surface $X$ that we call minimal Kodaira--Spencer theory {\em with potentials}.
+The underlying vector bundle is
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} \\
+ & \PV^{0,\bu} \\
+ \PV^{2,\bu}  .
+\end{tikzcd}
+\]
+We will denote the resulting $\ZZ /2$-graded sheaf of cochain complexes by $\cE_{\rm pot}$.
+
+We interpret this as the theory of  ``potentials"  of minimal Kodaira--Spencer theory in the following way.
+There is a map of sheaves of cochani complexes
+\[
+\Phi : \cE_{\rm Pot} \to \cE_{\rm KS}
+\]
+which is the identity on $\PV^{0,\bu}$ and given by $\partial : \PV^{2,\bu} \to \PV^{1,\bu}$ on the remaining component.
+It is immediate to see that $\Phi$ defines a map of sheaves of cochain complexes.
+The theory $\cE_{\rm pot}$ is equipped with a non-degenerate BV pairing defined by the wedge-and-integrate pairing
+\[
+\omega_{\rm pot} (\alpha, \beta) = \int \alpha \wedge \beta  .
+\]
+It is immediate to verify that $\Phi$ intertwines the resulting bivector $\omega_{\rm pot}^{-1}$ and the Kodaira--Spencer Poisson bivector $\Pi_{\rm KS}$.
+
+In fact, the parity shifted bundle $\Pi \cE_{\rm pot}$ also has the structure of a local Lie algebra, and the map $\Phi$ intertwines these local Lie algebra structures.
+
+To describe the local Lie algebra structure on minimal Kodaira--Spencer theory with potentials we use the Calabi--Yau form $\Omega$ to identify $\cE_{\rm Pot}$ with the sheaf of cochain complexes
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} \\
+ & \Omega^{2,\bu} \\
+ \Omega^{0,\bu}  .
+\end{tikzcd}
+\]
+
+Now, note that any Calabi--Yau surface comes equipped with a holomorphic symplectic structure and there is a Poisson bracket defined on the sheaf of holomorphic functions.
+Since the bracket is defined in terms of holomorphic differential operators, it extends to a bracket on the Dobleault complex $\Omega^{0,\bu}(X)$.
+
+This further extends to a local Lie algebra structure on the semi-direct product
+\[
+\Omega^{0,\bu}(X) \ltimes \Pi \Omega^{2,\bu}(X)
+\]
+which describes the local Lie structure on $\Pi \cE_{\rm Pot}$.
+It is immediate to verify that the map $\Phi : \cE_{\rm pot} \to \cE$ intertwines the two $L_\infty$-structures.
+
+This equipped $\cE_{\rm pot}$ with the structure of an interacting (non-degenerate) BV theory.
+It's relationship to (minimal) Kodaira--Spencer theory can be summarized as follows.
+
+\begin{prop}
+The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ determines a map of $\PP_0$-factorization algebras on $X$:
+\[
+\Phi^* : {\rm Obs}_{\cE_{\rm KS}} \to {\rm Obs}_{\cE_{\rm Pot}} .
+\]
+\end{prop}
+
 \subsubsection{Eight-dimensional Kodaira--Spencer theory}
 \label{sec:orgeb2dd4d}
 \subsection{The Type IIA topological string}
-\label{sec:org1f7e793}
+\label{IIAtop}
 \subsection{Reduction of twisted supergravity}
 \label{sec:orgcf7b6a4}
 \subsubsection{Calabi--Yau compactifications}
