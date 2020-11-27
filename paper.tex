@@ -29,6 +29,7 @@
  pdflang={English}}
 
 \def\pv{{\rm PV}}
+\def\PV{{\rm PV}}
 
 \begin{document}
 
@@ -449,13 +450,15 @@ Here, $S$ denotes the $128$ dimensional complex spin representation of $\fs \fo(
 \label{sec:orgf278b4e}
 \section{Relationship to the Type IIA string}
 \label{sec:org355a726}
-In the remainder of the paper, we wish to establish various consistency checks corroborating the claim that the 11d theory of interest describes a twist of 11d supergravity. In this section, we demonstrate that this claim is consistent with a conjectural description of a twist of type IIA supergravity due to \cite{}.
+In the remainder of the paper, we wish to establish various consistency checks corroborating the claim that the 11d theory of interest describes a twist of 11d supergravity. In this section, we demonstrate that this claim is consistent with a conjectural description of a twist of Type IIA supergravity due to \cite{CLsugra}.
 
-Before recalling this conjecture, we first fix some notation. For a complex manifold $X$, let $TX$ denote the holomorphic tangent bundle and define
+Before recalling this conjecture, we first fix some notation which is useful to describe the state space for the Type IIA string.
+For $i,j$ integers define the space of $(i,j)$-polyvector fields to be
 \[
-\pv^{i,j}(X) \define \Omega^{0,j}(X, \wedge^{i} TX) .\]
-This is the space of $i$-pvvectors of Dolbeault type $j$.
-Using the $\dbar$ operator for the holomorphic bundle $\wedge^{i}TX$ we obtain a cochain complex $\pv^{i,\bu}(X) = \left(\oplus_{j} \pv^{i,j}(X) [-j], \dbar \right)$ which provides a free resolution of the sheaf of holomorphic polyvector fields of type $i$.
+  \pv^{i,j}(X) \define \Omega^{0,j}(X, \wedge^{i} TX)
+\]
+where $TX$ is the holormorphic tangent bundle.
+Using the $\dbar$ operator for the holomorphic bundle $\wedge^{i}TX$ we obtain a cochain complex $\pv^{i,\bu}(X) = \left(\oplus_{j} \pv^{i,j}(X) [-j], \dbar \right)$ which provides a free resolution of the sheaf of holomorphic polyvector fields $\PV^{i}_{\rm hol}(X)$ of type $i$.
 
 There is a bracket on the space of holomorphic polyvector fields called the Nijenhuis--Schouten bracket.
 This bracket is defined using holomorphic pvdifferential operators, so extends to a bracket on the Dolbeault complex to define a bracket of the form
@@ -479,16 +482,46 @@ In turn, the holomorphic de Rham operator $\partial : \Omega^{p, j}(X) \to \Omeg
 \]
 This is the holomorphic analog of the divergence operator with respect to $\Omega$.
 
-With this in hand, the conjecture of \cite{} is as follows:
+There is compelling evidence \cite{CLsugra} for the existence of a twist of the Type IIA string on the ten-manifold $M \times X$ where $M$ is a real surface and $X$ is a Calabi--Yau four-fold.
+Roughly, the twist behaves like the A-model topological string along $M$ and the $B$-model topological string along $X$.
+The conjectural state space is
+\[
+  \Omega^\bu(M) \; \Hat{\otimes} \; \PV^{\bu, \bu} (X) .
+\]
+The linear BRST differential on this state space is given by $\d_{\rm dR} + \dbar$.
+The fields of the closed string are given by the $S^1$-equivariant states, which is modeled \cite{CLbcov} by
+\[
+  \Omega^\bu(M) \; \Hat{\otimes} \; \PV^{\bu, \bu} (X) [\![u]\!]
+\]
+where $u$ is the equivariant parameter and the new linear BRST operator is $\d_{\rm dR} + \dbar + u \partial_\Omega$.
+
+With this informal description of the twist of the Type IIA closed string in hand, one can deduce the following low energy limit of the description which gives a conjectural description of Type IIA supergravity.
 
 \begin{conj}
-  [Costello-Li \cite{}]
-  Let $(M,h_{M})$ be a Kahler surface and $(X, h_{X})$ be a Calabi-Yau 4-fold. Consider perturbative type IIA supergravity on $M\times X$ around a background where the graviton is set to $h_{M}+ h_{X}$, the bosonic ghost for local supersymmetries takes a VEV $Q$ that is invariant for the $\SU(4)$ subgroup of isometries preserving $X\subset M\times X$, and all other background fields are set to zero. The resulting theory admits a description as a Poisson BV theory with fields $\Omega^{\bullet}(M)\otimes \pv^{\bullet, \bullet}(X)[\![t]\!]$ where $t$ is a parameter of degree 2, $L_{\infty}$-structure given by $\ell_{1} = d\otimes 1+ 1\otimes (\dbar+t\partial)$, $\ell_{2} = \wedge\otimes \{-,-\}_{\rm NS}$ and Poisson kernel given by $(1\otimes \partial)\delta_{\Delta(X)}\delta_{\Delta (M)}$.
+  [Costello-Li \cite{CLsugra}]
+  Let $(M,h_{M})$ be a Kahler surface and $(X, h_{X})$ be a Calabi-Yau 4-fold.
+  Consider perturbative type IIA supergravity on $M\times X$ around a background where:
+  \begin{itemize}
+    \item the graviton is set to $h_{M}+ h_{X}$,
+    \item the bosonic ghost for local supersymmetries is set to a covariantly constant square-zero spinor $Q$ that is invariant for the $\SU(4)$ subgroup of isometries preserving $X\subset M\times X$,
+    \item all other background fields are set to zero.
+  \end{itemize}
+  In this background, the resulting theory is equivalent to the Kodaira--Spencer type theory whose fields are
+  \[
+    \Omega^{\bullet}(M) \; \Hat{\otimes} \; \PV^{\bullet, \bullet}(X)[\![u]\!]
+  \]
+  where $u$ is a parameter of cohomological degree $2$.
+  \brian{this theory is only $\ZZ/2$-graded, right?}
+  %$L_{\infty}$-structure given by $\ell_{1} = d\otimes 1+ 1\otimes (\dbar+t\partial)$, $\ell_{2} = \wedge\otimes \{-,-\}_{\rm NS}$ and Poisson kernel given by $(1\otimes \partial)\delta_{\Delta(X)}\delta_{\Delta (M)}$.
 \end{conj}
 
-Type II supergravity around such backgrounds where the bosonic ghost takes a nonzero VEV is what the authors call twisted supergravity. In fact, the authors further conjecture that type IIA superstring theory on $M\times X$ around a particular Ramond-Ramond background is equivalent to a topological string theory given by the A-model on $M$ and the B-model on $X$. This implies the above conjecture at the level of closed string field theory. Indeed the above description of twisted supergravity is a combination of Kodaira--Spencer theory on $X$ with the zero-winding sector of Kahler gravity on $M$.
+Type II supergravity around such backgrounds where the bosonic ghost takes a nonzero VEV is what is referred to as {\em twisted supergravity} in \cite{CLsugra}.
+In fact, the authors further conjecture that type IIA superstring theory on $M\times X$ around a particular Ramond-Ramond background is equivalent to a topological string theory given by the A-model on $M$ and the B-model on $X$.
+This implies the above conjecture at the level of closed string field theory.
+Indeed the above description of twisted supergravity is a combination of Kodaira--Spencer theory on $X$ with the zero-winding sector of Kahler gravity on $M$.
 
-The authors of \cite{} establish a strand of evidence via residual supersymmetry. Namely, they construct an $L_{\infty}$ map from the $Q$-cohomology of the 10d $\cN = (1,1)$ algebra to the fields of the above theory, realizing the former as a collection of ghosts in the latter. This allows us to make sense of further twists of the above twist.
+There is further evidence for this claim through studying the residual supersymmetry.
+Namely, they construct an $L_{\infty}$ map from the $Q$-cohomology of the 10d $\cN = (1,1)$ algebra to the fields of the above theory \cite{CLsugra}, realizing the former as a collection of ghosts in the latter. This allows us to make sense of further twists of the above twist.
 
 The goal of this section is to identify the above conjectural twist of IIA supergravity with an $S^{1}$ reduction of our 11d theory. In order to do so, we will need to introduce a slight modification of the Kodaira-Spencer theory. We turn to this in the next subsection.
 
@@ -589,5 +622,148 @@ The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ determines a map of $\PP_0$-fact
 \label{sec:org774abb4}
 \section{The non-minimal G2 twist}
 \label{sec:org590ab85}
-Does math mode \(work here = e^x\)?
+
+\brian{some general background on G2 twist, state main result}
+
+We consider the eleven-dimensional theory on the space
+\[
+  X \times Z \times \RR
+\]
+where $Z$ is a hyper-K\"{a}hler surface and $X$ is a Calabi--Yau three-fold.
+Denote by $\Omega_Z$ the holomorphic volume form on $Z$ and $\Omega_X$ the holomorphic volume form on $X$.
+We will work in a background where the $(1,0)$-component of the field $\gamma$ satisfies the following equations:
+\begin{equation}\label{eqn:background}
+  \begin{array}{rcccc}
+    \partial \gamma^{1,0} & = & \Omega_Z \\
+    \dbar \gamma^{1,0} + \d_{\rm dR} \gamma^{1,0} & = & 0 .
+  \end{array}
+\end{equation}
+The second equation implies that $\gamma^{1,0}$ is constant along $\RR$ and holomorphic along $X \times Z$.
+The first equation says that $\gamma^{1,0}$ is a trivialation of the holomorphic volume form on $Z$.
+
+To see that this is a consistent background of the eleven-dimensional theory we must check that $\gamma^{1,0}$ satisfies the appropriate equations of motion.
+
+\begin{lem}
+  Any field $\gamma^{1,0}$ satisfying the equations in (\ref{eqn:background}) satisfies the Maurer--Cartan equation of the eleven-dimensional theory.
+\end{lem}
+
+\begin{proof}
+  We must show that $\gamma^{1,0}$ satisfies the following Maurer--Cartan equation
+  \[
+    Q_{\rm BRST} \gamma^{1,0} + \frac12 [\gamma^{1,0} ,\gamma^{1,0}] = 0
+  \]
+  where $Q_{\rm BRST}$ is the linear BRST operator and $[-,-]$ is the Lie bracket defining the interacting piece of the eleven-dimensional theory.
+
+  Recall, the linear BRST differential is of the form
+  \[
+    \dbar + \partial_{\Omega} + \partial_{\Omega^0 \to \Omega^1} + \d_{\rm dR}
+  \]
+  Here, $\partial_\Omega$ is the divergence operator which only acts on the $\mu$-type fields and $\partial_{\Omega^0 \to \Omega^1}$ is the first piece of the holomorphic de Rham operator acting on $\Omega^{0,\bu}(X \times Z)$.
+  Since $(\dbar + \d_{\rm dR}) \gamma^{1,0} = 0$ by assumption, we see that $\gamma^{1,0}$ is closed for the linear BRST operator.
+
+  The only component of the Lie bracket involving two fields of type $\gamma$ is of the form
+  \[
+    [\gamma, \gamma] = (\partial \gamma \wedge \partial \gamma) \vdash \Omega \in \PV^{1,\bu}(X \times Z) \; \Hat{\otimes} \; \Omega^\bu(L) .
+  \]
+  Since $\partial \gamma^{1,0}$ is a $(2,0)$ form along $Z$, we see that $\partial \gamma^{1,0} \wedge \partial \gamma^{1,0} =0$.
+  We conclude that $\gamma^{1,0}$ satisfies the Maurer--Cartan equation.
+\end{proof}
+
+Next, we expand the action functional near the background where $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ where $\gamma^{1,0}$ satisfies equations (\ref{eqn:background}).
+This will generate new kinetic and interacting terms which we can extract by inserting a formal parameter $\delta$ and expression the action functional in terms of the deformed field $\Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
+
+There are two interaction terms
+\begin{equation}\label{eqn:int1}
+  \frac12 \int_{X\times Z \times L} \left(\gamma \vee \{\mu, \mu\} \right) \wedge (\Omega_Z \wedge \Omega_X)
+\end{equation}
+and
+\begin{equation} \label{eqn:int2}
+  \frac16\int_{X \times Z \times L} \gamma \partial \gamma \partial \gamma .
+\end{equation}
+
+We can integrate Equation (\ref{eqn:int1}) by parts to put it in the form $\frac12 \int_{X \times Z \times L} \left[(\partial \gamma) \vee (\mu \wedge \mu) \right]$ where $\mu \wedge \mu$ is the wedge product of polvector fields.
+Expanding this expression around $\gamma \to \Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$ we obtain
+\[
+  \frac12 \int \left(\gamma \vee \{\mu, \mu\} \right) \wedge (\Omega_Z \wedge \Omega_X) + \frac{\delta}{2} \int \left[\Omega_Z \vee (\mu \wedge \mu) \right] \wedge (\Omega_Z \wedge \Omega_X) .
+\]
+Here, we have used the identity $\partial \gamma^{1,0} = \Omega_Z$.
+
+Next, we expand Equation (\ref{eqn:int2}) around $\gamma \to \Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
+This becomes
+\[
+  \frac16 \int \gamma \partial \gamma \partial \gamma + \frac{\delta}{2} \int \left(\gamma \partial \gamma\right) \wedge \Omega_Z .
+\]
+Notice that there are no $\delta^2$ terms since $\partial \gamma^{1,0} \partial \gamma^{1,0} = 0$.
+
+So far, we have written everything in terms of action functionals.
+There is a completely equivalent statement in terms of the resulting dg Lie algebra structure describing the eleven-dimensional theory in this background which we summarize as follows.
+
+\begin{lem} \label{lem:background}
+  The dg Lie algebra describing the eleven-dimensional theory placed in a background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is isomorphic to the the dg Lie algebra whose differential is
+  \begin{equation}\label{eqn:newdiff}
+    Q_{\rm BRST} + \frac{1}{2} \left\{ \int \left[\Omega_Z \vee (\mu \wedge \mu) \right] \wedge (\Omega_Z \wedge \Omega_X) + \int \left(\gamma \partial \gamma\right) \wedge \Omega_Z , \; - \; \right\}
+  \end{equation}
+  and whose Lie bracket is unchanged.
+  Here, $Q_{\rm BRST}$ is the original linear BRST differential of the eleven-dimensional theory.
+\end{lem}
+
+This lemma followed directly from our analysis of the way the action functional of the theory decomposed around the background.
+The next result we state is an equivalence with a theory which exists on any product of manifolds $Z \times M$ where $Z$ is a hyper-K\"{a}hler surface as above but now $M$ is any smooth seven-dimensional manifold.
+
+\begin{prop}
+  The eleven-dimensional theory on $X \times Z \times L$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is equivalent to the theory whose fields are
+  \[
+    \alpha \in \Omega^{0,\bu}(Z) \; \Hat{\otimes} \; \Omega^\bu(X \times L)
+  \]
+  and whose action functional reads
+  \[
+    \frac12 \int \alpha \d\alpha + \frac16 \int \alpha \{\alpha, \alpha\}
+  \]
+  where $\{-,-\}$ is the Poisson bracket on $\Omega^{0,\bu}(Z)$.
+\end{prop}
+
+As stated above, this theory clearly does not depend on the complex structure on the Calabi--Yau three-fold $X$.
+The theory only depends on the smooth structure on $M = X \times L$.
+\brian{cite Surya and Phil, Chris and B, Kevin}
+
+\begin{proof}
+To unpack this new differential (\ref{eqn:newdiff}) as in Lemma \ref{lem:background} we need to reidentify the fields of the eleven-dimensional theory.
+First, note that we have natural identifications
+\begin{align}
+  \PV^{1,\bu}(X \times Z) & = \PV^{1,\bu}(X) \; \Hat{\otimes} \; \PV^{0,\bu}(Z)\; \oplus \; \PV^{0,\bu}(X) \; \Hat{\otimes} \; \PV^{1,\bu}(Z) \\ & \cong \Omega^{2,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu} (Z) \; \oplus \; \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z) \label{eqn:decomposevf}
+\end{align}
+The isomorphism uses both the holomorphic volume forms $\Omega_X$ and $\Omega_Z$.
+
+From Lemma \ref{lem:background} we see that the new terms in the linear BRST differential arise from the quadratic terms in the action
+\begin{equation}\label{eqn:newterms}
+  \int \left[\Omega_Z \vee (\mu \wedge \mu) \right] \wedge (\Omega_Z \wedge \Omega_X) + \int \left(\gamma \partial \gamma\right) \wedge \Omega_Z .
+\end{equation}
+
+Recall that the linear BRST complex of the original eleven-dimensional theory is obtained by taking the tensor product of the cochain complexes $\PV^{1,\bu}(X \times Z) \xto{\partial_\Omega} \PV^{0,\bu}(X \times Z)$ and $\Omega^{0,\bu}(X \times Z) \xto{\partial} \Omega^{1,\bu}(X \times Z)$ with the de Rham complex $\Omega^\bu(L)$ on the one-manifold $L$.
+
+Using the decomposition (\ref{eqn:decomposevf}) we see that the deformed linear BRST complex takes is the tensor product of the de Rham complex $\Omega^{\bu}(L)$ with the cochain complex
+\[
+  \begin{tikzcd}
+  & \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z) \ar[dr, "\partial_Z"] \\
+  & & \Omega^{3,\bu}(X) \; \Hat{\otimes} \; \Omega^{2,\bu}(Z) \\
+ & \Omega^{2,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu}(Z) \ar[ur, "\partial_X"'] & \\
+\;_{\cong}  & & \Omega^{1,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu}(Z) \ar[ul, dashed, bend left = 10, "\partial_X"]\\
+ & \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu}(Z) \ar[ur, "\partial_X"] \ar[dr,"\partial_Z"'] \\
+  & & \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z)
+\ar[dashed, rounded corners, to path={ -- ([yshift=-2ex]\tikztostart.south) -| ([xshift=-1.5ex]\tikztotarget.west) -- (\tikztotarget)}, uuuuul]
+  %\ar[uuuuul, start anchor =  {[yshift = 0ex, xshift=0ex]}, end anchor = {[yshift=1.0ex, xshift=-5ex]}, bend left = 90, dotted] .
+  \end{tikzcd}
+\]
+Here, the dashed arrow along the outside of the diagram corresponds to the BV antibracket with the first term in (\ref{eqn:newterms}).
+Note that this is the identity morphism on $\Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z)$.
+The other dashed arrow corresponds to the BV antibracket with the second term in (\ref{eqn:newterms}).
+It is given by the holomorphic de Rham operator $\partial_X : \Omega^{1,\bu}(X) \to \Omega^{2,\bu}(X)$.
+
+\brian{cochain homotopy finish}
+Since the outer dashed arrow is an isomorphism, we see that this cochain map is a quasi-isomorphism.
+It is immediate to check that this quasi-isomorphism intertwines the Lie brackets.
+
+
+\end{proof}
+
 \end{document}
