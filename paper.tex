@@ -30,6 +30,7 @@
 
 \def\pv{{\rm PV}}
 \def\PV{{\rm PV}}
+\def\T{{\rm T}}
 
 \begin{document}
 
@@ -45,8 +46,9 @@
 In this section we define the central theory of study, within the Batalin--Vilkovisky formalism.
 The theory will be defined on any eleven-dimensional manifold of the form $X \times L$ where $X$ is a Calabi--Yau five-fold with volume form $\Omega$ and $L$ is a smooth oriented one-manifold.
 
-Before stating the definition, we recall some general objects in complex geometry that will play a central role.
-For now, let $X$ be any complex manifold and let $V$ be a holomorphic vector bundle on $X$.
+One of the fundamental geometric objects will be the sheaf of divergence-free holomorphic vector fields on $X$. 
+We will utilize a convenient semi-free resolution of this sheaf in the category of $C^\infty$-modules. 
+
 If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of Dolbeault forms of type $j$ on with values in $V$.
 The $\dbar$ operator for $V$ is of the form $\dbar : \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X)$.
 This operator defines the Dolbeault complex of $V$
@@ -54,34 +56,47 @@ This operator defines the Dolbeault complex of $V$
   \Omega^{0,\bu}(X, V) = \left(\Omega^{0,j}(X, V)[-j] \; , \; \dbar\right)
 \]
 which is a free resolution for the sheaf of holomorphic sections of $V$.
+Applying this to the holomorphic tangent bundle $V = \T_X$, we obtain a resolution of the sheaf of holomorphic vector fields. 
 
-Denote by $TX$ the holomorphic tangent bundle of $X$.
-Then, the Lie bracket of holomorphic vector fields extends to a Lie bracket on the Dolbeault $\Omega^{0,\bu}(X, TX)$ thus endowing it with the structure of a dg Lie algebra.
-
-By definition, the Dolbeault complex for the trivial bundle $\Omega^{0,\bu}(X)$ is a dg module for the dg Lie algebra $\Omega^{0,\bu}(X, TX)$.
-We can thus consider the following semi-direct product dg Lie algebra
-\beqn\label{eqn:div1}
-  \Omega^{0,\bu}(X, TX) \oplus \Omega^{0,\bu}(X) [-1] .
-\eeqn
-Notice that $\Omega^{0,\bu}(X)$ has been shifted to a seemingly unnatural cohomological degree, with $(0,j)$-forms sitting in degree $j+1$.
+%Denote by $TX$ the holomorphic tangent bundle of $X$.
+%Then, the Lie bracket of holomorphic vector fields extends to a Lie bracket on the Dolbeault $\Omega^{0,\bu}(X, TX)$ thus endowing it with the structure of a dg Lie algebra.
+%
+%By definition, the Dolbeault complex for the trivial bundle $\Omega^{0,\bu}(X)$ is a dg module for the dg Lie algebra $\Omega^{0,\bu}(X, TX)$.
+%We can thus consider the following semi-direct product dg Lie algebra
+%\beqn\label{eqn:div1}
+%  \Omega^{0,\bu}(X, TX) \ltimes \Omega^{0,\bu}(X) [-1] .
+%\eeqn
+%Notice that $\Omega^{0,\bu}(X)$ has been shifted to a seemingly unnatural cohomological degree, with $(0,j)$-forms sitting in degree $j+1$.
+%We will see the reason for this shift momentarily. 
 
 Now, suppose $X$ is a Calabi--Yau manifold with holomorphic volume form $\Omega$.
-The holomorphic divergence operator with respect to $\Omega$ is an operator of the form
+The holomorphic divergence operator extends to the Dolbeault complex to take the form
 \[
-  \partial_\Omega : \Omega^{0,\bu}(X, TX) \to \Omega^{0,\bu}(X)
+  \partial_\Omega : \Omega^{0,\bu}(X, \T_X) \to \Omega^{0,\bu}(X)
 \]
-defined by the formula
+and is defined by the formula
 \[
   \partial_\Omega (\mu) \wedge \Omega = L_\mu (\Omega)
 \]
 where, on the right hand side, we mean the Lie derivative of $\Omega$ with respect to $\mu$.
 
-Using the holomorphic divergence operator $\partial_\Omega$ we can consider the following deformation of the dg Lie algebra (\ref{eqn:div1}).
-The Lie bracket remains the same but the differential is deformed from $\dbar$ to $\dbar + \partial_\Omega$.
-Here, $\partial_{\Omega}$ denotes the holomorphic divergence operator thought of as a degree one operator from $\Omega^{0,\bu}(X, TX)$ to $\Omega^{0,\bu}(X)$.
-We will denote the resulting dg Lie algebra by $\cS(X)$.
+Using the divergence operator, we define the double complex of sheaves
+\[
+\Omega^{0,\bu}(X, \T_X) \xto{\partial_\Omega} \Omega^{0,\bu}(X) [-1] 
+\]
+where the horizontal differential is the divergence operator and the vertical differential is the $\dbar$ operator (which we have left implicit). 
+We denote the totalization of this double complex of sheaves $\cS$. 
 
-It is easy to see that $\cS(X)$ provides a free resolution of the sheaf of holomorphic divergence free vector fields on $X$.
+It is immediate to check that $\cS$ provides a free resolution of the sheaf of holomorphic divergence-free vector fields on $X$.
+Furthermore, there is a natural Lie bracket on $\cS$ given by the Schouten--Nijenhous bracket $\{-,-\}_{\rm NS}$ which is compatible with the usual Lie bracket of holomorphic vector fields. 
+In other words, $\cS$ is a sheaf of dg Lie algebras and the inclusion of holomorphic divergence-free vector fields is a quasi-isomorphism of sheaves of Lie algebras.
+
+%Using the holomorphic divergence operator $\partial_\Omega$ we can consider the following deformation of the dg Lie algebra (\ref{eqn:div1}).
+%The Lie bracket remains the same but the differential is deformed from $\dbar$ to $\dbar + \partial_\Omega$.
+%Here, $\partial_{\Omega}$ denotes the holomorphic divergence operator thought of as a degree one operator from $\Omega^{0,\bu}(X, TX)$ to $\Omega^{0,\bu}(X)$.
+%We will denote the resulting dg Lie algebra by $\cS(X)$.
+
+
 
 %We will mostly consider the sub dg Lie algebra of $(\ref{eqn:pvlie1})$ consisting of the polyvector fields of type $i\leq 1$:
 %\beqn\label{eqn:pvlie2}
@@ -125,14 +140,14 @@ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
 The differential in this dg Lie algebra is of the form $\dbar \otimes 1 + \partial_\Omega \otimes 1 + 1 \otimes \d_{\rm dR}$, which we will abbreviate by $\dbar + \partial_\Omega + \d_{\rm dR}$.
 The bracket is defined using the bracket on $\cS(X)$ together with the wedge product of forms on $\Omega^\bu(L)$ by the formula
 \[
-  [\mu \otimes \alpha, \nu \otimes \beta] = [\mu, \nu] \otimes (\alpha \wedge \beta) .
+  [\mu \otimes \alpha, \nu \otimes \beta] = \{\mu, \nu\}_{\rm NS} \otimes (\alpha \wedge \beta) .
 \]
 
 
 We remark that the structure maps of this Lie algebra, namely the differential and bracket, are given by differential and bidifferential operators, respectively.
 In this sense, it fits the definition of a {\em local dg Lie algebra} on the product manifold $X \times L$, see Definition ?? \ref{CG2}.
 
-Associated to any local dg Lie algebra is a classical field theory in the BV formalism that one refers to as ``$BF$-theory''.
+Associated to any local dg Lie algebra is a classical field theory in the BV formalism that one refers to as ``$BF$-theory'' and it is defined as follows.
 Denote the sheaf of sections of the local dg Lie algebra by $\cL$.
 The fields of the associated BV theory are pairs
 \[
@@ -143,7 +158,7 @@ Here $\d_{\cL}$ denotes the differential on $\cL$ and $[\cdot,\cdot]$ is the Lie
 Notice that the equations of motion for the $A$-field is simply the Maurer--Cartan equation $\d_\cL A + \frac12 [A,A] = 0$.
 For the $B$-field the equations of motion read $\d_\cL B + [A, B] = 0$.
 
-For the case at hand, we consider the BF theory associated to the local dg Lie algebra (\ref{localLie}) defined on the product $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
+For the case at hand, we consider the $BF$ theory associated to the local dg Lie algebra  $\cS(X) \otimes \Omega^\bu(L)$ defined on the product $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
 Denote by $d \in \ZZ$ the sum $\dim_{\CC}(X) + \dim_{\RR}(L)$.
 
 The fields decompose as
@@ -153,24 +168,34 @@ The fields decompose as
 where
 \[
   \begin{array}{ccl}
-    \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^0 + \gamma^1 & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[-1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
+    \mu = \mu^1+\mu^0 & \in & \left(\Omega^{0,\bu}(X, \T_X)[1] \oplus \Omega^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^0 + \gamma^1 & \in & \left(\Omega^{0,\bu}(X)[-1] \oplus \Omega^{1,\bu}(X)[-2] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
   \end{array}
 \]
-Notice that what we called the ``$A$''-field in the general definition of BF theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
-By force of habit, we will still refer to the theory with these particular fields as $BF$-theory.
-
-While the definition of $\mu$ is independent of the dimension, the field $\gamma$ depends on $d$.
-This is in order for the BV antibracket to be of the appropriate degree.
-Additionally, we have utilized the holomorphic volume form in the definition of the field $\gamma$.
-Indeed, in this presentation the BV antipairing on fields reads
+Notice that what we called the ``$A$''-field in the general definition of $BF$ theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
+The action of this version of $BF$ theory simply reads 
 \[
-  \int_{X \times L} (\mu \vdash \gamma) \wedge \Omega = \int_{X \times L} (\mu^1 \vdash \gamma^1 + \mu^0 \vdash \gamma^0) \wedge \Omega .
+\int_{X \times L} \left[\gamma \vee \left(\dbar \mu + \partial_\Omega \mu + \d_{\dR} \mu + \frac12 [\mu, \mu] \right) \right] \wedge \Omega .
 \]
+This theory is defined on any geometry $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a one-dimensional smooth manifold.
+There is a deformation of this theory that we will be most concerned with.
 
-\subsubsection{}
+%By force of habit, we will still refer to the theory with these particular fields as $BF$-theory.
+%Notice that while the definition of $\mu$  of the dimension, the field $\gamma$ 
+
+%This is in order for the BV antibracket to be of the appropriate degree.
+%Additionally, we have utilized the holomorphic volume form in the definition of the field $\gamma$.
+%Indeed, in this presentation the BV antipairing on fields reads
+%\[
+%  \int_{X \times L} (\mu \vee \gamma) \wedge \Omega = \int_{X \times L} (\mu^1 \vee \gamma^1 + \mu^0 \gamma^0) \wedge \Omega .
+%\]
+
+\subsubsection{Chern--Simons deformation}
+The theory we have just described admits a deformation by a higher Chern--Simons term.
+We explain how this relates to the familiar Chern--Simons term in eleven-dimensional supergravity in Section \ref{sec:evidence}.
+
 We will be mostly interested in the case that $X$ is a Calabi--Yau five-fold and $L$ is a real one-dimensional manifold.
-In this case $d = 6$ so the field $\gamma$ takes the form
+In the notation of the last section, $d = 6$, so the field $\gamma$ takes the form
 \[
   \gamma \in \left(\Omega^{0,\bu}(X)[6] \oplus \Omega^{1,\bu}(X)[5] \right) \otimes \Omega^\bu(L).
 \]
@@ -179,19 +204,19 @@ What is important for us is not simply BF theory for the dg Lie algebra $\cS(X) 
 We consider a theory whose fields are that of the BF theory but whose action functional is of the form $S_{\rm BF} + J$, where $J$ is a local functional that purely depends on the fields $\gamma$.
 It is defined by the following formula
 \[
-J(\gamma) = \frac13 \int_{X\times L} \gamma \partial \gamma \partial \gamma .
+J(\gamma) = \frac16 \int_{X\times L} \gamma \partial \gamma \partial \gamma .
 \]
 
 First off, we notice an inconsistency in the cohomological degrees of the functionals $S_{\rm BF}$ and $J$.
 Being a classical action functional $S_{\rm BF}$ is, of course, ghost degree zero.
-However, we observe that $J$ is of ghost degree $??$.
+However, we observe that $J$ is of ghost degree $+6$.
 In order to make sense of the deformed theory, therefore, we must consider the space of fields as a $\ZZ/2$-graded object rather than a $\ZZ$-graded one.
 
 So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ/2$-graded space of fields takes the form
 \[
   \begin{array}{ccl}
     \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^0+ \gamma^1 & \in & \left(\Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X)[1] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
+    \gamma = \gamma^0+ \gamma^1 & \in & \left(\Omega^{0,\bu}(X)[1] \oplus \Omega^{1,\bu}(X) \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
   \end{array}
 \]
 Here, we have used the following convention for $\ZZ/2$-graded complexes.
@@ -207,13 +232,13 @@ Additionally, since $\gamma$ does not pair with itself under the antibracket, we
 What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
 
 \begin{lem}
-The functional $J = \frac13 \int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
+The functional $J = \frac16\int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
 In particular, $S_{\rm BF} + J$ is a well-defined classical BV action.
 \end{lem}
 
 \begin{proof}
 It is clear that $J$ is closed for the part of the differential arising from the kinetic term $\{S_{\rm free},\cdot\}$.
-It remains to see that
+It remains to see that\brian{finish}
 \end{proof}
 
 \begin{rmk}
@@ -222,13 +247,13 @@ It remains to see that
   This dependence on a coupling constant will be important later on in this paper.
 \end{rmk}
 
-\begin{dfn}
+\begin{dfn}\label{dfn:11dtheory}
 Let $X$ be a Calabi--Yau five-fold and $L$ a one-dimensional smooth manifold.
-Define the $\ZZ/2$-graded BV theory $\cT$ on
+Define the $\ZZ/2$-graded BV theory $\cT_{X \times L}$ (or simply just $\cT$) on
 \[
   X \times L
 \]
-to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS(X) \Hat{\otimes} \Omega^{\bu}(L)$ by the local functional $J (\gamma) = \frac13 \int_{X \times L} \gamma \partial \gamma \partial \gamma.$
+to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS(X) \Hat{\otimes} \Omega^{\bu}(L)$ by the local functional $J (\gamma) = \frac16 \int_{X \times L} \gamma \partial \gamma \partial \gamma.$
 \end{dfn}
 
 %Unpacking this a bit, we see that the BV action functional for the theory $\cT$ splits as a sum
@@ -265,16 +290,15 @@ As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $
   The functional $J_m$ is closed for the differential $\{S_{\rm BF}, \cdot \}$.
 \end{lem}
 
-A simple count reveals that the ghost degree of the functional $J_m$ is \brian{figure out}.
-In particular, when $m \ne 1$, the above lemma implies that the action functional $S_{\rm BF} + J_m$ defines a $\ZZ/2$-graded classical BV theory.
+A simple count reveals that the ghost degree of the functional $J_m$ is $2m^2 - 2$.
+In particular, when $m \ne 1$, the above lemma implies that the action functional $S_{\rm BF} + J_m$ only defines a $\ZZ/2$-graded classical BV theory.
 
 \subsubsection{The case of a CY three-fold}
 
-When $m=1$, the action $S_{\rm BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
+When $m=1$, hence $X$ is a CY three-fold, the action $S_{\rm BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
 Another feature of the case $m=1$ is that the deformed theory is actually a {\em topological} field theory.
 It is instructive to spell out this case in more detail.
 
-In this case $X$ is a Calabi--Yau three-fold.
 Using the isomorphism
 \[
  (-) \vee \Omega : \PV^{i,\bu} (X) \cong \Omega^{3-i, \bu}(X)
@@ -336,9 +360,9 @@ In summary, we have seen that $\cM_c[X]$ provides a roof of deformations between
 We return to the case of the theory $\cT$ on $X\times L$ where $X$ is a Calabi--Yau five-fold and $L$ is a one-manifold.
 In this section we analyze the equations of motion for the eleven-dimensional theory and provide partial moduli theoretic interpretation of the solution space.
 
-The action functional of the theory (\ref{11daction}) on $X \times L$ is of the form
+The action functional of the theory in Definition \ref{dfn:11dtheory} on $X \times L$ is of the form
 \[
-  \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega + \frac{c}{3} \int \gamma \partial \gamma \partial \gamma .
+  \int_{X \times L} \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int_{X \times L} \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega + \frac{c}{3} \int_{X \times L} \gamma \partial \gamma \partial \gamma .
 \]
 Notice that just as in the last section we have included a coupling constant $c$ into the term which deforms the classical BF type theory.
 
@@ -402,7 +426,7 @@ For instance, the $\mu^{1,1}_{F \Bar{F}}$ determines a deformation of the comple
 Furthermore, by Equation (\ref{eqn:gamma10}) we see that $\gamma^{1,0}$, hence $\beta = \partial \gamma^{1,0}$, is holomorphic for this deformed complex structure.
 
 
-\subsection{Evidence for twisted supergravity}
+\subsection{Evidence for twisted supergravity}\label{sec:evidence}
 
 \brian{state conjecture about twist.}
 
@@ -439,6 +463,71 @@ In Euclidean signature, in the flat background, the fundamental fields of eleven
 \]
 We note that the fields above have been complexified from the usual presentation of supergravity in terms of real fields.
 Here, $S$ denotes the $128$ dimensional complex spin representation of $\fs \fo(11)$.
+
+\subsubsection{Residual supersymmetry}
+
+\def\m2{\mathfrak{m}2\mathfrak{brane}}
+\def\susy{\mathfrak{susy}}
+\def\so{\mathfrak{so}}
+\def\siso{\mathfrak{siso}}
+\def\fsl{\mathfrak{sl}}
+
+Recall, the (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
+\[
+  \ft_{11d} = V \oplus \Pi S
+\]
+where $V$ is the fundamental representation of $\so(11 , \CC)$ and $S$ is the irreducible (complex) spin representation.
+The only non-trivial Lie bracket is
+\[
+  [Q, Q'] = \Gamma_{\Omega^1}(Q \otimes Q')
+\]
+where
+\[
+  \Gamma_{\Omega^1} : \Sym^2(S) \to V 
+\]
+is the unique $\so(11, \CC)$-equivariant \brian{finish}
+The super Poincar\'{e} algebra is
+\[
+  \siso_{11d} = \so(11 , \CC) \ltimes \ft_{11d} .
+\]
+
+Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$. 
+Let
+\[
+  \Gamma_{\Omega^2} : \Sym^2(S) \to \wedge^2 V \subset \Omega^2(\RR^{11}) 
+\]
+be the \brian{finish}. 
+
+\begin{dfn}
+  The super dg Lie algebra $\m2$ is the central extension of $\siso_{11d}$ by the cocycle
+  \[
+    c_{M2} \in \clie^2\left(\siso_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
+  \]
+  defined by the formula $c_{M2} (Q, Q') = \Gamma_{\Omega^2}(Q \otimes Q') \in \Omega^2(\RR^{11})$.
+\end{dfn}
+
+Notice that $\m2$ is a $\ZZ \times \ZZ/2$-graded Lie algebra and the differential is of bidegree $(1,0)$.
+
+\begin{lem}
+  Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the $Q$-cohomology of $\m2$.
+  There is an isomorphism of $\ZZ/2$-graded Lie algebras
+  \[
+    \m2^Q \simeq \fsl(5;\CC) \ltimes ???
+  \]
+\end{lem}
+
+Consider now the eleven-dimensional theory $\cT = \cT_{\CC^5 \times \RR}$ defined on $\CC^5 \times \RR$. 
+The BV action induces the structure of a dg Lie algebra on $\cT[1]$. 
+
+\begin{prop}
+The assignment
+\brian{??} defines a map of $\ZZ/2$-graded dg Lie algebras 
+\[
+\m2 \to \cT[1] .
+\]
+In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
+\end{prop}
+
 
 \section{Quantization of holomorphic-topological theories}
 \label{sec:org297a559}
@@ -548,7 +637,7 @@ The Lie bracket is defined using the Schouten-Nijenhuis bracket $[-,-]_{\rm NS}$
 [u^k \alpha , u^\ell \beta] = u^{k+\ell} [\alpha, \beta]_{\rm NS} .
 \]
 where $k, \ell = 0,1$.
-Together with the differential this equips the parity shifted sheaf of cochain complexes $\Pi \cE_{\rm KS}$ with the structure of a local (dg) Lie algebra.
+Together with the differential this equips the parity shifted sheaf of cochain complexes $\Pi \cE_{\rm KS}$ with the structure of a local dg Lie algebra.
 
 The fields of minimal Kodaira--Spencer theory $\cE_{\rm KS}$ is equipped with an odd Poisson tensor defined by
 \[
@@ -564,7 +653,7 @@ The underlying vector bundle is
  \PV^{2,\bu}  .
 \end{tikzcd}
 \]
-We will denote the resulting $\ZZ /2$-graded sheaf of cochain complexes by $\cE_{\rm pot}$.
+We will denote the resulting $\ZZ /2$-graded sheaf of cochain complexes by $\cE_{\rm Pot}$.
 
 We interpret this as the theory of  ``potentials"  of minimal Kodaira--Spencer theory in the following way.
 There is a map of sheaves of cochani complexes
@@ -604,7 +693,8 @@ This equipped $\cE_{\rm pot}$ with the structure of an interacting (non-degenera
 It's relationship to (minimal) Kodaira--Spencer theory can be summarized as follows.
 
 \begin{prop}
-The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ determines a map of $\PP_0$-factorization algebras on $X$:
+  The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ is a map of Poisson BV theories.
+  In particular, it determines a map of $\PP_0$-factorization algebras on $X$:
 \[
 \Phi^* : {\rm Obs}_{\cE_{\rm KS}} \to {\rm Obs}_{\cE_{\rm Pot}} .
 \]
@@ -654,34 +744,35 @@ To see that this is a consistent background of the eleven-dimensional theory we 
   \]
   where $Q_{\rm BRST}$ is the linear BRST operator and $[-,-]$ is the Lie bracket defining the interacting piece of the eleven-dimensional theory.
 
-  Recall, the linear BRST differential is of the form
+Recall, the linear BRST differential is of the form
   \[
     \dbar + \partial_{\Omega} + \partial_{\Omega^0 \to \Omega^1} + \d_{\rm dR}
   \]
   Here, $\partial_\Omega$ is the divergence operator which only acts on the $\mu$-type fields and $\partial_{\Omega^0 \to \Omega^1}$ is the first piece of the holomorphic de Rham operator acting on $\Omega^{0,\bu}(X \times Z)$.
   Since $(\dbar + \d_{\rm dR}) \gamma^{1,0} = 0$ by assumption, we see that $\gamma^{1,0}$ is closed for the linear BRST operator.
 
-  The only component of the Lie bracket involving two fields of type $\gamma$ is of the form
+The only component of the Lie bracket involving two fields of type $\gamma$ is of the form
   \[
-    [\gamma, \gamma] = (\partial \gamma \wedge \partial \gamma) \vdash \Omega \in \PV^{1,\bu}(X \times Z) \; \Hat{\otimes} \; \Omega^\bu(L) .
+    [\gamma, \gamma] = (\partial \gamma \wedge \partial \gamma) \vee (\Omega_X \wedge \Omega_Z) \in \PV^{1,\bu}(X \times Z) \; \Hat{\otimes} \; \Omega^\bu(L) .
   \]
   Since $\partial \gamma^{1,0}$ is a $(2,0)$ form along $Z$, we see that $\partial \gamma^{1,0} \wedge \partial \gamma^{1,0} =0$.
   We conclude that $\gamma^{1,0}$ satisfies the Maurer--Cartan equation.
 \end{proof}
 
 Next, we expand the action functional near the background where $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ where $\gamma^{1,0}$ satisfies equations (\ref{eqn:background}).
-This will generate new kinetic and interacting terms which we can extract by inserting a formal parameter $\delta$ and expression the action functional in terms of the deformed field $\Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
+This will generate new kinetic and interacting terms which we can extract by inserting a formal parameter $\delta$ and expressing the action functional in terms of the deformed field $\Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
 
-There are two interaction terms
+There are two interaction terms in the original theory.
+The first is
 \begin{equation}\label{eqn:int1}
   \frac12 \int_{X\times Z \times L} \left(\gamma \vee \{\mu, \mu\} \right) \wedge (\Omega_Z \wedge \Omega_X)
 \end{equation}
-and
+and the second is
 \begin{equation} \label{eqn:int2}
   \frac16\int_{X \times Z \times L} \gamma \partial \gamma \partial \gamma .
 \end{equation}
 
-We can integrate Equation (\ref{eqn:int1}) by parts to put it in the form $\frac12 \int_{X \times Z \times L} \left[(\partial \gamma) \vee (\mu \wedge \mu) \right]$ where $\mu \wedge \mu$ is the wedge product of polvector fields.
+We can integrate Equation (\ref{eqn:int1}) by parts to put it in the form $\frac12 \int_{X \times Z \times L} \left[(\partial \gamma) \vee (\mu \wedge \mu) \right]$ where $\mu \wedge \mu$ is the wedge product of polvector fields.\brian{there might be some factors I'm being sloppy with here}
 Expanding this expression around $\gamma \to \Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$ we obtain
 \[
   \frac12 \int \left(\gamma \vee \{\mu, \mu\} \right) \wedge (\Omega_Z \wedge \Omega_X) + \frac{\delta}{2} \int \left[\Omega_Z \vee (\mu \wedge \mu) \right] \wedge (\Omega_Z \wedge \Omega_X) .
@@ -707,14 +798,12 @@ There is a completely equivalent statement in terms of the resulting dg Lie alge
   Here, $Q_{\rm BRST}$ is the original linear BRST differential of the eleven-dimensional theory.
 \end{lem}
 
-This lemma followed directly from our analysis of the way the action functional of the theory decomposed around the background.
+This lemma followed directly from our analysis of the way the action functional of the theory decomposed around this particular background.
 The next result we state is an equivalence with a theory which exists on any product of manifolds $Z \times M$ where $Z$ is a hyper-K\"{a}hler surface as above but now $M$ is any smooth seven-dimensional manifold.
 
 \begin{prop}
-  The eleven-dimensional theory on $X \times Z \times L$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is equivalent to the theory whose fields are
-  \[
-    \alpha \in \Omega^{0,\bu}(Z) \; \Hat{\otimes} \; \Omega^\bu(X \times L)
-  \]
+  The eleven-dimensional theory on $X \times Z \times L$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is equivalent to the $\ZZ/2$-graded theory whose fields are
+    $\alpha \in \Omega^{0,\bu}(Z) \; \Hat{\otimes} \; \Omega^\bu(X \times L) [1]$
   and whose action functional reads
   \[
     \frac12 \int \alpha \d\alpha + \frac16 \int \alpha \{\alpha, \alpha\}
@@ -722,17 +811,19 @@ The next result we state is an equivalence with a theory which exists on any pro
   where $\{-,-\}$ is the Poisson bracket on $\Omega^{0,\bu}(Z)$.
 \end{prop}
 
-As stated above, this theory clearly does not depend on the complex structure on the Calabi--Yau three-fold $X$.
+As stated in this proposition, it is clear that the theory does not depend on the complex structure on the Calabi--Yau three-fold $X$ even though this is not {\em a priori} obvious from the description in Lemma \ref{lem:background}. 
 The theory only depends on the smooth structure on $M = X \times L$.
 \brian{cite Surya and Phil, Chris and B, Kevin}
 
 \begin{proof}
-To unpack this new differential (\ref{eqn:newdiff}) as in Lemma \ref{lem:background} we need to reidentify the fields of the eleven-dimensional theory.
-First, note that we have natural identifications
-\begin{align}
-  \PV^{1,\bu}(X \times Z) & = \PV^{1,\bu}(X) \; \Hat{\otimes} \; \PV^{0,\bu}(Z)\; \oplus \; \PV^{0,\bu}(X) \; \Hat{\otimes} \; \PV^{1,\bu}(Z) \\ & \cong \Omega^{2,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu} (Z) \; \oplus \; \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z) \label{eqn:decomposevf}
-\end{align}
-The isomorphism uses both the holomorphic volume forms $\Omega_X$ and $\Omega_Z$.
+To unpack this new differential (\ref{eqn:newdiff}) in Lemma \ref{lem:background} we need to reidentify the fields of the eleven-dimensional theory.
+Using the holomorphic volume forms $\Omega_X$ and $\Omega_Z$ we make the following identifications
+\begin{equation}\label{eqn:decomposevf}
+\begin{array}{ccccc}
+  \PV^{1,\bu}(X \times Z) & = & \PV^{1,\bu}(X) \; \Hat{\otimes} \; \PV^{0,\bu}(Z) & \oplus & \PV^{0,\bu}(X) \; \Hat{\otimes} \; \PV^{1,\bu}(Z) \\ & \cong & \Omega^{2,\bu}(X) \; \Hat{\otimes} \; \Omega^{0,\bu} (Z) & \oplus & \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z) 
+\end{array}
+\end{equation}
+
 
 From Lemma \ref{lem:background} we see that the new terms in the linear BRST differential arise from the quadratic terms in the action
 \begin{equation}\label{eqn:newterms}
@@ -740,8 +831,7 @@ From Lemma \ref{lem:background} we see that the new terms in the linear BRST dif
 \end{equation}
 
 Recall that the linear BRST complex of the original eleven-dimensional theory is obtained by taking the tensor product of the cochain complexes $\PV^{1,\bu}(X \times Z) \xto{\partial_\Omega} \PV^{0,\bu}(X \times Z)$ and $\Omega^{0,\bu}(X \times Z) \xto{\partial} \Omega^{1,\bu}(X \times Z)$ with the de Rham complex $\Omega^\bu(L)$ on the one-manifold $L$.
-
-Using the decomposition (\ref{eqn:decomposevf}) we see that the deformed linear BRST complex takes is the tensor product of the de Rham complex $\Omega^{\bu}(L)$ with the cochain complex
+Using the decomposition (\ref{eqn:decomposevf}) we see that the deformed linear BRST complex is the tensor product of the de Rham complex $\Omega^{\bu}(L)$ with the cochain complex
 \[
   \begin{tikzcd}
   & \Omega^{0,\bu}(X) \; \Hat{\otimes} \; \Omega^{1,\bu}(Z) \ar[dr, "\partial_Z"] \\
@@ -767,3 +857,16 @@ It is immediate to check that this quasi-isomorphism intertwines the Lie bracket
 \end{proof}
 
 \end{document}
+
+
+TO DO:
+
+-- m2 brane twist
+
+-- intro to renormalization section
+
+-- email Kevin about moduli of quantizations. 
+
+-- CY3 compactification
+
+-- G2 compactification. 
