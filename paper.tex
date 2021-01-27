@@ -452,7 +452,7 @@ Here, $S$ denotes the $128$ dimensional complex spin representation of $\fs \fo(
 \label{sec:org355a726}
 In the remainder of the paper, we wish to establish various consistency checks corroborating the claim that the 11d theory of interest describes a twist of 11d supergravity. In this section, we demonstrate that this claim is consistent with a conjectural description of a twist of Type IIA supergravity due to \cite{CLsugra}.
 
-Before recalling this conjecture, we first fix some notation which is useful to describe the state space for the Type IIA string.
+Before recalling this conjecture, we first fix some notation which is useful to describe the state space for the Type IIA string. \surya{move earlier?}
 For $i,j$ integers define the space of $(i,j)$-polyvector fields to be
 \[
   \pv^{i,j}(X) \define \Omega^{0,j}(X, \wedge^{i} TX)
@@ -600,8 +600,8 @@ This further extends to a local Lie algebra structure on the semi-direct product
 which describes the local Lie structure on $\Pi \cE_{\rm Pot}$.
 It is immediate to verify that the map $\Phi : \cE_{\rm pot} \to \cE$ intertwines the two $L_\infty$-structures.
 
-This equipped $\cE_{\rm pot}$ with the structure of an interacting (non-degenerate) BV theory.
-It's relationship to (minimal) Kodaira--Spencer theory can be summarized as follows.
+This equips $\cE_{\rm pot}$ with the structure of an interacting (non-degenerate) BV theory.
+Its relationship to (minimal) Kodaira--Spencer theory can be summarized as follows.
 
 \begin{prop}
 The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ determines a map of $\PP_0$-factorization algebras on $X$:
@@ -612,6 +612,91 @@ The map $\Phi : \cE_{\rm pot} \to \cE_{\rm KS}$ determines a map of $\PP_0$-fact
 
 \subsubsection{Eight-dimensional Kodaira--Spencer theory}
 \label{sec:orgeb2dd4d}
+
+Let \(X\) be a Calabi-Yau 4 fold. Minimal Kodaira-Spencer theory on $X$ is a $\Z/2$-graded theory with the following fundamental fields:
+\begin{itemize}
+\item The even fields are a holomorphic function $\mu^0$ and a $\partial$-closed holomorphic bivector $\mu^2$.
+\item The odd fields are a divergence-free holomorphic vector field $\mu^1$ and a $\partial$-closed holomorphic section $\mu^3$ of $\wedge^3 T_X$.
+\end{itemize}
+
+The space of fields admits a locally free description obtained by including the ``descendants" \surya{maybe should be more formal here}
+The descendants of the field $\mu^j$ will be denoted $u^k \mu^j$ where $k = 1,\ldots, j$.
+Here, $u^k \mu^j$ is a section of $\PV^{j - k, \bu}$.
+The sheaf of cochain complexes $\cE$ underlying minimal Kodaira--Spencer theory on $X$ is
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
+& & & \mu^0 \in \PV^{0,\bu} \\
+& & \sum u^k \mu^1 \in \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} \\
+& \sum u^k \mu^2 \in  \PV^{2,\bu} \ar[r,"u \partial"] & u \PV^{1,\bu} \ar[r, "u \partial"] & u^2 \PV^{0,\bu} \\
+\sum u^k \mu^3 \in \PV^{3,\bu} \ar[r, "u \partial"]& u \PV^{2,\bu} \ar[r,"u \del"] & u^2 \PV^{1,\bu} \ar[r, "u \partial"] & u^3\PV^{0,\bu} \\
+\end{tikzcd}
+\]
+The differential on this sheaf of cochain complexes is given by $\dbar + u \partial$.
+
+There is a local Lie algebra structure on $\Pi\cE$ using the Schouten-Nijenhuis bracket $[-,-]_{\rm Sch}$ on polyvector fields.
+On the fields (including the descendants) it is defined by the formula
+\[
+[u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} \{\mu^i, \mu^j\}_{\rm NS} .
+\]
+
+The space of fields of minimal Kodaira--Spencer theory $\cE_{\rm KS}$ is equipped with an odd Poisson tensor defined by
+\[
+\Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
+\]
+Together with the local Lie algebra structure, this data equips $\cE_{\rm KS}$ with the structure of a $\Z/2$-graded Poisson BV theory.
+
+As in the surface case, there is a closely related BV theory describing the "potentials" of minimal Kodaira--Spencer theory.
+The underlying sheaf of cochain complexes is
+\[
+\begin{tikzcd}
+\ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
+& & & \eta^{0}\in\PV^{0,\bu} \\
+& & \mu^{1}+u\mu^{0}\in\PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} \\
+u^{-1} \gamma^4 + \gamma^3  \in u^{-1} \PV^{4,\bu} \ar[r, "u \partial"] & \PV^{3,\bu} & &  \\
+\beta^{4} \in\PV^{4,\bu} &  &  & \\
+\end{tikzcd}
+\]
+We will again refer to this sheaf as $\cE_{\rm pot}$. Note that we can identify $cE_{\rm pot}\cong \Pi T^{*}(\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu}))$.
+
+\begin{dfn}
+  Let $X$ be a Calabi-Yau 4-fold, and let $\mc L$ denote the local dg Lie algebra $\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})$ with Lie bracket given by the Schouten bracket. Kodaira-Spencer with potentials on $X$ is the $\ZZ/2$-graded BV theory given by deforming the BF theory of $\mc L$ by the local functional \[ \frac{1}{3}\int_{X}(\nu^{0}\partial\gamma^{3}\partial\gamma^{3})\]\end{dfn}
+
+To facillitate the calculations in this section, it will be useful to explicate the Lie structure. We have the following brackets:
+
+\begin{align}
+  \PV^{1,\bu}\times\PV^{0,\bu}\to \PV^{0,\bu},\ \ \ & [\mu^{1},\nu^{0}] = \{\mu^{1},\nu^{0}\}_{NS}\\
+  \PV^{1,\bu}\times\PV^{1,\bu}\to\PV^{1,\bu},\ \ \ & [\mu^{1}, \mu^{1}] = \{\mu^{1}, \mu^{1}\}_{NS}\\
+  \PV{1,\bu}\times u\PV^{0,\bu}\to u\PV^{0,\bu}, \ \ \ & [\mu^{1}, u\mu^{0}]=u\{\mu^{1},\mu^{0}\}_{NS}
+  \PV^{3,\bu}\times \PV^{3,\bu}\to \PV^{4,\bu}, \ \ \ & [\gamma^3, \Tilde{\gamma}^3] = \frac{1}{2}(\{\partial \gamma^3 , \Tilde{\gamma}^{3}\}_{\rm NS} +(-1)^{|\gamma^{3}|} \{\gamma^3, \partial \Tilde{\gamma}^{3}\}_{\rm NS}) \\
+  \PV^{4,\bu}\times \PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [\beta^{4}, \nu^{0}] = \{\beta^{4}, \nu^{0}\}_{\rm {NS}}\\
+  \PV^{3,\bu}\times \PV^{0,\bu}\to \PV^{1,\bu}, \ \ \ & [\gamma^{3}, \nu^{0}] = \{\partial\gamma^{3}, \nu^{0}\}_{\rm NS}\\
+  \PV^{3,\bu}\times \PV^{1,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{3}, \mu^{1}] = \{\gamma^{3}, \mu^{1}\}_{\rm NS}\\
+  u^{-1}\PV^{4,\bu}\times u\PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [u^{-1}\gamma^{4}, u\mu^{0}] = \{\gamma^{4},\mu^{0}\}_{\rm NS}
+\end{align}
+\surya{explain more}
+
+Together with the wedge and integrate pairing, $\cE_{\rm pot}$ has the structure of a nondegenerate BV theory.
+
+Like in the case of Kodaira--Spencer theory on a complex surface, there is a  map of sheaves of cochain complexes $\Phi^{(1)}: \cE_{\rm pot}\to \cE_{\rm KS}$ given by
+
+\[\begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ u^{-1}\gamma^{4}+\gamma^{3} \\ \beta^{4}\end{pmatrix}\mapsto \begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ \partial\gamma^{3} \\ \partial\beta^{4}\end{pmatrix}\]
+
+This fails to be a map of local dg Lie algebras, but the induced map on $\partial$-cohomology is indeed a map of local Lie algebras. Therefore, we still have the following:
+
+\begin{prop}
+There is a local $L_{\infty}$ map $\cE_{\rm pot}\to \cE_{\rm KS}$.
+\end{prop}
+\begin{proof}
+  Consider the collection of linear maps $\{\Phi^{(n)}: \cE_{\rm Pot}^{\otimes n}\to \cE_{\rm KS}[n-1]\}$ where $\Phi^{(1)}$ is given as above and $\Phi^{{(2)}}$ is given by \[\begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ u^{-1}\gamma^{4}+\gamma^{3} \\ \beta^{4}\end{pmatrix}\otimes \begin{pmatrix}\tilde{\nu}^{0} \\ \tilde{\mu}^{1}+u\tilde{\mu}^{0}\\ u^{-1}\tilde{\gamma}^{4}+\tilde{\gamma}^{3} \\ \tilde{\beta}^{4} \end{pmatrix}\to \begin{pmatrix} 0 \\ 0 \\ [\mu^{0},\tilde{\gamma}^{3}]_{\rm NS}\pm [\tilde{\mu}^{0},\gamma^{3}] \\ 0\end{pmatrix}.\]
+
+  We claim that the $\Phi^{(n)}$ define an $L_{\infty}$ map. To this end, there are three kinds of conditions to check.
+  \begin{itemize}
+    \item A 2-linear condition which expresses that $\Phi^{(2)}$ renders the failure of $\Phi^{(1)}$ to preserve the brackets homotopically trivial. That is, for $a,b\in\cE_{\rm Pot},$ \[\Phi^{(1)}([a,b])-[\Phi^{(1)}(a),\Phi^{(1)}(b)]=d_{\rm KS}\Phi^{(2)}(a,b)-\Phi^{(2)}(d_{\rm Pot}a, b)-(-1)^{|a|}\Phi^{(2)}(a,d_{\rm Pot}b).\] Note that $\Phi^{(1)}$ in fact preserves all brackets other than the brackets $\PV^{3,\bu}\otimes \PV^{1,\bu}\to \PV^{3,\bu}$ and $u^{-1}\PV^{4,\bu}\otimes u\PV^{0,\bu}\to \PV^{3,\bu}$
+      \surya{to finish}
+  \end{itemize}
+\end{proof}
+
 \subsection{The Type IIA topological string}
 \label{IIAtop}
 \subsection{Reduction of twisted supergravity}
