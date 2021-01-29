@@ -14,7 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-
+\usepackage{amsfonts}
 \usepackage{macros-mtheory}
 
 \author{Surya and Brian}
@@ -212,7 +212,7 @@ Being a classical action functional $S_{\rm BF}$ is, of course, ghost degree zer
 However, we observe that $J$ is of ghost degree $+6$.
 In order to make sense of the deformed theory, therefore, we must consider the space of fields as a $\ZZ/2$-graded object rather than a $\ZZ$-graded one.
 
-So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ/2$-graded space of fields takes the form
+So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ /2$-graded space of fields takes the form
 \[
   \begin{array}{ccl}
     \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
@@ -375,7 +375,7 @@ From this, we read off the equations of motion as
 \end{equation}
 Here, $L_\mu(\gamma)$ denotes the Lie derivative of $\gamma$ with respect to the vector field $\mu$.
 
-On $L = \RR_t$ we proceed to describe the classical phase space of the model which is the space of solutions to the above equations at $t = 0$.
+On $L = \RR_t$ we proceed to describe the classical phase space of the model  which is the space of solutions to the above equations at $t = 0$.
 Upon taking into account the gauge transformations, we will denote the resulting moduli space by $\cM_c[X]$.
 When $X$ is compact, the BV pairing in the bulk eleven-dimensional theory induces a symplectic structure on this moduli space.
 
@@ -592,7 +592,7 @@ With this informal description of the twist of the Type IIA closed string in han
   Consider perturbative type IIA supergravity on $M\times X$ around a background where:
   \begin{itemize}
     \item the graviton is set to $h_{M}+ h_{X}$,
-    \item the bosonic ghost for local supersymmetries is set to a covariantly constant square-zero spinor $Q$ that is invariant for the $\SU(4)$ subgroup of isometries preserving $X\subset M\times X$,
+    \item the bosonic ghost for local supersymmetries is set to a covariantly constant square-zero spinor $Q$ that is invariant for the $\rm SU(4)$ subgroup of isometries preserving $X\subset M\times X$,
     \item all other background fields are set to zero.
   \end{itemize}
   In this background, the resulting theory is equivalent to the Kodaira--Spencer type theory whose fields are
@@ -703,23 +703,21 @@ Its relationship to (minimal) Kodaira--Spencer theory can be summarized as follo
 \subsubsection{Eight-dimensional Kodaira--Spencer theory}
 \label{sec:orgeb2dd4d}
 
-Let \(X\) be a Calabi-Yau 4 fold. Minimal Kodaira-Spencer theory on $X$ is a $\Z/2$-graded theory with the following fundamental fields:
+Let \(X\) be a Calabi-Yau 4 fold. Minimal Kodaira-Spencer theory on $X$ is a $\ZZ/2$-graded theory with the following fundamental fields:
 \begin{itemize}
 \item The even fields are a holomorphic function $\mu^0$ and a $\partial$-closed holomorphic bivector $\mu^2$.
 \item The odd fields are a divergence-free holomorphic vector field $\mu^1$ and a $\partial$-closed holomorphic section $\mu^3$ of $\wedge^3 T_X$.
 \end{itemize}
 
-The space of fields admits a locally free description obtained by including the ``descendants" \surya{maybe should be more formal here}
-The descendants of the field $\mu^j$ will be denoted $u^k \mu^j$ where $k = 1,\ldots, j$.
+The space of fields admits a locally free description obtained by including the ``descendants". The descendants of the field $\mu^j$ will be denoted $u^k \mu^j$ where $k = 1,\ldots, j$.
 Here, $u^k \mu^j$ is a section of $\PV^{j - k, \bu}$.
 The sheaf of cochain complexes $\cE$ underlying minimal Kodaira--Spencer theory on $X$ is
-\[
-\begin{tikzcd}
+\[\begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
 & & & \mu^0 \in \PV^{0,\bu} \\
 & & \sum u^k \mu^1 \in \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} \\
 & \sum u^k \mu^2 \in  \PV^{2,\bu} \ar[r,"u \partial"] & u \PV^{1,\bu} \ar[r, "u \partial"] & u^2 \PV^{0,\bu} \\
-\sum u^k \mu^3 \in \PV^{3,\bu} \ar[r, "u \partial"]& u \PV^{2,\bu} \ar[r,"u \del"] & u^2 \PV^{1,\bu} \ar[r, "u \partial"] & u^3\PV^{0,\bu} \\
+\sum u^k \mu^3 \in \PV^{3,\bu} \ar[r, "u \partial"]& u \PV^{2,\bu} \ar[r,"u \partial"] & u^2 \PV^{1,\bu} \ar[r, "u \partial"] & u^3\PV^{0,\bu} \\
 \end{tikzcd}
 \]
 The differential on this sheaf of cochain complexes is given by $\dbar + u \partial$.
@@ -727,17 +725,16 @@ The differential on this sheaf of cochain complexes is given by $\dbar + u \part
 There is a local Lie algebra structure on $\Pi\cE$ using the Schouten-Nijenhuis bracket $[-,-]_{\rm Sch}$ on polyvector fields.
 On the fields (including the descendants) it is defined by the formula
 \[
-[u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} \{\mu^i, \mu^j\}_{\rm NS} .
+[u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} \{\mu^i, \mu^j\}_{\rm NS}.
 \]
 
 The space of fields of minimal Kodaira--Spencer theory $\cE_{\rm KS}$ is equipped with an odd Poisson tensor defined by
 \[
 \Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
 \]
-Together with the local Lie algebra structure, this data equips $\cE_{\rm KS}$ with the structure of a $\Z/2$-graded Poisson BV theory.
+Together with the local Lie algebra structure, this data equips $\cE_{\rm KS}$ with the structure of a $\ZZ/2$-graded Poisson BV theory.
 
-As in the surface case, there is a closely related BV theory describing the "potentials" of minimal Kodaira--Spencer theory.
-The underlying sheaf of cochain complexes is
+As in the surface case, there is a closely related BV theory describing the "potentials" of minimal Kodaira--Spencer theory. The underlying sheaf of cochain complexes is
 \[
 \begin{tikzcd}
 \ul{\rm odd} & \ul{\rm even} & \ul{\rm odd} & \ul{\rm even} \\
@@ -747,24 +744,23 @@ u^{-1} \gamma^4 + \gamma^3  \in u^{-1} \PV^{4,\bu} \ar[r, "u \partial"] & \PV^{3
 \beta^{4} \in\PV^{4,\bu} &  &  & \\
 \end{tikzcd}
 \]
-We will again refer to this sheaf as $\cE_{\rm pot}$. Note that we can identify $cE_{\rm pot}\cong \Pi T^{*}(\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu}))$.
+We will again refer to this sheaf as $\cE_{\rm pot}$. Note that we can identify \[\cE_{\rm pot}\cong \Pi T^{*}(\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})).\]
 
 \begin{dfn}
-  Let $X$ be a Calabi-Yau 4-fold, and let $\mc L$ denote the local dg Lie algebra $\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})$ with Lie bracket given by the Schouten bracket. Kodaira-Spencer with potentials on $X$ is the $\ZZ/2$-graded BV theory given by deforming the BF theory of $\mc L$ by the local functional \[ \frac{1}{3}\int_{X}(\nu^{0}\partial\gamma^{3}\partial\gamma^{3})\]\end{dfn}
+  Let $X$ be a Calabi-Yau 4-fold, and let $\cL$ denote the local dg Lie algebra $\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})$ with Lie bracket given by the Schouten bracket. Kodaira-Spencer with potentials on $X$ is the $\ZZ/2$-graded BV theory given by deforming the BF theory of $\cL$ by the local functional \[ \frac{1}{3}\int_{X}(\nu^{0}\partial\gamma^{3}\partial\gamma^{3})\]\end{dfn}
 
 To facillitate the calculations in this section, it will be useful to explicate the Lie structure. We have the following brackets:
 
 \begin{align}
   \PV^{1,\bu}\times\PV^{0,\bu}\to \PV^{0,\bu},\ \ \ & [\mu^{1},\nu^{0}] = \{\mu^{1},\nu^{0}\}_{NS}\\
   \PV^{1,\bu}\times\PV^{1,\bu}\to\PV^{1,\bu},\ \ \ & [\mu^{1}, \mu^{1}] = \{\mu^{1}, \mu^{1}\}_{NS}\\
-  \PV{1,\bu}\times u\PV^{0,\bu}\to u\PV^{0,\bu}, \ \ \ & [\mu^{1}, u\mu^{0}]=u\{\mu^{1},\mu^{0}\}_{NS}
+  \PV{1,\bu}\times u\PV^{0,\bu}\to u\PV^{0,\bu}, \ \ \ & [\mu^{1}, u\mu^{0}]=u\{\mu^{1},\mu^{0}\}_{NS} \\
   \PV^{3,\bu}\times \PV^{3,\bu}\to \PV^{4,\bu}, \ \ \ & [\gamma^3, \Tilde{\gamma}^3] = \frac{1}{2}(\{\partial \gamma^3 , \Tilde{\gamma}^{3}\}_{\rm NS} +(-1)^{|\gamma^{3}|} \{\gamma^3, \partial \Tilde{\gamma}^{3}\}_{\rm NS}) \\
   \PV^{4,\bu}\times \PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [\beta^{4}, \nu^{0}] = \{\beta^{4}, \nu^{0}\}_{\rm {NS}}\\
   \PV^{3,\bu}\times \PV^{0,\bu}\to \PV^{1,\bu}, \ \ \ & [\gamma^{3}, \nu^{0}] = \{\partial\gamma^{3}, \nu^{0}\}_{\rm NS}\\
   \PV^{3,\bu}\times \PV^{1,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{3}, \mu^{1}] = \{\gamma^{3}, \mu^{1}\}_{\rm NS}\\
   u^{-1}\PV^{4,\bu}\times u\PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [u^{-1}\gamma^{4}, u\mu^{0}] = \{\gamma^{4},\mu^{0}\}_{\rm NS}
 \end{align}
-\surya{explain more}
 
 Together with the wedge and integrate pairing, $\cE_{\rm pot}$ has the structure of a nondegenerate BV theory.
 
