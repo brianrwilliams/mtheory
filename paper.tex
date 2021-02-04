@@ -722,7 +722,7 @@ The sheaf of cochain complexes $\cE$ underlying minimal Kodaira--Spencer theory 
 \]
 The differential on this sheaf of cochain complexes is given by $\dbar + u \partial$.
 
-There is a local Lie algebra structure on $\Pi\cE$ using the Schouten-Nijenhuis bracket $[-,-]_{\rm Sch}$ on polyvector fields.
+There is a local Lie algebra structure on $\Pi\cE$ using the Schouten-Nijenhuis bracket $\{-,-\}_{\rm NS}$ on polyvector fields.
 On the fields (including the descendants) it is defined by the formula
 \[
 [u^k \mu^i , u^\ell \mu^j] = u^{k+\ell} \{\mu^i, \mu^j\}_{\rm NS}.
@@ -747,41 +747,91 @@ u^{-1} \gamma^4 + \gamma^3  \in u^{-1} \PV^{4,\bu} \ar[r, "u \partial"] & \PV^{3
 We will again refer to this sheaf as $\cE_{\rm pot}$. Note that we can identify \[\cE_{\rm pot}\cong \Pi T^{*}(\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})).\]
 
 \begin{dfn}
-  Let $X$ be a Calabi-Yau 4-fold, and let $\cL$ denote the local dg Lie algebra $\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})$ with Lie bracket given by the Schouten bracket. Kodaira-Spencer with potentials on $X$ is the $\ZZ/2$-graded BV theory given by deforming the BF theory of $\cL$ by the local functional \[ \frac{1}{3}\int_{X}(\nu^{0}\partial\gamma^{3}\partial\gamma^{3})\]\end{dfn}
+  Let $X$ be a Calabi-Yau 4-fold, and let $\cL$ denote the local dg Lie algebra $\PV^{0,\bu}\oplus (\PV^{1,\bu}\to u\PV^{0,\bu})$ with Lie bracket given by the Schouten bracket. Kodaira-Spencer with potentials on $X$ is the $\ZZ/2$-graded BV theory given by deforming the BF theory of $\cL$ by the local functional \[ J(\nu^{0}, \gamma^{3})=\frac{1}{3}\int_{X}\left((\nu^{0}\partial\gamma^{3}\partial\gamma^{3})\vdash\Omega\right) \wedge \Omega\]\end{dfn}
 
 To facillitate the calculations in this section, it will be useful to explicate the Lie structure. We have the following brackets:
 
+\begin{itemize}
+\item The dg Lie structure on $\cL$ is given by the following brackets:
+\begin{align*}
+  \PV^{1,\bu}\otimes\PV^{0,\bu}\to \PV^{0,\bu},\ \ \ & [\mu^{1},\nu^{0}] = \{\mu^{1},\nu^{0}\}_{NS}  \\
+  \PV^{1,\bu}\otimes\PV^{1,\bu}\to\PV^{1,\bu},\ \ \ & [\mu^{1}, \mu^{1}] = \{\mu^{1}, \mu^{1}\}_{NS} \\
+  \PV^{1,\bu}\otimes u\PV^{0,\bu}\to u\PV^{0,\bu}, \ \ \ & [\mu^{1}, u\mu^{0}]=u\{\mu^{1},\mu^{0}\}_{NS}.
+\end{align*}
+
+\item Next we have the action of $\cL$ on $\Pi\cL^{*}$, given by the brackets:
 \begin{align}
-  \PV^{1,\bu}\times\PV^{0,\bu}\to \PV^{0,\bu},\ \ \ & [\mu^{1},\nu^{0}] = \{\mu^{1},\nu^{0}\}_{NS}\\
-  \PV^{1,\bu}\times\PV^{1,\bu}\to\PV^{1,\bu},\ \ \ & [\mu^{1}, \mu^{1}] = \{\mu^{1}, \mu^{1}\}_{NS}\\
-  \PV{1,\bu}\times u\PV^{0,\bu}\to u\PV^{0,\bu}, \ \ \ & [\mu^{1}, u\mu^{0}]=u\{\mu^{1},\mu^{0}\}_{NS} \\
-  \PV^{3,\bu}\times \PV^{3,\bu}\to \PV^{4,\bu}, \ \ \ & [\gamma^3, \Tilde{\gamma}^3] = \frac{1}{2}(\{\partial \gamma^3 , \Tilde{\gamma}^{3}\}_{\rm NS} +(-1)^{|\gamma^{3}|} \{\gamma^3, \partial \Tilde{\gamma}^{3}\}_{\rm NS}) \\
-  \PV^{4,\bu}\times \PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [\beta^{4}, \nu^{0}] = \{\beta^{4}, \nu^{0}\}_{\rm {NS}}\\
-  \PV^{3,\bu}\times \PV^{0,\bu}\to \PV^{1,\bu}, \ \ \ & [\gamma^{3}, \nu^{0}] = \{\partial\gamma^{3}, \nu^{0}\}_{\rm NS}\\
-  \PV^{3,\bu}\times \PV^{1,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{3}, \mu^{1}] = \{\gamma^{3}, \mu^{1}\}_{\rm NS}\\
-  u^{-1}\PV^{4,\bu}\times u\PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [u^{-1}\gamma^{4}, u\mu^{0}] = \{\gamma^{4},\mu^{0}\}_{\rm NS}
+  \PV^{4,\bu}\otimes \PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [\beta^{4}, \nu^{0}] = \{\beta^{4}, \nu^{0}\}_{\rm {NS}} \nonumber\\
+  \PV^{3,\bu}\otimes \PV^{1,\bu}\to \PV^{3,\bu}, \ \ \ & [\gamma^{3}, \mu^{1}] = \{\gamma^{3}, \mu^{1}\}_{\rm NS} \label{funnybracket}\\
+  u^{-1}\PV^{4,\bu}\otimes u\PV^{0,\bu}\to \PV^{3,\bu}, \ \ \ & [u^{-1}\gamma^{4}, u\mu^{0}] = \{\gamma^{4},\mu^{0}\}_{\rm NS}\label{funnybracketdesc}.
 \end{align}
 
-Together with the wedge and integrate pairing, $\cE_{\rm pot}$ has the structure of a nondegenerate BV theory.
+\item The deformation $J(\nu^{0},\gamma^{3})$ is given by the brackets:
+\begin{align*}
+  \PV^{3,\bu}\otimes \PV^{3,\bu}\to \PV^{4,\bu}, \ \ \ & [\gamma^3, \Tilde{\gamma}^3] = \frac{1}{2}(\{\partial \gamma^3 , \Tilde{\gamma}^{3}\}_{\rm NS} +(-1)^{|\gamma^{3}|} \{\gamma^3, \partial \Tilde{\gamma}^{3}\}_{\rm NS}) \\
+\PV^{3,\bu}\otimes \PV^{0,\bu}\to \PV^{1,\bu}, \ \ \ & [\gamma^{3}, \nu^{0}] = \{\partial\gamma^{3}, \nu^{0}\}_{\rm NS}.
+\end{align*}
+\end{itemize}
 
-Like in the case of Kodaira--Spencer theory on a complex surface, there is a  map of sheaves of cochain complexes $\Phi^{(1)}: \cE_{\rm pot}\to \cE_{\rm KS}$ given by
+Like in the case of Kodaira--Spencer theory on a complex surface, there is a  map of sheaves of cochain complexes $\Phi^{(1)}: \cE_{\rm pot}\to \cE_{\rm KS}$ given by testing
 
 \[\begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ u^{-1}\gamma^{4}+\gamma^{3} \\ \beta^{4}\end{pmatrix}\mapsto \begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ \partial\gamma^{3} \\ \partial\beta^{4}\end{pmatrix}\]
 
 This fails to be a map of local dg Lie algebras, but the induced map on $\partial$-cohomology is indeed a map of local Lie algebras. Therefore, we still have the following:
 
 \begin{prop}
-There is a local $L_{\infty}$ map $\cE_{\rm pot}\to \cE_{\rm KS}$.
+There is a map of local $L_{\infty}$-algebras $\cE_{\rm pot}\to \cE_{\rm KS}$ extending $\Phi^{(1)}$.
 \end{prop}
 \begin{proof}
-  Consider the collection of linear maps $\{\Phi^{(n)}: \cE_{\rm Pot}^{\otimes n}\to \cE_{\rm KS}[n-1]\}$ where $\Phi^{(1)}$ is given as above and $\Phi^{{(2)}}$ is given by \[\begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ u^{-1}\gamma^{4}+\gamma^{3} \\ \beta^{4}\end{pmatrix}\otimes \begin{pmatrix}\tilde{\nu}^{0} \\ \tilde{\mu}^{1}+u\tilde{\mu}^{0}\\ u^{-1}\tilde{\gamma}^{4}+\tilde{\gamma}^{3} \\ \tilde{\beta}^{4} \end{pmatrix}\to \begin{pmatrix} 0 \\ 0 \\ [\mu^{0},\tilde{\gamma}^{3}]_{\rm NS}\pm [\tilde{\mu}^{0},\gamma^{3}] \\ 0\end{pmatrix}.\]
+  Consider the collection of linear maps $\{\Phi^{(n)}: \cE_{\rm Pot}^{\otimes n}\to \cE_{\rm KS}[n-1]\}$ where $\Phi^{(1)}$ is given as above, $\Phi^{{(2)}}$ is given by \[\begin{pmatrix}\nu^{0} \\ \mu^{1}+u\mu^{0} \\ u^{-1}\gamma^{4}+\gamma^{3} \\ \beta^{4}\end{pmatrix}\otimes \begin{pmatrix}\tilde{\nu}^{0} \\ \tilde{\mu}^{1}+u\tilde{\mu}^{0}\\ u^{-1}\tilde{\gamma}^{4}+\tilde{\gamma}^{3} \\ \tilde{\beta}^{4} \end{pmatrix}\mapsto \begin{pmatrix} 0 \\ 0 \\ \{\mu^{0},\tilde{\gamma}^{3}\}_{\rm NS}-(-1)^{(|\tilde \mu^{0}|-1)(|\gamma^{3}|-1)}\{\tilde{\mu}^{0},\gamma^{3}\}_{\rm NS} \\ 0\end{pmatrix}\] and $\Phi^{(n)}=0$ for all $n\neq 1,2$
 
   We claim that the $\Phi^{(n)}$ define an $L_{\infty}$ map. To this end, there are three kinds of conditions to check.
   \begin{itemize}
-    \item A 2-linear condition which expresses that $\Phi^{(2)}$ renders the failure of $\Phi^{(1)}$ to preserve the brackets homotopically trivial. That is, for $a,b\in\cE_{\rm Pot},$ \[\Phi^{(1)}([a,b])-[\Phi^{(1)}(a),\Phi^{(1)}(b)]=d_{\rm KS}\Phi^{(2)}(a,b)-\Phi^{(2)}(d_{\rm Pot}a, b)-(-1)^{|a|}\Phi^{(2)}(a,d_{\rm Pot}b).\] Note that $\Phi^{(1)}$ in fact preserves all brackets other than the brackets $\PV^{3,\bu}\otimes \PV^{1,\bu}\to \PV^{3,\bu}$ and $u^{-1}\PV^{4,\bu}\otimes u\PV^{0,\bu}\to \PV^{3,\bu}$
-      \surya{to finish}
+    \item A 2-linear condition which expresses that $\Phi^{(2)}$ renders the failure of $\Phi^{(1)}$ to preserve the brackets homotopically trivial. That is, for $a,b\in\cE_{\rm Pot},$ \begin{align*}\Phi^{(1)}([a,b])-[\Phi^{(1)}(a),\Phi^{(1)}(b)]=d_{\rm KS}\Phi^{(2)}(a,b)-\Phi^{(2)}(d_{\rm Pot}a, b)-(-1)^{|a|}\Phi^{(2)}(a,d_{\rm Pot}b)\label{2-linear}.\end{align*} Note that $\Phi^{(1)}$ in fact preserves all brackets other than the brackets \ref{funnybracket}, \ref{funnybracketdesc}. It is immediate from the expression for $\Phi^{(2)}$ that the right-hand side of \ref{2-linear} vanishes for $a, b$ in the domain of brackets other than \ref{funnybracket}, \ref{funnybracketdesc}. Therefore, we need only check that \ref{2-linear} in two cases.
+
+      Consider $\gamma^{3}\otimes \tilde \mu^{1}\in \PV^{3,\bu}\otimes \PV^{1,\bu}$. We have that
+      \begin{align*}
+        \Phi^{(1)}([\gamma^{3},\tilde \mu^{1}]) &-\{\Phi^{1}(\gamma^{3}),\Phi^{1}(\tilde \mu^{1})\}_{\rm NS} \\
+        &= \partial\{\gamma^{3}, \tilde \mu^{1}\}_{\rm NS}-\{\partial \gamma^{3}, \tilde \mu^{1}\}_{\rm NS} \\
+        &= \{\partial \gamma^{3}, \tilde \mu^{1}\}_{\rm NS}+(-1)^{|\gamma^{3}|-1}\{\gamma^{3}, \partial \tilde \mu^{1}\}_{\rm NS} - \{\partial\gamma^{3}, \tilde \mu^{1}\}_{\rm NS} \\
+        &= (-1)^{|\gamma^{3}|-1}\{\gamma^{3}, \partial \tilde \mu^{1}\}_{\rm NS}
+      \end{align*}
+
+      On the other hand, we have that
+      \begin{align*}
+        d_{\rm KS}\Phi^{(2)}(\gamma^{3},\tilde\mu^{1}) & -\Phi^{(2)}(d_{\rm Pot}\gamma^{3}, \tilde \mu^{1})-(-1)^{|a|}\Phi^{(2)}(\gamma^{3},d_{\rm Pot}\tilde\mu^{1})\\
+        &= -(-1)^{|\gamma^{3}|}\Phi^{(2)}(\gamma^{3}, u\partial \tilde \mu^{1}) \\
+        &= -(-1)^{|\gamma^{3}|-1}(-1)^{(|\partial\tilde\mu^{1}|-1)(|\gamma^{3}|-1)}\{\partial \tilde\mu^{1},\gamma^{3}\}_{\rm NS}\\
+        &= (-1)^{|\gamma^{3}|-1}\{\gamma^{3},\partial\tilde\mu^{1}\}_{\rm NS}
+      \end{align*}
+
+      Next consider $u^{-1}\gamma^{4}\otimes u \tilde\mu^{0}\in u^{-1}\PV^{4,\bu}\otimes u\PV^{0}$. We have that
+       \begin{align*}
+         \Phi^{(1)}([u^{-1}\gamma^{4},u\tilde \mu^{0}])-\{\Phi^{1}(u^{-1}\gamma^{4}),\Phi^{1}(\tilde u\mu^{0})\}_{\rm NS} &= \partial\{\gamma^{4}, \tilde \mu^{0}\}_{\rm NS} \\
+         &= \{\partial \gamma^{4}, \tilde\mu^{0}\}_{\rm NS}
+      \end{align*}
+
+      On the other hand, we have that
+      \begin{align*}
+        d_{\rm KS}\Phi^{(2)}(u^{-1}\gamma^{4},\tilde\mu^{0}) & -\Phi^{(2)}(d_{\rm Pot}u^{-1}\gamma^{4}, \tilde \mu^{0})-(-1)^{|u^{-1}\gamma^{4}|}\Phi^{(2)}(u^{-1}\gamma^{4},d_{\rm Pot}u\tilde\mu^{0}) \\
+        &=\Phi^{(2)}(\partial\gamma^{4},u\tilde\mu^{0})\\
+        &= -(-1)^{(|\tilde \mu^{0}|-1)(|\del\gamma^{4}|-1)}\{\tilde\mu^{0}, \partial\gamma^{4}\}_{\rm NS} \\
+        &= \{\partial \gamma^{4}, \tilde\mu^{0}\}_{\rm NS}
+      \end{align*}
+      Therefore the 2-linear condition holds.
+
+    \item Next we have a 3-linear condition; since $\Phi^{(3)} = 0$, the condition becomes \[0=\sum_{\sigma\in S_{3}} \{\Phi^{(2)}(x_{\sigma(1)}, x_{\sigma(2)}), \Phi^{(1)}(x_{\sigma (k)})\}_{\rm NS} + \sum_{\sigma \in S_{3}}\Phi^{(2)}([x_{\sigma(1)}, x_{\sigma(2)}], x_{\sigma (3)}).\]
+
+      This should vanish because of the Jacobi identity for the Schouten-Nijenhius bracket.
+
+    \item Finally we have a 4-linear condition; since $\Phi^{(3)}=\Phi^{(4)}=0$, the condition reads \[0=\sum_{\sigma\in S_{4}} \{\Phi^{(2)}(x_{\sigma(1)}, x_{\sigma (2)}), \Phi^{(2)}(x_{\sigma(3)}, x_{\sigma (4)})\}_{\rm NS}.\]
   \end{itemize}
+  \surya{signs in last two conditions? comment on why they vanish}
 \end{proof}
+
+\begin{cor}
+The $\{\Phi^{(n)}\}$ determine a map of Poisson BV theories $\cE_{pot}\to \cE_{KS}$. In particular it determines a map of $\PP_{0}$-factorization algebras $\Phi^{*} : \Obs_{\cE_{\rm KS}}\to \Obs_{\cE_{\rm Pot}}$.
+\end{cor}
 
 \subsection{The Type IIA topological string}
 \label{IIAtop}
