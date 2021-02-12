@@ -31,6 +31,7 @@
 \def\pv{{\rm PV}}
 \def\PV{{\rm PV}}
 \def\T{{\rm T}}
+\def\del{\partial}
 
 \begin{document}
 
@@ -507,14 +508,44 @@ be the \brian{finish}.
 \end{dfn}
 
 Notice that $\m2$ is a $\ZZ \times \ZZ/2$-graded Lie algebra and the differential is of bidegree $(1,0)$.
+Fix a rank one supercharge $Q \in S \subset \ft_{11d}$ satisfying $Q^2 = 0$. 
+We will characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
+Before doing this, let us set up some notation. 
+
+Such a supercharge defines a maximal isotropic subspace $L \subset V$. 
+As $\fsl(L ; \CC) = \fsl(5 ; \CC)$-modules the supersymmetry algebra decomposes as
+\[
+L \oplus L^* \oplus \CC_t
+\]
+and $\so(11, \CC)$ decomposes as
+\[
+\wedge^2 L \oplus \wedge^2 L^* \oplus L \oplus L^* .
+\]
+Furthermore, the spinorial representation can be identified with
+\[
+S = \wedge^\bu (L^*) = \CC \oplus L^* \oplus \wedge^2 L^* \oplus \wedge^3 L^* \oplus \wedge^4 L^* \oplus \wedge^5 L^* .
+\]
+The element $Q$ lives in the first summand.
 
 \begin{lem}
-  Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the $Q$-cohomology of $\m2$.
-  There is an isomorphism of $\ZZ/2$-graded Lie algebras
+Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the $Q$-cohomology of $\m2$.
+There is an isomorphism of $\ZZ/2$-graded Lie algebras
   \[
-    \m2^Q \simeq \fsl(5;\CC) \ltimes ???
+    \m2^Q \simeq \fsl(5;\CC) \ltimes \Pi (\wedge^2 L^* \oplus \CC\cdot c)
   \]
 \end{lem}
+\begin{proof}
+According to the $\ZZ \times \ZZ/2$ bigrading, $Q$ is degree $(0,{\rm odd})$.
+Since the differential on $\m2$ is degree $(1,{\rm even})$, the total cohomology with respect to $\d + [Q,-]$ will only be $\ZZ/2$ graded. 
+ 
+We spell out the action of $[Q,-]$ on $S$ according to the above decompositions.
+First, note that
+\[
+[Q,-] \colon S \to L^* \oplus \CC_t
+\]
+is surjective and has $26$-dimensional kernel. 
+\end{proof}
+
 
 Consider now the eleven-dimensional theory $\cT = \cT_{\CC^5 \times \RR}$ defined on $\CC^5 \times \RR$. 
 The BV action induces the structure of a dg Lie algebra on $\cT[1]$. 
@@ -563,7 +594,7 @@ Here, we note that in this dg Lie algebra the space $\pv^{i,j}(X)$ lies in cohom
 
 When $X$ is Calabi--Yau of complex dimension $n$, the holomorphic volume form $\Omega$ defines an isomorphism
 \[
-  \vdash \Omega : \pv^{i,j}(X) \cong \Omega^{n-i, j}(X).
+  \vee \Omega : \pv^{i,j}(X) \cong \Omega^{n-i, j}(X).
 \]
 In turn, the holomorphic de Rham operator $\partial : \Omega^{p, j}(X) \to \Omega^{p+1,j}$ defines a holomorphic differential operator
 \[
