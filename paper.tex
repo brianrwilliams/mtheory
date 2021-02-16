@@ -81,9 +81,10 @@ and is defined by the formula
 \]
 where, on the right hand side, we mean the Lie derivative of $\Omega$ with respect to $\mu$.
 
+It will be useful to introduce the notation $\PV^{k,\bu}(X)$ for the complex $\Omega^{0,\bu}(X, \wedge^k \T_X)$; this is the Dolbeault resolution of holomorphic $k$-polyvector fields. 
 Using the divergence operator, we define the double complex of sheaves
 \[
-\Omega^{0,\bu}(X, \T_X) \xto{\partial_\Omega} \Omega^{0,\bu}(X) [-1] 
+\PV^{1,\bu}(X) \xto{\partial_\Omega} \Omega^{0,\bu}(X) [-1] 
 \]
 where the horizontal differential is the divergence operator and the vertical differential is the $\dbar$ operator (which we have left implicit). 
 We denote the totalization of this double complex of sheaves $\cS$. 
@@ -132,35 +133,43 @@ In other words, $\cS$ is a sheaf of dg Lie algebras and the inclusion of holomor
 % \end{rmk}
 
 
-The space of differential forms on any smooth manifold $L$ is a commutative dg algebra $\Omega^{\bu}(L) = \left(\oplus_{k}\Omega^{k}(L)[-k], \d_{\dR}\right)$.
+The space of differential forms on any smooth manifold $M$ is a commutative dg algebra $\Omega^{\bu}(L) = \left(\oplus_{k}\Omega^{k}(M)[-k], \d_{\dR}\right)$.
 By taking the tensor product with the dg Lie algebra $\cS(X)$ we obtain the dg Lie algebra
 \beqn\label{localLie}
-  \cS(X) \; \Hat{\otimes} \; \Omega^{\bu}(L)
+  \cS(X) \; \Hat{\otimes} \; \Omega^{\bu}(M)
 \eeqn
-where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
+where $X$ is a Calabi--Yau manifold and $M$ is a smooth manifold.
 The differential in this dg Lie algebra is of the form $\dbar \otimes 1 + \partial_\Omega \otimes 1 + 1 \otimes \d_{\rm dR}$, which we will abbreviate by $\dbar + \partial_\Omega + \d_{\rm dR}$.
-The bracket is defined using the bracket on $\cS(X)$ together with the wedge product of forms on $\Omega^\bu(L)$ by the formula
+The bracket is defined using the bracket on $\cS(X)$ together with the wedge product of forms on $\Omega^\bu(M)$ by the formula
 \[
   [\mu \otimes \alpha, \nu \otimes \beta] = \{\mu, \nu\}_{\rm NS} \otimes (\alpha \wedge \beta) .
 \]
 
-
 We remark that the structure maps of this Lie algebra, namely the differential and bracket, are given by differential and bidifferential operators, respectively.
-In this sense, it fits the definition of a {\em local dg Lie algebra} on the product manifold $X \times L$, see Definition ?? \ref{CG2}.
+In this sense, it fits the definition of a {\em local dg Lie algebra} on the product manifold $X \times M$, see Definition ?? \ref{CG2}.
 
-Associated to any local dg Lie algebra is a classical field theory in the BV formalism that one refers to as ``$BF$-theory'' and it is defined as follows.
-Denote the sheaf of sections of the local dg Lie algebra by $\cL$.
+Associated to any local dg Lie algebra is a classical field theory in the BV formalism that one refers to as ``BF-theory'' and it is defined as follows.
+Denote the local dg Lie algebra by $\cL$; it is the sheaf of sections of some $\ZZ$-graded vector bundle $L$. 
 The fields of the associated BV theory are pairs
 \[
-  (A, B) \in \cL[1] \oplus \cL^{!}[-2]
+  (A, B) \in \cL[1] \oplus \cL^{!}[-2] .
 \]
-and the action functional reads $\int B F_{A} = \int B (\d_{\cL}A + \frac12 [A,A])$.
+Here $\cL^!$ denotes the sheaf of sections of the bundle $L^* \otimes {\rm Dens}$, where ${\rm Dens}$ is the bundle of densities. 
+The action functional reads $\int B F_{A} = \int B (\d_{\cL}A + \frac12 [A,A])$.
 Here $\d_{\cL}$ denotes the differential on $\cL$ and $[\cdot,\cdot]$ is the Lie bracket.
 Notice that the equations of motion for the $A$-field is simply the Maurer--Cartan equation $\d_\cL A + \frac12 [A,A] = 0$.
 For the $B$-field the equations of motion read $\d_\cL B + [A, B] = 0$.
 
-For the case at hand, we consider the $BF$ theory associated to the local dg Lie algebra  $\cS(X) \otimes \Omega^\bu(L)$ defined on the product $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a smooth manifold.
-Denote by $d \in \ZZ$ the sum $\dim_{\CC}(X) + \dim_{\RR}(L)$.
+For the case at hand, we consider the BF theory associated to the local dg Lie algebra $\cL = \cS(X) \Hat{\otimes} \Omega^\bu(M)$.
+%defined on the product $X \times M$ where $X$ is a Calabi--Yau manifold and $M$ is a smooth manifold.
+Denote by $d \in \ZZ$ the sum $\dim_{\CC}(X) + \dim_{\RR}(M)$.
+We will use the holomorphic volume form $\Omega$ on $X$ to make the identification
+\begin{equation}\label{eqn:modified}
+\begin{tikzcd}
+\cL^! = \cS^! (X) \; \Hat{\otimes} \; \Omega^\bu (M) [\dim_{\RR}(M)] \ar[r, "\Omega^{-1}", "\cong"'] & \left(\Omega^{0,\bu}(X)[1] \oplus \Omega^{1,\bu}(X)\right) \; \Hat{\otimes} \; \Omega^{\bu}(M)[d] .
+\end{tikzcd}
+\end{equation}
+Rather than the ``$B$'' fields of our BF theory taking values in $\cL^!$ we will take them to be valued in the target of the isomorphism above.
 
 The fields decompose as
 \[
@@ -169,19 +178,20 @@ The fields decompose as
 where
 \[
   \begin{array}{ccl}
-    \mu = \mu^1+\mu^0 & \in & \left(\Omega^{0,\bu}(X, \T_X)[1] \oplus \Omega^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \mu = \mu^1+\mu^0 & \in & \left(\PV^{1,\bu}(X) [1] \oplus \Omega^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
     \gamma = \gamma^0 + \gamma^1 & \in & \left(\Omega^{0,\bu}(X)[-1] \oplus \Omega^{1,\bu}(X)[-2] \right) \; \Hat{\otimes}\; \Omega^{\bu}(L)[d] .
   \end{array}
 \]
-Notice that what we called the ``$A$''-field in the general definition of $BF$ theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
-The action of this version of $BF$ theory simply reads 
+Notice that what we called the ``$A$''-field in the general definition of BF theory we are now calling $\mu$ and what we called the ``$B$''-field we are now calling $\gamma$.
+The action of this modified version of BF theory reads 
 \[
-\int_{X \times L} \left[\gamma \vee \left(\dbar \mu + \partial_\Omega \mu + \d_{\dR} \mu + \frac12 [\mu, \mu] \right) \right] \wedge \Omega .
+\Tilde{S}_{BF} (\mu,\gamma) = \int_{X \times M} \left[\gamma \vee \left(\dbar \mu + \partial_\Omega \mu + \d_{\dR} \mu + \frac12 [\mu, \mu] \right) \right] \wedge \Omega .
 \]
-This theory is defined on any geometry $X \times L$ where $X$ is a Calabi--Yau manifold and $L$ is a one-dimensional smooth manifold.
+This theory is defined on any geometry $X \times M$ where $X$ is a Calabi--Yau manifold and $M$ is a smooth manifold.
+We have used the tilde in the notation to indicate that we have made a small re-identification of the fields of BF theory in Equation \eqref{eqn:modified}. 
 There is a deformation of this theory that we will be most concerned with.
 
-%By force of habit, we will still refer to the theory with these particular fields as $BF$-theory.
+%By force of habit, we will still refer to the theory with these particular fields as BF-theory.
 %Notice that while the definition of $\mu$  of the dimension, the field $\gamma$ 
 
 %This is in order for the BV antibracket to be of the appropriate degree.
@@ -195,56 +205,121 @@ There is a deformation of this theory that we will be most concerned with.
 The theory we have just described admits a deformation by a higher Chern--Simons term.
 We explain how this relates to the familiar Chern--Simons term in eleven-dimensional supergravity in Section \ref{sec:evidence}.
 
-We will be mostly interested in the case that $X$ is a Calabi--Yau five-fold and $L$ is a real one-dimensional manifold.
+We will be mostly interested in the case that $X$ is a Calabi--Yau five-fold and $M=L$ is a real one-dimensional manifold.
 In the notation of the last section, $d = 6$, so the field $\gamma$ takes the form
 \[
   \gamma \in \left(\Omega^{0,\bu}(X)[6] \oplus \Omega^{1,\bu}(X)[5] \right) \otimes \Omega^\bu(L).
 \]
 
-What is important for us is not simply BF theory for the dg Lie algebra $\cS(X) \otimes \Omega^\bu(L)$, but a certain deformation of it.
-We consider a theory whose fields are that of the BF theory but whose action functional is of the form $S_{\rm BF} + J$, where $J$ is a local functional that purely depends on the fields $\gamma$.
+What is important for us is not simply BF theory for the dg Lie algebra $\cS(X) \Hat{\otimes} \Omega^\bu(L)$, but a certain deformation of it.
+We consider a theory whose fields are that of the BF theory but whose action functional is of the form $\Tilde{S}_{BF} + J$, where $J$ is a local functional that purely depends on the fields $\gamma$.
 It is defined by the following formula
 \[
 J(\gamma) = \frac16 \int_{X\times L} \gamma \partial \gamma \partial \gamma .
 \]
 
-First off, we notice an inconsistency in the cohomological degrees of the functionals $S_{\rm BF}$ and $J$.
-Being a classical action functional $S_{\rm BF}$ is, of course, ghost degree zero.
+First off, we notice an inconsistency in the cohomological degrees of the functionals $\Tilde{S}_{BF}$ and $J$.
+Being a classical action functional $\Tilde{S}_{BF}$ is, of course, ghost degree zero.
 However, we observe that $J$ is of ghost degree $+6$.
 In order to make sense of the deformed theory, therefore, we must consider the space of fields as a $\ZZ/2$-graded object rather than a $\ZZ$-graded one.
 
-So, in order to make sense of the action functional $S_{\rm BF} + J$ as a homogenously even functional, the $\ZZ /2$-graded space of fields takes the form
+So, in order to make sense of the action functional $\Tilde{S}_{BF} + J$ as a homogenously even functional, the $\ZZ /2$-graded space of fields takes the form
 \[
   \begin{array}{ccl}
-    \mu = \mu^1+\mu^0 & \in & \left(\pv^{1,\bu}(X)[1] \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
-    \gamma = \gamma^0+ \gamma^1 & \in & \left(\Omega^{0,\bu}(X)[1] \oplus \Omega^{1,\bu}(X) \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
+    \mu = \mu^1+\mu^0 & \in & \left(\Pi \pv^{1,\bu}(X) \oplus \pv^{0,\bu}(X) \right) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+    \gamma = \gamma^0+ \gamma^1 & \in & \left(\Pi \Omega^{0,\bu}(X) \oplus \Omega^{1,\bu}(X) \right) \; \Hat{\otimes}\; \Omega^{\bu}(L) .
   \end{array}
 \]
-Here, we have used the following convention for $\ZZ/2$-graded complexes.
-If $V$ is a $\ZZ/2$-graded vector space with even part $V^0$ and odd part $V^1$, then $V[1]$ is a $\ZZ/2$-graded vector space with even part $V^1$ and odd part $V^0$.
+The $\Pi(\cdot)$ denotes parity shift. 
+%Here, we have used the following convention for $\ZZ/2$-graded complexes.
+%If $V$ is a $\ZZ/2$-graded vector space with even part $V^0$ and odd part $V^1$, then $V[1]$ is a $\ZZ/2$-graded vector space with even part $V^1$ and odd part $V^0$.
 
 With the issue of gradings out of the way, we turn to the question of whether this is a well-defined classical BV theory.
-In order for this to be true, we must see that the total action functional $S_{\rm BF} + J$ satisfies the classical master equation
+In order for this to be true, we must see that the total action functional $\Tilde{S}_{BF} + J$ satisfies the classical master equation
 \[
-  \{S_{\rm BF} + J , S_{\rm BF} + J\} = 0 .
+  \{\Tilde{S}_{BF} + J , \Tilde{S}_{BF} + J\} = 0 .
 \]
-Of course, we know the undeformed BF-theory satisfies the classical master equation $\{S_{\rm BF}, S_{\rm BF}\} = 0$.
+Of course, we know the undeformed BF-theory satisfies the classical master equation $\{\Tilde{S}_{BF}, \Tilde{S}_{BF}\} = 0$.
 Additionally, since $\gamma$ does not pair with itself under the antibracket, we also see that $\{J,J\}=0$.
-What remains is to see that $J$ is closed for the differential $\{S_{\rm BF}, \cdot\}$.
+What remains is to see that $J$ is closed for the differential $\{\Tilde{S}_{BF}, \cdot\}$.
 
 \begin{lem}
-The functional $J = \frac16\int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{S_{\rm BF},\cdot\}$.
-In particular, $S_{\rm BF} + J$ is a well-defined classical BV action.
+The functional $J = \frac16\int \gamma \partial \gamma \partial \gamma$ is closed for the differential $\{\Tilde{S}_{BF},\cdot\}$.
+In particular, $\Tilde{S}_{BF} + J$ is a well-defined classical BV action.
 \end{lem}
 
 \begin{proof}
+Let $\cL = \cS(X) \Hat{\otimes} \Omega^\bu(L)$ be the dg Lie algebra we started with, now thought of as a $\ZZ/2$-graded dg Lie algebra. 
+Recall, that the action $\Tilde{S}_{BF}$ was defined as a modified version of BF theory for this local dg Lie algebra. 
+We first spell out how this modified version of BF theory is equivalent to the non-modified BF theory.
+
+For BF theory on $\cL$, the fields are described by the local dg Lie algebra
+\[
+\cL \ltimes \Pi \cL^!  
+\]
+whose underlying graded sheaf is $\cL \oplus \Pi \cL^!$ (notice that we have broke the usual $\ZZ$-grading to a $\ZZ/2$-grading). 
+In \eqref{eqn:modified} we have chosen to identify $\cL^!$ with a slightly different $\cL$-module, using the holomorphic volume form. 
+However, the map 
+\[
+\Pi \cL^!  \xto{\Omega^{-1}} \left(\Omega^{0,\bu}(X) \oplus \Pi \Omega^{1,\bu}(X)\right)
+\]
+is {\em not} a map of $\cL$-modules. 
+
+There is, however, an $L_\infty$-map $\Phi$ of $\cL$-modules whose linear part is the map $\Phi^{(1)} = \Omega^{-1}$ above. 
+There is a higher order map of the form
+\[
+\Phi^{(2)} \colon \cL \otimes \Pi \cL^! \to \left(\Omega^{0,\bu}(X) \oplus \Pi \Omega^{1,\bu}(X)\right)
+\]
+defined as follows. 
+Recall that 
+\[ 
+\Pi \cL^! = \left(\Omega^{5, \bu}(X) \xto{\partial_\Omega^!} \Pi \Omega^{5,\bu} (X, \T^*_X) \right) \; \Hat{\otimes} \; \Omega^\bu(L) 
+\]
+where $\partial_\Omega^!$ sends $f \Omega$ to $(\partial f) \otimes \Omega$. 
+The $\cL$-module structure is the one by which $\PV^{1,\bu}(X)$ acts by Lie derivative everywhere. 
+Denote by $b^0 \Omega + b^1 \Omega$ the fields in the decomposition above. 
+
+The $L_\infty$ $\cL$-module map $\Phi = \Phi^{(1)} + \Phi^{(2)}$ is defined by
+\begin{align*}
+\Phi^{(1)} (b^0 \Omega + b^1 \Omega) & = b^0 + b^1 \in \Omega^{0,\bu}(X) \oplus \Pi \Omega^{1,\bu}(X) \\
+\Phi^{(2)} (\mu^0 \otimes (b^0\Omega + b^1\Omega)) & = \mu^0 b^0 + \mu^0 b^1 \in \Omega^{0,\bu}(X) \oplus \Pi \Omega^{1,\bu}(X) .
+\end{align*}
+Let us sketch why this is an $L_\infty$ $\cL$-module map.
+Suppose $\mu^1 \in \PV^{1,\bu}(X) \Hat{\otimes} \Omega^\bu(L)$.
+Then $\mu^1$ acts on $\Pi \cL^!$ by
+\begin{align*}
+\mu^1 \cdot (b^0 \Omega + b^1 \Omega) & = L_{\mu^1} (b^0 \Omega) + L_{\mu^1} (b^1 \Omega) \\ & = (L_{\mu^1} b^0 + L_{\mu^1} b^1) \Omega + (b^0 + b^1) L_{\mu^1} \Omega .
+\end{align*}
+So, 
+\[
+\Phi^{(1)} (\mu^1 \cdot (b^0 \Omega + b^1 \Omega)) - \mu^1 \cdot \Phi^{(1)} (b^0 \Omega + b^1 \Omega) = (b^0 + b^1) L_{\mu^1} \Omega .
+\]
+The right-hand side is precisely
+\[
+\Phi^{(2)} ((\partial_\Omega \mu^1) \otimes (b^0 \Omega + b^1 \Omega))
+\]
+showing that $\Phi = \Phi^{(1)} + \Phi^{(2)}$ is an $L_\infty$ module map.
+
+Now, $\Phi$ determines an equivalence of BV theories 
+\[
+\Phi \colon (\cL \ltimes \cL^! [-3]) \xto{\simeq} \cL \ltimes \left(\Omega^{0,\bu}(X) \oplus \Pi \Omega^{1,\bu}(X)\right)
+\]
+where on the left-hand side appears the local Lie algebra underlying BF theory for $\cL$ and the right-hand side appears the local Lie algebra of our modified BF theory, whose action functional we have denoted $\Tilde{S}_{BF}$. 
+
+Now, consider the functional $J$ which is a local functional on the local Lie algebra describing modified BF theory. 
+One computes the restriction of $J$ along $\Phi$ as
+\[
+(\Phi^* J) (\mu^0 + \mu^1 , b^0 \Omega + b^1 \Omega) = \frac16 \int_{X \times L} b^1 \partial b^1 \partial b^1 + \frac16 \int \mu^0 b^1 \partial b^1 \partial b^1 .
+\]
+
+
 It is clear that $J$ is closed for the part of the differential arising from the kinetic term $\{S_{\rm free},\cdot\}$.
 It remains to see that\brian{finish}
 \end{proof}
 
 \begin{rmk}
   We have actually shown something slightly stronger here.
-  Namely, for any constant $c$ the functional $S_{\rm BF} + c J$ satisfies the classical master equation.
+  Namely, for any constant $c$ the functional $\Tilde{S}_{BF} + c J$ satisfies the classical master equation.
   This dependence on a coupling constant will be important later on in this paper.
 \end{rmk}
 
@@ -259,13 +334,13 @@ to be the deformation of BF theory for the $\ZZ/2$-graded local Lie algebra $\cS
 
 %Unpacking this a bit, we see that the BV action functional for the theory $\cT$ splits as a sum
 %\begin{equation}\label{11daction}
-%  S_{\rm BF} + J
+%  \Tilde{S}_{BF} + J
 %\end{equation}
-%where $J$ is as in the definition above and $S_{BF}$ is the action functional for the underlying BF theory which takes the form
+%where $J$ is as in the definition above and $\Tilde{S}_{BF}$ is the action functional for the underlying BF theory which takes the form
 %\[
-%  S_{\rm BF} = \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega .
+%  \Tilde{S}_{BF} = \int \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega .
 %\]
-%We will furthermore decompose $S_{\rm BF} = S_{\rm free}+I_{\rm BF}$ into its free and interacting pieces.
+%We will furthermore decompose $\Tilde{S}_{BF} = S_{\rm free}+I_{BF}$ into its free and interacting pieces.
 
 \subsubsection{A generalization of the theory}
 
@@ -285,18 +360,18 @@ The deformation we consider is of the form
   J_m (\gamma) = \frac{1}{m+1} \int_{X \times L} \gamma \underbrace{\partial \gamma \cdots \partial \gamma}_{m} .
 \]
 That is, this deformation is $(m+1)$-linear and contains $m$ holomorphic derivatives.
-As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $J_m$ is closed for the differential $\{S_{\rm BF},\cdot\}$ defining the BF theory.
+As in the $m=2$ ($X$ is a five-fold) case that we discussed above, we see that $J_m$ is closed for the differential $\{\Tilde{S}_{BF},\cdot\}$ defining the BF theory.
 
 \begin{lem}
-  The functional $J_m$ is closed for the differential $\{S_{\rm BF}, \cdot \}$.
+  The functional $J_m$ is closed for the differential $\{\Tilde{S}_{BF}, \cdot \}$.
 \end{lem}
 
 A simple count reveals that the ghost degree of the functional $J_m$ is $2m^2 - 2$.
-In particular, when $m \ne 1$, the above lemma implies that the action functional $S_{\rm BF} + J_m$ only defines a $\ZZ/2$-graded classical BV theory.
+In particular, when $m \ne 1$, the above lemma implies that the action functional $\Tilde{S}_{BF} + J_m$ only defines a $\ZZ/2$-graded classical BV theory.
 
 \subsubsection{The case of a CY three-fold}
 
-When $m=1$, hence $X$ is a CY three-fold, the action $S_{\rm BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
+When $m=1$, hence $X$ is a CY three-fold, the action $\Tilde{S}_{BF} + J_1$ actually defines a $\ZZ$-graded BV theory.
 Another feature of the case $m=1$ is that the deformed theory is actually a {\em topological} field theory.
 It is instructive to spell out this case in more detail.
 
@@ -313,7 +388,7 @@ We will also write $\alpha^{j} = \gamma^{j}$ for $j=0,1$, so the remaining field
 \[
   \alpha^0 + \alpha^1 \in \left(\Omega^{0,\bu}(X)[3] \oplus \Omega^{1,\bu}(X)[2] \right) \; \Hat{\otimes} \; \Omega^\bu (L).
 \]
-Let us write the theory as $S_{\rm BF} + c J_1$ where $c$ is a constant.
+Let us write the theory as $\Tilde{S}_{BF} + c J_1$ where $c$ is a constant.
 We denote by $\cT_c [X \times L]$ the resulting BV theory which depends on this coupling constant.
 Also, let $\cM_c[X]$ denote the moduli space of solutions on the Calabi--Yau three-fold.
 Using this decomposition of the fields we can write the underlying {\em free} theory by the following action
@@ -363,7 +438,7 @@ In this section we analyze the equations of motion for the eleven-dimensional th
 
 The action functional of the theory in Definition \ref{dfn:11dtheory} on $X \times L$ is of the form
 \[
-  \int_{X \times L} \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int_{X \times L} \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega + \frac{c}{3} \int_{X \times L} \gamma \partial \gamma \partial \gamma .
+  \int_{X \times L} \gamma \vdash \left(\dbar + \d_{\rm dR} + \partial_{\Omega}\right) \mu \wedge \Omega + \frac12 \int_{X \times L} \gamma \vdash \{\mu,\mu\}_{\rm NS} \wedge \Omega + \frac{c}{3!} \int_{X \times L} \gamma \partial \gamma \partial \gamma .
 \]
 Notice that just as in the last section we have included a coupling constant $c$ into the term which deforms the classical BF type theory.
 
