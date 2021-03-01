@@ -1,0 +1,190 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory}
+
+\def\PV{{\rm PV}}
+\begin{document}
+
+\subsection{Warm-up: four-dimensional Kodaira--Spencer theory}
+
+In the BV formalism, minimal Kodaira--Spencer theory on $X$ is a (degenerate) Poisson BV theory with space of fields given by
+\[
+\begin{tikzcd}
+& \ul{\rm odd} & \ul{\rm even} \\
+\mu^0 \in & & \PV^{0,\bu} \\
+\mu^1 + u \mu^0 \in & \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} .
+\end{tikzcd}
+\]
+We will denote this sheaf of $\ZZ /2$-graded cochain complexes by $\cE_{\rm KS}$, the differential is denoted $\dbar + u \partial_\Omega$. 
+
+The fields of minimal Kodaira--Spencer theory $\cE_{\rm KS}$ is equipped with an odd Poisson tensor defined by
+\[
+\Pi_{\rm KS} = (\partial \otimes 1) \delta_{\rm Diag} .
+\]
+
+As with Kodaira--Spencer theory in any dimension, there are two, equivalent, $L_\infty$-structures on the parity shift $\Pi \cE_{\rm KS}$ of the fields whose $1$-ary operation is the differential $\dbar + u \partial \Omega$. 
+
+The first $L_\infty$ structure is actually a strict dg Lie algebra.
+The Lie bracket is defined using the Schouten-Nijenhuis bracket $[-,-]_{\rm NS}$ on polyvector fields and is given by the formula
+\[
+[u^k \mu , u^\ell \mu'] = u^{k+\ell} [\mu, \mu']_{\rm NS} .
+\]
+where $k, \ell = 0,1$.
+Together with the differential $\dbar + u \partial_\Omega$ this equips the parity shifted sheaf of cochain complexes $\Pi \cE_{\rm KS}$ with the structure of a local dg Lie algebra.
+
+The second $L_\infty$ structure is defined in terms of the BCOV action $I^{\rm BCOV}$ which we recall is of the form
+\[
+I^{\rm BCOV} (\Sigma) = \sum_{\\ k_1 + \cdots + k_n = n-3} \frac{1}{n!} \int_X^{\rm PV} \<\Sigma^{\otimes n}\>_0 .
+\]
+\brian{$L_\infty$}
+We will be most interested in this second $L_\infty$ structure in what follows. 
+
+We introduce another theory on the Calabi--Yau surface $X$ that we call minimal Kodaira--Spencer theory {\em with potentials}.
+This is a (non-degenerate) BV theory whose underlying free limit is defined as follows.
+The fields are
+\[
+\begin{tikzcd}
+& \ul{\rm odd} & \ul{\rm even} \\
+\Tilde{\beta} \in & & \Omega^{0,\bu} \\
+\alpha \in & \Omega^{0,\bu}  
+\end{tikzcd}
+\]
+with linear BRST differential $\dbar$ left implicit. 
+We will denote the resulting $\ZZ /2$-graded sheaf of cochain complexes by $\cE_{\rm Pot}$.
+The BV pairing is $\int_X (\alpha \Tilde{\beta}) \Omega$. 
+
+We interpret this as the theory of  ``potentials"  of minimal Kodaira--Spencer theory in the following way.
+There is a map of sheaves of cochain complexes
+\[
+\Phi \colon \cE_{\rm Pot} \to \cE_{\rm KS}
+\]
+defined by
+\begin{align*}
+\Phi (\Tilde{\beta}) & = \Tilde{\beta} \in \PV^{0,\bu}(X) \\
+\Phi(\alpha) & = \Omega \vee (\partial \alpha) \in \PV^{1,\bu}(X)
+\end{align*}
+where $\partial \colon \Omega^{0,\bu}(X) \to \Omega^{1,\bu}(X)$ is the holomorphic de Rham operator. 
+It is immediate to see that $\Phi$ defines a map of sheaves of cochain complexes which describe the underlying free theories. 
+Furthermore, $\Phi$ also preserves the odd Poisson tensors. 
+
+%The theory $\cE_{\rm pot}$ is equipped with a non-degenerate BV pairing defined by the wedge-and-integrate pairing
+%\[
+%\omega_{\rm pot} (\alpha, \beta) = \int \alpha \wedge \beta  .
+%\]
+%It is immediate to verify that $\Phi$ intertwines the resulting bivector $\omega_{\rm pot}^{-1}$ and the Kodaira--Spencer Poisson bivector $\Pi_{\rm KS}$.
+
+The parity shifted bundle $\Pi \cE_{\rm pot}$ inherits the structure of a local Lie algebra, from the BCOV action as follows. 
+By restricting along $\Phi$, we obtain the functional $\Phi^* I^{\rm BCOV}$ on $\cE_{\rm Pot}$. 
+Explicitly, one finds that this restricted functional is given by
+%\[
+%\Phi^* I^{\rm BCOV} = \frac12 \int_{X} e^{\Tilde{\beta}} \partial \alpha \partial \alpha  .
+%\]
+\[
+\Phi^* I^{\rm BCOV} = \frac12 \int_{X} \Tilde{\beta} \partial \alpha \partial \alpha 
+\]
+Since $\Phi$ preserves the odd Poisson bracket, it is automatic that $\Phi^* I^{\rm BCOV}$ satisfies the classical master equation
+\[
+\dbar \Phi^* I^{\rm BCOV} + \frac12 \{\Phi^* I^{\rm BCOV} , \Phi^* I^{\rm BCOV} \} = 0 .
+\]
+So, this functional defines an interacting (non-degenerate) BV theory. 
+Notice that there are terms in $\Phi^* I^{\rm BCOV}$ of every order.
+In fact, it is equivalent to a much simpler BV theory. 
+
+%\begin{prop}
+%The change of coordinates $\Tilde{\beta} \mapsto \beta = e^{\Tilde{\beta}}$ determines a equivalence between the classical field theory described by $\Phi^* I^{\rm BCOV}$ and the theory described by the {\em cubic} interaction
+%\[
+%I = \int_X \beta \partial \alpha \partial \alpha .
+%\]
+%\end{prop}
+
+The interaction $\Phi^*I^{\rm BCOV}$ has the following geometric interpretation. 
+Note that any Calabi--Yau surface comes equipped with a holomorphic symplectic structure and there is a Poisson bracket defined on the sheaf of holomorphic functions.
+Since the bracket is defined in terms of holomorphic differential operators, it extends to a bracket on the Dobleault complex $\Omega^{0,\bu}(X)$.
+
+The theory described by the fields $\cE_{\rm Pot}$ with interaction $\Phi^*I^{\rm BCOV}$ is equivalent to BF theory for this local dg Lie algebra. 
+Indeed, the fields of BF theory are given by
+\[
+\begin{tikzcd}
+& \ul{\rm odd} & \ul{\rm even} \\
+\beta \in & & \Omega^{2,\bu} \\
+\alpha \in & \Omega^{0,\bu}   .
+\end{tikzcd}
+\]
+There is an equivalence with $\cE_{\rm Pot}$ given by setting $\beta = \Omega \Tilde{\beta}$.  
+
+\begin{rmk}
+We notice that BF theory lifts to the structure of a $\ZZ$-graded theory by declaring that the field $\alpha$ have degree $(-1)$ and $\beta$ have degree zero. 
+\end{rmk}
+
+\subsection{A variant}
+Consider the following cochain complex 
+\[
+\begin{tikzcd}
+& \ul{\rm odd} & \ul{\rm even} \\
+u^{-1} \gamma^0 + \gamma^1 \in & u^{-1} \Omega^{0,\bu}  \ar[r,"u \partial"] & \Omega^{1,\bu} \\
+\mu^1 + u \mu^0 \in & \PV^{1,\bu} \ar[r, "u \partial"] & u \PV^{0,\bu} .
+\end{tikzcd}
+\]
+which we denote by $\Tilde{\cE}_{\rm Pot}$. 
+
+Notice that $\Tilde{\cE}_{\rm Pot}$ has the structure of a (non-degenerate) free BV theory with BV pairing defined by
+\[
+\int (\mu^1 \vee \gamma^1) \wedge \Omega + \int (\mu^0 \gamma^0) \wedge \Omega .
+\]
+
+There is a map of sheaves of cochain complexes
+\[
+\Tilde{\Phi} \colon \Tilde{\cE}_{\rm Pot} \to \cE_{\rm KS}
+\]
+defined by
+\begin{align*}
+\Tilde{\Phi} (\gamma^1) & = \Omega \vee \partial \gamma^1 \in \PV^{0,\bu}(X) \\
+\Tilde{\Phi} (u^{-1}\gamma^0) & = 0 \\
+\Tilde{\Phi}(\mu^1 + u \mu^0 ) & =  \mu^1 + u \mu^0 \in \PV^{1,\bu} \oplus u \PV^{0,\bu} .
+\end{align*}
+where $\partial \colon \Omega^{0,\bu}(X) \to \Omega^{1,\bu}(X)$ is the holomorphic de Rham operator. 
+It is immediate to see that $\Tilde{\Phi}$ defines a map of sheaves of cochain complexes which describe the underlying free theories. 
+Crucially, $\Tilde{\Phi}$ also preserves the odd Poisson tensors. 
+
+Set
+\[
+\Tilde{I} \define \Tilde{\Phi}^* I^{\rm BCOV} .
+\]
+Explicitly, one has
+\[
+\Tilde{I} = \frac12 \int (e^{\mu^0} \Omega) \left[ (\partial \gamma^1) \vee (\mu^1 \wedge \mu^1) \right].
+\]
+Since $\Tilde{\Phi}$ preserves the odd Poisson bracket, the interaction $\Tilde{I}$ automatically solves the CME for $\Tilde{\cE}_{\rm Pot}$
+\[
+(\dbar + u \partial) \Tilde{I} + \frac12 \{\Tilde{I}, \Tilde{I}\} = 0 .
+\]
+
+\section{11d redux}
+
+\begin{dfn} \label{dfn:classical}
+Let $X$ be a Calabi--Yau five-fold and $L$ a smooth one-dimensional manifold.
+{\em Eleven-dimensional twisted supergravity} on $X \times L$ is the $\ZZ/2$-graded BV theory on $X$ whose fields are pairs
+\begin{align*}
+\mu = \mu^1 + \mu^0 & \in \bigg(\Pi \PV^{1,\bu}(X) \oplus \PV^{0,\bu}(X) \bigg) \; \Hat{\otimes} \; \Omega^{\bu}(L) \\
+\gamma = \gamma^0 + \gamma^1 & \in \bigg(\Pi \Omega^{0,\bu}(X) \oplus \Omega^{1,\bu} (X) \bigg) \; \Hat{\otimes} \; \Omega^{\bu}(L) 
+\end{align*}
+The BV pairing is $\int (\gamma \vee \mu) \wedge \Omega$ and the BV action is
+\begin{equation}\label{eqn:bvaction}
+\begin{array}{lllllll}
+S & = & \displaystyle \int \left[\gamma \vee \left(\dbar \mu + \d_{\dR} \mu\right) \right] \wedge \Omega  + \int \left[(\partial \gamma^0 - \gamma^0 \partial \mu^0) \mu^1 \right] \wedge \Omega \\ & + &  \displaystyle \frac12 \int e^{\mu^0} \left(\partial \gamma^1 \vee (\mu^1 \wedge \mu^1) \right) \wedge \Omega  + \frac16 \int e^{\mu^0} \gamma^1 \partial \gamma^1 \partial \gamma^1 .
+\end{array}
+\end{equation}
+\end{dfn}
+
+Let us expand the action into kinetic and interacting parts $S = S_{\rm kin} + I$.
+The kinetic part of the action reads 
+\[
+S_{\rm kin} = \int \left[\gamma \vee \left(\dbar \mu + \d_{\dR} \mu\right) \right] \Omega  + \int \left[\partial \gamma^0 \vee \mu^1 \right] \Omega .
+\]
+If we expand the interaction $I = \sum_{n \geq 3} I_n$ into homogenous polynomials, the first few terms read
+\begin{align*}
+I_3 & = - \int \left[\gamma^0 (\partial \mu^0) \vee \mu^1\right] \Omega + \frac12 \int \left[\partial \gamma^1 \vee (\mu^1 \wedge \mu^1)\right] \Omega + \frac16 \int \gamma^1 \partial \gamma^1 \partial \gamma^1 . \\
+I_4 & = \frac12 \int \left[ (\mu^0)^2 \partial \gamma^0 \vee \mu^1 \right] \Omega + \frac12 \int \left[ \mu^0 \partial \gamma^1 \vee (\mu^1 \wedge \mu^1) \right] \Omega + \frac16 \int \mu^0 \gamma^1 \partial \gamma^1 \partial \gamma^1 \\
+& \vdots 
+\end{align*} 
+\end{document}
