@@ -32,6 +32,7 @@
 \def\T{{\rm T}}
 \def\del{\partial}
 \def\Vect{{\rm Vect}}
+\def\div{\partial_\Omega}
 
 \begin{document}
 
@@ -185,7 +186,7 @@ Consider the case $\dim_{\CC}(X) = 5$.
 Introduce the new brackets
 \begin{align*}
 [\gamma_1, \gamma_2]_2 &= (\partial \gamma_1 \partial \gamma_2)\vee \Omega \in \PV^1(X) \\
-[\gamma_1, \gamma_2, \gamma_3]_3 & = (\gamma_1 \partial \gamma_2 \partial \gamma_2)\vee \Omega \in \Omega^0(X) \\
+[\gamma_1, \gamma_2, \gamma_3]_3 & = (\gamma_1 \partial \gamma_2 \partial \gamma_3)\vee \Omega \in \Omega^0(X) \\
 [\gamma_1, \gamma_2, \nu]_3 & = \nu (\partial \gamma_1 \partial \gamma_2)\vee \Omega \in \PV^1(X) .
 \end{align*}
 
@@ -198,6 +199,88 @@ The $3$-ary relations we must check are
 
 Let us first check (1). 
 
+\section{Type IIA}
 
+Let $X$ be a Calabi--Yau manifold of dimension four. 
+Consider the following $\ZZ/2$-graded cochain complex
+\[
+\begin{tikzcd}
+\ul{even} & \ul{odd} \\
+& \PV^0(X)_\eta \\
+\PV^1(X)_\mu \ar[r, "\partial_\Omega"] & \PV^0 (X)_\nu \\
+\PV^4(X)_\beta \ar[r, "\partial_\Omega"] & \PV^3(X)_\gamma \\
+\PV^4(X)_\theta
+\end{tikzcd}
+\]
+
+There is a $\ZZ/2$-graded dg Lie algebra structure on this complex defined by the nontrivial brackets
+\begin{align*}
+[\eta, \theta] & = \{\eta, \theta\} \in \PV^3_\gamma \\
+[\nu, \beta] & = \{\nu, \beta\} \in \PV^3_\gamma \\ 
+[\mu, \Phi] & = \{\mu, \Phi\} \in \PV^k_\Phi
+\end{align*}
+where in the last equation $\Phi$ stands for any polyvector field of type $k$ in the complex. 
+
+\begin{prop}
+The formulas 
+\begin{align*}
+[\gamma, \gamma'] & = (\partial_\Omega \gamma) (\partial_\Omega \gamma') \in \PV^4_\theta \\
+[\eta, \gamma] & = \{\eta, \div \gamma\} \in \PV^1_\mu \\
+%[\gamma, \theta] & = 0 \in \PV^4_\theta ?? \\
+[\eta, \gamma, \gamma']_3 & = \frac12 \left(\{\{\eta, \gamma\}, \gamma'\} + symm\right) \in \PV^4_\beta \\
+[\nu, \gamma, \gamma']_3 & = \frac12 \left(\{\{\nu, \gamma\}, \gamma'\} + \cdots \right) \in \PV^4_\theta
+\end{align*}
+\end{prop}
+define an $L_\infty$ deformation of the dg Lie algebra. 
+\begin{proof}
+First, we observe that the new $2$-ary bracket is trivially compatible with the differential. 
+Next, we check the $3$-ary $L_\infty$ relations involving the new $2,3$-ary brackets. 
+The only nontrivial $3$-ary relations to check are
+\begin{itemize}
+\item[(1)] $\div [\eta, \gamma, \gamma']_3 = \{\eta, [\gamma, \gamma']\} + \{[\eta, \gamma], \gamma'\} + \{[\eta, \gamma'], \gamma\}.$
+\item[(2)] $- [\div \mu, \gamma, \gamma']_3  = \{\mu, [\gamma, \gamma']\} + \{\{\mu, \gamma\}, \gamma'\} + \{\{\mu, \gamma'\}, \gamma\}$. 
+
+\end{itemize}
+
+Substituting the definitions of the $2$-ary Lie brackets, we see that (1) follows from the following lemma. 
+\begin{lem}
+For all $\eta, \gamma, \gamma'$ one has
+\begin{equation}\label{eqn:C43ary}
+\div \{\{\eta, \gamma\}, \gamma'\} = \{\eta, \div \gamma \div \gamma'\} + \{\{\eta, \div \gamma\}, \gamma'\} + \{\{\eta, \div \gamma'\}, \gamma\} .
+\end{equation}
+\end{lem}
+\begin{proof}
+This is a direct calculation. 
+Consider the last two terms on the right hand side:
+\[
+\{\{\eta, \div \gamma\}, \gamma'\} + \{\{\eta, \div \gamma'\}, \gamma\} .
+\]
+Since $\div$ is a derivation for $\{\cdot,\cdot\}$ we can rewrite this expression as
+\[
+\{\div\{\eta, \gamma\}, \gamma'\} + \{\{\eta, \div \gamma'\}, \gamma\} = \div \{\{\eta, \gamma\}, \gamma'\} - \{\{\eta, \gamma\}, \div \gamma'\} + \{\{\eta, \div \gamma'\}, \gamma\} .
+\]
+By the Jacobi identity for $\{\cdot, \cdot\}$ this expression is equal to
+\[
+\div\{\{\eta, \gamma\}, \gamma'\} - \{\{\gamma, \div \gamma'\}, \eta\} 
+\]
+The lemma reduces to the following BV relation:
+\[
+\{\eta, \div \gamma \div \gamma'\} = \{\eta, \{\gamma, \div \gamma'\}\} .
+\]
+
+%By the BV relation, the left hand side is 
+%\[
+% \{\eta, \div(\gamma \div \gamma')\} = \{\eta, \{\gamma, \div \gamma'\}\} + \{\eta, (\div\gamma) (\div \gamma')\}.
+% \]
+\end{proof}
+
+Finally, there are the following $4$-ary $L_\infty$ relations to check. 
+\begin{itemize}
+\item[(1)] $\{\nu, [\eta, \gamma, \gamma']_3\} + \{\eta, [\nu, \gamma, \gamma']_3\} = 0.$ 
+\item[(2)]
+\end{itemize}
+
+\brian{Maybe we need to symmetrize to use $[\eta, \gamma, \gamma']_3 = \{\eta, \{\gamma, \gamma'\}\}$.}
+\end{proof}
 
 \end{document}
