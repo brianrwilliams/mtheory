@@ -1,0 +1,235 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory}
+
+%% Bib stuff
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[backend=biber,
+            isbn=false,
+            doi=false,
+            maxbibnames=5,
+            %giveninits=true,
+            style=alphabetic,
+            citestyle=alphabetic]{biblatex}
+\usepackage{url}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\renewbibmacro{in:}{}
+\bibliography{references.bib}
+\renewcommand*{\bibfont}{\footnotesize}
+
+\usepackage{xcolor}
+\definecolor{e-mail}{rgb}{0,.40,.80}
+\definecolor{reference}{rgb}{.40,.60,.2}
+\definecolor{citation}{rgb}{0,.25,.5}
+
+\usepackage[colorlinks=true,
+            linkcolor=reference,
+            citecolor=citation,
+            urlcolor=e-mail]{hyperref}
+\usepackage{cleveref}
+
+
+%% Formatting. We can change this in the final version, just makes it easier for me to read in the meantime.
+
+\usepackage[top=1in, bottom=1.25in, left=1.3in, right=1.3in]{geometry}
+\setlength{\parskip}{8pt}
+\setlength\parindent{0pt}
+\setcounter{tocdepth}{2}
+\numberwithin{equation}{section}
+\let\emptyset\varnothing
+
+
+%% Comments
+
+\def\owen{\textcolor{magenta}{BW: }\textcolor{magenta}}
+\def\gene{\textcolor{blue}{SR: }\textcolor{blue}}
+\def\brian{\textcolor{red}{IS: }\textcolor{red}}
+
+%% Random macros
+
+\def\vectdiv{\fL}
+\def\PV{{\rm PV}}
+\def\div{\partial_\Omega}
+
+%\usepackage[style = alphabetic]{biblatex}
+%\addbibresource{references.bib}
+%\AtBeginBibliography{\scriptsize}
+
+
+\begin{document}
+
+\title{Something about classical M-theory}
+
+
+%\author{Brian R. Williams}
+%\address{School of Mathematics\\
+%University of Edinburgh \\ 
+%Edinburgh \\ 
+%UK}
+%\email{brian.williams@ed.ac.uk}
+
+
+\begin{abstract}
+something here
+\end{abstract}
+
+\maketitle
+\thispagestyle{empty}
+\setcounter{tocdepth}{1}
+%\tableofcontents
+
+\section{Introduction}
+
+\section{The $L_\infty$ algebras at play}
+
+\subsection{Divergence-free vector fields}
+
+Let $X$ be a Calabi--Yau manifold of dimension $n$ with holomorphic volume form $\Omega \in \Omega^n_X$. 
+Let $\vectdiv_X$ be the sheaf of holomorphic divergence-free vector fields, which is of course a sub Lie algebra of $\PV^1_X$. 
+Here is a resolution of holomorphic divergence-free vector fields that will be of interest to us.
+
+\begin{dfn}
+Let $\cL_X$ be the sheaf of dg Lie algebras which as a sheaf of cochain complexes is 
+\[
+\PV^1_X \xto{\div} \PV^0_X [-1] 
+\]
+concentrated in degree zero and one. 
+The brackets read:
+\begin{align*}
+[\mu, \mu'] & = L_\mu(\mu') \\
+[\mu, \nu] & = L_\mu(\nu)
+\end{align*}
+for $\mu,\mu' \in \PV^1_X$, $\nu \in \PV^0_X$. 
+\end{dfn}
+
+There is an obvious map of sheaves of dg Lie algebras $\vectdiv_X \to \cL_X$, which exhibits $\cL_X$ as a resolution of divergence-free vector fields. 
+%\[
+%\begin{tikzcd}
+%\ul{0} & \ul{1} \\
+%\PV^1_X \ar[r, "\partial_\Omega"] & \PV^0_X . 
+%\end{tikzcd}
+%\]
+
+The dg Lie algebra $\cL_X$ is a sub dg Lie algebra of a bigger dg Lie algebra, consisting of {\em all} polyvector fields on $X$. 
+The Schouten bracket 
+\[
+\{\cdot, \cdot\} \colon \PV^{i}_X \times \PV^{j}_X \to \PV^{i+j-1}_X 
+\]
+endows the sheaf of cochain complexes
+\[
+\left(\PV^{-\bu}_X [-1] , \div \right) \define \bigg( \PV^n_X [n-1] \xto{\div} \PV^{n-1}_X [n-2] \to \cdots \to \PV^1_X \xto{\div} \PV^0_X[-1] \bigg)
+\] 
+with the structure of a sheaf of dg Lie algebras.
+The obvious embedding 
+\[
+\cL_X \hookrightarrow \PV^{-\bu}_X [-1]
+\] 
+is a map of dg Lie algebras. 
+
+Consider, instead, the following sub complex of $\PV^{-\bu}_X$ 
+\[
+\left(\cS^\bu , \div\right) \define \bigg(\PV^{n-2}_X [n-3] \to \cdots \to \PV^1_X \xto{\div} \PV^0_X[-1] \bigg) .
+\]
+Notice that this is {\em not} a sub dg Lie algebra. 
+Nevertheless, it is naturally a module for $\cL_X$, and we can define the quotient dg module.
+
+\begin{dfn}
+Let 
+\[
+\cM^\bu \define \PV^{-\bu}_X [-1] \; / \; \cS^\bu  .
+\]
+be the quotient dg $\cL_X$-module.
+Explicitly, as a sheaf of cochain complexes $\cM_X$ is given by the two-term complex
+\[
+\PV^n_X [n-1] \xto{\div} \PV^{n-1}_X [n-2] .
+\]
+The action of $\cL_X$ on $\cM_X$ is through the Schouten bracket $\{\cdot,\cdot\}$. 
+\end{dfn}
+
+We will denote sections of this dg module by $\beta \in \PV^n_X$ and $\gamma \in \PV^{n-1}_X$. 
+
+\begin{dfn}
+Let $\fg_X$ be the sheaf of dg Lie algebras obtained by the semi-direct product of $\cL_X$ with $\cM_X$
+\[
+\fg_X \define \cL_X \ltimes \cM_X .
+\]
+\end{dfn}
+
+\subsection{An $L_\infty$-deformation}
+
+Suppose now that $X$ is a Calabi--Yau manifold of odd dimension $n=2k+1$. 
+In this section it is also necessary to forget $\ZZ$-gradings to $\ZZ/2$-gradings. 
+So, for instance, the sheaf of $\ZZ$-graded dg Lie algebras becomes the sheaf of $\ZZ/2$-graded dg Lie algebras which as a sheaf of graded vector spaces is
+\[
+\fg_X = \bigg(\PV^1_X \oplus \Pi \PV^0_X \bigg) \oplus \bigg(\PV^{2k+1} \oplus \Pi \PV^{2k}_X \bigg) .
+\]
+
+The first piece of business is to define a $k$-linear map which we will use to define an $L_\infty$ deformation of the dg Lie algebra $\fg_X$. 
+To define it, notice that contraction with the holomorphic volume form determines an isomorphism 
+\[
+\Omega \vee \colon \PV^{\ell}_X \cong \Omega^{2k +1 - \ell}_X ,
+\]
+for any $\ell$. 
+In particular, any section $\gamma \in \PV^{2k}_X$ determines a one-form $\Omega \vee \gamma \in \Omega^1_X$. 
+Also, if $\omega \in \Omega^{\ell}_X$ is an $\ell$-form, let $\omega \vee \Omega^{-1} \in \PV^{2k+1-\ell}_X$ be the polyvector field satisfying
+\[
+\Omega \vee (\omega \vee \Omega^{-1}) = \omega .
+\]
+
+
+\begin{dfn}
+Let
+\[
+\mu_k \colon \PV^{2k}_X \times \cdots \times \PV^{2k}_X \to \PV^1_X 
+\]
+be the $(k+1)$-linear map of sheaves defined by the formula
+\[
+\mu_k (\gamma_1,\ldots, \gamma_k) \define \bigg[\partial \left(\Omega \vee \gamma_1\right)\cdots \partial \left(\Omega \vee \gamma_k\right)\bigg] \vee \Omega^{-1} .
+\]
+\end{dfn}
+
+\begin{dfn}
+\label{dfn:def}
+Suppose $X$ is a Calabi--Yau manifold of dimension $2k+1$. 
+Define the multinear maps of sheaves
+\[
+[\cdot, \ldots, \cdot]_j \colon \fg_X \times \cdots \times \fg_X \to \fg_X
+\]
+for $j=1,2,k,k+1$ by the formulas
+\begin{itemize}
+\item $[\cdot]_1 = \partial_\Omega$, the divergence operator;
+\item $[\cdot,\cdot]_2 = \{\cdot,\cdot\}$, the Schouten bracket;
+\item the only nonzero component of the $k$-ary bracket is
+\[
+[\gamma_1,\ldots, \gamma_k]_k = \mu_k(\gamma_1,\ldots, \gamma_k) \in \PV^1_X .
+\]
+\item there are two nonzero components of the $(k+1)$-ary bracket:
+\[
+[\gamma_1,\ldots, \gamma_k, \gamma_{k+1}]_{k+1} = \sum_{i_1 < \cdots < i_{k+1}} \gamma_{i_1} \wedge \mu_k(\gamma_{i_2},\ldots, \gamma_{i_{k+1}}) \in \PV^{2k+1}_X .
+\]
+and 
+\[
+[\nu, \gamma_1, \ldots, \gamma_k]_{k+1} = \nu \mu_k (\gamma_1,\ldots, \gamma_k) \in \PV^{1}_X .
+\]
+\end{itemize}
+\end{dfn}
+
+\begin{thm}
+The operations of Definition \ref{dfn:def} endow $\fg_X$ with the structure of a sheaf of $L_\infty$-algebras.
+\end{thm}
+
+\begin{proof}
+Before turning on the brackets built from $\mu_k$ we know that $\fg_X$ defines the structure of a dg Lie algebra.
+Thus, it suffices to check that the new $(k+1)$-ary and $(k+2)$-ary higher Jacobi relations involving $\mu_k$ are satisfied. 
+
+The $(k+1)$-ary relations we must check are:
+\begin{itemize}
+\item[(1)] $\div [\gamma_1,\ldots, \gamma_k,\gamma_{k+1}]_{k+1} = \sum \{\gamma_{i_1}, [\gamma_{i_2},\ldots, \gamma_{i_{k+1}}]\}$. 
+\item[(2)] $[\div \mu, \gamma_1, \ldots, \gamma_k]_{k+1} = \{\mu, [\gamma_1,\ldots, \gamma_k]_k\}$.
+\item[(3)] $\div [\nu,\gamma_1,\ldots, \gamma_k]_{k+1} = \{\nu, [\gamma_1,\ldots, \gamma_{k}]_k\}$.
+\end{itemize}
+\end{proof}
+\end{document}
