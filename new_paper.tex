@@ -44,9 +44,9 @@
 
 %% Comments
 
-\def\owen{\textcolor{magenta}{BW: }\textcolor{magenta}}
-\def\gene{\textcolor{blue}{SR: }\textcolor{blue}}
-\def\brian{\textcolor{red}{IS: }\textcolor{red}}
+\def\brian{\textcolor{violet}{BW: }\textcolor{violet}}
+\def\surya{\textcolor{blue}{SR: }\textcolor{blue}}
+\def\ingmar{\textcolor{magenta}{IS: }\textcolor{magenta}}
 
 %% Random macros
 
@@ -185,18 +185,22 @@ Let
 \[
 \mu_k \colon \PV^{2k}_X \times \cdots \times \PV^{2k}_X \to \PV^1_X 
 \]
-be the $(k+1)$-linear map of sheaves defined by the formula
+be the $k$-linear map of sheaves defined by the formula
 \[
 \mu_k (\gamma_1,\ldots, \gamma_k) \define \bigg[\partial \left(\Omega \vee \gamma_1\right)\cdots \partial \left(\Omega \vee \gamma_k\right)\bigg] \vee \Omega^{-1} .
 \]
 \end{dfn}
+
+\begin{lem}
+For any $\gamma_1,\ldots, \gamma_k$, the vector field $\mu_k(\gamma_1,\ldots, \gamma_k)$ is divergence-free. 
+\end{lem}
 
 \begin{dfn}
 \label{dfn:def}
 Suppose $X$ is a Calabi--Yau manifold of dimension $2k+1$. 
 Define the multinear maps of sheaves
 \[
-[\cdot, \ldots, \cdot]_j \colon \fg_X \times \cdots \times \fg_X \to \fg_X
+[\cdot, \ldots, \cdot]_j \colon \fg_X \times \cdots \times \fg_X \to \Pi^j \fg_X
 \]
 for $j=1,2,k,k+1$ by the formulas
 \begin{itemize}
@@ -212,7 +216,7 @@ for $j=1,2,k,k+1$ by the formulas
 \]
 and 
 \[
-[\nu, \gamma_1, \ldots, \gamma_k]_{k+1} = \nu \mu_k (\gamma_1,\ldots, \gamma_k) \in \PV^{1}_X .
+[\nu, \gamma_1, \ldots, \gamma_k]_{k+1} = \# \nu \mu_k (\gamma_1,\ldots, \gamma_k) + \sum_{i=1}^k \bigg[\left(\Omega \vee \{\nu, \gamma_1\}\right)\cdots \Hat{\partial \left(\Omega \vee \gamma_k\right)} \cdots \partial \left(\Omega \vee \gamma_k\right) \bigg] \vee \Omega^{-1} \in \PV^{1}_X .
 \]
 \end{itemize}
 \end{dfn}
@@ -228,8 +232,46 @@ Thus, it suffices to check that the new $(k+1)$-ary and $(k+2)$-ary higher Jacob
 The $(k+1)$-ary relations we must check are:
 \begin{itemize}
 \item[(1)] $\div [\gamma_1,\ldots, \gamma_k,\gamma_{k+1}]_{k+1} = \sum \{\gamma_{i_1}, [\gamma_{i_2},\ldots, \gamma_{i_{k+1}}]\}$. 
-\item[(2)] $[\div \mu, \gamma_1, \ldots, \gamma_k]_{k+1} = \{\mu, [\gamma_1,\ldots, \gamma_k]_k\}$.
+\item[(2)] $[\div \mu, \gamma_1, \ldots, \gamma_k]_{k+1} = \{\mu, [\gamma_1,\ldots, \gamma_k]_k\} + \sum [\{\mu, \gamma_{i_1}\}, \gamma_{i_2}, \ldots, \gamma_{i_{k}}]_{k}$.
 \item[(3)] $\div [\nu,\gamma_1,\ldots, \gamma_k]_{k+1} = \{\nu, [\gamma_1,\ldots, \gamma_{k}]_k\}$.
 \end{itemize}
+
+\ul{(1)}:
+We apply the BV relation to the left hand side.
+Since $\mu_k(\gamma_1,\ldots,\gamma_k)$ is divergence-free, the left hand side is
+\[
+\sum \left(\div \gamma_{i_1} \wedge \mu_k(\gamma_{i_2}, \ldots, \gamma_{i_{k+1}}) + \{\gamma_{i_1}, \mu_k(\gamma_{i_2},\ldots, \gamma_{i_{k+1}})\} \right) .
+\]
+The second terms in the sum cancels with the right hand side of the Jacobi identity.
+Thus, it suffices to show that 
+\[
+\sum \div \gamma_{i_1} \wedge \mu_k(\gamma_{i_2}, \ldots, \gamma_{i_{k+1}}) = 0 .
+\]
+Notice that this expression only depends on the divergences of the polyvector fields $\gamma_1,\ldots, \gamma_{k+1}$. 
+Moreover, it is totally symmetric in the inputs. 
+Thus, we can write it as $L(\div \gamma_1,\ldots, \div \gamma_{k+1})$ where
+\[
+L \colon \Sym^{k+1} \left(\wedge^{2k-2} V \right) \to V
+\]
+is some ${\rm SL}(2k+1)$-invariant map. 
+Here $V$ denotes the defining ${\rm SL}(2k+1)$ representation.
+As such $L= 0$ \brian{justify}.
+
+\ul{(2)}: 
+The left hand side of the Jacobi identity reads
+\begin{equation}\label{eqn:3jacobi2a}
+(\div \mu) \mu_k (\gamma_1,\ldots, \gamma_k) + \sum_{i=1}^k \{\div \mu, \gamma_i\} \vee \bigg[\left(\Omega \vee \gamma_1\right) \cdots \Hat{\partial \left(\Omega \vee \gamma_i\right)} \cdots \partial \left(\Omega \vee \gamma_k\right) \bigg]
+\end{equation}
+Consider the first term on the right hand side of the Jacobi identity. 
+Expanding out, we can write this as
+\begin{equation}\label{eqn:3jacobi2b}
+\sum_{i=1}^k \{\mu, \div \gamma_i\} \vee \bigg[\left(\Omega \vee \gamma_1\right) \cdots \Hat{\partial \left(\Omega \vee \gamma_i\right)} \cdots \partial \left(\Omega \vee \gamma_k\right) \bigg] + \# (\div \mu) \mu_k(\gamma_1,\ldots, \gamma_k) .
+\end{equation}
+The final term cancels with the first term of \eqref{eqn:3jacobi2a}. 
+The remaining terms on the right hand side of the Jacobi relation read
+\[
+\sum_{i=1}^k \partial \{\mu, \gamma_i\} \vee \bigg[\left(\Omega \vee \gamma_1\right) \cdots \Hat{\partial \left(\Omega \vee \gamma_i\right)} \cdots \partial \left(\Omega \vee \gamma_k\right) \bigg] .
+\]
+This cancels with the sum of the second term in \eqref{eqn:3jacobi2a} and the first term in \eqref{eqn:3jacobi2b}.
 \end{proof}
 \end{document}
