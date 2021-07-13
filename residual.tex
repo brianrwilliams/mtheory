@@ -1,0 +1,360 @@
+% Created 2020-10-14 Wed 14:51
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{macros-mtheory}
+\usepackage{cmupint}
+
+\author{Surya and Brian}
+\date{\today}
+\title{Twisted \(M\)-theory and its perturbative quantization.}
+\hypersetup{
+ pdfauthor={Surya and Brian},
+ pdftitle={Twisted \(M\)-theory and its perturbative quantization.},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+
+\def\pv{{\rm PV}}
+\def\PV{{\rm PV}}
+\def\T{{\rm T}}
+\def\del{\partial}
+\def\hotimes{\, \otimes \,}
+\def\ep{\epsilon}
+\def\div{\partial_{\Omega}}
+\def\m2{\mathfrak{m}2\mathfrak{brane}}
+\def\susy{\mathfrak{susy}}
+\def\so{\mathfrak{so}}
+\def\siso{\mathfrak{siso}}
+\def\fsl{\mathfrak{sl}}
+\def\lie#1{\ensuremath{\mathfrak{#1}}}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Residual supersymmetry}
+
+
+Recall, the (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
+\[
+  \ft_{11d} = V \oplus \Pi S
+\]
+where $S$ is the (unique) spin representation and $V \cong \CC^{11}$ the complex vector representation, of~$\lie{so}(11, \CC)$. 
+The bracket is the unique surjective $\lie{so}(11,\CC)$-equivariant map from the symmetric square of~$S$ to~$V$;
+this decomposes into three irreducibles, 
+\beqn\label{eqn:decomp}
+  \Sym^2(S) \cong V \oplus \wedge^2 V \oplus \wedge^5 V.
+\eeqn
+Denote by $\Gamma_{\wedge^1}, \Gamma_{\wedge^2}, \Gamma_{\wedge^5}$ the projections onto each of the summands above. 
+The bracket in $\ft_{11d}$ is defined using the first projection
+\[
+[\psi, \psi'] = \Gamma_{\wedge^1} (\psi, \psi') .
+\]
+The super Poincar\'{e} algebra is
+\[
+  \siso_{11d} = \so(11 , \CC) \ltimes \ft_{11d} .
+\]
+The $R$-symmetry is trivial in 11-dimensional supersymmetry. 
+
+We recall the so-called M2 brane central extension of the super Poincar\'e algebra.
+Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.  
+Let
+\[
+  \Gamma_{\wedge^2} : \Sym^2(S) \to \wedge^2 V \subset \Omega^2(\RR^{11}) 
+\]
+be the $\lie{so}(11,\CC)$-equivariant projection onto the $\wedge^2 V$ summand.
+
+The super dg Lie algebra $\m2$ is the central extension of $\siso_{11d}$ by the cocycle
+  \[
+    c_{M2} \in \clie^2\left(\siso_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
+  \]
+  defined by the formula 
+  \[c_{M2} (\psi, \psi') = \Gamma_{\wedge^2}(\psi, \psi') \in \Omega^2(\RR^{11})\]
+  where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$ as in the decomposition \eqref{eqn:decomp}. 
+
+Notice that $\m2$ is a $\ZZ \times \ZZ/2$-graded Lie algebra and the differential is of bidegree $(1,0)$.
+Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$ for which we use to perform the a holomorphic twist of 11-dimensional supergravity.  
+We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
+
+Such a supercharge defines a maximal isotropic subspace $L \subset V$. 
+We can decompose the algebra into $\lie{sl}(5)$ representations, using the isomorphisms
+\deq{
+  V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L^\vee.
+}
+As $\fsl(L) = \fsl(5)$-modules we have
+\[
+V = L \oplus L^\vee \oplus \CC_t
+\]
+and $\so(11, \CC)$ decomposes as
+\[
+\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee .
+\]
+Furthermore, the spinorial representation can be identified with
+\[
+S = \wedge^\bu (L^\vee) = \CC \oplus L^\vee \oplus \wedge^2 L^\vee \oplus \wedge^3 L^\vee \oplus \wedge^4 L^\vee \oplus \wedge^5 L^\vee .
+\]
+The element $Q$ lives in the first summand.
+Let ${\rm Stab}(Q) \subset \lie{so}(11,\CC)$ be the stabilizer of $Q$. 
+This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$. 
+
+\begin{prop}\label{prop:model}
+Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the dg Lie algebra with bracket that on $\m2$ and with the differential $\d + [Q,-]$. 
+The cohomology $H^\bu(\m2^Q)$ is
+\[
+    L^\vee \oplus {\rm Stab}(Q) \oplus \Pi \wedge^3 L^\vee \oplus \CC\cdot c
+  \]
+whose elements we denote by $(v, m, \psi, c)$. 
+\begin{itemize}
+\item[(1)] 
+Let $\fg$ denote the following dg Lie algebra which as a cochain complex is
+\[
+H^\bu(\m2^Q) \oplus (\Pi L \xto{\id} L)  .
+\]
+Denote the elements of the second summand by $(\tilde{\lambda}, \lambda)$. 
+The nontrivial Lie brackets are
+\begin{align*}
+[v,\lambda] & = \<v, \lambda\> \in \CC_c \\ 
+[v,\psi] & = \<v, \psi\> \in \Pi L_{\Tilde{\lambda}} \\
+[\psi, \psi'] & = \psi \wedge \psi' \in L^\vee_v 
+\end{align*}
+where we use the isomorphism $\wedge^4 L \cong L^\vee$.
+There is an $L_\infty$ map 
+\[
+\fg \to \m2^Q
+\] 
+which is a quasi-isomorphism of complexes.  
+\item[(2)]
+  The transferred $L_\infty$ structure on $H^\bu(\fg) \cong H^\bu(\m2^Q)$ is \brian{finish}
+\end{itemize}
+\end{prop}
+\begin{proof}
+The supercharge $Q$ is odd and of cohomological degree zero.
+Since the differential on $\m2$ is even of cohomological degree $+1$, only a totalized $\ZZ/2$ grading makes the differential $\d + [Q,-]$ homogenous. 
+
+The cohomology of the non-centrally extended algebra was computed in \cite{SWpure}, we briefly recall the result. 
+The element $Q$ only acts nontrivially on the summands $\wedge^4 L^\vee$ and $\wedge^5 L^\vee$ in $S$. 
+The image of $\wedge^4 L^\vee \cong L$ trivializes the antiholomorphic translations while the image of $\wedge^5 L^\vee$ trivializes the time translation.
+So, as expected, of the translations only the holomorphic ones $L^\vee$ survive.
+The map 
+\[
+[Q,-] \colon \lie{so}(11;\CC) \to S 
+\] 
+is the projection onto $\wedge^0 L^\vee \oplus \wedge^1 L^\vee \oplus \wedge^2 L^\vee$. 
+The kernel of $[Q,-]$ is the stabilizer ${\rm Stab}(Q)$.
+
+In summary, the space of odd translations which survive cohomology is $\wedge^3 L^\vee \cong \wedge^2 L$.
+This completes the calculation of the cohomology. 
+
+We embed $\fg$ into $\m2^Q$ in the following way: ${\rm Stab}(Q)$ and $L^\vee$ sit inside in the evident way.
+The central element maps to $c \mapsto \pm 1 \in \Omega^0(\RR^{11})$.
+The summand $L_\lambda$ is mapped to the linear functions in $\Omega^0(\RR^{11})$ and $\Pi L_{\Tilde{\lambda}}$ is sent to the constant coefficient one-forms in $\Pi \Omega^1(\RR^{11})$. 
+It remains to declare where $\psi \in \wedge^2 L$ is mapped.
+
+Define the map
+\[
+H \colon \Omega^2 (\RR^{11}) \to \Omega^1(\RR^{11})
+\]
+which sends a two-form $\alpha$ to the one-form $H \alpha$ defined by the formula
+\[
+(H \alpha) (x) = \int_0^x \alpha .
+\]
+
+Notice that if $\alpha$ is $\d$-closed then $\d (H \alpha) = \alpha$. 
+It follows that any element $\psi \in \wedge^2 L \subset S$ can be lifted to a closed element at the cochain level in $\m2^Q$ by the formula
+\[
+\Tilde{\psi} = \psi - H \Gamma_{\wedge^2} (Q, \psi) \in \Pi S \oplus \Pi \Omega^1 .
+\]
+Thus, sending $\psi \mapsto \Tilde{\psi}$ defines a cochain map $\fg \to \m2^Q$. 
+
+The Lie bracket $[\Tilde{\psi}, \Tilde{\psi}']$ agrees with $[\psi, \psi']$. 
+On the other hand, in $\m2^Q$ there is the Lie bracket 
+\[
+[v,\Tilde{\psi}] = - L_v (H \Gamma_{\wedge^2} (Q, \psi)) = -\<v, \Gamma_{\wedge^2}(Q, \psi) - \d \<v, H \Gamma_{\wedge^2}(Q, \psi) .
+\]
+The first term agrees with the bracket $[v, \psi]_{\fg}$ in $\fg$. 
+The other term is exact in $\m2^Q$ and can hence be corrected by the following bilinear  
+\[
+v \otimes \psi \mapsto \<v, H \Gamma_{\wedge^2} \> \in L_\lambda .
+\] 
+Together with the cochain map described above, this bilinear term prescribes the desired $L_\infty$ map. 
+
+\end{proof}
+
+
+Consider now the eleven-dimensional theory $\cT = \cT_{\CC^5 \times \RR}$ defined on $\CC^5 \times \RR$. 
+The BV action induces the structure of a dg Lie algebra on $\cT[1]$. 
+
+\begin{prop}
+The assignment
+\brian{??} defines a map of $\ZZ/2$-graded dg Lie algebras 
+\[
+\m2 \to \cT[1] .
+\]
+In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
+\end{prop}
+
+
+\subsection{$L_\infty$ extension}
+
+In this section we compare to the work of ??.
+In these references, the algebra $\m2$ is defined as an $L_\infty$  
+central extension of $\siso_{11d}$. 
+
+Recall that given two spinors $\psi, \psi' \in S$ we can form the constant coefficient two-form $\Gamma_{\wedge^2} (\psi, \psi')$. 
+Using this two-form we can define the following four-linear expression
+\[
+\mu_2 (\psi, \psi',v,v') = \<v \wedge v', \Gamma(\psi, \psi')\> .
+\]
+This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\ft_{11d})$. 
+In \cite{??} it is shown that this cocycle $\mu_2$ is 
+
+\subsection{Embedding $\m2^Q$ in twisted supergravity} 
+
+In Proposition \ref{prop:model} we have proposed a dg model $\fg$ for the $Q$-deformed M2-brane algebra. 
+
+%For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
+The model $\fg$ takes the following form
+\beqn 
+\begin{tikzcd}
+\ul{even} & \ul{odd} & \ul{even} \\
+ L_a & \wedge^2 L & L^\vee \\
+\wedge^2 L & & \\
+\lie{sl}(5) \\
+L_b \ar[r, "\id"] & L_c .
+\end{tikzcd}
+\eeqn
+The subscripts in $L_a, L_b, L_c$ are used to distinguish between the various copies of $L$.
+
+The map from the dg model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory is as follows. 
+\begin{align*}
+ \in L_a & \mapsto ?? \\
+z_i \wedge z_j \in \wedge^2 L & \mapsto z_i \d z_j - z_j \d z_i \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
+\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_b & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+z_i \in L_c & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR)
+\end{align*}
+
+\section{M5 brane}
+
+The minimal twist of the abelian maximally supersymmetric tensor multiplet on $\RR^6$ was computed in \cite{SWpre}. 
+The is a holomorphic field theory on $\CC^3$ and admits the following two descriptions in the BV formalism.
+
+\begin{itemize}
+\item Presymplectic. 
+\[
+(\alpha, \varphi) \in \Omega^{\leq 1, \bu}(\CC^3)[2] \oplus \Omega^{0,\bu}(\CC^3) \otimes \Pi R [1] .
+\]
+\item Poisson.
+\[
+(\chi, \varphi) \in \Omega^{\geq 2, \bu}(\CC^3)[1] \oplus \Omega^{0,\bu}(\CC^3) \otimes \Pi R [1].
+\]
+\end{itemize}
+
+Explicitly, the fields of twisted 11-dimensional supergravity couple to the theory on M5 brane as follows:
+\begin{itemize}
+\item[(1)] The holomorphic vector fields $\frac{\partial}{\partial z_i}$ couple to the theory on the brane by the quadratic term
+\[
+\frac12 \int_{\CC^3} \chi \wedge \left(\frac{\partial}{\partial z_i} \vee \chi\right) + \frac12 \int_{\CC^3} \ep_{ab} \varphi_a \wedge \frac{\partial}{\partial z_i} \varphi_b .
+\]
+\item[(2)] The odd supercharges $\d z_i \otimes e_a$ couple to the theory on the brane by the quadratic term 
+\[
+\frac12 \int_{\CC^3} \ep_{ab} \chi \wedge \d z_i \wedge e_a \varphi_b .
+\]
+\end{itemize}
+
+\subsection{Residual supersymmetry}
+
+The residual $\cN=(2,0)$ supersymmetry algebra after performing the holomorphic twist is the $\ZZ/2$ graded algebra 
+\[
+Z \oplus \Pi (Z^\vee \otimes R)
+\]
+where $Z = \CC^3$ is the fundamental representation of $\lie{sl}(3)$. 
+The bosonic summand consists of the holomorphic translations $\frac{\partial}{\partial z_i}$ and we schematically write a basis for the odd summand by $\d z_i \otimes e_a$ where $i=1,2,3$, $a=1,2$ and $\{e_1,e_2\}$ form a symplectic basis for $R$.  
+The bracket is given by the composition 
+\[
+(Z^\vee \otimes R) \otimes (Z^\vee \otimes R) \to \wedge^2 Z^\vee \otimes \wedge^2 R \xto{1 \otimes \omega_R} \wedge^2 Z^\vee \cong Z
+\]
+where $\omega_R$ is the symplectic form on $R$. 
+In our basis the bracket reads
+\[
+[\d z_i \otimes e_a, \d z_j \otimes e_b] = \ep_{ab} \ep_{ijk} \frac{\partial}{\partial z_k}.
+\]
+
+\begin{itemize}
+\item[(1)] The bosonic holomorphic translations $\frac{\partial}{\partial z_i}$ couple to the theory on the brane by the quadratic term
+\[
+\frac12 \int_{\CC^3} \chi \wedge \left(\frac{\partial}{\partial z_i} \vee \chi\right) + \frac12 \int_{\CC^3} \ep_{ab} \varphi_a \wedge \frac{\partial}{\partial z_i} \varphi_b \wedge \d^3 z .
+\]
+\item[(2)] The odd supercharges $\d z_i \otimes e_a$ couple to the theory on the brane by the quadratic term 
+\[
+\frac12 \int_{\CC^3} \ep_{ab} \chi \wedge \d z_i \wedge e_a \varphi_b .
+\]
+\end{itemize}
+
+\section{Sources for branes}
+
+The leading term in the action of twisted supergravity in the presence of an M5 brane is
+\[
+blah
+\]
+
+\subsection{$D4$ branes in Type IIA}
+
+In \cite{CLsugra} it is shown how $D2k$ branes couple to type IIA supergravity in the twisted situation. 
+We have already shown how the dimensional reduction of 11-dimensional supergravity along a holomorphic circle $S^1 \subset \CC^\times$ is equivalent to the $\SU(4)$ invariant twist of type IIA supergravity
+\[
+\CC^4 \times \RR^2 .
+\]
+
+In this twist, a D4 brane wraps 
+\[
+\{w_i = 0\} \times \CC^2 \times \RR \times \{t_2 = 0\} \subset \CC^4 \times \RR^2 .
+\]
+Along the brane the theory is given by mixed holomorphic-topological Chern--Simons theory with two odd variables $\ep_1,\ep_2$. 
+
+Recall that in the twist of type IIA supergravity are the fields
+\begin{align*}
+\mu & \in \Pi \PV^{1,\bu}(\CC^4) \otimes \Omega^\bu(\RR^2) \\
+\pi & \in \PV^{2,\bu} (\CC^4) \otimes \Omega^{\bu}(\RR^2) .
+\end{align*} 
+\brian{we could probably do a better job with gradings, Ingmar?}
+The relevant leading term in the action is
+\[
+\int_{\CC^4 \times \RR^2} \pi (\dbar + \d) \div^{-1} \mu + \int_{\CC^2 \times \RR} (\div^{-1} \mu) \vee \Omega .
+\]
+Notice that only the component of $\mu$ which is a polyvector field of type $(1,2)$ along $\CC^4$ and a one-form along $\RR^2$ appears in the second term above; denote this component by $\mu^{1,2;1}$.  
+The components of $\pi$ which couple to this component of $\mu$ are $\pi^{2,2;1}$ and $\pi^{2,1;0}$---by this we mean a polyvector field of type $(2,2)$ (respectively $(2,1)$) along $\CC^4$ and a de Rham form of type $1$ (respectively $0$) along $\RR^2$.  
+
+We conclude that in the presence of a $D4$ brane, the linearized equations of motion for $\pi^{2,2;1}$ reads
+\[
+\d \pi^{2,2;0} + \dbar \pi^{2,1;1} = \Omega^{-1} \delta_{\CC^2 \times \RR} .
+\]
+where the distributional form $\Omega^{-1} \delta_{\CC^2 \times \RR}$ is the image of the $\delta$-distribution along the isomorphism
+\[
+\Omega^{-1} \colon \Bar{\Omega}^{2,2} (\CC^4) \hotimes \Bar{\Omega}^1 (\RR^2) \; \cong \; \Bar{\PV}^{2,2} (\CC^4) \hotimes \Bar{\Omega}^1 (\RR^2) 
+\]
+determined the Calabi--Yau form. 
+
+An explicit solution to the equations of motion for $\pi$ is 
+\[
+\pi_{BR} = \pi^{2,2;0} + \pi^{2,1;1} = \# \frac{1}{r^5} \left(t \d \wbar_1 \d \wbar_2 - \wbar_1 \d t \d \wbar_2 + \wbar_2 \d t \d \wbar_1\right) \frac{\partial}{\partial z_1} \frac{\partial}{\partial z_2} .
+\]
+
+\end{document} 
