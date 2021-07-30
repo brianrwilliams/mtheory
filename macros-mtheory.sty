@@ -1,14 +1,54 @@
 %%% GENERAL PACKAGES
-\usepackage{mathrsfs,amsmath, amscd, amsthm,amssymb,verbatim,subfigure,enumerate,graphicx,todonotes}
+\usepackage{mathrsfs,amsmath,amscd,amsthm,amssymb,verbatim,subfigure,enumerate,graphicx,todonotes,grffile,longtable,wrapfig,rotating,textcomp,capt-of,xcolor,eurosym,amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+
 
 %%% FORMATTING
 \usepackage[top=1in, bottom=1.25in, left=1.3in, right=1.3in,footskip=.5in]{geometry}
-\linespread{1.25}
+%\linespread{1.2}
+\textwidth=14.5cm 
+\oddsidemargin=1cm
+\evensidemargin=1cm
+\setlength{\parskip}{10pt}
+\setlength{\headsep}{20pt}
+\usepackage{mathabx} %nicer looking tensor products / derivatives
 
 %%% FONT PACKAGES
 \usepackage{amsfonts,slashed}
 \usepackage[bbgreekl]{mathbbol}
 \usepackage[mathscr,mathcal]{euscript}
+\usepackage{cmupint} %cool integrals
+ 
+%%% BIB
+
+\usepackage[backend=biber,
+            isbn=false,
+            doi=false,
+            giveninits=true,
+            style=alphabetic,
+            useprefix=true,
+            maxcitenames=5,
+            maxbibnames=5,
+            sorting=nyt,
+            labelnumber, defernumbers = true,
+            citestyle=alphabetic]{biblatex}
+\renewbibmacro{in:}{}
+%\usepackage[capitalise]{cleveref}
+\setlength{\headheight}{14pt}
+
+%%% REFS
+
+\definecolor{e-mail}{rgb}{0,.40,.80}
+\definecolor{reference}{rgb}{.20,.60,.22}
+\definecolor{citation}{rgb}{0,.40,.80}
+
+\usepackage[colorlinks=true,
+            linkcolor=reference,
+            citecolor=citation,
+            urlcolor=e-mail]{hyperref}
+\usepackage[capitalise]{cleveref}
 
 %%% NON TIKZ DIAGRAMS
 \usepackage[all,cmtip]{xy}
@@ -88,20 +128,15 @@
 % symbols
 \def\hattensor{\mathbin{\Hat{\otimes}}}
 \def\Wedge{\bigwedge}
-\def\tensor{\otimes}
 \def\xto{\xrightarrow}
 \def\zbar{\Bar{z}}
 \def\dbar{\Bar{\partial}}
 \def\Tilde{\widetilde}
 \def\Hat{\widehat}
 \def\ul#1{\smash{\underline{#1}}}
-\def\oloc{{\sO}_{\rm loc}}
-\def\clie{{\rm C}_{\rm Lie}}
-\def\clieu{{\rm C}^{\rm Lie}}
+\def\oloc{{\cO}_{\rm loc}}
+\def\clie{{\rm C}}
 \def\cloc{{\rm C}_{\rm loc}}
-\def\cred{{\rm C}_{\rm Lie, red}}
-\def\hO{\Hat{\sO}}
-\def\hOmega{\Hat{\Omega}}
 \def\<{\langle}
 \def\>{\rangle}
 \def\bu{\bullet}
@@ -112,29 +147,27 @@
 \def\Obs{{\rm Obs}}
 \def\Ch{{\rm Ch}}
 \def\dgLie{{\rm dgLie}}
-\def\Lcat{L_\infty{\rm Alg}}
-\def\Cur{{\rm Cur}}
 \def\dR{{\rm dR}}
 \DeclareMathOperator{\Sym}{Sym}
 \def\d{{\rm d}}
-\def\GL{{\rm GL}}
+\DeclareMathOperator{\GL}{GL}
 \def\ch{{\rm ch}}
-\def\KM{{\rm KM}}
 \def\Def{{\rm Def}}
 \def\Map{{\rm Map}}
-\def\id{{\rm id}}
-\def\GL{{\rm GL}}
+\def\id{\mathbb{1}}
 \def\ch{{\rm ch}}
 \def\Aut{{\rm Aut}}
-\def\CDO{{\rm CDO}}
 \def\Rep{{\rm Rep}}
 \def\Fr{{\rm Fr}}
 \def\Mod{{\rm Mod}}
 \def\Bun{{\rm Bun}}
-\def\VB{{\rm VB}}
 \def\End{{\rm End}}
-\def\Lie{{\rm Lie}}
-\def\pv{{\rm PV}}
+\def\ad{{\rm ad}}
+\def\Ext{{\rm Ext}}
+\def\Gr{{\rm Gr}}
+\def\Sect{{\rm Sect}}
+\def\Hom{{\rm Hom}}
+\def\dvol{{\rm dvol}}
 
 % font macros
 \def\cA{\mathcal A}\def\cB{\mathcal B}\def\cC{\mathcal C}\def\cD{\mathcal D}
@@ -193,48 +226,25 @@
 
 %random
 \def\Reszero{\underset{z=0}{\rm Res}}
+\def\Res{{\rm Res}}
 \def\L8{L_\infty}
-\def\Lcat{L_\infty{\rm Alg}}
 \def\Vert{\mathbb{V}{\rm ert}}
-\def\hCDO{\Hat{\rm CDO}}
-\def\hOmega{\Hat{\Omega}}
-\def\cSym{\Hat{\Sym}}
-\def\clie{{\rm C}_{\Lie}}
-\def\clies{{\rm C}_{\rm Lie}^\bu}
-\def\cliel{{\rm C}^{\rm Lie}}
-\def\cliels{{\rm C}^{\rm Lie}_\bu}
-\def\hclie{\Hat{\rm C}_{\rm Lie}}
-\def\hclies{\Hat{\rm C}_{\rm Lie}^\bu}
-\def\Cloc{{\rm C}_{\rm loc}}
-\def\Oloc{\mathcal{O}_{\rm loc}}
-\def\Sect{{\rm Sect}}
-\def\Exp{{\rm Exp}}
-\def\Hom{{\rm Hom}}
-\def\gl{\mathfrak{g} \mathfrak{l}}
-\def\ad{{\rm ad}}
-\def\Hol{{\rm Hol}}
-\def\Ext{{\rm Ext}}
-\def\At{{\rm At}}
-\def\Gr{{\rm Gr}}
-\def\desc{{\rm desc}}
-\def\xto{\xrightarrow}
-\def\op{{{\rm op}}}
-\def\Pro{{\rm Pro}}
-\def\Diff{{\rm Diff}}
-\def\Aff{{\rm Aff}}
-\def\dvol{{\rm dvol}}
+\def\hSym{\Hat{\Sym}}
 \def\ll{\llbracket}
 \def\rr{\rrbracket}
-\def\Tr{{\rm Tr}}
-\def\Der{{\rm Der}}
-\def\tensor{\otimes}
-\def\Hoch{{\rm Hoch}}
-\def\Res{{\rm Res}}
+\DeclareMathOperator{\Tr}{Tr}
 \def\wbar{\Bar{w}}
-\def\cl{{\rm cl}}
-\def\Jac{{\rm Jac}}
 \def\Bar{\overline}
+\def\lie#1{\ensuremath{\mathfrak{#1}}}
+\def\PV{{\rm PV}}
+\def\T{{\rm T}}
 
+%mtheory stuff
+\def\del{\partial}
+\def\hotimes{\, \Hat{\otimes} \,}
+\def\ep{\epsilon}
+\def\div{\partial_{\Omega}}
+\def\m2{\mathfrak{m}2\mathfrak{brane}}
 
 %%% INGMAR STUFF
 \usepackage{xparse}
@@ -245,11 +255,15 @@
 \end{equation}
 }
 
-\usepackage{physics}
-\usepackage{amssymb,amsmath,mathrsfs,mathtools}
-%\usepackage[numbers,square]{natbib}
-\usepackage[backend=bibtex,style=ieee]{biblatex}
-\addbibresource{twisted.bib}
+%%% MTHEORY STUFF
+
+
+
+%\usepackage{physics}
+%\usepackage{amssymb,amsmath,mathrsfs,mathtools}
+%%\usepackage[numbers,square]{natbib}
+%\usepackage[backend=bibtex,style=ieee]{biblatex}
+%\addbibresource{twisted.bib}
 
 
 %% Note: I did this to avoid clutter, but I'm not wedded to the change!
