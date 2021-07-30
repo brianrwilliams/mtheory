@@ -1,0 +1,259 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory,amsaddr}
+
+\addbibresource{cfs.bib}
+
+%\linespread{1.2} %for editing
+%\usepackage{mathpazo}
+
+\author{Surya and Brian}
+\date{\today}
+\title{Twisted \(M\)-theory and its perturbative quantization.}
+\hypersetup{
+ pdfauthor={Surya and Brian},
+ pdftitle={Twisted \(M\)-theory and its perturbative quantization.},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
+ pdflang={English}}
+
+
+\begin{document}
+
+\maketitle
+%\tableofcontents
+
+\section{G2 twist}
+
+\paragraph{We consider the eleven-dimensional theory on the space
+\[
+  Z \times X \times \RR
+\]
+where $Z$ is a hyper-K\"{a}hler surface and $X$ is a Calabi--Yau three-fold.
+Denote by 
+\[
+\omega_Z^{2,0} \in \Omega^{2,0}_Z , \quad \Omega_X \in \Omega^{3,0}_X
+\]
+the holomorphic symplectic form on $Z$ and the holomorphic volume form on $X$, respectively.
+We will work in a background where the $(1,0)$-component of the field $\gamma$ satisfies the following equations:
+\begin{equation}\label{eqn:background}
+  \begin{array}{rcccc}
+    \partial \gamma^{1,0} & = & \omega_Z^{2,0} \\
+    \dbar \gamma^{1,0} + \d_{\RR} \gamma^{1,0} & = & 0 .
+  \end{array}
+\end{equation}
+The second equation implies that $\gamma^{1,0}$ is constant along $\RR$ and holomorphic along $X \times Z$.
+The first equation says that $\gamma^{1,0}$ is a trivialation of the holomorphic volume form on $Z$.}
+
+\paragraph{To see that this is a consistent background of the eleven-dimensional theory we must check that $\gamma^{1,0}$ satisfies the appropriate equations of motion.}
+
+\begin{lem}
+  Any field $\gamma^{1,0}$ satisfying the equations in (\ref{eqn:background}) satisfies the equations of motion of the eleven-dimensional theory.
+\end{lem}
+
+\begin{proof}
+  We must show that $\gamma^{1,0}$ satisfies the following Maurer--Cartan equation
+  \[
+    Q_{\rm BRST} \gamma^{1,0} + \frac12 [\gamma^{1,0} ,\gamma^{1,0}] = 0
+  \]
+  where $Q_{\rm BRST}$ is the linear BRST operator and $[-,-]$ is the Lie bracket defining the interacting piece of the eleven-dimensional theory.
+
+Recall, the linear BRST differential is of the form
+  \[
+    \dbar + \partial_{\Omega} + \partial_{\Omega^0 \to \Omega^1} + \d_{\rm dR}
+  \]
+  Here, $\partial_\Omega$ is the divergence operator which only acts on the $\mu$-type fields and $\partial_{\Omega^0 \to \Omega^1}$ is the first piece of the holomorphic de Rham operator acting on $\Omega^{0,\bu}(X \times Z)$.
+  Since $(\dbar + \d_{\rm dR}) \gamma^{1,0} = 0$ by assumption, we see that $\gamma^{1,0}$ is closed for the linear BRST operator.
+
+The only component of the Lie bracket involving two fields of type $\gamma$ is of the form
+  \[
+    [\gamma, \gamma] = (\partial \gamma \wedge \partial \gamma) \vee (\Omega_X \wedge \Omega_Z) \in \PV^{1,\bu}(X \times Z) \; \Hat{\otimes} \; \Omega^\bu(L) .
+  \]
+  Since $\partial \gamma^{1,0}$ is a $(2,0)$ form along $Z$, we see that $\partial \gamma^{1,0} \wedge \partial \gamma^{1,0} =0$.
+  We conclude that $\gamma^{1,0}$ satisfies the Maurer--Cartan equation.
+\end{proof}
+
+Next, we expand the action functional near the background where $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying Equation \eqref{eqn:background}.
+This will generate new kinetic and interacting terms which we can extract by inserting a formal parameter $\delta$ and expressing the action functional in terms of the deformed field $\Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
+
+There are two types of interactions in the original theory.
+The first is
+\begin{equation}\label{eqn:int1}
+  \frac12 \int_{X\times Z \times L} \frac{1}{1-\nu} \left(\del \gamma \vee \mu^2 \right) \wedge (\omega_Z \wedge \Omega_X)
+\end{equation}
+and the second is
+\begin{equation} \label{eqn:int2}
+  \frac16\int_{X \times Z \times L} \frac{1}{1-\nu} \gamma \partial \gamma \partial \gamma .
+\end{equation}
+
+%We can integrate Equation (\ref{eqn:int1}) by parts to put it in the form $\frac12 \int_{X \times Z \times L} \left[(\partial \gamma) \vee (\mu \wedge \mu) \right]$ where $\mu \wedge \mu$ is the wedge product of polvector fields.\brian{there might be some factors I'm being sloppy with here}
+Expanding \eqref{eqn:int1} around the field configuration $\gamma \to \gamma + \delta \gamma^{1,0}$ we obtain
+\[
+  \frac12 \int \frac{1}{1-\nu} \left(\del \gamma \vee \mu^2 \right) \wedge (\omega_Z \wedge \Omega_X) + \frac{\delta}{2} \int \frac{1}{1-\nu} \left(\omega_Z \vee \mu^2 \right) \wedge (\omega_Z \wedge \Omega_X) .
+\]
+Here, we have used the equation of motion $\partial \gamma^{1,0} = \Omega_Z$.
+It will be convenient to further expand this into the components $\mu_X, \mu_Y, \gamma_X, \gamma_Y$:
+\begin{multline}
+ \int \frac{1}{1-\nu} \left(\frac12 \del^X \gamma_X \vee \mu_X^2  + \del^Z \gamma_X \vee \mu_X \mu_Z + \del^X \gamma_Z \vee \mu_X\mu_Z + \frac12 \del^Z \gamma_Z \vee \mu_Z^2 \right) \wedge (\omega_Z \wedge \Omega_X) 
+ \\
+  \frac{\delta}{2} \int \frac{1}{1-\nu} \left(\omega_Z \vee \mu_Z^2 \right) \wedge (\omega_Z \wedge \Omega_X) .
+  \label{eqn:delta1}
+\end{multline}
+
+Next, we expand Equation (\ref{eqn:int2}) around $\gamma \to \Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
+This is
+\[
+  \frac16 \int \frac{1}{1-\nu} \gamma \partial \gamma \partial \gamma + \frac{\delta}{2} \int \frac{1}{1-\nu} \left(\gamma \partial \gamma\right) \wedge \omega_Z .
+\]
+Notice that there are no $\delta^2$ terms since $\partial \gamma^{1,0} \partial \gamma^{1,0} = 0$.
+Again, we further expand this into holomorphic components along $X,Z$:
+\begin{multline}
+\frac16 \int \frac{1}{1-\nu} \left(\gamma_X \partial^Z \gamma_X \partial^Z \gamma_X +\gamma_X \partial^X \gamma_X \partial^Z \gamma_Z +  \gamma_X \partial^X \gamma_Z \partial^X \gamma_Z \right)
+\\
+\frac{\delta}{2} \int \frac{1}{1-\nu} \left(\gamma_X \partial^X \gamma_X \right) \wedge \omega_Z 
+\label{eqn:delta2}
+\end{multline}
+
+So far, we have written everything in terms of action functionals.
+There is a completely equivalent statement in terms of the resulting dg Lie algebra structure describing the eleven-dimensional theory in this background which we summarize as follows.
+
+\begin{lem} \label{lem:background}
+  The dg Lie algebra describing the eleven-dimensional theory placed in a background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is isomorphic to the the dg Lie algebra whose differential is
+  \begin{equation}\label{eqn:newdiff}
+    Q_{\rm BRST} + \frac{1}{2} \left\{ \int \left[\Omega_Z \vee (\mu \wedge \mu) \right] \wedge (\Omega_Z \wedge \Omega_X) + \int \left(\gamma \partial \gamma\right) \wedge \Omega_Z , \; - \; \right\}
+  \end{equation}
+  and whose Lie bracket is unchanged.
+  Here, $Q_{\rm BRST}$ is the original linear BRST differential of the eleven-dimensional theory.
+\end{lem}
+
+This lemma followed directly from our analysis of the way the action functional of the theory decomposed around this particular background.
+The next result we state is an equivalence with a theory which exists on any product of manifolds $Z \times M$ where $Z$ is a hyper-K\"{a}hler surface as above but now $M$ is any smooth seven-dimensional manifold.
+
+
+\begin{prop}
+  The eleven-dimensional theory on $Z \times X \times L$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying (\ref{eqn:background}) is equivalent to the $\ZZ/2$-graded theory whose fields are
+\[
+\alpha \in \Omega^{0,\bu}(Z) \; \Hat{\otimes} \; \Omega^\bu(X \times L) [1]
+\]
+  and whose action functional reads
+  \[
+    \frac12 \int_{Z \times X \times L} (\alpha \wedge \d\alpha) \wedge \omega_Z  + \frac16 \int_{Z\times X \times L} \alpha \wedge \{\alpha, \alpha\} \wedge \omega_Z
+  \]
+  where $\{-,-\}$ is the Poisson bracket induced from the symplectic form $\omega_Z$ on $Z$. 
+\end{prop}
+
+As stated in this proposition, it is clear that the theory does not depend on the complex structure on the Calabi--Yau three-fold $X$ even though this is not {\em a priori} obvious from the description in Lemma \ref{lem:background}. 
+The theory only depends on the smooth structure on $M = X \times L$.
+\brian{cite Surya and Phil, Chris and B, Kevin}
+
+\begin{proof}
+To unpack this new differential (\ref{eqn:newdiff}) in Lemma \ref{lem:background} we need to reidentify the fields of the eleven-dimensional theory.
+Notice that polyvector fields on $Z \times X$ decompose as
+\begin{equation}\label{eqn:decomposevf}
+\begin{array}{ccccc}
+  \PV^{1,\bu}_{Z \times X} & = & \PV^{1,\bu}_Z \hotimes \PV^{0,\bu}_X & \oplus & \PV^{0,\bu}_Z \hotimes \PV^{1,\bu}_X \\ 
+  \PV^{0,\bu}_{Z \times X} & = & \PV^{0,\bu}_Z \hotimes \PV^{0,\bu}_X .
+%  & \cong & \PV^{1,\bu}_Z \hotimes \Omega^{0,\bu} _X & \oplus & \Omega^{0,\bu}_Z \hotimes \Omega^{2,\bu}_X
+\end{array}
+\end{equation}
+There is a similar decomposition for differential forms.
+For a holomorphic vector field $\mu$ on $Z \times X$, we write $\mu = \mu_Z + \mu_X$ according to the above decomposition. 
+Similarly, for a holomorphic one-form $\gamma$ on $Z \times X$, we write $\gamma = \gamma_Z + \gamma_X$ where $\gamma_Z, \gamma_X$ carry a holomorphic one-form component along $Z,X$, respectively. 
+
+Let $\div^X, \div^Z$ denote the divergence operators, with respect to the fixed holomorphic volume forms, acting on polyvector fields on $X,Z$, respectively. 
+Similarly, let $\del^X, \del^Z$ denote the holomorphic de Rham operators on $X,Z$, respectively. 
+
+The new terms in the linear BRST differential arise from the quadratic terms in the action in Equations \eqref{eqn:delta1} and \eqref{eqn:delta2}:
+\begin{equation}\label{eqn:newterms}
+  \frac{\delta}{2} \int (\omega_Z \vee \mu_Z^2) \wedge (\omega_Z \wedge \Omega_X) + \frac{\delta}{2} \int \left(\gamma_X \wedge \partial^X \gamma_X \right) \wedge \omega_Z .
+\end{equation}
+Denote by $Q_{\gamma^{1,0}}$ the resulting new term in the linear BRST differential. 
+
+
+%Recall that the linear BRST complex of the original eleven-dimensional theory is obtained by taking the tensor product of the cochain complexes $\PV^{1,\bu}(X \times Z) \xto{\partial_\Omega} \PV^{0,\bu}(X \times Z)$ and $\Omega^{0,\bu}(X \times Z) \xto{\partial} \Omega^{1,\bu}(X \times Z)$ with the de Rham complex $\Omega^\bu(L)$ on the one-manifold $L$.
+%Using the decomposition (\ref{eqn:decomposevf}) we see that the deformed linear BRST complex is the tensor product of the de Rham complex $\Omega^{\bu}(L)$ with the cochain complex
+
+The deformed linear BRST complex is $(\cE, Q + \delta Q_{\gamma^{1,0}})$. 
+That is, the linear BRST complex of the eleven-dimensional theory in the background specified by $\gamma^{1,0}$. 
+This complex takes the form
+\[
+  \begin{tikzcd}
+  & \PV^{1,\bu}_Z \hotimes \PV^{0,\bu}_X \ar[dr, "\div^Z"] \ar[dashed, rounded corners, to path={ -- ([yshift=-2ex]\tikztostart.west) |- ([xshift=-1.5ex]\tikztotarget.west) -- (\tikztotarget)}, dddddr]\\
+  & & \PV^{0,\bu}_Z \hotimes \PV^{0,\bu}_X \\
+ & \PV^{0,\bu}_Z \hotimes \PV^{1,\bu}_X \ar[ur, "\div^X"'] & \\
+\;_{\cong}  & & \Omega^{0,\bu}_Z \hotimes \Omega^{1,\bu}_X \ar[ul, dashed, bend left = 10, "\Omega^{-1}_X \partial^X"]\\
+ & \Omega^{0,\bu}_Z \hotimes \Omega^{0,\bu}_X \ar[ur, "\partial^X"] \ar[dr,"\partial^Z"'] \\
+  & & \Omega^{1,\bu}_Z \hotimes \Omega^{0,\bu}_X
+  %\ar[uuuuul, start anchor =  {[yshift = 0ex, xshift=0ex]}, end anchor = {[yshift=1.0ex, xshift=-5ex]}, bend left = 90, dotted] .
+  \end{tikzcd}
+\]
+
+Here, the dashed arrow along the outside of the diagram corresponds to the BV antibracket with the first term in (\ref{eqn:newterms}).
+It is given by the isomorphism 
+\[
+\Omega^{1,\bu}_Z \hotimes \Omega^{0,\bu}_X \xto{\omega^{2,0}_Z \otimes \id} \PV^{1,\bu}_Z \hotimes \PV^{0,\bu}_X
+\]
+induced holomorphic symplectic form on $Z$. 
+The other dashed arrow corresponds to the BV antibracket with the second term in (\ref{eqn:newterms}).
+It is given by the composition
+\[
+\Omega^{0,\bu}_Z \hotimes \Omega^{1,\bu}_X \xto{\id \otimes \del^X} \Omega^{0,\bu}_Z \hotimes \Omega^{2,\bu}_X \xto{\id \otimes \Omega_X} \PV^{0,\bu}_Z \hotimes \PV^{1,\bu}_X
+\]
+given by applying the holomorphic de Rham operator along $X$ followed by contracting with the inverse holomorphic volume form along $X$. 
+
+We identify this linear BRST complex, up to quasi-isomorphism, with a smaller BRST complex. 
+Consider the complex
+\beqn
+\Omega^{0,\bu}_Z \hotimes \Omega^{\bu,\bu}_X \hotimes \Omega^\bu_L = \oplus_{k =0}^3 \Omega^{0,\bu}_Z \hotimes \Omega^{k,\bu}_X \hotimes \Omega^\bu_L [-k] 
+\eeqn
+which is equipped with the differential $\dbar^Z + \dbar^X + \del^X + \d^L_{\dR}$. 
+Write $\alpha = \alpha^0 + \cdots + \alpha^3$ for a field in this complex, using the decomposition on the right hand side. 
+
+There is a map from this smaller BRST complex to the original defined by the following equations 
+\begin{multline}
+\mu_Z = \omega_Z^{-1} \del^Z \alpha^0, \quad \mu_X = \Omega_X^{-1} \alpha^2, \quad \nu = \Omega_X^{-1} \alpha^3 \\
+\beta = \alpha^0, \quad \gamma_X = \alpha^1 , \quad \gamma_Z = 0 .
+\end{multline}
+This map is a quasi-isomorphism of linear BRST complexes. 
+
+Restricting the deformed BV action $I(\gamma+\gamma^{1,0})$ along this map we obtain a new interaction $\Tilde{I}(\alpha)$. 
+It has the following form
+\begin{multline}
+\int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \left(\frac12 \del^X \alpha^1  [ \alpha^2 \vee (\alpha^2 \vee \Omega_X^{-1})] + \alpha^2 \del^Z \alpha^1 \del^Z \alpha^0\right) \\
++ \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^1 \partial^Z \alpha^1 \partial^Z \alpha^1 \\ + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^3 \partial^Z \alpha^0 \partial^Z \alpha^0 + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \partial^X \alpha^1 (\alpha^1 \Omega^{-1}_X \alpha^3) .
+\end{multline}
+
+More invariantly, we can write the total BV action as
+\[
+\Tilde{I} = I_{CS} + I' 
+\]
+where $I_{CS} = \frac16 \int \alpha\{\alpha,\alpha\}$ and 
+\beqn
+I' = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \partial^X \alpha [\alpha \vee (\alpha \vee \Omega_X^{-1})] + \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_Z)] \{\alpha,\alpha\} .
+\label{eqn:Iprime}
+\eeqn
+
+Consider the odd functional
+\[
+K = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \alpha \wedge [\alpha \vee (\alpha \vee \Omega_X^{-1})] .
+\]
+
+\begin{lem}
+$Q K + \{I_{CS}, K\} = I'$ .
+\end{lem}
+\begin{proof}
+The linear differential applied to $K$ is 
+\[
+\frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \partial^X \alpha \wedge [\alpha \vee (\alpha \vee \Omega_X^{-1})] \omega_Z .
+\]
+This is the first term in \eqref{eqn:Iprime}. 
+
+Next, we compute
+\[
+\{I_{CS}, K\} = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_Z)] \{\alpha,\alpha\} 
+\]
+which is the second term in \eqref{eqn:Iprime}. 
+\end{proof}
+\end{proof}
+\end{document}
