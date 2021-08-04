@@ -32,6 +32,7 @@ The theory will be defined on any eleven-dimensional manifold of the form $X \ti
 \subsection{Divergence-free vector fields} 
 
 \subsubsection{}
+\label{sec:divfree}
 We set up some notations and conventions in the context of complex geometry. 
 Let $V$ be a holomorphic vector bundle on a complex manifold $X$. 
 If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of anti-holomorphic Dolbeault forms of type $j$ on with values in $V$.
@@ -82,31 +83,31 @@ The distinguishing feature is that this model is no longer a dg Lie algebra, but
 The model we use is motivated by the topological string, specifically the description of the closed topological string in terms of Kodaira--Spencer theory \cite{BCOV}.
 We recall the requisite background, but refer to \cite{CLbcov1,CLbcov2,CLtypeI} for more details. 
 
-Let $X$ be a Calabi--Yau manifold of dimension $d$. 
-Let $\PV^{k,\bu}(X)$ denote the Dolbeault complex of the holomorphic vector bundle $\wedge^k \T_X$. 
-In particular, $\PV^{k,j}(X)$ is the space of smooth sections of the bundle $\wedge^j \T_X^* \otimes \wedge^k \T_X$. 
-With this notation, the dg Lie algebra in \eqref{eqn:cplx1} is $\PV^{1,\bu}(X) \oplus \PV^{0,\bu}(X)[-1]$ with differential $\dbar + \div$. 
+Suppose $X$ be a Calabi--Yau manifold of dimension $d$. 
+Let $\PV^{k,\bu}(X)$ denote the Dolbeault complex of the holomorphic vector bundle $\wedge^k \T_X$; we will omit $X$ in this section and write $\PV^{k,\bu}$ for simplicity.
+In particular, $\PV^{k,j}$ is the space of smooth sections of the bundle $\wedge^j \T_X^* \otimes \wedge^k \T_X$. 
+With this notation, the dg Lie algebra in \eqref{eqn:cplx1} is $\PV^{1,\bu} \oplus \PV^{0,\bu}[-1]$ with differential $\dbar + \div$. 
 
 Introduce a formal parameter $u$ of cohomological degree $+2$ and consider the complex 
 \beqn\label{eqn:pv1}
-\PV^{\bu,\bu} (X) [[u]] [1]
+\PV^{\bu,\bu} [[u]] [1]
 \eeqn
 with differential $\dbar + u \div$ which we will often denote just by $Q_{KS}$ and refer to as the linear BRST differential. 
-With our conventions, notice that $u^l \PV^{k,j}(X)$ sits in cohomological degree $2l +k + j - 1$. 
+With our conventions, notice that $u^l \PV^{k,j}$ sits in cohomological degree $2l +k + j - 1$. 
 
 The Schouten--Nijenhuis bracket 
 \[
-[-,-]_{NS} \colon \PV^{k,j} (X) \times \PV^{p,q} (X) \to \PV^{p+k-1,j+q} (X) 
+[-,-]_{NS} \colon \PV^{k,j} \times \PV^{p,q} \to \PV^{p+k-1,j+q} 
 \]
 extends $u$-linearly to endow \eqref{eqn:pv1} with the structure of a dg Lie algebra.
 We refer to this as the Kodaira--Spencer, or strict, dg Lie algebra structure.
 We refer to the further cohomological shift 
 \[
-\cE_{KS} = \PV^{\bu,\bu} (X) [[u]] [2]
+\cE_{KS} = \PV^{\bu,\bu} [[u]] [2]
 \]
 as the space of fields of Kodaira--Spencer theory.
 
-Notice that the complex resolving divergence-free vector fields \eqref{eqn:cplx1} sits inside $\cE_{KS} [-1]$ as a sub dg Lie algebra as $\PV^{1,\bu}(X) \oplus u \PV^{0,\bu}(X)[1]$. 
+Notice that the complex resolving divergence-free vector fields \eqref{eqn:cplx1} sits inside $\cE_{KS} [-1]$ as a sub dg Lie algebra as $\PV^{1,\bu} \oplus u \PV^{0,\bu}[1]$. 
 
 \subsubsection{}
 
@@ -125,7 +126,7 @@ satisfies the classical master equation
 \[
 Q_{KS} I_{BCOV} + \frac12 \left\{I_{BCOV}, I_{BCOV}\right\}_c = 0 .
 \]
-In other words, $I_{BCOV}$ determines a Maurer--Cartan element in the dg Lie algebra $\oloc(\cE)[-2d+5]$.
+In other words, $I_{BCOV}$ determines a Maurer--Cartan element in the dg Lie algebra $\oloc(\cE_{KS})[-2d+5]$.
 \end{thm}
 
 This action induces the square-zero operator 
@@ -181,7 +182,7 @@ The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equat
 
 \subsubsection{}
 
-Consider the following cochain complex $\cE$:
+Consider the following cochain complex $\cE_{pot}$:
 \beqn\label{eqn:E}
 \begin{tikzcd}
 \ul{-1} & \ul{0} & \cdots & \ul{d-5} & \ul{d-4} &   \\
@@ -206,7 +207,7 @@ be integration along the holomorphic volume form.
 
 Define the pairing 
 \[
-\omega \colon \cE_c \times \cE \to \cE [??] 
+\omega \colon \cE_{pot,c} \times \cE_{pot} \to \CC [??] 
 \]
 by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
 
@@ -216,7 +217,7 @@ by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
 
 Define the map of cochain complexes
 \[
-\Phi \colon \cE \to \til{\cE}_{KS}
+\Phi \colon \cE_{pot} \to \til{\cE}_{KS}
 \]
 by the formulas
 \[
@@ -226,14 +227,14 @@ In the last expression we have used the isomorphism
 \[
 (-) \vee \Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu} 
 \]
-so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}$.
+so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}_{KS}$.
 
 \begin{prop}
 \label{prop:pot}
-The map $\Phi \colon  \cE \to \til{\cE}_{KS}$ intertwines the linear BRST differentials and the shifted Poisson bivectors $\Phi_*\Pi = \til{\Pi}_{KS}$. 
+The map $\Phi \colon  \cE_{pot} \to \til{\cE}_{KS}$ intertwines the linear BRST differentials and the shifted Poisson bivectors $\Phi_*\Pi = \til{\Pi}_{KS}$. 
 In particular, it defines a map of dg Lie algebras
 \[
-\Phi^* \colon \big(\oloc(\cE_{KS}),\{-,-\}_c, Q_{KS} \big) \to \big(\oloc(\cE),\{-,-\}, Q \big)
+\Phi^* \colon \big(\oloc(\cE_{KS}),\{-,-\}_c, Q_{KS} \big) \to \big(\oloc(\cE_{pot}),\{-,-\}, Q \big)
 \]
 \end{prop}
 
@@ -244,16 +245,67 @@ prove this
 As a corollary of Proposition \ref{prop:tilbcov} and Proposition \ref{prop:pot} we have the following result. 
 
 \begin{cor}
-The BCOV action $\til{I}_{BCOV}$ restricts along $\Phi$ to a solution of the classical master equation for $\cE$:
+The BCOV action $\til{I}_{BCOV}$ restricts along $\Phi$ to a solution of the classical master equation for $\cE_{pot}$:
 \begin{align*}
-I & = \Phi^* \til{I}_{BCOV} \\
-Q I + \frac12 \{I,I\} & = 0 .
+I_{pot} & = \Phi^* \til{I}_{BCOV} \\
+Q I_{pot} + \frac12 \{I_{pot},I_{pot}\} & = 0 .
 \end{align*} 
 \end{cor} 
 
 \subsubsection{}
 
+Define the action by the group $\CC^\times$ on $\cE$ as follows. 
+Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
+The linear BRST operator is of weight zero and the pairing $\omega$ is of weight $+1$. 
+Thus, the shifted Poisson bracket $\{-,-\}$ is of $\CC^\times$ weight $-1$.
 
+\begin{lem}
+The restricted action $I_{pot} = \Phi^* I_{BCOV}$ has $\CC^\times$ weight $+1$. 
+In particular, the non-linear BRST operator 
+\[
+\delta_{pot} = Q_{pot} + \{I_{pot},-\}
+\]
+is $\CC^\times$ weight zero.
+\end{lem}
+
+Consider the cochain complex $\left(\oloc(\cE_{pot}) \, , \, \delta_{pot} \right)$ of all local functionals equipped with the non-linear BRST differential $\delta_{pot}$. 
+The $\CC^\times$ weight zero subcomplex is 
+\[
+\big(\oloc(\cE_{pot})^{(0)} \, , \, \delta_{pot} \big) = \big(\oloc(\cE_0) \, , \, \delta_{pot} \big) 
+\]
+where $\cE_0 = \PV^{1,\bu}[1] \oplus \PV^{0,\bu}$ is the subcomplex of the fields $\cE_{pot}$ consisting of just the $\mu$ and $\nu$ fields.
+
+\begin{prop}
+\label{prop:Linfty}
+The differential $\delta_{pot}$ acting on the weight zero fields induces a local $L_\infty$ algebra structure on the complex of vector bundles 
+\[
+\cE_0 [-1] = \PV^{1,\bu} \oplus \PV^{0,\bu}[-1]
+\]
+with $[-]_1 = \dbar + \div$. 
+Furthermore, this $L_\infty$ algebra structure is equivalent to the strict dg Lie algebra structure on the resolution of divergence-free vector fields defined in \S \ref{sec:divfree}. 
+\end{prop}
+
+\subsubsection{}
+
+The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
+Hereon, we denote by $\cL_0 = \cE_0[-1]$ this local $L_\infty$ algebra. 
+
+We can unpack Proposition \ref{prop:Linfty} to describe the $L_\infty$ structure on $\cL_0$ explicitly. 
+Recall we have two types of elements $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. 
+The first few nonzero brackets are
+\begin{align*}
+[\mu]_1 & = \dbar \mu + \div \mu \\
+[\mu_1,\mu_2]_2 & = \div (\mu_1 \mu_2) \\
+[\nu, \mu_1,\mu_2]_3 & = \div(\nu \mu_1 \mu_2) \\
+[\nu_1,\nu_2, \mu_1,\mu_2]_4 & = \# \div(\nu_1 \nu_2 \mu_1 \mu_2).
+\end{align*}
+For $k \geq 2$ the general formula for the $k$-ary bracket is 
+\[
+[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} = \# \div(\nu_1 \cdots \nu_k \mu_1 \mu_2) .
+\]
+
+
+\subsection{The 11-dimensional theory}
 
 \subsection{A family of deformations} 
 
