@@ -26,7 +26,234 @@ to do
 
 \section{The 11-dimensional theory} 
 
+In this section we define the central theory of study, within the Batalin--Vilkovisky formalism.
+The theory will be defined on any eleven-dimensional manifold of the form $X \times L$ where $X$ is a Calabi--Yau five-fold and $L$ is a smooth oriented one-manifold.
+
 \subsection{Divergence-free vector fields} 
+
+\subsubsection{}
+We set up some notations and conventions in the context of complex geometry. 
+Let $V$ be a holomorphic vector bundle on a complex manifold $X$. 
+If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of anti-holomorphic Dolbeault forms of type $j$ on with values in $V$.
+The $\dbar$ operator for $V$ is $\dbar \colon \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X)$ defines the Dolbeault complex of $V$
+\[
+  \Omega^{0,\bu}(X, V) = \left(\Omega^{0,j}(X, V)[-j] \; , \; \dbar\right) .
+\]
+This is a free resolution for the sheaf of holomorphic sections of $V$.
+
+Suppose $X$ is a Calabi--Yau manifold with holomorphic volume form $\Omega$.
+The divergence $\div(\mu)$ of a holomorphic vector field $\mu$ is defined by the formula
+\[
+\div (\mu) \wedge \Omega = L_\mu (\Omega)
+\]
+where, on the right hand side, we mean the Lie derivative of $\Omega$ with respect to $\mu$.
+
+Let $\T_X$ denote the holomorphic tangent bundle and consider its Dolbeault complex $\Omega^{0,\bu}(X , \T_X)$ resolving the sheaf of holomorphic vector fields. 
+The divergence operator extends to the Dolbeault complex to yield a map of cochain complexes 
+\[
+\div \colon \Omega^{0,\bu}(X , \T_X) \to \Omega^{0,\bu}(X) .
+\]
+
+The kernel of this map resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0^{hol}(X)$.
+In fact, we can form the complex 
+\beqn\label{eqn:cplx1}
+\begin{tikzcd}
+\ul{0} & \ul{1} \\
+\Omega^{0,\bu}(X , \T_X) \ar[r, "\div"] & \Omega^{0,\bu}(X) .
+\end{tikzcd}
+\eeqn
+The $\dbar$ operator, as always, is left implicit. 
+By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect^{hol}_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
+
+There is a direct way to extend the Lie bracket of vector fields to the complex \eqref{eqn:cplx1}. 
+Denote by $\mu$ an element of $\Omega^{0,\bu}(X , \T_X)$ and $\nu$ an element of $\Omega^{0,\bu}(X)$ (for simplicity in notation, we will not expand the anti-holomorphic dependence). 
+The Lie bracket defined by the formulas
+\begin{align*}
+[\mu, \mu'] & = L_\mu \mu' \\
+[\mu, \nu] & = L_\mu \nu 
+\end{align*}
+is compatible with $\div$ and endows \eqref{eqn:cplx1} with the structure of a sheaf of dg Lie algebras.\footnote{This is a local dg Lie algebra, see \cite[??]{CG2}.}
+
+\subsubsection{}
+It will be convenient for us to cast this dg Lie algebra in a slightly different way.
+We construct a different model for the Lie algebra of divergence-free vector fields whose underlying cochain complex is the same as \eqref{eqn:cplx1}. 
+The distinguishing feature is that this model is no longer a dg Lie algebra, but an $L_\infty$ algebra. 
+
+The model we use is motivated by the topological string, specifically the description of the closed topological string in terms of Kodaira--Spencer theory \cite{BCOV}.
+We recall the requisite background, but refer to \cite{CLbcov1,CLbcov2,CLtypeI} for more details. 
+
+Let $X$ be a Calabi--Yau manifold of dimension $d$. 
+Let $\PV^{k,\bu}(X)$ denote the Dolbeault complex of the holomorphic vector bundle $\wedge^k \T_X$. 
+In particular, $\PV^{k,j}(X)$ is the space of smooth sections of the bundle $\wedge^j \T_X^* \otimes \wedge^k \T_X$. 
+With this notation, the dg Lie algebra in \eqref{eqn:cplx1} is $\PV^{1,\bu}(X) \oplus \PV^{0,\bu}(X)[-1]$ with differential $\dbar + \div$. 
+
+Introduce a formal parameter $u$ of cohomological degree $+2$ and consider the complex 
+\beqn\label{eqn:pv1}
+\PV^{\bu,\bu} (X) [[u]] [1]
+\eeqn
+with differential $\dbar + u \div$ which we will often denote just by $Q_{KS}$ and refer to as the linear BRST differential. 
+With our conventions, notice that $u^l \PV^{k,j}(X)$ sits in cohomological degree $2l +k + j - 1$. 
+
+The Schouten--Nijenhuis bracket 
+\[
+[-,-]_{NS} \colon \PV^{k,j} (X) \times \PV^{p,q} (X) \to \PV^{p+k-1,j+q} (X) 
+\]
+extends $u$-linearly to endow \eqref{eqn:pv1} with the structure of a dg Lie algebra.
+We refer to this as the Kodaira--Spencer, or strict, dg Lie algebra structure.
+We refer to the further cohomological shift 
+\[
+\cE_{KS} = \PV^{\bu,\bu} (X) [[u]] [2]
+\]
+as the space of fields of Kodaira--Spencer theory.
+
+Notice that the complex resolving divergence-free vector fields \eqref{eqn:cplx1} sits inside $\cE_{KS} [-1]$ as a sub dg Lie algebra as $\PV^{1,\bu}(X) \oplus u \PV^{0,\bu}(X)[1]$. 
+
+\subsubsection{}
+
+\brian{bv bracket}
+
+\subsubsection{}
+
+Together with the linear BRST differential $Q_{KS}$, the bracket $\{-,-\}_c$ induces the structure of a dg Lie algebra the cohomological shift of the space of local functionals $\oloc(\cE_{KS})[-2d+5]$. 
+
+\begin{thm}[\cite{CLbcov1}]
+The BCOV action 
+\[
+I_{BCOV} \in \oloc \left(\cE_{KS} \right) 
+\]
+satisfies the classical master equation 
+\[
+Q_{KS} I_{BCOV} + \frac12 \left\{I_{BCOV}, I_{BCOV}\right\}_c = 0 .
+\]
+In other words, $I_{BCOV}$ determines a Maurer--Cartan element in the dg Lie algebra $\oloc(\cE)[-2d+5]$.
+\end{thm}
+
+This action induces the square-zero operator 
+\[
+\delta_{BCOV} = Q_{KS} + \{I_{BCOV}, -\} 
+\]
+acting on observables of the Kodaira--Spencer fields. 
+In other words, it defines a non-linear BRST operator; in turn it
+induces an $L_\infty$ structure $\{[-]_k\}_{k =1,2,3,\ldots}$ on the complex \eqref{eqn:pv1} whose linear operation is $[-]_1 = Q = \dbar + u\div$. 
+
+This $L_\infty$ structure is clearly not identical as the strict dg Lie algebra structure (it has operations of arbitrary high order). 
+Nevertheless, it is equivalent to the strict dg Lie model: there is an $L_\infty$ automorphism which exchanges the two structures.
+
+It is easiest to describe this automorphism at the level of observables.
+Use the notation $\Sigma$ for a linear observable of the Kodaira--Spencer fields $\cE_{KS}$. 
+Then, the Kodaira--Spencer dg Lie algebra structure induces the non-linear BRST operator $\delta_{KS}$ given by
+\[
+\delta_{KS} (\Sigma) = Q_{KS} \Sigma + \frac12 [\Sigma,\Sigma]_{NS} .
+\]
+
+The non-linear change of coordinates relating the two structures is defined by
+\[
+\Psi \colon \Sigma \mapsto \left[u (e^{\Sigma/u} -1)\right]_+
+\]
+where $[-]_+$ projects onto the non-negative powers of $u$.  
+
+\subsubsection{}
+
+The complex resolving the (shift of) divergence-free vector fields 
+\[
+\left(\PV^{1,\bu}[1] \oplus u \PV^{0,\bu}[2] \, , \, \dbar + u \div\right) 
+\]
+is a subcomplex of $\cE_{KS}$.
+If $d = \dim_\CC(X)=3$ then the shifted Poisson bivector $\Pi_{BCOV}$ restricts to a shifted Poisson bivector on this subcomplex. 
+In particular, the action $I_{BCOV}$ restricts to a solution to the classical master equation for this subcomplex. 
+
+If $d \ne 3$ then there is the following subcomplex $\til{\cE}_{KS}\subset \cE_{\rm KS}$ defined by:
+\[
+\begin{tikzcd}
+\ul{-1} & \ul{0} & \cdots & \ul{d-4} & \ul{d-3} & \cdots    \\
+\PV^{1,\bu} \ar[r] & u\PV^{0,\bu} & & & & &  \\
+& & & \PV^{d-2, \bu} \ar[r] & u \PV^{d-3, \bu} \ar[r] & \cdots &   .
+\end{tikzcd}
+\]
+And one can check that the shifted Poisson bivector restricts to a shifted Poisson bivector on this subcomplex. 
+Thus, we have the following.
+
+\begin{prop}
+\label{prop:tilbcov}
+The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equation on $\til{\cE}_{KS}$ that we denote by $\til{I}_{BCOV}$. 
+\end{prop}
+%Applying this to the $k$th exterior power of the holomorphic tangent bundle $V = \wedge^k \T_X$, we obtain a resolution of the sheaf of $k$-linear polyvector fields which we denote by $\PV^{k,\bu} (X) = \Omega^{0,\bu}(X, \wedge^k \T_X)$. 
+
+\subsubsection{}
+
+Consider the following cochain complex $\cE$:
+\beqn\label{eqn:E}
+\begin{tikzcd}
+\ul{-1} & \ul{0} & \cdots & \ul{d-5} & \ul{d-4} &   \\
+\PV^{1,\bu} \ar[r,"\div"] & \PV^{0,\bu} & \cdots & & \\
+& & & \Omega^{0, \bu} \ar[r,"\del"] & \Omega^{1, \bu} 
+\end{tikzcd}
+\eeqn
+We will write the fields using the notation
+\begin{align*}
+(\mu, \nu) & \in \Pi \PV^{1,\bu}(X)[1] \oplus \PV^{0,\bu}(X) \\
+(\beta, \gamma) & \in \Omega^{0,\bu}(X)[d-5] \oplus \Omega^{1,\bu}(X) [d-4].
+\end{align*}
+
+Let 
+\[
+\begin{array}{rccc}
+\int^\Omega \colon \Omega^{0,\bu}(X) & \to & \CC [6] \\
+\alpha & \mapsto & \int_{X} \Omega \wedge \alpha 
+\end{array}
+\]
+be integration along the holomorphic volume form. 
+
+Define the pairing 
+\[
+\omega \colon \cE_c \times \cE \to \cE [??] 
+\]
+by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
+
+\brian{defines Poisson bivector $\Pi$.}
+
+\subsubsection{}
+
+Define the map of cochain complexes
+\[
+\Phi \colon \cE \to \til{\cE}_{KS}
+\]
+by the formulas
+\[
+\Phi (\mu,\nu) = \mu + u \nu,\qquad \Phi(\beta, \gamma) = \div \left( \gamma \vee \Omega^{-1} \right)  .
+\]
+In the last expression we have used the isomorphism
+\[
+(-) \vee \Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu} 
+\]
+so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}$.
+
+\begin{prop}
+\label{prop:pot}
+The map $\Phi \colon  \cE \to \til{\cE}_{KS}$ intertwines the linear BRST differentials and the shifted Poisson bivectors $\Phi_*\Pi = \til{\Pi}_{KS}$. 
+In particular, it defines a map of dg Lie algebras
+\[
+\Phi^* \colon \big(\oloc(\cE_{KS}),\{-,-\}_c, Q_{KS} \big) \to \big(\oloc(\cE),\{-,-\}, Q \big)
+\]
+\end{prop}
+
+\begin{proof}
+prove this
+\end{proof}
+
+As a corollary of Proposition \ref{prop:tilbcov} and Proposition \ref{prop:pot} we have the following result. 
+
+\begin{cor}
+The BCOV action $\til{I}_{BCOV}$ restricts along $\Phi$ to a solution of the classical master equation for $\cE$:
+\begin{align*}
+I & = \Phi^* \til{I}_{BCOV} \\
+Q I + \frac12 \{I,I\} & = 0 .
+\end{align*} 
+\end{cor} 
+
+\subsubsection{}
+
+
 
 \subsection{A family of deformations} 
 
