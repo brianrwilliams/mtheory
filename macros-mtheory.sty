@@ -122,6 +122,7 @@
 
 \def\brian{\todo[color={red!100!green!33},author=Brian]}
 \def\surya{\todo[color={blue!100!green!33},author=Surya]}
+\def\ingmar{\todo[color={green!100!black!33},author=Ingmar]}
 
 %%% GENERAL MACROS
 
@@ -256,6 +257,10 @@
 \IfNoValueF{#1}{\label{#1}}
 \end{equation}
 }
+\NewDocumentCommand \parsec { o }{
+\subsubsection{}
+\IfNoValueF{#1}{\label{#1}}
+}
 
 %%% MTHEORY STUFF
 
@@ -267,8 +272,31 @@
 %\usepackage[backend=bibtex,style=ieee]{biblatex}
 %\addbibresource{twisted.bib}
 
-
 %% Note: I did this to avoid clutter, but I'm not wedded to the change!
+
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathcal{N}}
+\def\FSF{\mathscr{F}}
+\def\Berk{\mathscr{D}}
+\def\epar{\varepsilon}
+\DeclareMathOperator{\Crit}{Crit}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\spin}{spin}
+\DeclareMathOperator{\Span}{span}
+\def\lie#1{\ensuremath{\mathfrak{#1}}}
+\def\su{\mathfrak{su}}
+\def\so{\lie{so}}
+\def\Sy{\ensuremath{\mathsf{S}}}
+\def\O{\ensuremath{\mathscr{O}}}
+\def\ST{M}
+\def\STlie{\st^0}
+\def\bu{\bullet}
+\def\strict{\ensuremath{\text{strict}}}
 
 \hyphenation{su-per-sym-me-try}
 \hyphenation{Che-val-ley}
