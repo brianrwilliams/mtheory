@@ -24,7 +24,7 @@ to do
 \end{abstract}
 \maketitle
 
-\section{The 11-dimensional theory} 
+\section{A family of moduli spaces} 
 
 In this section we define the central theory of study, within the Batalin--Vilkovisky formalism.
 The theory will be defined on any eleven-dimensional manifold of the form $X \times L$ where $X$ is a Calabi--Yau five-fold and $L$ is a smooth oriented one-manifold.
@@ -97,7 +97,7 @@ With our conventions, notice that $u^l \PV^{k,j}$ sits in cohomological degree $
 
 The Schouten--Nijenhuis bracket 
 \[
-[-,-]_{NS} \colon \PV^{k,j} \times \PV^{p,q} \to \PV^{p+k-1,j+q} 
+[-,-] \colon \PV^{k,j} \times \PV^{p,q} \to \PV^{p+k-1,j+q} 
 \]
 extends $u$-linearly to endow \eqref{eqn:pv1} with the structure of a dg Lie algebra.
 We refer to this as the Kodaira--Spencer, or strict, dg Lie algebra structure.
@@ -115,7 +115,7 @@ Notice that the complex resolving divergence-free vector fields \eqref{eqn:cplx1
 
 \subsubsection{}
 
-Together with the linear BRST differential $Q_{KS}$, the bracket $\{-,-\}_c$ induces the structure of a dg Lie algebra the cohomological shift of the space of local functionals $\oloc(\cE_{KS})[-2d+5]$. 
+Together with the linear BRST differential $Q_{KS}$, the bracket $\{-,-\}_{KS}$ induces the structure of a dg Lie algebra the cohomological shift of the space of local functionals $\oloc(\cE_{KS})[-2d+5]$. 
 
 \begin{thm}[\cite{CLbcov1}]
 The BCOV action 
@@ -124,7 +124,7 @@ I_{BCOV} \in \oloc \left(\cE_{KS} \right)
 \]
 satisfies the classical master equation 
 \[
-Q_{KS} I_{BCOV} + \frac12 \left\{I_{BCOV}, I_{BCOV}\right\}_c = 0 .
+Q_{KS} I_{BCOV} + \frac12 \left\{I_{BCOV}, I_{BCOV}\right\}_{KS} = 0 .
 \]
 In other words, $I_{BCOV}$ determines a Maurer--Cartan element in the dg Lie algebra $\oloc(\cE_{KS})[-2d+5]$.
 \end{thm}
@@ -135,7 +135,7 @@ This action induces the square-zero operator
 \]
 acting on observables of the Kodaira--Spencer fields. 
 In other words, it defines a non-linear BRST operator; in turn it
-induces an $L_\infty$ structure $\{[-]_k\}_{k =1,2,3,\ldots}$ on the complex \eqref{eqn:pv1} whose linear operation is $[-]_1 = Q = \dbar + u\div$. 
+induces an $L_\infty$ structure $\{[-]_k\}_{k =1,2,3,\ldots}$ on the complex \eqref{eqn:pv1} whose linear operation is $[-]_1 = Q_{KS} = \dbar + u\div$. 
 
 This $L_\infty$ structure is clearly not identical as the strict dg Lie algebra structure (it has operations of arbitrary high order). 
 Nevertheless, it is equivalent to the strict dg Lie model: there is an $L_\infty$ automorphism which exchanges the two structures.
@@ -144,7 +144,7 @@ It is easiest to describe this automorphism at the level of observables.
 Use the notation $\Sigma$ for a linear observable of the Kodaira--Spencer fields $\cE_{KS}$. 
 Then, the Kodaira--Spencer dg Lie algebra structure induces the non-linear BRST operator $\delta_{KS}$ given by
 \[
-\delta_{KS} (\Sigma) = Q_{KS} \Sigma + \frac12 [\Sigma,\Sigma]_{NS} .
+\delta_{KS} (\Sigma) = Q_{KS} \Sigma + \frac12 [\Sigma,\Sigma] .
 \]
 
 The non-linear change of coordinates relating the two structures is defined by
@@ -163,7 +163,7 @@ is a subcomplex of $\cE_{KS}$.
 If $d = \dim_\CC(X)=3$ then the shifted Poisson bivector $\Pi_{BCOV}$ restricts to a shifted Poisson bivector on this subcomplex. 
 In particular, the action $I_{BCOV}$ restricts to a solution to the classical master equation for this subcomplex. 
 
-If $d \ne 3$ then there is the following subcomplex $\til{\cE}_{KS}\subset \cE_{\rm KS}$ defined by:
+If $d \ne 3$ then there is the following subcomplex $\til{\cE}_{KS}\subset \cE_{KS}$ defined by:
 \beqn\label{eqn:tilks}
 \begin{tikzcd}
 \ul{-1} & \ul{0} & \cdots & \ul{d-4} & \ul{d-3} & \cdots    \\
@@ -252,13 +252,13 @@ Define the action by the group $\CC^\times$ on the complex $\til{\cE}_{KS}$ as f
 Declare the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
 %Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
 The linear BRST operator is clearly weight zero and the shifted Poisson structure $\Pi_{KS}$ is of weight $+1$. 
-Thus, the shifted Poisson bracket $\{-,-\}_{KS}$ is of $\CC^\times$ weight $-1$.
+Thus, the shifted Poisson bracket $\{-,-\}_{KS}$ is of $\CC^\times$ weight $+1$.
 
 \begin{lem}
-The restricted action $\til{I}_{BCOV}$ has $\CC^\times$ weight $+1$. 
+The restricted action $\til{I}_{BCOV}$ has $\CC^\times$ weight $-1$. 
 In particular, the non-linear BRST operator 
 \beqn\label{eqn:KSbrst}
-\delta_{BCOV} = Q_{KS} + \{\til{I}_{BCOV},-\}
+\delta_{BCOV} = Q_{KS} + \{\til{I}_{BCOV},-\}_{KS}
 \eeqn
 is $\CC^\times$ weight zero.
 \end{lem}
