@@ -190,21 +190,21 @@ Consider the following cochain complex $\cE_{pot}$:
 & & & \Omega^{0, \bu} \ar[r,"\del"] & \Omega^{1, \bu} 
 \end{tikzcd}
 \eeqn
-We will write the fields using the notation
+We will refer to the components of the fields using the notation
 \begin{align*}
 (\mu, \nu) & \in \Pi \PV^{1,\bu}(X)[1] \oplus \PV^{0,\bu}(X) \\
 (\beta, \gamma) & \in \Omega^{0,\bu}(X)[d-5] \oplus \Omega^{1,\bu}(X) [d-4].
 \end{align*}
+The expressions $\mu,\nu,\beta,\gamma$ are still super fields in the sense that they have components in all anti-holomorphic Dolbeault degree. 
 
 Let 
 \[
 \begin{array}{rccc}
-\int^\Omega \colon \Omega^{0,\bu}(X) & \to & \CC [6] \\
+\int^\Omega \colon \Omega_c^{0,\bu}(X) & \to & \CC [??] \\
 \alpha & \mapsto & \int_{X} \Omega \wedge \alpha 
 \end{array}
 \]
 be integration along the holomorphic volume form. 
-
 Define the pairing 
 \[
 \omega \colon \cE_{pot,c} \times \cE_{pot} \to \CC [??] 
@@ -215,18 +215,12 @@ by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
 
 \subsubsection{}
 
-Define the map of cochain complexes
-\[
-\Phi \colon \cE_{pot} \to \til{\cE}_{KS}
-\]
+Define the map of cochain complexes $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$
 by the formulas
 \[
-\Phi (\mu,\nu) = \mu + u \nu,\qquad \Phi(\beta, \gamma) = \div \left( \gamma \vee \Omega^{-1} \right)  .
+\Phi (\mu,\nu) = \mu + u \, \nu,\qquad \Phi(\beta, \gamma) = \div \left( \gamma \vee \Omega^{-1} \right)  .
 \]
-In the last expression we have used the isomorphism
-\[
-(-) \vee \Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu} 
-\]
+In the last expression we have used the isomorphism $\Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu}$
 so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}_{KS}$.
 
 \begin{prop}
@@ -280,7 +274,7 @@ Let $\alpha$ denote a super field living in the first line of \eqref{eqn:tilks} 
 If a field of type $\alpha$ has polyvector type $k$ then it has descendant degree $1-k$, $k=0,1$. 
 If a field of type $\beta$ has polyvector type $l$ then it has descendant degree $d-2-l$.
 
-A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is linear combination of functionals of the form
+A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is a linear combination of functionals of the form
 \[
 \int_\Omega \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
 \]
@@ -318,6 +312,7 @@ Furthermore, this $L_\infty$ algebra structure is equivalent to the strict dg Li
 \end{prop}
 
 \subsubsection{}
+\label{sec:Linfty}
 
 The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
 Hereon, we denote by $\cL_0 = \cE_0[-1]$ this local $L_\infty$ algebra. 
@@ -338,6 +333,37 @@ For $k \geq 2$ the general formula for the $k$-ary bracket is
 
 
 \subsection{The 11-dimensional theory}
+
+\subsubsection{}
+Suppose that $\fg$ is an $L_\infty$ algebra with $L_\infty$ operations $\{[-]^\fg_k\}_{k=1,2,\ldots}$ and that $(A, \d_A)$ is a commutative dg algebra. 
+The graded vector space $\fg \otimes A$ is equipped with the natural structure of an $L_\infty$ algebra with operations $\{[-]_k\}_{k=1,2,\ldots}$ defined by
+\begin{align*}
+[x \otimes a]_1 & = [x]^\fg_1 \otimes a + (-1)^{|x|} x \otimes \d_A a \\
+[x_1 \otimes a_1, \ldots , x_k \otimes a_k]_k & = [x_1,\ldots,x_k]^\fg_k \otimes (a_1 \cdots a_k), \qquad k \geq 2 .
+\end{align*}
+
+We apply this construction to the case of the $L_\infty$ algebra $\cL_0 = \cL_0 (X)$ of \S \ref{sec:Linfty} resolving divergence-free holomorphic vector fields on a Calabi--Yau manifold $X$ and the smooth de Rham complex $(\Omega^\bu(L) , \d_L)$ where $L$ is any smooth manifold. 
+We thus obtain the structure of an $L_\infty$ algebra on $\cL_0(X) \otimes \Omega^{\bu}(L)$. 
+One can immediately check that this defines a local $L_\infty$ algebra on the product manifold $X \times L$. 
+
+\subsubsection{}
+
+Associated to any local $L_\infty$ algebra is a classical field theory in the BV formalism that one refers to as BF theory.
+We recall the construction. 
+Let $\cL$ be any local $L_\infty$ algebra, it is the sheaf of sections of some graded vector bundle $L$. 
+For a section $A \in \cL$, introduce the `higher curvature map' defined by the formula
+\[
+\mathsf{F}_A = [A]_1 + \frac12 [A,A]_2 + \frac{1}{3!} [A,A,A]_3 + \cdots .
+\]
+
+The fields of the associated BV theory are pairs
+\[
+  (A, B) \in \cL[1] \oplus \cL^{!}[-2] .
+\]
+Here $\cL^!$ denotes the sheaf of sections of the bundle $L^* \otimes {\rm Dens}$, where ${\rm Dens}$ is the bundle of densities. 
+The shifted symplectic BV pairing is the obvious integration pairing between $A$ and $B$. 
+
+The action functional reads $S_{\rm BF} = \int B \, \mathsf{F}_{A}$ which leads to the equations of motion $\mathsf{F}_{A} = 0$ and $\mathsf{D}_A B= 0$ where $\mathsf{D}_A$ is the higher covariant derivative along $A$. 
 
 \subsection{A family of deformations} 
 
