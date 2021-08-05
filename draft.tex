@@ -164,13 +164,13 @@ If $d = \dim_\CC(X)=3$ then the shifted Poisson bivector $\Pi_{BCOV}$ restricts 
 In particular, the action $I_{BCOV}$ restricts to a solution to the classical master equation for this subcomplex. 
 
 If $d \ne 3$ then there is the following subcomplex $\til{\cE}_{KS}\subset \cE_{\rm KS}$ defined by:
-\[
+\beqn\label{eqn:tilks}
 \begin{tikzcd}
 \ul{-1} & \ul{0} & \cdots & \ul{d-4} & \ul{d-3} & \cdots    \\
 \PV^{1,\bu} \ar[r] & u\PV^{0,\bu} & & & & &  \\
 & & & \PV^{d-2, \bu} \ar[r] & u \PV^{d-3, \bu} \ar[r] & \cdots &   .
 \end{tikzcd}
-\]
+\eeqn
 And one can check that the shifted Poisson bivector restricts to a shifted Poisson bivector on this subcomplex. 
 Thus, we have the following.
 
@@ -259,14 +259,46 @@ Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\t
 The linear BRST operator is of weight zero and the pairing $\omega$ is of weight $+1$. 
 Thus, the shifted Poisson bracket $\{-,-\}$ is of $\CC^\times$ weight $-1$.
 
+There is also a $\CC^\times$ action on the fields $\til{\cE}_{KS}$ of Kodaira--Spencer theory by declaring the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
+
 \begin{lem}
-The restricted action $I_{pot} = \Phi^* I_{BCOV}$ has $\CC^\times$ weight $+1$. 
+The restricted action $I_{pot} = \Phi^* \til{I}_{BCOV}$ has $\CC^\times$ weight $+1$. 
 In particular, the non-linear BRST operator 
 \[
 \delta_{pot} = Q_{pot} + \{I_{pot},-\}
 \]
 is $\CC^\times$ weight zero.
 \end{lem}
+\begin{proof}
+The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $I_{BCOV}$ is weight $+1$. 
+We will make use of two gradings on $\til{\cE}_{KS}$. 
+The first is by holomorphic polyvector field type, and the second is by descendant degree.
+The summand $u^l \PV^{k,\bu}$ is polyvector type $k$ and descendant degree $l$. 
+
+We introduce notation in this proof that won't be used later on. 
+Let $\alpha$ denote a super field living in the first line of \eqref{eqn:tilks} and let $\beta$ denote a super field living in the second line of \eqref{eqn:tilks}.
+If a field of type $\alpha$ has polyvector type $k$ then it has descendant degree $1-k$, $k=0,1$. 
+If a field of type $\beta$ has polyvector type $l$ then it has descendant degree $d-2-l$.
+
+A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is linear combination of functionals of the form
+\[
+\int_\Omega \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
+\]
+Let $k_i$ be the polyvector field type of $\alpha_i$ and let $l_j$ be the polyvector field type of $\beta_j$. 
+In order for this expression to contribute nontrivially to the BCOV action two constraints must hold:
+\begin{align*}
+\sum_{i=1}^m k_i + \sum_{j=1}^n l_j & = d \\
+\sum_{i=1}^m (1-k_i) + \sum_{j=1}^n (d-2-l_j) & = m+n-3 .
+\end{align*}
+The first constraint ensures that the integrand is of top polyvector degree. 
+The second constraint is on the descendant degree, see \brian{ref above}. 
+
+Simplifying these two equations, one finds the condition
+\[
+m+n-3 = m+(d-2)n - d 
+\]
+which implies $n=1$, as desired. 
+\end{proof}
 
 Consider the cochain complex $\left(\oloc(\cE_{pot}) \, , \, \delta_{pot} \right)$ of all local functionals equipped with the non-linear BRST differential $\delta_{pot}$. 
 The $\CC^\times$ weight zero subcomplex is 
