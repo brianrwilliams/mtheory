@@ -264,7 +264,7 @@ In particular, the non-linear BRST operator
 is $\CC^\times$ weight zero.
 \end{lem}
 \begin{proof}
-The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $I_{BCOV}$ is weight $+1$. 
+The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $\til{I}_{BCOV}$ is weight $+1$. 
 We will make use of two gradings on $\til{\cE}_{KS}$. 
 The first is by holomorphic polyvector field type, and the second is by descendant degree.
 The summand $u^l \PV^{k,\bu}$ is polyvector type $k$ and descendant degree $l$. 
@@ -331,6 +331,13 @@ For $k \geq 2$ the general formula for the $k$-ary bracket is
 [\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} = \# \div(\nu_1 \cdots \nu_k \mu_1 \mu_2) .
 \]
 
+We describe the explicit $L_\infty$ automorphism $\Psi \colon (\cL_0)^{L_\infty} \rightsquigarrow (\cL_0)^{strict}$ intertwining the strict dg Lie structure on $\cL_0$ and this $L_\infty$ structure.
+The linear term $\Psi^{(1)} = \id$ is the identity map. 
+The higher terms $\Psi^{(n)}$ are defined by 
+\begin{align*}
+\Psi^{(n)} (\nu_1,\ldots, \nu_{n-k},\mu_1,\ldots, \mu_k) & = \delta_{k=2} \nu_1 \cdots \nu_{n-2} \mu_1 \mu_2 . \\
+\end{align*}
+\brian{someone check me}
 
 \subsection{The 11-dimensional theory}
 
