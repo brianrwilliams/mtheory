@@ -180,93 +180,92 @@ The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equat
 \end{prop}
 %Applying this to the $k$th exterior power of the holomorphic tangent bundle $V = \wedge^k \T_X$, we obtain a resolution of the sheaf of $k$-linear polyvector fields which we denote by $\PV^{k,\bu} (X) = \Omega^{0,\bu}(X, \wedge^k \T_X)$. 
 
+%\subsubsection{}
+%
+%Consider the following cochain complex $\cE_{pot}$:
+%\beqn\label{eqn:E}
+%\begin{tikzcd}
+%\ul{-1} & \ul{0} & \cdots & \ul{d-5} & \ul{d-4} &   \\
+%\PV^{1,\bu} \ar[r,"\div"] & \PV^{0,\bu} & \cdots & & \\
+%& & & \Omega^{0, \bu} \ar[r,"\del"] & \Omega^{1, \bu} 
+%\end{tikzcd}
+%\eeqn
+%We will refer to the components of the fields using the notation
+%\begin{align*}
+%(\mu, \nu) & \in \Pi \PV^{1,\bu}(X)[1] \oplus \PV^{0,\bu}(X) \\
+%(\beta, \gamma) & \in \Omega^{0,\bu}(X)[d-5] \oplus \Omega^{1,\bu}(X) [d-4].
+%\end{align*}
+%The expressions $\mu,\nu,\beta,\gamma$ are still super fields in the sense that they have components in all anti-holomorphic Dolbeault degree. 
+%
+%Let 
+%\[
+%\begin{array}{rccc}
+%\int^\Omega \colon \Omega_c^{0,\bu}(X) & \to & \CC [??] \\
+%\alpha & \mapsto & \int_{X} \Omega \wedge \alpha 
+%\end{array}
+%\]
+%be integration along the holomorphic volume form. 
+%Define the pairing 
+%\[
+%\omega \colon \cE_{pot,c} \times \cE_{pot} \to \CC [??] 
+%\]
+%by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
+%
+%\brian{defines Poisson bivector $\Pi$.}
+%
+%\subsubsection{}
+
+%Define the map of cochain complexes $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$
+%by the formulas
+%\[
+%\Phi (\mu,\nu) = \mu + u \, \nu,\qquad \Phi(\beta, \gamma) = \div \left( \gamma \vee \Omega^{-1} \right)  .
+%\]
+%In the last expression we have used the isomorphism $\Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu}$
+%so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}_{KS}$.
+%
+%\begin{prop}
+%\label{prop:pot}
+%The map $\Phi \colon  \cE_{pot} \to \til{\cE}_{KS}$ intertwines the linear BRST differentials and the shifted Poisson bivectors $\Phi_*\Pi = \til{\Pi}_{KS}$. 
+%In particular, it defines a map of dg Lie algebras
+%\[
+%\Phi^* \colon \big(\oloc(\cE_{KS}),\{-,-\}_c, Q_{KS} \big) \to \big(\oloc(\cE_{pot}),\{-,-\}, Q \big)
+%\]
+%\end{prop}
+%
+%\begin{proof}
+%prove this
+%\end{proof}
+%
+%As a corollary of Proposition \ref{prop:tilbcov} and Proposition \ref{prop:pot} we have the following result. 
+%
+%\begin{cor}
+%The BCOV action $\til{I}_{BCOV}$ restricts along $\Phi$ to a solution of the classical master equation for $\cE_{pot}$:
+%\begin{align*}
+%I_{pot} & = \Phi^* \til{I}_{BCOV} \\
+%Q I_{pot} + \frac12 \{I_{pot},I_{pot}\} & = 0 .
+%\end{align*} 
+%\end{cor} 
+
 \subsubsection{}
 
-Consider the following cochain complex $\cE_{pot}$:
-\beqn\label{eqn:E}
-\begin{tikzcd}
-\ul{-1} & \ul{0} & \cdots & \ul{d-5} & \ul{d-4} &   \\
-\PV^{1,\bu} \ar[r,"\div"] & \PV^{0,\bu} & \cdots & & \\
-& & & \Omega^{0, \bu} \ar[r,"\del"] & \Omega^{1, \bu} 
-\end{tikzcd}
-\eeqn
-We will refer to the components of the fields using the notation
-\begin{align*}
-(\mu, \nu) & \in \Pi \PV^{1,\bu}(X)[1] \oplus \PV^{0,\bu}(X) \\
-(\beta, \gamma) & \in \Omega^{0,\bu}(X)[d-5] \oplus \Omega^{1,\bu}(X) [d-4].
-\end{align*}
-The expressions $\mu,\nu,\beta,\gamma$ are still super fields in the sense that they have components in all anti-holomorphic Dolbeault degree. 
-
-Let 
-\[
-\begin{array}{rccc}
-\int^\Omega \colon \Omega_c^{0,\bu}(X) & \to & \CC [??] \\
-\alpha & \mapsto & \int_{X} \Omega \wedge \alpha 
-\end{array}
-\]
-be integration along the holomorphic volume form. 
-Define the pairing 
-\[
-\omega \colon \cE_{pot,c} \times \cE_{pot} \to \CC [??] 
-\]
-by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
-
-\brian{defines Poisson bivector $\Pi$.}
-
-\subsubsection{}
-
-Define the map of cochain complexes $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$
-by the formulas
-\[
-\Phi (\mu,\nu) = \mu + u \, \nu,\qquad \Phi(\beta, \gamma) = \div \left( \gamma \vee \Omega^{-1} \right)  .
-\]
-In the last expression we have used the isomorphism $\Omega^{-1} \colon \Omega^{1,\bu} \xto{\cong} \PV^{d-1,\bu}$
-so that $\div(\gamma \vee \Omega^{-1}) \in \PV^{d-2,\bu} \subset \til{\cE}_{KS}$.
-
-\begin{prop}
-\label{prop:pot}
-The map $\Phi \colon  \cE_{pot} \to \til{\cE}_{KS}$ intertwines the linear BRST differentials and the shifted Poisson bivectors $\Phi_*\Pi = \til{\Pi}_{KS}$. 
-In particular, it defines a map of dg Lie algebras
-\[
-\Phi^* \colon \big(\oloc(\cE_{KS}),\{-,-\}_c, Q_{KS} \big) \to \big(\oloc(\cE_{pot}),\{-,-\}, Q \big)
-\]
-\end{prop}
-
-\begin{proof}
-prove this
-\end{proof}
-
-As a corollary of Proposition \ref{prop:tilbcov} and Proposition \ref{prop:pot} we have the following result. 
-
-\begin{cor}
-The BCOV action $\til{I}_{BCOV}$ restricts along $\Phi$ to a solution of the classical master equation for $\cE_{pot}$:
-\begin{align*}
-I_{pot} & = \Phi^* \til{I}_{BCOV} \\
-Q I_{pot} + \frac12 \{I_{pot},I_{pot}\} & = 0 .
-\end{align*} 
-\end{cor} 
-
-\subsubsection{}
-
-Define the action by the group $\CC^\times$ on $\cE$ as follows. 
-Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
-The linear BRST operator is of weight zero and the pairing $\omega$ is of weight $+1$. 
-Thus, the shifted Poisson bracket $\{-,-\}$ is of $\CC^\times$ weight $-1$.
-
-There is also a $\CC^\times$ action on the fields $\til{\cE}_{KS}$ of Kodaira--Spencer theory by declaring the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
+Define the action by the group $\CC^\times$ on the complex $\til{\cE}_{KS}$ as follows.
+Declare the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
+%Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
+The linear BRST operator is clearly weight zero and the shifted Poisson structure $\Pi_{KS}$ is of weight $+1$. 
+Thus, the shifted Poisson bracket $\{-,-\}_{KS}$ is of $\CC^\times$ weight $-1$.
 
 \begin{lem}
-The restricted action $I_{pot} = \Phi^* \til{I}_{BCOV}$ has $\CC^\times$ weight $+1$. 
+The restricted action $\til{I}_{BCOV}$ has $\CC^\times$ weight $+1$. 
 In particular, the non-linear BRST operator 
-\[
-\delta_{pot} = Q_{pot} + \{I_{pot},-\}
-\]
+\beqn\label{eqn:KSbrst}
+\delta_{BCOV} = Q_{KS} + \{\til{I}_{BCOV},-\}
+\eeqn
 is $\CC^\times$ weight zero.
 \end{lem}
 \begin{proof}
-The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $I_{BCOV}$ is weight $+1$. 
+%The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $\til{I}_{BCOV}$ is weight $+1$. 
 We will make use of two gradings on $\til{\cE}_{KS}$. 
-The first is by holomorphic polyvector field type, and the second is by descendant degree.
+The first is holomorphic polyvector field type, and the second is descendant degree.
 The summand $u^l \PV^{k,\bu}$ is polyvector type $k$ and descendant degree $l$. 
 
 We introduce notation in this proof that won't be used later on. 
@@ -294,16 +293,16 @@ m+n-3 = m+(d-2)n - d
 which implies $n=1$, as desired. 
 \end{proof}
 
-Consider the cochain complex $\left(\oloc(\cE_{pot}) \, , \, \delta_{pot} \right)$ of all local functionals equipped with the non-linear BRST differential $\delta_{pot}$. 
+Consider the cochain complex $\left(\oloc(\til{\cE}_{KS}) \, , \, \delta_{KS} \right)$ of all local functionals equipped with the non-linear BRST differential \eqref{eqn:KSbrst}.  
 The $\CC^\times$ weight zero subcomplex is 
 \[
-\big(\oloc(\cE_{pot})^{(0)} \, , \, \delta_{pot} \big) = \big(\oloc(\cE_0) \, , \, \delta_{pot} \big) 
+\big(\oloc(\til\cE_{KS})^{(0)} \, , \, \delta_{KS} \big) = \big(\oloc(\cE_0) \, , \, \delta_{KS} \big) 
 \]
-where $\cE_0 = \PV^{1,\bu}[1] \oplus \PV^{0,\bu}$ is the subcomplex of the fields $\cE_{pot}$ consisting of just the $\mu$ and $\nu$ fields.
+where $\cE_0 = \PV^{1,\bu}[1] \oplus u \PV^{0,\bu}$ is the subcomplex of the fields $\til\cE_{KS}$ comprising the first line of \eqref{eqn:tilks}.
 
 \begin{prop}
 \label{prop:Linfty}
-The differential $\delta_{pot}$ acting on the weight zero fields induces a local $L_\infty$ algebra structure on the complex of vector bundles 
+The differential $\delta_{KS}$ acting on the weight zero fields induces a local $L_\infty$ algebra structure on the complex of vector bundles 
 \[
 \cE_0 [-1] = \PV^{1,\bu} \oplus \PV^{0,\bu}[-1]
 \]
@@ -331,6 +330,13 @@ For $k \geq 2$ the general formula for the $k$-ary bracket is
 [\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} = \# \div(\nu_1 \cdots \nu_k \mu_1 \mu_2) .
 \]
 
+We describe the explicit $L_\infty$ automorphism $\Psi \colon (\cL_0)^{L_\infty} \rightsquigarrow (\cL_0)^{strict}$ intertwining the strict dg Lie structure on $\cL_0$ and this $L_\infty$ structure.
+The linear term $\Psi^{(1)} = \id$ is the identity map. 
+The higher terms $\Psi^{(n)}$ are defined by 
+\begin{align*}
+\Psi^{(n)} (\nu_1,\ldots, \nu_{n-k},\mu_1,\ldots, \mu_k) & = \delta_{k=1} \nu_1 \cdots \nu_{n-1} \mu_1 . \\
+\end{align*}
+\brian{someone check me}
 
 \subsection{The 11-dimensional theory}
 
