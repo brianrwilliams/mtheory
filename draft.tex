@@ -11,18 +11,21 @@
 
 \title{Twisted 11-dimensional supergravity, I}
 \author{Surya Raghavendran}
-\address{Perimeter Institute}
+\address{Perimeter Institute for Theoretical Physics \\ 31 Caroline Street North \\ 
+Waterloo, Ontario N2L 2Y5\\ Canada}
 \email{??}
 \author{Ingmar Saberi}
 \address{Ludwig-Maximilians-Universit\"at M\"unchen \\ Fakult\"at f\"ur Physik \\ Theresienstra\ss{}e 37 \\ 80333 M\"unchen \\ Deutschland}
 \email{i.saberi@physik.uni-muenchen.de}
 \author{Brian R. Williams}
-\address{School of Mathematics, University of Edinburgh, Edinburgh, UK}
+\address{School of Mathematics \\ University of Edinburgh \\ Edinburgh EH9 3FD \\ Scotland}
 \email{brian.williams@ed.ac.uk}
 \begin{abstract}
 to do
 \end{abstract}
 \maketitle
+
+\newpage 
 
 \section{A family of moduli spaces} 
 
@@ -92,14 +95,22 @@ Recall that an $L_\infty$ morphism $\Phi: \cL \rightsquigarrow \cL'$ is the same
 }
 between their respective Lie algebra cochains. It follows from this that \emph{any} automorphism $\Phi$ of the free commutative algebra $C^\bu(\cL)$ defines a new model of the $L_\infty$ algebra $\cL$, for which the Chevalley--Eilenberg differential is obtained by conjugating $\d_\cL$ by~$\Phi$, and where $\Phi$ itself defines the $L_\infty$ isomorphism.
 
-Let $\cL$ be the 
-We consider the following two automorphisms  
+Let $\cL$ be the sheaf~\eqref{eqn:cplx1} of dg Lie algebras resolving divergence-free vector fields constructed above.
+We consider the following automorphism of~$C^\bu(\cL)$, defined by its action on generators:\ingmar{notation for operators vs fields}
+\deq[eq:newbase]{
+%    \Psi_\infty:  \nu &\mapsto -\frac{\nu}{1-\nu}, \quad \mu \mapsto -\mu \\
+    \Psi_\infty: \nu \mapsto 1 - e^{-\nu}, \quad \mu \mapsto e^\nu \mu.
+}
+This map defines a new model of the local $L_\infty$ algebra, which we will call $\cL_\infty$. The notation refers to the fact that this new model has nonvanishing $L_\infty$ brackets of every order. It is this new model that we will use to define the eleven-dimensional theory of twisted supergravity (as well as the family of analogous formal moduli problems on products of odd Calabi--Yau manifolds with~$\R$). 
+\ingmar{I want to write the other automorphism later, I think; otherwise we have to write the composition, since we presented it on bcov}
 
-The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
-Hereon, we denote by $\cL_0 = \cE_0[-1]$ this local $L_\infty$ algebra. 
 
-We can unpack Proposition \ref{prop:Linfty} to describe the $L_\infty$ structure on $\cL_0$ explicitly. 
-Recall we have two types of elements $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. 
+%The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
+%Hereon, we denote by $\cL_0 = \cE_0[-1]$ this local $L_\infty$ algebra. 
+
+%We can unpack Proposition \ref{prop:Linfty} to describe the $L_\infty$ structure on $\cL_0$ explicitly. 
+We can describe the $L_\infty$ structure on our new model $\cL_\infty$ more explicitly.
+Recall that we have two types of elements: $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. 
 The first few nonzero brackets are
 \begin{align*}
 [\mu]_1 & = \dbar \mu + \div \mu \\
@@ -174,14 +185,20 @@ Recall further that we constructed two equivalent descriptions of the BF theory 
 \deq{
   I_\strict = \beta\partial_\Omega \mu + \frac{1}{2} \gamma [\mu,\mu] + \beta[\mu,\nu].
 }
-The other action is of infinite order, and is related to the BCOV action functional via the procedure outlined above \ingmar{or somewhere}. Explicitly, this action functional is given by 
+The other action is of infinite order. (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} Explicitly, this action functional is given by 
 \deq{
-  I_\infty = \beta \partial_\Omega \mu + \frac{1}{1-\nu} (\partial \gamma) \mu^2,
+  I_\infty = \beta \partial_\Omega \mu + \frac{1}{1-\nu} (\partial \gamma) \mu^2.
 }
 
+We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to a Poisson automorphism of the Lie algebra cochains of the BF theory, which defines an equivalence of cyclic $L_\infty$ algebras. \ingmar{how should we say this} Explicitly, the map is given by
+\deq{
+  \nu \mapsto 1-e^{-\nu}, \ldots
+}
 \subsection{A family of deformations} 
 
 %check CME
+
+\subsection{Further equivalences}
 
 \subsection{Equations of motion}
 
