@@ -205,7 +205,7 @@ We have constructed two equivalent descriptions of the BF theory which share the
 
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(L)$ is
 \deq{
-  S_\strict = \int^\Omega \beta (\dbar + \d_L) \nu + \int^\Omega \gamma (\dbar + \d_L) \mu + \int^\Omega \beta\partial_\Omega \mu + \frac{1}{2} \int^\Omega \gamma [\mu,\mu] + \int^\Omega \beta[\mu,\nu].
+  S_\strict =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +  \beta\partial_\Omega \mu + \frac{1}{2}  \gamma [\mu,\mu] +  \beta[\mu,\nu].
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
@@ -213,7 +213,7 @@ The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{
 (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
 Explicitly, this action functional is
 \deq{
-  S_\infty = \int^\Omega \beta (\dbar + \d_L) \nu + \int^\Omega \gamma (\dbar + \d_L) \mu + \frac12 \int^\Omega \beta \partial_\Omega \mu + \int^\Omega\frac{1}{1-\nu} (\partial \gamma) \mu^2.
+  S_\infty =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +   \beta \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} (\partial \gamma) \mu^2.
 }
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
@@ -412,7 +412,7 @@ The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equat
 %Let 
 %\[
 %\begin{array}{rccc}
-%\int^\Omega \colon \Omega_c^{0,\bu}(X) & \to & \CC [??] \\
+% \colon \Omega_c^{0,\bu}(X) & \to & \CC [??] \\
 %\alpha & \mapsto & \int_{X} \Omega \wedge \alpha 
 %\end{array}
 %\]
@@ -421,7 +421,7 @@ The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equat
 %\[
 %\omega \colon \cE_{pot,c} \times \cE_{pot} \to \CC [??] 
 %\]
-%by the formula $\int^\Omega \gamma \vee \mu + \int^\Omega \beta \nu.$
+%by the formula $ \gamma \vee \mu +  \beta \nu.$
 %
 %\brian{defines Poisson bivector $\Pi$.}
 %
@@ -487,7 +487,7 @@ If a field of type $\beta$ has polyvector type $l$ then it has descendant degree
 
 A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is a linear combination of functionals of the form
 \[
-\int^\Omega \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
+ \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
 \]
 Let $k_i$ be the polyvector field type of $\alpha_i$ and let $l_j$ be the polyvector field type of $\beta_j$. 
 In order for this expression to contribute nontrivially to the BCOV action two constraints must hold:
@@ -531,6 +531,211 @@ Furthermore, this $L_\infty$ algebra structure is equivalent to the strict dg Li
 \subsection{Residual supersymmetry} 
 
 %m2brane
+
+\parsec[sec:susy]
+
+The (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
+\[
+  \ft_{11d} = V \oplus \Pi S
+\]
+where $S$ is the (unique) spin representation and $V \cong \CC^{11}$ the complex vector representation, of~$\lie{so}(11, \CC)$. 
+The bracket is the unique surjective $\lie{so}(11,\CC)$-equivariant map from the symmetric square of~$S$ to~$V$;
+this decomposes into three irreducibles, 
+\beqn\label{eqn:decomp}
+  \Sym^2(S) \cong V \oplus \wedge^2 V \oplus \wedge^5 V.
+\eeqn
+Denote by $\Gamma_{\wedge^1}, \Gamma_{\wedge^2}, \Gamma_{\wedge^5}$ the projections onto each of the summands above. 
+The bracket in $\ft_{11d}$ is defined using the first projection
+\[
+[\psi, \psi'] = \Gamma_{\wedge^1} (\psi, \psi') .
+\]
+The super Poincar\'{e} algebra is
+\[
+  \lie{siso}_{11d} = \lie{so}(11 , \CC) \ltimes \ft_{11d} .
+\]
+The $R$-symmetry is trivial in 11-dimensional supersymmetry. 
+
+
+\parsec[sec:m2brane]
+
+Extensions of the supersymmetry algebra correspond to the existence of branes in the original theory of supergravity \brian{good reference?}. 
+In 11d, there are two such extensions corresponding to the M2 brane and the M5 brane.
+We begin by describing a dg Lie algebra model for the M2 brane algebra, then we will discuss its relationship to other descriptions as a Lie 3-algebra \cite{Basu_2005,Bagger_2007,fiorenza2015super}. 
+
+The M2 brane algebra is dg Lie algebra extension of the super Poincar\'e algebra $\lie{siso}_{11d}$.
+Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.  
+ 
+The super dg Lie algebra $\m2$ is the extension of $\lie{siso}_{11d}$ by the cocycle
+  \[
+    c_{M2} \in \clie^2\left(\lie{siso}_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
+  \]
+  defined by the formula 
+  \[c_{M2} (\psi, \psi') = \Gamma_{\wedge^2}(\psi, \psi') \in \Omega^2(\RR^{11})\]
+  where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$, thought of as the space of constant coefficient two-forms, as in the decomposition \eqref{eqn:decomp}.
+
+We view $\m2$ as a $\ZZ \times \ZZ/2$-graded dg Lie algebra where the bracket is bidegree $(0,+)$ and the differential is bidegree $(1,+)$.
+
+\parsec[sec:m2branetwist]
+
+Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$.
+This supercharge defines the holomorphic twist of 11-dimensional supergravity. 
+\brian{cite \cite{SWspinor}}
+We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
+
+Such a supercharge defines a maximal isotropic subspace $L \subset V$. 
+We can decompose the algebra into $\lie{sl}(L) = \lie{sl}(5)$ representations by
+\deq{
+  V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L^\vee.
+}
+In the expression for $S$, we are omitting factors of $\det(L)^{\frac12}$ for simplicity. 
+Also, $\lie{so}(11, \CC)$ decomposes as
+\[
+\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee .
+\]
+Furthermore, the spinorial representation can be identified with
+\[
+S = \wedge^\bu (L^\vee) = \CC \oplus L^\vee \oplus \wedge^2 L^\vee \oplus \wedge^3 L^\vee \oplus \wedge^4 L^\vee \oplus \wedge^5 L^\vee .
+\]
+The element $Q$ lives in the first summand.
+Let ${\rm Stab}(Q) \subset \lie{so}(11,\CC)$ be the stabilizer of $Q$. 
+This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$.
+
+\begin{prop}\label{prop:model}
+Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the dg Lie algebra with bracket that on $\m2$ and with the differential $\d + [Q,-]$. 
+As a $\ZZ/2$ graded space, the cohomology $H^\bu(\m2^Q)$ is
+\[
+    L^\vee \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^3 L^\vee\right) \oplus \CC
+  \]
+whose elements we denote by $(v, m, \psi, c)$. 
+\begin{itemize}
+\item[(1)] 
+Let $\fg$ denote the following dg Lie algebra which as a cochain complex is
+\[
+H^\bu(\m2^Q) \oplus (\Pi L \xto{\id} L)  .
+\]
+Denote the elements of the second summand by $(\tilde{\lambda}, \lambda)$. 
+The nontrivial Lie brackets are
+\begin{align*}
+[v,\lambda] & = \<v, \lambda\> \in \CC_c \\ 
+[v,\psi] & = \<v, \psi\> \in \Pi L_{\Tilde{\lambda}} \\
+[\psi, \psi'] & = \psi \wedge \psi' \in L^\vee_v 
+\end{align*}
+where we use the isomorphism $\wedge^4 L \cong L^\vee$.
+There is an $L_\infty$ map 
+\[
+\fg \rightsquigarrow \m2^Q
+\] 
+which is a quasi-isomorphism of complexes.  
+\item[(2)]
+  The transferred $L_\infty$ structure on $H^\bu(\fg) \cong H^\bu(\m2^Q)$ is \brian{finish}
+\end{itemize}
+\end{prop}
+\begin{proof}
+The supercharge $Q$ is odd and of cohomological degree zero.
+Since the differential on $\m2$ is even of cohomological degree $+1$, only a totalized $\ZZ/2$ grading makes the differential $\d + [Q,-]$ homogenous. 
+
+The cohomology of the non-centrally extended algebra was computed in \cite{SWspinor}, we briefly recall the result. 
+The element $Q$ only acts nontrivially on the summands $\wedge^4 L^\vee$ and $\wedge^5 L^\vee$ in $S$. 
+The image of $\wedge^4 L^\vee \cong L$ trivializes the antiholomorphic translations while the image of $\wedge^5 L^\vee$ trivializes the time translation.
+So, of the translations, only the holomorphic ones $L^\vee$ survive.
+The map 
+\[
+[Q,-] \colon \lie{so}(11,\CC) \to S 
+\] 
+is the projection onto $\wedge^0 L^\vee \oplus \wedge^1 L^\vee \oplus \wedge^2 L^\vee$. 
+The kernel of $[Q,-]$ is the stabilizer ${\rm Stab}(Q)$.
+
+In summary, the space of odd translations which survive cohomology is $\wedge^3 L^\vee \cong \wedge^2 L$.
+This completes the calculation of the cohomology. 
+
+We embed $\fg$ into $\m2^Q$ in the following way: ${\rm Stab}(Q)$ and $L^\vee$ sit inside in the evident way.
+The central element maps to $c \mapsto \pm 1 \in \Omega^0(\RR^{11})$.
+The summand $L_\lambda$ is mapped to the linear functions in $\Omega^0(\RR^{11})$ and $\Pi L_{\Tilde{\lambda}}$ is sent to the constant coefficient one-forms in $\Pi \Omega^1(\RR^{11})$. 
+It remains to declare where $\psi \in \wedge^2 L$ is mapped.
+
+Define the map
+\[
+H \colon \Omega^2 (\RR^{11}) \to \Omega^1(\RR^{11})
+\]
+which sends a two-form $\alpha$ to the one-form $H \alpha$ defined by the formula
+\[
+(H \alpha) (x) = \int_0^x \alpha .
+\]
+
+Notice that if $\alpha$ is $\d$-closed then $\d (H \alpha) = \alpha$. 
+It follows that any element $\psi \in \wedge^2 L \subset S$ can be lifted to a closed element at the cochain level in $\m2^Q$ by the formula
+\[
+\Tilde{\psi} = \psi - H \Gamma_{\wedge^2} (Q, \psi) \in \Pi S \oplus \Pi \Omega^1 .
+\]
+Thus, sending $\psi \mapsto \Tilde{\psi}$ defines a cochain map $\fg \to \m2^Q$. 
+
+The Lie bracket $[\Tilde{\psi}, \Tilde{\psi}']$ agrees with $[\psi, \psi']$. 
+On the other hand, in $\m2^Q$ there is the Lie bracket 
+\[
+[v,\Tilde{\psi}] = - L_v (H \Gamma_{\wedge^2} (Q, \psi)) = -\<v, \Gamma_{\wedge^2}(Q, \psi) - \d \<v, H \Gamma_{\wedge^2}(Q, \psi) .
+\]
+The first term agrees with the bracket $[v, \psi]_{\fg}$ in $\fg$. 
+The other term is exact in $\m2^Q$ and can hence be corrected by the following bilinear  
+\[
+v \otimes \psi \mapsto \<v, H \Gamma_{\wedge^2} \> \in L_\lambda .
+\] 
+Together with the cochain map described above, this bilinear term prescribes the desired $L_\infty$ map. 
+
+\end{proof}
+
+
+Consider now the eleven-dimensional theory $\cT = \cT_{\CC^5 \times \RR}$ defined on $\CC^5 \times \RR$. 
+The BV action induces the structure of a dg Lie algebra on $\cT[1]$. 
+
+\begin{prop}
+The assignment
+\brian{??} defines a map of $\ZZ/2$-graded dg Lie algebras 
+\[
+\m2 \to \cT[1] .
+\]
+In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
+\end{prop}
+
+
+\subsection{$L_\infty$ extension}
+
+In this section we compare to the work of \brian{refs}.
+In these references, the algebra $\m2$ is defined as an $L_\infty$  
+central extension of $\lie{siso}_{11d}$. 
+
+Recall that given two spinors $\psi, \psi' \in S$ we can form the constant coefficient two-form $\Gamma_{\wedge^2} (\psi, \psi')$. 
+Using this two-form we can define the following four-linear expression
+\[
+\mu_2 (\psi, \psi',v,v') = \<v \wedge v', \Gamma(\psi, \psi')\> .
+\]
+This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\ft_{11d})$. 
+In \cite{??} it is shown that this cocycle $\mu_2$ is 
+
+\subsection{Embedding $\m2^Q$ in twisted supergravity} 
+
+In Proposition \ref{prop:model} we have proposed a dg model $\fg$ for the $Q$-deformed M2-brane algebra. 
+
+%For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
+The model $\fg$ takes the following form
+\beqn 
+\begin{tikzcd}
+\ul{even} & \ul{odd} & \ul{even} \\
+ L_a & \wedge^2 L & L^\vee \\
+\wedge^2 L & & \\
+\lie{sl}(5) \\
+L_b \ar[r, "\id"] & L_c .
+\end{tikzcd}
+\eeqn
+The subscripts in $L_a, L_b, L_c$ are used to distinguish between the various copies of $L$.
+
+The map from the dg model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory is as follows. 
+\begin{align*}
+ \in L_a & \mapsto ?? \\
+z_i \wedge z_j \in \wedge^2 L & \mapsto z_i \d z_j - z_j \d z_i \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
+\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_b & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+z_i \in L_c & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR)
+\end{align*}
 
 \subsection{Superconformal algebras}
 
