@@ -76,33 +76,39 @@ The Lie bracket defined by the formulas
 [\mu, \mu'] & = L_\mu \mu' \\
 [\mu, \nu] & = L_\mu \nu 
 \end{align*}
-is compatible with $\div$ and endows \eqref{eqn:cplx1} with the structure of a sheaf of dg Lie algebras.\footnote{This is a local dg Lie algebra, see \cite[??]{CG2}.}
+is compatible with $\div$ and endows \eqref{eqn:cplx1} with the structure of a sheaf of dg Lie algebras.
+We will refer to this sheaf by the symbol $\cL_0(X)$, or just $\cL_0$ if $X$ is understood. 
 
-\parsec 
-\ingmar{a section defining polyvector fields; not sure where this belongs}
-Equipped with this structure, the complex we have written maps in an obvious way into the complex of polyvector fields on~$X$. Recall that one defines
-\deq{
-  \PV^{i,j}(X) = \Omega^{0,j}(X, \wedge^i \T_X).
-}
-\ingmar{Wedges look super fucked up}
-The complex $\PV^{\bu,\bu}$ is equipped with two natural differentials: the Dolbeault operator $\dbar$, of $(i,j)$-degree $(0,1)$, and the holomorphic divergence operator $\div$, which carries $(i,j)$-degree $(-1,0)$. Assigning total degree $- i + j$ to $\PV^{i,j}$ thus gives the total polyvector fields the structure of a bicomplex. We will use the shorthand notation $\PV^i = (\PV^{i,\bu}, \dbar )$ for the Dolbeault resolution of holomorphic $i$-polyvector fields. 
+The sheaf $\cL_0$ has the structure of a {\em local} dg Lie algebra, see see \cite[??]{CG2}.
+This means that as a graded sheaf, $\cL_0$ is the smooth sections of a graded vector bundle and the differential and Lie bracket are given by differential and bidifferential operators, respectively.
+
 
 \parsec[sec:Linfty]
 
-Recall that an $L_\infty$ morphism $\Phi: \cL \rightsquigarrow \cL'$ is the same datum as a map of commutative dg algebras 
-\deq{
-  \Phi^*: C^\bu(\cL') \to C^\bu(\cL)
-}
-between their respective Lie algebra cochains. It follows from this that \emph{any} automorphism $\Phi$ of the free commutative algebra $C^\bu(\cL)$ defines a new model of the $L_\infty$ algebra $\cL$, for which the Chevalley--Eilenberg differential is obtained by conjugating $\d_\cL$ by~$\Phi$, and where $\Phi$ itself defines the $L_\infty$ isomorphism.
+Recall that an $L_\infty$ algebra is a $\ZZ$-graded vector space $\cL$ together with the data of a square-zero, degree $+1$ derivation $\delta$ of the free commutative graded algebra $\Sym\left(\cL^\vee [-1] \right)$. 
+The Chevalley--Eilenberg cochain complex is 
+\[
+\left(\Sym\left(\cL^\vee [-1] \right), \delta\right) .
+\]
+The Taylor components of $\delta$ define higher brackets $\{[-]_k\}_{k=1,2,\ldots}$ where $[-]_k \colon \cL^{\times k} \to \cL[2-k]$. 
 
-Let $\cL$ be the sheaf~\eqref{eqn:cplx1} of dg Lie algebras resolving divergence-free vector fields constructed above.
-We consider the following automorphism of~$C^\bu(\cL)$, defined by its action on generators:\ingmar{notation for operators vs fields}
+An $L_\infty$ morphism $\Phi: \cL \rightsquigarrow \cL'$ is the same datum as a map of commutative dg algebras 
+\deq{
+  \Phi^*: \clie^\bu(\cL') \to \clie^\bu(\cL)
+}
+between their respective Lie algebra cochains. It follows from this that \emph{any} automorphism $\Phi$ of the free commutative algebra on $\cL^\vee[-1]$ defines a new model of the $L_\infty$ algebra $\cL$, for which the Chevalley--Eilenberg differential is obtained by conjugating $\delta_\cL$ by~$\Phi$, and where $\Phi$ itself defines the $L_\infty$ isomorphism.
+
+$\cL_0$ is the sheaf~\eqref{eqn:cplx1} resolving divergence-free vector fields equipped with the dg Lie algebra structure constructed in the previous section.
+We consider the following automorphism of~$\Sym(\cL_0^\vee[-1])$, defined by its action on generators:\ingmar{notation for operators vs fields}
 \deq[eq:newbase]{
 %    \Psi_\infty:  \nu &\mapsto -\frac{\nu}{1-\nu}, \quad \mu \mapsto -\mu \\
-    \Psi_\infty: \nu \mapsto 1 - e^{-\nu}, \quad \mu \mapsto e^\nu \mu.
+    \Psi_\infty: \nu \mapsto 1 - e^{-\nu}, \quad \mu \mapsto e^{-\nu} \mu.
 }
-This map defines a new model of the local $L_\infty$ algebra, which we will call $\cL_\infty$. The notation refers to the fact that this new model has nonvanishing $L_\infty$ brackets of every order. It is this new model that we will use to define the eleven-dimensional theory of twisted supergravity (as well as the family of analogous formal moduli problems on products of odd Calabi--Yau manifolds with~$\R$). 
-\ingmar{I want to write the other automorphism later, I think; otherwise we have to write the composition, since we presented it on bcov}
+This map defines a new model of the $L_\infty$ algebra with underlying graded vector space the same as \eqref{eqn:cplx1}, which we will call $\cL_\infty$. 
+The formulas for the automorphism above clearly arise from maps of vector bundles and hence endow $\cL_\infty$ with the structure of a local $L_\infty$ algebra, meaning all operations are given by polydifferential operators.  
+
+The notation refers to the fact that this new model has nonvanishing $L_\infty$ brackets of every order. 
+It is this new model that we will use to define the eleven-dimensional theory of twisted supergravity (as well as the family of analogous formal moduli problems on products of odd Calabi--Yau manifolds with~$\R$). 
 
 
 %The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
@@ -118,39 +124,47 @@ The first few nonzero brackets are
 [\nu, \mu_1,\mu_2]_3 & = \div(\nu \mu_1 \mu_2) \\
 [\nu_1,\nu_2, \mu_1,\mu_2]_4 & = \# \div(\nu_1 \nu_2 \mu_1 \mu_2).
 \end{align*}
+\brian{coefficients}
 For $k \geq 2$ the general formula for the $k$-ary bracket is 
 \[
 [\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} = \# \div(\nu_1 \cdots \nu_k \mu_1 \mu_2) .
 \]
 
-We describe the explicit $L_\infty$ automorphism $\Psi \colon (\cL_0)^{L_\infty} \rightsquigarrow (\cL_0)^{strict}$ intertwining the strict dg Lie structure on $\cL_0$ and this $L_\infty$ structure.
-The linear term $\Psi^{(1)} = \id$ is the identity map. 
-The higher terms $\Psi^{(n)}$ are defined by 
-\begin{align*}
-\Psi^{(n)} (\nu_1,\ldots, \nu_{n-k},\mu_1,\ldots, \mu_k) & = \delta_{k=1} \nu_1 \cdots \nu_{n-1} \mu_1 . \\
-\end{align*}
-\brian{someone check me}
+%We describe the explicit $L_\infty$ automorphism $\Psi \colon (\cL_0)^{L_\infty} \rightsquigarrow (\cL_0)^{strict}$ intertwining the strict dg Lie structure on $\cL_0$ and this $L_\infty$ structure.
+%The linear term $\Psi^{(1)} = \id$ is the identity map. 
+%The higher terms $\Psi^{(n)}$ are defined by 
+%\brian{someone check me}
+%\begin{align*}
+%\Psi^{(n)} (\nu_1,\ldots, \nu_{n-k},\mu_1,\ldots, \mu_k) & = \delta_{k=1} \nu_1 \cdots \nu_{n-1} \mu_1 . \\
+%\end{align*}
+
+
+\parsec
+There is yet another $L_\infty$ model for divergence-free vector fields that we remark on here.
+\ingmar{I want to write the other automorphism later, I think; otherwise we have to write the composition, since we presented it on bcov}
 
 
 \subsection{Theories of BF type}
 
-\subsubsection{}
-Suppose that $\fg$ is an $L_\infty$ algebra with $L_\infty$ operations $\{[-]^\fg_k\}_{k=1,2,\ldots}$ and that $(A, \d_A)$ is a commutative dg algebra. 
-The graded vector space $\fg \otimes A$ is equipped with the natural structure of an $L_\infty$ algebra with operations $\{[-]_k\}_{k=1,2,\ldots}$ defined by
+\parsec
+Suppose that $\cL$ is an $L_\infty$ algebra with $L_\infty$ operations $\{[-]^\cL_k\}_{k=1,2,\ldots}$ and that $(A, \d_A)$ is a commutative dg algebra. 
+The graded vector space $\cL \otimes A$ is equipped with the natural structure of an $L_\infty$ algebra with operations $\{[-]_k\}_{k=1,2,\ldots}$ defined by
 \begin{align*}
-[x \otimes a]_1 & = [x]^\fg_1 \otimes a + (-1)^{|x|} x \otimes \d_A a \\
-[x_1 \otimes a_1, \ldots , x_k \otimes a_k]_k & = [x_1,\ldots,x_k]^\fg_k \otimes (a_1 \cdots a_k), \qquad k \geq 2 .
+[x \otimes a]_1 & = [x]^\cL_1 \otimes a + (-1)^{|x|} x \otimes \d_A a \\
+[x_1 \otimes a_1, \ldots , x_k \otimes a_k]_k & = [x_1,\ldots,x_k]^\cL_k \otimes (a_1 \cdots a_k), \qquad k \geq 2 .
 \end{align*}
 
-We apply this construction, taking $\lie{g}$ to be the sheaf of dg Lie algebras resolving divergence-free holomorphic vector fields on a Calabi--Yau manifold $X$, as discussed above, and $A$ to be the smooth de Rham complex $(\Omega^\bu(L) , \d_L)$ where $L$ is any smooth manifold. 
-We thus obtain the structure of an $L_\infty$ algebra on $\cL_0(X) \otimes \Omega^{\bu}(L)$. 
-One can immediately check that this defines a local $L_\infty$ algebra on the product manifold $X \times L$. 
+We apply this construction, taking $\cL$ to be the sheaf resolving divergence-free holomorphic vector fields on a Calabi--Yau manifold $X$ equipped with either the strict dg Lie algebra structure $\cL_0(X)$ or its non-strict $L_\infty$ structure $\cL_\infty (X)$. 
+The algebra $A$ will be the smooth de Rham complex $(\Omega^\bu(L) , \d_L)$ where $L$ is any smooth manifold. 
+
+We thus obtain the structure of an dg Lie algebra on $\cL_0(X) \otimes \Omega^{\bu}(L)$ or an $L_\infty$ algebra $\cL_\infty(X) \otimes \Omega^\bu(L)$.
+These define equivalent local $L_\infty$ algebras on the product manifold $X \times L$. 
 
 \subsubsection{}
 
 Associated to any local $L_\infty$ algebra is a classical field theory in the BV formalism that one refers to as BF theory.
 We recall the construction. 
-Let $\cL$ be any local $L_\infty$ algebra, it is the sheaf of sections of some graded vector bundle $L$. 
+Let $\cL$ be any local $L_\infty$ algebra on some manifold $M$, it is the sheaf of sections of some graded vector bundle $L$. 
 For a section $A \in \cL$, introduce the `higher curvature map' defined by the formula
 \[
 \mathsf{F}_A = [A]_1 + \frac12 [A,A]_2 + \frac{1}{3!} [A,A,A]_3 + \cdots .
@@ -163,37 +177,51 @@ The fields of the associated BV theory are pairs
 Here $\cL^!$ denotes the sheaf of sections of the bundle $L^* \otimes {\rm Dens}$, where ${\rm Dens}$ is the bundle of densities. 
 The shifted symplectic BV pairing is the obvious integration pairing between $A$ and $B$. 
 
-The action functional reads $S_{\rm BF} = \int B \, \mathsf{F}_{A}$ which leads to the equations of motion $\mathsf{F}_{A} = 0$ and $\mathsf{D}_A B= 0$ where $\mathsf{D}_A$ is the higher covariant derivative along $A$. 
+The action functional reads $S_{\rm BF} = \int_M B \, \mathsf{F}_{A}$ which leads to the equations of motion $\mathsf{F}_{A} = 0$ and $\mathsf{D}_A B= 0$ where $\mathsf{D}_A$ is the higher covariant derivative along $A$. 
+
+We thus obtain a theory in the BV formalism on the product manifold $X \times L$ associated to both local $L_\infty$ algebras $\cL_0(X) \otimes \Omega^{\bu}(L)$ and $\cL_\infty(X) \otimes \Omega^\bu(L)$.
 
 \parsec
-For concreteness, we recall that the fields of the theory we have constructed on $\C^{2k+1}\times\R$ are given by the sheaf $\cE$ presented in the following diagram:
+For concreteness, we spell out the fields of the theories we have constructed on $X \times L$.
+In both cases, the space of fields equipped with the linear BRST operator is
 \begin{equation}
   \label{eq:sympfields} 
   \begin{tikzcd}[row sep = 1 ex]
     -n & -n + 1 & -1 & 0 \\ \hline
-    \Omega^{0}(X;L) \ar[r] & \Omega^{1}(X;L) & 
-     \PV^{1}(X; L) \ar[r] & \PV^{0}(X; L).
+    \Omega^{0,\bu}(X;L) \ar[r, "\del"] & \Omega^{1,\bu}(X;L) & 
+     \PV^{1,\bu}(X; L) \ar[r, "\div"] & \PV^{0,\bu}(X; L).
 \end{tikzcd}
 \end{equation}
-We are using the shorthand notation $\PV^{i}(X;L) = (\PV^{i,\bu}(X)\otimes \Omega^*(L), \dbar + \d_{dR}))$, so that the pairing beween $\PV^i(X;L)$ and~$\Omega^i(X;L)$ is of degree $-\dim_\C(X) -\dim_\R(L)$. As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of fields with a $(-1)$-shifted symplectic structure, provided that we choose the shift to be given by
+We denote the fields $(\beta,\gamma,\mu,\nu)$ respectively.
+We are using the shorthand notation $\PV^{i}(X;L) = (\PV^{i,\bu}(X)\otimes \Omega^\bu(L), \dbar + \d_{L}))$.
+
+The natural pairing between $\PV^i(X;L)$ and~$\Omega^i(X;L)$ is of degree $-\dim_\C(X) -\dim_\R(L)$. 
+As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of fields with a $(-1)$-shifted symplectic structure, provided that we choose the shift to be given by
 \deq{
   n = \dim_\C(X) + \dim_\R(L) - 1.
 }
-Note, though, that the interactions we consider do not preserve this grading, and as such only define $\Z/2\Z$-graded theories. We denote the fields $(\beta,\gamma,\mu,\nu)$ respectively.
 
-Recall further that we constructed two equivalent descriptions of the BF theory based on divergence-free holomorphic vector fields above. Since we are now in the context of a nondegenerate BV theory, the differential is Hamiltonian, and can be incorporated into the action functional by including a quadratic term; we do this from now on. The first action functional is obtained by considering the BF theory associated to the natural dg Lie structure on the complex modeling divergence-free vector fields (inherited from the Schouten bracket). This takes the form
+We have constructed two equivalent descriptions of the BF theory which share the linear BRST complex \eqref{eq:sympfields}.
+
+Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(L)$ is
 \deq{
-  I_\strict = \beta\partial_\Omega \mu + \frac{1}{2} \gamma [\mu,\mu] + \beta[\mu,\nu].
+  S_\strict = \int^\Omega \beta (\dbar + \d_L) \nu + \int^\Omega \gamma (\dbar + \d_L) \mu + \int^\Omega \beta\partial_\Omega \mu + \frac{1}{2} \int^\Omega \gamma [\mu,\mu] + \int^\Omega \beta[\mu,\nu].
 }
-The other action is of infinite order. (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} Explicitly, this action functional is given by 
+As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
+
+The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{\bu}(L)$ is of infinite order. 
+(In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
+Explicitly, this action functional is
 \deq{
-  I_\infty = \beta \partial_\Omega \mu + \frac{1}{1-\nu} (\partial \gamma) \mu^2.
+  S_\infty = \int^\Omega \beta (\dbar + \d_L) \nu + \int^\Omega \gamma (\dbar + \d_L) \mu + \frac12 \int^\Omega \beta \partial_\Omega \mu + \int^\Omega\frac{1}{1-\nu} (\partial \gamma) \mu^2.
 }
 
-We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to a Poisson automorphism of the Lie algebra cochains of the BF theory, which defines an equivalence of cyclic $L_\infty$ algebras. \ingmar{how should we say this} Explicitly, the map is given by
-\deq{
-  \nu \mapsto 1-e^{-\nu}, \ldots
-}
+We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
+Explicitly, the automorphism is
+\begin{multline}
+  \mu \mapsto e^{-\nu} \mu, \qquad \nu \mapsto 1-e^{-\nu} \\
+  \beta \mapsto (\beta - \mu \gamma) e^{\nu},\qquad \gamma \mapsto e^{\nu} \gamma .
+\end{multline}
 \subsection{A family of deformations} 
 
 %check CME
@@ -213,6 +241,15 @@ We demonstrated above that the two local $L_\infty$ algebras on which these BF t
 %cite result on thf quantization.
 
 \subsection{Relation to BCOV theory}
+
+\parsec[sec:pv] 
+\ingmar{a section defining polyvector fields; not sure where this belongs}
+Equipped with this structure, the complex we have written maps in an obvious way into the complex of polyvector fields on~$X$. Recall that one defines
+\deq{
+  \PV^{i,j}(X) = \Omega^{0,j}(X, \wedge^i \T_X).
+}
+\ingmar{Wedges look super fucked up}
+The complex $\PV^{\bu,\bu}$ is equipped with two natural differentials: the Dolbeault operator $\dbar$, of $(i,j)$-degree $(0,1)$, and the holomorphic divergence operator $\div$, which carries $(i,j)$-degree $(-1,0)$. Assigning total degree $- i + j$ to $\PV^{i,j}$ thus gives the total polyvector fields the structure of a bicomplex. We will use the shorthand notation $\PV^i = (\PV^{i,\bu}, \dbar )$ for the Dolbeault resolution of holomorphic $i$-polyvector fields. 
 
 \subsubsection{}
 It will be convenient for us to cast this dg Lie algebra in a slightly different way.
@@ -414,7 +451,7 @@ If a field of type $\beta$ has polyvector type $l$ then it has descendant degree
 
 A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is a linear combination of functionals of the form
 \[
-\int_\Omega \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
+\int^\Omega \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
 \]
 Let $k_i$ be the polyvector field type of $\alpha_i$ and let $l_j$ be the polyvector field type of $\beta_j$. 
 In order for this expression to contribute nontrivially to the BCOV action two constraints must hold:
