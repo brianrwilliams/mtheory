@@ -205,7 +205,7 @@ We have constructed two equivalent descriptions of the BF theory which share the
 
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(L)$ is
 \deq{
-  S_\strict =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +  \beta\partial_\Omega \mu + \frac{1}{2}  \gamma [\mu,\mu] +  \beta[\mu,\nu].
+  S_0 =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +  \beta\partial_\Omega \mu + \frac{1}{2}  \gamma [\mu,\mu] +  \beta[\mu,\nu].
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
@@ -261,6 +261,57 @@ Since this must hold for all $g$, and since the undeformed action $S$ is already
 }
 This expression is zero for symmetry reasons. Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional in $(k+1)$ copies of this two-form. We can ask whether such a  contraction exists just at the level of $\lie{sl}(2k+1)$ representation theory by computing the decomposition of the two-form  
 \end{proof}
+
+\subsection{An alternative description} 
+So far, we have described a family of BV theories on $X \times L$ where $X$ is an odd-dimensional Calabi--Yau manifold and $L$ is an odd-dimensional smooth manifold. 
+The space of fields \eqref{eq:sympfields} is equipped with an odd symplectic pairing. 
+
+
+There is a related, alternative description of this formal moduli space which is almost equivalent. 
+Consider the resolution of holomorphic closed two-forms 
+\beqn\label{eqn:twoform}
+\Omega_{cl}^{2,hol}(X) \simeq \Omega^{2,\bu}(X) \xto{\del} \Omega^{3,\bu}(X)[-1] \to \cdots 
+\eeqn
+where we have left the $\dbar$-differential implicit, as always. 
+
+There is a map from the two-term complex 
+\[
+\Omega^{0,\bu}(X)[1] \to \Omega^{1,\bu}(X)
+\]
+to the resolution \eqref{eqn:twoform} defined by the holomorphic de Rham operator $\del$. 
+This map is almost a quasi-isomorphism of sheaves; it differs by copy of constant functions $\CC[1]$ in cohomological degree $-1$. 
+
+Similarly, we can tensor with the dg algebra of de Rham forms on $L$ to obtain a map of $\ZZ/2$-graded cochain complexes
+\[
+\bigg(\Pi \Omega^{0,\bu}(X;L) \xto{\del} \Omega^{1,\bu}(X;L) \bigg) \xto{\del} \bigg(\Omega^{2,\bu}(X;L) \xto{\del} \Pi \Omega^{3,\bu}(X;L) \to \cdots \bigg) .
+\]
+Again, this map is a quasi-isomorphism up to a copy of $\Pi \CC$.
+The left-hand side contains the fields $(\beta, \gamma)$. 
+This map has the effect of sending $\beta \mapsto 0$ and $\gamma \mapsto \partial \gamma \in \Omega^{2,\bu}(X;L)$. 
+
+The basic idea is to replace the complex where $(\beta,\gamma)$ live by this resolutoin of closed two-forms. 
+The new space of fields is 
+\begin{equation}
+  \label{eq:poissfields} 
+  \begin{tikzcd}[row sep = 1 ex]
+     - & + & - & + \\ \hline
+     \PV^{1,\bu}(X; L) \ar[r, "\div"] & \PV^{0,\bu}(X; L) \\
+     & \Omega^{2,\bu}(X;L) \ar[r, "\del"] & \Omega^{3,\bu}(X;L) \ar[r] & \cdots 
+\end{tikzcd}
+\end{equation}
+
+\begin{prop}
+The complex \eqref{eq:poissfields} is equipped with the structure of an interacting Poisson BV theory. 
+\end{prop}
+
+
+Heuristically, we can write the action in the following non-local form
+\[
+\frac{1}{1-\nu} \mu^2 \eta + (\del^{-1} \eta) \eta^2 .
+\]
+
+
+\subsection{Global symmetry algebra}
 
 \subsection{Further equivalences}
 
@@ -606,29 +657,38 @@ As a $\ZZ/2$ graded space, the cohomology $H^\bu(\m2^Q)$ is
 \[
     L^\vee \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^3 L^\vee\right) \oplus \CC
   \]
-whose elements we denote by $(v, m, \psi, c)$. 
-\begin{itemize}
-\item[(1)] 
-Let $\fg$ denote the following dg Lie algebra which as a cochain complex is
+whose elements we denote by $(v, m, \psi, c)$.
+
+The transferred $L_\infty$ structure on $H^\bu(\fg) \cong H^\bu(\m2^Q)$ is a Lie-3 algebra given the obvious extension of ${\rm Stab}(Q)$ together with the brackets
+\begin{align*}
+[\psi, \psi']_2 & = \psi \wedge \psi' \in \wedge^4 L \cong L^\vee_v \\
+[v, v', \psi]_3 & = \<v \wedge v', \psi\> \in \CC_c .
+\end{align*}
+\end{prop}
+
+\parsec[]
+
+As a consequence of the above proposition, we see that the dg Lie algebra $(\m2,Q)$ is {\em not} formal; there is a 3-ary $L_\infty$ bracket present in cohomology. 
+Instead of this $L_\infty$ description, there is the following minimal model of this dg Lie algebra, which we will use to relate to twist of 11d supergravity. 
+
+\begin{prop}
+\label{prop:gmodel}
+Let $\fg$ denote the following $\ZZ/2$ graded dg Lie algebra which as a cochain complex is
 \[
 H^\bu(\m2^Q) \oplus (\Pi L \xto{\id} L)  .
 \]
 Denote the elements of the second summand by $(\tilde{\lambda}, \lambda)$. 
 The nontrivial Lie brackets are
 \begin{align*}
-[v,\lambda] & = \<v, \lambda\> \in \CC_c \\ 
+[v,\lambda] & = \<v, \til\lambda\> \in \CC_c \\ 
 [v,\psi] & = \<v, \psi\> \in \Pi L_{\Tilde{\lambda}} \\
-[\psi, \psi'] & = \psi \wedge \psi' \in L^\vee_v 
+[\psi, \psi'] & = \psi \wedge \psi' \in L^\vee_v  .
 \end{align*}
-where we use the isomorphism $\wedge^4 L \cong L^\vee$.
 There is an $L_\infty$ map 
 \[
 \fg \rightsquigarrow \m2^Q
 \] 
 which is a quasi-isomorphism of complexes.  
-\item[(2)]
-  The transferred $L_\infty$ structure on $H^\bu(\fg) \cong H^\bu(\m2^Q)$ is \brian{finish}
-\end{itemize}
 \end{prop}
 \begin{proof}
 The supercharge $Q$ is odd and of cohomological degree zero.
@@ -683,23 +743,45 @@ Together with the cochain map described above, this bilinear term prescribes the
 
 \end{proof}
 
-
-Consider now the eleven-dimensional theory $\cT = \cT_{\CC^5 \times \RR}$ defined on $\CC^5 \times \RR$. 
-The BV action induces the structure of a dg Lie algebra on $\cT[1]$. 
+\parsec[]
+Consider now the $\ZZ/2$ graded dg Lie algebra $\cL$ underlying the eleven-dimensional theory on $\CC^5 \times \RR$. 
 
 \begin{prop}
-The assignment
-\brian{??} defines a map of $\ZZ/2$-graded dg Lie algebras 
+There is a map of $\ZZ/2$-graded dg Lie algebras 
 \[
-\m2 \to \cT[1] .
+\fg \to \cL 
 \]
-In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
+where $\fg$ is the model for the $Q$-cohomology of the super Lie algebra $\m2$ from Proposition \ref{prop:gmodel}. 
+In particular, the $Q$-twisted algebra $\m2^Q \simeq \fg$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
 \end{prop}
+\begin{proof}
+Recall the model $\fg$ takes the following form
+\beqn 
+\begin{tikzcd}
+\ul{even} & \ul{odd} & \ul{even} \\
+ L_a & \wedge^2 L_b & L^\vee \\
+\wedge^2 L_a & & \\
+\lie{sl}(5) \\
+L_b \ar[r, "\id"] & L_c .
+\end{tikzcd}
+\eeqn
+The subscripts in $L_a, L_b, L_c$ are used to distinguish between the various copies of $L$.
 
+The map from the dg model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory is as follows. 
+\begin{align*}
+ L_a & \mapsto 0 \\
+ \wedge^2 L_a & \mapsto 0 \\
+z_i \wedge z_j \in \wedge^2 L_b & \mapsto \frac12 (z_i \d z_j - z_j \d z_i) \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
+\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_b & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+z_i \in L_c & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR)
+\end{align*}
+One immediately verifies that this is a map of dg Lie algebras. 
+\end{proof}
 
-\subsection{$L_\infty$ extension}
+\parsec[]
 
-In this section we compare to the work of \brian{refs}.
+In this section we compare to the work of \brian{Linfty refs}.
 In these references, the algebra $\m2$ is defined as an $L_\infty$  
 central extension of $\lie{siso}_{11d}$. 
 
@@ -711,31 +793,8 @@ Using this two-form we can define the following four-linear expression
 This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\ft_{11d})$. 
 In \cite{??} it is shown that this cocycle $\mu_2$ is 
 
-\subsection{Embedding $\m2^Q$ in twisted supergravity} 
-
-In Proposition \ref{prop:model} we have proposed a dg model $\fg$ for the $Q$-deformed M2-brane algebra. 
-
 %For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
-The model $\fg$ takes the following form
-\beqn 
-\begin{tikzcd}
-\ul{even} & \ul{odd} & \ul{even} \\
- L_a & \wedge^2 L & L^\vee \\
-\wedge^2 L & & \\
-\lie{sl}(5) \\
-L_b \ar[r, "\id"] & L_c .
-\end{tikzcd}
-\eeqn
-The subscripts in $L_a, L_b, L_c$ are used to distinguish between the various copies of $L$.
 
-The map from the dg model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory is as follows. 
-\begin{align*}
- \in L_a & \mapsto ?? \\
-z_i \wedge z_j \in \wedge^2 L & \mapsto z_i \d z_j - z_j \d z_i \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
-A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
-\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_b & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
-z_i \in L_c & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR)
-\end{align*}
 
 \subsection{Superconformal algebras}
 
