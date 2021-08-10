@@ -654,15 +654,17 @@ In \cite{??} it is shown that this cocycle $\mu_2$ is
 
 \subsection{6d superconformal algebra and the M5 brane}
 
+
+\begin{prop}
+The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
+\end{prop}
+
 Choose a splitting 
 \[
 \CC^5 \times \RR = \CC_z^3 \times \CC_w^2 \times \RR
 \]
 and denote coordinates $z_i, i=1,2,3$ and $w_a, a=1,2$. 
 
-\begin{prop}
-The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
-\end{prop}
 
 
 \parsec[]
@@ -674,7 +676,7 @@ The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
 which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. 
 
 The embedding of the bosonic piece can roughly be described as follows. 
-The Lie algebra $\lie{sl}(4)$ represents special conformal transformations along the plane $\CC^3_z$.
+The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
 Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
 The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
 
@@ -767,76 +769,13 @@ Notice that these vector fields are divergence-free and along $w=0$ reduce to th
 \]
 \end{itemize}
 
+
+
 %what about 3d N=8 suco?
 
 \section{Dimensional reduction and compactifications} 
 
-\subsection{Relationship to the topological string}
-
-In this section we wish to demonstrate that our proposal for the interactions for twisted 11-dimensional supergravity agree with conjectural descriptions of twisted type IIA and type I supergravities due to \cite{CLSugra}. We begin by introducing certain variants of Kodaira-Spencer theory which will feature in the descriptions of twists of type IIA and type I.
-
-\parsec[sec:SU(4)twist]
-
-Let $X$ be a Calabi-Yau manifold. Recall the $\Z/2$ graded Poisson BV theory denoted $\cE_{KS}$ defined in section \surya{}. Let $\cE_{{mKS}}\subset \cE_{KS}$ denote the smallest subcomplex containing those fields with nonzero pairing under the Poisson tensor. Explicitly, we have that $\cE_{mKS}$ is the sheaf of cochain complexes
-\beqn
-\begin{tikzcd}
-                        &                          &                                     & {\PV^{0,\bu}}    \\
-                        &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
-                        & {\PV^{2,\bu}} \arrow[r]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
-{\PV^{3,\bu}} \arrow[r] & {u\PV^{2,\bu}} \arrow[r] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
-\end{tikzcd}.
-\eeqn
-
-Clearly, the inclusion is a Poisson map, so restricting $I_{BCOV}$ to this subcomplex defines another $\Z/2$ graded Poisson BV theory referred to as minimal Kodaira-Spencer theory. Under the identification of Kodaira-Spencer theory as the closed string sector of the B-model, minimal Kodaira-Spencer theory should be thought of as consisting of those closed string fields present in the supergravity approximation.
-
-With this in hand the conjecture of \cite{CLSugra} takes the following form.
-
-\begin{conj}
-  Let $M$ be a real symplectic surface and $X$ a Calabi-Yau fourfold. The $SU(4)$-invariant twist of type IIA supergravity on $M\times X$ is the $\Z/2$-graded Poisson BV theory with fields \[\Omega^{\bu}(M)\otimes \cE_{mKS}.\] The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
-\end{conj}
-
-\parsec[sec:IIApot]
-
-Our goal is to compare the dimensional reduction of our 11d theory $\cE$ on $\R\times \C^{\times}\times X$ where $X$ is a Calabi-Yau 4-fold with the $SU(4)$ invariant twist of type IIA on $\R^{2}\times X$. Doing so will require some additional modifications to the above conjectural description. Indeed, recall that in the physical theory, the components of the C-field in 11d that are not supported along the M-theory circle become the components of the Ramond-Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond-Ramond fields do not appear as fields in Kodaira-Spencer theory; rather it is components of their field strengths that appear. Since components of the C-field become components of $\gamma$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
-
-Minimal Kodaira-Spencer theory with potentials on a Calabi-Yau fourfold $X$ is defined to be the $\Z/2$-graded BV theory whose space of fields is the sheaf of cochain complexes $\cE_{pot}$
-\beqn
-\begin{tikzcd}
-{\rm even} & {\rm odd} \\ \hline
-& {\PV^{0,\bu}}_\eta  \\
-{\PV^{1,\bu}}_\mu \arrow[r, "u\div"] & {u\PV^{0,\bu}}_\nu \\
-{u^{-1}\PV^{4,\bu}}_\beta \arrow[r, "u\div"] & {\PV^{3,\bu}}_\gamma  \\
-{\PV^{4,\bu}}_\theta &
-\end{tikzcd}
-\eeqn.
-
-The interaction is given by \[I_{pot} = \int \frac{1}{1-\nu}(\mu\mu\del\gamma + \eta\del\gamma\del\gamma + \eta\mu\del\theta).\]
-
-
-Note that there is a natural map of cochain complexes $\partial \cE_{pot}\to \cE_{mKS}$ given by the dotted arrows below:
-\beqn
-\begin{tikzcd}
-                                       & {\PV^{0,\bu}} \arrow[rrr, dotted, "\id"] &                          &                                     & {\PV^{0,\bu}}    \\
-{\PV^{1,\bu}} \arrow[r, "u\div"]       & {u\PV^{0,\bu}} \arrow[rr, dotted, "\id"] &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
-{u^{-1}\PV^{4,\bu}} \arrow[r, "u\div"] & {\PV^{3,\bu}} \arrow[r, dotted, "\div"]  & {\PV^{2,\bu}} \arrow[r]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
-{\PV^{4,\bu}} \arrow[r, dotted, "\div"]        & {\PV^{3,\bu}} \arrow[r]          & {u\PV^{2,\bu}} \arrow[r] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
-\end{tikzcd}.
-\eeqn
-This is easily seen to be a Poisson map. We have that $I_{pot} = \partial^{*}I_{BCOV}$, so we see that $I_{pot}$ satisfies the classical master equation.
-
-\parsec[sec:dimred]
-The main result of this section is then as follows:
-
-\begin{prop}
-Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Consider the map of sheaves of cochain complexes \[\int : \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] Then $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
-\end{prop}
-\begin{proof}
-  \surya{write this}
-\end{proof}
-
-\include{dimred.tex}
-
-
+\include{dimred}
 
 \subsection{The theory on a three-fold}
 
