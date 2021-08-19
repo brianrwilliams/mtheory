@@ -28,6 +28,7 @@ to do
 \newpage 
 
 \section{A family of moduli spaces} 
+\label{s:dfn}
 
 In this section we define the central theory of study, within the Batalin--Vilkovisky formalism.
 The theory will be defined on any eleven-dimensional manifold of the form $X \times L$ where $X$ is a Calabi--Yau five-fold and $L$ is a smooth oriented one-manifold.
@@ -209,7 +210,8 @@ Explicitly, the action functional for BF theory associated to the local dg Lie a
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
-The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{\bu}(L)$ is of infinite order. 
+The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{\bu}(L)$ is non polynomial.
+\brian{I think the phrasing ``infinite order'' can mean a lot of different things. I've changed it to ``non polynomial''.} 
 (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
 Explicitly, this action functional is
 \deq{
@@ -262,88 +264,6 @@ Since this must hold for all $g$, and since the undeformed action $S$ is already
 This expression is zero for symmetry reasons. Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional in $(k+1)$ copies of this two-form. We can ask whether such a  contraction exists just at the level of $\lie{sl}(2k+1)$ representation theory by computing the decomposition of the two-form  
 \end{proof}
 
-\subsection{An alternative description} 
-So far, we have described a family of BV theories on $X \times L$ where $X$ is an odd-dimensional Calabi--Yau manifold and $L$ is an odd-dimensional smooth manifold. 
-The space of fields \eqref{eq:sympfields} is equipped with an odd symplectic pairing. 
-
-
-There is a related, alternative description of this formal moduli space which is almost equivalent. 
-Consider the resolution of holomorphic closed two-forms 
-\beqn\label{eqn:twoform}
-\Omega_{cl}^{2,hol}(X) \simeq \Omega^{2,\bu}(X) \xto{\del} \Omega^{3,\bu}(X)[-1] \to \cdots 
-\eeqn
-where we have left the $\dbar$-differential implicit, as always. 
-
-There is a map from the two-term complex 
-\[
-\Omega^{0,\bu}(X)[1] \to \Omega^{1,\bu}(X)
-\]
-to the resolution \eqref{eqn:twoform} defined by the holomorphic de Rham operator $\del$. 
-This map is almost a quasi-isomorphism of sheaves; it differs by copy of constant functions $\CC[1]$ in cohomological degree $-1$. 
-
-Similarly, we can tensor with the dg algebra of de Rham forms on $L$ to obtain a map of $\ZZ/2$-graded cochain complexes
-\[
-\bigg(\Pi \Omega^{0,\bu}(X;L) \xto{\del} \Omega^{1,\bu}(X;L) \bigg) \xto{\del} \bigg(\Omega^{2,\bu}(X;L) \xto{\del} \Pi \Omega^{3,\bu}(X;L) \to \cdots \bigg) .
-\]
-Again, this map is a quasi-isomorphism up to a copy of $\Pi \CC$.
-The left-hand side contains the fields $(\beta, \gamma)$. 
-This map has the effect of sending $\beta \mapsto 0$ and $\gamma \mapsto \partial \gamma \in \Omega^{2,\bu}(X;L)$. 
-
-The basic idea is to replace the complex where $(\beta,\gamma)$ live by this resolutoin of closed two-forms. 
-The new space of fields is 
-\begin{equation}
-  \label{eq:poissfields} 
-  \begin{tikzcd}[row sep = 1 ex]
-     - & + & - & + \\ \hline
-     \PV^{1,\bu}(X; L) \ar[r, "\div"] & \PV^{0,\bu}(X; L) \\
-     & \Omega^{2,\bu}(X;L) \ar[r, "\del"] & \Omega^{3,\bu}(X;L) \ar[r] & \cdots 
-\end{tikzcd}
-\end{equation}
-
-\begin{prop}
-The complex \eqref{eq:poissfields} is equipped with the structure of an interacting Poisson BV theory.
-Let $\cG = \cG(X \times L)$ be the resulting $L_\infty$ algebra...
-\end{prop}
-
-Heuristically, we can write the action in the following non-local form
-\[
-\frac{1}{1-\nu} \mu^2 \eta + (\del^{-1} \eta) \eta^2 .
-\]
-\brian{are there more terms involving higher forms?}
-
-The first few nonzero brackets are
-\begin{align*}
-[\mu]_1 & = \dbar \mu + \div \mu \\
-[\eta]_1 & = \dbar \eta + \del \eta \\ 
-[\mu_1,\mu_2]_2 & = \div (\mu_1 \wedge \mu_2) \\
-[\mu, \eta]_2 & = \mu \vee \del \eta \\
-[\eta_1,\eta_2]_2 & = \# \Omega^{-1} \vee (\eta_1 \wedge \eta_2)  \\
-[\nu, \mu_1,\mu_2]_3 & = \div(\nu \mu_1 \mu_2) \\
-[\nu, \mu,\eta]_3 & = \nu \mu \del \eta
-\end{align*}
-\brian{coefficients}
-For $k \geq 2$ the general formula for the $k$-ary bracket is 
-\begin{align*}
-[\eta_1,\eta_2]_2 & = \# \Omega^{-1} \vee (\eta_1 \wedge \eta_2)  \\
-[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \# \div(\nu_1 \cdots \nu_{k-2} \mu_1 \wedge \mu_2) \\ 
-[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu,\eta]_{k} & = \# \nu_1 \cdots \nu_{k-2} (\mu \vee \del \eta) .
-\end{align*}
-
-\parsec[]
-Consider the theory on $\CC^3 \times \RR$. 
-There is a quasi-isomorphism of $L_\infty$ Lie algebras $\CC \simeq \cG (\CC^3 \times \RR)$. 
-
-\parsec[]
-Consider the theory on $\CC^5 \times \RR$. 
-
-\begin{prop}
-There is a quasi-isomorphism of super $L_\infty$ algebras 
-\[
-E(5,10) \xto{\simeq} \cG(\CC^5 \times \RR) .
-\]
-This lifts to map of super $L_\infty$ algebras $E(5,10) \to \cL(\CC^5 \times \RR)$ whose kernel is $\CC$.
-\end{prop}
-
 \subsection{Global symmetry algebra}
 
 \subsection{Further equivalences}
@@ -361,72 +281,7 @@ This lifts to map of super $L_\infty$ algebras $E(5,10) \to \cL(\CC^5 \times \RR
 %cite result on thf quantization.
 
 
-
-\subsubsection{}
-
-Define the action by the group $\CC^\times$ on the complex $\til{\cE}_{KS}$ as follows.
-Declare the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
-%Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
-The linear BRST operator is clearly weight zero and the shifted Poisson structure $\Pi_{KS}$ is of weight $+1$. 
-Thus, the shifted Poisson bracket $\{-,-\}_{KS}$ is of $\CC^\times$ weight $+1$.
-
-\begin{lem}
-The restricted action $\til{I}_{BCOV}$ has $\CC^\times$ weight $-1$. 
-In particular, the non-linear BRST operator 
-\beqn\label{eqn:KSbrst}
-\delta_{BCOV} = Q_{KS} + \{\til{I}_{BCOV},-\}_{KS}
-\eeqn
-is $\CC^\times$ weight zero.
-\end{lem}
-\begin{proof}
-%The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $\til{I}_{BCOV}$ is weight $+1$. 
-We will make use of two gradings on $\til{\cE}_{KS}$. 
-The first is holomorphic polyvector field type, and the second is descendant degree.
-The summand $u^l \PV^{k,\bu}$ is polyvector type $k$ and descendant degree $l$. 
-
-We introduce notation in this proof that won't be used later on. 
-Let $\alpha$ denote a super field living in the first line of \eqref{eqn:tilks} and let $\beta$ denote a super field living in the second line of \eqref{eqn:tilks}.
-If a field of type $\alpha$ has polyvector type $k$ then it has descendant degree $1-k$, $k=0,1$. 
-If a field of type $\beta$ has polyvector type $l$ then it has descendant degree $d-2-l$.
-
-A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is a linear combination of functionals of the form
-\[
- \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
-\]
-Let $k_i$ be the polyvector field type of $\alpha_i$ and let $l_j$ be the polyvector field type of $\beta_j$. 
-In order for this expression to contribute nontrivially to the BCOV action two constraints must hold:
-\begin{align*}
-\sum_{i=1}^m k_i + \sum_{j=1}^n l_j & = d \\
-\sum_{i=1}^m (1-k_i) + \sum_{j=1}^n (d-2-l_j) & = m+n-3 .
-\end{align*}
-The first constraint ensures that the integrand is of top polyvector degree. 
-The second constraint is on the descendant degree, see \brian{ref above}. 
-
-Simplifying these two equations, one finds the condition
-\[
-m+n-3 = m+(d-2)n - d 
-\]
-which implies $n=1$, as desired. 
-\end{proof}
-
-Consider the cochain complex $\left(\oloc(\til{\cE}_{KS}) \, , \, \delta_{KS} \right)$ of all local functionals equipped with the non-linear BRST differential \eqref{eqn:KSbrst}.  
-The $\CC^\times$ weight zero subcomplex is 
-\[
-\big(\oloc(\til\cE_{KS})^{(0)} \, , \, \delta_{KS} \big) = \big(\oloc(\cE_0) \, , \, \delta_{KS} \big) 
-\]
-where $\cE_0 = \PV^{1,\bu}[1] \oplus u \PV^{0,\bu}$ is the subcomplex of the fields $\til\cE_{KS}$ comprising the first line of \eqref{eqn:tilks}.
-
-\begin{prop}
-\label{prop:Linfty}
-The differential $\delta_{KS}$ acting on the weight zero fields induces a local $L_\infty$ algebra structure on the complex of vector bundles 
-\[
-\cE_0 [-1] = \PV^{1,\bu} \oplus \PV^{0,\bu}[-1]
-\]
-with $[-]_1 = \dbar + \div$. 
-Furthermore, this $L_\infty$ algebra structure is equivalent to the strict dg Lie algebra structure on the resolution of divergence-free vector fields defined in \S \ref{sec:divfree}. 
-\end{prop}
-
-\section{Relationship to physical supergravity}
+\section{Symmetries of the 11-dimensional theory}
 
 \subsection{Component fields}
 
@@ -596,7 +451,7 @@ Together with the cochain map described above, this bilinear term prescribes the
 
 \end{proof}
 
-\parsec[]
+\parsec[s:residual]
 Consider now the $\ZZ/2$ graded dg Lie algebra $\cL$ underlying the eleven-dimensional theory on $\CC^5 \times \RR$. 
 
 \begin{prop}
@@ -725,12 +580,12 @@ L \otimes R \oplus \wedge^2 L \otimes R \cong \CC^3 \otimes \CC^2 \oplus \wedge^
 \item The summand $L \otimes R$ consists of the remaining 6d superstranlsations. 
 It is mapped to the fields 
 \[
-z_i \d w_a \in \Omega^{1,0}(\CC^3) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
+z_i \d w_a \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
 \] 
 \item The summand $\wedge^2 L \otimes R$ consists of the remaining 6d superconformal transformations. 
 It is mapped to the fields
 \[
-\ep^{ijk} z_i w_a \d z_j \in \Omega^{1,0}(\CC^3)\otimes \Omega^0(\RR) , \quad a = 1,2, \quad k = 1,2,3. 
+\ep^{ijk} z_i w_a \d z_j \in \Omega^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad a = 1,2, \quad k = 1,2,3. 
 \]
 \end{itemize}
 
@@ -745,17 +600,17 @@ We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
 \[
 \CC_z \times \CC^4_w \times \RR .
 \]
-Based on the discussion above, it is natural to expect that there is a field of twisted 11-dimensional supergravity which sources the twist of a stack of $M2$ branes living on the submanifold $\CC_z \times \RR \cong \{w=0\}\subset \CC^5$. 
+Based on the discussion above, it is natural to expect that there is a field of twisted 11-dimensional supergravity which sources the twist of a stack of $N$ $M2$ branes living on the submanifold $\CC_z \times \RR \cong \{w=0\}\subset \CC^5$. 
 
-The differential form which sources this submanifold is an element
+The differential form which sources the brane is an element
 \[
 \til{F} \in \Omega^{4,3} (\CC^4_w \, \setminus \, 0) \otimes \Omega^{0,0} (\CC_z) \otimes \Omega^{0} (\RR) \subset \Dol\left(\CC^5 \times \RR \, \setminus \, \{w=0\}\right) .
 \]
 Equivalently, we can think about this as a distributional valued form $\til{F} \in \Bar{\Omega}^{4,3}(\CC^5) \otimes \Omega^0 (\RR)$ which satisfies the distributional equation
 \[
-\dbar \til{F} = \delta_{w=0} 
+\dbar \til{F} = N \delta_{w=0} 
 \]
-where $\delta_{w=0}$ is the Dirac $\delta$-distributional along the submanifold $\{w=0\} = \CC_z \times \RR$. 
+where $\delta_{w=0}$ is the Dirac $\delta$-distributional for the submanifold $\{w=0\} = \CC_z \times \RR$. 
 
 Using the Calabi--Yau form we can identify such a differential form with a field of twisted supergravity. 
 Indeed $F = \til{F} \wedge \Omega^{-1}$ is a distributional field of type
@@ -832,18 +687,241 @@ It is mapped to the fields:
 
 %count hypers and vectors in 5d N=1 sugra relate to Kevin and my work with Chris
 
-\section{The twisted $\Omega$-background} 
-
 \section{The non-minimal twist} 
 
-\appendix
+We have provided numerous consistency checks that the 11-dimensional theory defined on $\CC^5 \times \RR$ is a twist of supergravity. 
+We have referred to this theory as holomorphic as it depends on the complex structure in the maximal number of directions. 
+In this section we characterize a further twist of 11-dimensional supergravity from the lens of the holomorphic theory. 
+
+On flat space, the further twist is essentially unique and renders the theory topological in seven directions, rather than just one in the holomorphic twist. 
+We will show that it is equivalent to a theory on $\CC^2 \times \RR^7$ that we call ``Poisson'' Chern--Simons theory. 
+In the BV formalism, the theory $\ZZ/2$ graded and has fields given by
+\[
+A \in \Pi \Omega^{0,\bu}(\CC^2) \hotimes \Omega^\bu(\RR^7) ,
+\]
+where $\Pi$, as always, denotes parity shift.
+The equations of motion are of the form
+\[
+\dbar A + \d_{\RR^7} A + \partial_{z} A \wedge \partial_{w} A = 0 .
+\]
+The action functional depends on the holomorphic symplectic structure on $\CC^2$ through the Poisson bracket on the algebra of holomorphic functions.
+We give a precise definition below. 
+
+More generally, the twist can be defined \brian{finish}
+
+
+\subsection{The non-minimal supercharge}
+
+Let $Q^{hol}$ denote the fixed holomorphic supercharge. 
+We have argued in \S \ref{s:residual} that the $Q^{hol}$-cohomology of the 11-dimensional supersymmetry algebra is a symmetry of our proposed holomorphic twist of 11-dimensional supergravity. 
+
+There is a twist of supergravity which can be witnessed as a further deformation of the $Q^{hol}$-twist. 
+\brian{fix this}
+
+Recall that the odd component of this residual supersymmetry algebra is
+\[
+\wedge^2 L \cong \wedge^2(\CC^5) 
+\]
+which we can identify with constant coefficient holomorphic $(2,0)$ forms on $\CC^5 \times \RR$ (they are zero-forms along the $\RR$-direction). 
+Because these forms are constant coefficient, they are also closed, and hence lift to $(1,0)$ forms on $\CC^5 \times \RR$ in a way that is unique up to $\del$-exact terms. 
+
+Using this observation, we constructed an embedding of $\wedge^2(L)$ into the fields of supergravity. 
+Explicitly, the element $z_i \wedge z_j \in \wedge^2 L$ was mapped to the $\gamma$-type field
+\[
+\Psi_{ij} = \frac12 (z_i \d z_j - z_j \d z_i) \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0(\RR) ,
+\]
+where $i,j=1,\ldots, 5$ and $i \ne j$.  
+
+\parsec[-] 
+
+The first main result of this section is to characterize the twist of our 11-dimensional theory on $\CC^5 \times \RR$ by the element $\Psi_{ij}$. 
+
+\begin{thm}
+The $\Psi_{ij}$-twist of the 11-dimensional theory is equivalent to Poisson Chern--Simons theory on 
+\[
+\CC_{z_i} \times \CC_{z_j} \times \RR^7 .
+\]
+\end{thm}
+
+Notice that changing the values of $i,j$ just has the affect of permuting the holomorphic copies of $\CC^2$ leftover in the further twist. 
+
+\section{The twisted $\Omega$-background} 
+
+\subsection{$\Omega$-deformed symmetry algebra}
+
+On flat space, we have 
+
+
+
+\subsection{M2 branes in the $\Omega$-background} 
+
+\parsec[]
+
+In the twisted $\Omega$-background a stack of $N$ M2 branes wraps 
+\beqn\label{eqn:m2omega}
+\{0\} \times \RR \subset \CC^2 \times \RR .
+\eeqn
+
+The field which sources this brane is a distributional differential form $F$.
+The linear equation of motion for $F$ is the distributional equation 
+\[
+\d^2 z \wedge \dbar F = N \delta_{z=0} 
+\]
+where $\delta_{z=0}$ is the $\delta$-distribution for the submanifold \eqref{eqn:m2omega}.  
+In what follows we denote $\til{\delta}_{z=0}$ the distributional $(0,2)$ form defined by contracting $\delta_{z=0}$ with the Calabi--Yau form~$\d^2 z$. 
+
+The field $F$ is a smooth Dolbeault form of type $(0,1)$ away from the locus of the brane $\CC^2 \times \RR_t \setminus \{0\} \times \RR \cong (\CC^2 \setminus 0) \times \RR_t$. 
+Explicitly, we can characterize it as follows. 
+
+\begin{prop}
+The field $F \in \Omega^{0,1} (\CC^2 \setminus 0) \otimes \Omega^{0} (\RR) $ defined by 
+\[
+F = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} 
+\] 
+satisfies the non-linear equation of motion 
+\[
+\dbar F + \frac12 F \star_c F = N  \til{\delta}_{z=0} .
+\]
+\end{prop}
+\begin{proof}
+The equation $\dbar F = N  \til{\delta}_{z=0}$ characterizes the Bochner--Martinelli kernel representing the residue class in $\CC^2 \setminus 0$. 
+Since $F$ is a one-form $F \star_c F = 0$ is satisfied by anti-symmetry. 
+\end{proof}
+
+\parsec[]
+
+We can interpret $F$ geometrically in the following way. 
+Let's first consider just the complex geometric situation, forgetting about the $\RR$-direction. 
+ 
+On any hyper K\"ahler manifold $X$ there is an exact sequence of sheaves of Lie algebras
+\[
+0 \to \ul\CC \to \cO^{hol}(X) \to \Vect_0^{hol} (X) \to 0
+\]
+where $\Vect^{hol}_0(X)$ is the Lie algebra of holomorphic divergence-free vector fields and $\cO^{hol}(X)$ is equipped with the Poisson bracket induced by the holomorphic symplectic form. 
+The map $\cO^{hol}(X) \to \Vect_0(X)$ is given by the holomorphic de Rham operator $\del \colon \cO^{hol}(X) \to \Omega^{1,hol}_{cl}(X)$ followed by the isomorphism 
+$\Omega^{1,hol}_{cl} (X) \cong \Vect_0(X)$ given by the holomorphic symplectic form. 
+
+Extending this exact sequence to the level of Dolbeault resolutions, we see that we can view $F_0 \in \Omega^{0,1}(\CC^2 \setminus 0)$ as a $(0,1)$ Dolbeault valued divergence-free vector field $\til{F}_0$ on $\CC^2 \setminus 0$. 
+Explicitly, if $F_0 = f^i (z,\zbar) \d \zbar_i$ then this $(0,1)$-valued vector field is
+\[
+\til{F}_0 = \ep_{jk} \partial_{z_j} f^i (z,\zbar) \d \zbar_i \partial_{z_k} .
+\]
+
+In the case at hand, $F \in \Omega^{0,1}(\CC^2 \setminus 0) \otimes \Omega^0(\RR)$ is given by the restriction along 
+\[
+(\CC^2 \setminus 0) \times \RR \to \CC^2 \setminus 0
+\]
+of the $(0,1)$-form
+\[
+F_0 = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} .
+\] 
+The corresponding $(0,1)$-valued vector field on $\CC^2 \setminus 0$ is
+\[
+\til{F}_0 = \#' N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^6} \left(\zbar_1 \del_{z_2} - \zbar_2 \del_{z_1}\right) .
+\] 
+
+\appendix 
+
+\section{An alternative description of the 11-dimensional theory} 
+In \S \ref{s:dfn} we have described a family of BV theories on $X \times L$ where $X$ is an odd-dimensional Calabi--Yau manifold and $L$ is an odd-dimensional smooth manifold. 
+The space of fields \eqref{eq:sympfields} is equipped with an odd symplectic pairing. 
+
+
+There is a related, alternative description of this formal moduli space which is almost equivalent. 
+Consider the resolution of holomorphic closed two-forms 
+\beqn\label{eqn:twoform}
+\Omega_{cl}^{2,hol}(X) \simeq \Omega^{2,\bu}(X) \xto{\del} \Omega^{3,\bu}(X)[-1] \to \cdots 
+\eeqn
+where we have left the $\dbar$-differential implicit, as always. 
+
+There is a map from the two-term complex 
+\[
+\Omega^{0,\bu}(X)[1] \to \Omega^{1,\bu}(X)
+\]
+to the resolution \eqref{eqn:twoform} defined by the holomorphic de Rham operator $\del$. 
+This map is almost a quasi-isomorphism of sheaves; it differs by copy of constant functions $\CC[1]$ in cohomological degree $-1$. 
+
+Similarly, we can tensor with the dg algebra of de Rham forms on $L$ to obtain a map of $\ZZ/2$-graded cochain complexes
+\[
+\bigg(\Pi \Omega^{0,\bu}(X;L) \xto{\del} \Omega^{1,\bu}(X;L) \bigg) \xto{\del} \bigg(\Omega^{2,\bu}(X;L) \xto{\del} \Pi \Omega^{3,\bu}(X;L) \to \cdots \bigg) .
+\]
+Again, this map is a quasi-isomorphism up to a copy of $\Pi \CC$.
+The left-hand side contains the fields $(\beta, \gamma)$. 
+This map has the effect of sending $\beta \mapsto 0$ and $\gamma \mapsto \partial \gamma \in \Omega^{2,\bu}(X;L)$. 
+
+The basic idea is to replace the complex where $(\beta,\gamma)$ live by this resolution of closed two-forms. 
+The new space of fields is 
+\begin{equation}
+  \label{eq:poissfields} 
+  \begin{tikzcd}[row sep = 1 ex]
+     - & + & - & + \\ \hline
+     \PV^{1,\bu}(X; L) \ar[r, "\div"] & \PV^{0,\bu}(X; L) \\
+     & \Omega^{2,\bu}(X;L) \ar[r, "\del"] & \Omega^{3,\bu}(X;L) \ar[r] & \cdots 
+\end{tikzcd}
+\end{equation}
+
+It may seem that this description of the fields of the 11-dimensional theory is not much different than the original formulation---at the level of the free theory they only differ by a copy of constant functions in odd cohomological degree. 
+We'd like to point out two main differences:
+\begin{itemize}
+\item This new description does not have the structure of a BV theory in the usual sense; there is no odd symplectic pairing on the fields. 
+Nevertheless, there is still an odd Poisson bracket acting on functionals of the fields which we will describe momentarily. 
+For this reason, we will refer to the theory as a ``Poisson BV theory''. 
+\item With the existence of the odd Poisson bracket one might be optimistic to formulate the CME for this Poisson BV theory.
+However, there is no local interaction which is consistent with the local interaction present in the original BV theory. 
+Nevertheless, the (shift of the) fields is equipped with an $L_\infty$ structure which is compatible with the odd Poisson bracket. 
+\end{itemize}
+
+\begin{prop}
+The complex \eqref{eq:poissfields} is equipped with the structure of an interacting Poisson BV theory.
+Let $\cG = \cG(X \times L)$ be the resulting $L_\infty$ algebra...
+\end{prop}
+
+Heuristically, we can write the action in the following non-local form
+\[
+\frac{1}{1-\nu} \mu^2 \eta + (\del^{-1} \eta) \eta^2 .
+\]
+\brian{are there more terms involving higher forms?}
+
+The first few nonzero brackets are
+\begin{align*}
+[\mu]_1 & = \dbar \mu + \div \mu \\
+[\eta]_1 & = \dbar \eta + \del \eta \\ 
+[\mu_1,\mu_2]_2 & = \div (\mu_1 \wedge \mu_2) \\
+[\mu, \eta]_2 & = \mu \vee \del \eta \\
+[\eta_1,\eta_2]_2 & = \# \Omega^{-1} \vee (\eta_1 \wedge \eta_2)  \\
+[\nu, \mu_1,\mu_2]_3 & = \div(\nu \mu_1 \mu_2) \\
+[\nu, \mu,\eta]_3 & = \nu \mu \del \eta
+\end{align*}
+\brian{coefficients}
+For $k \geq 2$ the general formula for the $k$-ary bracket is 
+\begin{align*}
+[\eta_1,\eta_2]_2 & = \# \Omega^{-1} \vee (\eta_1 \wedge \eta_2)  \\
+[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \# \div(\nu_1 \cdots \nu_{k-2} \mu_1 \wedge \mu_2) \\ 
+[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu,\eta]_{k} & = \# \nu_1 \cdots \nu_{k-2} (\mu \vee \del \eta) .
+\end{align*}
+
+\parsec[]
+Consider the theory on $\CC^3 \times \RR$. 
+There is a quasi-isomorphism of $L_\infty$ Lie algebras $\CC \simeq \cG (\CC^3 \times \RR)$. 
+
+\parsec[]
+Consider the theory on $\CC^5 \times \RR$. 
+
+\begin{prop}
+There is a quasi-isomorphism of super $L_\infty$ algebras 
+\[
+E(5,10) \xto{\simeq} \cG(\CC^5 \times \RR) .
+\]
+This lifts to map of super $L_\infty$ algebras $E(5,10) \to \cL(\CC^5 \times \RR)$ whose kernel is $\CC$.
+\end{prop}
+
 
 \section{BCOV stuff}
 
 \subsection{Relation to BCOV theory}
 
 \parsec[sec:pv] 
-\ingmar{a section defining polyvector fields; not sure where this belongs}
+\ingmar{a section defining polyvector fields; not sure where this belong}
 Equipped with this structure, the complex we have written maps in an obvious way into the complex of polyvector fields on~$X$. Recall that one defines
 \deq{
   \PV^{i,j}(X) = \Omega^{0,j}(X, \wedge^i \T_X).
@@ -954,6 +1032,71 @@ Thus, we have the following.
 \label{prop:tilbcov}
 The BCOV action $I_{BCOV}$ restricts to a solution of the classical master equation on $\til{\cE}_{KS}$ that we denote by $\til{I}_{BCOV}$. 
 \end{prop}
+
+\subsubsection{}
+
+Define the action by the group $\CC^\times$ on the complex $\til{\cE}_{KS}$ as follows.
+Declare the first line in \eqref{eqn:tilks} is weight zero and the second line is weight $+1$. 
+%Declare $\mu, \nu$ have $\CC^\times$ weight zero and $\beta,\gamma$ have $\CC^\times$ weight $+1$. 
+The linear BRST operator is clearly weight zero and the shifted Poisson structure $\Pi_{KS}$ is of weight $+1$. 
+Thus, the shifted Poisson bracket $\{-,-\}_{KS}$ is of $\CC^\times$ weight $+1$.
+
+\begin{lem}
+The restricted action $\til{I}_{BCOV}$ has $\CC^\times$ weight $-1$. 
+In particular, the non-linear BRST operator 
+\beqn\label{eqn:KSbrst}
+\delta_{BCOV} = Q_{KS} + \{\til{I}_{BCOV},-\}_{KS}
+\eeqn
+is $\CC^\times$ weight zero.
+\end{lem}
+\begin{proof}
+%The map $\Phi \colon \cE_{pot} \to \til{\cE}_{KS}$ preserves $\CC^\times$ weight, so it suffices to prove that $\til{I}_{BCOV}$ is weight $+1$. 
+We will make use of two gradings on $\til{\cE}_{KS}$. 
+The first is holomorphic polyvector field type, and the second is descendant degree.
+The summand $u^l \PV^{k,\bu}$ is polyvector type $k$ and descendant degree $l$. 
+
+We introduce notation in this proof that won't be used later on. 
+Let $\alpha$ denote a super field living in the first line of \eqref{eqn:tilks} and let $\beta$ denote a super field living in the second line of \eqref{eqn:tilks}.
+If a field of type $\alpha$ has polyvector type $k$ then it has descendant degree $1-k$, $k=0,1$. 
+If a field of type $\beta$ has polyvector type $l$ then it has descendant degree $d-2-l$.
+
+A homogenous polynomial degree term in the BCOV action $I_{BCOV}$ is a linear combination of functionals of the form
+\[
+ \alpha_1 \wedge \cdots \wedge \alpha_m \wedge \beta_1 \wedge \cdots \wedge \beta_n  .
+\]
+Let $k_i$ be the polyvector field type of $\alpha_i$ and let $l_j$ be the polyvector field type of $\beta_j$. 
+In order for this expression to contribute nontrivially to the BCOV action two constraints must hold:
+\begin{align*}
+\sum_{i=1}^m k_i + \sum_{j=1}^n l_j & = d \\
+\sum_{i=1}^m (1-k_i) + \sum_{j=1}^n (d-2-l_j) & = m+n-3 .
+\end{align*}
+The first constraint ensures that the integrand is of top polyvector degree. 
+The second constraint is on the descendant degree, see \brian{ref above}. 
+
+Simplifying these two equations, one finds the condition
+\[
+m+n-3 = m+(d-2)n - d 
+\]
+which implies $n=1$, as desired. 
+\end{proof}
+
+Consider the cochain complex $\left(\oloc(\til{\cE}_{KS}) \, , \, \delta_{KS} \right)$ of all local functionals equipped with the non-linear BRST differential \eqref{eqn:KSbrst}.  
+The $\CC^\times$ weight zero subcomplex is 
+\[
+\big(\oloc(\til\cE_{KS})^{(0)} \, , \, \delta_{KS} \big) = \big(\oloc(\cE_0) \, , \, \delta_{KS} \big) 
+\]
+where $\cE_0 = \PV^{1,\bu}[1] \oplus u \PV^{0,\bu}$ is the subcomplex of the fields $\til\cE_{KS}$ comprising the first line of \eqref{eqn:tilks}.
+
+\begin{prop}
+\label{prop:Linfty}
+The differential $\delta_{KS}$ acting on the weight zero fields induces a local $L_\infty$ algebra structure on the complex of vector bundles 
+\[
+\cE_0 [-1] = \PV^{1,\bu} \oplus \PV^{0,\bu}[-1]
+\]
+with $[-]_1 = \dbar + \div$. 
+Furthermore, this $L_\infty$ algebra structure is equivalent to the strict dg Lie algebra structure on the resolution of divergence-free vector fields defined in \S \ref{sec:divfree}. 
+\end{prop}
+
 %Applying this to the $k$th exterior power of the holomorphic tangent bundle $V = \wedge^k \T_X$, we obtain a resolution of the sheaf of $k$-linear polyvector fields which we denote by $\PV^{k,\bu} (X) = \Omega^{0,\bu}(X, \wedge^k \T_X)$. 
 
 %\subsubsection{}
