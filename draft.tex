@@ -503,6 +503,58 @@ In \cite{??} it is shown that this cocycle $\mu_2$ is
 
 %For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
 
+\subsection{Global symmetry algebra}
+
+\begin{thm}
+There is a map of super Lie algebras from the super Lie algebra $E^{hol}(5,10)$ to the Lie algebra of gauge symmetries of the 11-dimensional theory on $\CC^5 \times \RR$. 
+This map is an embedding at the level of cohomology. 
+\end{thm}
+
+\begin{proof}
+We define the map directly. 
+The even part of $E^{hol}(5,10)$ is precisely the Lie algebra of holomorphic divergence-free vector fields on $\CC^5$. 
+We simply embed this in the space $\PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$ of $\mu$-fields in the 11-dimensional theory. 
+
+The odd part of $E^{hol}(5,10)$ is the space of holomorphic closed two-forms on $\CC^5$. 
+To embed this in the space of fields of the 11-dimensional theory we need to choose primitives. 
+We do this by fixing a homotopy $H \colon \Omega^{2,hol}_{cl} (\CC^5) \to \Omega^{1,hol} (\CC^5)$ by
+\[
+(H \alpha) (z) = \int_{0}^z \alpha .
+\]
+Since $\alpha$ is closed, one has $\partial H \alpha = \alpha$.
+We send $\alpha$ to the $\gamma$-type field $H \alpha$ viewed as an element of $\Omega^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$. 
+
+All embedded elements of $E(5,10)$ are $\dbar$, $\d_{\RR}$, and $\div$-closed and so descends to a map in cohomology. 
+The first nontrivial Lie bracket compatibility we check is between two $\alpha$-type elements. 
+We will do this in coordinates. 
+Suppose $f^{ij} \d z_i \wedge \d z_j$, $g^{ij} \d z_i \wedge \d z_j$ are two closed two-forms. 
+On one hand, in $E(5,10)$ we have 
+\[
+[f^{ij} \d z_i \wedge \d z_j, g^{kl} \d z_k \wedge \d z_l] = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} .
+\]
+
+On the other hand, in the 11-dimensional theory there is the following Lie bracket between $\gamma$-type fields
+\begin{align*}
+[H (f^{ij} \d z_i \wedge \d z_j), H(g^{kl} \d z_k \wedge \d z_l)] & = \big(\del H (f^{ij} \d z_i \wedge \d z_j) \wedge \del H(g^{kl} \d z_k \wedge \d z_l) \big) \vee \partial_{z_1} \wedge \cdots \wedge \partial_{z_5} \\
+& = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} 
+\end{align*}
+as desired. 
+
+The final Lie bracket compatibility we need to check is between a divergence-free vector field $f_i \partial_{z_i}$ and a closed two-form $g^{ij} \d z_i \wedge \d z_j$. 
+In $E(5,10)$ we have
+\[
+[f_i \partial_{z_i} , g^{kl} \d z_k \wedge \d z_l] = \del (f_i g^{il} \d z_l) . 
+\]
+This is embedded as the one-form $f_i g^{il} \d z_l$ up to exact terms. 
+On the other hand, in the 11-dimensional theory we have the following $[\mu,\gamma]$ type bracket
+\begin{align*}
+[f_i \partial_{z_i}, H(g^{kl} \d z_k \wedge \d z_l)] & = L_{f_i \partial_{z_i}} H(g^{kl} \d z_k \wedge \d z_l) \\ 
+& = \iota_{f_i \partial_{z_i}} g^{kl} \d z_k \wedge \d z_l + \del \iota_{f_i \partial_{z_i}} H g^{kl} \d z_k \wedge \d z_l \\
+& = f_i g^{il} \d z_l + \del - \text{exact} .
+\end{align*}
+
+
+\end{proof}
 
 \section{Twisted supergavity on AdS space}
 
@@ -736,6 +788,12 @@ where $i,j=1,\ldots, 5$ and $i \ne j$.
 
 The first main result of this section is to characterize the twist of our 11-dimensional theory on $\CC^5 \times \RR$ by the element $\Psi_{ij}$. 
 
+\brian{introduce PCS}
+Explicitly, if $f,g$ are holomorphic functions on $\CC^2$ then
+\[
+\{f(z_1,z_2) , g(z_1,z_2)\}_{pb} = \partial_{z_i} f \partial_{z_j} g - \partial_{z_j} f \partial_{z_i} g .
+\]
+
 \begin{thm}
 The $\Psi_{ij}$-twist of the 11-dimensional theory is equivalent to Poisson Chern--Simons theory on 
 \[
@@ -745,10 +803,16 @@ The $\Psi_{ij}$-twist of the 11-dimensional theory is equivalent to Poisson Cher
 
 Notice that changing the values of $i,j$ just has the affect of permuting the holomorphic copies of $\CC^2$ leftover in the further twist. 
 
+The Lie algebra of gauge symmetries of this model on flat space is 
+\[
+\Omega^{0,\bu} (\CC_i \times \CC_j) \hotimes \Omega^\bu(\RR^7) 
+\]
+which is quasi-isomorphic to $\cO^{hol}(\CC^2)$ equipped with the Poisson bracket $\{-,-\}_{pb}$. 
+
 \parsec[sec:nmsymmetry]
 Before proceeding to the proof of the theorem above, we perform a very simple calculation of the global symmetry algebra present in the $\Psi_{ij}$-twisted theory. 
 
-We start with the global symmetry algebra $E(5,10)$ of the holomorphic twist of the 11-dimensional theory. 
+Recall that up to a copy of constant functions, the global symmetry algebra of the holomorphic twist of the 11-dimensional theory is the super Lie algebra $E(5,10)$.
 From this point of view, the global symmetry algebra of the $\Psi_{ij}$-twisted theory is given by deformation of this super Lie algebra by the Maurer--Cartan element 
 \[
 \partial \Psi_{ij} = \d z_i \wedge \d z_j \in \Omega^{2,hol}_{cl}(\CC^5) .
@@ -774,14 +838,12 @@ Thus, the cohomology is the (purely bosonic) Lie algebra of divergence-free vect
 \[
 H^\bu\big(E(5,10), [\partial \Psi_{ij}, -] \big) \cong \Vect^{hol}_0(\CC_i \times \CC_j) .
 \]
-Notice that on $\CC^2$, there is an exactly sequence of Lie algebras
+Notice that on $\CC^2$, there is a split exact sequence of Lie algebras
 \[
-0 \to \ul\CC \to \cO^{hol}(\CC^2) \to \Vect_0^{hol} (\CC^2) \to 0
+0 \to \CC \to \cO^{hol}(\CC^2) \to \Vect_0^{hol} (\CC^2) \to 0
 \]
-where $\cO^{hol}(\CC^2)$ is equipped with the Poisson bracket with respect to the symplectic form $\d z_i \wedge \d z_j$:
-\[
-[f(z_1,z_2) , g(z_1,z_2)] = \partial_{z_i} f \partial_{z_j} g - \partial_{z_j} f \partial_{z_i} g .
-\]
+where $\cO^{hol}(\CC^2)$ is equipped with the Poisson bracket with respect to the symplectic form $\d z_i \wedge \d z_j$.
+Thus, the Lie algebra of gauge symmetries of Poisson Chern--Simons theory on $\CC_i \times \CC_j \times \RR^7$ is a trivial one-dimensional central extension of the cohomology of $E(5,10)$. 
 
 \section{The twisted $\Omega$-background} 
 
