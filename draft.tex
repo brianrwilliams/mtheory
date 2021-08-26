@@ -59,7 +59,7 @@ The divergence operator extends to the Dolbeault complex to yield a map of cocha
 \div \colon \Omega^{0,\bu}(X , \T_X) \to \Omega^{0,\bu}(X) .
 \]
 
-The kernel of this map resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0^{hol}(X)$.
+The kernel of this map resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0 (X)$.
 In fact, we can form the complex 
 \beqn\label{eqn:cplx1}
 \begin{tikzcd}
@@ -68,7 +68,7 @@ In fact, we can form the complex
 \end{tikzcd}
 \eeqn
 The $\dbar$ operator, as always, is left implicit. 
-By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect^{hol}_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
+By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
 
 There is a direct way to extend the Lie bracket of vector fields to the complex \eqref{eqn:cplx1}. 
 Denote by $\mu$ an element of $\Omega^{0,\bu}(X , \T_X)$ and $\nu$ an element of $\Omega^{0,\bu}(X)$ (for simplicity in notation, we will not expand the anti-holomorphic dependence). 
@@ -505,56 +505,141 @@ In \cite{??} it is shown that this cocycle $\mu_2$ is
 
 \subsection{Global symmetry algebra}
 
-\begin{thm}
-There is a map of super Lie algebras from the super Lie algebra $E^{hol}(5,10)$ to the Lie algebra of gauge symmetries of the 11-dimensional theory on $\CC^5 \times \RR$. 
-This map is an embedding at the level of cohomology. 
+We recall the definition of an exceptional simple super Lie algebras studied by Kac \cite{KacClass,KR}. 
+Recall that $\Vect_0 (\CC^5)$ the Lie algebra of divergence-free holomorphic vector fields on $\CC^5$.
+Let $\Omega^{2}_{cl} (\CC^5)$ be the module of holomoprhic $2$-forms which are closed for the holomorphic de Rham operator $\del$.
+
+The even part of the super Lie algebra $E^{hol}(5,10)$ is the Lie algebra of divergence-free vector fields on $\CC^5$
+\[
+E^{hol}(5,10)_+ = \Vect_0(\CC^5) ,
+\]
+whose elements we continue to denote by $\mu$. 
+The odd piece is the module 
+\[
+E^{hol}(5,10)_- = \Omega^{2}_{cl} (\CC^5) 
+\]
+whose elements we denote by $\alpha$. 
+Besides the natural module structure, there is an odd $\times$ odd $\to$ even bracket. 
+The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \Vect (\CC^5)$ induced by the standard Calabi--Yau form $\d^5 z$ and is defined by
+\beqn\label{eqn:e510}
+[\alpha, \alpha'] = \Omega^{-1} \vee (\alpha \wedge \alpha') .
+\eeqn
+One immediately checks that since both $\alpha, \alpha'$ are closed two-forms that the resulting vector field on the right hand side is divergence-free. 
+In coordinates, if $f^{ij} \d z_i \wedge \d z_j$, $g^{kl} \d z_k \wedge \d z_l$ are two closed two-forms, their bracket is the vector field $\ep_{ijklm} f^{ij}g^{kl} \partial_{z_m}$. 
+
+To be precise, Kac studied a dense sub Lie algebra $E(5,10)$ of $E^{hol}(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
+It is this dense sub super Lie algebra which is simple.
+
+In this short section, we prove the following.
+
+\begin{thm}\label{thm:global}
+Upon applying the linearized equations of motion, the global symmetry algebra of the holomorphic twist of 11-dimensional supergravity is a trivial one-dimensional extension of the super Lie algebra $E^{hol}(5,10)$. 
 \end{thm}
 
-\begin{proof}
-We define the map directly. 
-The even part of $E^{hol}(5,10)$ is precisely the Lie algebra of holomorphic divergence-free vector fields on $\CC^5$. 
-We simply embed this in the space $\PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$ of $\mu$-fields in the 11-dimensional theory. 
 
-The odd part of $E^{hol}(5,10)$ is the space of holomorphic closed two-forms on $\CC^5$. 
-To embed this in the space of fields of the 11-dimensional theory we need to choose primitives. 
-We do this by fixing a homotopy $H \colon \Omega^{2,hol}_{cl} (\CC^5) \to \Omega^{1,hol} (\CC^5)$ by
+
+\parsec[]
+
+On $\CC^5 \times \RR$ the solutions to the linearized equations of motion of the 11-dimensional theory consists of the space of fields $(\mu, [\gamma], b)$ where:
+\begin{itemize}
+\item $\mu$ is a divergence-free vector field on $\CC^5$, which is constant along $\RR$
 \[
-(H \alpha) (z) = \int_{0}^z \alpha .
+\mu = \mu \otimes 1 \in \Pi \Vect^{hol}_0(\CC^5) \otimes \Omega^0(\RR) .
 \]
-Since $\alpha$ is closed, one has $\partial H \alpha = \alpha$.
-We send $\alpha$ to the $\gamma$-type field $H \alpha$ viewed as an element of $\Omega^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$. 
-
-All embedded elements of $E(5,10)$ are $\dbar$, $\d_{\RR}$, and $\div$-closed and so descends to a map in cohomology. 
-The first nontrivial Lie bracket compatibility we check is between two $\alpha$-type elements. 
-We will do this in coordinates. 
-Suppose $f^{ij} \d z_i \wedge \d z_j$, $g^{ij} \d z_i \wedge \d z_j$ are two closed two-forms. 
-On one hand, in $E(5,10)$ we have 
+Note that $\mu$ is a ghost in the $\ZZ/2$ graded theory. 
+\item $[\gamma]$ is an equivalence class of a holomorphic one-form modulo exact one-forms along $\CC^5$, which are also constant along $\RR$
 \[
-[f^{ij} \d z_i \wedge \d z_j, g^{kl} \d z_k \wedge \d z_l] = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} .
+[\gamma] = [\gamma] \otimes 1 \in \left(\Omega^{1,hol}(\CC^5) / \d \cO^{hol}(\CC^5) \right) \otimes \Omega^0(\RR) .
 \]
+\item A constant function $b \in \Pi \CC$ on $\CC^5 \times \RR$.
+This is a $\beta$-type field in the 11-dimensional theory, any constant function is closed for the de Rham differential. 
+This element is also a ghost in the $\ZZ/2$-graded theory. 
+\end{itemize}
 
-On the other hand, in the 11-dimensional theory there is the following Lie bracket between $\gamma$-type fields
-\begin{align*}
-[H (f^{ij} \d z_i \wedge \d z_j), H(g^{kl} \d z_k \wedge \d z_l)] & = \big(\del H (f^{ij} \d z_i \wedge \d z_j) \wedge \del H(g^{kl} \d z_k \wedge \d z_l) \big) \vee \partial_{z_1} \wedge \cdots \wedge \partial_{z_5} \\
-& = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} 
-\end{align*}
-as desired. 
+\parsec[]
 
-The final Lie bracket compatibility we need to check is between a divergence-free vector field $f_i \partial_{z_i}$ and a closed two-form $g^{ij} \d z_i \wedge \d z_j$. 
-In $E(5,10)$ we have
+If $\cE$ is the space of fields of any theory in the BV or BRST formalism, the shift $\cE[-1]$ has the structure of a Lie, possibly $L_\infty$ algebra. 
+This is the algebra of gauge symmetries, or global symmetry algebra, of the theory. 
+In the $\ZZ/2$ graded world, the parity shifted object $\Pi \cE$ has the structure of a super Lie algebra. 
+
+Before applying the linear equations of motion, we described the super $L_\infty$ structure on the parity shift of the 11-dimensional fields in the first section. 
+Equivalently, this is encoded by the full BV action of the 11-dimensional theory. 
+After applying the equations of motion this $L_\infty$ structure becomes a (strict) super Lie algebra which we now explicitly describe.
+
+After parity shifted, we've identified the solutions to the linear equations of motion with pairs
 \[
-[f_i \partial_{z_i} , g^{kl} \d z_k \wedge \d z_l] = \del (f_i g^{il} \d z_l) . 
+(\mu, [\gamma], b) \in \Vect^{hol}_0(\CC^5) \oplus \Pi \Omega^{1,hol}(\CC^5) / \del \cO^{hol}(\CC^5) \oplus \Pi \CC .
 \]
-This is embedded as the one-form $f_i g^{il} \d z_l$ up to exact terms. 
-On the other hand, in the 11-dimensional theory we have the following $[\mu,\gamma]$ type bracket
-\begin{align*}
-[f_i \partial_{z_i}, H(g^{kl} \d z_k \wedge \d z_l)] & = L_{f_i \partial_{z_i}} H(g^{kl} \d z_k \wedge \d z_l) \\ 
-& = \iota_{f_i \partial_{z_i}} g^{kl} \d z_k \wedge \d z_l + \del \iota_{f_i \partial_{z_i}} H g^{kl} \d z_k \wedge \d z_l \\
-& = f_i g^{il} \d z_l + \del - \text{exact} .
-\end{align*}
+The bracket induced by the classical BV action is the usual bracket on divergence-free vector fields together with the module structure on holomorphic one-forms by Lie derivative.
+Notice that the Lie derivative commutes with the $\del$ operator, so this action descends to equivalence classes as above. 
+The elements $b$ are central. 
 
+The final term in the BV action $\int \gamma \del \gamma \del \gamma$ induces the following Lie bracket on the solutions to the linearized equations of motion
+\beqn\label{eqn:eqb}
+\big[[\gamma], [\gamma'] \big] = \Omega^{-1} \vee (\del \gamma \wedge \del \gamma') .
+\eeqn
+Notice that this bracket is well-defined as it does not depend on the particular equivalence classes. 
 
-\end{proof}
+\parsec[]
+
+We complete the proof of Theorem \ref{thm:global}. 
+The relationship of the $\mu$-elements in $E(5,10)$ and the 11-dimensional theory is the obvious one.
+
+On flat space, any closed differential form is exact (this is a holomorphic version of the Poincar\'e lemma). 
+In other words, there is an isomorphism
+\[
+\del \colon \Omega^1 (\CC^5) / \d \cO(\CC^5) \xto{\cong} \Omega^{2}_{cl}(\CC^5)
+\]
+induced by the holomorphic de Rham differential.
+This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E^{hol}(5,10)$ by $\alpha = \del \gamma$. 
+It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E^{hol}(5,10)$ and 11-dimensional supergravity. 
+This completes the proof. 
+
+%\begin{proof}
+%We define the map directly. 
+%The even part of $E^{hol}(5,10)$ is precisely the Lie algebra of holomorphic divergence-free vector fields on $\CC^5$. 
+%We simply embed this in the space $\PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$ of $\mu$-fields in the 11-dimensional theory. 
+%
+%The odd part of $E^{hol}(5,10)$ is the space of holomorphic closed two-forms on $\CC^5$. 
+%To embed this in the space of fields of the 11-dimensional theory we need to choose primitives. 
+%We do this by fixing a homotopy $H \colon \Omega^{2,hol}_{cl} (\CC^5) \to \Omega^{1,hol} (\CC^5)$ by
+%\[
+%(H \alpha) (z) = \int_{0}^z \alpha .
+%\]
+%Since $\alpha$ is closed, one has $\partial H \alpha = \alpha$.
+%We send $\alpha$ to the $\gamma$-type field $H \alpha$ viewed as an element of $\Omega^{1,0}(\CC^5) \hotimes \Omega^0(\RR)$. 
+%
+%All embedded elements of $E(5,10)$ are $\dbar$, $\d_{\RR}$, and $\div$-closed and so descends to a map in cohomology. 
+%The first nontrivial Lie bracket compatibility we check is between two $\alpha$-type elements. 
+%We will do this in coordinates. 
+%Suppose $f^{ij} \d z_i \wedge \d z_j$, $g^{ij} \d z_i \wedge \d z_j$ are two closed two-forms. 
+%On one hand, in $E(5,10)$ we have 
+%\[
+%[f^{ij} \d z_i \wedge \d z_j, g^{kl} \d z_k \wedge \d z_l] = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} .
+%\]
+%
+%On the other hand, in the 11-dimensional theory there is the following Lie bracket between $\gamma$-type fields
+%\begin{align*}
+%[H (f^{ij} \d z_i \wedge \d z_j), H(g^{kl} \d z_k \wedge \d z_l)] & = \big(\del H (f^{ij} \d z_i \wedge \d z_j) \wedge \del H(g^{kl} \d z_k \wedge \d z_l) \big) \vee \partial_{z_1} \wedge \cdots \wedge \partial_{z_5} \\
+%& = \ep_{ijklm} f^{ij}g^{kl} \partial_{z_m} 
+%\end{align*}
+%as desired. 
+%
+%The final Lie bracket compatibility we need to check is between a divergence-free vector field $f_i \partial_{z_i}$ and a closed two-form $g^{ij} \d z_i \wedge \d z_j$. 
+%In $E(5,10)$ we have
+%\[
+%[f_i \partial_{z_i} , g^{kl} \d z_k \wedge \d z_l] = \del (f_i g^{il} \d z_l) . 
+%\]
+%This is embedded as the one-form $f_i g^{il} \d z_l$ up to exact terms. 
+%On the other hand, in the 11-dimensional theory we have the following $[\mu,\gamma]$ type bracket
+%\begin{align*}
+%[f_i \partial_{z_i}, H(g^{kl} \d z_k \wedge \d z_l)] & = L_{f_i \partial_{z_i}} H(g^{kl} \d z_k \wedge \d z_l) \\ 
+%& = \iota_{f_i \partial_{z_i}} g^{kl} \d z_k \wedge \d z_l + \del \iota_{f_i \partial_{z_i}} H g^{kl} \d z_k \wedge \d z_l \\
+%& = f_i g^{il} \d z_l + \del - \text{exact} .
+%\end{align*}
+%
+%
+%\end{proof}
 
 \section{Twisted supergavity on AdS space}
 
