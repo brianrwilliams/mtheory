@@ -1,0 +1,373 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory,amsaddr}
+
+\addbibresource{cfs.bib}
+
+%\linespread{1.2} %for editing
+%\usepackage{mathpazo}
+
+\begin{document}
+
+\section{Symmetries of the 11-dimensional theory}
+\label{sec:symmetry}
+
+\subsection{Global symmetry algebra}
+\label{sec:global}
+
+Before applying the linear equations of motion, we described the super $L_\infty$ structure on the parity shift of the 11-dimensional fields in the first section. 
+This is encoded by the full BV action of the 11-dimensional theory.
+We describe a simpler (strict) super Lie algebra structure present in the cohomology of the space of fields.
+
+In any field theory, the cohomology classes of states of odd ghost number have the structure of a Lie algebra. 
+More generally, the full cohomology of a $\ZZ/2$ graded space of states with respect to the linear BRST operator results in a super Lie algebra. 
+We will refer to this as the global symmetry algebra of the theory.
+
+The main result of this section is to relate the global symmetry algebra of the minimal twist of 11-dimensional supergravity on $\CC^5 \times \RR$ to a certain infinite-dimensional exceptional simple super Lie algebra studied by Kac \cite{KacClass,KR} called $E(5,10)$.
+
+We recall the definition of this exceptional simple super Lie algebra.
+Recall that $\Vect_0 (\CC^5)$ is the Lie algebra of divergence-free holomorphic vector fields on $\CC^5$.
+Let $\Omega^{2}_{cl} (\CC^5)$ be the module of holomoprhic $2$-forms which are closed for the holomorphic de Rham operator $\del$.
+
+The even part of the super Lie algebra $E^{hol}(5,10)$ is the Lie algebra of divergence-free vector fields on $\CC^5$
+\[
+E^{hol}(5,10)_+ = \Vect_0(\CC^5) ,
+\]
+whose elements we continue to denote by $\mu$. 
+The odd piece is the module 
+\[
+E^{hol}(5,10)_- = \Omega^{2}_{cl} (\CC^5) 
+\]
+whose elements we denote by $\alpha$. 
+Besides the natural module structure, there is an odd $\times$ odd $\to$ even bracket. 
+The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \Vect (\CC^5)$ induced by the standard Calabi--Yau form $\d^5 z$ and is defined by
+\beqn\label{eqn:e510}
+[\alpha, \alpha'] = \Omega^{-1} \vee (\alpha \wedge \alpha') .
+\eeqn
+One immediately checks that since both $\alpha, \alpha'$ are closed two-forms that the resulting vector field on the right hand side is divergence-free. 
+In coordinates, if $f^{ij} \d z_i \wedge \d z_j$, $g^{kl} \d z_k \wedge \d z_l$ are two closed two-forms, their bracket is the vector field $\ep_{ijklm} f^{ij}g^{kl} \partial_{z_m}$. 
+
+More precisely, Kac studied a dense sub Lie algebra $E(5,10)$ of $E^{hol}(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
+It is this dense sub super Lie algebra which is simple.
+
+In this section, we prove the following.
+
+\begin{thm}\label{thm:global}
+Upon applying the linearized equations of motion, the global symmetry algebra of the holomorphic twist of 11-dimensional supergravity is a one-dimensional central extension of the super Lie algebra $E^{hol}(5,10)$ defined by the even cocycle
+\begin{align*}
+E^{hol}(5,10) \times E^{hol}(5,10) \times E^{hol}(5,10) & \to \CC \\
+(\mu,\mu',\alpha) & \mapsto \<\mu \wedge \mu', \alpha\>|_{z=0} .
+\end{align*} 
+\end{thm}
+
+The parity of the functional in the theorem is odd, but it is also trilinear. 
+Thus, as a cocycle in the Chevalley--Eilenberg complex of $E^{hol}(5,10)$ it is of total even parity.
+
+\parsec[]
+
+If $\cE$ is the space of fields of any theory in the BV or BRST formalism, the shift $\cL = \cE[-1]$ has the structure of a Lie, possibly $L_\infty$ algebra. 
+In the $\ZZ/2$ graded world, the parity shifted object $\cL = \Pi \cE$ has the structure of a super $L_\infty$ algebra. 
+
+The full BRST operator is given by the BV bracket with the BV action. 
+For us, this~is 
+\[
+\delta = \{S_{BF,\infty} + J, -\} .
+\]
+The linear BRST operator comes only from the quadratic summands in $S_{BF,\infty}$ and is of the form
+\beqn\label{eqn:linearBRST}
+\delta^{(1)} = \dbar + \d_{\RR} + \div |_{\mu \to \nu} + \del |_{\beta \to \gamma} .
+\eeqn
+The cohomology with respect to $\delta^{(1)}$ is what we referred to above as the global symmetry algebra.
+To compute the cohomology with respect to $\delta^{(1)}$ we can use a spectral sequence, first taking the cohomology with respect to $\dbar + \d_{\RR}$ and then with respect to $\div$. 
+
+On $\CC^5 \times \RR$ the cohomology with respect to the linearized BRST operator $\delta^{(1)}$ consists of the space of triples $(\mu, [\gamma], b)$ where:
+\begin{itemize}
+\item $\mu$ is a divergence-free vector field on $\CC^5$, which is constant along $\RR$
+\[
+\mu = \mu \otimes 1 \in \Pi \Vect^{hol}_0(\CC^5) \otimes \Omega^0(\RR) .
+\]
+Note that $\mu$ is a ghost in the $\ZZ/2$ graded theory. 
+\item $[\gamma]$ is an equivalence class of a holomorphic one-form modulo exact one-forms along $\CC^5$, which are also constant along $\RR$
+\[
+[\gamma] = [\gamma] \otimes 1 \in \left(\Omega^{1,hol}(\CC^5) / \d \cO^{hol}(\CC^5) \right) \otimes \Omega^0(\RR) .
+\]
+\item A constant function $b \in \Pi \CC$ on $\CC^5 \times \RR$.
+This is a $\beta$-type field in the 11-dimensional theory, any constant function is closed for the de Rham differential. 
+This element is also a ghost in the $\ZZ/2$-graded theory. 
+\end{itemize}
+
+\parsec[]
+
+After parity shifting, we've identified the solutions to the linear equations of motion with triples
+\[
+(\mu, [\gamma], b) \in \Vect^{hol}_0(\CC^5) \oplus \Pi \Omega^{1,hol}(\CC^5) / \del \cO^{hol}(\CC^5) \oplus \CC .
+\]
+The bracket induced by the classical BV action is the usual bracket on divergence-free vector fields together with the module structure on holomorphic one-forms by Lie derivative.
+Notice that the Lie derivative commutes with the $\del$ operator, so this action descends to equivalence classes as above. 
+The elements $b$ are central. 
+
+The final term in the BV action $\int \gamma \wedge \del \gamma \wedge \del \gamma$ induces the following Lie bracket on the solutions to the linearized equations of motion
+\beqn\label{eqn:eqb}
+\big[[\gamma], [\gamma'] \big] = \Omega^{-1} \vee (\del \gamma \wedge \del \gamma') .
+\eeqn
+Notice that this bracket is well-defined as it does not depend on the particular equivalence classes. 
+
+\parsec[]
+
+We complete the proof of Theorem \ref{thm:global}. 
+The relationship of the $\mu$-elements in $E(5,10)$ and the 11-dimensional theory is the obvious one.
+
+On flat space, any closed differential form is exact (this is a holomorphic version of the Poincar\'e lemma). 
+In other words, there is an isomorphism
+\[
+\del \colon \Omega^1 (\CC^5) / \d \cO(\CC^5) \xto{\cong} \Omega^{2}_{cl}(\CC^5)
+\]
+induced by the holomorphic de Rham differential.
+This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E^{hol}(5,10)$ by $\alpha = \del \gamma$. 
+It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E^{hol}(5,10)$ and the twist of 11-dimensional supergravity. 
+This completes the proof. 
+
+\subsection{Residual supersymmetry} 
+
+%m2brane
+
+In this section we consider the minimal twist of 11-dimensinoal supersymmetry explicitly. 
+We compute the residual supersymmetry algebra given by taking the cohomology of the 11-dimensional supersymmetry algebra with respect to the minimal twisting supercharge. 
+In order for this to be a symmetry of the 11-dimensional theory that we proposed in Section \ref{sec:dfn} it is necessary to perform a central extension of the 11-dimensional supersymmetry algebra by the $M2$ brane.
+
+\parsec[sec:susy]
+
+The (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
+\[
+  \ft_{11d} = V \oplus \Pi S
+\]
+where $S$ is the (unique) spin representation and $V \cong \CC^{11}$ the complex vector representation, of~$\lie{so}(11, \CC)$. 
+The bracket is the unique surjective $\lie{so}(11,\CC)$-equivariant map from the symmetric square of~$S$ to~$V$;
+this decomposes into three irreducibles, 
+\beqn\label{eqn:decomp}
+  \Sym^2(S) \cong V \oplus \wedge^2 V \oplus \wedge^5 V.
+\eeqn
+Denote by $\Gamma_{\wedge^1}, \Gamma_{\wedge^2}, \Gamma_{\wedge^5}$ the projections onto each of the summands above. 
+The bracket in $\ft_{11d}$ is defined using the first projection
+\[
+[\psi, \psi'] = \Gamma_{\wedge^1} (\psi, \psi') .
+\]
+The super Poincar\'{e} algebra is
+\[
+  \lie{siso}_{11d} = \lie{so}(11 , \CC) \ltimes \ft_{11d} .
+\]
+The $R$-symmetry is trivial in 11-dimensional supersymmetry. 
+
+
+\parsec[sec:m2brane]
+
+Extensions of the supersymmetry algebra correspond to the existence of branes in the original theory of supergravity \brian{good reference?}. 
+In 11-dimensional supersymmetry, there are two such extensions corresponding to the $M2$ brane and the M5 brane.
+We begin by describing a dg Lie algebra model for the $M2$ brane algebra, then we will discuss its relationship to other descriptions as a Lie 3-algebra \cite{Basu_2005,Bagger_2007,fiorenza2015super}. 
+
+The $M2$ brane algebra is dg Lie algebra extension of the super Poincar\'e algebra $\lie{siso}_{11d}$.
+Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.  
+ 
+The super dg Lie algebra $\m2$ is the extension of $\lie{siso}_{11d}$ by the cocycle
+  \[
+    c_{M2} \in \clie^2\left(\lie{siso}_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
+  \]
+  defined by the formula 
+  \[c_{M2} (\psi, \psi') = \Gamma_{\wedge^2}(\psi, \psi') \in \Omega^2(\RR^{11})\]
+  where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$, thought of as the space of constant coefficient two-forms, as in the decomposition \eqref{eqn:decomp}.
+
+We view $\m2$ as a $\ZZ \times \ZZ/2$-graded dg Lie algebra where the bracket is bidegree $(0,+)$ and the differential is bidegree $(1,+)$.
+
+\parsec[sec:m2branetwist]
+
+Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$.
+This supercharge defines the holomorphic twist of 11-dimensional supergravity. 
+\brian{cite \cite{SWspinor}}
+We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
+
+Such a supercharge defines a maximal isotropic subspace $L \subset V$. 
+We can decompose the algebra into $\lie{sl}(L) = \lie{sl}(5)$ representations by
+\deq{
+  V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L^\vee.
+}
+In the expression for $S$, we are omitting factors of $\det(L)^{\frac12}$ for simplicity. 
+Also, $\lie{so}(11, \CC)$ decomposes as
+\[
+\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee .
+\]
+Furthermore, the spinorial representation can be identified with
+\[
+S = \wedge^\bu (L^\vee) = \CC \oplus L^\vee \oplus \wedge^2 L^\vee \oplus \wedge^3 L^\vee \oplus \wedge^4 L^\vee \oplus \wedge^5 L^\vee .
+\]
+The element $Q$ lives in the first summand.
+Let ${\rm Stab}(Q) \subset \lie{so}(11,\CC)$ be the stabilizer of $Q$. 
+This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$.
+
+\begin{prop}\label{prop:model}
+Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the dg Lie algebra with bracket that on $\m2$ and with the differential $\d + [Q,-]$. 
+As a $\ZZ/2$ graded space, the cohomology $H^\bu(\m2^Q)$ is
+\[
+    L^\vee \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^3 L^\vee\right) \oplus \CC
+  \]
+whose elements we denote by $(v, m, \psi, c)$.
+
+The transferred $L_\infty$ structure on $H^\bu(\fg) \cong H^\bu(\m2^Q)$ is a Lie-3 algebra given by the extension of ${\rm Stab}(Q)$ together with the brackets
+\begin{align*}
+[\psi, \psi']_2 & = \psi \wedge \psi' \in \wedge^4 L \cong L^\vee_v \\
+[v, v', \psi]_3 & = \<v \wedge v', \psi\> \in \CC_c .
+\end{align*}
+\end{prop}
+
+\parsec[]
+
+As a consequence of the above proposition, we see that the dg Lie algebra $(\m2,Q)$ is {\em not} formal; there is a 3-ary $L_\infty$ bracket present in cohomology. 
+Instead of this $L_\infty$ description, there is the following minimal model of this dg Lie algebra, which we will use to relate to the 11-dimensional theory. 
+This lemma implies Proposition \ref{prop:model}.
+
+\begin{lem}
+\label{lem:gmodel}
+Let $\fg$ denote the following $\ZZ/2$ graded dg Lie algebra which as a cochain complex is
+\[
+H^\bu(\m2^Q) \oplus (\Pi L \xto{\id} L)  .
+\]
+Denote the elements of the second summand by $(\tilde{\lambda}, \lambda)$. 
+The nontrivial Lie brackets are
+\begin{align*}
+[v,\lambda] & = \<v, \til\lambda\> \in \CC_c \\ 
+[v,\psi] & = \<v, \psi\> \in \Pi L_{\Tilde{\lambda}} \\
+[\psi, \psi'] & = \psi \wedge \psi' \in L^\vee_v  .
+\end{align*}
+There is an $L_\infty$ map 
+\[
+\fg \rightsquigarrow \m2^Q
+\] 
+which is a quasi-isomorphism of cochain complexes.  
+\end{lem}
+\begin{proof}
+The supercharge $Q$ is odd and of cohomological degree zero.
+Since the differential on $\m2$ is even of cohomological degree $+1$, only a totalized $\ZZ/2$ grading makes the differential $\d + [Q,-]$ homogenous. 
+
+The cohomology of the non-centrally extended algebra was computed in \cite{SWspinor}, we briefly recall the result. 
+The element $Q$ only acts nontrivially on the summands $\wedge^4 L^\vee$ and $\wedge^5 L^\vee$ in $S$. 
+The image of $\wedge^4 L^\vee \cong L$ trivializes the antiholomorphic translations while the image of $\wedge^5 L^\vee$ trivializes the time translation.
+So, of the translations, only the holomorphic ones $L^\vee$ survive.
+The map 
+\[
+[Q,-] \colon \lie{so}(11,\CC) \to S 
+\] 
+is the projection onto $\wedge^0 L^\vee \oplus \wedge^1 L^\vee \oplus \wedge^2 L^\vee$. 
+The kernel of $[Q,-]$ is the stabilizer ${\rm Stab}(Q)$.
+
+In summary, the space of odd translations which survive cohomology is $\wedge^3 L^\vee \cong \wedge^2 L$.
+This completes the calculation of the cohomology. 
+
+We embed $\fg$ into $\m2^Q$ in the following way: ${\rm Stab}(Q)$ and $L^\vee$ sit inside in the evident way.
+The central element maps to $c \mapsto \pm 1 \in \Omega^0(\RR^{11})$.
+The summand $L_\lambda$ is mapped to the linear functions in $\Omega^0(\RR^{11})$ and $\Pi L_{\Tilde{\lambda}}$ is sent to the constant coefficient one-forms in $\Pi \Omega^1(\RR^{11})$. 
+It remains to declare where $\psi \in \wedge^2 L$ is mapped.
+
+Define the map
+\[
+H \colon \Omega^2 (\RR^{11}) \to \Omega^1(\RR^{11})
+\]
+which sends a two-form $\alpha$ to the one-form $H \alpha$ defined by the formula
+\[
+(H \alpha) (x) = \int_0^x \alpha .
+\]
+
+Notice that if $\alpha$ is $\d$-closed then $\d (H \alpha) = \alpha$. 
+It follows that any element $\psi \in \wedge^2 L \subset S$ can be lifted to a closed element at the cochain level in $\m2^Q$ by the formula
+\[
+\Tilde{\psi} = \psi - H \Gamma_{\wedge^2} (Q, \psi) \in \Pi S \oplus \Pi \Omega^1 .
+\]
+Thus, sending $\psi \mapsto \Tilde{\psi}$ defines a cochain map $\fg \to \m2^Q$. 
+
+The Lie bracket $[\Tilde{\psi}, \Tilde{\psi}']$ agrees with $[\psi, \psi']$. 
+On the other hand, in $\m2^Q$ there is the Lie bracket 
+\[
+[v,\Tilde{\psi}] = - L_v (H \Gamma_{\wedge^2} (Q, \psi)) = -\<v, \Gamma_{\wedge^2}(Q, \psi) - \d \<v, H \Gamma_{\wedge^2}(Q, \psi) .
+\]
+The first term agrees with the bracket $[v, \psi]_{\fg}$ in $\fg$. 
+The other term is exact in $\m2^Q$ and can hence be corrected by the following bilinear  
+\[
+v \otimes \psi \mapsto \<v, H \Gamma_{\wedge^2} \> \in L_\lambda .
+\] 
+Together with the cochain map described above, this bilinear term prescribes the desired $L_\infty$ map. 
+
+\end{proof}
+
+\parsec[s:residual]
+Consider now the super $L_\infty$ algebra $\cL$ underlying the eleven-dimensional theory on $\CC^5 \times \RR$. 
+
+\begin{prop}
+There is a linear map of super $L_\infty$ algebras 
+\[
+\fg \to \cL 
+\]
+where $\fg$ is the model for the $Q$-cohomology of the super Lie algebra $\m2$ from Proposition \ref{lem:gmodel}. 
+In particular, the $Q$-twisted algebra $\m2^Q \simeq \fg$ is a symmetry of 11-dimensional theory on $\CC^5 \times \RR$. 
+\end{prop}
+\begin{proof}
+Recall the model $\fg$ takes the following form
+\beqn 
+\begin{tikzcd}
+\ul{even} & \ul{odd} & \ul{even} \\
+ L_1 & \wedge^2 L_2 & L^\vee \\
+\wedge^2 L_1 & & \\
+\lie{sl}(5) \\
+L_2 \ar[r, "\id"] & L_3 \\ 
+\CC_c & .
+\end{tikzcd}
+\eeqn
+The subscripts in $L_1, L_2, L_3$ are used to distinguish between the various copies of $L$.
+
+The map from the dg model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory is as follows. 
+\begin{align*}
+ L_1 & \mapsto 0 \\
+ \wedge^2 L_1 & \mapsto 0 \\
+z_i \wedge z_j \in \wedge^2 L_2 & \mapsto \frac12 (z_i \d z_j - z_j \d z_i) \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
+\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_2 & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+z_i \in L_3 & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+c \in \CC_c & \mapsto c \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) .
+\end{align*}
+
+It is immediate to check that this is a map of cochain complexes where one equips $\cL$ with the linear BRST differential \eqref{eqn:linearBRST}.
+Since $\nu$ does not appear in the image of this map, to check that the higher Lie brackets are preserved one only needs to check that the $2$-ary bracket is preserved and this is immediate. 
+\end{proof}
+
+Because this map preserves differentials, it descends to a map in cohomology. 
+We have already computed the cohomology of $\cL$ on $\CC^5 \times \RR$, it is the trivial one-dimensional central extension of $E (5,10)$. 
+The cohomology of $\fg$ is described in Proposition \ref{prop:model}. 
+The map
+\[
+L^\vee \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^3 L^\vee\right) \oplus \CC_c \to E (5,10) \oplus \CC_{c'}
+\]
+is defined by very similar formulas as above
+\begin{align*}
+ L_1 & \mapsto 0 \\
+ \wedge^2 L_1 & \mapsto 0 \\
+z_i \wedge z_j \in \wedge^2 L_2 & \mapsto \d z_i \wedge \d z_j \in \Omega^{2}_{cl} (\CC^5) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \Vect_0(\CC^5) \\ \frac{\partial}{\partial z_j} \in L^\vee & \mapsto
+\frac{\partial}{\partial z_i} \in \Vect_0(\CC^5) \\
+c \in \CC_c & \mapsto c \in \CC_{c'} .
+\end{align*}
+
+\parsec[]
+
+In this section we compare to the work of \brian{Linfty refs}.
+In these references, the algebra $\m2$ is defined as an $L_\infty$  
+central extension of $\lie{siso}_{11d}$. 
+
+Recall that given two spinors $\psi, \psi' \in S$ we can form the constant coefficient two-form $\Gamma_{\wedge^2} (\psi, \psi')$. 
+Using this two-form we can define the following four-linear expression
+\[
+\mu_2 (\psi, \psi',v,v') = \<v \wedge v', \Gamma(\psi, \psi')\> .
+\]
+This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\ft_{11d})$. 
+In \cite{??} it is shown that this cocycle $\mu_2$ is 
+
+%For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
+
+
+\end{document}
