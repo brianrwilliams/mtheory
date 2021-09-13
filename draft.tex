@@ -156,7 +156,7 @@ The graded vector space $\cL \otimes A$ is equipped with the natural structure o
 \end{align*}
 
 We apply this construction, taking $\cL$ to be the sheaf resolving divergence-free holomorphic vector fields on a Calabi--Yau manifold $X$ equipped with either the strict dg Lie algebra structure $\cL_0(X)$ or its non-strict $L_\infty$ structure $\cL_\infty (X)$. 
-The algebra $A$ will be the smooth de Rham complex $(\Omega^\bu(L) , \d_L)$ where $L$ is any smooth manifold. 
+The algebra $A$ will be the smooth de Rham complex $(\Omega^\bu(L) , \d_S)$ where $L$ is any smooth manifold. 
 
 We thus obtain the structure of an dg Lie algebra on $\cL_0(X) \otimes \Omega^{\bu}(L)$ or an $L_\infty$ algebra $\cL_\infty(X) \otimes \Omega^\bu(L)$.
 These define equivalent local $L_\infty$ algebras on the product manifold $X \times L$. 
@@ -206,7 +206,7 @@ We have constructed two equivalent descriptions of the BF theory which share the
 
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(L)$ is
 \deq{
-  S_0 =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +  \beta\partial_\Omega \mu + \frac{1}{2}  \gamma [\mu,\mu] +  \beta[\mu,\nu].
+  S_0 =  \beta (\dbar + \d_S) \nu +  \gamma (\dbar + \d_S) \mu +  \beta\partial_\Omega \mu + \frac{1}{2}  \gamma [\mu,\mu] +  \beta[\mu,\nu].
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
@@ -215,7 +215,7 @@ The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{
 (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
 Explicitly, this action functional is
 \deq{
-  S_\infty =  \beta (\dbar + \d_L) \nu +  \gamma (\dbar + \d_L) \mu +   \beta \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} (\partial \gamma) \mu^2.
+  S_\infty =  \beta (\dbar + \d_S) \nu +  \gamma (\dbar + \d_S) \mu +   \beta \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} (\partial \gamma) \mu^2.
 }
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
@@ -224,6 +224,7 @@ Explicitly, the automorphism is
   \mu \mapsto e^{-\nu} \mu, \qquad \nu \mapsto 1-e^{-\nu} \\
   \beta \mapsto (\beta - \mu \gamma) e^{\nu},\qquad \gamma \mapsto e^{\nu} \gamma .
 \end{multline}
+
 \subsection{A family of deformations} 
 
 \parsec
@@ -530,7 +531,7 @@ In coordinates, if $f^{ij} \d z_i \wedge \d z_j$, $g^{kl} \d z_k \wedge \d z_l$ 
 To be precise, Kac studied a dense sub Lie algebra $E(5,10)$ of $E^{hol}(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
 It is this dense sub super Lie algebra which is simple.
 
-In this short section, we prove the following.
+In this section, we prove the following.
 
 \begin{thm}\label{thm:global}
 Upon applying the linearized equations of motion, the global symmetry algebra of the holomorphic twist of 11-dimensional supergravity is a trivial one-dimensional extension of the super Lie algebra $E^{hol}(5,10)$. 
@@ -566,7 +567,7 @@ Before applying the linear equations of motion, we described the super $L_\infty
 Equivalently, this is encoded by the full BV action of the 11-dimensional theory. 
 After applying the equations of motion this $L_\infty$ structure becomes a (strict) super Lie algebra which we now explicitly describe.
 
-After parity shifted, we've identified the solutions to the linear equations of motion with pairs
+After parity shifted, we've identified the solutions to the linear equations of motion with triples
 \[
 (\mu, [\gamma], b) \in \Vect^{hol}_0(\CC^5) \oplus \Pi \Omega^{1,hol}(\CC^5) / \del \cO^{hol}(\CC^5) \oplus \Pi \CC .
 \]
@@ -592,7 +593,7 @@ In other words, there is an isomorphism
 \]
 induced by the holomorphic de Rham differential.
 This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E^{hol}(5,10)$ by $\alpha = \del \gamma$. 
-It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E^{hol}(5,10)$ and 11-dimensional supergravity. 
+It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E^{hol}(5,10)$ and the twist of 11-dimensional supergravity. 
 This completes the proof. 
 
 %\begin{proof}
