@@ -178,7 +178,7 @@ As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of
 We have constructed two equivalent descriptions of the BF theory which share the linear BRST complex \eqref{eq:sympfields}.
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(S)$ is
 \deq{
-  S_{BF,0} =  \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +  \beta \wedge \partial_\Omega \mu + \frac{1}{2}  \gamma \wedge [\mu,\mu] +  \beta \wedge [\mu,\nu].
+  S_{BF,0} =  \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +  \beta \wedge \partial_\Omega \mu + \frac{1}{2} [\mu,\mu] \vee \gamma +  [\mu,\nu] \beta .
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
@@ -186,7 +186,7 @@ The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{
 (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
 Explicitly, this action functional is
 \deq{
-  S_{BF,\infty} =  \beta \wedge (\dbar + \d_L) \nu +  \gamma \wedge (\dbar + \d_L) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} (\partial \gamma) \vee \mu^2.
+  S_{BF,\infty} =  \beta \wedge (\dbar + \d_L) \nu +  \gamma \wedge (\dbar + \d_L) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma .
 }
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
@@ -231,6 +231,7 @@ The deformation $J$ does not make reference to the Calabi--Yau structure explici
 The main result of this section is the following. 
 
 \begin{thm}
+\label{thm:dfn}
 Let $X$ be a Calabi--Yau five-fold and $S$ a smooth one-dimensional manifold, and consider the BV theory $(\cE, S_{BF,\infty})$ on $X \times S$ defined above. The local functional 
   \deq{
     J = \frac16 \gamma \wedge \del \gamma \wedge \del \gamma ,
@@ -276,7 +277,25 @@ The contribution from the remaining BF action takes the form
 This expression is zero for symmetry reasons. Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional which is cubic in this two-form. We can ask whether such a  contraction exists just at the level of $\lie{sl}(5)$ representation theory by computing the decomposition of the two-form  
 \ingmar{finish}
 
-\parsec[]
+\parsec[s:coupling]
+
+We make note of the dependence on the coupling constant $g$ in the definition of the deformed action $S_{BF,\infty} + g J$. 
+
+When $g = 0$ we return to BF theory for the $L_\infty$ algebra $\cL_\infty(\CC^5) \otimes \Omega^\bu(\RR)$. 
+For any $g \ne 0$ the theories are essentially equivalent in perturbation theory. 
+Indeed, if $g \ne 0$ we can make the following field redefinition 
+\[
+\gamma \mapsto \sqrt{g} \gamma, \quad \beta \mapsto \sqrt{g} \beta 
+\]
+to write the action as 
+\[
+\frac{1}{\sqrt{g}} \left(S_{BF,\infty} + J \right)  .
+\]
+
+In perturbation theory, this has the affect of modifying the quantization parameter $\hbar$ to $\hbar / \sqrt{g}$.
+Thus, after modifying $\hbar$ and making the above field redefinition, the perturbative expansion of any theory is equivalent to the one with $g = 1$. 
+
+\parsec[s:altdfn]
 
 We remark on an alternative, equivalent, description of the deformed theory which involves the strict dg Lie algebra structure on divergence-free holomorphic vector fields.
 
