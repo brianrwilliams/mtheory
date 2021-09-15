@@ -119,10 +119,22 @@ whose elements we denote by $(v, m, \psi, c)$.
 $\m2^Q$ is not formal as a super dg Lie algebra.
 As a super $L_\infty$ algebra, the $Q$-twist is equivalent to \eqref{eqn:susycoh} with $2$-brackets described in (1) where we additionally introduce the $3$-ary bracket 
 \beqn\label{eqn:susy3bra}
-[v, v', \psi]_3 = \<v \wedge v', \psi\> \in \CC_c .
+[v, v', \psi]_3 = 4 \<v \wedge v', \psi\> \in \CC_c .
 \eeqn
 \end{enumerate}
 \end{prop}
+
+It will be useful to list the formulas for the brackets in terms of coordinates. 
+Let $\{z_i\}$ denote a basis for $L$, which we will also think of as a linear coordinate on $\CC^5$. 
+Let $\{\partial_{z_i}\}$ be a dual basis for $L^\vee$, which we will also think of as translation invariant vector fields.
+The $2$-ary bracket above is 
+\[
+[z_i \wedge z_j, z_k \wedge z_l]_2 = \ep_{ijklm} \partial_{z_m} 
+\]
+and the $3$-ary bracket is
+\[
+[\partial_{z_i}, \partial_{z_j}, z_{k} \wedge z_{\ell}]_3 = 4 (\delta^i_k \delta^j_\ell - \delta^i_\ell \delta^j_k) .
+\] 
 
 \parsec[]
 
@@ -231,56 +243,78 @@ This recovers the formula in (2) of Proposition \ref{prop:susycoh}.
 Consider now the super $L_\infty$ algebra $\cL$ underlying the eleven-dimensional theory on $\CC^5 \times \RR$. 
 
 \begin{prop}
+Endow the cohomology of $\m2^Q$ with the $L_\infty$ structure of Proposition \ref{prop:susycoh} and let $\cL(\CC^5 \times \RR)$ be the super $L_\infty$ algebra underlying 11-dimensional supergravity on $\CC^5 \times \RR$. 
 There is a map of super $L_\infty$ algebras 
 \[
-\fg \rightsquigarrow \cL 
+H^\bu(\m2^Q) \rightsquigarrow \cL (\CC^5 \times \RR)
 \]
 where $\fg$ is the model for the $Q$-cohomology of the super Lie algebra $\m2$ from Proposition \ref{lem:gmodel}. 
 In particular, the $Q$-twisted algebra $\m2^Q \simeq \fg$ is a symmetry of 11-dimensional theory on $\CC^5 \times \RR$. 
 \end{prop}
 \begin{proof}
-Recall the model $\fg$ takes the following form
+Recall the cohomology of $\m2^Q$ takes the following form
 \beqn 
 \begin{tikzcd}
 \ul{even} & \ul{odd} & \ul{even} \\
- L_1 & \wedge^2 L_2 & L^\vee \\
+ L & \wedge^2 L_2 & L^\vee \\
 \wedge^2 L_1 & & \\
-\lie{sl}(5) \\
-L_2 \ar[r, "\id"] & L_3 \\ 
-\CC_c & .
+\lie{sl}(5) && \CC_c  \\
+%L_2 \ar[r, "\id"] & L_3 \\ 
+ .
 \end{tikzcd}
 \eeqn
-The subscripts in $L_1, L_2, L_3$ are used to distinguish between the various copies of $L$.
+The lefthand column is ${\rm Stab}(Q)$. 
+The subscripts in $\wedge^2 L_1, \wedge^2 L_2$ are used to distinguish between the two copies of $\wedge^2 L$.
 
-The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory has a linear $\Phi^{(1)}$ and quadratic $\Phi^{(2)}$ piece
-The linear piece $\Phi^{(1)} \colon \fg \to \cL$ is
+The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory has a linear $\Phi^{(1)}$ and quadratic $\Phi^{(2)}$ piece.
+
+Define the linear map $\Phi^{(1)} \colon \fg \to \cL$ as follows:
 \begin{align*}
- L_1 & \mapsto 0 \\
+ L & \mapsto 0 \\
  \wedge^2 L_1 & \mapsto 0 \\
 z_i \wedge z_j \in \wedge^2 L_2 & \mapsto \frac12 (z_i \d z_j - z_j \d z_i) \in \Omega^{1,0} (\CC^5) \hotimes \Omega^0 (\RR) \\
-A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\\frac{\partial}{\partial z_j} \in L^\vee & \mapsto
-\frac{\partial}{\partial z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ z_i \in L_2 & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
-z_i \in L_3 & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \partial_{z_j} \in \PV^{1,0}(\CC^5) \hotimes \Omega^0(\RR) \\ \partial_{z_j} \in L^\vee & \mapsto
+\partial_{z_i} \in \PV^{1,0} (\CC^5) \hotimes \Omega^0 (\RR^5) \\ %z_i \in %L_2 & \mapsto z_i \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
+%z_i \in L_3 & \mapsto \d z_i \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0 (\RR) \\
 1 \in \CC_c & \mapsto 1 \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) .
 \end{align*}
 
-It is immediate to check that this is a map of cochain complexes where one equips $\cL$ with the linear BRST differential \eqref{eqn:linearBRST}.
-Since $\nu$ does not appear in the image of this map, to check that the higher Lie brackets are preserved one only needs to check that the $2$-ary brackets along with a single $3$-ary bracket. 
-The preservation of the $2$-ary brackets are clear, however the linear map $\Phi^{(1)}$ defined above is {\em not} compatible with the $3$-ary bracket present in the 11-dimensional theory
-\[
-\left[\partial_{z_i}, \partial_{z_j} , \frac12 (z_k \d z_\ell - z_\ell \d z_k) \right]_3 = \delta_k^i \delta_\ell^j - \delta_\ell^i \delta_k^j \in \Omega^{0,0}(\CC^5) \otimes \Omega^0(\RR) 
-\]
-which arises from the quartic part of the action $\frac12 \int \frac{1}{1-\nu} \mu^2 \vee \del \gamma$. 
+It is immediate to check that this is a map of cochain complexes since all elements in the image of this map lie in the kernel of the linearized BRST operator \eqref{eqn:linearBRST}. 
 
-To remedy this, we introduce the odd bilinear map $\Phi^{(2)} \colon \fg \times \fg \to \Pi \cL$ defined by 
+This map also preserves the bracket between odd elements in $\wedge^2 L_2$. 
+In the cohomology of $\m2^Q$ we have the bracket
 \[
-\Phi^{(2)} \left(\partial_{z_i} , z_k \wedge z_\ell\right) = \delta^i_k z_\ell - \delta^i_\ell z_k .
+[z_i\wedge z_j , z_k \wedge z_l] = \ep_{ijklm} \partial_{z_m}
 \]
-To see that $\Phi^{(1)} + \Phi^{(2)}$ prescribes an $L_\infty$ map $\fg \rightsquigarrow \cL$ we need to observe the relation
+which is precisely the bracket induced by the cubic term in the action $J = \frac16 \in \gamma \del \gamma \del \gamma$. 
+
+This map does not preserve all of the brackets, however. 
+Indeed, in the 11-dimensional theory $\cL(\CC^5 \times \RR)$ there is the bracket 
 \[
-\left[\Phi^{(1)}(\partial_{z_i}), \Phi^{(1)} (\partial_{z_j}), \Phi^{(1)}(z_k \wedge z_\ell) \right]_3 = \left[\partial_{z_i}, \Phi^{(2)}(\partial_{z_j}, z_k \wedge z_\ell) \right]_2
+\left[\partial_{z_i}, z_j \d z_k - z_k \d z_j\right] = \delta^i_j \d z_k - \delta^i_k \d z_j 
 \]
-which is apparent. 
+arising from the cubic term in $\frac12 \int \frac{1}{1-\nu} \mu^2 \del \gamma$. 
+To remedy the failure for $\Phi^{(1)}$ to preserve the brackets, we introduce the odd bilinear map $\Phi^{(2)} \colon \fg \times \fg \to \Pi \cL$ defined by 
+\beqn\label{eqn:phi2}
+\Phi^{(2)} \left(\partial_{z_i} , z_j \wedge z_k\right) = \frac12 (\delta^i_j z_k - \delta^i_k z_j) .
+\eeqn
+Notice that the field on the right hand side is of type $\beta$. 
+
+The bilinear map $\Phi^{(2)}$ provides a homotopy trivialization for the failure for $\Phi^{(1)}$ to preserve the $2$-ary bracket: 
+\[
+[\Phi^{(1)} (\partial_{z_i}) , \Phi^{(1)}(z_j \wedge z_k)] = \del \Phi^{(2)}\left(\partial_{z_i} , z_j \wedge z_k\right).
+\]
+The lefthand side is $\frac12 (\delta_j^i \d z_k - \delta_k^i \d z_j)$ which is precisely the de Rham differential applied to \eqref{eqn:phi2}.
+
+To define an $L_\infty$ morphism $\Phi^{(1)} + \Phi^{(2)}$ must satisfy additional higher relations. 
+There is a single nontrivial cubic relation to verify:
+\begin{multline} \label{eqn:cubicrln}
+\Phi^{(1)}\left[\partial_{z_i}, \partial_{z_j}, z_k \wedge z_l\right]_3 = [\Phi^{(1)}(\partial_{z_i}), \Phi^{(1)}(\partial_{z_i}), \Phi^{(1)}(z_k \wedge z_l)]_3 \\ + [\del_{z_i}, \Phi^{(2)}(\partial_{z_j}, z_k \wedge z_l)] + [\del_{z_j}, \Phi^{(2)}(\del_{z_i}, z_k \wedge z_l)]
+\end{multline}
+where $[-]_3$ on the left hand side is the $3$-ary bracket defined in Proposition \ref{prop:susycoh} and $[-]_3$ on the right hand side is the $3$-ary bracket defined by the quartic part of the action $\frac12 \int \frac{1}{1-\nu} \mu^2 \vee \del \gamma$. 
+The two terms in the second line of \eqref{eqn:cubicrln} cancel for symmetry reasons and the quartic term in the BV action induces precisely the correct $3$-ary bracket. 
+
+%$[\Phi^{(1)}(z_i \wedge z_j), \Phi^{(1)}(z_k \wedge z_l), \Phi^{(1)} (z_m \wedge z_n)]_3 = \Phi^{(2)} ([z_i \wedge z_j, z_k\wedge z_l)], z_m \wedge z_n) + $permutations, where $[-]_3$ is the $3$-ary bracket arising from the 
 \end{proof}
 
 \parsec[]
