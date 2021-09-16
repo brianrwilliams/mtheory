@@ -1,0 +1,313 @@
+\section{Twisted supergavity on AdS space}
+
+\brian{need to motivate osp}
+
+\subsection{Superconformal algebras}
+
+\begin{prop}
+The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
+\end{prop} 
+
+\subsection{The ${\rm AdS}_7 \times S^4$ background}
+
+In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
+In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
+
+\parsec[]
+
+Choose a splitting 
+\[
+\CC^5 \times \RR = \CC_z^3 \times \CC_w^2 \times \RR
+\]
+and denote coordinates $z_i, i=1,2,3$ and $w_a, a=1,2$.
+
+The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
+\[
+\lie{sl}(4) \oplus \lie{sl}(2) .
+\]
+which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. 
+
+The embedding of the bosonic piece can roughly be described as follows. 
+The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
+Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
+The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
+
+
+\begin{itemize}
+
+\item
+The bosonic abelian subalgebra $\CC^3 \subset \lie{sl}(4)$ is mapped to the translations 
+\[
+\frac{\del}{\del z_i} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad i=1,2,3.
+\]
+
+\item
+The bosonic subalgebra $\lie{sl}(3) \subset \lie{sl}(4)$ is mapped to the 
+rotations
+\[
+A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad (A_{ij}) \in \lie{sl}(3) .
+\]
+
+\item
+The bosonic subalgebra $\CC \subset \lie{sl}(4)$ is mapped to the element
+\[
+\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR)  .
+\] 
+Notice that these vector fields are divergence-free and restrict to the ordinary dilation along $w=0$. 
+\item 
+The bosonic subalgebra of $\lie{sl}(4)$ describing special conformal transformations on $\CC^3$ is mapped to the elements 
+\[
+z_i \left(\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - 2 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
+\] 
+Notice that these vector fields are divergence-free and restrict to the ordinary special conformal transformations along $w=0$. 
+\item 
+The bosonic summand $\lie{sl}(2)$ is mapped to the triple
+\[
+w_1 \frac{\del}{\del w_2}, w_2 \frac{\del}{\del w_1}, \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
+\]
+\end{itemize}
+
+The odd part of the algebra $\lie{osp}(6|1)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\lie{sl}(4)$ representation and $R$ is the fundamental $\lie{sl}(2)$ representation. 
+It is natural to split $W = L \oplus \CC$ with $L = \CC^3$ the fundamental $\lie{sl}(3) \subset \lie{sl}(4)$ representation. 
+Then the odd part decomposes as
+\[
+L \otimes R \oplus \wedge^2 L \otimes R \cong \CC^3 \otimes \CC^2 \oplus \wedge^2 \CC^3 \otimes \CC .
+\]
+
+\begin{itemize} 
+\item The summand $L \otimes R$ consists of the remaining 6d superstranlsations. 
+It is mapped to the fields 
+\[
+z_i \d w_a \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
+\] 
+\item The summand $\wedge^2 L \otimes R$ consists of the remaining 6d superconformal transformations. 
+It is mapped to the fields
+\[
+\ep^{ijk} z_i w_a \d z_j \in \Omega^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad a = 1,2, \quad k = 1,2,3. 
+\]
+\end{itemize}
+
+\subsection{The ${\rm AdS}_4 \times S^7$ background}
+
+In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
+In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
+
+\parsec[]
+
+We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
+\[
+\CC_z \times \RR \times \CC^4_w .
+\]
+Based on the discussion above, it is natural to expect that there is a field of twisted 11-dimensional supergravity which sources the twist of a stack of $N$ $M2$ branes living on the submanifold $\CC_z \times \RR \cong \{w=0\} \subset \CC^5$. 
+
+The differential form which sources the brane is an element
+\[
+\til{F} \in \Omega^{4,3} (\CC^4_w \, \setminus \, 0) \otimes \Omega^{0,0} (\CC_z) \otimes \Omega^{0} (\RR) \subset \Omega^{\bu} \left(\CC^5 \times \RR \, \setminus \, \{w=0\}\right) .
+\]
+Equivalently, we can think about this as a distributional valued form $\til{F} \in \Bar{\Omega}^{4,3}(\CC^5) \otimes \Omega^0 (\RR)$ which satisfies the distributional equation
+\[
+\dbar \til{F} = N \delta_{w=0} 
+\]
+where $\delta_{w=0}$ is the Dirac $\delta$-distributional for the submanifold $\{w=0\} = \CC_z \times \RR$. 
+
+Using the Calabi--Yau form we can identify such a differential form with a field of twisted supergravity. 
+Indeed $F = \til{F} \wedge \Omega^{-1}$ is a distributional field of type
+\[
+F \in \Bar{\PV}^{1,3}(\CC^5) \otimes \Omega^0 (\RR) .
+\]
+For $F$ to make sense as a background of twisted supergravity it must satisfies the appropriate (possibly nonlinear) equation of motion, which we now verify. 
+
+\begin{lem}
+The field 
+\[
+F = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
+\]
+satisfies the $\mu$-equation of motion in the presence of a stack of $N$ $M2$ branes sourced by the term $N \Omega^{-1} \delta_{w=0}$:
+\[
+\dbar F + \div F + \frac12 [F, F] = N \Omega^{-1} \delta_{w=0} 
+\]
+where we set the field in the component $\gamma \in \Omega^{1,\bu}(\CC^5) \otimes \Omega^\bu(\RR)$ equal to zero. 
+\end{lem}
+
+\begin{proof}
+The equation $\dbar F = N \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. 
+It is clear that $\div F = 0$ and $[F, F] = 0$ by simple type reasons. 
+\end{proof}
+
+\parsec[]
+
+To provide evidence for the claim that this is the twisted analog of the AdS geometry we will match the symmetries present in the physical theory and those in the twisted theory. 
+
+We have recalled that the $Q$-cohomology of $\lie{osp}(8|2)$ is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
+We will define an embedding of $\lie{osp}(6|1)$ into the 11-dimensional theory on $\CC^5 \times \RR \setminus \{w=0\}$ which corresponds to the twist of the 3d superconformal algebra.
+We first focus on the case where the flux $N=0$, in this case the embedding can be extended to all of $\CC^5 \times \RR$. 
+
+\parsec[] 
+
+The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra $\lie{sl}(4) \oplus \lie{sl}(2)$. 
+For the embedding of the bosonic subalgebra, the roles of $\lie{sl}(4)$ and $\lie{sl}(2)$ are somewhat reversed for the $M2$ brane as compared to the $M5$ brane. 
+The Lie algebra $\lie{sl}(2)$ represents special conformal transformations in $\CC_z$; the vector fields representing these transformations are not divergence-free so must be slightly adjusted. 
+The Lie algebra $\lie{sl}(4)$ represents rotations along the plane $\CC^4_w$.   
+
+\begin{itemize}
+\item The bosonic summand $\lie{sl}(2)$ is mapped to the vector fields:
+\[
+\frac{\del}{\del z} ,\quad z \frac{\del}{\del z} - \frac14 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} , \quad z \left(z \frac{\del}{\del z} - \frac12 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} \right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
+\]
+Notice that these vector fields are divergence-free and along $w=0$ reduce to the usual special conformal transformations.
+\item The bosonic summand $\lie{sl}(4)$ is mapped to the $4$-dimensional rotations: 
+\[
+\sum_{a,b=1}^4 B_{ab} w_a \frac{\del}{\del w_b} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad (B_{ab}) \in \lie{sl}(4) .
+\]
+\end{itemize}
+
+The odd part of the algebra $\lie{osp}(6|1)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\lie{sl}(4)$ representation and $R$ is the fundamental $\lie{sl}(2)$ representation. 
+It is natural to split $R = \CC_{+1} \oplus \CC_{-1}$ so that the odd part decomposes as
+\[
+(\wedge^2 \CC^4)_{+1} \otimes (\wedge^2 \CC^4)_{-1} .
+\]
+
+\begin{itemize}
+\item 
+The fermionic summand $(\wedge^2 \CC^4)_{+1}$ consists of the supertranslations. 
+It is mapped to the fields: 
+\[
+\ep^{abcd} w_c \d w_d \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad a,b=1,2,3,4. 
+\] 
+\item The fermionic summand $(\wedge^2 \CC^4)_{-1}$ consists of the remaining superconformal transformations. 
+It is mapped to the fields: 
+\[
+\ep^{abcd} z w_c \d w_d \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad a,b=1,2,3,4. 
+\] 
+\end{itemize}
+
+
+\begin{lem}
+These assignments define an embedding of $\lie{osp}(6|1)$ into the linearized BRST cohomology of the fields of the 11-dimensional theory on $\CC^5 \times \RR$. 
+Equivalently, it defines an embedding
+\[
+\lie{osp}(6|1) \hookrightarrow E(5,10) .
+\]
+\end{lem} 
+
+The second assertion follows from Theorem \ref{thm:global} that as a super Lie algebra the linearized BRST cohomology of the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$ is the trivial central extension of $E(5,10)$. 
+Recall that the odd part of $E(5,10)$ is precisely the module of closed two-forms on $\CC^5$. 
+To explicitly describe the embedding into $E(5,10)$ we simply apply the de Rham differential to the last two formulas above:
+\begin{itemize}
+\item 
+The fermionic summand $(\wedge^2 \CC^4)_{+1}$ embeds into closed two-forms as
+\[
+\d w_a \wedge \d w_b, \quad a,b=1,2,3,4. 
+\] 
+\item The fermionic summand $(\wedge^2 \CC^4)_{-1}$ embeds into closed two-forms as
+\[
+(z \d w_a  \wedge \d w_b + \ep^{abcd} w_c \d z \wedge \d w_d) , \quad a,b=1,2,3,4. 
+\] 
+\end{itemize}
+
+\parsec[]
+
+Next, we turn on a nontrivial unit of flux $N \ne 0$. 
+Since not all of the fields we wrote down above commute with the flux $N F$, they are not compatible with the total differential $\delta^{(1)} + [N\til F, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w=0\}$. 
+Nevertheless, we have the following. 
+
+\begin{prop}
+There exists $N$-dependent corrections to the fields defining the embedding of $\lie{osp}(6|1)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N \til F,-]$. 
+Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the $\delta^{(1)} + [N \til F,-]$ cohomology of the fields of 11-dimensional supergravity on $\CC^5 \times \RR \setminus \CC \times \RR$. 
+\end{prop}
+
+\begin{proof}
+Let $\cL(\CC^5 \times \RR \setminus \CC \times \RR)$ denote the super $L_\infty$ algebra obtained by parity shifting the fields of the 11-dimensional theory. 
+We make the identification $\CC^5 \times \RR \setminus \{w=0\} \cong (\CC_w^4 \setminus 0) \times \CC_z \times \RR$. 
+Recall that we are viewing $\til F$ as an element of $\PV^{1,3}(\CC_w^4 \setminus 0) \otimes \Omega^{0,0}(\CC_z) \otimes \Omega^0(\RR)$. 
+As such, the operator $[N \til F,-]$ acts on the fields according to two types of maps:
+\begin{align*}
+[N \til F ,-] & \colon \PV^{i,\bu}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \PV^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \\
+[N \til F,-] & \colon \Omega^{i,\bu}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \Omega^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR).
+\end{align*}
+
+\brian{get the filtration straight}
+
+
+The first page of the spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$. 
+Recall that the linearized BRST differential decomposes as
+\[
+\delta^{(1)} = \dbar + \d_{\RR} + \div |_{\mu \to \nu} + \del |_{\beta \to \gamma}  .
+\]
+To compute this page, we use an auxiliary spectral sequence which simply filters by the holomorphic form and polyvector field type. 
+This first page of this auxiliary spectral sequence is simply given by the cohomology with respect to $\dbar + \d_{\RR}$. 
+This cohomology is given by
+\begin{equation}
+  \label{eqn:ads4ss} 
+  \begin{tikzcd}[row sep = 1 ex]
+    + & - \\ \hline
+H^\bu(\CC^4\setminus 0, \T) \otimes H^\bu(\CC, \cO) & H^\bu(\CC^4 \setminus 0, \cO) \otimes H^\bu(\CC, \cO) \\
+H^\bu(\CC^4\setminus 0, \cO) \otimes H^\bu(\CC, \T) \\
+H^\bu(\CC^4\setminus 0, \cO) \otimes H^\bu(\CC, \cO) & H^\bu(\CC^4\setminus 0, \cO) \otimes H^\bu(\CC, \Omega^1) \\ & H^\bu(\CC^4\setminus 0, \Omega^1) \otimes H^\bu(\CC, \cO)  
+\end{tikzcd}
+\end{equation}
+where $\T$ denotes the holomorphic tangent sheaf, $\Omega^1$ denotes the sheaf of holomorphic one-forms, and $\cO$ is the sheaf of holomorphic functions.
+
+The cohomology of $\CC$ is concentrated in degree zero and there is a dense embedding
+\[
+\CC[z] \hookrightarrow H^\bu(\CC, \cF) 
+\]
+for $\cF = \cO, \T$, or $\Omega^1$. 
+
+For $\cF = \cO, \T$, or $\Omega^1$, the cohomology $H^\bu(\CC^4 \setminus 0, \cF)$ is concentrated in degrees $0$ and $3$. 
+There are the following dense embeddings 
+\begin{align*}
+\CC[w_1,\ldots, w_4] & \hookrightarrow H^\bu(\CC^4 \setminus 0, \cO) \\ 
+\CC[w_1,\ldots, w_4] \{\partial_{w_i}\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \T) \\
+\CC[w_1,\ldots, w_4] \{\d w_i\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \Omega^1) 
+\end{align*}
+and
+\begin{align*}
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] & \hookrightarrow H^\bu(\CC^4 \setminus 0, \cO) \\ 
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_i}\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \T) \\
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\d w_i\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \Omega^1) .
+\end{align*}
+
+It follows that (up to completion) the cohomology 
+\[
+H^\bu(\cL(\CC^5 \times \RR \setminus \CC \times \RR) , \dbar)
+\]
+is the direct sum of $H^\bu(\cL(\CC^5 \times \RR), \dbar)$ with 
+\begin{equation}
+  \label{eqn:ads4ss2} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + \\ \hline
+H^3(\CC^4\setminus 0, \T)[z] \{\partial_{w_i}\}  \ar[r, dotted, "\div"] & H^3(\CC^4 \setminus 0, \cO) [z] \\
+H^3(\CC^4\setminus 0, \cO) [z] \partial_z \ar[ur, dotted, "\div"] \\
+H^3(\CC^4\setminus 0, \cO) [z] \ar[r, dotted, "\del"] \ar[dr, dotted, "\del"] & H^3(\CC^4\setminus 0, \cO)[z] \d z \\ & H^3(\CC^4\setminus 0, \Omega^1)[z] \{\d w_i\} .
+\end{tikzcd}
+\end{equation}
+The remaining piece of the original BRST operator is drawn in dotted lines. 
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N\til F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to dotted line operators. 
+In this description the image of the flux $\til F$ at this page in the spectral sequence corresponds to the following class 
+\[
+[\til F] = (w_1 \cdots w_4)^{-1} \partial_z \in H^3(\CC^4\setminus 0, \cO) [z] \partial_z .
+\]
+
+The next page of the spectral sequence is given by computing the cohomology with respect to the operator $[N \til F,-]$. 
+As observed above, this operator maps Dolbeault degree zero elements to Dolbeault degree three elements. 
+For degree reasons, there are no further differentials and the spectral sequence collapses after the second page. 
+
+The embedding of $\lie{osp}(6|1)$ we wrote down above lives in the kernel of the original BRST operator $\delta^{(1)}$. 
+To see that it this embedding can be lifted to the full cohomology we need to check that any element in the image of the original embedding is annihilated by $\big[ N [\til F] , - \big]$. 
+This is a direct calculation. 
+For instance, recall that an element in the image of the odd summand $(\wedge^2 \CC^2)_{-1}$ (which corresponds to a superconformal transformation) is of the form $z w_a \wedge \d w_b = z(w_a \d w_b - w_b \d w_a)$. 
+We have
+\[
+\big[ N [\til F] , z(w_a \d w_b - w_b \d w_a) \big] = (w_1\cdots w_4)^{-1} (w_a \d w_b - w_b \d w_a) = 0
+\]
+since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by multiplication by $w_a$ for any $a = 1,\ldots 4$. 
+\end{proof}
+\subsection{Supersymmetric indices}
+
+\brian{SU(5) and SU(2) character calculations}
+
+\section{Dimensional reduction and compactifications} 
+\include{dimred}
+
+\subsection{The theory on a three-fold}

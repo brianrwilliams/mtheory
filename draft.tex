@@ -35,6 +35,7 @@ to do
 \input{susy}
 
 %Can we try to roughly say where each of our twisted fields come from in the untwisted theory? I imagine this section being pretty chill and mostly to orient physicists. 
+<<<<<<< HEAD
 
 \section{Twisted supergavity on AdS space}
 
@@ -213,6 +214,9 @@ It is mapped to the fields:
 \input{dimred}
 
 \subsection{The theory on a three-fold}
+=======
+\input{suco}
+>>>>>>> 093c1eb25c1c829d42af4ae238c811deb1c3f011
 
 %count hypers and vectors in 5d N=1 sugra relate to Kevin and my work with Chris
 
@@ -238,86 +242,7 @@ We give a precise definition below.
 
 More generally, the twist can be defined \brian{finish}
 
-\subsection{Supersymmetric indices}
-
-As a first consistency check, we can compare deformation invariants attached to the holomorphic twist and Poisson Chern-Simons. We will find a match between local characters. We begin with descriptions of holomorphic local operators for the holomorphic twist and Poisson Chern-Simons.
-
-For the holomorphic twist, note that the vector space of solutions to the linearized unconstrained equations of motion is parametrized by 
-\begin{align*}
-\mu^{z_i}\partial_{z_i} & \in \cO(\C^5)\partial_{z_i},\ \ \ \ \ \mu^{w_j}\partial_{w_j}\in\cO (\C^5)\partial_{w_j}  \\
-\nu & \in \cO (\C^5) \\
-\gamma^{z_i}dz_i & \in \cO (\C^5)dz_i, \ \ \ \ \ \gamma^{w_j}d_{w_j}\in\cO (\C^5)d_{w_j} \\
-\beta & \in \cO (\C^5)
-\end{align*}
-
-Corresponding to each of the above, we have a tower of linear local operators labeled by $(m_i; n_j) = (m_1, m_2, m_3, n_1,  n_2)\in \Z^5_{\geq 0}$; these are given by
-\begin{align*}
- \mu^{z_i/w_j}_{(m_i; n_j)} &: \mu^{z_i/w_j}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{w_1}^{n_1}\partial_{w_2}^{n_2}\mu^{z_i/w_j} (0) \\
-\nu_{(m_i; n_j)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{w_1}^{n_1}\partial_{w_2}^{n_2}\nu (0) \\
-\gamma^{z_i/w_j}_{(m_i; n_j)} &: \gamma^{z_i/w_j}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{w_1}^{n_1}\partial_{w_2}^{n_2}\gamma^{z_i/w_j} (0) \\
- \beta_{(m_i; n_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{w_1}^{n_1}\partial_{w_2}^{n_2}\beta (0) \\
-\end{align*}
-
-Similarly, for the $G2\times SU(2)$ twist, the space of solutions to linearized equations of motion is parametrized by a holomorphic function $A$ on $\C^2_{w_j}$. The corresponding linear local operators are labeled by $(n_1,n_2)\in \Z^2_{\geq 0}$  and are given by \[A_{(n_1,n_2)} : A \mapsto \partial_{w_1}^{n_1}\partial_{w_2}^{n_2} A (0).\]
-
-Note that there is an action of $SU(5)$ on the fields of the holomorphic twist is induced from an action on $\C^5$. We choose generators of the Cartan subgroup that act on $\C^5$ with weights as in the following table
-
-\[\begin{array}{|c|c|c|c|c|c|}
-& z_1 & z_2 & z_3 & w_1 & w_2 \\
-\hline
-q & & & & 1 & -1 \\
-t_1 & 1 & -1 & & & \\
-t_2 & & 1 & -1 & & \\
-y & -1 & -1 & -1 &\frac 3 2 & \frac 3 2
-\end{array}\]
-
-Upon performing the further twist, the $SU(5)$ symmetry is broken to an $SU(3)\times SU(2)$ symmetry; the cartan of the unbroken symmetries corresponds to the fugacities $q, t_1, t_2$ in the above table. 
-
-We can now readily compute the characters.
-\begin{prop}
-The local character of the holomorphic twist of 11d supergravity on flat space is given by 
-\begin{align*}
-\chi_{SU(5)} (\Obs_0^\cE) &=  \\
-\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}} & \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
-\end{align*}
-Likewise, the  local character of the $G2\times SU(2)$ twist of 11d supergravity on flat space is given by
-\[
-\chi_{SU(3)\times SU(2)}(\Obs_0^{\cE_{G2\times SU(2)}}) = \prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
-\] 
-Upon specializing at $y=1$, we have that $\chi_{SU(5)} (\Obs_0^\cE)|_{y=1} =  \chi_{SU(3)\times SU(2)}(\Obs_0^{\cE_{G2\times SU(2)}}).$
-\end{prop}
-\begin{proof}
-We compute the local character as the plethystic exponential of the character of linear local operators. 
-
-For the holomorphic twist, note that the linear local operators $ \nu_{(m_i, n_j)}$ and $\beta_{(m_i, n_j)}$ are of the same weight but opposite parity so contribute to the character with opposite sign. These contributions therefore cancel. Next, there is a summand of the linear local operators of the form 
-\[
-\bigoplus _{(m_i;n_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\mu^{z_1}_{(m_i; n_j)}\partial_{z_1}\oplus \C\mu^{z_2}_{(m_i; n_j)}\partial_{z_2}\oplus \C\mu^{z_3}_{(m_i; n_j)}\partial_{z_3}\oplus\C\mu^{w_1}_{(m_i; n_j)}\partial_{w_1}\oplus \C\mu^{w_2}_{(m_i; n_j)}\partial_{w_2}\right).
-\] 
-This contributes 
-\[
-\sum_{(m_i;n_j)\in \Z^5_{\geq 0 }}- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right).
-\] 
-Finally, there is a summand of the form 
-\[
-\bigoplus _{(m_i;n_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\gamma^{z_1}_{(m_i; n_j)}d{z_1}\oplus \C\gamma^{z_2}_{(m_i; n_j)}d{z_2}\oplus\C\gamma^{z_3}_{(m_i; n_j)}d{z_3}\oplus\C\gamma^{w_1}_{(m_i; n_j)}d{w_1}\oplus \C\gamma^{w_2}_{(m_i; n_j)}d {w_2}\right).
-\] 
-This likewise contributes 
-\[
-\sum_{(m_i;n_j)\in \Z^5_{\geq 0 }}t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right).
-\] 
-In sum, the character of linear local operators is the geometric series 
-\[
-\sum_{(m_i;n_j)\in \Z^5_{\geq 0 }}-t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right).
-\] 
-The plethystic exponential of this expression is then 
-\[
-\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (n_1+n_2)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
-\]
-
-Analogously, for the $G2\times SU(2)$ twist, linear local operators are given by \[\bigoplus_{(n_1,n_2)\in \Z^2_{\geq 0}} \C A_{(n_1,n_2)}.\] We readily see that the resulting character is \[\sum _{(n_1,n_2)\in \Z^2_{\geq 0}} q^{-n_1+n_2}.\] The plethystic exponential is then \[\prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.\]
-
-For the last part, it suffices to show that the characters of linear local operators agree upon evaluating $y=1$. Summing the geometric series giving the character of linear local operators in the holomorphic twist yields the rational function \[\frac{\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y &+ q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right)}{(1-t_1^{-1}y)(1-t_1t_2^{-1}y)(1-t_2y)(1-q^{-1}y^{-3/2})(1-qy^{-3/2})}.\] Specializing $y=1$, the numerator cancels with the factors in the denominator involving the $t_i$. The result is \[\frac{1}{(1-q^{-1})(1-q)}\] which is exactly the sum of the geometric series we found as the character of linear local operators in the $G2\times SU(2)$ twist. 
-\end{proof}
+\input{index}
 
 \subsection{The non-minimal supercharge}
 
