@@ -1,59 +1,191 @@
-In this section we wish to demonstrate that our proposal for the interactions for twisted 11-dimensional supergravity agree with conjectural descriptions of twisted type IIA and type I supergravities due to \cite{CLSugra}. We begin by introducing certain variants of Kodaira-Spencer theory which will feature in the descriptions of twists of type IIA and type I.
+\section{Dimensional reduction and 10-dimensional supergravity}
+
+In this section we demonstrate that our proposal for the action of minimally twisted 11-dimensional supergravity agrees with conjectural descriptions of twisted type IIA and type I supergravities due to Costello and Li. 
+
+The original motivation for $M$-theory was as the strong coupling limit for type IIA string theory.
+Roughly, the radius of the $M$-theory circle plays the role of this coupling constant. 
+Additionally, at low energies $M$-theory is expected to be approximated by 11-dimensional supergravity in the same way that the low energy limit of type IIA/IIB string theory is type IIA/IIB supergravity. 
+Combining these two pictures, various checks have been made that the dimensional reduction of 11-dimensional supergravity along the $M$-theory circle is type IIA supergravity. 
+
+Motivated by the topological string, Costello and Li have laid out a series of conjectures for twists of type IIA/IIB supergravity \cite{CLsugra} and type I supergravity \cite{CLtypeI}. 
+Their description was inspired by the model of the open and closed $B$-model topological string on a Calabi--Yau manifold. 
+The open sector is holomorphic Chern--Simons theory \cite{WittenOpen} and the closed sector is called Kodaira--Spencer theory \cite{BCOV}. 
+There are a few different versions of Kodaira--Spencer theory, but the shared characteristic is that they are all `gravitational' in nature; they describe fluctuations of the Calabi--Yau structure. 
+From this point of view, Kodaira--Spencer theory is at the heart of the formulation of the various flavors of twisted 10-dimensional supergravity.
+
+We begin by introducing certain variants of Kodaira--Spencer theory which will feature in the descriptions of twists of type IIA and type I supergravity.
+
+\subsection{Kodaira--Spencer theory}
+
+Let $X$ be a Calabi--Yau manifold; for now it can be of arbitrary complex dimension. 
+Define
+\deq{
+  \PV^{i,j}(X) = \Omega^{0,j}(X, \wedge^i \T_X).
+}
+We will consider the graded space $\PV^{\bu,\bu}(X) = \oplus_{i,j} \PV^{i,j}(X)[-i-j]$ where the piece of type $(i,j)$ sits in degree $i+j$. 
+
+For each fixed $i$, while we let $j$ vary, the $\dbar$ operator defines a cochain complex $\PV^{i,\bu}(X) = (\oplus_j\PV^{i,j}(X) [-j], \dbar)$ which provides a resolution for the sheaf of holomorphic polyvector fields of type $i$. 
+The divergence operator extends to an operator of the form
+\[
+\div \colon \PV^{i,\bu}(X) \to \PV^{i-1,\bu}(X) .
+\]
+
+Motivated by the states of the topological $B$-model, one defines the fields of Kodaira--Spencer gravity on $X$ to be the cochain complex
+\beqn\label{eqn:ks1}
+\left(\PV^{\bu,\bu} (X)[[u]] [2] \, , \, \dbar + u \div\right) .
+\eeqn 
+Here, $u$ is a parameter of cohomological degree $+2$, which turns $\delta_{KS}^{(1)} = \dbar + u \div$ into an operator of homogenous degree $+1$. 
+We also have performed an overall cohomological shift by $2$ so that $u^k \PV^{i,j}$ sits in degree $i+j+2k-2$. 
+More precisely, this is a model for the $S^1$-equivariant cohomology of the states of the $B$-model on a closed disk. 
+We refer to \cite{CLtypeI, CLsugra} for detailed justification for this ansatz. 
+
+\brian{surya, could fill these parsecs in?}
+
+\parsec[s:poisson]
+
+%describe odd poisson structure
+
+\parsec[s:ksaction] 
+
+%recall genus zero BCOV action. 
+
+\parsec[s:minimalks]
+
+%define minimal ks
+
+\subsection{The $SU(4)$ twist of type IIA supergravity}
 
 \parsec[sec:SU(4)twist]
 
-Let $X$ be a Calabi-Yau manifold. Recall the $\Z/2$ graded Poisson BV theory denoted $\cE_{KS}$ defined in section \surya{}. Let $\cE_{{mKS}}\subset \cE_{KS}$ denote the smallest subcomplex containing those fields with nonzero pairing under the Poisson tensor. Explicitly, we have that $cE_{mKS}$ is the sheaf of cochain complexes
+Let $X$ be a Calabi-Yau manifold of complex dimension four. 
+The complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
 \beqn
 \begin{tikzcd}
                         &                          &                                     & {\PV^{0,\bu}}    \\
                         &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
-                        & {\PV^{2,\bu}} \arrow[r]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
-{\PV^{3,\bu}} \arrow[r] & {u\PV^{2,\bu}} \arrow[r] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
+                        & {\PV^{2,\bu}} \arrow[r, "u\div"]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
+{\PV^{3,\bu}} \arrow[r, "u\div"] & {u\PV^{2,\bu}} \arrow[r, "u\div"] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
 \end{tikzcd}.
 \eeqn
+Denote this complex by $\cE_{mKS}(X)$. 
+The classical BCOV action $I_{BCOV}$ follows from the general formula we gave above. 
 
-Clearly, the inclusion is a Poisson map, so restricting $I_{BCOV}$ to this subcomplex defines another $\Z/2$ graded Poisson BV theory referred to as minimal Kodaira-Spencer theory. Under the identification of Kodaira-Spencer theory as the closed string sector of the B-model, minimal Kodaira-Spencer theory should be thought of as consisting of those closed string fields present in the supergravity approximation.
+\brian{I've commented this out below, since we should just introduce minimal BCOV in general up above}
+
+%Clearly, the inclusion is a Poisson map, so restricting $I_{BCOV}$ to this subcomplex defines another $\Z/2$ graded Poisson BV theory referred to as minimal Kodaira-Spencer theory. Under the identification of Kodaira-Spencer theory as the closed string sector of the B-model, minimal Kodaira-Spencer theory should be thought of as consisting of those closed string fields present in the supergravity approximation.
 
 With this in hand the conjecture of \cite{CLSugra} takes the following form.
 
 \begin{conj}
-  Let $M$ be a real symplectic surface and $X$ a Calabi-Yau fourfold. The $SU(4)$-invariant twist of type IIA supergravity on $M\times X$ is the $\Z/2$-graded Poisson BV theory with fields \[\Omega^{\bu}(M)\otimes \cE_{mKS}.\] The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
+The $SU(4)$-invariant twist of type IIA supergravity on $\RR^2\times \CC^4$ is the $\Z/2$-graded Poisson BV theory with fields \[
+\alpha = \sum_n \alpha_n u^n \in \cE_{mKS}(\CC^4) \otimes \Omega^{\bu}(\RR^2).\] 
+The classical interaction takes the form $I_{IIA} = \int_{\CC^4 \times \RR^2} \alpha_0^3 + {\rm higher\;order\;terms}.$
+%The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
 \end{conj}
+
+We will need a more detailed description of the classical action. 
+For the moment, let us introduce some notations for the fields of this IIA model, as always we leave the internal Dolbeault degree implicit:
+\begin{multline}
+\eta \in \PV^{0,\bu}(\CC^4) \otimes \Omega^\bu (\RR^2), \quad \mu + u \nu \in \PV^{1, \bu}(\CC^4) \otimes \Omega^\bu (\RR^2) \oplus u \PV^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2) \\
+\Pi \in \PV^{3,\bu}(\CC^4) \otimes \Omega^\bu(\RR^2), \quad \sigma \in \PV^{3,\bu}(\CC^4) \otimes \Omega^\bu (\RR^2) .
+\end{multline}
+We will not need an explicit notation for the remaining descendant fields. 
+
+With this notation in hand, we have the more precise form of the action appearing in the conjecture:
+\beqn\label{eqn:IIAaction}
+I_{IIA} = \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \Pi + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \mu \wedge \sigma + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \Pi^2 + \cdots 
+\eeqn
+where the $\cdots$ denote terms involving higher order descendants. 
 
 \parsec[sec:IIApot]
 
-Our goal is to compare the dimensional reduction of our 11d theory $\cE$ on $\R\times \C^{\times}\times X$ where $X$ is a Calabi-Yau 4-fold with the $SU(4)$ invariant twist of type IIA on $\R^{2}\times X$. Doing so will require some additional modifications to the above conjectural description. Indeed, recall that in the physical theory, the components of the C-field in 11d that are not supported along the M-theory circle become the components of the Ramond-Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond-Ramond fields do not appear as fields in Kodaira-Spencer theory; rather it is components of their field strengths that appear. Since components of the C-field become components of $\gamma$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+Our goal is to compare the dimensional reduction of our 11-dimensional theory on $\CC^5 \times \RR$
+%where $X$ is a Calabi-Yau 4-fold 
+with the $SU(4)$ invariant twist of type IIA on $\R^{2}\times \CC^4$. 
+Doing so will require some additional modifications to the above conjectural description. 
 
-Minimal Kodaira-Spencer theory with potentials on a Calabi-Yau fourfold $X$ is defined to be the $\Z/2$-graded BV theory whose space of fields is the sheaf of cochain complexes $\cE_{pot}$
-\beqn
+Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+
+Explicitly, to define this theory we introduce a potential for both the $\Pi$ and $\sigma$ fields. 
+First, we introduce a field $\gamma$ (not to be confused, yet, with the $\gamma$ field in our 11-dimensional theory) which satisfies $\Pi = \div \gamma$.
+This condition does not uniquely fix $\gamma$. 
+There is a new linear gauge symmetry determined by $\gamma \to \gamma + \div \beta$ where $\beta$ is a ghost that we must also introduce. 
+Similarly, we introduce a field $\theta$ which satisfies $\sigma = \div \theta$, there is no extra gauge symmetry present in this condition. 
+
+In diagrammatic detail, the potential theory we are considering has underlying cochain complex of fields
+\beqn\label{eqn:IIApot}
 \begin{tikzcd}
-& {\PV^{0,\bu}}_\eta  \\
-{\PV^{1,\bu}}_\mu \arrow[r, "u\div"] & {u\PV^{0,\bu}}_\nu \\
-{u^{-1}\PV^{4,\bu}}_\beta \arrow[r, "u\div"] & {\PV^{3,\bu}}_\gamma  \\
-{\PV^{4,\bu}}_\theta &
+- & + \\ \hline
+& {\PV^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2) }_\eta  \\
+{\PV^{1,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\mu \arrow[r, "u\div"] & u{\PV^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\nu \\
+u^{-1}{\PV^{4,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\beta \arrow[r, "u\div"] & {\PV^{3,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\gamma  \\
+{\PV^{4,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\theta &
 \end{tikzcd}
 \eeqn.
 
-The interaction is given by \[I_{pot} = \int \frac{1}{1-\nu}(\mu\mu\del\gamma + \eta\del\gamma\del\gamma + \eta\mu\del\theta).\]
+Recall that the original fields of the IIA supergravity model on $\CC^4 \times \RR^2$ was equipped with an odd Poisson bivector which was degenerate.
+In other words, it did not define a theory in the conventional BV formalism. 
+One of the key features of this new complex of fields, after we have taken these potentials, is that it is equipped with an odd non-degenerate pairing thus equipping it with the structure of a theory in the conventional BV formalism. 
 
+The pairing is $\Res_u \frac{\d u}{u} \int^\Omega_{\CC^4 \times \RR^2} \alpha \wedge \alpha'$ where $\alpha, \alpha'$ are two general fields in this potential theory on $\CC^4 \times \RR^2$. 
+Explicitly, in the description of the fields in \eqref{eqn:IIApot} the pairing is 
+\[
+\int^\Omega_{\CC^4 \times \RR^2} \eta \wedge \theta + \int^\Omega_{\CC^4 \times \RR^2} \mu \wedge \gamma + \int^\Omega_{\CC^4 \times \RR^2} \nu \wedge \beta .
+\]
+This pairing is compatible with the odd Poisson bracket present in the original theory on $\CC^4 \times \RR^2$. \brian{finish}
 
-Note that there is a natural map of cochain complexes $\partial \cE_{pot}\to \cE_{mKS}$ given by the dotted arrows below:
-\beqn
-\begin{tikzcd}
-                                       & {\PV^{0,\bu}} \arrow[rrr, dotted, "\id"] &                          &                                     & {\PV^{0,\bu}}    \\
-{\PV^{1,\bu}} \arrow[r, "u\div"]       & {u\PV^{0,\bu}} \arrow[rr, dotted, "\id"] &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
-{u^{-1}\PV^{4,\bu}} \arrow[r, "u\div"] & {\PV^{3,\bu}} \arrow[r, dotted, "\div"]  & {\PV^{2,\bu}} \arrow[r]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
-{\PV^{4,\bu}} \arrow[r, dotted, "\div"]        & {\PV^{3,\bu}} \arrow[r]          & {u\PV^{2,\bu}} \arrow[r] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
-\end{tikzcd}.
+The type IIA action completely determines the action of this theory with potentials. 
+One simply takes the \eqref{eqn:IIAaction} and replaces all appearances of $\Pi$ with $\div \gamma$ and all appearances of $\sigma$ with $\div \theta$. 
+This yields the interaction of the potential theory
+\beqn\label{eqn:IIAactionpot}
+\til I_{IIA} = \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \div \gamma + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \mu \wedge \div \theta + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \div \gamma \wedge \div \gamma 
 \eeqn
-This is easily seen to be a Poisson map. We have that $I_{pot} = \partial^{*}I_{BCOV}$, so we see that $I_{pot}$ satisfies the classical master equation. Therefore, $I_{pot}$ determines an $L_{\infty}$ structure on $\cE_{pot}$, and hence one on $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$. In what follows, the $SU(4)$-invariant twist of IIA will refer to the BV theory $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
+Notice that the terms involving higher descendants vanishes since these fields are set to zero in the potential theory.
+
+%Note that there is a natural map of cochain complexes $\partial \cE_{pot}\to \cE_{mKS}$ given by the dotted arrows below:
+%\beqn
+%\begin{tikzcd}
+%                                       & {\PV^{0,\bu}} \arrow[rrr, dotted, "\id"] &                          &                                     & {\PV^{0,\bu}}    \\
+%{\PV^{1,\bu}} \arrow[r, "u\div"]       & {u\PV^{0,\bu}} \arrow[rr, dotted, "\id"] &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
+%{u^{-1}\PV^{4,\bu}} \arrow[r, "u\div"] & {\PV^{3,\bu}} \arrow[r, dotted, "\div"]  & {\PV^{2,\bu}} \arrow[r]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
+%{\PV^{4,\bu}} \arrow[r, dotted, "\div"]        & {\PV^{3,\bu}} \arrow[r]          & {u\PV^{2,\bu}} \arrow[r] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
+%\end{tikzcd}.
+%\eeqn
+%This is easily seen to be a Poisson map. We have that $I_{pot} = \partial^{*}I_{BCOV}$, so we see that $I_{pot}$ satisfies the classical master equation. Therefore, $I_{pot}$ determines an $L_{\infty}$ structure on $\cE_{pot}$, and hence one on $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$. In what follows, the $SU(4)$-invariant twist of IIA will refer to the BV theory $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 
 \parsec[sec:dimred]
+
+We turn to the proof of the main result of this section that the dimensional reduction of our 11-dimensional theory agrees with the twist of IIA supergravity just introduced. 
+
+We recall the notion of dimensional along a holomorphic direction following \cite{ESW}. 
+Suppose that $V_\RR$ is a real vector space and denote by $V$ its complexification. 
+We consider a field theory defined on $M \times V$, which is holomorphic along $V$ (in particular, this means that the theory is translation invariant along $V$).  
+We consider the dimensional reduction along the projection 
+\beqn\label{eqn:dimred}
+M \times V \to M \times V_\RR
+\eeqn
+induced by ${\rm Re} \colon V \to V_\RR$.
+Most relevant for us is the case when $V = \CC$ and $M$ is $\CC^4 \times \RR$, but the explicit form of the theory along $M$ is not important at the moment.
+
+In fact, we might as well assume that $M$ is a point and that the space of fields is of the form $\Omega^{0,\bu}(V) \otimes W$ for $W$ some graded vector space. 
+As properly formulated in \cite{ESW}, it is shown that the dimensional reduction along $V \to V_\RR$ is equivalent to the theory whose fields are $\Omega^\bu(V_\RR) \otimes W$. 
+In other words, the dimensional reduction of the holomorphic theory on $V$ is a topological theory on $V_\RR$. 
+
+If we put $M$ back in, the result is similar. 
+Suppose the original theory is of the form $\cE(M) \otimes \Omega^{0,\bu}(V) \otimes W$.
+Then, the dimensional reduction along \eqref{eqn:dimred} is the theory whose space of fields is $\cE(M) \otimes \Omega^\bu(V_\RR) \otimes W$.
+
+An explicit model for this reduction can be described as follows. 
+Suppose $V \cong \CC^n$ and place the theory on $(\CC^\times)^{\times n} \subset \CC^n$. 
+The dimensional reduction along $\CC^n \to \RR^n$ agrees with the compactification of the theory along $S^1 \times \cdots \times S^1$ where one throws away all nonzero winding modes around each circle.
+
 \begin{prop}
-The $SU(4)$ invariant twist of type IIA on $\R^{2}\times X$ is the dimensional reduction of the 11d theory $\cE$ on $\R\times \C^{\times}\times X.$
+The $SU(4)$ invariant twist of type IIA on $\CC^4 \times \RR^2$ is equivalent to the dimensional reduction of the 11-dimensional along  
+\[
+\CC^4 \times \CC \times \RR \to \CC^4 \times \RR \times \RR \cong \CC^4 \times \RR^2 .
+\]
 \end{prop}
 \begin{proof}
-We use the notion of dimensional reduction as defined in \cite{}.
 Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 
 We readily compute:
