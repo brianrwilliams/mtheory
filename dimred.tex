@@ -1,3 +1,5 @@
+\def\im{{\rm i}}
+
 \section{Dimensional reduction and 10-dimensional supergravity}
 
 In this section we demonstrate that our proposal for the action of minimally twisted 11-dimensional supergravity agrees with conjectural descriptions of twisted type IIA and type I supergravities due to Costello and Li. 
@@ -93,7 +95,7 @@ We will not need an explicit notation for the remaining descendant fields.
 
 With this notation in hand, we have the more precise form of the action appearing in the conjecture:
 \beqn\label{eqn:IIAaction}
-I_{IIA} = \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \Pi + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \mu \wedge \sigma + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \Pi^2 + \cdots 
+I_{IIA} = \frac12 {\rm Tr}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \Pi + {\rm Tr}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \mu \wedge \sigma + \frac12 {\rm Tr}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \Pi^2 + \cdots 
 \eeqn
 where the $\cdots$ denote terms involving higher order descendants. 
 
@@ -107,10 +109,10 @@ Doing so will require some additional modifications to the above conjectural des
 Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
 
 Explicitly, to define this theory we introduce a potential for both the $\Pi$ and $\sigma$ fields. 
-First, we introduce a field $\gamma$ (not to be confused, yet, with the $\gamma$ field in our 11-dimensional theory) which satisfies $\Pi = \div \gamma$.
+First, we introduce a field $\gamma \in \Omega^{1,\bu}(\CC^4) \otimes \Omega^\bu(\RR^2)$ (not to be confused, yet, with the $\gamma$ field in our 11-dimensional theory) which satisfies $\Pi \vee \Omega = \del \gamma$ where $\Omega$ is the Calabi--Yau form on $\CC^4$. 
 This condition does not uniquely fix $\gamma$. 
 There is a new linear gauge symmetry determined by $\gamma \to \gamma + \div \beta$ where $\beta$ is a ghost that we must also introduce. 
-Similarly, we introduce a field $\theta$ which satisfies $\sigma = \div \theta$, there is no extra gauge symmetry present in this condition. 
+Similarly, we introduce a field $\theta \in \Omega^{0,\bu}(\CC^4) \otimes \Omega^\bu(\RR^2)$ which satisfies $\sigma \vee \Omega = \del \theta$, there is no extra gauge symmetry present in this condition.\footnote{Using the Calabi--Yau form we have normalized the potential fields $\gamma, \beta,\theta$ to be written as differential forms instead of polyvector fields.}
 
 In diagrammatic detail, the potential theory we are considering has underlying cochain complex of fields
 \beqn\label{eqn:IIApot}
@@ -118,8 +120,8 @@ In diagrammatic detail, the potential theory we are considering has underlying c
 - & + \\ \hline
 & {\PV^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2) }_\eta  \\
 {\PV^{1,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\mu \arrow[r, "u\div"] & u{\PV^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\nu \\
-u^{-1}{\PV^{4,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\beta \arrow[r, "u\div"] & {\PV^{3,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\gamma  \\
-{\PV^{4,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\theta &
+u^{-1}{\Omega^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\beta \arrow[r, "u\div"] & {\Omega^{1,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\gamma  \\
+{\Omega^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\theta &
 \end{tikzcd}
 \eeqn.
 
@@ -127,10 +129,10 @@ Recall that the original fields of the IIA supergravity model on $\CC^4 \times \
 In other words, it did not define a theory in the conventional BV formalism. 
 One of the key features of this new complex of fields, after we have taken these potentials, is that it is equipped with an odd non-degenerate pairing thus equipping it with the structure of a theory in the conventional BV formalism. 
 
-The pairing is $\Res_u \frac{\d u}{u} \int^\Omega_{\CC^4 \times \RR^2} \alpha \wedge \alpha'$ where $\alpha, \alpha'$ are two general fields in this potential theory on $\CC^4 \times \RR^2$. 
+The pairing is $\Res_u \frac{\d u}{u} \int^\Omega_{\CC^4 \times \RR^2} \alpha \vee \alpha'$ where $\alpha, \alpha'$ are two general fields in this potential theory on $\CC^4 \times \RR^2$. 
 Explicitly, in the description of the fields in \eqref{eqn:IIApot} the pairing is 
 \[
-\int^\Omega_{\CC^4 \times \RR^2} \eta \wedge \theta + \int^\Omega_{\CC^4 \times \RR^2} \mu \wedge \gamma + \int^\Omega_{\CC^4 \times \RR^2} \nu \wedge \beta .
+\int^\Omega_{\CC^4 \times \RR^2} \eta \theta + \int^\Omega_{\CC^4 \times \RR^2} \mu \vee \gamma + \int^\Omega_{\CC^4 \times \RR^2} \nu \beta .
 \]
 This pairing is compatible with the odd Poisson bracket present in the original theory on $\CC^4 \times \RR^2$. \brian{finish}
 
@@ -138,7 +140,7 @@ The type IIA action completely determines the action of this theory with potenti
 One simply takes the \eqref{eqn:IIAaction} and replaces all appearances of $\Pi$ with $\div \gamma$ and all appearances of $\sigma$ with $\div \theta$. 
 This yields the interaction of the potential theory
 \beqn\label{eqn:IIAactionpot}
-\til I_{IIA} = \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \div \gamma + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \mu \wedge \div \theta + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \div \gamma \wedge \div \gamma 
+\til I_{IIA} = \frac12 \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \int^\Omega_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\eta \wedge \mu) \vee \del \theta + \frac12 \int_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \eta \wedge \del \gamma \wedge \del \gamma 
 \eeqn
 Notice that the terms involving higher descendants vanishes since these fields are set to zero in the potential theory.
 
@@ -182,12 +184,87 @@ The dimensional reduction along $\CC^n \to \RR^n$ agrees with the compactificati
 \begin{prop}
 The $SU(4)$ invariant twist of type IIA on $\CC^4 \times \RR^2$ is equivalent to the dimensional reduction of the 11-dimensional along  
 \[
-\CC^4 \times \CC \times \RR \to \CC^4 \times \RR \times \RR \cong \CC^4 \times \RR^2 .
+\CC^4 \times \CC \times \RR_t \to \CC^4 \times \RR_x \times \RR_t \cong \CC^4 \times \RR^2 .
 \]
 \end{prop}
 \begin{proof}
-Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
+Let us denote the holomorphic coordinate we are reducing along by $z_5 = x + \im y$. 
+We first read off the dimensional reduction of each component field of the 11-dimensional theory. 
+Per the above discussion, this is obtained by taking all fields to be independent of $y$ and replacing $\d \zbar_5$ by $\d x$. 
+To not confuse the notations of fields in 10 and 11 dimensions, we use the notation $\alpha_{11d}$ to denote an 11-dimensional field.
 
-We readily compute:
-\[\int^{*}I = \]
+The reductions of the 11d fields $\nu_{11d}, \beta_{11d}$ are easy to describe. 
+Recall that 
+\[
+\nu_{11d} \in \PV^{0,\bu}(\CC^5) \otimes \Omega^\bu(\RR) .
+\]
+The reduction of this field is a 10d $\nu$ field
+\[
+\nu (z_i,x,t) = \nu_{11d} (z_i, x, y=0, t) |_{\d \zbar_5 = \d x}  .
+\]
+Similarly, the reduction of $\beta_{11d}$ is a 10d $\beta$ field
+\[
+\beta (z_i,x,t) = \beta_{11d} (z_i, x, y=0, t) |_{\d \zbar_5 = \d x}  .
+\]
+
+The reduction of the 11d fields $\mu_{11d}$ and $\gamma_{11d}$ require a bit of massaging. 
+We break the $SU(5)$ symmetry to $SU(4)$ to write
+\[
+\mu_{11d} = \mu^0_{11d} + \theta_{11d} \partial_{z_5} 
+\]
+where
+\begin{align*}
+\mu^0_{11d} & \in \PV^{1,\bu}(\CC^4) \otimes \Omega^{0,\bu}(\CC_{z_5}) \otimes \Omega^\bu(\RR_t) \\
+\theta_{11d} & \in \Omega^{0,\bu}(\CC^4) \otimes \Omega^{0,\bu}(\CC_{z_5}) \otimes \Omega^\bu(\RR_t) .
+\end{align*}
+The dimensional reduction of $\mu^0_{11d}$ is a 10d $\mu$ field
+\[
+\mu(z_i,x,t) = \mu_{11d}^0 (z_i, x,y=0,t)|_{\d \zbar_5 = \d x} .
+\]
+The dimensional reduction of $\theta_{11d}$ is a $\theta$ field
+\[
+\theta(z_i,x,t) = \theta_{11d} (z_i, x,y=0,t)|_{\d \zbar_5 = \d x} .
+\]
+
+Finally, write the 11d field $\gamma_{11d}$ as
+\[
+\gamma_{11d} = \gamma_{11d}^0 + \eta_{11d} \d z_5
+\]
+where
+\begin{align*}
+\gamma^0_{11d} & \in \Omega^{1,\bu}(\CC^4) \otimes \Omega^{0,\bu}(\CC_{z_5}) \otimes \Omega^\bu(\RR_t) \\
+\eta_{11d} & \in \PV^{0,\bu}(\CC^4) \otimes \Omega^{0,\bu}(\CC_{z_5}) \otimes \Omega^\bu(\RR_t) .
+\end{align*}
+The dimensional reduction of $\gamma^0_{11d}$ is a 10d $\gamma$ field
+\[
+\gamma(z_i,x,t) = \gamma_{11d}^0 (z_i, x,y=0,t)|_{\d \zbar_5 = \d x} .
+\]
+The dimensional reduction of $\eta_{11d}$ is an $\eta$ field
+\[
+\eta(z_i,x,t) = \eta_{11d} (z_i, x,y=0,t)|_{\d \zbar_5 = \d x} .
+\]
+
+Next, we read off the dimensional reduction of the 11d action. 
+Let us first focus on the term present in BF theory of the form
+\[
+\int^\Omega_{\CC^5 \times \RR} \frac{1}{1-\nu_{11d}} \mu_{11d}^2 \vee \del \gamma_{11d} .
+\]
+Upon reduction, this becomes 
+\beqn\label{eqn:bfred}
+\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\theta \wedge \mu) \vee  \del \eta 
+\eeqn
+
+Next, consider the cubic term in the 11d action $J = \frac16 \int \gamma_{11d} \wedge \del \gamma_{11d} \wedge \del \gamma_{11d}$. 
+Upon reduction, this becomes 
+\beqn\label{eqn:jred}
+\int_{\CC^4 \times \RR^2} \eta \wedge \del \gamma \wedge \del \gamma .
+\eeqn
+
+
+
+%
+%Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
+%
+%We readily compute:
+%\[\int^{*}I = \]
 \end{proof}
