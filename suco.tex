@@ -7,7 +7,9 @@
 \begin{prop}
 The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
 \end{prop} 
+ and ${\rm AdS}_4 \times S^7$ in the holomorphic twist will arise as backreactions of M2 and M5 branes. To this end, we begin by discussing how the theory couples to M2 and M5 branes. 
 
+ 
 \subsection{The ${\rm AdS}_7 \times S^4$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
@@ -87,6 +89,15 @@ It is mapped to the fields
 \]
 \end{itemize}
 
+\parsec[sec:m5coupling]
+
+Analogous to the physical theory, the ${\rm AdS}_7 \times S^4$ background in the holomorphic twist will arise by backreacting M5 branes. To this effect, we begin by discussing how the 11d theory couples to M5 branes. Consider a stack of N M5 branes wrapping $\C^3_z \times \{0\} \subset \C^3_z\times \C^2_w\times \R$. It is natural to consider the interaction 
+\[
+I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega.
+\]
+ Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}$. We claim that this coupling is consistent with expectations from the physical theory and from dimensional reduction. \surya{Finish}
+
+
 \subsection{The ${\rm AdS}_4 \times S^7$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
@@ -98,6 +109,22 @@ We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
 \[
 \CC_z \times \RR \times \CC^4_w .
 \]
+
+Analogous to before, the ${\rm AdS}_4 \times S^7$ background will arise from backreacting M2 branes. Consider a stack of N M2 branes wrapping $\R\times \C_z$. A natural interaction to consider is 
+\[
+I_{M2}(\gamma) = N\int_{\C_z} \gamma
+\] 
+which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of M5 branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
+
+Once again, this coupling is justified by comparison with the physical theory and by dimensional reduction. Indeed, as discussed in section \surya{}, the component of $\gamma$ which participates in the above coupling is a component of the C-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of M2 branes in the physical theory, which simply involves integrating the C-field over the worldvolume theory of the brane. 
+
+Moreover, reducing on a holomorphic direction transverse to the M2 brane yields the $SU(4)$ twist of IIA on $\R^2\times \C_z\times \C^3$ with N D2 branes wrapping $\R\times \C_z$. As is shown in \cite{CLSugra}, an electric coupling of D2 branes to the $SU(4)$ twist of IIA is given by 
+\[
+I_{D2}(\gamma) = \int_{\R\times\C_z} \gamma
+\] 
+where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
+
+\surya{restructure below to derive eom from above}
 Based on the discussion above, it is natural to expect that there is a field of twisted 11-dimensional supergravity which sources the twist of a stack of $N$ $M2$ branes living on the submanifold $\CC_z \times \RR \cong \{w=0\} \subset \CC^5$. 
 
 The differential form which sources the brane is an element
@@ -303,11 +330,3 @@ We have
 \]
 since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by multiplication by $w_a$ for any $a = 1,\ldots 4$. 
 \end{proof}
-\subsection{Supersymmetric indices}
-
-\brian{SU(5) and SU(2) character calculations}
-
-\section{Dimensional reduction and compactifications} 
-\include{dimred}
-
-\subsection{The theory on a three-fold}
