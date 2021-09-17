@@ -55,12 +55,15 @@ We refer to \cite{CLtypeI, CLsugra} for detailed justification for this ansatz.
 
 %define minimal ks
 
-\subsection{The $SU(4)$ twist of type IIA supergravity}
+\subsection{The $SU(4)$ twist of type IIA supergravity}\label{sec:SU(4)twist}
 
-\parsec[sec:SU(4)twist]
+We recall the description of the $SU(4)$ twist of type IIA supergravity conjectured in \cite{CLsugra}. 
+In principal, there is also a minimal, $SU(5)$ invariant, twist of type IIA supergravity but so far no description, even conjecturally, exists.
+We turn to this in Section \ref{sec:SU(5)twistIIA}. 
 
 Let $X$ be a Calabi-Yau manifold of complex dimension four. 
 The complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
+\brian{I have an issue with how this is organized}
 \beqn
 \begin{tikzcd}
                         &                          &                                     & {\PV^{0,\bu}}    \\
@@ -99,16 +102,20 @@ I_{IIA} = \frac12 {\rm Tr}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \Pi
 \eeqn
 where the $\cdots$ denote terms involving higher order descendants. 
 
-\parsec[sec:IIApot]
+\subsection{Reduction to IIA supergravity}
 
-Our goal is to compare the dimensional reduction of our 11-dimensional theory on $\CC^5 \times \RR$
+We now turn back to our 11-dimensional theory. 
+The first goal is to compare the dimensional reduction of our 11-dimensional theory on $\CC^5 \times \RR$
 %where $X$ is a Calabi-Yau 4-fold 
 with the $SU(4)$ invariant twist of type IIA on $\R^{2}\times \CC^4$. 
-Doing so will require some additional modifications to the above conjectural description. 
+Doing so will require a slight modification to the description of the $SU(4)$ twist of IIA supergravity recollected in \S \ref{sec:SU(4)twist}. 
 
-Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+\parsec[sec:IIApot]
 
-Explicitly, to define this theory we introduce a potential for both the $\Pi$ and $\sigma$ fields. 
+Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma_{11d}$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+
+The fundamental fields of the $SU(4)$ twist of IIA supergravity were given in \eqref{eqn:IIAfields}. 
+We modify the space of fields by introducing potentials for both the $\Pi$ and $\sigma$ fields. 
 First, we introduce a field $\gamma \in \Omega^{1,\bu}(\CC^4) \otimes \Omega^\bu(\RR^2)$ (not to be confused, yet, with the $\gamma$ field in our 11-dimensional theory) which satisfies $\Pi \vee \Omega = \del \gamma$ where $\Omega$ is the Calabi--Yau form on $\CC^4$. 
 This condition does not uniquely fix $\gamma$. 
 There is a new linear gauge symmetry determined by $\gamma \to \gamma + \div \beta$ where $\beta$ is a ghost that we must also introduce. 
@@ -284,3 +291,161 @@ The final term is cohomological trivial via the odd Lagrangian $\int^\Omega \log
 %We readily compute:
 %\[\int^{*}I = \]
 \end{proof}
+
+\subsection{The twist of type I supergravity}
+
+We now turn to a different type of redution of the 11-dimensional theory, this time involving type I supergravity. 
+In this section, we briefly recall the description of type I supergravity following \cite{CLtypeI} which was motivated by the unoriented $B$-model. 
+In \cite{SWspinor}, the second two authors verified the conjectural description of the space of fields recalled below using the pure spinor formalism. 
+Unlike type IIA supergravity, there only exists an $SU(5)$ invariant twist of type I supergravity and it is holomorphic in the maximal number of dimensions.
+
+Concretely, the space of fields of the $SU(5)$ twist of type I supergravity is a subspace of minimal Kodaira--Spencer theory on $\CC^5$. 
+The $\ZZ/2$ graded space of field equipped with its linear BRST operator is 
+\beqn\label{eqn:IIApot}
+\begin{tikzcd}
+- & + & - & +  \\ \hline
+{\PV^{1,\bu}}(\CC^5) \arrow[r, "u\div"]    & {u\PV^{0,\bu}}(\CC^5) \\
+{\PV^{3,\bu}} (\CC^5)\arrow[r, "u\div"] & {u\PV^{2,\bu}} (\CC^5)\arrow[r, "u\div"] & {u^2\PV^{1,\bu}}(\CC^5) \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}(\CC^5)
+\end{tikzcd}.
+\eeqn
+
+Let us give a description of the classical action. 
+Introduce notations for the fields of this type I model:
+\beqn\label{eqn:Ifields}
+\mu + u \nu \in \PV^{1, \bu}(\CC^5) \oplus u \PV^{0,\bu} (\CC^5), \quad \sigma \in \PV^{3,\bu}(\CC^5) .
+\eeqn
+We will not need an explicit notation for the remaining descendant fields. 
+
+\begin{conj}
+The twist of type I supergravity on $\CC^5$ is the $\Z/2$-graded theory with fields $\mu+u\nu, \sigma$ as above and with classical action
+\beqn\label{eqn:typeIaction}
+I_{{\rm type\, I}} = {\rm Tr}_{\CC^5} \frac{1}{1-\nu} \mu^2 \vee \sigma + \cdots
+\eeqn
+where the $\cdots$ stands for terms involving the higher descendant fields. 
+%The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
+\end{conj}
+
+\parsec[s:typeIpot]
+
+Like in the type IIA discussion, there is a slight modification of the type I model above which is most directly related to 11-dimensional supergravity. 
+
+This modification involves replacing the field $\sigma$ above by a potential $\til \gamma \in \Omega^{1,\bu}(\CC^5)$ which satisfies $\Omega \vee \sigma = \del \til \gamma$. 
+This condition does not fix $\til \gamma$ uniquely, there is a gauge symmetry of the form $\til \gamma \to \til \gamma + \del \til \beta$. 
+
+In detail, this potential theory we are considering has underlying cochain complex of fields
+\begin{equation}
+  \label{eq:Ipot} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + & -\\ \hline
+    \PV^{1,\bu}(\CC^5)_\mu \ar[r, "\div"] & \PV^{0,\bu}(\CC^5)_\nu  \\
+         & \Omega^{0,\bu}(\CC^5)_{\til\beta} \ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_{\til\gamma} .
+\end{tikzcd}
+\end{equation} 
+
+The type I action \eqref{eqn:typeIaction} completely determines the action of this theory with potentials. 
+One simply takes the action and replaces all appearances of $\sigma$ with $\Omega^{-1} \vee \del \til\gamma$. 
+This yields the interaction of the potential theory
+\beqn\label{eqn:Iactionpot}
+\til I_{\text{type I}} = \frac12 \int^\Omega_{\CC^5} \frac{1}{1-\nu} \mu^2 \vee \del \til\gamma .
+\eeqn
+Notice that the terms involving higher descendants vanishes since these fields are set to zero in the potential theory.
+
+\subsection{Slab compactification} 
+
+To this end, we consider placing 11-dimensional supergravity on the manifold $\CC^5 \times [0,1]$. 
+In order to do this, we must choose appropriate boundary conditions at $t=0$ and $t=1$.
+
+The phase space of the theory at $t=0$ or $t=1$ is 
+\begin{equation}
+  \label{eq:lin1} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + \\ \hline
+    \PV^{1,\bu}(\CC^5)_\mu \ar[r, "\div"] & \PV^{0,\bu}(\CC^5)_\nu \\ 
+     \Omega^{0,\bu}(\CC^5)_\beta \ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_\gamma.
+\end{tikzcd}
+\end{equation}
+The wedge an integrate pairing between the top and bottom lines induces an {\em even} symplectic structure on the phase space. 
+Denote this phase space by $\cE_{\del}$ for the moment.
+
+The phase space is equipped with the restriction of the linear BRST operator of the full 11-dimensional theory. 
+There is also a non linear BRST operator, just like in the bulk theory.
+The BV action induces a $L_\infty$ structure on the parity shift $\Pi\cE_{\del}$ whose cohomology is still a trivial central extension of $E(5,10)$. 
+
+A boundary condition is given by a Lagrangian subspace of $\cE_{\del}$ with respect to this even symplectic structure. 
+To make sense of the theory on $\CC^5 \times [0,1]$ we must make the choice of two separate boundary conditions 
+\[
+\cM_{t=0} , \cM_{t=1} \subset \cE_{\del} .
+\]
+Moreover, these boundary conditions carry non linear BRST endowing their parity shifts $\Pi \cM_{t=0} , \Pi\cM_{t=1}$ with the structures of $L_\infty$ algebras. 
+These $L_\infty$ structures must be compatible with the one on the phase space.
+In fact, in our context these boundary conditions are abstractly isomorphic. 
+We will explain the explicit boundary conditions momentarily. 
+
+In \cite{?} an explicit model has been given for the theory compactified along the slab for theories which are topological in the direction normal to the boundary.
+The fields of the theory compactified on the slab is computed by the {\em derived} intersection of the two Lagrangians:
+\[
+\cM_{t=0} \overset{\LL}{\underset{\cE_{\del}}{\times}}\cM_{t=1}.
+\]
+
+\parsec[s:boundary]
+At $t=0$, the boundary condition of the 11-dimensional theory is determined by declaring 
+\[
+\cM_{t=0}: \quad \gamma|_{t=0} = \beta|_{t=0} = 0 .
+\]
+To place the theory on $\CC^5 \times [0,1]$ we take the same boundary condition at $t=1$:
+\[
+\cM_{t=1}: \quad \gamma|_{t=1} = \beta|_{t=1} = 0 .
+\]
+
+\begin{prop}
+With these boundary conditions of the classical 11-dimensional theory on $\CC^5 \times [0,1]$, the compactification along 
+\[
+\CC^5 \times [0,1] \to \CC^5
+\]
+is equivalent to the twist of type I supergravity on $\CC^5$. 
+\end{prop}
+\begin{proof}
+Notice that both $\cM_{t=0}$ and $\cM_{t=0}$ are abstractly isomorphic to the complex resolving divergence-free vector fields
+\begin{equation}
+  \label{eq:lin2} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + \\ \hline
+    \PV^{1,\bu}(\CC^5)_\mu \ar[r, "\div"] & \PV^{0,\bu}(\CC^5)_\nu  .
+\end{tikzcd}
+\end{equation}
+
+To compute the derived intersection between the two Lagrangians at $t=0$ and $t=1$ we replace the Lagrangian morphism $\cM_{t=0} \hookrightarrow \cE_{\del}$. 
+Consider the cochain complex $\til \cM_{t=0}$ defined by
+\begin{equation}
+  \label{eq:lin3} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + & - \\ \hline
+    \PV^{1,\bu}(\CC^5)_\mu \ar[r, "\div"] & \PV^{0,\bu}(\CC^5)_\nu \\ 
+     \Omega^{0,\bu}(\CC^5)_\beta \ar[dr,dotted,"\id"]\ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_\gamma \ar[dr,dotted,"\id"] \\
+     & \Omega^{0,\bu}(\CC^5)_{\til\beta} \ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_{\til\gamma} .
+\end{tikzcd}
+\end{equation}
+Notice that as a graded vector space, this complex is of the form $\cE_{\del} \oplus (\Omega^{0,\bu} \oplus \Pi \Omega^{1,\bu})$. 
+The $L_\infty$ structure on $\Pi \til \cM_{t=0}$ extends the one on $\cE_{\del}$ coming from the bulk BV action. 
+Notice that the obvious embedding $\cM_{t=0} \hookrightarrow \til \cM_{t=0}$ is a quasi-isomorphism.
+
+The projection map $\til \cM_{t=0} \twoheadrightarrow \cE_{\del}$ factors the original Lagrangian inclusion as
+\[
+\cM_{t=0} \hookrightarrow \til \cM_{t=0} \twoheadrightarrow \cE_{\del} .
+\]
+To compute the derived intersection of $\cM_{t=0}$ and $\cM_{t=1}$ we can compute the ordinary intersection of $\til \cM_{t=0}$ and $\cM_{t=1}$. 
+
+Let $\mu_{t=1}$ and $\nu_{t=1}$ denote the fields present in the other boundary condition $\cM_{t=1}$. 
+The intersection $\til \cM_{t=0} \times_{\cE_{\del}} \cM_{t=1}$ is computed by setting the fields $\beta, \gamma$ to zero and $\mu=\mu_{t=1}$, $\nu = \nu_{t=1}$. 
+Thus, we are left with
+\begin{equation}
+  \label{eq:lin3} 
+  \begin{tikzcd}[row sep = 1 ex]
+    - & + & -\\ \hline
+    \PV^{1,\bu}(\CC^5)_\mu \ar[r, "\div"] & \PV^{0,\bu}(\CC^5)_\nu  \\
+         & \Omega^{0,\bu}(\CC^5)_{\til\beta} \ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_{\til\gamma} 
+\end{tikzcd}
+\end{equation}
+This is precisely the underlying cochain complex of fields for the type I model with potentials. 
+\end{proof}
+
