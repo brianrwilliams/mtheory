@@ -181,7 +181,7 @@ An explicit model for this reduction can be described as follows.
 Suppose $V \cong \CC^n$ and place the theory on $(\CC^\times)^{\times n} \subset \CC^n$. 
 The dimensional reduction along $\CC^n \to \RR^n$ agrees with the compactification of the theory along $S^1 \times \cdots \times S^1$ where one throws away all nonzero winding modes around each circle.
 
-\begin{prop}
+\begin{prop}\label{prop:dimred}
 The $SU(4)$ invariant twist of type IIA on $\CC^4 \times \RR^2$ is equivalent to the dimensional reduction of the 11-dimensional along  
 \[
 \CC^4 \times \CC \times \RR_t \to \CC^4 \times \RR_x \times \RR_t \cong \CC^4 \times \RR^2 .
@@ -245,10 +245,8 @@ The dimensional reduction of $\eta_{11d}$ is an $\eta$ field
 \]
 
 Next, we read off the dimensional reduction of the 11d action. 
-Let us first focus on the term present in BF theory of the form
-\[
-\int^\Omega_{\CC^5 \times \RR} \frac{1}{1-\nu_{11d}} \mu_{11d}^2 \vee \del \gamma_{11d} .
-\]
+Let us first focus on the term present in BF theory which is
+$\int^\Omega \frac{1}{1-\nu_{11d}} \mu_{11d}^2 \vee \del \gamma_{11d}$.
 Upon reduction, this becomes 
 \beqn\label{eqn:bfred}
 \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\theta \wedge \mu) \vee  \del \eta 
@@ -260,16 +258,26 @@ Upon reduction, this becomes
 \int_{\CC^4 \times \RR^2} \eta \wedge \del \gamma \wedge \del \gamma .
 \eeqn
 
-The sum of the action functionals \eqref{eqn:bfred} and \eqref{eqn:jred} do not precisely agree with the IIA action $\til I_{IIA}$. 
-To relate these we must make the following field redefinition:
+The sum of the action functionals \eqref{eqn:bfred} and \eqref{eqn:jred} does not precisely agree with the IIA action $\til I_{IIA}$. 
+To relate the two actions we must make the following field redefinition:
 \[
 \til \theta = \frac{1}{1-\nu} \theta, \quad \til \eta = (1- \nu) \eta .
 \]
 Notice that this change of coordinates is compatible with the odd symplectic pairing on the fields. 
+Under this field redefinition the total dimensionally reduced action can be written as
+\begin{multline}
+\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \int_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til\eta \wedge \del \gamma \wedge \del \gamma \\ + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} (\til\theta \wedge \mu) \vee  \del \left(\frac{1}{1-\nu} \til\eta\right) .
+\end{multline}
+The first line agrees with the first and third terms in \eqref{eqn:IIAactionpot}. 
 
-
-
-
+The second line is very close to the second term in \eqref{eqn:IIAactionpot}, but they are still not quite the same. 
+They are, however, cohomologous. 
+Integrating by parts and applying the BV relation, we can write the second line as
+\[
+\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \left(\frac{1}{1-\nu} \til\eta\right)\wedge \div (\til\theta \wedge \mu)  = \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\til\eta \wedge \mu) \vee \partial \til \theta + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til \eta \wedge \div \mu \wedge \til \theta .
+\]
+The first term in this equation agrees precisely with the second term in \eqref{eqn:IIAactionpot}. 
+The final term is cohomological trivial via the odd Lagrangian $\int^\Omega \log(1-\nu) \wedge \til \eta \wedge \til \theta$.
 %
 %Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 %
