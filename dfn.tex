@@ -134,7 +134,7 @@ The algebra $\cA$ will be the smooth de Rham complex $(\Omega^\bu(S) , \d_S)$ wh
 We thus obtain the structure of an dg Lie algebra on $\cL_0(X) \otimes \Omega^{\bu}(S)$ or an $L_\infty$ algebra $\cL_\infty(X) \otimes \Omega^\bu(S)$.
 These define equivalent local $L_\infty$ algebras on the product manifold~$X \times S$. 
 
-\subsubsection{}
+\parsec[s:bf]
 
 Associated to any local $L_\infty$ algebra is a classical field theory in the BV formalism.
 Let $\cL$ be a local $L_\infty$ algebra on some manifold $M$, it is the sheaf of sections of some graded vector bundle $L$. 
@@ -162,12 +162,17 @@ In both cases, the space of fields equipped with the linear BRST operator is
   \label{eq:sympfields} 
   \begin{tikzcd}[row sep = 1 ex]
     -n & -n + 1 & -1 & 0 \\ \hline
-    \Omega^{0,\bu}(X;S) \ar[r, "\del"] & \Omega^{1,\bu}(X;S) & 
-     \PV^{1,\bu}(X; S) \ar[r, "\div"] & \PV^{0,\bu}(X; S).
+    \Omega^{0}(X;S) \ar[r, "\del"] & \Omega^{1}(X;S) & 
+     \PV^{1}(X; S) \ar[r, "\div"] & \PV^{0}(X; S).
 \end{tikzcd}
 \end{equation}
 We denote the fields $(\beta,\gamma,\mu,\nu)$ respectively.
-We are using the shorthand notation $\PV^{i}(X;S) = (\PV^{i,\bu}(X)\otimes \Omega^\bu(S), \dbar + \d_{S}))$.
+We are using the shorthand notation
+\begin{align*}
+\Omega^{i}(X;S) & = \Omega^{i , \bu;\bu}(X;S) \\
+ & = \oplus_{j,k} \PV^{i,j}(X) \otimes \Omega^k(S) [-j-k] .
+\end{align*}
+which is equipped with the $\dbar + \d_S$ operator and similarly for $\PV^{i}(X;S)$. 
 
 The natural pairing between $\PV^i(X;S)$ and~$\Omega^i(X;S)$ is of degree $-\dim_\C(X) -\dim_\R(S)$. 
 As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of fields with a $(-1)$-shifted symplectic structure, provided that we choose the shift to be given by
@@ -344,6 +349,57 @@ Expanding these components out, we obtain
 \beqn\label{eqn:eomgamma1}
 \dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + (\del \gamma^{0;0} \wedge \del \gamma^{2;0}) \vee (g \Omega^{-1}) + \frac12 (\del \gamma^{1;0} \wedge \del \gamma^{1;0}) \vee (g \Omega^{-1}) = 0 .
 \eeqn
+
+\subsection{Local character}
+
+We consider the 11-dimensional theory on the manifold $\CC^5 \times \RR$ where $\CC^5$ is equipped with its standard Calabi--Yau structure. 
+On this background, the theory is manifestly $SU(5)$ invariant. 
+In this section, we compute the corresponding character of the local operators at the origin. 
+
+The local character is only sensitive to the free limit of the theory.
+Furthermore, the linear BRST operator is an $SU(5)$-invariant deformation of the $(\dbar + \d_{\RR})$ operator. 
+Therefore, to compute the character it suffices to compute the $SU(5)$-equivariant character of the $\dbar$ cohomology. 
+
+The solutions to the $(\dbar + \d_{\RR})$-equations of motion simply say that all fields are holomorphic along $\CC^5$ and constant along $\RR$. 
+Thus, the solutions can be identified with 
+\begin{align*}
+\mu^{i}\partial_{z_i} & \in \Vect(\CC^5) \cong \cO(\C^5)\partial_{z_i},\quad 
+\nu \in \cO (\C^5) \\
+\beta & \in \cO (\C^5), \quad \gamma^{i} \d z_i \in \Omega^{1}(\CC^5) \cong \cO (\C^5)\d z_i 
+\end{align*}
+where $z_i$ is a holomorphic coordinate on $\CC^5$. 
+
+Corresponding to each of the above, we have a tower of linear local operators labeled by $(m_j) = (m_1, m_2, m_3, m_4, m_5)\in \Z^5_{\geq 0}$; these are given by
+\begin{align*}
+ \mu^{i}_{(m_j)} &: \mu^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\mu^{i} (0) \\
+\nu_{(m_i)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
+\gamma^{i}_{(m_j)} &: \gamma^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\gamma^{i} (0) \\
+ \beta_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
+\end{align*}
+
+We choose generators of the Cartan subgroup for the $SU(5)$ action with the following weights:
+
+\[\begin{array}{|c|c|c|c|c|c|}
+& z_1 & z_2 & z_3 & z_4 & z_5 \\
+\hline
+q & & & & 1 & -1 \\
+t_1 & 1 & -1 & & & \\
+t_2 & & 1 & -1 & & \\
+y & -1 & -1 & -1 &\frac 3 2 & \frac 3 2
+\end{array}\]
+We are choosing the weights in this way as a matter of convenience for the later sections. 
+For instance, upon performing the further twist of the 11-dimensional theory, the $SU(5)$ symmetry is broken to an $SU(3)\times SU(2)$ symmetry; the Cartan of the unbroken symmetries corresponds to the fugacities $q, t_1, t_2$ in the above table. 
+
+We can now readily compute the characters.
+\begin{prop}
+The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theory on flat space is
+\begin{multline}
+\chi_{SU(5)} = 
+\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}} \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} }
+\\ 
+\times \frac{t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2}}{t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2}}.
+\end{multline}
+\end{prop}
 
 \subsection{Component fields}
 
