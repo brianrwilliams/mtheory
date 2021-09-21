@@ -449,3 +449,151 @@ Thus, we are left with
 This is precisely the underlying cochain complex of fields for the type I model with potentials. 
 \end{proof}
 
+\subsection{Compactification along a CY3} 
+
+In the first section we saw that the 11-dimensional theory can be defined on any manifold that is a product of a Calabi--Yau five-fold with a smooth oriented one-manifold. 
+In this section, we investigate an important compactification of the 11-dimensional theory which involves the Calabi--Yau manifold $X \times \CC^2$ where $X$ is a simply connected compact Calabi--Yau three-fold.
+
+The compactification of the theory along the three-fold $X$ 
+\[
+X \times \CC^2 \times \RR \to \CC^2 \times \RR
+\]
+yields an effective five-dimensional theory which is holomorphic along $\CC^2$ and topological along $\RR$. 
+Upon compactification, we will find a match with a description of the twist of five-dimensional minimally supersymmetric supergravity. 
+
+\begin{prop}
+\label{prop:5dsugra}
+The compactification of the 11-dimensional theory along a Calabi--Yau three-fold $X$ is equivalent to the twist of 5d $\cN=1$ supergravity with $h^{1,1}(X)-1$ vector multiplets and $h^{1,2}(X) + 1$ hyper multiplets. 
+\end{prop}
+
+\parsec[s:5dsugra]
+
+We give a conjectural capitulation of the twist of 5d $\cN=1$ supergravity. 
+Before twisting, a general 5d $\cN=1$ supergravity contains a gravity multiplet coupled to some number of vector and hyper multiplets. 
+The twist of the vector and hyper multiplet has been computed in \cite{ESW}, and we recall it below. 
+The twist of the gravity multiplet is less clear. 
+A thorough computation of the twist has yet to appear, though some checks have been established by Elliott and the last author in \cite{EWpois}. 
+We give a description of the twist now, but leave a detailed computation from first principles to future work. 
+
+The gravity multiplet, see \cite{CCDF} for instance, consists of a graviton $e$, a gravitino $\psi$, and a one-form gauge field $\cA_{grav}$.
+After twisting, the graviton and components of gravitino decompose into two Dolbeault-de Rham valued fields 
+\[
+\alpha, \eta \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) ,
+\]
+whose lowest components both carry odd parity. 
+The one-form gauge field $\cA_{grav}$ and the remaining components of the gravitino decompose into two more Dolbeault-de Rham valued fields
+\[
+A_{grav} , B_{grav} \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) ,
+\]
+whose lowest components also both carry odd parity. 
+
+\begin{conj}
+\label{conj:5dsugra}
+The twist of 5d supergravity with vector multiplets valued in a Lie algebra $\fg$ and hypermultiplets valued in a representations $V$ has BV fields
+\begin{itemize}
+\item $\alpha, A_{grav} \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)$ with conjugate fields $\eta, B_{grav}$,
+\item $A \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes \fg$ with conjugate field $B$,
+\item $\chi \in \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes V$ with conjugate field $\psi$.
+\end{itemize}
+
+The action is
+\begin{multline}
+\label{eqn:5daction} 
+\int^\Omega_{\CC^2 \times \RR} \left(\eta \dbar \alpha + B_{grav} \dbar A_{grav} + B \dbar A + \psi \dbar \chi \right) \\
+  \int^\Omega_{\CC^2 \times \RR} \left( \frac12\eta \{\alpha, \alpha\} +  B_{grav} \{\alpha, A_{grav}\}+ B \{\alpha, A\} +  \psi \{\alpha, \chi \}\right) \\ 
++ \frac16 \int_{\CC^2 \times \RR} B_{grav} \del B_{grav} \del B_{grav} .
+\end{multline}
+\end{conj}
+
+\brian{general background on susy. Why expect 5d $\cN=1$ susy}
+
+\parsec[-]
+
+With this description of the twist of five-dimensional supergravity, we turn to the proof of Proposition \ref{prop:5dsugra}. 
+
+First, we set up some notation. 
+Let $\Omega_X$ be the holomorphic volume form on $X$. 
+To define the $11$-dimensional theory on $X \times \CC^2 \times \RR$ we use the Calabi--Yau form $\Omega_X \wedge \d z_1 \wedge \d z_2$, where $\{z_i\}$ is a holomorphic coordinate on $\CC^2$. 
+Let $\omega \in \Omega^{1,1}(X)$ be a fixed K\"ahler form on $X$.
+For any $k$, let $H^k(X, \Omega^k_X)_\perp$ denote the cohomology of the primitive elements. 
+\brian{good notation?}
+
+Consider the 11-dimensional field $\nu_{11d}$. 
+Under the equivalence
+\begin{align*}
+\PV^{0,\bu}(X \times \CC^2) \otimes \Omega^\bu(\RR) & \simeq H^{\bu}(X, \cO) \otimes \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & = \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \oplus \Pi \Bar{\Omega}_X \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) 
+\end{align*}
+the $\nu_{11d}$ field decomposes as 
+\[ 
+\nu_{11d} = \nu + \Bar{\Omega}_X \til \nu .
+\]
+Here $\Bar{\Omega}_X$ is the complex conjugate to the holomorphic volume form on $X$. 
+Notice that the zero form component of $\til \nu$ is a field with even parity. 
+
+Next, consider the 11-dimensional field $\mu_{11d}$. 
+Under the equivalence 
+\begin{align*}
+\Pi \PV^{1,\bu}(X \times \CC^2) \otimes \Omega^\bu(\RR) & \simeq \Pi H^{\bu}(X, \cO) \otimes \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus \Pi H^\bu(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR) \\ & = \Pi \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \oplus \Bar{\Omega}_X \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus H^{1}(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR) \oplus \Pi H^{2}(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR)
+\end{align*}
+the field $\mu_{11d}$ decomposes as 
+\begin{align*}
+\mu_{11d} & = \mu + \Bar{\Omega}_X \til \mu \\ 
+& + e^i \chi_i + f^a A_a +  (\Omega_X^{-1} \vee \omega^2)A_{grav} .  
+\end{align*} 
+Here, $\{e^i\}_{i=1,\ldots, h^{2,1}}$ is a basis for $H^{1}(X, \T_X)$ and $\{f^a\}_{a=1,\ldots, h^{1,1}-1}$ is a basis for 
+\[
+H^2 (X, \Omega^2_X)_\perp \subset H^2(X, \Omega^2_X) \cong H^2(X, \T_X) . 
+\]
+Notice that the zero form part of $\til{\mu}$ is an even field, the zero form part of $\chi_i$ is an even field, the zero form part of $A_a$ is an odd field, and the zero form part of $\mu_\omega$ is an odd field. 
+
+The decomposition for the 11d fields $\gamma_{11d}$ and $\beta_{11d}$ is similar. 
+We record it here:
+\begin{align*}
+\beta_{11d} & = \beta + \Bar{\Omega}_X \til \beta \\ 
+\gamma_{11d} & = \gamma + \Bar{\Omega}_X \til \gamma + e_i \psi^i + f_a B^a + \omega \wedge B_{grav}  . 
+\end{align*}
+Here, $\{e_i\}_{i=1,\ldots,h^{2,1}}$ is a basis for $H^2 (X, \Omega^1_X)$ dual to the basis $\{e^i\}$ under the Serre pairing.
+Also, $\{f_a\}_{a=1,\ldots,h^{1,1}-1}$ is a basis for $H^{1}(X, \Omega^1_X)_\perp$ dual to the basis $\{f^a\}$. 
+
+To compare most directly to the description of the twist of 5d $\cN=1$ supergravity we modestly modify the fields. 
+Let $\del$ be the holomorphic de Rham differential along $\CC^2$. 
+First, we introduce a potential for the fields $\mu$ and $\til \mu$. 
+Let 
+\[
+\alpha, \chi \in \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)
+\]
+be differential forms satisfying $\del \alpha = \mu \vee \Omega_{\CC^2}$ and $\del \chi = \til \mu \vee \Omega_{\CC^2}$. 
+The fields $\nu, \til \nu$ are set to zero. 
+Dually, we replace the fields $\gamma, \til \gamma$ their `field strengths', suitably renormalized with respect to the volume form
+\[
+\eta = (\d^2 z)^{-1} \vee \del \til \gamma , \quad \psi = (\d^2 z)^{-1} \vee \del \gamma \in \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) .
+\]
+The roles of $\beta, \til \beta$ were as gauge symmetries implementing $\gamma \to \gamma + \del \beta$ and $\til \gamma \to \til \gamma + \del \til \beta$. 
+Since we are replacing $\gamma, \til \gamma$ by their images under the operator $\del$, these gauge symmetries are set to zero. 
+
+In summary, we are left with the following fields 
+\[
+\begin{array}{cccccccccc}
+\alpha,A_{grav} & \in & \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR), & \eta, B_{grav} & \in & \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\
+\chi, \chi_i & \in & \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR),  & \psi, \psi^i & \in & \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR), & i=1,\ldots, h^{2,1}  \\
+A_a & \in & \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR), & B^a & \in & \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) , & a = 1, \ldots, h^{1,1}-1.
+\end{array}
+\]
+
+Let us plug these fields in to the 11-dimensional action.
+First, consider the BF term $\frac12 \int^{\Omega} \frac{1}{1-\nu_{11d}} \mu_{11d}^2 \gamma_{11d}$. 
+With the field redefinitions above, this decomposes as
+\begin{multline}\label{eqn:5dsugra1}
+ \int_{\CC^2 \times \RR}^\Omega \left( \frac12 \del \alpha \wedge \del \alpha \wedge \eta + \del A_{grav} \wedge \del A_{grav} \wedge B_{grav} \right) \\
+ + \int_{\CC^2 \times \RR}^\Omega \left( \del \alpha \wedge \del \chi \wedge \psi + \del \alpha \wedge \del \chi_i \wedge \psi^i + \del \alpha \wedge \del A_a \wedge B^a \right) .
+\end{multline}
+This term agrees with the second line in the 5d action \eqref{eqn:5daction}. 
+
+Finally, consider the term in the 11-dimensional action $J(\gamma_{11d}) = \frac16 \int \gamma_{11d} \wedge \del \gamma_{11d} \wedge \del \gamma_{11d}$. 
+This induces the five-dimensional Chern--Simons term 
+\beqn\label{eqn:5dsugra2}
+\frac16 \int_{\CC^2 \times \RR} B_{grav} \del B_{grav} \del B_{grav} .
+\eeqn
+This completes the proof. 
+
+\subsection{The $SU(5)$ twist of type IIA supergravity}
