@@ -533,7 +533,7 @@ Notice that the zero form component of $\til \nu$ is a field with even parity.
 Next, consider the 11-dimensional field $\mu_{11d}$. 
 Under the equivalence 
 \begin{align*}
-\Pi \PV^{1,\bu}(X \times \CC^2) \otimes \Omega^\bu(\RR) & \simeq \Pi H^{\bu}(X, \cO) \otimes \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus \Pi H^\bu(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR) \\ & = \Pi \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \oplus \Bar{\Omega}_X \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus H^{1}(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR) \oplus \Pi H^{2}(X, \T_X) \otimes \PV^{0,\bu}(X) \otimes \Omega^\bu(\RR)
+\Pi \PV^{1,\bu}(X \times \CC^2) \otimes \Omega^\bu(\RR) & \simeq \Pi H^{\bu}(X, \cO) \otimes \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus \Pi H^\bu(X, \T_X) \otimes \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & = \Pi \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \oplus \Bar{\Omega}_X \PV^{1,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \\ & \oplus H^{1}(X, \T_X) \otimes \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \oplus \Pi H^{2}(X, \T_X) \otimes \PV^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)
 \end{align*}
 the field $\mu_{11d}$ decomposes as 
 \begin{align*}
@@ -595,5 +595,52 @@ This induces the five-dimensional Chern--Simons term
 \frac16 \int_{\CC^2 \times \RR} B_{grav} \del B_{grav} \del B_{grav} .
 \eeqn
 This completes the proof. 
+
+\parsec[s:5dglobal]
+
+In \S \ref{sec:global} we computed the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$ and found a close relationship to the exceptional super Lie algebra $E(5,10)$. 
+In this section we deduce the form of the global symmetry algebra of the five-dimensional compactified theory on $\CC^2 \times \RR$. 
+
+Denote the full de Rham cohomology of $X$ by
+\[
+\cA(X) = H^\bu (X, \Omega^\bu) = \oplus_{i,j} H^i (X, \Omega^j_X)  .
+\]
+This is a graded commutative algebra using the wedge product of differential forms. 
+Next, consider the space of holomorphic functions $\cO(\CC^2)$ on $\CC^2$. 
+The Poisson bracket $\{-,-,\}$ associated to the standard holomorphic symplectic structure on $\CC^2$ endows $\cO(\CC^2)$ with the structure of a Lie algebra. 
+In particular, we can tensor $\cO(\CC^2)$ with $\cA_X$ to obtain the structure of a graded Lie algebra on $\cA(X) \otimes \cO(\CC^2)$. 
+
+The global symmetry algebra of the compactified theory is a deformation of this graded Lie algebra. 
+Let $[\omega] \in H^1(X, \Omega^1_X)$ be the class of the K\"ahler form on $X$. 
+The deformation of $\cA(X) \otimes \cO(\CC^2)$ introduces the following Lie bracket 
+\[
+\big[ [\omega] \otimes f, [\omega] \otimes g\big] = [\omega^2] \otimes \{f,g\} \in H^{2,2}(X, \Omega^2) \otimes \cO(\CC^2) . 
+\]
+
+
+First, let's compute the global symmetry algebra of the twist of the pure gravity theory on $\CC^2 \times \RR$. 
+This arises from terms in the BV action \eqref{eqn:5daction} involving only $\alpha, \eta, A_{grav}$, and $B_{grav}$. 
+
+The underlying graded vector space of the resulting Lie algebra is equivalent to
+\[
+\cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} .
+\]
+The non trivial Lie brackets are
+%\begin{multline}
+%[\alpha, \alpha'] = \{\alpha, \alpha'\} \in \cO(\CC^2)_\alpha , \quad [\alpha, \eta] = \{\alpha, \eta\} \in \cO(\CC^2)_\eta , \quad [\alpha, A_{grav}] = \{\alpha, A_{grav}\} \in \cO(\CC^2)_{A_{grav}} \\ 
+%[\alpha, B_{grav}] = \{\alpha, B_{grav}\} \in \cO(\CC^2)_{B_{grav}} , \quad [B_{grav}, B'_{grav}] = \{B_{grav}, B'_{grav}\} \in \cO(\CC^2)_{A_{grav}} .
+%\end{multline}
+\begin{align*}
+[\alpha, \alpha' + \eta + A_{grav} + B_{grav}] & = \{\alpha,  \alpha'\} + \{\alpha, \eta\} + \{\alpha, A_{grav}\} + \{\alpha, B_{grav}\} \\ & \in \cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} \\
+[B_{grav}, B'_{grav}] & = \{B_{grav}, B'_{grav}\} \in \cO(\CC^2)_{A_{grav}} .
+\end{align*}
+Denote this Lie algebra by $\fg_{grav}$. 
+
+The contribution of the vector and hypermultiplets form a module for $\fg_{grav}$. 
+As a graded vector space, this module is
+\[
+M_X = \cO(\CC^2) \otimes H^{1}(X, \Omega^1_X)_\perp [-1] \oplus \cO(\CC^2) \otimes 
+\]
+
 
 \subsection{The $SU(5)$ twist of type IIA supergravity}
