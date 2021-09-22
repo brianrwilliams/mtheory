@@ -209,13 +209,23 @@ Momentarily, we consider a new term in the action which will break this grading,
 
 \subsection{A deformation of BF theory} 
 
+Let $X$ be a Calabi--Yau five-fold and $S$ be a smooth oriented one-dimensional real manifold. 
+We will break the $\ZZ$-grading present in BF theory discussed in the previous section to a $\ZZ/2$ grading. 
+For reference, this means that linear BRST complex of fields of the model now take the following form. 
+
+\begin{equation}
+  \label{eq:sympfields} 
+  \begin{tikzcd}[row sep = 1 ex]
+    {\rm odd} & {\rm even} & {\rm odd} & {\rm even} \\ \hline
+    \Omega^{0}(X;S)_\beta \ar[r, "\del"] & \Omega^{1}(X;S)_\gamma & 
+     \PV^{1}(X; S)_\mu \ar[r, "\div"] & \PV^{0}(X; S)_\nu.
+\end{tikzcd}
+\end{equation}
+
 \parsec
 %check CME
 
-Recall that $X$ is a complex five-dimensional Calabi--Yau manifold and $S$ is a one-dimensional smooth manifold.
-We finally arrive at the definition of the classical field theory on $X \times S$. 
-
-We consider a deformation of BF theory $S_{BF}$ (this refers to either the presentation as $S_{BF,0}$ or $S_{BF,\infty}$). 
+To define our classical field theory on $X \times S$ we consider  a deformation of BF theory $S_{BF}$ (this refers to either the presentation as $S_{BF,0}$ or $S_{BF,\infty}$). 
 Such deformations are governed by the classical master equation: the parameterized family of actions 
 \beqn\label{eqn:defaction}
 S_{BF} + g J
@@ -395,7 +405,7 @@ We can now readily compute the characters.
 The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theory on flat space is
 \begin{multline}
 \chi_{SU(5)} = 
-\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}} \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} }
+\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}} \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} }
 \\ 
 \times \frac{t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2}}{t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2}}.
 \end{multline}
@@ -405,3 +415,28 @@ The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theor
 
 \subsection{One-loop quantization}
 
+In \cite{GRWthf} an existence result for one-loop quantizations of mixed topological-holomorphic theories was established. 
+We apply this to the 11-dimensional model at hand. 
+
+The 11-dimensional theory is a mixed topological-holomorphic theory.
+On flat space $\CC^5_z \times \RR_t$, this means that the theory is translation invariant and that the following act homotopically trivially:
+\begin{itemize}
+\item the vector fields $\del_{\zbar_1}, \ldots, \del_{\zbar_{5}}$ corresponding to infinitesimal anti-holomorphic translations,
+\item the vector field $\partial_t$ corresponding to infinitesimal translations in the $\RR_t$ direction. 
+\end{itemize}
+
+Recall that the action functional of the 11-dimensional theory is $S_{BF, \infty} + c J$. 
+Since the cubic and higher interactions only involve holomorphic derivatives, we obtain the following directly from the main result of \cite{GRWthf}. 
+
+\begin{thm}
+There exists a gauge fixing condition for the 11-dimensional theory on $\CC^5 \times \RR$ which renders its one-loop quantization finite and anomaly-free. 
+\end{thm} 
+
+When $c=0$, this result is actually exact
+since there are no Feynman diagrams present past one-loop in this case. 
+When $c \ne 0$, on the other hand, this result does not immediately imply the existence of a gauge invariant perturbative quantization to higher orders in $\hbar$. 
+The presence of the functional $J = \frac16 \int \gamma \del \gamma \del \gamma$ allows one to construct Feynman graphs at arbitrary loop order. 
+
+Upon performing the $\Omega$-background, see \S \ref{s:omega}, the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
+Costello has shown via a cohomological argument that this effective five-dimensional theory exhibits an essentially unique quantization in perturbation theory \cite{CostelloM5}. 
+We will return to the existence and uniqueness of a higher order quantization of the 11-dimensional theory in future work. 

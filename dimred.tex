@@ -489,7 +489,7 @@ whose lowest components also both carry odd parity.
 
 \begin{conj}
 \label{conj:5dsugra}
-The twist of 5d supergravity with vector multiplets valued in a Lie algebra $\fg$ and hypermultiplets valued in a representations $V$ has BV fields
+The twist of 5d supergravity (with nonzero Chern--Simons term) with vector multiplets valued in a Lie algebra $\fg$ and hypermultiplets valued in a representations $V$ has BV fields
 \begin{itemize}
 \item $\alpha, A_{grav} \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)$ with conjugate fields $\eta, B_{grav}$,
 \item $A \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes \fg$ with conjugate field $B$,
@@ -642,5 +642,77 @@ As a graded vector space, this module is
 M_X = \cO(\CC^2) \otimes H^{1}(X, \Omega^1_X)_\perp [-1] \oplus \cO(\CC^2) \otimes 
 \]
 
-
 \subsection{The $SU(5)$ twist of type IIA supergravity}
+
+\brian{Ingmar can you argue why this is the SU(5) twist on susy grounds?}
+
+Thus, given that our 11-dimensional theory correctly describes the $SU(5)$-invariant twist of supergravity on $\CC^5 \times \RR$, to obtain the $SU(5)$ twist of type IIA supergravity we should reduce along the topological $\RR$ direction. 
+This results in a $SU(5)$ invariant, holomorphic, theory on $\CC^5$. 
+
+Let us briefly spell out the fields present in this dimensional reduction. 
+The reduction is obtained by replacing $\Omega^\bu(\RR)$ with its translation invariant subalgebra $\CC[\ep] = \CC[\d t]$. 
+Here, $\ep$ is an odd parameter playing the role of the translation invariant one-form $\d t \in \Omega^1(\RR)$. 
+Equivalently, we are compactifying the theory along 
+\[
+\CC^5 \times S^1 \to \CC^5 .
+\]
+
+The 11-dimensional the field $\mu_{11d}$ is replaced by the field 
+\[
+\mu + \ep \mu' \in \Pi \PV^{1,\bu}(\CC^5) [\ep] .
+\]
+Notice that the lowest component of $\mu$ is odd (just like $\mu_{11d})$, but the lowest component of $\mu'$ is now even. 
+Completely similarly, the remaining fields reduce as $\nu + \ep \nu'$, $\gamma + \ep \gamma'$, and $\beta + \ep \beta'$. 
+
+In summary, the linear complex of fields of the dimensionally reduced theory on $\CC^5$ is
+\begin{equation}
+  \label{eqn:IIAsu5} 
+  \begin{tikzcd}[row sep = 1 ex]
+    {\rm odd} & {\rm even} & {\rm even} & {\rm odd} \\ \hline
+    \PV^{1,\bu}(\CC^5)_{\mu} \ar[r, "\del"] & \PV^{0,\bu}(\CC^5)_\nu & \\ 
+     & \ep\Omega^{0,\bu}(\CC^5)_{\beta'} \ar[r, "\div"] & \ep\Omega^{1,\bu}(\CC^5)_{\gamma'} . \\
+     &  \ep \PV^{1,\bu}(\CC^5)_{\mu'} \ar[r, "\div"] & \ep \PV^{0,\bu}(\CC^5)_{\nu'} \\
+     & & \Omega^{0,\bu}(\CC^5)_\beta \ar[r, "\div"] & \Omega^{1,\bu}(\CC^5)_\gamma.
+\end{tikzcd}
+\end{equation}
+
+We can compute the dimensional reduction of the 11-dimensional action $S_{BF,\infty} + J$ in a similar way to how we have done in the past few sections. 
+We arrive at the action functional described below. 
+
+\begin{conj}
+\label{conj:IIAsu5}
+The $SU(5)$ twist of type IIA supergravity on $\CC^5$ is equivalent to the theory whose linear BRST complex of fields is displayed in \eqref{eqn:IIAsu5}. 
+The full action functional is 
+\begin{multline}
+\label{eqn:su5action}
+\int^\Omega_{\CC^5}\bigg(\beta' \wedge \dbar \nu + \beta \wedge \dbar \nu' + \gamma' \wedge \dbar \mu + \gamma \wedge \dbar \mu' +  \beta' \wedge \div \mu + \beta \wedge \div \mu' \bigg) \\
++ \int^\Omega_{\CC^5} \bigg( \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma' +  \frac{1}{1-\nu} (\mu \wedge \mu') \vee \del \gamma' + \frac12 \frac{\nu'}{(1-\nu)^2} \mu^2 \vee \del \gamma \bigg) \\
++ \frac12 \int_{\CC^5} \gamma' \wedge \del \gamma \wedge \del \gamma .
+\end{multline} 
+\end{conj} 
+
+The first two lines in \eqref{eqn:su5action} arise from the reduction of the BF action $S_{BF,\infty}$. 
+The final line arises from the reduction of $J = \frac16 \int \gamma_{11d} \del \gamma_{11d} \del \gamma_{11d}$. 
+ 
+\parsec[]
+
+The slab compactification of the previous section was one way to implement the $S^1 / \ZZ/2$ reduction of the 11-dimensional theory. 
+We offer another point of view of this $S^1 / \ZZ/2$ reduction. 
+
+First off, there is the following $\ZZ/2$ action on the 11-dimensional theory on $\CC^5 \times S^1$ before compactifying. 
+We obtain it by the following tensor product of $\ZZ/2$ actions. 
+First, $\ZZ/2$ acts on $\Omega^\bu(S^1)$ by orientation reversing diffeomorphisms. 
+Second, we declare that the eigenvalue of the $\ZZ/2$ action on $\PV^{k,\bu}(\CC^5)$, for $k=0,1$ is $+1$ and the eigenvalue of the $\ZZ/2$ action on $\Omega^{k,\bu}(\CC^5)$ for $k=0,1$ is $-1$. 
+This determines a $\ZZ/2$ action on the full space of fields of the 11-dimensional theory. 
+
+Upon $S^1$ compactification the $\ZZ/2$ action is easy to describe: $\mu,\nu$ both have eigenvalue $+1$, $\mu',\nu'$ both have eigenvalue $-1$, $\gamma,\beta$ both have eigenvalue $-1$, and $\gamma',\beta'$ both have eigenvalue $+1$. 
+In particular, we see that the $\ZZ/2$ fixed points simply pick out the $\mu, \nu, \gamma', \beta'$ fields; this comprises the first two lines of \eqref{eqn:IIAsu5}. 
+
+The fields match precisely with the fields in the twist of type I supergravity that we recalled in \S \ref{s:typeIpot} (Under the relabeling $\gamma' \leftrightarrow \til \gamma, \beta' \leftrightarrow \til \beta$). 
+Furthermore, restricting the action in the above conjecture agrees precisely with the action of this twisted type I model. 
+
+
+
+
+
+
