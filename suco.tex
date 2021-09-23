@@ -120,6 +120,7 @@ Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backrea
 \[
 I_{M2}(\gamma) = N\int_{\C_z} \gamma
 \] 
+\brian{should we write $\cdots$ here? This is just the first-order piece.}
 which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of M5 branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
 
 Once again, this coupling is justified by comparison with the physical theory and by dimensional reduction. Indeed, as discussed in section \surya{}, the component of $\gamma$ which participates in the above coupling is a component of the C-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of M2 branes in the physical theory, which simply involves integrating the C-field over the worldvolume of the brane. 
@@ -157,13 +158,13 @@ The backreacted geoemtry will be given by a solution to the equations of motion 
 \begin{lem}
 The field 
 \[
-F = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
+F = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \wedge \cdots \Hat{\d \wbar_a} \cdots \wedge \d \wbar_4}{\|w\|^{8}} \partial_z .
 \]
 satisfies the $\mu$-equation of motion in the presence of a stack of $N$ $M2$ branes sourced by the term $N \Omega^{-1} \delta_{w=0}$:
 \[
 \dbar F + \div F + \frac12 [F, F] = N \Omega^{-1} \delta_{w=0} 
 \]
-where we set the field in the component $\gamma \in \Omega^{1,\bu}(\CC^5) \otimes \Omega^\bu(\RR)$ equal to zero. 
+where we set the field $\gamma \in \Omega^{1,\bu}(\CC^5) \otimes \Omega^\bu(\RR)$ equal to zero (as well as the fields $\nu,\beta$). 
 \end{lem}
 
 \begin{proof}
@@ -223,7 +224,7 @@ It is mapped to the fields:
 These assignments define an embedding of $\lie{osp}(6|1)$ into the linearized BRST cohomology of the fields of the 11-dimensional theory on $\CC^5 \times \RR$. 
 Equivalently, it defines an embedding
 \[
-\lie{osp}(6|1) \hookrightarrow E(5,10) .
+i_{M2} \colon \lie{osp}(6|1) \hookrightarrow E(5,10) .
 \]
 \end{lem} 
 
