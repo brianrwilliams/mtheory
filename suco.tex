@@ -99,10 +99,27 @@ Indeed, $\mu^{1,3}$ is a component of the hodge star of the G-flux in the physic
 
 Moreover, reducing on a circle aong the directions the M5 branes wrap yields the $SU(4)$ invariant twist of IIA on $\R^2\times \C^4$ with N D4 branes wrapping $\R\times \C^2$. \cite{CLSugra} argue that a magnetic coupling of D4 branes to the $SU(4)$ twist of IIA is given by 
 \[
-\int _{\R\times \C^2} \div^{-1} \mu \vee \Omega_{\C^4}.
+I_{D4} = \int _{\R\times \C^2} \div^{-1} \mu \vee \Omega_{\C^4}.
 \]
 
-\surya{finish}
+Upon dimensionally reducing the interaction $I_{M5}$ along a direction wrapped by the M5 brane, the term depending on the $\theta$ field of type IIA vanishes for type reasons. The result is exactly $I_{D4}$. 
+
+To determine the backreacted geometry, we deform the 11d interaction $S_{BF,\infty} + J$ by $I_{M5}$ and look at the $\gamma$-equation of motion. Varying with respect to $\div^{-1}\mu$ and $\gamma$ respectively yield the equations
+\begin{align*}
+N \delta_{\C^3_z} &= \left (\dbar + d + \div (\frac{\mu}{1-\nu} \right)\partial\gamma \\
+0 &= (\dbar + d)\mu + \partial\gamma\partial\gamma
+\end{align*}
+
+\begin{lem}
+Any background $(\mu = 0, \nu = 0, \gamma = F_{{\rm AdS_7}\times S^4}, \beta = 0)$ where $F_{{\rm AdS_7}\times S^4}$ is such that
+\[
+\partial F_{{\rm AdS_7}\times S^4} = \# N \frac{dw_1dw_2}{(w_1^2+w_2^2+t^2)^{5/2}}(td \wbar_1\wbar_2 - \wbar_1dtd\wbar_2 + \wbar_2dtd\wbar_1)
+\]
+satisfies the above equations of motion.
+\end{lem}
+\begin{proof}
+Since $\nu = \mu = 0$, the first equation tells us that $\partial\gamma$ must be the Bochner kernel representing the residue class on $\R\times\C^2 - \{0\}$. The second equation is satisfied for type reasons.
+\end{proof}
 
 \subsection{The ${\rm AdS}_4 \times S^7$ background}
 
@@ -126,7 +143,7 @@ Once again, this coupling is justified by comparison with the physical theory an
 
 Moreover, reducing on a circle transverse to the M2 brane yields the $SU(4)$ twist of IIA on $\R^2\times \C_z\times \C^3$ with N D2 branes wrapping $\R\times \C_z$. As is shown in \cite{CLSugra}, an electric coupling of D2 branes to the $SU(4)$ twist of IIA is given by 
 \[
-I_{D2}(\gamma) = \int_{\R\times\C_z} \gamma
+I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma
 \] 
 where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
 
@@ -152,23 +169,23 @@ where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA. It
 
 \parsec[sec:m2backreact]
 
-The backreacted geoemtry will be given by a solution to the equations of motion upon deforming the 11d action by the interaction $I_{M2}(\gamma)$. 
+The backreacted geoemtry will be given by a solution to the equations of motion upon deforming the 11d action by the interaction $I_{M2}(\gamma)$. Varying the deformed action with respect to $\gamma$ and $\beta$ respectively yield the equations of motion
+
+\begin{align*}
+N \Omega^{-1} \delta_{w=0}  & = \dbar \mu + \frac12 [\mu, \mu] + \partial\gamma\partial\gamma \\
+0 & = \div \mu
+\end{align*}
 
 \begin{lem}
-The field 
+The background $(\mu = F_{\rm{AdS}_4 \times S^7}, \nu = 0, \gamma = 0, \beta = 0 )$ where 
 \[
-F = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
+ F_{\rm{AdS}_4 \times S^7} = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
 \]
-satisfies the $\mu$-equation of motion in the presence of a stack of $N$ $M2$ branes sourced by the term $N \Omega^{-1} \delta_{w=0}$:
-\[
-\dbar F + \div F + \frac12 [F, F] = N \Omega^{-1} \delta_{w=0} 
-\]
-where we set the field in the component $\gamma \in \Omega^{1,\bu}(\CC^5) \otimes \Omega^\bu(\RR)$ equal to zero. 
+satisfies the above equation of motion.
 \end{lem}
 
 \begin{proof}
-The equation $\dbar F = N \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. 
-It is clear that $\div F = 0$ and $[F, F] = 0$ by simple type reasons. 
+Upon specializing $\gamma = 0$, the last term in the first equation above vanishes. The equation $\dbar F_{\rm{AdS}_4 \times S^7} = N \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. It is clear that $\div F_{\rm{AdS}_4 \times S^7} = 0$ and $[F_{\rm{AdS}_4 \times S^7}, F_{\rm{AdS}_4 \times S^7}] = 0$ by simple type reasons. 
 \end{proof}
 
 \parsec[]
