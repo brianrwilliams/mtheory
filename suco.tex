@@ -8,119 +8,6 @@
 The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
 \end{prop} 
 
- \parsec[]
-
-Choose a splitting 
-\[
-\CC^5 \times \RR = \CC_z^3 \times \CC_w^2 \times \RR
-\]
-and denote coordinates $z_i, i=1,2,3$ and $w_a, a=1,2$.
-
-The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
-\[
-\lie{sl}(4) \oplus \lie{sl}(2) .
-\]
-which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. 
-
-The embedding of the bosonic piece can roughly be described as follows. 
-The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
-Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
-The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
-
-
-\begin{itemize}
-
-\item
-The bosonic abelian subalgebra $\CC^3 \subset \lie{sl}(4)$ is mapped to the translations 
-\[
-\frac{\del}{\del z_i} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad i=1,2,3.
-\]
-
-\item
-The bosonic subalgebra $\lie{sl}(3) \subset \lie{sl}(4)$ is mapped to the 
-rotations
-\[
-A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad (A_{ij}) \in \lie{sl}(3) .
-\]
-
-\item
-The bosonic subalgebra $\CC \subset \lie{sl}(4)$ is mapped to the element
-\[
-\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR)  .
-\] 
-Notice that these vector fields are divergence-free and restrict to the ordinary dilation along $w=0$. 
-\item 
-The bosonic subalgebra of $\lie{sl}(4)$ describing special conformal transformations on $\CC^3$ is mapped to the elements 
-\[
-z_i \left(\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - 2 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
-\] 
-Notice that these vector fields are divergence-free and restrict to the ordinary special conformal transformations along $w=0$. 
-\item 
-The bosonic summand $\lie{sl}(2)$ is mapped to the triple
-\[
-w_1 \frac{\del}{\del w_2}, w_2 \frac{\del}{\del w_1}, \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
-\]
-\end{itemize}
-
-The odd part of the algebra $\lie{osp}(6|1)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\lie{sl}(4)$ representation and $R$ is the fundamental $\lie{sl}(2)$ representation. 
-It is natural to split $W = L \oplus \CC$ with $L = \CC^3$ the fundamental $\lie{sl}(3) \subset \lie{sl}(4)$ representation. 
-Then the odd part decomposes as
-\[
-L \otimes R \oplus \wedge^2 L \otimes R \cong \CC^3 \otimes \CC^2 \oplus \wedge^2 \CC^3 \otimes \CC .
-\]
-
-\begin{itemize} 
-\item The summand $L \otimes R$ consists of the remaining 6d superstranlsations. 
-It is mapped to the fields 
-\[
-z_i \d w_a \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
-\] 
-\item The summand $\wedge^2 L \otimes R$ consists of the remaining 6d superconformal transformations. 
-It is mapped to the fields
-\[
-\ep^{ijk} z_i w_a \d z_j \in \Omega^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad a = 1,2, \quad k = 1,2,3. 
-\]
-\end{itemize}
-
-\subsection{The ${\rm AdS}_7 \times S^4$ background}
-
-In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
-In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
-
-\parsec[sec:m5coupling]
-
-Analogous to the physical theory, the ${\rm AdS}_7 \times S^4$ background in the holomorphic twist will arise by backreacting M5 branes. To this effect, we begin by discussing how the 11d theory couples to M5 branes. Consider a stack of N M5 branes wrapping $\C^3_z \times \{0\} \subset \C^3_z\times \C^2_w\times \R$. It is natural to consider the nonlocal interaction 
-\[
-I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega.
-\]
-Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}$. We claim that this coupling is consistent with expectations from the physical theory and from dimensional reduction. 
-
-Indeed, $\mu^{1,3}$ is a component of the hodge star of the G-flux in the physical theory \surya{}. In the physical theory, M5 branes magnetically couple to the C-field; the coupling involves choosing a primitive for the hodge star of the G-flux and integrating it over the M5 worldvolume. Our twist contains no fields corresponding to components of such a primitive; hence such a magnetic coupling is reflected in the appearance of $\div^{-1}$. 
-
-Moreover, reducing on a circle aong the directions the M5 branes wrap yields the $SU(4)$ invariant twist of IIA on $\R^2\times \C^4$ with N D4 branes wrapping $\R\times \C^2$. \cite{CLSugra} argue that a magnetic coupling of D4 branes to the $SU(4)$ twist of IIA is given by 
-\[
-I_{D4} = \int _{\R\times \C^2} \div^{-1} \mu \vee \Omega_{\C^4}.
-\]
-
-Upon dimensionally reducing the interaction $I_{M5}$ along a direction wrapped by the M5 brane, the term depending on the $\theta$ field of type IIA vanishes for type reasons. The result is exactly $I_{D4}$. 
-
-To determine the backreacted geometry, we deform the 11d interaction $S_{BF,\infty} + J$ by $I_{M5}$ and look at the $\gamma$-equation of motion. Varying with respect to $\div^{-1}\mu$ and $\gamma$ respectively yield the equations
-\begin{align*}
-N \delta_{\C^3_z} &= \left (\dbar + d + \div (\frac{\mu}{1-\nu} \right)\partial\gamma \\
-0 &= (\dbar + d)\mu + \partial\gamma\partial\gamma
-\end{align*}
-
-\begin{lem}
-Any background $(\mu = 0, \nu = 0, \gamma = F_{{\rm AdS_7}\times S^4}, \beta = 0)$ where $F_{{\rm AdS_7}\times S^4}$ is such that
-\[
-\partial F_{{\rm AdS_7}\times S^4} = \# N \frac{dw_1dw_2}{(w_1^2+w_2^2+t^2)^{5/2}}(td \wbar_1\wbar_2 - \wbar_1dtd\wbar_2 + \wbar_2dtd\wbar_1)
-\]
-satisfies the above equations of motion.
-\end{lem}
-\begin{proof}
-Since $\nu = \mu = 0$, the first equation tells us that $\partial\gamma$ must be the Bochner kernel representing the residue class on $\R\times\C^2 - \{0\}$. The second equation is satisfied for type reasons.
-\end{proof}
-
 \subsection{The ${\rm AdS}_4 \times S^7$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
@@ -133,20 +20,21 @@ We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
 \CC_z \times \RR \times \CC^4_w .
 \]
 
-Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backreacting M2 branes. Consider a stack of N M2 branes wrapping $\R\times \C_z$. A natural interaction to consider is 
+Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backreacting M2 branes. Consider a stack of $N$ $M2$ branes wrapping $\R\times \C_z$. A natural interaction to consider is 
 \[
 I_{M2}(\gamma) = N\int_{\C_z} \gamma
 \] 
 \brian{should we write $\cdots$ here? This is just the first-order piece.}
-which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of M5 branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
+which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of $M5$ branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
 
-Once again, this coupling is justified by comparison with the physical theory and by dimensional reduction. Indeed, as discussed in section \surya{}, the component of $\gamma$ which participates in the above coupling is a component of the C-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of M2 branes in the physical theory, which simply involves integrating the C-field over the worldvolume of the brane. 
+This coupling is justified by comparison with the physical theory and by dimensional reduction. 
+Indeed, as discussed in section \surya{}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of $M2$ branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
 
-Moreover, reducing on a circle transverse to the M2 brane yields the $SU(4)$ twist of IIA on $\R^2\times \C_z\times \C^3$ with N D2 branes wrapping $\R\times \C_z$. As is shown in \cite{CLSugra}, an electric coupling of D2 branes to the $SU(4)$ twist of IIA is given by 
+Moreover, reducing on a circle transverse to the $M2$ brane yields the $SU(4)$ twist of type IIA supergravity on $\R^2\times \C_z\times \C^3$ with $N$ $D2$ branes wrapping $\R\times \C_z$. As is shown in \cite{CLSugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
 \[
 I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma
 \] 
-where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
+where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA supergravity. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
 
 
 % Based on the discussion above, it is natural to expect that there is a field of twisted 11-dimensional supergravity which sources the twist of a stack of $N$ $M2$ branes living on the submanifold $\CC_z \times \RR \cong \{w=0\} \subset \CC^5$. 
@@ -170,23 +58,39 @@ where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA. It
 
 \parsec[sec:m2backreact]
 
-The backreacted geoemtry will be given by a solution to the equations of motion upon deforming the 11d action by the interaction $I_{M2}(\gamma)$. Varying the deformed action with respect to $\gamma$ and $\beta$ respectively yield the equations of motion
-
-\begin{align*}
-N \Omega^{-1} \delta_{w=0}  & = \dbar \mu + \frac12 [\mu, \mu] + \partial\gamma\partial\gamma \\
-0 & = \div \mu
-\end{align*}
+The backreacted geoemtry will be given by a solution to the equations of motion upon deforming the 11d action by the interaction $I_{M2}(\gamma)$. 
+Varying the deformed action with respect to $\gamma$ 
+we obtain the equation of motion
+\beqn\label{eqn:ads4eom1}
+\dbar \mu + \frac12 [\mu, \mu] + \partial\gamma\partial\gamma = N \Omega^{-1} \delta_{w=0} \\
+\eeqn
+Here $[-,-]$ is the Schouten bracket. 
+Varying $\beta$ we obtain the equation of motion
+\beqn\label{eqn:adseom2}
+\div \mu = 0 .
+\eeqn
 
 \begin{lem}
-The background $(\mu = F_{\rm{AdS}_4 \times S^7}, \nu = 0, \gamma = 0, \beta = 0 )$ where 
+Let
 \[
- F_{\rm{AdS}_4 \times S^7} = \# N \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
+ F_{M2} = \# \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
 \]
-satisfies the above equation of motion.
+Then, the background where $\mu = N F_{M2}$ 
+satisfies the above equations of motion
+\begin{align*}
+\dbar (N F_{M2}) + \frac12 [N F_{M2}, N F_{M2}] & = N \Omega^{-1} \delta_{w=0} \\
+\div (N F_{M2}) & = 0  .
+\end{align*}
+Here, we set all components of the field $\gamma$ equal to zero (as well as the fields $\nu,\beta$). 
 \end{lem}
 
 \begin{proof}
-Upon specializing $\gamma = 0$, the last term in the first equation above vanishes. The equation $\dbar F_{\rm{AdS}_4 \times S^7} = N \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. It is clear that $\div F_{\rm{AdS}_4 \times S^7} = 0$ and $[F_{\rm{AdS}_4 \times S^7}, F_{\rm{AdS}_4 \times S^7}] = 0$ by simple type reasons. 
+Upon specializing $\gamma = 0$, the last term in the first equation above vanishes. The equation $\dbar F_{\rm{AdS}_4 \times S^7} = \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. 
+It is clear that $\div F_{\rm{AdS}_4 \times S^7} = 0$ and 
+\[
+[F_{\rm{AdS}_4 \times S^7}, F_{\rm{AdS}_4 \times S^7}] = 0
+\] 
+by simple type reasons. 
 \end{proof}
 
 \parsec[]
@@ -263,22 +167,27 @@ The fermionic summand $(\wedge^2 \CC^4)_{+1}$ embeds into closed two-forms as
 \parsec[]
 
 Next, we turn on a nontrivial unit of flux $N \ne 0$. 
-Since not all of the fields we wrote down above commute with the flux $N F$, they are not compatible with the total differential $\delta^{(1)} + [N F, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w=0\}$. 
+Since not all of the fields we wrote down above commute with the flux $N F_{M2}$, they are not compatible with the total differential $\delta^{(1)} + [N F_{M2}, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w=0\}$. 
 Nevertheless, we have the following. 
 
 \begin{prop}
-There exists $N$-dependent corrections to the fields defining the embedding of $\lie{osp}(6|1)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F,-]$. 
-Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N  F,-]$.
+\label{prop:brads4}
+There exists $N$-dependent corrections to the fields defining the embedding of $\lie{osp}(6|1)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F_{M2},-]$. 
+Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N F_{M2},-]$.
 \end{prop}
 
 \begin{proof}
-Let $\cL(\CC^5 \times \RR \setminus \CC \times \RR)$ denote the super $L_\infty$ algebra obtained by parity shifting the fields of the 11-dimensional theory. 
-We make the identification $\CC^5 \times \RR \setminus \{w=0\} \cong (\CC_w^4 \setminus 0) \times \CC_z \times \RR$. 
-Recall that we are viewing $\til F$ as an element of $\PV^{1,3}(\CC_w^4 \setminus 0) \otimes \Omega^{0,0}(\CC_z) \otimes \Omega^0(\RR)$. 
-As such, the operator $[N F,-]$ acts on the fields according to two types of maps:
+Let $\cL(\CC^5 \times \RR \setminus \{w=0\})$ denote the super $L_\infty$ algebra obtained by parity shifting the fields of the 11-dimensional theory. 
+We make the identification 
+\[
+(\CC^5 \times \RR) \setminus \{w=0\} \cong (\CC_w^4 \setminus 0) \times \CC_z \times \RR .
+\]
+
+Set $F = F_{M2}$ for notational convenience. Recall that we are viewing $F$ as an element of $\PV^{1,3}(\CC_w^4 \setminus 0) \otimes \Omega^{0,0}(\CC_z) \otimes \Omega^0(\RR)$. 
+The operator $[F,-]$ acts on the fields according to two types of maps:
 \begin{align*}
-[N \til F ,-] & \colon \PV^{i,\bu}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \PV^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \\
-[N \til F,-] & \colon \Omega^{i,\bu}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \Omega^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR).
+[F ,-] & \colon \PV^{i,\bu}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \PV^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \PV^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \\
+[F,-] & \colon \Omega^{i,\bu}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \Omega^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR).
 \end{align*}
 
 \brian{get the filtration straight}
@@ -325,38 +234,350 @@ and
 
 It follows that (up to completion) the cohomology 
 \[
-H^\bu(\cL(\CC^5 \times \RR \setminus \CC \times \RR) , \dbar)
+H^\bu(\cL(\CC^5 \times \RR \setminus \{w=0\}) , \dbar)
 \]
 is the direct sum of $H^\bu(\cL(\CC^5 \times \RR), \dbar)$ with 
 \begin{equation}
   \label{eqn:ads4ss2} 
   \begin{tikzcd}[row sep = 1 ex]
     - & + \\ \hline
-H^3(\CC^4\setminus 0, \T)[z] \{\partial_{w_i}\}  \ar[r, dotted, "\div"] & H^3(\CC^4 \setminus 0, \cO) [z] \\
-H^3(\CC^4\setminus 0, \cO) [z] \partial_z \ar[ur, dotted, "\div"] \\
-H^3(\CC^4\setminus 0, \cO) [z] \ar[r, dotted, "\del"] \ar[dr, dotted, "\del"] & H^3(\CC^4\setminus 0, \cO)[z] \d z \\ & H^3(\CC^4\setminus 0, \Omega^1)[z] \{\d w_i\} .
+H^3(\CC^4\setminus 0, \cO)[z] \{\partial_{w_i}\}  \ar[r, dotted, "\div"] & H^3(\CC^4 \setminus 0, \cO) [z] \\
+H^3(\CC^4\setminus 0, \cO) [z] \partial_z \ar[ur, dotted, "\div"'] \\
+H^3(\CC^4\setminus 0, \cO) [z] \ar[r, dotted, "\del"] \ar[dr, dotted, "\del"'] & H^3(\CC^4\setminus 0, \cO)[z] \d z \\ & H^3(\CC^4\setminus 0, \Omega^1)[z] \{\d w_i\} .
 \end{tikzcd}
 \end{equation}
 The remaining piece of the original BRST operator is drawn in dotted lines. 
-The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N\til F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to dotted line operators. 
-In this description the image of the flux $\til F$ at this page in the spectral sequence corresponds to the following class 
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to dotted line operators. 
+In this description the image of the flux $F$ at this page in the spectral sequence corresponds to the following class 
 \[
-[\til F] = (w_1 \cdots w_4)^{-1} \partial_z \in H^3(\CC^4\setminus 0, \cO) [z] \partial_z .
+[F] = (w_1 \cdots w_4)^{-1} \partial_z \in H^3(\CC^4\setminus 0, \cO) [z] \partial_z .
 \]
 
-The next page of the spectral sequence is given by computing the cohomology with respect to the operator $[N \til F,-]$. 
+The next page of the spectral sequence is given by computing the cohomology with respect to the operator $[N F,-]$. 
 As observed above, this operator maps Dolbeault degree zero elements to Dolbeault degree three elements. 
 For degree reasons, there are no further differentials and the spectral sequence collapses after the second page. 
 
 The embedding of $\lie{osp}(6|1)$ we wrote down above lives in the kernel of the original BRST operator $\delta^{(1)}$. 
-To see that it this embedding can be lifted to the full cohomology we need to check that any element in the image of the original embedding is annihilated by $\big[ N [\til F] , - \big]$. 
+To see that it this embedding can be lifted to the full cohomology we need to check that any element in the image of the original embedding is annihilated by $\big[ N [F] , - \big]$. 
 This is a direct calculation. 
 For instance, recall that an element in the image of the odd summand $(\wedge^2 \CC^2)_{-1}$ (which corresponds to a superconformal transformation) is of the form $z w_a \wedge \d w_b = z(w_a \d w_b - w_b \d w_a)$. 
 We have
 \[
-\big[ N [\til F] , z(w_a \d w_b - w_b \d w_a) \big] = (w_1\cdots w_4)^{-1} (w_a \d w_b - w_b \d w_a) = 0
+\big[[F] , z(w_a \d w_b - w_b \d w_a) \big] = (w_1\cdots w_4)^{-1} (w_a \d w_b - w_b \d w_a) = 0
 \]
 since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by multiplication by $w_a$ for any $a = 1,\ldots 4$. 
 \end{proof}
+
+\subsection{The ${\rm AdS}_7 \times S^4$ background}
+
+In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our description of the minimal twist of 11-dimensional supergravity. 
+In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
+
+\parsec[sec:m5coupling]
+
+Analogous to the physical theory, the ${\rm AdS}_7 \times S^4$ background in the holomorphic twist will arise by backreacting $M5$ branes. To this effect, we begin by discussing how the 11d theory couples to M5 branes. 
+Consider a stack of $N M5$ branes wrapping 
+\[
+\{w_1=w_2=t=0\} \subset \C^3_z\times \C^2_w\times \R 
+\] 
+
+It is natural to consider the nonlocal interaction 
+\[
+I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega.
+\]
+Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}$. 
+We argue that this coupling is consistent with expectations from the physical theory and from dimensional reduction. 
+
+The twisted field $\mu^{1,3}$ is a component of the Hodge star of the $G$-flux in the physical theory \ref{s:components}. 
+In the physical theory, M5 branes magnetically couple to the $C$-field; the coupling involves choosing a primitive for the hodge star of the $G$-flux and integrating it over the $M5$ worldvolume. Our twist contains no fields corresponding to components of such a primitive; hence such a magnetic coupling is reflected in the appearance of $\div^{-1}$. 
+
+\parsec[]
+
+We obtain a deeper justification for this coupling through dimensional reduction to type IIA supergravity. 
+Reducing on the circle along the directions the $M5$ branes wrap yields the $SU(4)$ invariant twist of type IIA supergravity on $\CC^4 \times \RR^2$ with $N$ $D4$ branes wrapping $\CC^2 \times \RR$. 
+
+In \cite{CLSugra}, it is shown that the magnetic coupling of $D4$ branes to the $SU(4)$ twist of IIA is of the form
+\[
+N \int _{\C^2 \times \RR} \div^{-1} \mu \vee \Omega_{\C^4} + \cdots .
+\]
+\brian{should we write $\cdots$ here? This is just the first-order piece.}
+
+\parsec[s:m5backreact]
+
+The backreacted geometry will be given by a solution to the equations of motion upon deforming the 11-dimensional action by the interaction $I_{M5}(\mu)$. 
+
+To deduce the equations of motion we deform the 11-dimensional action by the term $I_{M_5}(\mu)$.
+Varying the potential $\div^{-1} \mu$, we obtain the following equation of motion involving the field $\gamma$:
+\beqn\label{eqn:m5eom1}
+\dbar \del \gamma + \div \left(\frac{1}{1-\nu} \mu\right) \wedge \del \gamma = N \delta_{w_1=w_2=t=0} .
+\eeqn
+Notice that there is an extra derivative compared to the equation of motion arising from varying the field $\mu$. 
+This equation only depends on $\gamma$ through its field strength $\del \gamma$. 
+
+Varying $\gamma$ we obtain the equation of motion 
+\beqn\label{eqn:m5eom2}
+(\dbar + \d_\RR) \mu + \del \gamma \del \gamma = 0 .
+\eeqn 
+Again, this only depends on $\gamma$ through its field strength $\del \gamma$.
+
+
+\begin{lem}
+\label{lem:ads7flux}
+Let
+\[
+F_{M5} = \# N \frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} \wedge \d w_1 \wedge \d w_2
+\]
+%and suppose 
+%\[
+%\til F \in \Bar{\Omega}^{1,2} (\CC^5) \otimes \Bar{\Omega}^1(\RR)
+%\]
+%satisfies $\del \til F = F$. 
+Then, $F$ satisfies the $F = \del\gamma$-equations of motion in the presence of a stack of $N$ $M5$ branes sourced by the term $N \delta_{w_1=w_2=t=0}$:
+\begin{align*}
+\dbar F + \d_{\RR} F & = N \delta_{w_1=w_2=t=0}  \\ 
+F \wedge F & = 0 .
+\end{align*}
+Here, we set all components of the field $\mu$ equal to zero (as well as the fields $\nu,\beta$). 
+\end{lem}
+
+\begin{proof}
+The first equation equation 
+\[
+\dbar F + \d_{\RR} F = N \delta_{w_1=w_2=t=0}
+\]
+characterizes the kernel representing $N$ times the residue class for a $4$-sphere in 
+\[
+(\CC^2 \times \RR) \setminus 0 \simeq S^4 \times \RR .
+\] 
+That is
+\[
+\oint_{S^4} F = N 
+\]
+for any $4$-sphere centered at $0 \in \CC^2 \times \RR$.
+
+The second equation $F \wedge F = 0$ follows by simple type reasons. 
+\end{proof}
+
+\parsec[]
+
+To provide evidence for the claim that this is the twisted analog of the AdS geometry we will match the symmetries present in the physical theory on ${\rm AdS}_7 \times S^4$ and those in the twisted theory. 
+
+We have recalled that the $Q$-cohomology of $\lie{osp}(8|2)$ is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
+We will define an embedding of $\lie{osp}(6|1)$ into the 11-dimensional theory on $\CC^5 \times \RR \setminus \{w_1=w_2=t=0\}$ which corresponds to the twist of the 6d superconformal algebra.
+
+We first focus on the case where the flux $N=0$.
+In this case the embedding can be extended to all of $\CC^5 \times \RR$. 
+
+The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
+\[
+\lie{sl}(4) \oplus \lie{sl}(2) .
+\]
+which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. 
+
+Recall that we have chosen coordinates of the form
+\[
+\CC^5 \times \RR = \CC_z^3 \times \CC_w^2 \times \RR_t
+\]
+with $z_i, i=1,2,3$ and $w_a, a=1,2$.
+The stack of $M5$ branes wrap $w_1=w_2=t=0$. 
+
+The embedding of the bosonic piece of $\lie{osp}(6|1)$ can be described as follows. 
+The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
+Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
+The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
+In more detail, the embedding of the bosonic piece can be given by the following explicit formulas. 
+
+\begin{itemize}
+
+\item
+The bosonic abelian subalgebra $\CC^3 \subset \lie{sl}(4)$ is mapped to the translations 
+\[
+\frac{\del}{\del z_i} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad i=1,2,3.
+\]
+
+\item
+The bosonic subalgebra $\lie{sl}(3) \subset \lie{sl}(4)$ is mapped to the 
+rotations
+\[
+A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad (A_{ij}) \in \lie{sl}(3) .
+\]
+
+\item
+The bosonic subalgebra $\CC \subset \lie{sl}(4)$ is mapped to the element
+\[
+\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR)  .
+\] 
+Notice that these vector fields are divergence-free and restrict to the ordinary dilation along $w=0$. 
+\item 
+The bosonic subalgebra of $\lie{sl}(4)$ describing special conformal transformations on $\CC^3$ is mapped to the elements 
+\[
+z_i \left(\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - 2 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
+\] 
+Notice that these vector fields are divergence-free and restrict to the ordinary special conformal transformations along $w=0$. 
+\item 
+The bosonic summand $\lie{sl}(2)$ is mapped to the triple
+\[
+w_1 \frac{\del}{\del w_2}, w_2 \frac{\del}{\del w_1}, \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
+\]
+\end{itemize}
+
+The odd part of the algebra $\lie{osp}(6|1)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\lie{sl}(4)$ representation and $R$ is the fundamental $\lie{sl}(2)$ representation. 
+It is natural to split $W = L \oplus \CC$ with $L = \CC^3$ the fundamental $\lie{sl}(3) \subset \lie{sl}(4)$ representation. 
+Then the odd part decomposes as
+\[
+L \otimes R \oplus \wedge^2 L \otimes R \cong \CC^3 \otimes \CC^2 \oplus \wedge^2 \CC^3 \otimes \CC .
+\]
+
+\begin{itemize} 
+\item The summand $L \otimes R$ consists of the remaining 6d superstranlsations. 
+It is mapped to the fields 
+\[
+z_i \d w_a \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
+\] 
+\item The summand $\wedge^2 L \otimes R$ consists of the remaining 6d superconformal transformations. 
+It is mapped to the fields
+\[
+\ep^{ijk} z_i w_a \d z_j \in \Omega^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \quad a = 1,2, \quad k = 1,2,3. 
+\]
+\end{itemize}
+
+\begin{lem}
+These assignments define an embedding of $\lie{osp}(6|1)$ into the linearized BRST cohomology of the fields of the 11-dimensional theory on $\CC^5 \times \RR$. 
+Equivalently, it defines an embedding
+\[
+i_{M5} \colon \lie{osp}(6|1) \hookrightarrow E(5,10) .
+\]
+\end{lem} 
+
+\parsec[]
+
+Next, we turn on a nontrivial unit of flux $N \ne 0$. 
+Since not all of the fields we wrote down above commute with the flux $N F$, they are not compatible with the total differential $\delta^{(1)} + [N F, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w_1=w_2=t=0\}$. 
+Nevertheless, we have the following.
+
+\begin{prop}
+\label{prop:brads7}
+There exists $N$-dependent corrections to the embedding $i_{M5}$ which is compatible with the modified BRST differential $\delta^{(1)} + [N F,-]$. 
+Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N  F,-]$.
+\end{prop}
+
+\parsec[s:thfcohomology]
+
+The proof of the above proposition follows from an indirect cohomological argument. 
+Before getting to the proof, we introduce the relevant cohomology. 
+
+The 11-dimensional theory is built from fields which live in the following tensor product of complexes 
+\[
+\Omega^{0,\bu}(\CC^5) \otimes \Omega^\bu(\RR).
+\]
+Precisely, this is where the $\beta,\nu$ fields live. 
+The $\mu,\gamma$ fields live in versions of this complex where we take Dolbeault forms with coefficients in the holomorphic tangent and cotangent bundles, respectively. 
+
+Another way to think about this complex is to first consider the full de Rham complex $\Omega^\bu(\CC^5 \times \RR)$, which includes both holomorphic and anti-holomorphic forms in the $\CC^5$ direction. 
+The dg algebra of all de Rham forms on $\CC^5 \times \RR$ has an ideal generated by the holomorphic one forms $\{\d z_i\}_{i=1,\ldots,5}$.
+There is an isomorphism of dg algebras
+\[
+\Omega^{0,\bu}(\CC^5) \otimes \Omega^\bu(\RR) \cong \Omega^\bu(\CC^5 \times \RR) \, / \, (\d z_1,\ldots, \d z_5) .
+\]
+The advantage of this presentation is that we can define a complex associated to more general manifolds that are not products of a complex manifold with a smooth manifold.\footnote{More generally, we are describing the cohomology of a manifold equipped with a topological holomorphic foliation.}
+
+For the M5 brane it was convenient to relabel the holomorphic coordinates on $\CC^5$ by $z_1,z_2,z_3,w_1,w_2$. 
+At the twisted level, the geometry arising from backreacting $M5$ branes is based on the manifold 
+\[
+\CC^5 \times \RR \setminus \CC^3 \cong \CC_z^3 \times (\CC^2_w \times \RR \setminus 0) .
+\]
+The $\beta,\nu$ fields of 11-dimensional theory on this submanifold of $\CC^5 \times \RR$ live in the complex 
+\[
+\Omega^\bu\bigg(\CC^5 \times \RR \setminus \CC^3\bigg) \, / \, (\d z_1,\d z_2,\d z_3, \d w_1, \d w_2)  .
+\]
+The $\mu,\gamma$ fields live in similar complexes where we introduce a (trivial) vector bundle on $\CC^5 \times \RR \setminus \CC^3$. 
+
+Since the $\CC^3$ wraps $w_1=w_2=t=0$ we can apply a version of the K\"unneth formula to identify this complex with 
+\[
+\Omega^{0,\bu}(\CC^3_z) \otimes \bigg( \Omega^\bu\left(\CC^2_w \times \RR \setminus 0 \right) \, / \, (\d w_1, \d w_2) \bigg).
+\]
+
+The cohomology of the Dolbeault complex of $\CC^3_z$ is easy to compute. 
+The cohomology of the bit in parentheses is concentrated in degrees zero and two. 
+In degree zero, there is a dense embedding
+\[
+\CC[w_1,w_2] \hookrightarrow H^0 \bigg( \Omega^\bu\left(\CC^2_w \times \RR \setminus 0 \right) \, / \, (\d w_1, \d w_2) \bigg)
+\]
+In degree two, there is a dense embedding
+\[
+w_{1}^{-1} w_2^{-1} \CC[w_1,w_2] \hookrightarrow H^2 \bigg( \Omega^\bu\left(\CC^2_w \times \RR \setminus 0 \right) \, / \, (\d w_1, \d w_2) \bigg).
+\]
+
+It will be useful to explain this last embedding in more detail. 
+Consider the homogenous element $w_1^{-1} w_2^{-1}$. 
+This represents the class of the Dolbeault-de Rham $2$-form
+\[
+\frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} .
+\]
+Notice that if we wedge with the volume form $\d w_1 \d w_2$ this is the unit $N=1$ flux introduced in Lemma \ref{lem:ads7flux}. 
+The homogenous element $w_1^{-n-1} w_2^{-m-1}$ represents the class of the holomorphic derivatives $\partial_{w_1}^n \partial_{w_2}^{m}$ applied to this $2$-form. 
+
+Observe that when restricted to $\CC^5 \times \RR \setminus \CC^3$ the holomorphic tangent bundle along $\CC^5$ is still trivializable. 
+
+\parsec[]
+
+Let's turn to the proof of Proposition \ref{prop:brads7}.
+We proceed completely analogously to the case of backreacted $M2$ branes as in the proof of Proposition \ref{prop:brads4}. 
+
+Let $\cL (\CC^5 \times \RR \setminus \{w_1=w_2=t=0\})$ denote the super $L_\infty$ algebra obtained by parity shifting the fields of the 11-dimensional theory on $\CC^5 \times \RR \setminus \{w_1=w_2=t=0\}$. 
+
+There is a spectral sequence which converges to the cohomology of the fields with respect to the deformed linear BRST differential $\delta^{(1)} + [N F_{M5},-]$ whose first page
+is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$. 
+Recall that the linearized BRST differential decomposes as
+\[
+\delta^{(1)} = \dbar + \d_{\RR} + \div |_{\mu \to \nu} + \del |_{\beta \to \gamma}  .
+\]
+To compute this page, we use an auxiliary spectral sequence which simply filters by the holomorphic form and polyvector field type. 
+This first page of this auxiliary spectral sequence is simply given by the cohomology of the fields supported on 
+\[
+\CC^5 \times \RR \setminus \{w_1=w_2=t=0\} \cong \CC_z^3 \times (\CC^2_w \times \RR \setminus 0)
+\]
+with respect to $\dbar + \d_{\RR}$. 
+
+To compute this cohomology we follow the discussion in \S \ref{s:thfcohomology}.
+Just as in the case of the $M2$ brane, we see that the $\dbar + \d_{\RR}$ cohomology is (up to completions) is the direct sum of the cohomology on flat space $H^\bu(\cL(\CC^5 \times \RR), \dbar)$ with
+\begin{equation}
+  \label{eqn:ads7ss2} 
+  \begin{tikzcd}[row sep = 1 ex]
+    + & - \\ \hline
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\partial_{w_i}\}  \ar[r, dotted, "\div"] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \{\del_{z_i}\} \ar[ur, dotted, "\div"'] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \ar[r, dotted, "\del"] \ar[dr, dotted, "\del"'] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d z_i\} \\ & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d w_i\} .
+\end{tikzcd}
+\end{equation}
+
+Recall that the flux $F$ was defined as the image under $\del$ of some $\gamma$-type field. 
+Therefore, the class $[F]$ does not live inside this page of the spectral sequence, but the operator $[[F], -]$ does act on this page nevertheless. 
+For instance, if $f^i(z,w) \d z_i$ is a one-form living in $H^0(\CC^5, \Omega^1) \otimes H^0(\RR)$, then
+\[
+[ [F] , f^i (z,w) \d z_i ] = \ep_{ijk} w_1^{-1} w_2^{-1} \partial_{z_j} f^i(z,w) \del_{z_k} 
+\]
+which is an element in 
+\[
+\CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\del_{z_i}\} \subset H^0(\CC^3, \T) \otimes H^2 \big(\Omega^\bu(\CC^2 \times \RR \setminus 0) / (\d w_1 , \d w_2) \big) .
+\]
+
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology with respect to dotted line operators in \eqref{eqn:ads7ss2}. 
+
+The next page of the spectral sequence is given by computing the cohomology with respect to the operator $[N F,-]$. 
+This operator maps Dolbeault-de Rham degree zero elements to Dolbeault-de Rham degree two elements. 
+For degree reasons, there are no further differentials and the spectral sequence collapses after the second page. 
+
+The embedding of $\lie{osp}(6|1)$ for $N=0$ lives in the kernel of the original BRST operator $\delta^{(1)}$. 
+To see that it this embedding can be lifted to the full cohomology we need to check that any element in the image of the original embedding is annihilated by $\big[ N [F] , - \big]$. 
+This is a direct calculation. 
+For instance, recall that an element in the image of the odd summand $\wedge^2 L \otimes R = \wedge^2 \CC^3 \otimes \CC^2$ (which corresponds to a superconformal transformation) is of the form $w_a (z_i \d z_j - z_j \d z_i)$, $a=1,2, i,j=1,2,3$. 
+We have
+\[
+\big[[F] , w_a (z_i \d z_j - z_j \d z_i)\big] = 2 \ep_{ijk} (w_1^{-1} w_2^{-1}) \cdot w_a \del_{z_k} = 0
+\]
+since the class $w_1^{-1} w_2^{-1}$ is in the kernel of the operator given by multiplication by $w_a$ for $a=1,2$.
+Verifying that the remaining elements in the image of $i_{M5}$ are in the kernel of $\big[ [F], -\big]$ is similar.
+This completes the proof.
 
 
