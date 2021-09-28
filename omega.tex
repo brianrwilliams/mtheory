@@ -1,0 +1,192 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory,amsaddr}
+
+\def\vep{\varepsilon}
+
+\addbibresource{cfs.bib}
+
+%\linespread{1.2} %for editing
+%\usepackage{mathpazo}
+
+\begin{document}
+
+\section{Localization to a 5-dimensional theory} 
+
+In the last section we described a further twist 
+
+\subsection{The superconformal deformation}
+
+The localization of the physical 11-dimensional supergravity theory is with respect to a supercharge of the form 
+\[
+{\bf Q} = Q + S 
+\]
+where $Q$ is the supertranslation defining the holomorphic twist. 
+The element $S$ does not live in the algebra of supertranslations, but rather it lives in the superconformal algebra...
+
+We consider the holomorphic two-form
+\[
+S(a,b,c) = a \, w_1 \d w_2 \wedge \d w_3 + b \, w_2 \d w_3 \wedge \d w_1 + c \, w_3 \d w_1 \wedge \d w_2 .
+\]
+In order for $S(a,b,c)$ to be $\del$-closed we have the following constraint on the variables $a,b,c$:
+\beqn\label{eqn:abc}
+a + b + c = 0 .
+\eeqn
+Using this equation, we can eliminate a single variable. 
+We reparameterize using two new variables $a = \ep$, $b=\delta$, $c = -\ep - \delta$ and denote
+\[
+S(\vep, \delta) \define \ep \, w_1 \d w_2 \wedge \d w_3 + \delta \, w_2 \d w_3 \wedge \d w_1 - (\ep + \delta) \, w_3 \d w_1 \wedge \d w_2 .
+\]
+
+\subsection{Localized global symmetry algebra}
+
+Up to a copy of constant functions, the global symmetry algebra of the holomorphic twist of the 11-dimensional theory is the super Lie algebra $E(5,10)$.
+From this point of view, the global symmetry algebra of the $S$-deformed theory is given by deformation of this super Lie algebra by the Maurer--Cartan element 
+\[
+S(\vep, \delta) \in \Omega^{2}_{cl}(\CC^5) .
+\]
+We recall that the space of closed two-forms on $\CC^5$ is precisely the odd part of the super Lie algebra $E(5,10)$. 
+
+We compute the cohomology of $E(5,10)$ with respect to the differential which is bracketing with this Maurer--Cartan element. 
+Recall that we are using the holomorphic coordinates $(z_1,z_2,w_1,w_2,w_3)$ on $\CC^5$. 
+
+We record the following brackets in $E(5,10)$:
+\begin{align*}
+[f_i \del_{z_i}, S(\vep,\delta)] & = 0 \\
+[g_a \del_{w_a}, S(\vep, \delta)] & = \vep w_1 (\del g_2 \wedge \d w_3 - \del g_3 \wedge \d w_2) 
++ \delta w_2 (\del g_3 \wedge \d w_1 - \del g_1 \wedge \d w_3) \\
+& - (\vep + \delta) w_3 (\del g_1 \wedge \d w_2 - \del g_2 \wedge \d w_1) \\
+[h \d z_1 \wedge \d z_2 , S(\vep, \delta)] & = h \left(\vep w_1 \del_{w_1} + \delta w_2 \del_{w_2} - (\ep + \delta) w_3 \del_{w_3} \right) \\
+[h^{ia} \d z_i \wedge \d w_a, S(\vep, \delta)] & = \vep \ep_{ij} h^{i1} w_1 \del_{z_j} + \delta \ep_{ij} h^{i2} w_2 \del_{z_j} - (\vep + \delta) \ep_{ij} h^{i3} w_3 \del_{z_j} .
+\end{align*} 
+
+From these formulas, we can read off the elements which are in the kernel of $[S,-]$:
+\begin{itemize}
+\item $f_i \del_{z_i}$ where $f_i \in \cO(\CC^5)$. 
+\item $\lambda_a \del_{w_a}$, where $\lambda_a$ is a constant for $a=1,2,3$.  
+\end{itemize}
+In other words, the annihilator of $[S,-]$ in $E(5,10)$ is, up to completions, isomorphic to 
+\[
+\CC[z_i, w_a] \{\del_{z_i}\} \oplus \CC\{\del_{w_a}\} .
+\]
+
+\subsection{Relationship to the $\Omega$-background}
+
+
+In \cite{CostelloOmega}, Costello defines the $\Omega$-background for supergravity. 
+The main example treated is a certain $\Omega$-background for the non-minimal twist of 11-dimensional supergavity on 
+\[
+\CC^2 \times TN_k \times \RR^3 .
+\]
+Here, $TN_k$ is a Taub-NUT manifold with an $A_k$-singularity at the origin. 
+One treats $\CC^2$ as a manifold with holonomy in $SU(2)$ and $TN_k \times \RR^3$ as a manifold with holonomy in $G_2$.
+
+In the language of the minimal twist on 
+\[
+\CC^5 \times \RR = \CC^2_{z} \times \CC^3_w \times \RR_t 
+\]
+recall that the {\em nonminimal} twist arises from a background where the field strength of the field $\gamma$ takes the value 
+\[
+\del \gamma_{nm} = \d z_1 \wedge \d z_2 .
+\]
+This breaks the holonomy from $SU(5)$ to $SU(2)$.
+Furthermore, we have shown that this background renders the theory topological along $\CC^3_w$. 
+
+\brian{equivariant...}
+
+Therefore, we want to find a field $\gamma(a,b,c)$ such that
+\beqn\label{eqn:euler}
+[\gamma_{nm} , \gamma(a,b,c)] = a w_1 \del_{w_1} + b w_2 \del _{w_2} + c w_3 \del_{w_3} .
+\eeqn
+Recall that this bracket only depends on the field strengths of the fields. 
+
+Using $\del \gamma_{nm} = \d z_1 \wedge \d z_2$ we can easily find a solution for the field strength of $\gamma(a,b,c)$:
+\[
+\del \gamma(a,b,c) = a \, w_1 \d w_2 \wedge \d w_3 + b \, w_2 \d w_3 \wedge \d w_1 + c \, w_3 \d w_1 \wedge \d w_2 .
+\]
+In order for the expression for $\del \gamma(a,b,c)$ to be $\del$-closed, so that such a holomorphic one-form $\gamma(a,b,c)$ exists, we have the condition
+\beqn\label{eqn:abc}
+a + b + c = 0 .
+\eeqn
+Notice that we can add to this $\gamma(a,b,c)$ any holomorphic one-form on $\CC^2_z$ and it will still satisfy \eqref{eqn:euler}. 
+
+ 
+
+\appendix 
+
+\section{Branes}
+
+\subsection{$\Omega$-deformed symmetry algebra}
+
+On flat space, we have 
+
+
+
+\subsection{M2 branes in the $\Omega$-background} 
+
+\parsec[]
+
+In the twisted $\Omega$-background a stack of $N$ M2 branes wraps 
+\beqn\label{eqn:m2omega}
+\{0\} \times \RR \subset \CC^2 \times \RR .
+\eeqn
+
+The field which sources this brane is a distributional differential form $F$.
+The linear equation of motion for $F$ is the distributional equation 
+\[
+\d^2 z \wedge \dbar F = N \delta_{z=0} 
+\]
+where $\delta_{z=0}$ is the $\delta$-distribution for the submanifold \eqref{eqn:m2omega}.  
+In what follows we denote $\til{\delta}_{z=0}$ the distributional $(0,2)$ form defined by contracting $\delta_{z=0}$ with the Calabi--Yau form~$\d^2 z$. 
+
+The field $F$ is a smooth Dolbeault form of type $(0,1)$ away from the locus of the brane $\CC^2 \times \RR_t \setminus \{0\} \times \RR \cong (\CC^2 \setminus 0) \times \RR_t$. 
+Explicitly, we can characterize it as follows. 
+
+\begin{prop}
+The field $F \in \Omega^{0,1} (\CC^2 \setminus 0) \otimes \Omega^{0} (\RR) $ defined by 
+\[
+F = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} 
+\] 
+satisfies the non-linear equation of motion 
+\[
+\dbar F + \frac12 F \star_c F = N  \til{\delta}_{z=0} .
+\]
+\end{prop}
+\begin{proof}
+The equation $\dbar F = N  \til{\delta}_{z=0}$ characterizes the Bochner--Martinelli kernel representing the residue class in $\CC^2 \setminus 0$. 
+Since $F$ is a one-form $F \star_c F = 0$ is satisfied by anti-symmetry. 
+\end{proof}
+
+\parsec[]
+
+We can interpret $F$ geometrically in the following way. 
+Let's first consider just the complex geometric situation, forgetting about the $\RR$-direction. 
+ 
+On any hyper K\"ahler manifold $X$ there is an exact sequence of sheaves of Lie algebras
+\[
+0 \to \ul\CC \to \cO^{hol}(X) \to \Vect_0^{hol} (X) \to 0
+\]
+where $\Vect^{hol}_0(X)$ is the Lie algebra of holomorphic divergence-free vector fields and $\cO^{hol}(X)$ is equipped with the Poisson bracket induced by the holomorphic symplectic form. 
+The map $\cO^{hol}(X) \to \Vect_0(X)$ is given by the holomorphic de Rham operator $\del \colon \cO^{hol}(X) \to \Omega^{1,hol}_{cl}(X)$ followed by the isomorphism 
+$\Omega^{1,hol}_{cl} (X) \cong \Vect_0(X)$ given by the holomorphic symplectic form. 
+
+Extending this exact sequence to the level of Dolbeault resolutions, we see that we can view $F_0 \in \Omega^{0,1}(\CC^2 \setminus 0)$ as a $(0,1)$ Dolbeault valued divergence-free vector field $\til{F}_0$ on $\CC^2 \setminus 0$. 
+Explicitly, if $F_0 = f^i (z,\zbar) \d \zbar_i$ then this $(0,1)$-valued vector field is
+\[
+\til{F}_0 = \ep_{jk} \partial_{z_j} f^i (z,\zbar) \d \zbar_i \partial_{z_k} .
+\]
+
+In the case at hand, $F \in \Omega^{0,1}(\CC^2 \setminus 0) \otimes \Omega^0(\RR)$ is given by the restriction along 
+\[
+(\CC^2 \setminus 0) \times \RR \to \CC^2 \setminus 0
+\]
+of the $(0,1)$-form
+\[
+F_0 = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} .
+\] 
+The corresponding $(0,1)$-valued vector field on $\CC^2 \setminus 0$ is
+\[
+\til{F}_0 = \#' N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^6} \left(\zbar_1 \del_{z_2} - \zbar_2 \del_{z_1}\right) .
+\] 
+
+\end{document}

@@ -24,6 +24,9 @@ Waterloo, Ontario N2L 2Y5\\ Canada}
 to do
 \end{abstract}
 \maketitle
+
+\tableofcontents
+
 \newpage 
 
 \input{dfn}
@@ -34,191 +37,13 @@ to do
 
 \input{dimred}
 
-%count hypers and vectors in 5d N=1 sugra relate to Kevin and my work with Chris
-
 \input{suco}
-
-\section{The non-minimal twist} 
-
-We have provided numerous consistency checks that the 11-dimensional theory defined on $\CC^5 \times \RR$ is a twist of supergravity. 
-We have referred to this theory as holomorphic as it depends on the complex structure in the maximal number of directions. 
-In this section we characterize a further twist of 11-dimensional supergravity from the lens of the holomorphic theory. 
-
-On flat space, the further twist is essentially unique and renders the theory topological in seven directions, rather than just one in the holomorphic twist. 
-We will show that it is equivalent to a theory on $\CC^2 \times \RR^7$ that we call ``Poisson'' Chern--Simons theory. 
-In the BV formalism, the theory $\ZZ/2$ graded and has fields given by
-\[
-A \in \Pi \Omega^{0,\bu}(\CC^2) \hotimes \Omega^\bu(\RR^7) ,
-\]
-where $\Pi$, as always, denotes parity shift.
-The equations of motion are of the form
-\[
-\dbar A + \d_{\RR^7} A + \partial_{z} A \wedge \partial_{w} A = 0 .
-\]
-The action functional depends on the holomorphic symplectic structure on $\CC^2$ through the Poisson bracket on the algebra of holomorphic functions.
-We give a precise definition below. 
-
-More generally, the twist can be defined \brian{finish}
 
 \input{index}
 
-\subsection{The non-minimal supercharge}
+\input{nonmin}
 
-Let $Q^{hol}$ denote the fixed holomorphic supercharge. 
-We have argued in \S \ref{s:residual} that the $Q^{hol}$-cohomology of the 11-dimensional supersymmetry algebra is a symmetry of our proposed holomorphic twist of 11-dimensional supergravity. 
-
-There is a twist of supergravity which can be witnessed as a further deformation of the $Q^{hol}$-twist. 
-\brian{fix this}
-
-Recall that the odd component of this residual supersymmetry algebra is
-\[
-\wedge^2 L \cong \wedge^2(\CC^5) 
-\]
-which we can identify with constant coefficient holomorphic $(2,0)$ forms on $\CC^5 \times \RR$ (they are zero-forms along the $\RR$-direction). 
-Because these forms are constant coefficient, they are also closed, and hence lift to $(1,0)$ forms on $\CC^5 \times \RR$ in a way that is unique up to $\del$-exact terms. 
-
-Using this observation, we constructed an embedding of $\wedge^2(L)$ into the fields of supergravity. 
-Explicitly, the element $z_i \wedge z_j \in \wedge^2 L$ was mapped to the $\gamma$-type field
-\[
-\Psi_{ij} = \frac12 (z_i \d z_j - z_j \d z_i) \in \Omega^{1,0}(\CC^5) \hotimes \Omega^0(\RR) ,
-\]
-where $i,j=1,\ldots, 5$ and $i \ne j$.  
-
-\parsec[-] 
-
-The first main result of this section is to characterize the twist of our 11-dimensional theory on $\CC^5 \times \RR$ by the element $\Psi_{ij}$. 
-
-\brian{introduce PCS}
-Explicitly, if $f,g$ are holomorphic functions on $\CC^2$ then
-\[
-\{f(z_1,z_2) , g(z_1,z_2)\}_{pb} = \partial_{z_i} f \partial_{z_j} g - \partial_{z_j} f \partial_{z_i} g .
-\]
-
-\begin{thm}
-The $\Psi_{ij}$-twist of the 11-dimensional theory is equivalent to Poisson Chern--Simons theory on 
-\[
-\CC_{z_i} \times \CC_{z_j} \times \RR^7 .
-\]
-\end{thm}
-
-Notice that changing the values of $i,j$ just has the affect of permuting the holomorphic copies of $\CC^2$ leftover in the further twist. 
-
-The Lie algebra of gauge symmetries of this model on flat space is 
-\[
-\Omega^{0,\bu} (\CC_i \times \CC_j) \hotimes \Omega^\bu(\RR^7) 
-\]
-which is quasi-isomorphic to $\cO^{hol}(\CC^2)$ equipped with the Poisson bracket $\{-,-\}_{pb}$. 
-
-\parsec[sec:nmsymmetry]
-Before proceeding to the proof of the theorem above, we perform a very simple calculation of the global symmetry algebra present in the $\Psi_{ij}$-twisted theory. 
-
-Recall that up to a copy of constant functions, the global symmetry algebra of the holomorphic twist of the 11-dimensional theory is the super Lie algebra $E(5,10)$.
-From this point of view, the global symmetry algebra of the $\Psi_{ij}$-twisted theory is given by deformation of this super Lie algebra by the Maurer--Cartan element 
-\[
-\partial \Psi_{ij} = \d z_i \wedge \d z_j \in \Omega^{2,hol}_{cl}(\CC^5) .
-\]
-We recall that the space of closed two-forms on $\CC^5$ is precisely the odd part of the super Lie algebra $E(5,10)$. 
-
-Notice that there are the following brackets in the super Lie algebra $E(5,10)$ 
-\begin{align*}
-[f_l \partial_{z_l} , \d z_i \wedge \d z_j] & = \del f_i \wedge \d z_j - \del f_j \wedge \d z_i \\
-[g^{kl} \d z_k \wedge \d z_l , \d z_i \wedge \d z_j ] & = \ep_{ijklm} g^{kl} \partial_{z_m} .
-\end{align*}
-where $f_l \partial_{z_l}$ is a divergence-free vector field on $\CC^5$ and $g^{kl} \d z_k \wedge \d z_l$ is a closed two-form. 
-
-From these relations, it is easy to see that any divergence-free vector field of the form:
-\begin{itemize}
-\item $f(z_i, z_j) \partial_{z_i} + g(z_i, z_j) \partial_{z_j}$ for holomorphic functions $f,g$ on $\CC_i \times \CC_j$ or 
-\item $f(z_1,\ldots,z_5) \partial_{z_k}$ for $k \ne i$ or $j$
-\end{itemize}
-are closed for the differential $\d = [\d z_i \wedge \d z_j  , -]$, and that these are the only nonzero closed elements. 
-Any element of the second type is clearly exact by the closed two-form $\ep^{ijklm} f \d z_l \d z_m$. 
-
-Thus, the cohomology is the (purely bosonic) Lie algebra of divergence-free vector fields on $\CC^2 = \CC_i \times \CC_j$
-\[
-H^\bu\big(E(5,10), [\partial \Psi_{ij}, -] \big) \cong \Vect^{hol}_0(\CC_i \times \CC_j) .
-\]
-Notice that on $\CC^2$, there is a split exact sequence of Lie algebras
-\[
-0 \to \CC \to \cO^{hol}(\CC^2) \to \Vect_0^{hol} (\CC^2) \to 0
-\]
-where $\cO^{hol}(\CC^2)$ is equipped with the Poisson bracket with respect to the symplectic form $\d z_i \wedge \d z_j$.
-Thus, the Lie algebra of gauge symmetries of Poisson Chern--Simons theory on $\CC_i \times \CC_j \times \RR^7$ is a trivial one-dimensional central extension of the cohomology of $E(5,10)$. 
-
-\section{The twisted $\Omega$-background} 
-
-\subsection{$\Omega$-deformed symmetry algebra}
-
-On flat space, we have 
-
-
-
-\subsection{M2 branes in the $\Omega$-background} 
-
-\parsec[]
-
-In the twisted $\Omega$-background a stack of $N$ M2 branes wraps 
-\beqn\label{eqn:m2omega}
-\{0\} \times \RR \subset \CC^2 \times \RR .
-\eeqn
-
-The field which sources this brane is a distributional differential form $F$.
-The linear equation of motion for $F$ is the distributional equation 
-\[
-\d^2 z \wedge \dbar F = N \delta_{z=0} 
-\]
-where $\delta_{z=0}$ is the $\delta$-distribution for the submanifold \eqref{eqn:m2omega}.  
-In what follows we denote $\til{\delta}_{z=0}$ the distributional $(0,2)$ form defined by contracting $\delta_{z=0}$ with the Calabi--Yau form~$\d^2 z$. 
-
-The field $F$ is a smooth Dolbeault form of type $(0,1)$ away from the locus of the brane $\CC^2 \times \RR_t \setminus \{0\} \times \RR \cong (\CC^2 \setminus 0) \times \RR_t$. 
-Explicitly, we can characterize it as follows. 
-
-\begin{prop}
-The field $F \in \Omega^{0,1} (\CC^2 \setminus 0) \otimes \Omega^{0} (\RR) $ defined by 
-\[
-F = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} 
-\] 
-satisfies the non-linear equation of motion 
-\[
-\dbar F + \frac12 F \star_c F = N  \til{\delta}_{z=0} .
-\]
-\end{prop}
-\begin{proof}
-The equation $\dbar F = N  \til{\delta}_{z=0}$ characterizes the Bochner--Martinelli kernel representing the residue class in $\CC^2 \setminus 0$. 
-Since $F$ is a one-form $F \star_c F = 0$ is satisfied by anti-symmetry. 
-\end{proof}
-
-\parsec[]
-
-We can interpret $F$ geometrically in the following way. 
-Let's first consider just the complex geometric situation, forgetting about the $\RR$-direction. 
- 
-On any hyper K\"ahler manifold $X$ there is an exact sequence of sheaves of Lie algebras
-\[
-0 \to \ul\CC \to \cO^{hol}(X) \to \Vect_0^{hol} (X) \to 0
-\]
-where $\Vect^{hol}_0(X)$ is the Lie algebra of holomorphic divergence-free vector fields and $\cO^{hol}(X)$ is equipped with the Poisson bracket induced by the holomorphic symplectic form. 
-The map $\cO^{hol}(X) \to \Vect_0(X)$ is given by the holomorphic de Rham operator $\del \colon \cO^{hol}(X) \to \Omega^{1,hol}_{cl}(X)$ followed by the isomorphism 
-$\Omega^{1,hol}_{cl} (X) \cong \Vect_0(X)$ given by the holomorphic symplectic form. 
-
-Extending this exact sequence to the level of Dolbeault resolutions, we see that we can view $F_0 \in \Omega^{0,1}(\CC^2 \setminus 0)$ as a $(0,1)$ Dolbeault valued divergence-free vector field $\til{F}_0$ on $\CC^2 \setminus 0$. 
-Explicitly, if $F_0 = f^i (z,\zbar) \d \zbar_i$ then this $(0,1)$-valued vector field is
-\[
-\til{F}_0 = \ep_{jk} \partial_{z_j} f^i (z,\zbar) \d \zbar_i \partial_{z_k} .
-\]
-
-In the case at hand, $F \in \Omega^{0,1}(\CC^2 \setminus 0) \otimes \Omega^0(\RR)$ is given by the restriction along 
-\[
-(\CC^2 \setminus 0) \times \RR \to \CC^2 \setminus 0
-\]
-of the $(0,1)$-form
-\[
-F_0 = \# N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^4} .
-\] 
-The corresponding $(0,1)$-valued vector field on $\CC^2 \setminus 0$ is
-\[
-\til{F}_0 = \#' N \frac{\zbar_1 \d \zbar_2 - \zbar_2 \d \zbar_1}{\|z\|^6} \left(\zbar_1 \del_{z_2} - \zbar_2 \del_{z_1}\right) .
-\] 
+\end{document}
 
 \appendix 
 
