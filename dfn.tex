@@ -382,7 +382,7 @@ where $z_i$ is a holomorphic coordinate on $\CC^5$.
 Corresponding to each of the above, we have a tower of linear local operators labeled by $(m_j) = (m_1, m_2, m_3, m_4, m_5)\in \Z^5_{\geq 0}$; these are given by
 \begin{align*}
  \mu^{i}_{(m_j)} &: \mu^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\mu^{i} (0) \\
-\nu_{(m_i)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
+\nu_{(m_j)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
 \gamma^{i}_{(m_j)} &: \gamma^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\gamma^{i} (0) \\
  \beta_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
 \end{align*}
@@ -401,16 +401,43 @@ We are choosing the weights in this way as a matter of convenience for the later
 For instance, upon performing the further twist of the 11-dimensional theory, the $SU(5)$ symmetry is broken to an $SU(3)\times SU(2)$ symmetry; the Cartan of the unbroken symmetries corresponds to the fugacities $q, t_1, t_2$ in the above table. 
 
 We can now readily compute the characters.
-\begin{prop}
+\begin{prop}\label{prop:locchar}
 The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theory on flat space is
 \begin{multline}
 \chi_{SU(5)} = 
-\prod_ {(m_i;n_j)\in \Z^5_{\geq 0}} \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} }
+\prod_ {(m_j)\in \Z^5_{\geq 0}} \frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} }
 \\ 
 \times \frac{t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2}}{t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2}}.
 \end{multline}
 \end{prop}
+\begin{proof}
+We compute the local character as the plethystic exponential of the character of linear local operators. 
 
+Note that the linear local operators $ \nu_{(m_j)}$ and $\beta_{(m_j)}$ are of the same weight but opposite parity so contribute to the character with opposite sign. These contributions therefore cancel. Next, there is a summand of the linear local operators of the form 
+\[
+\bigoplus _{(m_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\mu^{z_1}_{(m_j)}\partial_{z_1}\oplus \C\mu^{z_2}_{(m_j)}\partial_{z_2}\oplus \C\mu^{z_3}_{(m_j)}\partial_{z_3}\oplus\C\mu^{w_1}_{(m_j)}\partial_{w_1}\oplus \C\mu^{w_2}_{(m_j)}\partial_{w_2}\right).
+\] 
+This contributes 
+\[
+\sum_{(m_j)\in \Z^5_{\geq 0 }}- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right).
+\] 
+Finally, there is a summand of the form 
+\[
+\bigoplus _{(m_i;n_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\gamma^{z_1}_{(m_i; n_j)}d{z_1}\oplus \C\gamma^{z_2}_{(m_i; n_j)}d{z_2}\oplus\C\gamma^{z_3}_{(m_i; n_j)}d{z_3}\oplus\C\gamma^{w_1}_{(m_i; n_j)}d{w_1}\oplus \C\gamma^{w_2}_{(m_i; n_j)}d {w_2}\right).
+\] 
+This likewise contributes 
+\[
+\sum_{(m_j)\in \Z^5_{\geq 0 }}t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right).
+\] 
+In sum, the character of linear local operators is the geometric series 
+\[
+\sum_{(m_j)\in \Z^5_{\geq 0 }}-t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right).
+\] 
+The plethystic exponential of this expression is then 
+\[
+\prod_ {(m_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
+\]
+\end{proof}
 \subsection{Component fields}
 
 \subsection{One-loop quantization}
