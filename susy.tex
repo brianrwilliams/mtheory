@@ -77,7 +77,7 @@ First, the defining and spinor representations decompose as
 In the expression for $S$, we are omitting factors of $\det(L)^{\frac12}$ for simplicity. 
 Also, $\lie{so}(11, \CC)$ decomposes as
 \[
-\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee .
+\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee \oplus \C .
 \]
 Furthermore, the spinorial representation can be identified with
 \[
@@ -331,8 +331,8 @@ is defined by very similar formulas as above
  L_1 & \mapsto 0 \\
  \wedge^2 L_1 & \mapsto 0 \\
 z_i \wedge z_j \in \wedge^2 L_2 & \mapsto \d z_i \wedge \d z_j \in \Omega^{2}_{cl} (\CC^5) \\
-A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \in \Vect_0(\CC^5) \\ \frac{\partial}{\partial z_j} \in L^\vee & \mapsto
-\frac{\partial}{\partial z_i} \in \Vect_0(\CC^5) \\
+A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \partial_{z_j} \in \Vect_0(\CC^5) \\ \partial z_i \in L^\vee & \mapsto
+\partial z_i \in \Vect_0(\CC^5) \\
 c \in \CC_c & \mapsto c \in \CC_{c'} .
 \end{align*}
 
@@ -354,6 +354,6 @@ Using this two-form we can define the following four-linear expression
 \mu_2 (\psi, \psi',v,v') = \<v \wedge v', \Gamma(\psi, \psi')\> .
 \]
 This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\ft_{11d})$. 
-In \cite{??} it is shown that this cocycle $\mu_2$ is 
+In \cite{fiorenza2015super} it is shown that $\mu_2$ defines a nontrivial class in $H^4(\ft_{11d})$ so defines a one dimensional central extension of $\ft_{11d}$ as a lie 3-algebra. Instead of working with a one-dimensional central extension by $\C[2]$, we work with a central extension by the resolution $\Omega^\bullet(\R^{11})[2]$. There is a quasi-isomorphism $\clie^4(\ft_{11d})\to \clie^4(\ft_{11d}, \Omega^\bullet (\R^11))$ such that the induced map on cohomology identifies $\mu_2$ with the $\Omega^\bullet(\R^{11})[2]$-valued 2-cocycle we use. 
 
 %For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
