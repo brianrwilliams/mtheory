@@ -321,7 +321,7 @@ Doing this we see that $J$ becomes
 \]
 Since this automorphism preserves the odd BV bracket, the actions $S_{BF,\infty} + g J$ and $S_{BF, 0} + g \til{J}$ are both solutions to the classical master equations and are equivalent as~$\ZZ/2$ graded BV theories.
 
-\subsection{Equations of motion}
+\subsection{Equations of motion} \label{s:eom}
 
 Soon, we will provide a series of justifications for the assertion that the deformed theory $S_{BF, \infty} + J$ is the minimal twist of $11$-dimensional supergravity on flat space $X \times S = \CC^5 \times \RR$ where $\CC^5$ is equipped with its flat Calabi--Yau form. 
 For the moment, we briefly read off the equations of motion of the general theory on $X \times S$.
@@ -412,6 +412,41 @@ The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theor
 \end{prop}
 
 \subsection{Component fields}
+
+The component fields of the 11-dimensional theory on $X \times S$ have the following form: 
+\begin{itemize}
+\item $\mu = \sum_{i,j} \mu^{i;j}$ is a superfield where
+\[
+\mu^{i;j} \in \PV^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\mu^{i;j}$ has parity $i+j+1 \mod 2$. 
+\item $\nu = \sum_{i,j} \nu^{i;j}$ is a superfield where
+\[
+\nu^{i;j} \in \PV^{0,i}(X, \T_X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\nu^{i;j}$ has parity $i+j \mod 2$. 
+%The linear equations of motion state that $\mu$ is constant along $\RR$ and holomorphic divergence-free as a vector field on $\CC^5$. 
+\item 
+$\gamma = \sum_{i,j} \gamma^{i;j}$ is a superfield where
+\[
+\gamma^{i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\gamma^{i;j}$ has parity $i+j$. 
+\item 
+\item $\beta = \sum_{i,j} \beta^{i;j}$ is a superfield where
+\[
+\beta^{i;j} \in \Omega^{0,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\beta^{i;j}$ has parity $i+j+1 \mod 2$. 
+\end{itemize}
+
+%The linear equations of motion for the superfield $\mu$ read 
+%\[
+%\dbar \mu^{i;j} + \d_{S} \mu^{i+1, j-1} = 0, \quad \div \mu^{i,j} = 0
+%\]
+%for all $i,j$. 
+%The operator $\dbar$ is the anti-holomorphic Dolbeault operator acting on $\CC^5$, $\d_S$ is the de Rham operator on $S$, and $\div$ is the divergence with respect to the fixed holomorphic volume form on $\CC^5$. 
+%In particular, this states that $\mu^{i;0}$ is locally constant along $S$ and holomorphic divergence-free as a Dolbeault valued vector field on $\CC^5$.
 
 \subsection{One-loop quantization}
 
