@@ -88,7 +88,7 @@ It is this new model that we will use to define the eleven-dimensional theory of
 %Hereon, we denote by $\cL_0 = \cE_0[-1]$ this local $L_\infty$ algebra. 
 
 %We can unpack Proposition \ref{prop:Linfty} to describe the $L_\infty$ structure on $\cL_0$ explicitly. 
-We can describe the $L_\infty$ structure on our new model $\cL_\infty$ more explicitly.
+We can describe the $L_\infty$ structure on our new model $\cL_\infty$ explicitly.
 Recall that we have two types of elements: $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. 
 The first few nonzero brackets are
 \begin{align*}
@@ -98,11 +98,12 @@ The first few nonzero brackets are
 %\\
 %[\nu_1,\nu_2, \mu_1,\mu_2]_4 & = \# \div(\nu_1 \nu_2 \mu_1 \mu_2).
 \end{align*}
-\brian{coefficients}
-For $k \geq 2$ the general formula for the $k$-ary bracket is 
-\[
-[\nu_1,\nu_2, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} = \# \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) .
-\]
+For $k \geq 2$ the general formula for the $k$-ary brackets are 
+\begin{align*}
+[\nu_1, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) \\
+[\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma .\\
+[\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma .
+\end{align*}
 
 %We describe the explicit $L_\infty$ automorphism $\Psi \colon (\cL_0)^{L_\infty} \rightsquigarrow (\cL_0)^{strict}$ intertwining the strict dg Lie structure on $\cL_0$ and this $L_\infty$ structure.
 %The linear term $\Psi^{(1)} = \id$ is the identity map. 
@@ -153,7 +154,7 @@ The shifted symplectic BV pairing is the obvious integration pairing between $A$
 The action functional reads $S_{\rm BF} = \int_M B \, \mathsf{F}_{A}$ which leads to the equations of motion $\mathsf{F}_{A} = 0$ and $\mathsf{D}_A B= 0$ where $\mathsf{D}_A$ is the higher covariant derivative along $A$. 
 We refer to this as the ``BF theory'' associated to $\cL$.
 
-We thus obtain a theory in the BV formalism on the product manifold $X \times L$ associated to both local $L_\infty$ algebras $\cL_0(X) \otimes \Omega^{\bu}(S)$ and $\cL_\infty(X) \otimes \Omega^\bu(S)$.
+We thus obtain a theory in the BV formalism on the product manifold $X \times S$ associated to both local $L_\infty$ algebras $\cL_0(X) \otimes \Omega^{\bu}(S)$ and $\cL_\infty(X) \otimes \Omega^\bu(S)$.
 
 \parsec
 For concreteness, we spell out the fields of the theories we have constructed on $X \times S$.
@@ -191,7 +192,7 @@ The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{
 (In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
 Explicitly, this action functional is
 \deq{
-  S_{BF,\infty} =  \beta \wedge (\dbar + \d_L) \nu +  \gamma \wedge (\dbar + \d_L) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma .
+  S_{BF,\infty} =  \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma .
 }
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
@@ -257,15 +258,19 @@ Let $X$ be a Calabi--Yau five-fold and $S$ a smooth one-dimensional manifold, an
 \parsec[]
 
 First off, we remark on grading issues. 
-In the original $\Z$-grading on the BF theory given in \eqref{eq:sympfields} with $n=5$, the component $\gamma^{1,i;j}$ sits in degree $-4+i+j$. 
+In the original $\Z$-grading on the BF theory given in \eqref{eq:sympfields} with $n=5$, the component 
+\[
+\gamma^{1,i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(S) 
+\]
+sits in degree $-4+i+j$. 
 Thus, we see that in the original $\Z$-grading on BF theory one has
   \deq{
     \deg(J) = 6.
   }
 Thus $S_{BF} + J$ is not of homogenous $\ZZ$ grading.
 
-This is completely reasonable \brian{finish}
-
+This is completely reasonable from the point of view of twisting supersymmetry in 11-dimensions. 
+Indeed, the $R$-symmetry group is trivial, and there is not a way to regrade the fields of the twisted theory using twisting data \label{CosHol,ESW}. 
 
 Nevertheless, if we break to the obvious $\ZZ/2$ grading, the functional $S_{BF} + g J$ defines an even action functional.
 Unless otherwise stated, we will work with this $\ZZ/2$ grading for the remainder of this section.
@@ -323,7 +328,7 @@ Since this automorphism preserves the odd BV bracket, the actions $S_{BF,\infty}
 
 \subsection{Equations of motion} \label{s:eom}
 
-Soon, we will provide a series of justifications for the assertion that the deformed theory $S_{BF, \infty} + J$ is the minimal twist of $11$-dimensional supergravity on flat space $X \times S = \CC^5 \times \RR$ where $\CC^5$ is equipped with its flat Calabi--Yau form. 
+Soon, we will provide a series of justifications for the assertion that the deformed theory $S_{BF, \infty} + g J$ is the minimal twist of $11$-dimensional supergravity on flat space $X \times S = \CC^5 \times \RR$ where $\CC^5$ is equipped with its flat Calabi--Yau form. 
 For the moment, we briefly read off the equations of motion of the general theory on $X \times S$.
 Let $\Omega$ denote the Calabi--Yau form on $X$. 
 
@@ -337,28 +342,66 @@ Varying $\gamma$ we obtain the equation of motion
 \beqn\label{eqn:eomgamma}
 \dbar \mu + \d_S \mu + \frac12 \frac{1}{1-\nu} \div (\mu^2) + \frac12 (\del \gamma \wedge \del \gamma) \vee (g \Omega^{-1}) = 0 .
 \eeqn
-The last term represents the contraction of an element of $\Omega^{4,\bu}(X;S)$ with the section $\Omega^{-1} \in \PV^{5,\bu}(X;S)$ to yield an element of $\PV^{1,\bu}(X;S)$. 
-
-Let us make the simplifying assumption that $\mu$ is divergence-free and locally constant along $S$: $\div \mu = 0$ and $\d_S \mu = 0$.
-Then, $\nu = 0$ is a solution to \eqref{eqn:eombeta} and we can assume that all fields are functions, or zero-forms, along $S$. 
-Then \eqref{eqn:eomgamma} can be written as 
-\beqn\label{eqn:eomgamma1}
-\dbar \mu + \frac12 [\mu,\mu] + \frac12 (\del \gamma \wedge \del \gamma) \vee (g \Omega^{-1}) = 0 
+The last term represents the contraction of an element of $\Omega^{4,\bu}(X;S)$ with the nonvanishing section $\Omega^{-1} \in \PV^{5,\bu}(X;S)$ to yield an element of $\PV^{1,\bu}(X;S)$. 
+If we vary the $\mu$ we obtain 
+\beqn\label{eqn:eommu}
+(\dbar + \d_S) \gamma + \del \beta + \frac{1}{1-\nu} (\mu \vee \del \gamma) = 0 .
 \eeqn
-where $[-,-]$ is the Schouten bracket. 
+Finally, if we vary $\nu$ we obtain
+\beqn\label{eqn:eomnu}
+(\dbar + \d_S) \beta + \frac12 \frac{1}{(1-\nu)^2} \mu^2 \vee \del \gamma = 0 .
+\eeqn
 
-The equation of motion \eqref{eqn:eomgamma1} must hold for any inhomogenous field $\mu \in \PV^{1,\bu}(X;S)$. 
-The most geometrically relevant component is the case where 
+The equation of motion must hold for any inhomogenous superfields.
+We can get a better sense of the equations if we expand in components of these fields. 
+The component fields of the 11-dimensional theory on $X \times S$ have the following form: 
+\begin{itemize}
+\item $\mu = \sum_{i,j} \mu^{i;j}$ is a superfield where
 \[
-\mu^{1;0} \in \PV^{1,1}(X) \otimes \Omega^0(S) 
+\mu^{i;j} \in \PV^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
 \]
-which is an even field in our $\ZZ/2$ graded BV theory.
-The superscript denotes anti-holomorphic; de Rham form type. 
-For this component of $\mu$, the only components of $\gamma$ which appear in the above equations of motion are $\gamma^{0;0}$, $\gamma^{1;0}$, and $\gamma^{2;0}$.
-Expanding these components out, we obtain
+The component $\mu^{i;j}$ has parity $i+j+1 \mod 2$. 
+\item $\nu = \sum_{i,j} \nu^{i;j}$ is a superfield where
+\[
+\nu^{i;j} \in \PV^{0,i}(X, \T_X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\nu^{i;j}$ has parity $i+j \mod 2$. 
+%The linear equations of motion state that $\mu$ is constant along $\RR$ and holomorphic divergence-free as a vector field on $\CC^5$. 
+\item 
+$\gamma = \sum_{i,j} \gamma^{i;j}$ is a superfield where
+\[
+\gamma^{i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\gamma^{i;j}$ has parity $i+j$. 
+\item 
+\item $\beta = \sum_{i,j} \beta^{i;j}$ is a superfield where
+\[
+\beta^{i;j} \in \Omega^{0,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
+\]
+The component $\beta^{i;j}$ has parity $i+j+1 \mod 2$. 
+\end{itemize}
+
+We look closely at the geometric meaning of \eqref{eqn:eombeta}. 
+Let's make the simplifying assumption that all components of $\mu$ are divergence-free that all fields are locally constant along $S$: $\div \mu = 0$ and $\d_S \mu = \d_S \gamma = 0$.
+Then, $\nu = 0$ is a solution to \eqref{eqn:eombeta} and we can assume that all fields are functions, or zero-forms, along $S$. 
+Then, there is a component of \eqref{eqn:eomgamma} which can be written as 
 \beqn\label{eqn:eomgamma1}
-\dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + (\del \gamma^{0;0} \wedge \del \gamma^{2;0}) \vee (g \Omega^{-1}) + \frac12 (\del \gamma^{1;0} \wedge \del \gamma^{1;0}) \vee (g \Omega^{-1}) = 0 .
+\dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + \left(\frac12 \del \gamma^{1;0} \wedge \del \gamma^{1;0} + \del \gamma^{2;0} \wedge \del \gamma^{0;0}\right) \vee (g \Omega^{-1}) = 0 
 \eeqn
+where now $[-,-]$ stands for the Schouten bracket.
+
+
+%The most geometrically relevant component is the case where 
+%\[
+%\mu^{1;0} \in \PV^{1,1}(X) \otimes \Omega^0(S) 
+%\]
+%which is an even field in our $\ZZ/2$ graded BV theory.
+%The superscript denotes anti-holomorphic; de Rham form type. 
+%For this component of $\mu$, the only components of $\gamma$ which appear in the above equations of motion are $\gamma^{0;0}$, $\gamma^{1;0}$, and $\gamma^{2;0}$.
+%Expanding these components out, we obtain
+%\beqn\label{eqn:eomgamma1}
+%\dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + (\del \gamma^{0;0} \wedge \del \gamma^{2;0}) \vee (g \Omega^{-1}) + \frac12 (\del \gamma^{1;0} \wedge \del \gamma^{1;0}) \vee (g \Omega^{-1}) = 0 .
+%\eeqn
 
 \subsection{Local character}
 
@@ -433,39 +476,11 @@ In sum, the character of linear local operators is the geometric series
 \[
 \sum_{(m_j)\in \Z^5_{\geq 0 }}-t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right).
 \] 
-The plethystic exponential of this expression is then 
-\[
-\prod_ {(m_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
-\]
+The plethystic exponential returns the desired expression.
+%\[
+%\prod_ {(m_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
+%\]
 \end{proof}
-\subsection{Component fields}
-
-The component fields of the 11-dimensional theory on $X \times S$ have the following form: 
-\begin{itemize}
-\item $\mu = \sum_{i,j} \mu^{i;j}$ is a superfield where
-\[
-\mu^{i;j} \in \PV^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
-\]
-The component $\mu^{i;j}$ has parity $i+j+1 \mod 2$. 
-\item $\nu = \sum_{i,j} \nu^{i;j}$ is a superfield where
-\[
-\nu^{i;j} \in \PV^{0,i}(X, \T_X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
-\]
-The component $\nu^{i;j}$ has parity $i+j \mod 2$. 
-%The linear equations of motion state that $\mu$ is constant along $\RR$ and holomorphic divergence-free as a vector field on $\CC^5$. 
-\item 
-$\gamma = \sum_{i,j} \gamma^{i;j}$ is a superfield where
-\[
-\gamma^{i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
-\]
-The component $\gamma^{i;j}$ has parity $i+j$. 
-\item 
-\item $\beta = \sum_{i,j} \beta^{i;j}$ is a superfield where
-\[
-\beta^{i;j} \in \Omega^{0,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
-\]
-The component $\beta^{i;j}$ has parity $i+j+1 \mod 2$. 
-\end{itemize}
 
 %The linear equations of motion for the superfield $\mu$ read 
 %\[
@@ -499,6 +514,8 @@ since there are no Feynman diagrams present past one-loop in this case.
 When $c \ne 0$, on the other hand, this result does not immediately imply the existence of a gauge invariant perturbative quantization to higher orders in $\hbar$. 
 The presence of the functional $J = \frac16 \int \gamma \del \gamma \del \gamma$ allows one to construct Feynman graphs at arbitrary loop order. 
 
-Upon performing the $\Omega$-background, see \S \ref{s:omega}, the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
-Costello has shown via a cohomological argument that this effective five-dimensional theory exhibits an essentially unique quantization in perturbation theory \cite{CostelloM5}. 
+Upon performing the $\Omega$-background,
+%see \S \ref{s:omega},
+In \cite{CostelloM5}, Costello argues that the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
+Via a cohomological argument, it is shown that this effective five-dimensional theory exhibits an essentially unique quantization in perturbation theory. 
 We will return to the existence and uniqueness of a higher order quantization of the 11-dimensional theory in future work. 
