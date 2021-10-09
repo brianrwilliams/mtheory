@@ -1,4 +1,4 @@
-\section{Twisted BFSS matrix model}
+\section{Twisted matrix model}
 
 \subsection{Global symmetry algebra}
 \label{sec:global}
@@ -15,28 +15,31 @@ Before taking cohomology with respect to the linear BRST operator, we described 
 This is encoded by the full BV action of the 11-dimensional theory.
 The cubic component of the full BV action induces the super Lie algebra structure present in the linearized BRST cohomology. 
 
-Our main result is to relate the global symmetry algebra of the minimal twist of 11-dimensional supergravity on $\CC^5 \times \RR$ to a certain infinite-dimensional exceptional simple super Lie algebra studied by Kac \cite{KacClass,KR} called $E(5,10)$.
+Our main result is to relate the global symmetry algebra of the minimal twist of 11-dimensional supergravity on $\CC^5 \times \RR$ to a certain infinite-dimensional exceptional super Lie algebra studied by Kac \cite{KacClass,KR} called $E(5,10)$.
 We recall the definition below. 
 
 \begin{thm}\label{thm:global}
 Let $\Pi\cE(\CC^5 \times \RR)$ be the parity shift of the fields of 11-dimensional supergravity on $\CC^5 \times \RR$ and denote by $\delta^{(1)}$ the linearized BRST operator. 
 \begin{enumerate}
 \item 
-As a super Lie algebra, the $\delta^{(1)}$-cohomology of $\Pi\cE(\CC^5 \times \RR)$ is isomorphic to the trivial one-dimensional central extension of the super Lie algebra $E^{hol}(5,10)$.
+As a super Lie algebra, the $\delta^{(1)}$-cohomology of $\Pi\cE(\CC^5 \times \RR)$ is isomorphic to the trivial one-dimensional central extension of the super Lie algebra $E(5,10)$.
 \item 
-The global symmetry algebra is equivalent, as a super $L_\infty$ algebra, to the non-trivial central extension of $E^{hol}(5,10)$ determined by the even cocycle \eqref{eqn:cocycle}. 
+The global symmetry algebra is equivalent, as a super $L_\infty$ algebra, to the non-trivial central extension of $E(5,10)$ determined by the even cocycle \eqref{eqn:cocycle}. 
 \end{enumerate}
 \end{thm}
+
+This result implies that the action functional $S_{BF, \infty} + J$ of the 11-dimensional theory is invariant for infinite-dimensional Lie algebra $E(5,10)$. 
+
 %defined by the even cocycle
 %\begin{align*}
-%E^{hol}(5,10) \times E^{hol}(5,10) \times E^{hol}(5,10) & \to \CC \\
+%E(5,10) \times E(5,10) \times E(5,10) & \to \CC \\
 %(\mu,\mu',\alpha) & \mapsto \<\mu \wedge \mu', \alpha\>|_{z=0} .
 %\end{align*} 
 
 %The parity of the functional in the theorem is odd, but it is also trilinear. 
-%Thus, as a cocycle in the Chevalley--Eilenberg complex of $E^{hol}(5,10)$ it is of total even parity.
+%Thus, as a cocycle in the Chevalley--Eilenberg complex of $E(5,10)$ it is of total even parity.
 
-The super Lie algebra $E^{hol}(5,10)$ is very closely related to the super Lie algebra $E(5,10)$ studied by Kac; there is a dense embedding of super Lie algebras $E(5,10) \hookrightarrow E^{hol}(5,10)$. 
+%The super Lie algebra $E(5,10)$ is very closely related to the super Lie algebra $E(5,10)$ studied by Kac; there is a dense embedding of super Lie algebras $E(5,10) \hookrightarrow E(5,10)$. 
 
 \subsection{Linearized BRST cohomology} 
 
@@ -49,14 +52,14 @@ First, we recall the definition of the exceptional simple super Lie algebra $E(5
 Recall that $\Vect_0 (\CC^5)$ is the Lie algebra of divergence-free holomorphic vector fields on $\CC^5$.
 Let $\Omega^{2}_{cl} (\CC^5)$ be the module of holomoprhic $2$-forms which are closed for the holomorphic de Rham operator $\del$.
 
-The even part of the super Lie algebra $E^{hol}(5,10)$ is the Lie algebra of divergence-free vector fields on $\CC^5$
+The even part of the super Lie algebra $E(5,10)$ is the Lie algebra of divergence-free vector fields on $\CC^5$
 \[
-E^{hol}(5,10)_+ = \Vect_0(\CC^5) ,
+E(5,10)_+ = \Vect_0(\CC^5) ,
 \]
 whose elements we continue to denote by $\mu$. 
 The odd piece is the module 
 \[
-E^{hol}(5,10)_- = \Omega^{2}_{cl} (\CC^5) 
+E(5,10)_- = \Omega^{2}_{cl} (\CC^5) 
 \]
 whose elements we denote by $\alpha$. 
 Besides the natural module structure, there is an odd $\times$ odd $\to$ even bracket. 
@@ -67,8 +70,8 @@ The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \
 One immediately checks that since both $\alpha, \alpha'$ are closed two-forms that the resulting vector field on the right hand side is divergence-free. 
 In coordinates, if $f^{ij} \d z_i \wedge \d z_j$, $g^{kl} \d z_k \wedge \d z_l$ are two closed two-forms, their bracket is the vector field $\ep_{ijklm} f^{ij}g^{kl} \partial_{z_m}$. 
 
-More precisely, Kac studied a dense sub Lie algebra $E(5,10)$ of $E^{hol}(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
-It is this dense sub super Lie algebra which is simple.
+To be precise, Kac studied a more algebraic version of the algebra we have just introduced where holomorphic functions are replaced by holomorphic polynomials.
+Thus, the simple super Lie algebra classified in \cite{KacBible} is a dense sub Lie algebra of what we call $E(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
 
 \parsec[]
 
@@ -139,6 +142,7 @@ Notice that this bracket is well-defined as it does not depend on the particular
 \parsec[]
 
 We complete the proof of the first part of Theorem \ref{thm:global}. 
+For this we write down an explicit map between the cohomology computed above and the algebra $E(5,10)$. 
 
 The relationship of the $\mu$-elements in $E(5,10)$ and the 11-dimensional theory is apparent.
 
@@ -149,8 +153,8 @@ In other words, there is an isomorphism
 \del \colon \Omega^1 (\CC^5) / \d \cO(\CC^5) \xto{\cong} \Omega^{2}_{cl}(\CC^5)
 \]
 induced by the holomorphic de Rham differential.
-This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E^{hol}(5,10)$ by $\alpha = \del \gamma$. 
-It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E^{hol}(5,10)$ and the twist of 11-dimensional supergravity. 
+This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E(5,10)$ by $\alpha = \del \gamma$. 
+It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E(5,10)$ and the twist of 11-dimensional supergravity. 
 This completes the proof of part (1) of Theorem \ref{thm:global}.
 
 \subsection{(Non)formality and homotopy transfer} 
@@ -159,7 +163,7 @@ This completes the proof of part (1) of Theorem \ref{thm:global}.
 We produce the following homotopy data:
 \begin{equation}
 \begin{tikzcd}
-\arrow[loop left]{l}{K}(\Pi \cE , \delta^{(1)})\arrow[r, shift left, "q"] &(E^{hol}(5,10) \oplus \CC_b \, , \, 0)\arrow[l, shift left, "i"] \: ,
+\arrow[loop left]{l}{K}(\Pi \cE , \delta^{(1)})\arrow[r, shift left, "q"] &(E(5,10) \oplus \CC_b \, , \, 0)\arrow[l, shift left, "i"] \: ,
 \end{tikzcd}
 \end{equation}
 
@@ -192,25 +196,39 @@ Plugging in the field $\gamma$ we see that we must check that
 \]
 which is precisely \eqref{eqn:htpy1}. 
 
-Given this homotopy data, we can compute the homotopy transferred $L_\infty$ structure on the linearized BRST cohomology following \brian{??}. 
+Given this homotopy data, we can compute the homotopy transferred $L_\infty$ structure on the linearized BRST cohomology. 
 Since $\nu$ does not survive to cohomology and the fact that there are no nontrivial Lie brackets involving the field $\beta$, this transferred structure is easy to compute. 
 
 There is a single diagram which contributes to the transferred structure, it is given by
-\brian{do it}
+\begin{equation}
+\begin{tikzpicture}
+\begin{feynman}
+%\vertex at (-2,0) {$\mu'_3 \ = $};
+\vertex(a) at (-1,1) {$i(\mu)$};
+\vertex(b) at (-1,0) {$i([\gamma])$};
+\vertex(c) at (-1,-1) {$i(\mu')$};
+\vertex(d) at (0,0.5);
+\vertex(e) at (1,0);
+\vertex(f) at (2,0) {$q$};
+\diagram* {(a)--(d), (b)--(d), (d)--[edge label = $K$](e), (c)--(e), (f)--(e)};
+\end{feynman}
+\end{tikzpicture}
+\end{equation}
+together with a similar diagram with the $\mu$ and $\mu'$ flipped. 
 
-This diagram leads to a new $3$-ary bracket on $E^{hol}(5,10) \oplus \CC_b$
+This diagram leads to a new $3$-ary bracket on $E(5,10) \oplus \CC_b$
 \[
 \big[\mu,\mu',[\gamma]\big]_3 = \varphi(\mu,\mu',[\gamma])
 \]
-where $\varphi \in \clie^{even} (E^{hol}(5,10))$ is the even Lie algebra cocycle defined by the formula
+where $\varphi \in \clie^{even} (E(5,10))$ is the even Lie algebra cocycle defined by the formula
 \beqn
 \begin{array}{rclr}
-\varphi \colon E^{hol}(5,10) \times E^{hol}(5,10) \times E^{hol}(5,10) & \to & \CC_b \\
+\varphi \colon E(5,10) \times E(5,10) \times E(5,10) & \to & \CC_b \\
 \varphi(\mu,\mu',\alpha) & = & \<\mu \wedge \mu', \alpha\>|_{z=0} .
 \label{eqn:cocycle}
 \end{array}
 \eeqn
-Since $b$ is central, this cocycle defines a central extension of $E^{hol}(5,10)$. 
+Since $b$ is central, this cocycle defines a central extension of $E(5,10)$. 
 
 \parsec[]
 We briefly remark on Lie algebra cohomology for super Lie algebras.
