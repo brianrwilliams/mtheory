@@ -1,6 +1,7 @@
 \def\im{{\rm i}}
 
 \section{Dimensional reduction and 10-dimensional supergravity}
+\label{sec:dimred}
 
 In this section we demonstrate that our proposal for the action of minimally twisted 11-dimensional supergravity agrees with conjectural descriptions of twisted type IIA and type I supergravities due to Costello and Li. 
 
@@ -103,6 +104,7 @@ I_{IIA} = \frac12 {\rm Tr}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \wedge \Pi
 where the $\cdots$ denote terms involving higher order descendants. 
 
 \subsection{Reduction to IIA supergravity}
+\label{s:su4red}
 
 We now turn back to our 11-dimensional theory. 
 The first goal is to compare the dimensional reduction of our 11-dimensional theory on $\CC^5 \times \RR$
@@ -162,7 +164,7 @@ Notice that the terms involving higher descendants vanishes since these fields a
 %\eeqn
 %This is easily seen to be a Poisson map. We have that $I_{pot} = \partial^{*}I_{BCOV}$, so we see that $I_{pot}$ satisfies the classical master equation. Therefore, $I_{pot}$ determines an $L_{\infty}$ structure on $\cE_{pot}$, and hence one on $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$. In what follows, the $SU(4)$-invariant twist of IIA will refer to the BV theory $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 
-\parsec[sec:dimred]
+\parsec[-]
 
 We turn to the proof of the main result of this section that the dimensional reduction of our 11-dimensional theory agrees with the twist of IIA supergravity just introduced. 
 
@@ -352,8 +354,9 @@ Notice that the terms involving higher descendants vanishes since these fields a
 
 \subsection{Slab compactification} 
 
-To this end, we consider placing 11-dimensional supergravity on the manifold $\CC^5 \times [0,1]$. 
+We consider placing twisted 11-dimensional supergravity on the manifold $\CC^5 \times [0,1]$. 
 In order to do this, we must choose appropriate boundary conditions at $t=0$ and $t=1$.
+Our 11-dimensional theory on such manifolds fits nicely into the formalism of \cite{BY,Eugene} in that it is topological in the direction transverse to the boundary.  
 
 The phase space of the theory at $t=0$ or $t=1$ is 
 \begin{equation}
@@ -381,11 +384,12 @@ These $L_\infty$ structures must be compatible with the one on the phase space.
 In fact, in our context these boundary conditions are abstractly isomorphic. 
 We will explain the explicit boundary conditions momentarily. 
 
-In \cite{?} an explicit model has been given for the theory compactified along the slab for theories which are topological in the direction normal to the boundary.
-The fields of the theory compactified on the slab is computed by the {\em derived} intersection of the two Lagrangians:
+An important thing to note is that the fields of the theory compactified on the slab is computed by the {\em derived} intersection of the two Lagrangians:
 \[
 \cM_{t=0} \overset{\LL}{\underset{\cE_{\del}}{\times}}\cM_{t=1}.
 \]
+To compute this derived intersection we must suitably resolve the boundary conditions.
+
 
 \parsec[s:boundary]
 At $t=0$, the boundary condition of the 11-dimensional theory is determined by declaring 
@@ -491,9 +495,9 @@ whose lowest components also both carry odd parity.
 \label{conj:5dsugra}
 The twist of 5d supergravity (with nonzero Chern--Simons term) with vector multiplets valued in a Lie algebra $\fg$ and hypermultiplets valued in a representation $V$ has BV fields
 \begin{itemize}
-\item $\alpha, A_{grav} \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)$ with conjugate fields $\eta, B_{grav}$,
-\item $A \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes \fg$ with conjugate field $B$,
-\item $\chi \in \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes V$ with conjugate field $\psi$.
+\item $\alpha, A_{grav} \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR)$ with conjugate BV fields $\eta, B_{grav}$,
+\item $A \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes \fg$ with conjugate BV field $B$,
+\item $\chi \in \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) \otimes V$ with conjugate BV field $\psi$.
 \end{itemize}
 
 The action is
@@ -601,48 +605,59 @@ This completes the proof.
 In \S \ref{sec:global} we computed the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$ and found a close relationship to the exceptional super Lie algebra $E(5,10)$. 
 In this section we deduce the form of the global symmetry algebra of the five-dimensional compactified theory on $\CC^2 \times \RR$. 
 
-Denote the full de Rham cohomology of $X$ by
+Consider the full de Rham cohomology of $X$ by
 \[
-\cA(X) = H^\bu (X, \Omega^\bu) = \oplus_{i,j} H^i (X, \Omega^j_X)  .
+H^\bu (X, \Omega^\bu) = \oplus_{i,j} H^i (X, \Omega^j_X)  .
 \]
 This is a graded commutative algebra using the wedge product of differential forms. 
 Next, consider the space of holomorphic functions $\cO(\CC^2)$ on $\CC^2$. 
 The Poisson bracket $\{-,-,\}$ associated to the standard holomorphic symplectic structure on $\CC^2$ endows $\cO(\CC^2)$ with the structure of a Lie algebra. 
-In particular, we can tensor $\cO(\CC^2)$ with $\cA_X$ to obtain the structure of a graded Lie algebra on $\cA(X) \otimes \cO(\CC^2)$. 
+In particular, we can tensor $\cO(\CC^2)$ with $H^\bu (X, \Omega^\bu)$ to obtain the structure of a graded Lie algebra on 
+\[
+H^\bu (X, \Omega^\bu) \otimes \cO(\CC^2) .
+\]
+Let $[\omega] \in H^1(X, \Omega^1_X)$ be the class of the K\"ahler form on $X$.
 
-The global symmetry algebra of the compactified theory is a deformation of this graded Lie algebra. 
-Let $[\omega] \in H^1(X, \Omega^1_X)$ be the class of the K\"ahler form on $X$. 
-The deformation of $\cA(X) \otimes \cO(\CC^2)$ introduces the following Lie bracket 
+The global symmetry algebra of the compactified theory along the Calabi--Yau three-fold $X$ is equivalent to a deformation of this graded Lie algebra. 
+The deformation introduces the following Lie bracket 
 \[
 \big[ [\omega] \otimes f, [\omega] \otimes g\big] = [\omega^2] \otimes \{f,g\} \in H^{2,2}(X, \Omega^2) \otimes \cO(\CC^2) . 
 \]
 
-
-First, let's compute the global symmetry algebra of the twist of the pure gravity theory on $\CC^2 \times \RR$. 
-This arises from terms in the BV action \eqref{eqn:5daction} involving only $\alpha, \eta, A_{grav}$, and $B_{grav}$. 
-
-The underlying graded vector space of the resulting Lie algebra is equivalent to
-\[
-\cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} .
-\]
-The non trivial Lie brackets are
+%\begin{proof}
+%The computation of the global symmetry algebra of the 5-dimensional theory is very similar to the computation in the 11-dimensional theory.
+%In terms of the de Rham cohomology, the generators of the linearized cohomology of the space of fields read:
+%\begin{itemize}
+%\item a holomorphic function $\alpha(z_1,z_2) \in H^0(X, \Omega^0) \otimes \cO(\CC^2)$.
+%\item a 
+%
+%First, let's compute the global symmetry algebra of the twist of the pure gravity theory on $\CC^2 \times \RR$. 
+%This arises from terms in the BV action \eqref{eqn:5daction} involving only $\alpha, \eta, A_{grav}$, and $B_{grav}$. 
+%
+%The underlying graded vector space of the resulting Lie algebra is equivalent to
+%\[
+%\cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} .
+%\]
+%The non trivial Lie brackets are
 %\begin{multline}
 %[\alpha, \alpha'] = \{\alpha, \alpha'\} \in \cO(\CC^2)_\alpha , \quad [\alpha, \eta] = \{\alpha, \eta\} \in \cO(\CC^2)_\eta , \quad [\alpha, A_{grav}] = \{\alpha, A_{grav}\} \in \cO(\CC^2)_{A_{grav}} \\ 
 %[\alpha, B_{grav}] = \{\alpha, B_{grav}\} \in \cO(\CC^2)_{B_{grav}} , \quad [B_{grav}, B'_{grav}] = \{B_{grav}, B'_{grav}\} \in \cO(\CC^2)_{A_{grav}} .
 %\end{multline}
-\begin{align*}
-[\alpha, \alpha' + \eta + A_{grav} + B_{grav}] & = \{\alpha,  \alpha'\} + \{\alpha, \eta\} + \{\alpha, A_{grav}\} + \{\alpha, B_{grav}\} \\ & \in \cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} \\
-[B_{grav}, B'_{grav}] & = \{B_{grav}, B'_{grav}\} \in \cO(\CC^2)_{A_{grav}} .
-\end{align*}
-Denote this Lie algebra by $\fg_{grav}$. 
-
-The contribution of the vector and hypermultiplets form a module for $\fg_{grav}$. 
-As a graded vector space, this module is
-\[
-M_X = \cO(\CC^2) \otimes H^{1}(X, \Omega^1_X)_\perp [-1] \oplus \cO(\CC^2) \otimes 
-\]
+%\begin{align*}
+%[\alpha, \alpha' + \eta + A_{grav} + B_{grav}] & = \{\alpha,  \alpha'\} + \{\alpha, \eta\} + \{\alpha, A_{grav}\} + \{\alpha, B_{grav}\} \\ & \in \cO(\CC^2)_\alpha \oplus \cO(\CC^2)_\eta \oplus \cO(\CC^2)_{A_{grav}} \oplus \cO(\CC^2)_{B_{grav}} \\
+%[B_{grav}, B'_{grav}] & = \{B_{grav}, B'_{grav}\} \in \cO(\CC^2)_{A_{grav}} .
+%\end{align*}
+%Denote this Lie algebra by $\fg_{grav}$. 
+%
+%The contribution of the vector and hypermultiplets form a module for $\fg_{grav}$. 
+%As a graded vector space, this module is
+%\[
+%M_X = \cO(\CC^2) \otimes H^{1}(X, \Omega^1_X)_\perp [-1] \oplus \cO(\CC^2) \otimes 
+%\]
+%\brian{incomplete}
 
 \subsection{The $SU(5)$ twist of type IIA supergravity}
+\label{s:su5IIA}
 
 \brian{Ingmar can you argue why this is the SU(5) twist on susy grounds?}
 
@@ -693,7 +708,19 @@ The full action functional is
 
 The first two lines in \eqref{eqn:su5action} arise from the reduction of the BF action $S_{BF,\infty}$. 
 The final line arises from the reduction of $J = \frac16 \int \gamma_{11d} \del \gamma_{11d} \del \gamma_{11d}$. 
- 
+
+\parsec[]
+
+
+We obtain further evidence that this is the $SU(5)$ invariant twist of type IIA supergravity by checking that it has the expected residual supersymmetries. 
+The type IIA superstring algebra $\lie{string}_{IIA}$ is a central extension of the 10d $\cN=(1,1)$ super Poincar\'e algebra, for a definition we refer to \cite{BH,FSS}. 
+
+A minimal twisting supercharge $Q_{hol}$ in the $\cN=(1,1)$ super Poincar\'e algebra determines a maximal isotropic $L \subset \CC^{10}$. 
+In a completely analogous way to the calculation for the twist of the algebra $\m2$ or the $SU(4)$ twist of the as in \cite{CLsugra} one can prove the following. 
+
+\begin{prop}
+As an $\lie{sl}(5)$ representation the $Q_{hol}$-cohomology of $\lie{string}_{IIA}$ is equivalent
+
 \parsec[]
 
 The slab compactification of the previous section was one way to implement the $S^1 / \ZZ/2$ reduction of the 11-dimensional theory. 
