@@ -20,7 +20,7 @@ We begin by introducing certain variants of Kodaira--Spencer theory which will f
 
 \subsection{Kodaira--Spencer theory}
 
-Let $X$ be a Calabi--Yau manifold; for now it can be of arbitrary complex dimension. 
+Let $X$ be a Calabi--Yau manifold; for now it can be of arbitrary complex dimension $d$. 
 Define
 \deq{
   \PV^{i,j}(X) = \Omega^{0,j}(X, \wedge^i \T_X).
@@ -42,19 +42,57 @@ We also have performed an overall cohomological shift by $2$ so that $u^k \PV^{i
 More precisely, this is a model for the $S^1$-equivariant cohomology of the states of the $B$-model on a closed disk. 
 We refer to \cite{CLtypeI, CLsugra} for detailed justification for this ansatz. 
 
-\brian{surya, could fill these parsecs in?}
-
 \parsec[s:poisson]
-
-%describe odd poisson structure
+The original action for Kodaira-Spencer theory posited by \cite{BCOV}\surya{which reference is BCOV} has a nonlocal kinetic term. In the BV formalism, this is codified by stipulating that the BV pairing is a degenerate odd Poisson tensor rather than an odd symplectic form. The Poisson kernel is given by the expression 
+\[
+(\div\otimes 1)\delta_{\Delta \subset X\times X} \in \Sym^2 (\PV^{\bu,\bu}(X)[[u]][2])
+.\]
+Explicitly, the above kernel pairs against the dual to 
+\[
+\Sigma^1 = \sum u^k\mu^1_k, \Sigma^2 = \sum u^k\mu^2_k\in \PV^{\bu,\bu}(X)[[u]][2]
+\]
+ by the formula 
+\[
+\int \overline{\mu}_0^1\div \overline{\mu}_0^2.
+\] 
+Here, the overlines denote the dual field in 
+\[
+(\PV^{\bu,\bu}(X)[[u]][2])^*=\PV_c^{d-\bu,d-\bu}(X)[[u]][2].
+\] 
+That is, further expanding the fields as 
+\[
+\mu_k = \sum_{i,j=1}^d\mu_k^{(i,j)}\in \PV^{i,j}
+\] 
+the expression pairs $\overline{\mu}_0^{(i,j)}$ with $\overline{\mu}_0^{(d-1-i, d-j)}$.
 
 \parsec[s:ksaction] 
 
-%recall genus zero BCOV action. 
+There is a natural local interaction which equips the above cyclic cochain complex with the structure of $\Z/2$ graded Poisson BV theory. Explicitly, it is given by 
+\beqn
+I_{BCOV}(\Sigma) = \int^\Omega \langle \exp \Sigma\rangle_0 = \sum_{n\geq 0} \int^\Omega\langle\Sigma^{\otimes n}\rangle_0
+\eeqn
 
+where $\langle - \rangle_0$ denotes the genus zero Gromov-Witten invariant with marked points
+\beqn
+\langle u^{k_1}\mu_1 \otimes \cdots \otimes u^{k_m}\mu_m\rangle_0 := \left (\int _{\overline {\cM}_{0,m}} \psi_1^{k_1}\cdots \psi_m^{k_m}\right ) \mu_1\cdots \mu_m = \binom{m-3}{ k_1,\cdots, k_m}  \mu_1\cdots \mu_m.
+\eeqn
+
+This interaction is extremely natural from the point of view of string field theory. Indeed, the B-model localizes to the space of constant maps into $X$, which factors as a product of $\overline{\cM}_{0,m}\times X$. This is in keeping with finding an interaction that factors as an integral over $X$ times an integral over $\overline{\cM}_{0,m}$. 
+
+In \cite{BCOV} the authors show that the above interaction satisfies the classical master equation. Moreover, they show that the $L_\infty$ structure determined by the above action is equivalent to a natural dgla structure on the complex of fields with Lie bracket given by the Schouten bracket. Explicitly, the equivalence is given by the transcendental automorphism 
+\[
+\Sigma \mapsto [u(\exp (\Sigma/u)-1)]_+
+\]
+where $[-]_+$ denotes projection onto positive powers of $u$.
 \parsec[s:minimalks]
 
-%define minimal ks
+Recall we observed in \ref[s:poisson] that the majority of fields pair to zero under the Poisson tensor. Physically these correspond to closed string fields that do not propogate. In the supergravity approximation, the fields that survive are those closed string fields that propogate. In terms of our description of closed string field theory in terms of Kodaira-Spencer theory, this motivates us to consider the smallest cochain complex containing those fields thathave nonzero pairing under the Poisson tensor. This is referred to as minimal Kodaira-Spencer theory.
+
+The fields of minimal Kodaira-Spencer theory are given by the subcomplex of \label{eqn:ks1}
+\beqn
+\left (\bigoplus_{i+j\leq d -1}u^i\PV^{j,\bu}(X)[2], \dbar + u \div\right).
+\eeqn
+ It is easy to see that there is a natural odd Poisson tensor on the above cochain complex such that the inclusion of this subcomplex into the fields of Kodaira-Spencer theory is a Poisson map. There is a natural action functional given by pulling back the Kodaira-Spencer action.
 
 \subsection{The $SU(4)$ twist of type IIA supergravity}\label{sec:SU(4)twist}
 
@@ -75,10 +113,6 @@ The complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
 \eeqn
 Denote this complex by $\cE_{mKS}(X)$. 
 The classical BCOV action $I_{BCOV}$ follows from the general formula we gave above. 
-
-\brian{I've commented this out below, since we should just introduce minimal BCOV in general up above}
-
-%Clearly, the inclusion is a Poisson map, so restricting $I_{BCOV}$ to this subcomplex defines another $\Z/2$ graded Poisson BV theory referred to as minimal Kodaira-Spencer theory. Under the identification of Kodaira-Spencer theory as the closed string sector of the B-model, minimal Kodaira-Spencer theory should be thought of as consisting of those closed string fields present in the supergravity approximation.
 
 With this in hand the conjecture of \cite{CLSugra} takes the following form.
 
