@@ -30,16 +30,16 @@ The divergence operator extends to the Dolbeault complex to yield a map of cocha
 \div \colon \Omega^{0,\bu}(X , \T_X) \to \Omega^{0,\bu}(X) .
 \]
 
-The kernel of this map resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0 (X)$.
-In fact, we can form the complex 
+The resulting complex of sheaves
 \beqn\label{eqn:cplx1}
 \begin{tikzcd}
 \ul{0} & \ul{1} \\
-\Omega^{0,\bu}(X , \T_X) \ar[r, "\div"] & \Omega^{0,\bu}(X) .
+\Omega^{0,\bu}(X , \T_X) \ar[r, "\div"] & \Omega^{0,\bu}(X) ,
 \end{tikzcd}
 \eeqn
+resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0 (X)$.
 The $\dbar$ operator, as always, is left implicit. 
-By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
+%By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
 
 There is a direct way to extend the Lie bracket of vector fields to the complex \eqref{eqn:cplx1}. 
 Denote by $\mu$ an element of $\Omega^{0,\bu}(X , \T_X)$ and $\nu$ an element of $\Omega^{0,\bu}(X)$ (for simplicity in notation, we will not expand the anti-holomorphic dependence). 
@@ -326,7 +326,7 @@ Doing this we see that $J$ becomes
 \]
 Since this automorphism preserves the odd BV bracket, the actions $S_{BF,\infty} + g J$ and $S_{BF, 0} + g \til{J}$ are both solutions to the classical master equations and are equivalent as~$\ZZ/2$ graded BV theories.
 
-\subsection{Equations of motion} \label{s:eom}
+\subsection{Equations of motion of the component fields} \label{s:components}
 
 Soon, we will provide a series of justifications for the assertion that the deformed theory $S_{BF, \infty} + g J$ is the minimal twist of $11$-dimensional supergravity on flat space $X \times S = \CC^5 \times \RR$ where $\CC^5$ is equipped with its flat Calabi--Yau form. 
 For the moment, we briefly read off the equations of motion of the general theory on $X \times S$.
@@ -390,6 +390,7 @@ Then, there is a component of \eqref{eqn:eomgamma} which can be written as
 \eeqn
 where now $[-,-]$ stands for the Schouten bracket.
 
+\brian{finish}
 
 %The most geometrically relevant component is the case where 
 %\[

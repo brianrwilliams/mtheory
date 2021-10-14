@@ -29,9 +29,9 @@ I_{M2}(\gamma) = N\int_{\C_z} \gamma
 which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of $M5$ branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
 
 This coupling is justified by comparison with the physical theory and by dimensional reduction. 
-Indeed, as discussed in section \surya{}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of $M2$ branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
+Indeed, as discussed in section \ref{s:components}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of $M2$ branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
 
-Moreover, reducing on a circle transverse to the $M2$ brane yields the $SU(4)$ twist of type IIA supergravity on $\R^2\times \C_z\times \C^3$ with $N$ $D2$ branes wrapping $\R\times \C_z$. As is shown in \cite{CLSugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
+Moreover, reducing on a circle transverse to the $M2$ brane yields the $SU(4)$ twist of type IIA supergravity on $\R^2\times \C_z\times \C^3$ with $N$ $D2$ branes wrapping $\R\times \C_z$. As is shown in \cite{CLsugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
 \[
 I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma
 \] 
@@ -74,10 +74,10 @@ Varying $\beta$ we obtain the equation of motion
 \begin{lem}
 Let
 \[
- F_{M2} = \# \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
+ F_{M2} = \frac{6}{(2\pi i)^4} \frac{\sum_{a=1}^4 \wbar_a \d \wbar_1 \cdots \Hat{\d \wbar_a} \cdots \d \wbar_4}{\|w\|^{8}} \partial_z .
 \]
-Then, the background where $\mu = N F_{M2}$ 
-satisfies the above equations of motion
+Then, the background where $\mu = N F_{M2}$ and $\gamma = 0$
+satisfies the above equations of motion in the presence of a stack of $N$ $M2$ branes:
 \begin{align*}
 \dbar (N F_{M2}) + \frac12 [N F_{M2}, N F_{M2}] & = N \Omega^{-1} \delta_{w=0} \\
 \div (N F_{M2}) & = 0  .
@@ -86,10 +86,10 @@ Here, we set all components of the field $\gamma$ equal to zero (as well as the 
 \end{lem}
 
 \begin{proof}
-Upon specializing $\gamma = 0$, the last term in the first equation above vanishes. The equation $\dbar F_{\rm{AdS}_4 \times S^7} = \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. 
-It is clear that $\div F_{\rm{AdS}_4 \times S^7} = 0$ and 
+Upon specializing $\gamma = 0$, the last term in the first equation above vanishes. The equation $\dbar F_{M2} = \Omega^{-1} \delta_{w=0}$ characterizes the Bochner--Martinelli kernel representing the residue class on $\CC^4 \, \setminus \, 0$. 
+It is clear that $\div F_{M2} = 0$ and 
 \[
-[F_{\rm{AdS}_4 \times S^7}, F_{\rm{AdS}_4 \times S^7}] = 0
+[F_{M2}, F_{M2}] = 0
 \] 
 by simple type reasons. 
 \end{proof}
@@ -327,17 +327,17 @@ Again, this only depends on $\gamma$ through its field strength $\del \gamma$.
 \label{lem:ads7flux}
 Let
 \[
-F_{M5} = \# N \frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} \wedge \d w_1 \wedge \d w_2
+F_{M5} = \frac{1}{(2\pi i)^3} \frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} \wedge \d w_1 \wedge \d w_2
 \]
 %and suppose 
 %\[
 %\til F \in \Bar{\Omega}^{1,2} (\CC^5) \otimes \Bar{\Omega}^1(\RR)
 %\]
 %satisfies $\del \til F = F$. 
-Then, $F$ satisfies the $F = \del\gamma$-equations of motion in the presence of a stack of $N$ $M5$ branes sourced by the term $N \delta_{w_1=w_2=t=0}$:
+Then, $\del\gamma = N F_{M5}$, $\mu = 0$, and $\nu = 0$ satisfies the equations of motion in the presence of a stack of $N$ $M5$ branes sourced by the term $N \delta_{w_1=w_2=t=0}$:
 \begin{align*}
-\dbar F + \d_{\RR} F & = N \delta_{w_1=w_2=t=0}  \\ 
-F \wedge F & = 0 .
+\dbar (NF_{M5}) + \d_{\RR} (NF_{M5}) & = N \delta_{w_1=w_2=t=0}  \\ 
+(NF_{M5}) \wedge (NF_{M5}) & = 0 .
 \end{align*}
 Here, we set all components of the field $\mu$ equal to zero (as well as the fields $\nu,\beta$). 
 \end{lem}
@@ -353,7 +353,7 @@ characterizes the kernel representing $N$ times the residue class for a $4$-sphe
 \] 
 That is
 \[
-\oint_{S^4} F = N 
+\oint_{S^4} N F = N 
 \]
 for any $4$-sphere centered at $0 \in \CC^2 \times \RR$.
 
@@ -474,13 +474,13 @@ Nevertheless, we have the following.
 
 \begin{prop}
 \label{prop:brads7}
-There exists $N$-dependent corrections to the embedding $i_{M5}$ which is compatible with the modified BRST differential $\delta^{(1)} + [N F,-]$. 
-Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N  F,-]$.
+There exists $N$-dependent corrections to the embedding $i_{M5}$ which is compatible with the modified BRST differential $\delta^{(1)} + [N F_{M5},-]$. 
+Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N  F_{M5},-]$.
 \end{prop}
 
 \parsec[s:thfcohomology]
 
-The proof of the above proposition follows from an indirect cohomological argument. 
+The proof of the above proposition follows from another indirect cohomological argument. 
 Before getting to the proof, we introduce the relevant cohomology. 
 
 The 11-dimensional theory is built from fields which live in the following tensor product of complexes 
