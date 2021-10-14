@@ -29,7 +29,6 @@ The divergence operator extends to the Dolbeault complex to yield a map of cocha
 \[
 \div \colon \Omega^{0,\bu}(X , \T_X) \to \Omega^{0,\bu}(X) .
 \]
-
 The resulting complex of sheaves
 \beqn\label{eqn:cplx1}
 \begin{tikzcd}
@@ -38,7 +37,7 @@ The resulting complex of sheaves
 \end{tikzcd}
 \eeqn
 resolves the sheaf of holomorphic divergence-free vector fields $\Vect_0 (X)$.
-The $\dbar$ operator, as always, is left implicit. 
+The anti-holomorphic Dolbeault degrees and the $\dbar$ operator is left implicit. 
 %By the holomorphic Poincar\'e lemma, the embedding of the sheaf $\Vect_0(X)$ into the degree zero piece of this complex is a quasi-isomorphism. 
 
 There is a direct way to extend the Lie bracket of vector fields to the complex \eqref{eqn:cplx1}. 
@@ -51,7 +50,7 @@ The Lie bracket defined by the formulas
 is compatible with $\div$ and endows \eqref{eqn:cplx1} with the structure of a sheaf of dg Lie algebras.
 We will refer to this sheaf by the symbol $\cL_0(X)$, or just $\cL_0$ if $X$ is understood. 
 
-The sheaf $\cL_0$ has the structure of a {\em local} dg Lie algebra, see see \cite[??]{CG2}.
+The sheaf $\cL_0$ has the structure of a {\em local} dg Lie algebra, see see \cite[\S 3.1.3]{CG2}.
 This means that as a graded sheaf, $\cL_0$ is the smooth sections of a graded vector bundle and the differential and Lie bracket are given by differential and bidifferential operators, respectively.
 
 
@@ -176,23 +175,28 @@ We are using the shorthand notation
 which is equipped with the $\dbar + \d_S$ operator and similarly for $\PV^{i}(X;S)$. 
 
 The natural pairing between $\PV^i(X;S)$ and~$\Omega^i(X;S)$ is of degree $-\dim_\C(X) -\dim_\R(S)$. 
-As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of fields with a $(-1)$-shifted symplectic structure, provided that we choose the shift to be given by
+As such, the $\Z$-grading indicated in~\eqref{eq:sympfields} equips the sheaf of fields with a degree $(-1)$ pairing, provided that we choose the shift to be given by
 \deq{
   n = \dim_\C(X) + \dim_\R(S) - 1.
 }
+The pairing is defined by the formula 
+\[
+\int^\Omega_{X \times S} \mu \vee \gamma + \int^\Omega_{X \times S} \nu \beta 
+\]
+where $\int^\Omega_{X \times S} \alpha = \int_{X \times S} \alpha \wedge \Omega$. 
 
 We have constructed two equivalent descriptions of the BF theory which share the linear BRST complex \eqref{eq:sympfields}.
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(S)$ is
 \deq{
-  S_{BF,0} =  \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +  \beta \wedge \partial_\Omega \mu + \frac{1}{2} [\mu,\mu] \vee \gamma +  [\mu,\nu] \beta .
+  S_{BF,0} =  \int^\Omega \bigg[\beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +  \beta \wedge \partial_\Omega \mu +  \frac{1}{2} [\mu,\mu] \vee \gamma +  [\mu,\nu] \beta \bigg] .
 }
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
 The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{\bu}(S)$ is non polynomial. 
-(In fact, it is related to the BCOV action functional via a procedure we outline below.)\ingmar{or somewhere} 
+In fact, it is related to the BCOV action functional via dimensional reduction, see \S \ref{sec:dimred}.
 Explicitly, this action functional is
 \deq{
-  S_{BF,\infty} =  \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma .
+  S_{BF,\infty} =  \int^\Omega \bigg[ \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma \bigg] .
 }
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
@@ -277,6 +281,8 @@ Unless otherwise stated, we will work with this $\ZZ/2$ grading for the remainde
 
 \parsec[]
 We proceed to show that $S_{BF,\infty} + g J$ solves the classical master equation.
+For notational simplicity we will omit the integral symbol $\int^\Omega$.
+
 By apparent field type reasons, the equation \eqref{eq:2cond} is equivalent to the following two equations
 \[
 \{S_{BF,\infty}, J\} = 0, \qquad \{J,J\} = 0.
@@ -390,8 +396,53 @@ Then, there is a component of \eqref{eqn:eomgamma} which can be written as
 \eeqn
 where now $[-,-]$ stands for the Schouten bracket.
 
-\brian{finish}
+To further simplify \eqref{eqn:eomgamma1}, we can look for a solutions where the $(0,1)$ Dolbeault part of $\gamma$ is zero $\gamma^{1;0} = 0$. 
+Then, up the term involving 
+\[
+\alpha \define \del \gamma^{0;0},
+\]
+we find precisely the integrability equation for the complex structure determined by Beltrami differential $\mu^{1;0} \in \PV^{1,1} \otimes \Omega^0$. 
+If $\dbar \alpha = 0$, the holomorphic two-form $\alpha \in \Omega^{2,hol}(X)$ defines a map of sheaves
+\[
+\Omega^{2,hol}_X \xto{\wedge \alpha} \Omega^{4,hol}_X \cong_\Omega \cT^{hol}_X
+\]
+where $\cT^{hol}_X$ denotes the sheaf of holomorphic vector fields and the last isomorphism uses the Calabi--Yau form $\Omega$ on $X$.  
+The image of $\Omega^{2,hol}_X$ defines a subsheaf $\cF_{\alpha} \subset \cT^{hol}_X$. 
+Since $\del \alpha = 0$, this subsheaf is automatically integrable and hence determines a foliation. 
 
+Summarizing, see that there is a field configuration where the Beltrami diffrential $\xi = \mu^{1;0} \in \Omega^{0,1}(X, \T_X)$ satisfies the modified integrability condition
+\[
+\dbar \xi + \frac12  [\xi , \xi] = \alpha \vee \rho
+\]
+for some $\rho \in \PV^{2,2} (X)$. 
+In other words, $\xi$ defines an integrable complex structure deformation along the leaf space associated to the foliation $\cF_\alpha$. 
+We leave a more complete exploration of the moduli space of solutions of the equations of motion for future work. 
+
+In \cite{SWspinor}, the second two authors showed that the free-limit of the minimal twist of 11-dimensional supergravity agrees with the free-limit of the 11-dimensional theory that we have introduced here. 
+Given this result, we can recognize many fields in the twisted theory as components of the physical fields of supergravity which remain after we twist. 
+
+\begin{itemize}
+\item 
+The following components of $\mu$:
+\begin{align*}
+\mu^{1;0} & = \mu^j_i(z,\zbar,t) \d \zbar_j \partial_{z_i} \\
+\mu^{0;1} & = \mu^t_i (z,\zbar,t) \d t \partial_{z_i}
+\end{align*}
+comprise components of the metric which remain after the twist. 
+The components 
+\[
+\mu^{0;0} = \mu_i (z,\zbar,t) \partial_{z_i} 
+\]
+comprise the ghosts for infinitesimal diffeomorphisms. 
+\item 
+The following three-form fields
+\begin{multline}
+\beta^{3;0} = \beta^{ijk} (z,\zbar,t) \d \zbar_i \d \zbar_j \d \zbar_k , \quad \beta^{2;1} = \beta^{ij}_t (z,\zbar,t) \d \zbar_i \d \zbar_j \d t \\
+\gamma^{2;0} = \gamma^{ijk} (z,\zbar,t) \d z_i \d \zbar_j \d \zbar_k , \quad \gamma^{1;1} = \gamma^{ij}_t (z,\zbar,t) \d z_i \d \zbar_j \d t .
+\end{multline} 
+comprise components of the supergravity $C$-field which remain after the twist. 
+The two-form fields $\beta^{2;0}, \beta^{1;1}, \gamma^{1;0}, \gamma^{0;1}$, the one-form fields $\beta^{1;0}, \beta^{0;1}$, and the zero-form field $\beta^{0;0}$ is what remains of the ghost system (ghosts, ghosts for ghosts, etc.) for the supergravity $C$-field. 
+\end{itemize}
 %The most geometrically relevant component is the case where 
 %\[
 %\mu^{1;0} \in \PV^{1,1}(X) \otimes \Omega^0(S) 
