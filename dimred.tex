@@ -19,6 +19,7 @@ From this point of view, Kodaira--Spencer theory is at the heart of the formulat
 We begin by introducing certain variants of Kodaira--Spencer theory which will feature in the descriptions of twists of type IIA and type I supergravity.
 
 \subsection{Kodaira--Spencer theory}
+\label{s:BCOV}
 
 Let $X$ be a Calabi--Yau manifold; for now it can be of arbitrary complex dimension $d$. 
 Define
@@ -43,36 +44,40 @@ More precisely, this is a model for the $S^1$-equivariant cohomology of the stat
 We refer to \cite{CLtypeI, CLsugra} for detailed justification for this ansatz. 
 
 \parsec[s:poisson]
-The original action for Kodaira-Spencer theory posited by \cite{BCOV}\surya{which reference is BCOV} has a nonlocal kinetic term. In the BV formalism, this is codified by stipulating that the BV pairing is a degenerate odd Poisson tensor rather than an odd symplectic form. The Poisson kernel is given by the expression 
+The original action for Kodaira-Spencer theory posited by \cite{BCOV}\surya{which reference is BCOV} has a nonlocal kinetic term. In the BV formalism, this is codified by stipulating that the BV pairing is a degenerate odd Poisson tensor rather than an odd symplectic form. 
+The Poisson kernel is given by the expression 
 \[
-(\div\otimes 1)\delta_{\Delta \subset X\times X} \in \Sym^2 (\PV^{\bu,\bu}(X)[[u]][2])
-.\]
-Explicitly, the above kernel pairs against the dual to 
-\[
-\Sigma^1 = \sum u^k\mu^1_k, \Sigma^2 = \sum u^k\mu^2_k\in \PV^{\bu,\bu}(X)[[u]][2]
+(\div\otimes 1)\delta_{\Delta \subset X\times X} \in \left[\PV^{\bu,\bu}(X)\right]^{\hotimes 2} ,
 \]
- by the formula 
-\[
-\int \overline{\mu}_0^1\div \overline{\mu}_0^2.
-\] 
-Here, the overlines denote the dual field in 
-\[
-(\PV^{\bu,\bu}(X)[[u]][2])^*=\PV_c^{d-\bu,d-\bu}(X)[[u]][2].
-\] 
-That is, further expanding the fields as 
-\[
-\mu_k = \sum_{i,j=1}^d\mu_k^{(i,j)}\in \PV^{i,j}
-\] 
-the expression pairs $\overline{\mu}_0^{(i,j)}$ with $\overline{\mu}_0^{(d-1-i, d-j)}$.
+see \cite[{\S 1.4}]{CLbcov1}. 
+Here, we view the $\delta$-distribution as a polyvector field using the Calabi--Yau form. 
+Notice that the shifted Poisson tensor does not involve the parameter $u$ at all. 
+For this reason, only the duals of a small number of fields pair nontrivially under the resulting odd BV bracket. 
+%Explicitly, the above kernel pairs against the dual to 
+%\[
+%\Sigma^1 = \sum u^k\mu^1_k, \Sigma^2 = \sum u^k\mu^2_k\in \PV^{\bu,\bu}%(X)[[u]][2]
+%\]
+% by the formula 
+%\[
+%\int \overline{\mu}_0^1\div \overline{\mu}_0^2.
+%\] 
+%Here, the overlines denote the dual field in 
+%\[
+%(\PV^{\bu,\bu}(X)[[u]][2])^*=\PV_c^{d-\bu,d-\bu}(X)[[u]][2].
+%\] 
+%That is, further expanding the fields as 
+%\[
+%\mu_k = \sum_{i,j=1}^d\mu_k^{(i,j)}\in \PV^{i,j}
+%\] 
+%the expression pairs $\overline{\mu}_0^{(i,j)}$ with $\overline{\mu}_0^{(d-1-i, d-j)}$.
 
 \parsec[s:ksaction] 
 
-There is a natural local interaction which equips the above cyclic cochain complex with the structure of $\Z/2$ graded Poisson BV theory. Explicitly, it is given by 
+There is a natural local interaction which equips the complex \eqref{eqn:ks1} with the structure of $\Z/2$ graded Poisson BV theory. Explicitly, it is given by 
 \beqn
-I_{BCOV}(\Sigma) = \int^\Omega \langle \exp \Sigma\rangle_0 = \sum_{n\geq 0} \int^\Omega\langle\Sigma^{\otimes n}\rangle_0
+I_{BCOV}(\Sigma) = {\rm Tr}_X \, \langle \exp \Sigma\rangle_0 = \sum_{n\geq 0} {\rm Tr}_X \, \langle\Sigma^{\otimes n}\rangle_0
 \eeqn
-
-where $\langle - \rangle_0$ denotes the genus zero Gromov-Witten invariant with marked points
+where ${\rm Tr}_X \, \Phi = \int_X (\Phi \vee \Omega) \wedge \Omega$ and where $\langle - \rangle_0$ denotes the genus zero Gromov-Witten invariant with marked points
 \beqn
 \langle u^{k_1}\mu_1 \otimes \cdots \otimes u^{k_m}\mu_m\rangle_0 := \left (\int _{\overline {\cM}_{0,m}} \psi_1^{k_1}\cdots \psi_m^{k_m}\right ) \mu_1\cdots \mu_m = \binom{m-3}{ k_1,\cdots, k_m}  \mu_1\cdots \mu_m.
 \eeqn
@@ -84,25 +89,27 @@ In \cite{BCOV} the authors show that the above interaction satisfies the classic
 \Sigma \mapsto [u(\exp (\Sigma/u)-1)]_+
 \]
 where $[-]_+$ denotes projection onto positive powers of $u$.
+
 \parsec[s:minimalks]
 
-Recall we observed in \ref[s:poisson] that the majority of fields pair to zero under the Poisson tensor. Physically these correspond to closed string fields that do not propogate. In the supergravity approximation, the fields that survive are those closed string fields that propogate. In terms of our description of closed string field theory in terms of Kodaira-Spencer theory, this motivates us to consider the smallest cochain complex containing those fields thathave nonzero pairing under the Poisson tensor. This is referred to as minimal Kodaira-Spencer theory.
+We pointed out in \S\ref{s:poisson} that the majority of fields pair to zero under the Poisson tensor. Physically these correspond to closed string fields that do not propogate. In the supergravity approximation, the fields that survive are those closed string fields that propogate. In terms of our description of closed string field theory in terms of Kodaira-Spencer theory, this motivates us to consider the smallest cochain complex containing those fields thathave nonzero pairing under the Poisson tensor. This is referred to as minimal Kodaira-Spencer theory.
 
 The fields of minimal Kodaira-Spencer theory are given by the subcomplex of \label{eqn:ks1}
 \beqn
 \left (\bigoplus_{i+j\leq d -1}u^i\PV^{j,\bu}(X)[2], \dbar + u \div\right).
 \eeqn
- It is easy to see that there is a natural odd Poisson tensor on the above cochain complex such that the inclusion of this subcomplex into the fields of Kodaira-Spencer theory is a Poisson map. There is a natural action functional given by pulling back the Kodaira-Spencer action.
+We observe that the original odd Poisson tensor lives in this subcomplex. 
+%here is a natural odd Poisson tensor on the above cochain complex such that the inclusion of this subcomplex into the fields of Kodaira-Spencer theory is a Poisson map. 
+There is a natural action functional given by restricting $I_{BCOV}$ to this space.
 
 \subsection{The $SU(4)$ twist of type IIA supergravity}\label{sec:SU(4)twist}
 
 We recall the description of the $SU(4)$ twist of type IIA supergravity conjectured in \cite{CLsugra}. 
 In principal, there is also a minimal, $SU(5)$ invariant, twist of type IIA supergravity but so far no description, even conjecturally, exists.
-We turn to this in Section \ref{sec:SU(5)twistIIA}. 
+We turn to this in \S \ref{s:su5IIA}. 
 
 Let $X$ be a Calabi-Yau manifold of complex dimension four. 
-The complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
-\brian{I have an issue with how this is organized}
+The $\ZZ/2$ graded complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
 \beqn
 \begin{tikzcd}
                         &                          &                                     & {\PV^{0,\bu}}    \\
@@ -111,10 +118,11 @@ The complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
 {\PV^{3,\bu}} \arrow[r, "u\div"] & {u\PV^{2,\bu}} \arrow[r, "u\div"] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
 \end{tikzcd}.
 \eeqn
-Denote this complex by $\cE_{mKS}(X)$. 
+Here, $u^\ell\PV^{k,i}$ is placed in parity $k + i -1 \mod 2$. 
+%Denote this complex by $\cE_{mKS}(X)$. 
 The classical BCOV action $I_{BCOV}$ follows from the general formula we gave above. 
 
-With this in hand the conjecture of \cite{CLSugra} takes the following form.
+With this in hand the conjecture of \cite{CLsugra} takes the following form.
 
 \begin{conj}
 The $SU(4)$-invariant twist of type IIA supergravity on $\RR^2\times \CC^4$ is the $\Z/2$-graded Poisson BV theory with fields \[
@@ -148,7 +156,7 @@ Doing so will require a slight modification to the description of the $SU(4)$ tw
 
 \parsec[sec:IIApot]
 
-Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLSugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma_{11d}$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLsugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma_{11d}$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
 
 The fundamental fields of the $SU(4)$ twist of IIA supergravity were given in \eqref{eqn:IIAfields}. 
 We modify the space of fields by introducing potentials for both the $\Pi$ and $\sigma$ fields. 
@@ -168,7 +176,7 @@ u^{-1}{\Omega^{0,\bu} (\CC^4) \otimes \Omega^\bu (\RR^2)}_\beta \arrow[r, "u\del
 \end{tikzcd}
 \eeqn.
 
-Recall that the original fields of the IIA supergravity model on $\CC^4 \times \RR^2$ was equipped with an odd Poisson bivector which was degenerate.
+The original space of fields of the twist of IIA supergravity on $\CC^4 \times \RR^2$ was equipped with an odd Poisson bivector which was degenerate.
 In other words, it did not define a theory in the conventional BV formalism. 
 One of the key features of this new complex of fields, after we have taken these potentials, is that it is equipped with an odd non-degenerate pairing thus equipping it with the structure of a theory in the conventional BV formalism. 
 
@@ -177,7 +185,7 @@ Explicitly, in the description of the fields in \eqref{eqn:IIApot} the pairing i
 \[
 \int^\Omega_{\CC^4 \times \RR^2} \eta \theta + \int^\Omega_{\CC^4 \times \RR^2} \mu \vee \gamma + \int^\Omega_{\CC^4 \times \RR^2} \nu \beta .
 \]
-This pairing is compatible with the odd Poisson bracket present in the original theory on $\CC^4 \times \RR^2$. \brian{finish}
+This pairing is compatible with the odd Poisson bracket present in the original theory on $\CC^4 \times \RR^2$.
 
 The type IIA action completely determines the action of this theory with potentials. 
 One simply takes the \eqref{eqn:IIAaction} and replaces all appearances of $\Pi$ with $\div \gamma$ and all appearances of $\sigma$ with $\div \theta$. 
@@ -538,7 +546,7 @@ The action is
 \begin{multline}
 \label{eqn:5daction} 
 \int^\Omega_{\CC^2 \times \RR} \left(\eta \dbar \alpha + B_{grav} \dbar A_{grav} + B \dbar A + \psi \dbar \chi \right) \\
-  \int^\Omega_{\CC^2 \times \RR} \left( \frac12\eta \{\alpha, \alpha\} +  B_{grav} \{\alpha, A_{grav}\}+ B \{\alpha, A\} +  \psi \{\alpha, \chi \}\right) \\ 
+  + \int^\Omega_{\CC^2 \times \RR} \left( \frac12\eta \{\alpha, \alpha\} +  B_{grav} \{\alpha, A_{grav}\}+ B \{\alpha, A\} +  \psi \{\alpha, \chi \}\right) \\ 
 + \frac16 \int_{\CC^2 \times \RR} B_{grav} \del B_{grav} \del B_{grav} .
 \end{multline}
 \end{conj}
@@ -554,7 +562,6 @@ Let $\Omega_X$ be the holomorphic volume form on $X$.
 To define the $11$-dimensional theory on $X \times \CC^2 \times \RR$ we use the Calabi--Yau form $\Omega_X \wedge \d z_1 \wedge \d z_2$, where $\{z_i\}$ is a holomorphic coordinate on $\CC^2$. 
 Let $\omega \in \Omega^{1,1}(X)$ be a fixed K\"ahler form on $X$.
 For any $k$, let $H^k(X, \Omega^k_X)_\perp$ denote the cohomology of the primitive elements. 
-\brian{good notation?}
 
 Consider the 11-dimensional field $\nu_{11d}$. 
 Under the equivalence
@@ -743,17 +750,18 @@ The full action functional is
 The first two lines in \eqref{eqn:su5action} arise from the reduction of the BF action $S_{BF,\infty}$. 
 The final line arises from the reduction of $J = \frac16 \int \gamma_{11d} \del \gamma_{11d} \del \gamma_{11d}$. 
 
-\parsec[]
-
-
-We obtain further evidence that this is the $SU(5)$ invariant twist of type IIA supergravity by checking that it has the expected residual supersymmetries. 
-The type IIA superstring algebra $\lie{string}_{IIA}$ is a central extension of the 10d $\cN=(1,1)$ super Poincar\'e algebra, for a definition we refer to \cite{BH,FSS}. 
-
-A minimal twisting supercharge $Q_{hol}$ in the $\cN=(1,1)$ super Poincar\'e algebra determines a maximal isotropic $L \subset \CC^{10}$. 
-In a completely analogous way to the calculation for the twist of the algebra $\m2$ or the $SU(4)$ twist of the as in \cite{CLsugra} one can prove the following. 
-
-\begin{prop}
-As an $\lie{sl}(5)$ representation the $Q_{hol}$-cohomology of $\lie{string}_{IIA}$ is equivalent
+%\parsec[]
+%
+%
+%We obtain further evidence that this is the $SU(5)$ invariant twist of type IIA supergravity by checking that it has the expected residual supersymmetries. 
+%The type IIA superstring algebra $\lie{string}_{IIA}$ is a central extension of the 10d $\cN=(1,1)$ super Poincar\'e algebra, for a definition we refer to \cite{BH,FSS}. 
+%
+%A minimal twisting supercharge $Q_{hol}$ in the $\cN=(1,1)$ super Poincar\'e algebra determines a maximal isotropic $L \subset \CC^{10}$. 
+%In a completely analogous way to the calculation for the twist of the algebra $\m2$ or the $SU(4)$ twist of the as in \cite{CLsugra} one can prove the following. 
+%
+%\begin{prop}
+%As an $\lie{sl}(5)$ representation the $Q_{hol}$-cohomology of $\lie{string}_{IIA}$ is equivalent
+%\end{prop}
 
 \parsec[]
 
