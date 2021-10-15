@@ -1,18 +1,33 @@
 \section{Twisted supergavity on AdS space}
 \label{sec:ads}
 
-\brian{need to motivate osp}
+So far, we have mostly given evidence for the 11-dimensional theory as a twist of supergravity in a flat background. 
+We now turn to twisted versions of AdS backgrounds of 11-dimensional supergravity. 
+
+In $M$-theory, AdS backgrounds arise from backreacting some number of branes. 
+For $M2$ branes, the backreacted geometry is ${\rm AdS}_4 \times S^7$.
+For the $M5$ branes, the backreacted geometry is ${\rm AdS}_7 \times S^4$. 
+
+According to the AdS/CFT correspondence, supergravity on such backgrounds should be dual to the relevant worldvolume theory. 
+In this section, we do not directly refer to the worldvolume theories on the holomorphic twists of the $M2$ and $M5$ branes.
+Rather, we identify the fields sourcing the branes at the level of the twisted 11-dimensional theory.
+In turn, we give a proposal for the twisted AdS background. 
+We will show that the twist of the superconformal algebra is a global symmetry of this twisted background. 
 
 \subsection{Superconformal algebras}
 
-\begin{prop}
-The $Q$-cohomology of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra is isomorphic to the super Lie algebra $\lie{osp}(6|1)$. 
-\end{prop} 
+The complex form of the algebra of isometries for supergravity in both the ${\rm AdS}_4$ and ${\rm AdS}_7$ backgrounds is $\lie{osp}(8|2)$ (though, their real forms differ). 
+This agrees with the complex form of the 6d $\cN=(2,0)$ superconformal algebra and the 3d $\cN=8$ superconformal algebra. 
+The bosonic part of this algebra is isomorphic to $\lie{so}(8) \oplus \lie{sp}(2) \cong \lie{so}(8) \oplus \lie{so}(5)$. 
+
+The minimal supercharge $Q$ acting on 11-dimensional supersymmetry algebra is an element of this superconformal algebra. 
+In \cite{SWsuco2}, the second two authors show that the $Q$-cohomology is isomorphic to $\lie{osp}(6|1)$. 
+This super Lie algebra will play the role of the isometries in the twisted AdS background. 
 
 \subsection{The ${\rm AdS}_4 \times S^7$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of 11-dimensional supergravity. 
-In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
+%In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
 
 \parsec[]
 
@@ -23,17 +38,17 @@ We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
 
 Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backreacting M2 branes. Consider a stack of $N$ $M2$ branes wrapping $\R\times \C_z$. A natural interaction to consider is 
 \[
-I_{M2}(\gamma) = N\int_{\C_z} \gamma
+I_{M2}(\gamma) = N\int_{\C_z} \gamma + \cdots
 \] 
-\brian{should we write $\cdots$ here? This is just the first-order piece.}
 which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of $M5$ branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
+We have only indicated the lowest order coupling, the $\cdots$ indicate higher order couplings which will explicitly involve the fields in the worldvolume theory. 
 
 This coupling is justified by comparison with the physical theory and by dimensional reduction. 
 Indeed, as discussed in section \ref{s:components}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of $M2$ branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
 
 Moreover, reducing on a circle transverse to the $M2$ brane yields the $SU(4)$ twist of type IIA supergravity on $\R^2\times \C_z\times \C^3$ with $N$ $D2$ branes wrapping $\R\times \C_z$. As is shown in \cite{CLsugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
 \[
-I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma
+I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma + \cdots
 \] 
 where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA supergravity. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
 
@@ -192,7 +207,7 @@ The operator $[F,-]$ acts on the fields according to two types of maps:
 [F,-] & \colon \Omega^{i,\bu}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR) \to \Omega^{i,\bu+3}(\CC^4_w \setminus 0) \otimes \Omega^{j,\bu} (\CC_z) \otimes \Omega^\bu (\RR).
 \end{align*}
 
-\brian{get the filtration straight}
+%\brian{get the filtration straight}
 
 
 The first page of the spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$. 
@@ -273,7 +288,8 @@ since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by
 \subsection{The ${\rm AdS}_7 \times S^4$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our description of the minimal twist of 11-dimensional supergravity. 
-In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
+
+%In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
 
 \parsec[sec:m5coupling]
 
@@ -298,11 +314,11 @@ In the physical theory, M5 branes magnetically couple to the $C$-field; the coup
 We obtain a deeper justification for this coupling through dimensional reduction to type IIA supergravity. 
 Reducing on the circle along the directions the $M5$ branes wrap yields the $SU(4)$ invariant twist of type IIA supergravity on $\CC^4 \times \RR^2$ with $N$ $D4$ branes wrapping $\CC^2 \times \RR$. 
 
-In \cite{CLSugra}, it is shown that the magnetic coupling of $D4$ branes to the $SU(4)$ twist of IIA is of the form
+In \cite{CLsugra}, it is shown that the magnetic coupling of $D4$ branes to the $SU(4)$ twist of IIA is of the form
 \[
 N \int _{\C^2 \times \RR} \div^{-1} \mu \vee \Omega_{\C^4} + \cdots .
 \]
-\brian{should we write $\cdots$ here? This is just the first-order piece.}
+Again, we have only explicitly indicated the first-order piece of the coupling. 
 
 \parsec[s:m5backreact]
 
