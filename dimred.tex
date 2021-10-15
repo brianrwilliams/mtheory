@@ -44,7 +44,7 @@ More precisely, this is a model for the $S^1$-equivariant cohomology of the stat
 We refer to \cite{CLtypeI, CLsugra} for detailed justification for this ansatz. 
 
 \parsec[s:poisson]
-The original action for Kodaira-Spencer theory posited by \cite{BCOV}\surya{which reference is BCOV} has a nonlocal kinetic term. In the BV formalism, this is codified by stipulating that the BV pairing is a degenerate odd Poisson tensor rather than an odd symplectic form. 
+The original action for Kodaira-Spencer theory posited by \cite{BCOV} has a nonlocal kinetic term. In the BV formalism, this is codified by stipulating that the BV pairing is a degenerate odd Poisson tensor rather than an odd symplectic form. 
 The Poisson kernel is given by the expression 
 \[
 (\div\otimes 1)\delta_{\Delta \subset X\times X} \in \left[\PV^{\bu,\bu}(X)\right]^{\hotimes 2} ,
@@ -118,6 +118,7 @@ The $\ZZ/2$ graded complex of fields of minimal Kodaira--Spencer theory on $X$ t
 {\PV^{3,\bu}} \arrow[r, "u\div"] & {u\PV^{2,\bu}} \arrow[r, "u\div"] & {u^2\PV^{1,\bu}} \arrow[r, "u\div"] & {u^3\PV^{0,\bu}}
 \end{tikzcd}.
 \eeqn
+Denote this complex by $\cE_{mKS}(X)$. 
 Here, $u^\ell\PV^{k,i}$ is placed in parity $k + i -1 \mod 2$. 
 %Denote this complex by $\cE_{mKS}(X)$. 
 The classical BCOV action $I_{BCOV}$ follows from the general formula we gave above. 
@@ -125,8 +126,10 @@ The classical BCOV action $I_{BCOV}$ follows from the general formula we gave ab
 With this in hand the conjecture of \cite{CLsugra} takes the following form.
 
 \begin{conj}
-The $SU(4)$-invariant twist of type IIA supergravity on $\RR^2\times \CC^4$ is the $\Z/2$-graded Poisson BV theory with fields \[
-\alpha = \sum_n \alpha_n u^n \in \cE_{mKS}(\CC^4) \otimes \Omega^{\bu}(\RR^2).\] 
+The $SU(4)$-invariant twist of type IIA supergravity on $\RR^2\times \CC^4$ is the $\Z/2$-graded Poisson BV theory with fields 
+\beqn\label{eqn:IIAfields}. 
+\alpha = \sum_n \alpha_n u^n \in \cE_{mKS}(\CC^4) \otimes \Omega^{\bu}(\RR^2).
+\eeqn
 The classical interaction takes the form $I_{IIA} = \int_{\CC^4 \times \RR^2} \alpha_0^3 + {\rm higher\;order\;terms}.$
 %The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
 \end{conj}
@@ -156,7 +159,9 @@ Doing so will require a slight modification to the description of the $SU(4)$ tw
 
 \parsec[sec:IIApot]
 
-Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLsugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. Since components of the $C$-field become components of $\gamma_{11d}$ in $\cE$ \surya{hopefully we can see this in the component fields section}, this suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
+Recall that in the physical theory, the components of the $C$-field in 11d that are not supported along the M-theory circle become the components of the Ramond--Ramond 2-form of type IIA. However, as noted in \cite{CLsugra} components of Ramond--Ramond fields do not appear as fields in Kodaira--Spencer theory; rather it is components of their field strengths that appear. 
+We recalled in \S \ref{s:components} that components of the $C$-field become components of $\gamma_{11d}$ in $\cE$.
+This suggests that we must modify our description of the twist of type IIA to include potentials for certain fields.
 
 The fundamental fields of the $SU(4)$ twist of IIA supergravity were given in \eqref{eqn:IIAfields}. 
 We modify the space of fields by introducing potentials for both the $\Pi$ and $\sigma$ fields. 
@@ -551,7 +556,7 @@ The action is
 \end{multline}
 \end{conj}
 
-\brian{general background on susy. Why expect 5d $\cN=1$ susy}
+%\brian{general background on susy. Why expect 5d $\cN=1$ susy}
 
 \parsec[-]
 
@@ -700,7 +705,7 @@ The deformation introduces the following Lie bracket
 \subsection{The $SU(5)$ twist of type IIA supergravity}
 \label{s:su5IIA}
 
-\brian{Ingmar can you argue why this is the SU(5) twist on susy grounds?}
+%\brian{Ingmar can you argue why this is the SU(5) twist on susy grounds?}
 
 Thus, given that our 11-dimensional theory correctly describes the $SU(5)$-invariant twist of supergravity on $\CC^5 \times \RR$, to obtain the $SU(5)$ twist of type IIA supergravity we should reduce along the topological $\RR$ direction. 
 This results in a $SU(5)$ invariant, holomorphic, theory on $\CC^5$. 
