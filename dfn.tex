@@ -239,9 +239,9 @@ defines a consistent theory in the BV formalism if and only if
 \deq{
   \{S_{BF} + g J, S_{BF} + g J \} = 0.
 }
-Since this must hold for all $g$, and since the undeformed action $S$ is already a solution to the classical master equation, this reduces the condition
+Since this must hold for all $g$, and since the undeformed action $S$ is already a solution to the classical master equation, this reduces to the pair of conditions
 \deq[eq:2cond]{
-  \{S_{BF},J\} + \frac12 \{J,J\} = 0.
+  \{S_{BF},J\} =  \{J,J\} = 0.
 }
 
 The form of $J$ depends on which presentation we use for BF theory.
@@ -283,12 +283,12 @@ Unless otherwise stated, we will work with this $\ZZ/2$ grading for the remainde
 We proceed to show that $S_{BF,\infty} + g J$ solves the classical master equation.
 For notational simplicity we will omit the integral symbol $\int^\Omega$.
 
-By apparent field type reasons, the equation \eqref{eq:2cond} is equivalent to the following two equations
-\[
-\{S_{BF,\infty}, J\} = 0, \qquad \{J,J\} = 0.
-\] 
-It is furthermore immediate from the form of the BV bracket that $\{J,J\} = 0$, since $J$ depends only on the $\gamma$ field. 
+%By apparent field type reasons, the equation \eqref{eq:2cond} is equivalent to the following two equations
+%\[
+%\{S_{BF,\infty}, J\} = 0, \qquad \{J,J\} = 0.
+%\] 
 
+It is immediate from the form of the BV bracket that $\{J,J\} = 0$, since $J$ depends only on the $\gamma$ field. 
 It remains to check that $\{S_{BF,\infty},J\} = 0$. 
 For the quadratic term in the BF action, we note that 
   \deq{
@@ -300,12 +300,17 @@ The contribution from the remaining BF action takes the form
 \[
     \left\{ \frac12 \frac{1}{1-\nu} \del\gamma \vee \mu^2, \frac16 \gamma \wedge \del\gamma \wedge \del \gamma \right\} =\frac12 (\mu \vee \del \gamma) \wedge \del \gamma \wedge \del \gamma .
 \]
-
     %\frac12 \frac{1}{1-\nu} \bigg[ (\del\gamma\vee\mu) \wedge \del\gamma \wedge \del \gamma \pm \del\gamma \wedge (\del\gamma\vee\mu) \wedge \del \gamma \pm \del\gamma \wedge \del \gamma \wedge (\del\gamma\vee\mu) \bigg].
-
 This expression is zero for symmetry reasons. 
-Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional which is cubic in this two-form. 
-We can ask whether such a contraction exists just at the level of $\lie{sl}(5)$ representation theory by computing the decomposition of the two-form. 
+Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional which is cubic in this two-form. We can ask whether such a  contraction exists just at the level of $\lie{sl}(5)$ representation theory. Let $\ydiagram{1}$ denote the fundamental representation of~$\lie{sl}(5)$, which we identify with constant one-forms. Since the term must be a scalar, the contraction $(\partial\gamma^3$ must sit in the fundamental representation again, since it is dual to a vector field. Computing the decomposition of the tensor cube of the two-form, we find
+\deq{
+  \Sym^3 \left( \ydiagram{1,1} \right) \cong \ydiagram{3,3} \oplus \ydiagram{2,2,1,1}.
+}
+(In fact, the absence  of the relevant irreducible representation does not  even depend on the parity of the  field $\gamma$, since 
+  \deq{
+    \wedge^3\left( \ydiagram{1,1} \right) \cong \ydiagram{3,1,1,1}  \oplus \ydiagram{2,2,2};
+  }
+the  fundamental representation has symmetry type $\ydiagram{2,1}$.) 
 
 \parsec[s:coupling]
 
