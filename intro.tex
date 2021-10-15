@@ -17,7 +17,7 @@ The notion of twisting was introduced by Witten and dates back to the first exam
 Shortly afterwards (thirty years ago), the field had expanded to include a diverse set of examples related to topological field theory~\cite{BlauThompson}. 
 
 For many years, twisting constructions were motivated by the goal of producing topological field theories, and correspondingly emphasized the role of particular modifications of  Lorentz symmetry via ``twisting homomorphisms'' designed to produce scalar supercharges.
-From a more modern perspective, though, twisting a supersymmetric field theory is just a systematic way of taking invariants with respect to a fixed supercharge. This requires that the supercharge square to zero, so that the supercharge defines an odd abelian subalgebra of the supersymmetry algebra.
+From a more modern perspective, though, twisting a supersymmetric field theory is just a systematic way of taking invariants with respect to a fixed supercharge. This requires that the supercharge square to zero, so that the supercharge defines an odd abelian subalgebra of the supersymmetry algebra.\footnote{More generally, one could consider ``omega backgrounds'' by taking the derived invariants of a more general subalgebra in which the odd part is not necessarily abelian.}
 The variety of appropriate square-zero elements was studied systematically in~\cite{NV}, and has deep relations not only to the  classification of  twists, but to the construction  of supersymmetric field theories via the pure spinor formalism~\cite{Cederwall,EHSW}. The name ``pure spinor'' originates because the  variety of  square-zero elements always contains a minimal stratum that is related to the space of Cartan pure spinors; in turn, these correspond to choices of complex structure on the  spacetime, at least when the dimension is even. 
 As such, any $d$-dimensional  supersymmetric theory that admits a twist admits a \emph{minimal} or~\emph{holomorphic} twist, in which $n=\lceil d/2\rceil$ of the translations act nontrivially. Other twists can be understood as further twists of this holomorphic theory.
 The importance and interest of holomorphic twists was emphasized in the work of Costello~\cite{CostelloHol}, who developed the notion mathematically, building on earlier work on holomorphic field theories in the physics literature~\cite{NekThesis}. (Constructions related to holomorphic twists had appeared in the context of supersymmetric indices; see~\cite{Romelsberger}, for example.) 
@@ -46,12 +46,12 @@ In~\cite{SWspinor}, the last two authors used the pure spinor formalism to descr
 (In separate work~\cite{EagerHahner}, the free-field limit of the non-minimal twist was derived from the component-field multiplet as used in the physics literature.)
 %\brian{also reference fabian and richard}
 The resulting theory is $\ZZ/2$ graded; the grading is inherited from the totalization of ghost number and intrinsic parity in the original, untwisted, eleven-dimensional theory.
-In \S\ref{sec:dfn} we extend this free limit of the twist of 11-dimensional supergravity to a fully interacting theory in the Batalin--Vilkovisky (BV) formalism.\footnote{One subtlety is that unlike the usual BV formalism which involves a $\ZZ$-grading by ghost number, the 11-dimensional theory is only $\ZZ/2$ graded.
+In \S\ref{sec:dfn} we introduce a full interacting theory in th Batalin--Vilkovisky (BV) formalism which has, as its free limit, the twist computed in \cite{SWspinor}.\footnote{One subtlety is that unlike the usual BV formalism which involves a $\ZZ$-grading by ghost number, the 11-dimensional theory is only $\ZZ/2$ graded.
 All odd fields can therefore be considered as ``ghosts'' in the twisted theory.}
 Our main conjecture is that this interacting BV theory is equivalent to the minimal twist of 11-dimensional supergravity on flat space.
 
 \begin{conj}
-The $11$-dimensional partially holomorphic-topological theory on $\CC^5 \times \RR$ that we will define in \S \ref{s:dfn} is equivalent to twisted supergravity on $\RR^{11}$ where the bosonic ghost takes value the holomorphic supercharge. 
+The $11$-dimensional partially holomorphic-topological theory on $\CC^5 \times \RR$ that we will define in \S \ref{sec:dfn} is equivalent to twisted supergravity on $\RR^{11}$ where the bosonic ghost takes value the holomorphic supercharge. 
 \end{conj}
 
 %\brian{Ingmar, maybe you can comment on the status of this conjecture.}
@@ -152,24 +152,21 @@ It is a sort of holomorphic version of gravity which at the genus zero  describe
 We recall relevant aspects of Kodaira--Spencer gravity in \ref{s:BCOV}. 
 
 Through the dimensional reduction of our 11-dimensional theory we will find a match with Costello and Li's descriptions of twists of 10-dimensional supergravity in terms of BCOV theory.
-In Table \ref{table:IIsugra}, we provide a summary of the conjectural twists of type IIA and type IIB supergravity. 
-The notation $\CC^n_B \times \RR^{2m}_A$ uses terminology from the topological string. 
-It means that the twist of supergravity we are considering arises from a certain subsector of a hybrid topological string which is the $B$-model into the Calabi--Yau manifold $\CC^n$ and the $A$-model into the symplectic manifold $\RR^{2m}$. 
+In Table \ref{diagram}, we provide a summary of the comparisons with twists of supergravity in lower dimensions we perform. The squigly arrows denote further twists, and the solid arrows denote various kinds of reductions. 
 
-\begin{table}[]
-\begin{tabular}{c|c|c|c|c|c|c|c|}
-\cline{2-7}
-& SU(5) twist & SU(4) twist & SU(3) twist & SU(2) twist & SU(1) twist & top twist  \\ \hline
-\multicolumn{1}{|l|}{Type IIA} & \S \ref{s:su5IIA} & $\CC^4_B \times \RR^2_A$ & & $\CC^2_B \times \RR^6_A$ &  & $\RR^{10}_A$  \\ \hline
-\multicolumn{1}{|l|}{Type IIB} & $\CC^5_B$ & & $\CC^3_B \times \RR^4_A$ & & $\CC_B \times \RR^8_A$ & \\ \hline
-\end{tabular}
-\caption{A summary of twists of 10-dimensional supergravity}
-\label{table:IIsugra}
-\end{table}
+\begin{center}
+\begin{tikzcd}[row sep=large]
+                                                                         &  \parbox{3cm}{\centering minimal twist of 11d} \arrow[ld, "\text{topological }S^1" '] \arrow[d, "\text{slab }" '] \arrow[rdd, "\text{CY3}" ' pos=.75] \arrow[rr, rightsquigarrow] \arrow[rd, "\text{holomorphic }S^1"] &                                                             &  \parbox{3cm}{\centering non-minimal twist of 11d} \arrow[d, "\text{topological }S^1"] \\
+ \parbox{3cm}{\centering minimal twist of type IIA} \arrow[r, "\text{orbifold}"] &  \parbox{3cm}{\centering minimal twist of type I} \arrow[r, rightsquigarrow, crossing over]                                                                                                                                                                                               &  \parbox{3cm}{\centering SU(4) twist of type IIA} \arrow[r, rightsquigarrow] &  \parbox{3cm}{\centering SU(2) twist of type IIA}                                                 \\
+                                                                         &                                                                                                                                                                                                                                                          & \parbox{3cm}{\centering minimal twist of 5d $\cN=1$}                   &                                                                                                
+\end{tikzcd}
+\end{center}
+\label{diagram}
 
 In \S \ref{s:su4red} we will show that the reduction along $\{0\} \times \RR \times \{0\} \subset \CC^4 \times \CC \times \RR$ is equivalent to the $SU(4)$ twist of type IIA supergravity. 
 The topological string approach does not lead to a description of the minimal, or holomorphic, twist of type IIA supergravity. 
 In \S \ref{s:su5IIA}, we describe the reduction along the line $\{0\} \times \RR \subset \CC^5 \times \RR$ to obtain a conjectural description of the holomorphic $SU(5)$ twist of type IIA supergravity. 
+In \S \ref{s:Ired}, we show that the reduction along the interval $\{0\}\times [0,1]\subset \CC^5\times [0,1]$ with certain boundary conditions on the endpoints of the interval is equivalent to the twist of type I supergravity. We further observe in \S \ref{s:orbifold} that the twist of type I arises as the fixed points of a natural $\ZZ/2$ action on the minimal twist of IIA. Next, in \S \ref{s:CY3} we study the reduction along a Calabi-Yau 3 fold to obtain a conjectural description of the minimal twist of 5d $\cN=1$ supergravity. Finally, we show in \S \ref{s:nonmin} how the non-minimal twist of 11d supergravity arises as a further twist of our holomorphic twist.
 
 
 \subsection*{Future work} 
