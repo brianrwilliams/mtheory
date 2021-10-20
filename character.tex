@@ -1,0 +1,80 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-mtheory,amsaddr,tikz-feynman}
+
+\addbibresource{references.bib}
+
+%\linespread{1.2} %for editing
+%\usepackage{mathpazo}
+
+\begin{document}
+
+\subsection{Local character}
+
+We consider the 11-dimensional theory on the manifold $\CC^5 \times \RR$ where $\CC^5$ is equipped with its standard Calabi--Yau structure. 
+On this background, the theory is manifestly $SU(5)$ invariant. 
+In this section, we compute the corresponding character of the local operators at $0 \in \CC^5 \times \RR$. 
+
+The character is only sensitive to the free limit of the theory.
+Furthermore, the linear BRST operator is an $SU(5)$-invariant deformation of the $(\dbar + \d_{\RR})$ operator. 
+Therefore, to compute the character it suffices to compute the $SU(5)$-equivariant character of the $\dbar$-cohomology. 
+
+The solutions to the $(\dbar + \d_{\RR})$-equations of motion simply say that all fields are holomorphic along $\CC^5$ and constant along $\RR$. 
+Thus, the solutions can be identified with 
+\begin{align*}
+\mu^{i}\partial_{z_i} & \in \Vect(\CC^5) \cong \oplus_i \cO(\C^5)\partial_{z_i},\quad 
+\nu \in \cO (\C^5) \\
+\beta & \in \cO (\C^5), \quad \gamma^{i} \d z_i \in \Omega^{1}(\CC^5) \cong \oplus_i \cO (\C^5)\d z_i 
+\end{align*}
+where $z_i$ is a holomorphic coordinate on $\CC^5$. 
+
+Corresponding to each of the above, we have a tower of linear local operators labeled by $(m_j) = (m_1, m_2, m_3, m_4, m_5)\in \Z^5_{\geq 0}$; these are given by
+\begin{align*}
+ \mu^{i}_{(m_j)} &: \mu^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\mu^{i} (0) \\
+\nu_{(m_j)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
+\gamma^{i}_{(m_j)} &: \gamma^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\gamma^{i} (0) \\
+ \beta_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
+\end{align*}
+
+It is easiest to label the Cartan subgroup of $SU(5)$ by fugacities $q_1,\ldots, q_5$ subject to the constraint that $\prod_{i=1}^5 q_i = 1$. 
+The single particle index is the $SU(5)$ character of the space of linear local operators.
+
+\begin{lem}
+The single particle index is 
+\[
+i(q_1,\ldots,q_5) = \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_{i=1}^5 q_i^{-1}}{\prod_{i=1}^5 (1-q_i^{-1})}
+\]
+where the fugacities satisfy the constraint $\prod_{i=1} q_i = 1$. 
+\end{lem}
+\begin{proof}
+The linear local operators $ \nu_{(m_j)}$ and $\beta_{(m_j)}$ are of the same $q$-weight but opposite parity.
+Thus, they do not contribute to the single particle index.
+
+The $q$-weight of the odd local operator $\mu_{(m_j)}^i$ is 
+\[
+q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} .
+\]
+The $q$-weight of the even local operator $\gamma_{(m_j)}^i$ is 
+\[
+q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} .
+\]
+
+Thus, in total, the single particle index is
+\[
+- \frac{\sum_{i=1}^5 q_1 \cdots \Hat{q_i} \cdots q_5}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} .
+\]
+This simplifies to the stated expression.
+\end{proof}
+
+This single particle index for our space of local operators agrees with the one computed in \cite{NekrasovInstanton}. 
+To obtain the full index of local operators we apply the plethystic exponential ${\rm PE}[i(x)] = \exp\left(\sum_n \frac1n f(x^n)\right)$. 
+
+\begin{prop}
+The character of local operators of the 11-dimensional theory on $\CC^5 \times \RR$ is 
+\[
+\prod_{n_i \geq 0} 
+\]
+\end{prop}
+
+
+\end{document}
