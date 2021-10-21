@@ -544,7 +544,8 @@ The plethystic exponential returns the desired expression.
 \fi
 
 It is easiest to label the Cartan subgroup of $SU(5)$ by fugacities $q_1,\ldots, q_5$ subject to the constraint that $\prod_{i=1}^5 q_i = 1$. 
-The single particle index is the $SU(5)$ character of the space of linear local operators.
+We first compute the single particle index.
+This is the $SU(5)$ character of the space of linear local operators.
 
 \begin{lem}
 The single particle index is 
@@ -580,7 +581,7 @@ This simplifies to the stated expression.
 \end{proof}
 
 This single particle index for our space of local operators agrees with the one computed in \cite{NekrasovInstanton}. 
-To obtain the full index of local operators we apply the plethystic exponential ${\rm PE}[i(x)] = \exp\left(\sum_n \frac1n f(x^n)\right)$. 
+To obtain the full index of local operators we apply the plethystic exponential ${\rm PE}[f(x)] = \exp\left(\sum_n \frac1n f(x^n)\right)$. 
 
 \begin{prop}\label{prop:locchar}
 The character of local operators of the 11-dimensional theory on $\CC^5 \times \RR$ is 
@@ -589,7 +590,7 @@ The character of local operators of the 11-dimensional theory on $\CC^5 \times \
 \]
 \end{prop}
 \begin{proof}
-Recall that the plethystic exponential takes sums to products and monomials to geometric series. Apply this to the infinite series \ref{infseriesindex}.
+Recall that the plethystic exponential takes sums to products and monomials to geometric series. Apply this to the infinite series \eqref{infseriesindex}.
 \end{proof}
 %\[
 %\prod_ {(m_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
