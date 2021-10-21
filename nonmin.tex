@@ -29,50 +29,6 @@ The non-minimal twist of the 11-dimensional theory is equivalent to Poisson Cher
 \]
 \end{thm}
 
-\subsection{Index matching}
-\label{sec:indexcheck}
-
-As a first consistency check, we can compare deformation invariants attached to the holomorphic twist and the $G_2\times SU(2)$ twist. %\brian{If we are going to say G2 we need to explain how G2 arises. I've been calling it the non minimal twist.}
-We will find that the local character of the latter agrees with a specialization of the local character computed in proposition \ref{prop:locchar}
-
-\begin{prop}
-The  local character of the $G_2\times SU(2)$-invariant twist of 11d supergravity on flat space is given by
-\[
-\chi_{SU(3)\times SU(2)}(\Obs_0^{\cE_{G2\times SU(2)}}) = \prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
-\] 
-This agrees with the specializaiton of the local character computed in proposition \ref{prop:locchar} at $y=1$.
-\end{prop}
-\begin{proof}
-The space of solutions to linearized equations of motion is parametrized by a holomorphic function $A$ on $\C^2_{w_j}$. The corresponding linear local operators are labeled by $(n_1,n_2)\in \Z^2_{\geq 0}$  and are given by 
-\[
-A_{(n_1,n_2)} : A \mapsto \partial_{w_1}^{n_1}\partial_{w_2}^{n_2} A (0).
-\]
-
-The character of the linear span of these is given by the geometric series
-\[
-\sum _{(n_1,n_2)\in \Z^2_{\geq 0}} q^{-n_1+n_2}
-\] 
-with plethystic exponential given by 
-\[
-\prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
-\]
-
-For the last part, it suffices to show that the characters of linear local operators agree upon evaluating $y=1$. Summing the geometric series giving the character of linear local operators in the holomorphic twist yields the rational function \[\frac{\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y &+ q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right)}{(1-t_1^{-1}y)(1-t_1t_2^{-1}y)(1-t_2y)(1-q^{-1}y^{-3/2})(1-qy^{-3/2})}.\] Specializing $y=1$, the numerator cancels with the factors in the denominator involving the $t_i$. The result is \[\frac{1}{(1-q^{-1})(1-q)}\] which is exactly the sum of the geometric series we found
-
-\end{proof}
-
-%Notice that changing the values of $i,j$ just has the affect of permuting the holomorphic copies of $\CC^2$ leftover in the further twist. 
-
-%The Lie algebra of gauge symmetries of this model on flat space is 
-%\[
-%\Omega^{0,\bu} (\CC_i \times \CC_j) \hotimes \Omega^\bu(\RR^7) 
-%\]
-%which is quasi-isomorphic to $\cO^{hol}(\CC^2)$ equipped with the Poisson bracket $\{-,-\}_{pb}$. 
-%
-%More generally, the twist can be defined \brian{finish}
-
-\subsection{The non-minimal supercharge}
-
 From the point of view of the untwisted theory, the non-minimal twist is defined by working in a background where the fermionic ghost in the physical theory is equal to a supertranslation of the form
 \[
 Q + Q_{nm} 
@@ -99,7 +55,55 @@ We will fix the non-minimal supercharge
 \[
 Q_{nm} = \d z_1 \wedge \d z_2 .
 \]
-Notice that this choice of supercharge breaks the holonomy of the 11-dimensional theory from $SU(5)$ to $SU(2)$. 
+Notice that this choice of supercharge breaks the holonomy of the 11-dimensional theory from $SU(5)$ to $SU(3) \times SU(2)$. 
+
+\subsection{Index matching}
+\label{sec:indexcheck}
+
+As a first consistency check, we can compare deformation invariants attached to the holomorphic twist and the nonminimal twist. We will find that the local character of the latter agrees with a specialization of the local character computed in \ref{sec:locchar}
+
+\begin{prop}
+The  local character of the nonminimal twist of 11d supergravity on flat space is given by
+\[
+\prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
+\] 
+This agrees with the specializaiton of the local character computed in proposition \ref{prop:locchar}.
+\end{prop}
+\begin{proof}
+The space of solutions to linearized equations of motion is parametrized by a holomorphic function $A$ on $\C^2_{w_j}$. The corresponding linear local operators are labeled by $(n_1,n_2)\in \Z^2_{\geq 0}$  and are given by 
+\[
+A_{(n_1,n_2)} : A \mapsto \partial_{w_1}^{n_1}\partial_{w_2}^{n_2} A (0).
+\]
+
+The character of the linear span of these is given by the geometric series
+\beqn\label{nonmin:singleparticle}
+\sum _{(n_1,n_2)\in \Z^2_{\geq 0}} q^{-n_1+n_2}
+\eeqn
+with plethystic exponential given by 
+\[
+\prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
+\]
+
+For the last part, it suffices to observe the specialization at the level of single particle indices. A natural choice of fugacities for $SU(3)\times SU(2)$ is given in terms of the fugacities $q_i$ for $SU(5)$ chosen in \ref{sec:locchar} by requiring the additional constraints \[q_1q_2q_3 = 1, \ \ \ q_4q_5=1.\]
+After imposing the above constraints, the single particle index \ref{singleparticleindex} is
+\[
+i(q) = \frac{1}{(1-q)(1-q^{-1})}
+\]
+where $q = q_4=q_5^{-1}$. This is exactly the sum of the geometric series \ref{nonmin:singleparticle}
+
+\end{proof}
+
+%Notice that changing the values of $i,j$ just has the affect of permuting the holomorphic copies of $\CC^2$ leftover in the further twist. 
+
+%The Lie algebra of gauge symmetries of this model on flat space is 
+%\[
+%\Omega^{0,\bu} (\CC_i \times \CC_j) \hotimes \Omega^\bu(\RR^7) 
+%\]
+%which is quasi-isomorphic to $\cO^{hol}(\CC^2)$ equipped with the Poisson bracket $\{-,-\}_{pb}$. 
+%
+%More generally, the twist can be defined \brian{finish}
+
+\subsection{The non-minimal global symmetry algebra}
 
 We constructed an embedding of the $Q$-cohomology of the supersymmetry algebra into the fields of our 11-dimensional theory on $\CC^5 \times \RR$. 
 The further twist is obtained by working in a background where a certain field on $\CC^5 \times \RR$ takes nonzero value $Q_{nm}$. 
