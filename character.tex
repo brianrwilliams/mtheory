@@ -59,10 +59,16 @@ The $q$-weight of the even local operator $\gamma_{(m_j)}^i$ is
 q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} .
 \]
 
-Thus, in total, the single particle index is
-\[
+Thus we find that the single particle index is given by the infinite series
+\beqn\label{infseriesindex}
+\sum_{i=1}^5\left ( \sum_{(m_i)\in \Z^5} q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} - \sum_{(m_i)\in \Z^5} q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} \right)
+\eeqn
+
+which sums to the expression
+\beqn\label{singleparticleindex}
 - \frac{\sum_{i=1}^5 q_1 \cdots \Hat{q_i} \cdots q_5}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} .
-\]
+\eeqn
+
 This simplifies to the stated expression.
 \end{proof}
 
@@ -72,9 +78,19 @@ To obtain the full index of local operators we apply the plethystic exponential 
 \begin{prop}
 The character of local operators of the 11-dimensional theory on $\CC^5 \times \RR$ is 
 \[
-\prod_{n_i \geq 0} 
+\prod_{i=1}^{5} \prod_{(m_i)\in \Z^5} \frac{1-q_1^{m_1+1}\cdots q_i^{m_i}\cdots q_5^{m_5+1}}{1-q_1^{m_1}\cdots q_i^{m_i+1}\cdots q_5^{m_5}}
 \]
 \end{prop}
+\begin{proof}
+Recall that the plethystic exponential takes sums to products and monomials to geometric series. Apply this to the infinite series \ref{infseriesindex}.
+\end{proof}
 
-
+In terms of these fugacities, deforming the theory in a way that breaks the $SU(5)$ symmetry to a $SU(3)\times SU(2)$ subgroup can be described by requiring that the fugacities satisfy the additional constraints \[q_1q_2q_3 = 1, \ \ \ q_4q_5=1.\]
+\begin{prop}
+After imposing the above constraints, the single particle index is
+\[
+i(q) = \frac{1}{(1-q)(1-q^{-1})}
+\]
+where $q = q_4 = q_5^{-1}$. This matches with the single particle index of the nonminimal twist.
+\end{prop}
 \end{document}

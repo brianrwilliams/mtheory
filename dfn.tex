@@ -464,7 +464,7 @@ The two-form fields $\beta^{2;0}, \beta^{1;1}, \gamma^{1;0}, \gamma^{0;1}$, the 
 %\dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + (\del \gamma^{0;0} \wedge \del \gamma^{2;0}) \vee (g \Omega^{-1}) + \frac12 (\del \gamma^{1;0} \wedge \del \gamma^{1;0}) \vee (g \Omega^{-1}) = 0 .
 %\eeqn
 
-\subsection{Local character}
+\subsection{Local character}\label{sec:locchar}
 
 We consider the 11-dimensional theory on the manifold $\CC^5 \times \RR$ where $\CC^5$ is equipped with its standard Calabi--Yau structure. 
 On this background, the theory is manifestly $SU(5)$ invariant. 
@@ -491,6 +491,7 @@ Corresponding to each of the above, we have a tower of linear local operators la
  \beta_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
 \end{align*}
 
+\iffalse
 We choose generators of the Cartan subgroup for the $SU(5)$ action with the following weights:
 
 \[\begin{array}{|c|c|c|c|c|c|}
@@ -505,7 +506,7 @@ We are choosing the weights in this way as a matter of convenience for the later
 For instance, upon performing the further twist of the 11-dimensional theory, the $SU(5)$ symmetry is broken to an $SU(3)\times SU(2)$ symmetry; the Cartan of the unbroken symmetries corresponds to the fugacities $q, t_1, t_2$ in the above table. 
 
 We can now readily compute the characters.
-\begin{prop}\label{prop:locchar}
+\begin{prop}
 The $SU(5)$ local character of the holomorphic twist of the 11-dimensional theory on flat space is
 \begin{multline}
 \chi_{SU(5)} = 
@@ -538,10 +539,62 @@ In sum, the character of linear local operators is the geometric series
 \sum_{(m_j)\in \Z^5_{\geq 0 }}-t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (\begin{aligned}t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \\  - (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2})\end{aligned}\right).
 \] 
 The plethystic exponential returns the desired expression.
+
+\end{proof}
+\fi
+
+It is easiest to label the Cartan subgroup of $SU(5)$ by fugacities $q_1,\ldots, q_5$ subject to the constraint that $\prod_{i=1}^5 q_i = 1$. 
+The single particle index is the $SU(5)$ character of the space of linear local operators.
+
+\begin{lem}
+The single particle index is 
+\[
+i(q_1,\ldots,q_5) = \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_{i=1}^5 q_i^{-1}}{\prod_{i=1}^5 (1-q_i^{-1})}
+\]
+where the fugacities satisfy the constraint $\prod_{i=1} q_i = 1$. 
+\end{lem}
+\begin{proof}
+The linear local operators $ \nu_{(m_j)}$ and $\beta_{(m_j)}$ are of the same $q$-weight but opposite parity.
+Thus, they do not contribute to the single particle index.
+
+The $q$-weight of the odd local operator $\mu_{(m_j)}^i$ is 
+\[
+q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} .
+\]
+The $q$-weight of the even local operator $\gamma_{(m_j)}^i$ is 
+\[
+q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} .
+\]
+
+Thus we find that the single particle index is given by the infinite series
+\beqn\label{infseriesindex}
+\sum_{i=1}^5\left ( \sum_{(m_i)\in \Z^5} q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} - \sum_{(m_i)\in \Z^5} q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} \right)
+\eeqn
+
+which sums to the expression
+\beqn\label{singleparticleindex}
+- \frac{\sum_{i=1}^5 q_1 \cdots \Hat{q_i} \cdots q_5}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} .
+\eeqn
+
+This simplifies to the stated expression.
+\end{proof}
+
+This single particle index for our space of local operators agrees with the one computed in \cite{NekrasovInstanton}. 
+To obtain the full index of local operators we apply the plethystic exponential ${\rm PE}[i(x)] = \exp\left(\sum_n \frac1n f(x^n)\right)$. 
+
+\begin{prop}\label{prop:locchar}
+The character of local operators of the 11-dimensional theory on $\CC^5 \times \RR$ is 
+\[
+\prod_{i=1}^{5} \prod_{(m_i)\in \Z^5} \frac{1-q_1^{m_1+1}\cdots q_i^{m_i}\cdots q_5^{m_5+1}}{1-q_1^{m_1}\cdots q_i^{m_i+1}\cdots q_5^{m_5}}
+\]
+\end{prop}
+\begin{proof}
+Recall that the plethystic exponential takes sums to products and monomials to geometric series. Apply this to the infinite series \ref{infseriesindex}.
+\end{proof}
 %\[
 %\prod_ {(m_j)\in \Z^5_{\geq 0}}\frac{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-n_1+n_2}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right)}{1- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1y^{-1} + t_1^{-1}t_2y^{-1} + t_2^{-1}y^{-1} + q^{-1}y^{\frac 3 2} + qy^{\frac 3 2} \right)}.
 %\]
-\end{proof}
+
 
 %The linear equations of motion for the superfield $\mu$ read 
 %\[
