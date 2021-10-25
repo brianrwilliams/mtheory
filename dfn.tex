@@ -10,12 +10,12 @@ The theory will be defined on any eleven-dimensional manifold of the form $X \ti
 \label{sec:divfree}
 We set up some notations and conventions in the context of complex geometry. 
 Let $V$ be a holomorphic vector bundle on a complex manifold $X$. 
-If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of anti-holomorphic Dolbeault forms of type $j$ on with values in $V$.
-The $\dbar$ operator for $V$ is $\dbar \colon \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X)$ defines the Dolbeault complex of $V$
+If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of anti-holomorphic Dolbeault forms of type $j$ on~$X$ with values in $V$.
+The $\dbar$ operator $\dbar \colon \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X,V)$ defines the Dolbeault complex of $V$:
 \[
   \Omega^{0,\bu}(X, V) = \left(\Omega^{0,j}(X, V)[-j] , \; \dbar\right) .
 \]
-This is a free resolution for the sheaf of holomorphic sections of $V$.
+This is a free (smooth) resolution for the sheaf of holomorphic sections of $V$.
 
 Suppose $X$ is a Calabi--Yau manifold with holomorphic volume form $\Omega$.
 The divergence $\div(\mu)$ of a holomorphic vector field $\mu$ is defined by the formula
@@ -50,8 +50,8 @@ The Lie bracket defined by the formulas
 is compatible with $\div$ and endows \eqref{eqn:cplx1} with the structure of a sheaf of dg Lie algebras.
 We will refer to this sheaf by the symbol $\cL_0(X)$, or just $\cL_0$ if $X$ is understood. 
 
-The sheaf $\cL_0$ has the structure of a {\em local} dg Lie algebra, see see \cite[\S 3.1.3]{CG2}.
-This means that as a graded sheaf, $\cL_0$ is the smooth sections of a graded vector bundle and the differential and Lie bracket are given by differential and bidifferential operators, respectively.
+The sheaf $\cL_0$ has the structure of a {\em local} dg Lie algebra~\cite[\S 3.1.3]{CG2}.
+This means that, as a graded sheaf, $\cL_0$ is the smooth sections of a graded vector bundle, and its differential and Lie bracket are given by differential and bidifferential operators respectively.
 
 
 \parsec[sec:Linfty]
@@ -62,7 +62,7 @@ The Chevalley--Eilenberg cochain complex is
 \left(\Sym\left(\cL^\vee [-1] \right), \delta_\cL\right) .
 \]
 The Taylor components of $\delta_\cL$ define higher brackets $\{[-]_k\}_{k=1,2,\ldots}$ where $[-]_k \colon \cL^{\times k} \to \cL[2-k]$. 
-The condition that the differential is square-zero $\delta_\cL \circ \delta_\cL = 0$ is equivalent to the higher Jacobi relations.
+The condition that the differential $\delta_\cL$ is square-zero is equivalent to the higher Jacobi relations.
 
 An $L_\infty$ morphism $\Phi: \cL \rightsquigarrow \cL'$ is the same datum as a map of commutative dg algebras 
 \deq{
@@ -73,7 +73,6 @@ between their respective Lie algebra cochains. It follows from this that \emph{a
 $\cL_0$ is the sheaf~\eqref{eqn:cplx1} resolving divergence-free vector fields equipped with the dg Lie algebra structure constructed in the previous section.
 We consider the following automorphism of~$\Sym(\cL_0^\vee[-1])$, defined by its action on generators:
 \deq[eq:newbase]{
-%    \Psi_\infty:  \nu &\mapsto -\frac{\nu}{1-\nu}, \quad \mu \mapsto -\mu \\
     \Psi_\infty: \nu \mapsto 1 - e^{-\nu}, \quad \mu \mapsto e^{-\nu} \mu.
 }
 This map defines a new model of the $L_\infty$ algebra with underlying graded vector space the same as \eqref{eqn:cplx1}, which we will call $\cL_\infty$.\footnote{We are being slightly abusive and using the symbols $\nu,\mu$ dually as coordinates, or operators, on the graded linear space $\cL[1]$.}
@@ -88,7 +87,7 @@ It is this new model that we will use to define the eleven-dimensional theory of
 
 %We can unpack Proposition \ref{prop:Linfty} to describe the $L_\infty$ structure on $\cL_0$ explicitly. 
 We can describe the $L_\infty$ structure on our new model $\cL_\infty$ explicitly.
-Recall that we have two types of elements: $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. 
+Recall that we have two types of elements: $\mu \in \PV^{1,\bu}$ and $\nu \in \PV^{0,\bu}[-1]$. (Here, and in what follows, we will use the symbol $\PV^{i,\bu}$ for the Dolbeault resolution of \emph{holomorphic polyvector fields;} by definition, this is the complex $\Omega^{0,\bu}(X,\wedge^i \T_X)$.)
 The first few nonzero brackets are
 \begin{align*}
 [\mu]_1 & = \dbar \mu + \div \mu \\
@@ -193,7 +192,7 @@ Explicitly, the action functional for BF theory associated to the local dg Lie a
 As in the Lie algebra structure of this strict model, notice that the Schouten--Nijenhuis bracket appears explicitly. 
 
 The action functional of BF theory associated to $\cL_\infty(X) \otimes \Omega^{\bu}(S)$ is non polynomial. 
-In fact, it is related to the BCOV action functional via dimensional reduction, see \S \ref{sec:dimred}.
+In fact, it is related to the BCOV action functional via dimensional reduction (see \S \ref{sec:dimred}).
 Explicitly, this action functional is
 \deq{
   S_{BF,\infty} =  \int^\Omega \bigg[ \beta \wedge (\dbar + \d_S) \nu +  \gamma \wedge (\dbar + \d_S) \mu +   \beta \wedge \partial_\Omega \mu + \frac12 \frac{1}{1-\nu} \mu^2 \vee \del \gamma \bigg] .
@@ -201,22 +200,22 @@ Explicitly, this action functional is
 
 We demonstrated above that the two local $L_\infty$ algebras on which these BF theories are based are equivalent. As such, the BF theories are also equivalent; the map~\eqref{eq:newbase} extends uniquely to an automorphism of BV theories.
 Explicitly, the automorphism is
-\begin{multline}\label{eqn:auto1}
-  \mu \mapsto e^{-\nu} \mu, \qquad \nu \mapsto 1-e^{-\nu} \\
+\begin{equation}\label{eqn:auto1}
+  \mu \mapsto e^{-\nu} \mu, \qquad \nu \mapsto 1-e^{-\nu} , \qquad
   \beta \mapsto (\beta - \mu \vee \gamma) e^{\nu},\qquad \gamma \mapsto e^{\nu} \gamma .
-\end{multline}
+\end{equation}
 
 \parsec[]
 
 In what follows, we specialize to the case that $X$ is a Calabi--Yau five-fold and that $S$ is a one-dimensional smooth orientable manifold. 
 In this case, with $n = 5 + 1 - 1 = 5$ the theories described in this section are $\ZZ$-graded in the BV formalism.
-Momentarily, we consider a new term in the action which will break this grading, so this integer shift will not play an essential role.
+Momentarily, we consider a new term in the action which will break this grading; as such, this integer shift will not play an essential role.
 
 \subsection{A deformation of BF theory} 
 
 Let $X$ be a Calabi--Yau five-fold and $S$ be a smooth oriented one-dimensional real manifold. 
 We will break the $\ZZ$-grading present in BF theory discussed in the previous section to a $\ZZ/2$ grading. 
-For reference, this means that linear BRST complex of fields of the model now take the following form. 
+For reference, this means that the linear cochain complex of fields of the model now takes the following form. 
 
 \begin{equation}
   \label{eq:sympfields} 
@@ -230,7 +229,7 @@ For reference, this means that linear BRST complex of fields of the model now ta
 \parsec
 %check CME
 
-To define our classical field theory on $X \times S$ we consider  a deformation of BF theory $S_{BF}$ (this refers to either the presentation as $S_{BF,0}$ or $S_{BF,\infty}$). 
+To define our classical field theory on $X \times S$, we consider  a deformation of BF theory $S_{BF}$ (this refers to either the presentation as $S_{BF,0}$ or $S_{BF,\infty}$). 
 Such deformations are governed by the classical master equation: the parameterized family of actions 
 \beqn\label{eqn:defaction}
 S_{BF} + g J
@@ -271,11 +270,10 @@ Thus, we see that in the original $\Z$-grading on BF theory one has
   \deq{
     \deg(J) = 6.
   }
-Thus $S_{BF} + J$ is not of homogenous $\ZZ$ grading.
+Thus $S_{BF} + J$ is not of homogenous $\ZZ$ grading (although it is even).
 
 This is completely reasonable from the point of view of twisting supersymmetry in eleven dimensions. 
-Indeed, the $R$-symmetry group is trivial, and there is not a way to regrade the fields of the twisted theory using twisting data \label{CosHol,ESW}. 
-
+Indeed, the $R$-symmetry group is trivial, and there is not a way to regrade the fields of the twisted theory using twisting data~\label{CosHol,ESW}. 
 Nevertheless, if we break to the obvious $\ZZ/2$ grading, the functional $S_{BF} + g J$ defines an even action functional.
 Unless otherwise stated, we will work with this $\ZZ/2$ grading for the remainder of this section.
 
@@ -304,11 +302,11 @@ The contribution from the remaining BF action takes the form
 This expression is zero for symmetry reasons. 
 Recall that $\del\gamma$ is a two-form, and that the expression must be a totally symmetric local functional which is cubic in this two-form. We can ask whether such a  contraction exists just at the level of $\lie{sl}(5)$ representation theory. Let $\ydiagram{1}$ denote the fundamental representation of~$\lie{sl}(5)$, which we identify with constant one-forms. Since the term must be a scalar, the contraction $(\partial\gamma^3$ must sit in the fundamental representation again, since it is dual to a vector field. Computing the decomposition of the tensor cube of the two-form, we find
 \deq{
-  \Sym^3 \left( \ydiagram{1,1} \right) \cong \ydiagram{3,3} \oplus \ydiagram{2,2,1,1}.
+  \Sym^3 \left( \ydiagram{1,1} \right) \cong \ydiagram{3,3} \oplus \ydiagram{2,2,1,1}\,.
 }
 (In fact, the absence  of the relevant irreducible representation does not  even depend on the parity of the  field $\gamma$, since 
   \deq{
-    \wedge^3\left( \ydiagram{1,1} \right) \cong \ydiagram{3,1,1,1}  \oplus \ydiagram{2,2,2};
+    \wedge^3\left( \ydiagram{1,1} \right) \cong \ydiagram{3,1,1,1}  \oplus \ydiagram{2,2,2}\, ;
   }
 the  fundamental representation has symmetry type $\ydiagram{2,1}$.) 
 
@@ -339,7 +337,7 @@ Doing this we see that $J$ becomes
 \[
 \til{J} = \frac16 e^\nu \gamma \wedge \del (e^\nu \gamma) \wedge \del(e^\nu \gamma) .
 \]
-Since this automorphism preserves the odd BV bracket, the actions $S_{BF,\infty} + g J$ and $S_{BF, 0} + g \til{J}$ are both solutions to the classical master equations and are equivalent as~$\ZZ/2$ graded BV theories.
+Since this automorphism preserves the odd BV bracket, the actions $S_{BF,\infty} + g J$ and $S_{BF, 0} + g \til{J}$ are both solutions to the classical master equation, and are equivalent as~$\ZZ/2$ graded BV theories.
 
 \subsection{Equations of motion of the component fields} \label{s:components}
 
@@ -348,7 +346,7 @@ For the moment, we briefly read off the equations of motion of the general theor
 Let $\Omega$ denote the Calabi--Yau form on $X$. 
 
 We consider the action $S_{BF, \infty} + gJ$.
-The equation of motion obtained by varying $\beta$ is especially simple, in fact linear, since it only appears in the action via a quadratic term. 
+The equation of motion obtained by varying $\beta$ is especially simple---in fact linear---since $\beta$ only appears in the action via a quadratic term. 
 It is
 \beqn\label{eqn:eombeta}
 \dbar \nu + \d_S \nu + \div \mu = 0 .
@@ -375,38 +373,38 @@ The component fields of the eleven-dimensional theory on $X \times S$ have the f
 \[
 \mu^{i;j} \in \PV^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
 \]
-The component $\mu^{i;j}$ has parity $i+j+1 \mod 2$. 
+The component $\mu^{i;j}$ has parity $i+j+1 \pmod 2$. 
 \item $\nu = \sum_{i,j} \nu^{i;j}$ is a superfield where
 \[
 \nu^{i;j} \in \PV^{0,i}(X, \T_X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
 \]
-The component $\nu^{i;j}$ has parity $i+j \mod 2$. 
+The component $\nu^{i;j}$ has parity $i+j \pmod 2$. 
 %The linear equations of motion state that $\mu$ is constant along $\RR$ and holomorphic divergence-free as a vector field on $\CC^5$. 
 \item 
 $\gamma = \sum_{i,j} \gamma^{i;j}$ is a superfield where
 \[
 \gamma^{i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
 \]
-The component $\gamma^{i;j}$ has parity $i+j$. 
+The component $\gamma^{i;j}$ has parity $i+j\pmod 2$. 
 \item 
 \item $\beta = \sum_{i,j} \beta^{i;j}$ is a superfield where
 \[
 \beta^{i;j} \in \Omega^{0,i}(X) \otimes \Omega^j(\RR) ,\quad i=0,\ldots, 5, \quad j=0,1.
 \]
-The component $\beta^{i;j}$ has parity $i+j+1 \mod 2$. 
+The component $\beta^{i;j}$ has parity $i+j+1 \pmod 2$. 
 \end{itemize}
 
 We look closely at the geometric meaning of \eqref{eqn:eombeta}. 
-Let's make the simplifying assumption that all components of $\mu$ are divergence-free that all fields are locally constant along $S$: $\div \mu = 0$ and $\d_S \mu = \d_S \gamma = 0$.
-Then, $\nu = 0$ is a solution to \eqref{eqn:eombeta} and we can assume that all fields are functions, or zero-forms, along $S$. 
+Let's make the simplifying assumption that all components of $\mu$ are divergence-free, and further that all fields are locally constant along $S$: that is, $\div \mu = 0$ and $\d_S \mu = \d_S \gamma = 0$.
+Then $\nu = 0$ is a solution to \eqref{eqn:eombeta} and we can assume that all fields are functions, or zero-forms, along $S$. 
 Then, there is a component of \eqref{eqn:eomgamma} which can be written as 
 \beqn\label{eqn:eomgamma1}
 \dbar \mu^{1;0} + \frac12 [\mu^{1;0},\mu^{1;0}] + \left(\frac12 \del \gamma^{1;0} \wedge \del \gamma^{1;0} + \del \gamma^{2;0} \wedge \del \gamma^{0;0}\right) \vee (g \Omega^{-1}) = 0 
 \eeqn
 where now $[-,-]$ stands for the Schouten bracket.
 
-To further simplify \eqref{eqn:eomgamma1}, we can look for a solutions where the $(0,1)$ Dolbeault part of $\gamma$ is zero $\gamma^{1;0} = 0$. 
-Then, up the term involving 
+To further simplify \eqref{eqn:eomgamma1}, we can look for a solutions where  $\gamma^{1;0}$, the $(0,1)$ Dolbeault part of $\gamma$, is zero. 
+Then, up to the term involving 
 \[
 \alpha \define \del \gamma^{0;0},
 \]
@@ -427,24 +425,24 @@ for some $\rho \in \PV^{2,2} (X)$.
 In other words, $\xi$ defines an integrable complex structure deformation along the leaf space associated to the foliation $\cF_\alpha$. 
 We leave a more complete exploration of the moduli space of solutions of the equations of motion for future work. 
 
-In \cite{SWspinor}, the second two authors showed that the free limit of the minimal twist of eleven-dimensional supergravity agrees with the free limit of the eleven-dimensional theory that we have introduced here. 
+In~\cite{SWspinor}, the second two authors showed that the free limit of the minimal twist of eleven-dimensional supergravity agrees with the free limit of the eleven-dimensional theory that we have introduced here. 
 Given this result, we can recognize many fields in the twisted theory as components of the physical fields of supergravity which remain after we twist. 
 
 \begin{itemize}
 \item 
-The following components of $\mu$:
+The components 
 \begin{align*}
 \mu^{1;0} & = \mu^j_i(z,\zbar,t) \d \zbar_j \partial_{z_i} \\
 \mu^{0;1} & = \mu^t_i (z,\zbar,t) \d t \partial_{z_i}
 \end{align*}
-comprise components of the metric which remain after the twist. 
+of $\mu$ comprise components of the metric which remain after the twist. 
 The components 
 \[
 \mu^{0;0} = \mu_i (z,\zbar,t) \partial_{z_i} 
 \]
-comprise the ghosts for infinitesimal diffeomorphisms. 
+comprise the ghosts for infinitesimal (holomorphic) diffeomorphisms. 
 \item 
-The following three-form fields
+The three-form fields
 \begin{multline}
 \beta^{3;0} = \beta^{ijk} (z,\zbar,t) \d \zbar_i \d \zbar_j \d \zbar_k , \quad \beta^{2;1} = \beta^{ij}_t (z,\zbar,t) \d \zbar_i \d \zbar_j \d t \\
 \gamma^{2;0} = \gamma^{ijk} (z,\zbar,t) \d z_i \d \zbar_j \d \zbar_k , \quad \gamma^{1;1} = \gamma^{ij}_t (z,\zbar,t) \d z_i \d \zbar_j \d t .
@@ -466,7 +464,7 @@ The two-form fields $\beta^{2;0}, \beta^{1;1}, \gamma^{1;0}, \gamma^{0;1}$, the 
 
 \subsection{Local character}\label{sec:locchar}
 
-We consider the eleven-dimensional theory on the manifold $\CC^5 \times \RR$ where $\CC^5$ is equipped with its standard Calabi--Yau structure. 
+We consider the eleven-dimensional theory on the manifold $\CC^5 \times \RR$, where $\CC^5$ is equipped with its standard Calabi--Yau structure. 
 On this background, the theory is manifestly $SU(5)$ invariant. 
 In this section, we compute the corresponding character of the local operators at the origin. 
 
@@ -523,9 +521,10 @@ Note that the linear local operators $ \nu_{(m_j)}$ and $\beta_{(m_j)}$ are of t
 \bigoplus _{(m_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\mu^{z_1}_{(m_j)}\partial_{z_1}\oplus \C\mu^{z_2}_{(m_j)}\partial_{z_2}\oplus \C\mu^{z_3}_{(m_j)}\partial_{z_3}\oplus\C\mu^{w_1}_{(m_j)}\partial_{w_1}\oplus \C\mu^{w_2}_{(m_j)}\partial_{w_2}\right).
 \] 
 This contributes 
-\[
-\sum_{(m_j)\in \Z^5_{\geq 0 }}- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)}\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right).
-\] 
+\begin{multline}
+\sum_{(m_j)\in \Z^5_{\geq 0 }}- t_1^{-m_1+m_2}t_2^{-m_2+m_3}q^{-m_4+m_5}y^{m_1+m_2+m_3-\frac 3 2 (m_4+m_5)} \times \\
+\left (t_1^{-1}y + t_1t_2^{-1}y + t_2y + q^{-1}y^{-\frac 3 2} + qy^{-\frac 3 2} \right).
+\end{multline}
 Finally, there is a summand of the form 
 \[
 \bigoplus _{(m_i;n_j)\in \Z^5_{\geq 0 }} \Pi \left ( \C\gamma^{z_1}_{(m_i; n_j)}d{z_1}\oplus \C\gamma^{z_2}_{(m_i; n_j)}d{z_2}\oplus\C\gamma^{z_3}_{(m_i; n_j)}d{z_3}\oplus\C\gamma^{w_1}_{(m_i; n_j)}d{w_1}\oplus \C\gamma^{w_2}_{(m_i; n_j)}d {w_2}\right).
@@ -629,8 +628,8 @@ since there are no Feynman diagrams present past one-loop in this case.
 When $g \ne 0$, on the other hand, this result does not immediately imply the existence of a gauge invariant perturbative quantization to higher orders in $\hbar$. 
 The presence of the functional $J = \frac16 \int \gamma \del \gamma \del \gamma$ allows one to construct Feynman graphs at arbitrary loop order. 
 
-Upon performing the $\Omega$-background,
+
 %see \S \ref{s:omega},
-In \cite{CostelloM5}, Costello argues that the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
+In \cite{CostelloM5}, Costello argues that, upon performing the $\Omega$-background, the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
 Via a cohomological argument, it is shown that this effective five-dimensional theory exhibits an essentially unique quantization in perturbation theory. 
 We will return to the existence and uniqueness of a higher order quantization of the eleven-dimensional theory in future work. 
