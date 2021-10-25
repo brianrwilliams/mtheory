@@ -6,31 +6,31 @@
 \label{sec:global}
 
 In any field theory, the cohomology classes of states of odd ghost number have the structure of a Lie algebra. 
-More generally, after shifting the cohomological degree by one the full cohomology of states with respect to the linear BRST operator results in a graded Lie algebra. 
-If we forget the grading to a $\ZZ/2$ grading then the global symmetry algebra has the structure of a super Lie algebra. 
+More generally, after shifting the cohomological degree by one, the full cohomology of states with respect to the linear BRST operator is naturally a graded Lie algebra. 
+If we forget the grading to a $\ZZ/2$ grading, then this global symmetry algebra has the structure of a super Lie algebra. 
 
 In general, taking cohomology loses information. 
-If the dg Lie, or $L_\infty$ algebra, we start with is not formal then there exists higher order operations present in the linearized BRST cohomology. 
-We will refer to this as the global symmetry algebra of the theory.
+If the dg Lie (or $L_\infty$) algebra we start with is not formal, then there exist higher-order operations on the linearized BRST cohomology. 
+We will refer to this $L_\infty$ algebra as the global symmetry algebra of the theory.
 
-Before taking cohomology with respect to the linear BRST operator, we described the super $L_\infty$ structure on the parity shift of the 11-dimensional fields in the previous section. 
-This is encoded by the full BV action of the 11-dimensional theory.
+Before taking cohomology with respect to the linear BRST operator, we described the super $L_\infty$ structure on the parity shift of the eleven-dimensional fields in the previous section. 
+This is encoded by the full BV action of the eleven-dimensional theory.
 The cubic component of the full BV action induces the super Lie algebra structure present in the linearized BRST cohomology. 
 
-Our main result is to relate the global symmetry algebra of the minimal twist of 11-dimensional supergravity on $\CC^5 \times \RR$ to a certain infinite-dimensional exceptional super Lie algebra studied by Kac \cite{KacBible,KacE510} called $E(5,10)$.
+Our main result is to relate the global symmetry algebra of the minimal twist of eleven-dimensional supergravity on $\CC^5 \times \RR$ to a certain infinite-dimensional exceptional super Lie algebra studied by Kac \cite{KacBible,KacE510} called $E(5,10)$.
 We recall the definition below. 
 
 \begin{thm}\label{thm:global}
-Let $\Pi\cE(\CC^5 \times \RR)$ be the parity shift of the fields of 11-dimensional supergravity on $\CC^5 \times \RR$ and denote by $\delta^{(1)}$ the linearized BRST operator. 
+Let $\Pi\cE(\CC^5 \times \RR)$ be the parity shift of the fields of eleven-dimensional supergravity on $\CC^5 \times \RR$ and denote by $\delta^{(1)}$ the linearized BRST operator. 
 \begin{enumerate}
 \item 
 As a super Lie algebra, the $\delta^{(1)}$-cohomology of $\Pi\cE(\CC^5 \times \RR)$ is isomorphic to the trivial one-dimensional central extension of the super Lie algebra $E(5,10)$.
 \item 
-The global symmetry algebra is equivalent, as a super $L_\infty$ algebra, to the non-trivial central extension of $E(5,10)$ determined by the even cocycle \eqref{eqn:cocycle}. 
+The global symmetry algebra is equivalent, as a super $L_\infty$ algebra, to the non-trivial central extension of $E(5,10)$ determined by the even cocycle defined in~\eqref{eqn:cocycle}. 
 \end{enumerate}
 \end{thm}
 
-This result implies that the action functional $S_{BF, \infty} + J$ of the 11-dimensional theory is invariant for infinite-dimensional Lie algebra $E(5,10)$. 
+This result implies that the action functional $S_{BF, \infty} + J$ of the eleven-dimensional theory is invariant for the infinite-dimensional Lie algebra $E(5,10)$. 
 
 %defined by the even cocycle
 %\begin{align*}
@@ -45,59 +45,59 @@ This result implies that the action functional $S_{BF, \infty} + J$ of the 11-di
 
 \subsection{Linearized BRST cohomology} 
 
-We compute the linearized BRST cohomology of 11-dimensional supergravity.
-Then, we will describe the induced structure of a super Lie algebra present in the parity shift of the cohomology thus proving part (1) of Theorem \ref{thm:global}.
+We compute the linearized BRST cohomology of eleven-dimensional supergravity.
+Then we will describe the induced structure of a super Lie algebra present in the parity shift of the cohomology, proving part (1) of Theorem~\ref{thm:global}.
 
 \parsec[]
 
-First, we recall the definition of the exceptional simple super Lie algebra $E(5,10)$. 
+First we recall the definition of the exceptional simple super Lie algebra $E(5,10)$. 
 Recall that $\Vect_0 (\CC^5)$ is the Lie algebra of divergence-free holomorphic vector fields on $\CC^5$.
-Let $\Omega^{2}_{cl} (\CC^5)$ be the module of holomoprhic $2$-forms which are closed for the holomorphic de Rham operator $\del$.
+Let $\Omega^{2}_{cl} (\CC^5)$ be the module of holomorphic $2$-forms that are closed for the holomorphic de Rham operator $\del$.
 
-The even part of the super Lie algebra $E(5,10)$ is the Lie algebra of divergence-free vector fields on $\CC^5$
+The even part of the super Lie algebra $E(5,10)$ is the Lie algebra
 \[
-E(5,10)_+ = \Vect_0(\CC^5) ,
+E(5,10)_+ = \Vect_0(\CC^5)
 \]
+of divergence-free vector fields on $\CC^5$,
 whose elements we continue to denote by $\mu$. 
 The odd piece is the module 
 \[
-E(5,10)_- = \Omega^{2}_{cl} (\CC^5) 
+E(5,10)_- = \Omega^{2}_{cl} (\CC^5),
 \]
 whose elements we denote by $\alpha$. 
 Besides the natural module structure, there is an odd $\times$ odd $\to$ even bracket. 
-The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \Vect (\CC^5)$ induced by the standard Calabi--Yau form $\d^5 z$ and is defined by
+The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \Vect (\CC^5)$ induced by the standard Calabi--Yau form $\d^5 z$, and is defined by
 \beqn\label{eqn:e510}
 [\alpha, \alpha'] = \Omega^{-1} \vee (\alpha \wedge \alpha') .
 \eeqn
-One immediately checks that since both $\alpha, \alpha'$ are closed two-forms that the resulting vector field on the right hand side is divergence-free. 
-In coordinates, if $f^{ij} \d z_i \wedge \d z_j$, $g^{kl} \d z_k \wedge \d z_l$ are two closed two-forms, their bracket is the vector field $\ep_{ijklm} f^{ij}g^{kl} \partial_{z_m}$. 
+Since both $\alpha, \alpha'$ are closed two-forms,  the resulting vector field on the right hand side is divergence free. 
+In coordinates, if $f^{ij} \d z_i \wedge \d z_j$ and $g^{kl} \d z_k \wedge \d z_l$ are two closed two-forms, their bracket is the vector field $\ep_{ijklm} f^{ij}g^{kl} \partial_{z_m}$. 
 
-To be precise, Kac studied a more algebraic version of the algebra we have just introduced where holomorphic functions are replaced by holomorphic polynomials.
-Thus, the simple super Lie algebra classified in \cite{KacBible} is a dense sub Lie algebra of what we call $E(5,10)$ consisting of those vector fields and two-forms which have polynomial coefficients.
+To be precise, Kac studied a more algebraic version of the algebra we have just introduced, where holomorphic functions are replaced by holomorphic polynomials.
+As such, the simple super Lie algebra that appears in the classification in~\cite{KacBible} is a dense sub Lie algebra of what we call $E(5,10)$, consisting of those vector fields and two-forms that have polynomial coefficients.
 
 \parsec[]
 
 If $\cE$ is the space of fields of any theory in the BV or BRST formalism, the shift $\cL = \cE[-1]$ has the structure of a Lie, possibly $L_\infty$ algebra. 
 In the $\ZZ/2$ graded world, the parity shifted object $\cL = \Pi \cE$ has the structure of a super $L_\infty$ algebra. 
 
-In this section, we use the description of the 11-dimensional theory as the deformation of the BF action $S_{BF,\infty}$ by the functional $J$ of Theorem \ref{thm:dfn}. 
-We set the coupling $g = 1$, for any other nonzero value of $g$ we will obtain an isomorphic super $L_\infty$ algebra.
+In this section, we use the description of the eleven-dimensional theory as the deformation of the BF action $S_{BF,\infty}$ by the functional $J$ of Theorem \ref{thm:dfn}. 
+We set the coupling $g = 1$. For any other nonzero value of $g$, we will obtain an isomorphic super $L_\infty$ algebra as explained above.
+We would also obtain equivalent  results if we used the other model of the eleven-dimensional theory explained in~\S\ref{s:altdfn}. 
+%We remark on this below. %in~\S\ref{s:altglobal}. 
 
-We will obtain the exact same results if we use the equivalent model of the 11-dimensional theory explained in \S \ref{s:altdfn}. 
-We remark on this below in \S \ref{s:altglobal}. 
-
-The full BRST operator is given by the BV bracket with the BV action. 
+The full differential on the cochain complex of observables of the theory is given by the BV bracket with the BV action. 
 For us, this~is 
 \[
 \delta = \{S_{BF,\infty} + J, -\} .
 \]
-The linear BRST operator comes only from the quadratic summands in $S_{BF,\infty}$ and is of the form
+The linear BRST operator (dual to the differential on the cochain complex of fields) comes only from the quadratic summands in $S_{BF,\infty}$, and is of the form
 \beqn\label{eqn:linearBRST}
 \delta^{(1)} = \dbar + \d_{\RR} + \div |_{\mu \to \nu} + \del |_{\beta \to \gamma} .
 \eeqn
 
 To compute the cohomology with respect to $\delta^{(1)}$ we can use a spectral sequence, first taking the cohomology with respect to $\dbar + \d_{\RR}$ and then with respect to $\div$. 
-By the $\dbar$ and de Rham Poincar\'e lemmas, the cohomology of the space of fields of the 11-dimensional theory on $\CC^5 \times \RR$ with respect $\dbar + \d_{\RR}$ results in the cochain complex
+By the $\dbar$ and de Rham Poincar\'e lemmas, the cohomology of the space of fields of the eleven-dimensional theory on $\CC^5 \times \RR$ with respect $\dbar + \d_{\RR}$ results in the cochain complex
 \begin{equation}
   \label{eq:lin1} 
   \begin{tikzcd}[row sep = 1 ex]
@@ -120,7 +120,7 @@ Note that $\mu$ is a ghost in the $\ZZ/2$ graded theory.
 [\gamma] = [\gamma] \otimes 1 \in \left(\Omega^{1}(\CC^5) / \d \cO(\CC^5) \right) \otimes \Omega^0(\RR) .
 \]
 \item A constant function $b \in \Pi \CC$ on $\CC^5 \times \RR$.
-This is a $\beta$-type field in the 11-dimensional theory, any constant function is closed for the de Rham differential. 
+This is a $\beta$-type field in the eleven-dimensional theory, any constant function is closed for the de Rham differential. 
 This element is also a ghost in the $\ZZ/2$-graded theory. 
 \end{itemize}
 
@@ -146,7 +146,7 @@ Notice that this bracket is well-defined as it does not depend on the particular
 We complete the proof of the first part of Theorem \ref{thm:global}. 
 For this we write down an explicit map between the cohomology computed above and the algebra $E(5,10)$. 
 
-The relationship of the $\mu$-elements in $E(5,10)$ and the 11-dimensional theory is apparent.
+The relationship of the $\mu$-elements in $E(5,10)$ and the eleven-dimensional theory is apparent.
 
 Next, we need to relate the equivalence classes $[\gamma]$ with the closed two-forms $\alpha$ in $E(5,10)$. 
 On flat space, any closed differential form is exact (this is a holomorphic version of the Poincar\'e lemma). 
@@ -155,8 +155,8 @@ In other words, there is an isomorphism
 \del \colon \Omega^1 (\CC^5) / \d \cO(\CC^5) \xto{\cong} \Omega^{2}_{cl}(\CC^5)
 \]
 induced by the holomorphic de Rham differential.
-This gives the relationship between the equivalence class $[\gamma]$ in the 11-dimensional theory and a closed two-form in $E(5,10)$ by $\alpha = \del \gamma$. 
-It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E(5,10)$ and the twist of 11-dimensional supergravity. 
+This gives the relationship between the equivalence class $[\gamma]$ in the eleven-dimensional theory and a closed two-form in $E(5,10)$ by $\alpha = \del \gamma$. 
+It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E(5,10)$ and the twist of eleven-dimensional supergravity. 
 This completes the proof of part (1) of Theorem \ref{thm:global}.
 
 \subsection{(Non)formality and homotopy transfer} 
@@ -222,7 +222,7 @@ This diagram leads to a new $3$-ary bracket on $E(5,10) \oplus \CC_b$
 \[
 \big[\mu,\mu',[\gamma]\big]_3 = \varphi(\mu,\mu',[\gamma])
 \]
-where $\varphi \in \clie^{even} (E(5,10))$ is the even Lie algebra cocycle defined by the formula
+where $\varphi \in \clie^\text{even} (E(5,10))$ is the even Lie algebra cocycle defined by the formula
 \beqn
 \begin{array}{rclr}
 \varphi \colon E(5,10) \times E(5,10) \times E(5,10) & \to & \CC_b \\
@@ -242,13 +242,13 @@ The Chevalley--Eilenberg differential is degree $(1,+)$.
 The cocycle $\varphi$ has homogenous bigrading $(3,-)$.
 In the above discussion we forgot the bigrading to a totalized $\ZZ/2$ grading where 
 \begin{align*}
-\clie^{even} (\cL) & = \clie^{2\bu , +} (\cL) \oplus \clie^{2\bu+1, -}(\cL) \\
-\clie^{odd} (\cL) & = \clie^{2\bu , -} (\cL) \oplus \clie^{2\bu+1, +}(\cL) .
+\clie^\text{even} (\cL) & = \clie^{2\bu , +} (\cL) \oplus \clie^{2\bu+1, -}(\cL) \\
+\clie^\text{odd} (\cL) & = \clie^{2\bu , -} (\cL) \oplus \clie^{2\bu+1, +}(\cL) .
 \end{align*}
 With this totalization, $\varphi$ is an even cocycle and hence determines a super $L_\infty$ central extension by the one-dimensional even vector space $\CC$. 
 
 %\parsec[s:altglobal]
 
-%In \S \ref{s:altdfn} we gave an equivalent description of the 11-dimensional theory as a deformation of the BF action $S_{BF,0}$ by the functional $\til J$. 
+%In \S \ref{s:altdfn} we gave an equivalent description of the eleven-dimensional theory as a deformation of the BF action $S_{BF,0}$ by the functional $\til J$. 
 
 %\subsection{Twisted matrix model}
