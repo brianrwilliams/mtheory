@@ -2,14 +2,14 @@
 \label{s:dfn}
 
 In this section we define the central theory of study within the Batalin--Vilkovisky formalism.
-The theory will be defined on any eleven-dimensional manifold of the form $X \times L$, where $X$ is a Calabi--Yau five-fold and $L$ is a smooth oriented one-manifold.
+The theory will be defined on any eleven-dimensional manifold of the form $X \times S$, where $X$ is a Calabi--Yau five-fold and $S$ is a smooth oriented one-manifold.
 
 \subsection{Divergence-free vector fields} 
 
 \subsubsection{}
 \label{sec:divfree}
 We set up some notations and conventions in the context of complex geometry. 
-Let $V$ be a holomorphic vector bundle on a complex manifold $X$. 
+Let $V$ be a holomorphic vector bundle on a $d$ dimensional complex manifold $X$. 
 If $j$ is an integer, we let $\Omega^{0,j}(X, V)$ denote the space of anti-holomorphic Dolbeault forms of type $j$ on~$X$ with values in $V$.
 The $\dbar$ operator $\dbar \colon \Omega^{0,j}(X, V)\to \Omega^{0,j+1}(X,V)$ defines the Dolbeault complex of $V$:
 \[
@@ -56,12 +56,12 @@ This means that, as a graded sheaf, $\cL_0$ is the smooth sections of a graded v
 
 \parsec[sec:Linfty]
 
-Recall that an $L_\infty$ algebra is a $\ZZ$-graded vector space $\cL$ together with the data of a square-zero, degree $+1$ derivation $\delta_\cL$ of the free commutative graded algebra $\Sym\left(\cL^\vee [-1] \right)$. 
+Recall that an $L_\infty$ algebra is a $\ZZ$-graded vector space $\cL$ together with the datum of a square-zero, degree $+1$ derivation $\delta_\cL$ of the free commutative graded algebra $\Sym\left(\cL^\vee [-1] \right)$. 
 The Chevalley--Eilenberg cochain complex is 
 \[
 \left(\Sym\left(\cL^\vee [-1] \right), \delta_\cL\right) .
 \]
-The Taylor components of $\delta_\cL$ define higher brackets $\{[-]_k\}_{k=1,2,\ldots}$ where $[-]_k \colon \cL^{\times k} \to \cL[2-k]$. 
+The Taylor components of $\delta_\cL$ define higher brackets $\{[-]_k\}_{k=1,2,\ldots}$ where $[-]_k \colon \cL^{\otimes k} \to \cL[2-k]$. 
 The condition that the differential $\delta_\cL$ is square-zero is equivalent to the higher Jacobi relations.
 
 An $L_\infty$ morphism $\Phi: \cL \rightsquigarrow \cL'$ is the same datum as a map of commutative dg algebras 
@@ -79,7 +79,7 @@ This map defines a new model of the $L_\infty$ algebra with underlying graded ve
 The formulas for the automorphism above clearly arise from maps of vector bundles and hence endow $\cL_\infty$ with the structure of a local $L_\infty$ algebra, meaning all operations are given by polydifferential operators.  
 
 The notation refers to the fact that this new model has nonvanishing $L_\infty$ brackets of every order. 
-It is this new model that we will use to define the eleven-dimensional theory of twisted supergravity (as well as the family of analogous formal moduli problems on products of odd Calabi--Yau manifolds with~$\R$). 
+It is this new model that we will use to define the eleven-dimensional theory of twisted supergravity. 
 
 
 %The previous proposition characterizes the $L_\infty$ model for divergence-free vector fields that we will use to define the 11-dimensional theory of twisted supergravity. 
@@ -128,7 +128,7 @@ The graded vector space $\cL \otimes \cA$ is equipped with the natural structure
 \end{align*}
 
 We apply this construction, taking $\cL$ to be the sheaf resolving divergence-free holomorphic vector fields on a Calabi--Yau manifold $X$ equipped with either the strict dg Lie algebra structure $\cL_0(X)$ or its non-strict $L_\infty$ structure $\cL_\infty (X)$. 
-The algebra $\cA$ will be the smooth de Rham complex $(\Omega^\bu(S) , \d_S)$ where $S$ is a smooth manifold (we will specialize the dimension of this smooth manifold shortly, but the constructions in this section make sense in any dimension). 
+The algebra $\cA$ will be the smooth de Rham complex $(\Omega^\bu(S) , \d_S)$ where $S$ is a smooth manifold. 
 
 We thus obtain the structure of an dg Lie algebra on $\cL_0(X) \otimes \Omega^{\bu}(S)$ or an $L_\infty$ algebra $\cL_\infty(X) \otimes \Omega^\bu(S)$.
 These define equivalent local $L_\infty$ algebras on the product manifold~$X \times S$. 
@@ -260,7 +260,7 @@ Let $X$ be a Calabi--Yau five-fold and $S$ a smooth one-dimensional manifold, an
 
 \parsec[]
 
-First off, we remark on grading issues. 
+Before proceeding to the proof, we remark on grading issues. 
 In the original $\Z$-grading on the BF theory given in \eqref{eq:sympfields} with $n=5$, the component 
 \[
 \gamma^{1,i;j} \in \Omega^{1,i}(X) \otimes \Omega^j(S) 
@@ -285,6 +285,7 @@ For notational simplicity we will omit the integral symbol $\int^\Omega$.
 %\[
 %\{S_{BF,\infty}, J\} = 0, \qquad \{J,J\} = 0.
 %\] 
+\begin{proof}
 
 It is immediate from the form of the BV bracket that $\{J,J\} = 0$, since $J$ depends only on the $\gamma$ field. 
 It remains to check that $\{S_{BF,\infty},J\} = 0$. 
@@ -309,12 +310,13 @@ Recall that $\del\gamma$ is a two-form, and that the expression must be a totall
     \wedge^3\left( \ydiagram{1,1} \right) \cong \ydiagram{3,1,1,1}  \oplus \ydiagram{2,2,2}\, ;
   }
 the  fundamental representation has symmetry type $\ydiagram{2,1}$.) 
+\end{proof}
 
 \parsec[s:coupling]
 
 We make note of the dependence on the coupling constant $g$ in the definition of the deformed action $S_{BF,\infty} + g J$. 
 
-When $g = 0$ we return to BF theory for the $L_\infty$ algebra $\cL_\infty(\CC^5) \otimes \Omega^\bu(\RR)$. 
+When $g = 0$ we recover BF theory for the $L_\infty$ algebra $\cL_\infty(\CC^5) \otimes \Omega^\bu(\RR)$. 
 For any $g \ne 0$ the theories are essentially equivalent in perturbation theory. 
 Indeed, if $g \ne 0$ we can make the following field redefinition 
 \[
@@ -483,10 +485,10 @@ where $z_i$ is a holomorphic coordinate on $\CC^5$.
 
 Corresponding to each of the above, we have a tower of linear local operators labeled by $(m_j) = (m_1, m_2, m_3, m_4, m_5)\in \Z^5_{\geq 0}$; these are given by
 \begin{align*}
- \mu^{i}_{(m_j)} &: \mu^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\mu^{i} (0) \\
-\nu_{(m_j)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
-\gamma^{i}_{(m_j)} &: \gamma^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\gamma^{i} (0) \\
- \beta_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
+ \boldsymbol{\mu}^{i}_{(m_j)} &: \mu^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\mu^{i} (0) \\
+\boldsymbol{\nu}_{(m_j)} &: \nu\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\nu (0) \\
+\boldsymbol{\gamma}^{i}_{(m_j)} &: \gamma^{i}\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\gamma^{i} (0) \\
+ \boldsymbol{\beta}_{(m_j)} &: \beta\mapsto \partial_{z_1}^{m_1}\partial_{z_2}^{m_2}\partial_{z_3}^{m_3}\partial_{z_4}^{m_4}\partial_{z_5}^{m_5}\beta (0) \\
 \end{align*}
 
 \iffalse
@@ -554,21 +556,21 @@ i(q_1,\ldots,q_5) = \frac{\sum_{i=1}^5 q_i}{\prod_{i=1}^5 (1-q_i)} + \frac{\sum_
 where the fugacities satisfy the constraint $\prod_{i=1} q_i = 1$. 
 \end{lem}
 \begin{proof}
-The linear local operators $ \nu_{(m_j)}$ and $\beta_{(m_j)}$ are of the same $q$-weight but opposite parity.
+The linear local operators $ \boldsymbol{\nu}_{(m_j)}$ and $\boldsymbol{\beta}_{(m_j)}$ are of the same $q$-weight but opposite parity.
 Thus, they do not contribute to the single particle index.
 
-The $q$-weight of the odd local operator $\mu_{(m_j)}^i$ is 
+The $q$-weight of the odd local operator $\boldsymbol{\mu}_{(m_j)}^i$ is 
 \[
 q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} .
 \]
-The $q$-weight of the even local operator $\gamma_{(m_j)}^i$ is 
+The $q$-weight of the even local operator $\boldsymbol{\gamma}_{(m_j)}^i$ is 
 \[
 q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} .
 \]
 
 Thus we find that the single particle index is given by the infinite series
 \beqn\label{infseriesindex}
-\sum_{i=1}^5\left ( \sum_{(m_i)\in \Z^5} q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} - \sum_{(m_i)\in \Z^5} q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} \right)
+\sum_{i=1}^5\left ( \sum_{(m_i)\in \Z^5_{\geq 0}} q_1^{m_1} \cdots q_i^{m_i + 1} \cdots q_5^{m_5} - \sum_{(m_i)\in \Z^5_{\geq 0}} q_1^{m_1+1} \cdots q_i^{m_i} \cdots q_5^{m_5+1} \right)
 \eeqn
 
 which sums to the expression
@@ -585,7 +587,7 @@ To obtain the full index of local operators we apply the plethystic exponential 
 \begin{prop}\label{prop:locchar}
 The character of local operators of the eleven-dimensional theory on $\CC^5 \times \RR$ is 
 \[
-\prod_{i=1}^{5} \prod_{(m_i)\in \Z^5} \frac{1-q_1^{m_1+1}\cdots q_i^{m_i}\cdots q_5^{m_5+1}}{1-q_1^{m_1}\cdots q_i^{m_i+1}\cdots q_5^{m_5}}
+\prod_{i=1}^{5} \prod_{(m_i)\in \Z^5_{\geq 0}} \frac{1-q_1^{m_1+1}\cdots q_i^{m_i}\cdots q_5^{m_5+1}}{1-q_1^{m_1}\cdots q_i^{m_i+1}\cdots q_5^{m_5}}
 \]
 \end{prop}
 \begin{proof}

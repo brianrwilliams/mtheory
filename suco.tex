@@ -31,9 +31,9 @@ In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ backgrou
 
 \parsec[]
 
-We decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
+Decompose the 11-dimensional manifold $\CC^5 \times \RR$ as
 \[
-\CC_z \times \RR \times \CC^4_w .
+ \CC^4_w\times \CC_z \times \RR .
 \]
 
 Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backreacting M2 branes. Consider a stack of $N$ $M2$ branes wrapping $\R\times \C_z$. A natural interaction to consider is 
@@ -41,7 +41,7 @@ Analogous to before, the ${\rm AdS}_4 \times S^7$ background arises from backrea
 I_{M2}(\gamma) = N\int_{\C_z} \gamma + \cdots
 \] 
 which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. Unlike the case of $M5$ branes, the coupling does not involve choosing a primitive for a field strength - it is an electric coupling.
-We have only indicated the lowest order coupling, the $\cdots$ indicate higher order couplings which will explicitly involve the fields in the worldvolume theory. 
+We have only indicated the lowest order coupling, the $\cdots$ indicate higher order couplings which will be higher order in the fields of the 11d theory and explicitly involve the fields in the worldvolume theory. 
 
 This coupling is justified by comparison with the physical theory and by dimensional reduction. 
 Indeed, as discussed in section \ref{s:components}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of $M2$ branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
@@ -120,7 +120,6 @@ We first focus on the case where the flux $N=0$, in this case the embedding can 
 \parsec[] 
 
 The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra $\lie{sl}(4) \oplus \lie{sl}(2)$. 
-For the embedding of the bosonic subalgebra, the roles of $\lie{sl}(4)$ and $\lie{sl}(2)$ are somewhat reversed for the $M2$ brane as compared to the $M5$ brane. 
 The Lie algebra $\lie{sl}(2)$ represents special conformal transformations in $\CC_z$; the vector fields representing these transformations are not divergence-free so must be slightly adjusted. 
 The Lie algebra $\lie{sl}(4)$ represents rotations along the plane $\CC^4_w$.   
 
@@ -157,14 +156,14 @@ It is mapped to the fields:
 \end{itemize}
 
 
-\begin{lem}
+\begin{lem}\label{lem:m2emb}
 These assignments define an embedding of $\lie{osp}(6|1)$ into the linearized BRST cohomology of the fields of the 11-dimensional theory on $\CC^5 \times \RR$. 
 Equivalently, it defines an embedding
 \[
 i_{M2} \colon \lie{osp}(6|1) \hookrightarrow E(5,10) .
 \]
 \end{lem} 
-
+\begin{proof}
 The second assertion follows from Theorem \ref{thm:global} that as a super Lie algebra the linearized BRST cohomology of the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$ is the trivial central extension of $E(5,10)$. 
 Recall that the odd part of $E(5,10)$ is precisely the module of closed two-forms on $\CC^5$. 
 To explicitly describe the embedding into $E(5,10)$ we simply apply the de Rham differential to the last two formulas above.
@@ -180,7 +179,7 @@ The fermionic summand $(\wedge^2 \CC^4)_{+1}$ embeds into closed two-forms as
 z \d w_a  \wedge \d w_b + \frac12 \d z \wedge (w_a \d w_b - w_b \d w_a) , \quad a,b=1,2,3,4. 
 \] 
 \end{itemize}
-
+\end{proof}
 \parsec[]
 
 Next, we turn on a nontrivial unit of flux $N \ne 0$. 
@@ -189,7 +188,7 @@ Nevertheless, we have the following.
 
 \begin{prop}
 \label{prop:brads4}
-There exists $N$-dependent corrections to the fields defining the embedding of $\lie{osp}(6|1)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F_{M2},-]$. 
+There exist $N$-dependent corrections to the fields defining the embedding of $\lie{osp}(6|1)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F_{M2},-]$. 
 Furthermore, these order $N$ corrections define an embedding of $\lie{osp}(6|1)$ inside the cohomology of the fields of 11-dimensional theory on $\CC^5 \times \RR \setminus \CC \times \RR$ with respect to the differential $\delta^{(1)} + [N F_{M2},-]$.
 \end{prop}
 
@@ -238,15 +237,15 @@ for $\cF = \cO, \T$, or $\Omega^1$.
 For $\cF = \cO, \T$, or $\Omega^1$, the cohomology $H^\bu(\CC^4 \setminus 0, \cF)$ is concentrated in degrees $0$ and $3$. 
 There are the following dense embeddings 
 \begin{align*}
-\CC[w_1,\ldots, w_4] & \hookrightarrow H^\bu(\CC^4 \setminus 0, \cO) \\ 
-\CC[w_1,\ldots, w_4] \{\partial_{w_i}\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \T) \\
-\CC[w_1,\ldots, w_4] \{\d w_i\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \Omega^1) 
+\CC[w_1,\ldots, w_4] & \hookrightarrow H^0(\CC^4 \setminus 0, \cO) \\ 
+\CC[w_1,\ldots, w_4] \{\partial_{w_i}\} & \hookrightarrow H^0(\CC^4 \setminus 0, \T) \\
+\CC[w_1,\ldots, w_4] \{\d w_i\} & \hookrightarrow H^0(\CC^4 \setminus 0, \Omega^1) 
 \end{align*}
 and
 \begin{align*}
-(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] & \hookrightarrow H^\bu(\CC^4 \setminus 0, \cO) \\ 
-(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_i}\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \T) \\
-(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\d w_i\} & \hookrightarrow H^\bu(\CC^4 \setminus 0, \Omega^1) .
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] & \hookrightarrow H^3(\CC^4 \setminus 0, \cO) \\ 
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_i}\} & \hookrightarrow H^3(\CC^4 \setminus 0, \T) \\
+(w_1\cdots w_4)^{-1} \CC[w_1^{-1},\ldots, w_4^{-1}] \{\d w_i\} & \hookrightarrow H^3(\CC^4 \setminus 0, \Omega^1) .
 \end{align*}
 
 It follows that (up to completion) the cohomology 
@@ -274,7 +273,7 @@ The next page of the spectral sequence is given by computing the cohomology with
 As observed above, this operator maps Dolbeault degree zero elements to Dolbeault degree three elements. 
 For degree reasons, there are no further differentials and the spectral sequence collapses after the second page. 
 
-The embedding of $\lie{osp}(6|1)$ we wrote down above lives in the kernel of the original BRST operator $\delta^{(1)}$. 
+The embedding of $\lie{osp}(6|1)$ we wrote down in lemma \ref{lem:m2emb} lands in the kernel of the original BRST operator $\delta^{(1)}$. 
 To see that it this embedding can be lifted to the full cohomology we need to check that any element in the image of the original embedding is annihilated by $\big[ N [F] , - \big]$. 
 This is a direct calculation. 
 For instance, recall that an element in the image of the odd summand $(\wedge^2 \CC^2)_{-1}$ (which corresponds to a superconformal transformation) is of the form $z w_a \wedge \d w_b = z(w_a \d w_b - w_b \d w_a)$. 
@@ -287,7 +286,7 @@ since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by
 
 \subsection{The ${\rm AdS}_7 \times S^4$ background}
 
-In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our description of the minimal twist of 11-dimensional supergravity. 
+In this section we introduce the analog of the ${\rm AdS}_7 \times S^4$ background in our description of the minimal twist of 11-dimensional supergravity. Decompose the eleven dimensional spacetime as $\C^3_z\times \C^2_w\times \R$.
 
 %In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
 
@@ -301,7 +300,7 @@ Consider a stack of $N M5$ branes wrapping
 
 It is natural to consider the nonlocal interaction 
 \[
-I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega.
+I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega +\cdots 
 \]
 Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}$. 
 We argue that this coupling is consistent with expectations from the physical theory and from dimensional reduction. 
@@ -324,7 +323,6 @@ Again, we have only explicitly indicated the first-order piece of the coupling.
 
 The backreacted geometry will be given by a solution to the equations of motion upon deforming the 11-dimensional action by the interaction $I_{M5}(\mu)$. 
 
-To deduce the equations of motion we deform the 11-dimensional action by the term $I_{M_5}(\mu)$.
 Varying the potential $\div^{-1} \mu$, we obtain the following equation of motion involving the field $\gamma$:
 \beqn\label{eqn:m5eom1}
 \dbar \del \gamma + \div \left(\frac{1}{1-\nu} \mu\right) \wedge \del \gamma = N \delta_{w_1=w_2=t=0} .
@@ -386,11 +384,7 @@ We will define an embedding of $\lie{osp}(6|1)$ into the 11-dimensional theory o
 We first focus on the case where the flux $N=0$.
 In this case the embedding can be extended to all of $\CC^5 \times \RR$. 
 
-The bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
-\[
-\lie{sl}(4) \oplus \lie{sl}(2) .
-\]
-which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. 
+
 
 Recall that we have chosen coordinates of the form
 \[
@@ -399,7 +393,11 @@ Recall that we have chosen coordinates of the form
 with $z_i, i=1,2,3$ and $w_a, a=1,2$.
 The stack of $M5$ branes wrap $w_1=w_2=t=0$. 
 
-The embedding of the bosonic piece of $\lie{osp}(6|1)$ can be described as follows. 
+The embedding of the bosonic piece of $\lie{osp}(6|1)$ can be described as follows. Recall that the bosonic part of $\lie{osp}(6|1)$ is the direct sum Lie algebra
+\[
+\lie{sl}(4) \oplus \lie{sl}(2) .
+\]
+which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. The roles of the $\lie{sl}(4)$ and $\lie{sl}(2)$ summands are interchanged compared to the case of the $M2$ brane. 
 The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
 Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
 The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
@@ -467,6 +465,7 @@ i_{M5} \colon \lie{osp}(6|1) \hookrightarrow E(5,10) .
 \]
 \end{lem} 
 
+\begin{proof}
 To explicitly describe the embedding into $E(5,10)$ we simply apply the de Rham differential to the last two formulas above.
 Recall, we are using the holomorphic coordinates $(z_1,z_2,z_3, w_1,w_2)$ on $\CC^5$ where $z_i$ are the holomorphic coordinates along the $M5$ brane. 
 \begin{itemize}
@@ -481,7 +480,7 @@ The fermionic summand $\wedge^2 L \otimes R$ embeds into closed two-forms as
 w_a \d z_i  \wedge \d z_j + \frac12 \d w_a \wedge (z_i \d z_j - z_j \d z_i) , \quad i,j=1,2,3, \quad a=1,2. 
 \] 
 \end{itemize}
-
+\end{proof}
 \parsec[]
 
 Next, we turn on a nontrivial unit of flux $N \ne 0$. 
@@ -557,6 +556,7 @@ Observe that when restricted to $\CC^5 \times \RR \setminus \CC^3$ the holomorph
 Let's turn to the proof of Proposition \ref{prop:brads7}.
 We proceed completely analogously to the case of backreacted $M2$ branes as in the proof of Proposition \ref{prop:brads4}. 
 
+\begin{proof}[Proof of Proposition \ref{prop:brads7}]
 Let $\cL (\CC^5 \times \RR \setminus \{w_1=w_2=t=0\})$ denote the super $L_\infty$ algebra obtained by parity shifting the fields of the 11-dimensional theory on $\CC^5 \times \RR \setminus \{w_1=w_2=t=0\}$. 
 
 There is a spectral sequence which converges to the cohomology of the fields with respect to the deformed linear BRST differential $\delta^{(1)} + [N F_{M5},-]$ whose first page
@@ -612,5 +612,5 @@ We have
 since the class $w_1^{-1} w_2^{-1}$ is in the kernel of the operator given by multiplication by $w_a$ for $a=1,2$.
 Verifying that the remaining elements in the image of $i_{M5}$ are in the kernel of $\big[ [F], -\big]$ is similar.
 This completes the proof.
-
+\end{proof}
 
