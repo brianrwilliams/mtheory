@@ -239,7 +239,7 @@ Suppose $V \cong \CC^n$ and place the theory on $(\CC^\times)^{\times n} \subset
 The dimensional reduction along $\CC^n \to \RR^n$ agrees with the compactification of the theory along $S^1 \times \cdots \times S^1$ where one throws away all nonzero winding modes around each circle.
 
 \begin{prop}\label{prop:dimred}
-The $SU(4)$ invariant twist of type IIA on $\CC^4 \times \RR^2$ is equivalent to the dimensional reduction of the 11-dimensional along  
+The $SU(4)$ invariant twist of type IIA on $\CC^4 \times \RR^2$ is the dimensional reduction of the 11-dimensional theory along  
 \[
 \CC^4 \times \CC \times \RR_t \to \CC^4 \times \RR_x \times \RR_t \cong \CC^4 \times \RR^2 .
 \]
@@ -318,23 +318,30 @@ Upon reduction, this becomes
 The sum of the action functionals \eqref{eqn:bfred} and \eqref{eqn:jred} does not precisely agree with the IIA action $\til I_{IIA}$. 
 To relate the two actions we must make the following field redefinition:
 \[
-\til \theta = \frac{1}{1-\nu} \theta, \quad \til \eta = (1- \nu) \eta .
+\til \theta = \frac{1}{1-\nu} \theta, \quad \til \eta = (1- \nu) \eta, \quad \til \beta = \beta + \frac{1}{1-\nu} \eta \wedge \theta .
 \]
 Notice that this change of coordinates is compatible with the odd symplectic pairing on the fields. 
 Under this field redefinition the total dimensionally reduced action can be written as
 \begin{multline}
-\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \int_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til\eta \wedge \del \gamma \wedge \del \gamma \\ + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} (\til\theta \wedge \mu) \vee  \del \left(\frac{1}{1-\nu} \til\eta\right) .
+\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \mu^2 \vee \del \gamma + \in^{\Omega_{\CC^4}}t_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til\eta \wedge \del \gamma \wedge \del \gamma + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} (\til\theta \wedge \mu) \vee  \del \left(\frac{1}{1-\nu} \til\eta\right) \\ + \int_{\CC^4 \times \RR^2}^{\Omega_{\CC^4}} \frac{1}{1-\nu} (\til \eta \wedge \til \theta) \div \mu  .
 \end{multline}
-The first line agrees with the first and third terms in \eqref{eqn:IIAactionpot}. 
+The first line comes from plugging in the new fields into the interactions \eqref{eqn:bfred} and \eqref{eqn:jred}.
+The second line comes from plugging in the new fields into the kinetic term $\int \beta \div \mu$, which because of the non-linear change of coordinates now contributes to the interaction. 
+We observe that the first two terms agree with the first and third terms in \eqref{eqn:IIAactionpot}. 
 
-The second line is very close to the second term in \eqref{eqn:IIAactionpot}, but they are still not quite the same. 
-They are, however, cohomologous. 
-Integrating by parts and applying the BV relation, we can write the second line as
+After integrating by parts, the remaining terms can be written as 
 \[
-\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \left(\frac{1}{1-\nu} \til\eta\right)\wedge \div (\til\theta \wedge \mu)  = \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\til\eta \wedge \mu) \vee \partial \til \theta + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til \eta \wedge \div \mu \wedge \til \theta .
+- \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \left(\frac{1}{1-\nu} \til\eta\right) \div (\til\theta \mu) + \int_{\CC^4 \times \RR^2}^{\Omega_{\CC^4}} \left(\frac{1}{1-\nu} \til \eta\right) \til \theta \div \mu .
 \]
-The first term in this equation agrees precisely with the second term in \eqref{eqn:IIAactionpot}. 
-The final term is cohomologically trivial via the odd Lagrangian $\int^\Omega \log(1-\nu) \wedge \til \eta \wedge \til \theta$.
+Applying the identity $\div (\til \theta \mu) = \til \theta \div \mu + \del (\til \theta) \vee \mu$, we see that this agrees exactly with the second term in \eqref{eqn:IIAactionpot}.
+% but they are still not quite the same. 
+%They are, however, cohomologous. 
+%Integrating by parts and applying the BV relation, we can write the second line as
+%\[
+%\int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \left(\frac{1}{1-\nu} \til\eta\right)\wedge \div (\til\theta \wedge \mu)  = \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\til\eta \wedge \mu) \vee \partial \til \theta + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til \eta \wedge \div \mu \wedge \til \theta .
+%\]
+%The first term in this equation agrees precisely with the second term in \eqref{eqn:IIAactionpot}. 
+%The final term is cohomologically trivial via the odd Lagrangian $\int^\Omega \log(1-\nu) \wedge \til \eta \wedge \til \theta$.
 %
 %Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 %
@@ -391,6 +398,8 @@ In detail, this potential theory we are considering has underlying cochain compl
          & \Omega^{0,\bu}(\CC^5)_{\til\beta} \ar[r, "\del"] & \Omega^{1,\bu}(\CC^5)_{\til\gamma} .
 \end{tikzcd}
 \end{equation} 
+This space of fields is equipped with an odd non-degenerate pairing.
+Like the eleven-dimensional theory, it is a classical BV theory in the $\ZZ/2$-graded sense. 
 
 The type I action \eqref{eqn:typeIaction} completely determines the action of this theory with potentials. 
 One simply takes the action and replaces all appearances of $\sigma$ with $\Omega^{-1} \vee \del \til\gamma$. 
@@ -499,6 +508,8 @@ Thus, we are left with
 \end{tikzcd}
 \end{equation}
 This is precisely the underlying cochain complex of fields for the type I model with potentials. 
+The odd non-degenerate pairing on this complex agrees with the one on this particular potential theory for the twist of type I supergravity. 
+The $L_\infty$ structure on the parity shift of this complex is compatible with the one induced from the BV action in \eqref{eqn:Iactionpot}.
 \end{proof}
 
 \subsection{The $SU(5)$ twist of type IIA supergravity}
