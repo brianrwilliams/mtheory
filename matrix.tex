@@ -65,7 +65,7 @@ The odd piece is the module
 E(5,10)_- = \Omega^{2}_{cl} (\CC^5),
 \]
 whose elements we denote by $\alpha$. 
-Besides the natural module structure, there is an odd $\times$ odd $\to$ even bracket. 
+Besides the natural module structure, there is odd bracket $ E(5,10)_-\otimes E(5,10)_\to E(5,10)_+$
 The bracket uses the isomorphism $\Omega^{-1} \vee (-) \colon \Omega^{4} \cong \Vect (\CC^5)$ induced by the standard Calabi--Yau form $\d^5 z$, and is defined by
 \beqn\label{eqn:e510}
 [\alpha, \alpha'] = \Omega^{-1} \vee (\alpha \wedge \alpha') .
@@ -143,8 +143,10 @@ Notice that this bracket is well-defined as it does not depend on the particular
 
 \parsec[]
 
-We complete the proof of the first part of Theorem \ref{thm:global}. 
-For this we write down an explicit map between the cohomology computed above and the algebra $E(5,10)$. 
+Having described the linearized BRST cohomology as a super vector space, we turn to the proof of Theorem \ref{thm:global}.
+
+\begin{proof}[Proof of Theorem \ref{thm:global}]
+For the first part, we write down an explicit map between the cohomology computed above and the algebra $E(5,10)$. 
 
 The relationship of the $\mu$-elements in $E(5,10)$ and the eleven-dimensional theory is apparent.
 
@@ -157,12 +159,9 @@ In other words, there is an isomorphism
 induced by the holomorphic de Rham differential.
 This gives the relationship between the equivalence class $[\gamma]$ in the eleven-dimensional theory and a closed two-form in $E(5,10)$ by $\alpha = \del \gamma$. 
 It is clear from Equations \eqref{eqn:e510} and \eqref{eqn:eqb} that this assignment intertwines the Lie brackets in $E(5,10)$ and the twist of eleven-dimensional supergravity. 
-This completes the proof of part (1) of Theorem \ref{thm:global}.
+This completes the proof of part (1).
 
-\subsection{(Non)formality and homotopy transfer} 
-\label{s:ht}
-We proceed to the proof of part (2) of Theorem \ref{thm:global}. 
-To do this, we first produce the following homotopy data:
+For part (2), we first produce the following homotopy data:
 \begin{equation}
 \begin{tikzcd}
 \arrow[loop left]{l}{K}(\Pi \cE , \delta^{(1)})\arrow[r, shift left, "q"] &(E(5,10) \oplus \CC_b \, , \, 0)\arrow[l, shift left, "i"] \: ,
@@ -170,8 +169,8 @@ To do this, we first produce the following homotopy data:
 \end{equation}
 
 \begin{itemize}
-\item On the $\nu$'s we take $K$ be any operator $K \colon \cO \to \Vect$ such that $\div K \nu = \nu$. 
-On the $\gamma$'s we take $K$ be any operator $K \colon \Omega^1 \to \Omega^0$ such that $\del K(\gamma) = \gamma$. 
+\item On the $\nu$'s we take $K$ to be any operator $K \colon \cO \to \Vect$ such that $\div K \nu = \nu$. 
+On the $\gamma$'s we take $K$ to be any operator $K \colon \Omega^1 \to \Omega^0$ such that $\del K(\gamma) = \gamma$. 
 Also, introduce the auxiliary operator $\til{K} \colon \Omega^2_{cl} \to \Omega^1$ which satisfies the homotopy relation
 \beqn\label{eqn:htpy1}
 \til{K} \del \gamma + \del K \gamma = \gamma . 
@@ -230,7 +229,8 @@ where $\varphi \in \clie^\text{even} (E(5,10))$ is the even Lie algebra cocycle 
 \label{eqn:cocycle}
 \end{array}
 \eeqn
-Since $b$ is central, this cocycle defines a central extension of $E(5,10)$. 
+Since $b$ is central, this cocycle defines a central extension of $E(5,10)$.
+\end{proof}
 
 \parsec[]
 We briefly remark on Lie algebra cohomology for super Lie algebras.
