@@ -3,7 +3,7 @@
 
 In this section we consider the minimal twist of eleven-dimensional supersymmetry explicitly. 
 We compute the residual supersymmetry algebra given by taking the cohomology of the eleven-dimensional supersymmetry algebra with respect to the minimal twisting supercharge. 
-In order for this to be a symmetry of the eleven-dimensional theory it is necessary to consider an extension of the eleven-dimensional supersymmetry algebra corresponding to the $M2$ brane.
+In order for this to map to the gauge symmetries of the eleven-dimensional theory, it is necessary to consider an extension of the eleven-dimensional supersymmetry algebra corresponding to the M2 brane.
 We will see how this extension is compatible, upon twisting by the minimal supercharge, with the central extension of $E(5,10)$ we found as the global symmetry algebra in the previous section. 
 
 
@@ -35,35 +35,37 @@ The $R$-symmetry is trivial in eleven-dimensional supersymmetry.
 \label{sec:m2brane}
 
 Extensions of the supersymmetry algebra correspond to the existence of extended objects, such as branes, in the supergravity theory.
-In eleven-dimensional supersymmetry, there are two such extensions corresponding to the $M2$ brane and the $M5$ brane.
-We begin by describing a less standard dg Lie algebra model for the $M2$ brane algebra.
+In eleven-dimensional supersymmetry, there are two such extensions corresponding to the M2 brane and the M5 brane.
+We begin by describing a less standard dg Lie algebra model for the M2 brane algebra.
 In the next section we will explain the relationship to other descriptions in terms of $L_\infty$ algebras \cite{Basu_2005,Bagger_2007,fiorenza2015super}. 
 
-Our model for the $M2$ brane algebra is a dg Lie algebra extension of the super Poincar\'e algebra $\lie{siso}_{11d}$.
+Our model for the M2 brane algebra is a dg Lie algebra extension of the super Poincar\'e algebra $\lie{siso}_{11d}$.
  
 Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.
-The $M2$ brane algebra arises as an extension of $\lie{siso}_{11d}$ by the cochain complex $\Omega^\bu(\RR^{11})[2]$ and is defined by a cocycle
+The M2 brane algebra arises as an extension of $\lie{siso}_{11d}$ by the cochain complex $\Omega^\bu(\RR^{11})[2]$ and is defined by a cocycle
 \[
     c_{M2} \in \clie^{2,+} \left(\lie{siso}_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right) .
 \]
 The formula is
   \[c_{M2} (\psi, \psi') = \Gamma_{\wedge^2}(\psi, \psi') \in \Omega^2(\RR^{11})\]
   where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$, thought of as the space of constant coefficient two-forms, as in the decomposition \eqref{eqn:decomp}.
-  
-Here, we are using a bigrading by $\ZZ \times \ZZ/2$. 
-The super Poincar\'e algebra is concentrated in zero integer grading and carries is natural $\ZZ/2$ grading as a super Lie algebra.
-The complex $\Omega^{\bu}(\RR^{11})[2]$ is concentrated in integer degrees $[-2,9]$ and has even parity.
 
 \begin{dfn}
 The algebra $\m2$ is the $\ZZ \times \ZZ/2$-graded dg Lie algebra defined by the extension of $\lie{siso}_{11d}$ by the cocycle $c_{M2}$.  
 \end{dfn}
-
+  
+Here, we are using a bigrading by $\ZZ \times \ZZ/2$. 
+The super Poincar\'e algebra is concentrated in zero integer grading and carries its natural $\ZZ/2$ grading as a super Lie algebra.
+The complex $\Omega^{\bu}(\RR^{11})[2]$ is concentrated in integer degrees $[-2,9]$ and has even parity.
 The bracket in $\m2$ is bidegree $(0,+)$ and the differential is bidegree $(1,+)$.
+
+
+
 
 \subsection{The minimal twist}
 \label{sec:mintwist}
 
-Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$.
+Fix a supercharge $Q \in S$ satisfying $Q^2 = 0$ that is in the lowest stratum of the nilpotence variety.
 Such a supercharge has a six-dimensional image in the space of (complexified) translations on $\RR^{11}$ and defines the minimal twist of eleven-dimensional supersymmetry \cite{SWspinor}. 
 We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
 
@@ -71,19 +73,23 @@ $Q$ defines a maximal isotropic subspace $L \subset V$.
 In turn, we will decompose the super Poincar\'e algebra into $\lie{sl}(L) = \lie{sl}(5)$ representations.
 First, the defining and spinor representations decompose as
 \deq{
-  V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L^\vee.
+  V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L.
 }
 In the expression for $S$, we are omitting factors of $\det(L)^{\frac12}$ for simplicity. 
 Also, $\lie{so}(11, \CC)$ decomposes as
 \[
-\lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee \oplus \C .
+\lie{sl}(L) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee \oplus \C .
 \]
-Furthermore, the spinorial representation can be identified with
+Furthermore, the spin representation can be identified with
 \[
-S = \wedge^\bu (L^\vee) = \CC \oplus L^\vee \oplus \wedge^2 L^\vee \oplus \wedge^3 L^\vee \oplus \wedge^4 L^\vee \oplus \wedge^5 L^\vee .
+S = \wedge^\bu (L) = \CC \oplus L \oplus \wedge^2 L \oplus \wedge^3 L \oplus \wedge^4 L \oplus \wedge^5 L .
 \]
 The element $Q$ lives in the first summand.
-Let ${\rm Stab}(Q) \subset \lie{so}(11,\CC)$ be the stabilizer of $Q$. 
+Let 
+\[
+{\rm Stab}(Q) =  \lie{sl}(L) \oplus \wedge^2 L^\vee \oplus L^\vee \subset \lie{so}(11,\CC)
+\]
+ be the stabilizer of $Q$. 
 This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$.
 
 \subsection{$Q$-cohomology of $\m2$}
@@ -92,7 +98,7 @@ This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$.
 Any element $Q \in S$ satisfying $Q^2 = 0$ determines a deformation of the dg Lie algebra $\m2$.
 To deform $\d$ by $Q$ we must break the $\ZZ \times \ZZ/2$ bigrading.
 The supercharge $Q$ is odd and of cohomological degree zero.
-Recall, the original differential on $\m2$ is the de Rham differential $\d$ which just acts on the summand $\Omega^\bu(\R^11)[2]$ and is even of cohomological degree $+1$.
+Recall, the original differential on $\m2$ is the de Rham differential $\d$ which just acts on the summand $\Omega^\bu(\R^{11})[2]$ and is even of cohomological degree $+1$.
 Thus, only the totalized $\ZZ/2$ grading makes the differential $\d + [Q,-]$ homogenous. 
 
 \begin{dfn}
@@ -100,7 +106,7 @@ The $Q$-twist $\m2^Q$ of $\m2$ is the super dg Lie algebra whose differential is
 The bracket is unchanged.
 \end{dfn}
 
-Let $Q$ be a rank one, or minimal, supercharge satisfying $Q^2 = 0$. We first determine $H^\bullet(\m2^q)$ as a super vector space. 
+Let $Q$ be a minimal supercharge satisfying $Q^2 = 0$. We first determine $H^\bullet(\m2^q)$ as a super vector space. 
 
 \begin{lem}
 As a $\ZZ/2$ graded space, the cohomology of the $Q$-twist $\m2^Q$ is
@@ -121,7 +127,7 @@ The map
 is the projection onto $\wedge^0 L \oplus \wedge^1 L \oplus \wedge^2 L$. 
 The kernel of $[Q,-]$ is the stabilizer~${\rm Stab}(Q)$.
 
-In summary, the space of odd translations which survive cohomology is $\wedge^3 L \cong \wedge^2 L^\vee$.
+In summary, the space of odd translations which survive cohomology is $\wedge^3 L \cong \wedge^2 L^\vee$; two such elements bracket to a holomorphic translation by taking the wedge product to get an element of $\wedge^4 L^\vee \cong L$.
 This completes the calculation of the cohomology. 
 \end{proof}
 
@@ -157,7 +163,7 @@ and the $3$-ary bracket is
 \parsec[]
  
 One way to prove the proposition above is to use homotopy transfer directly to $\m2^Q$, just as we did in the proof of Theorem \ref{thm:global} to deduce the form of the $3$-ary bracket. 
-Instead, we will use the following minimal model for $\m2^Q$ to prove Proposition \ref{prop:susycoh}.
+Instead, we will use the following minimal model for $\m2^Q$ to prove Proposition~\ref{prop:susycoh}.
 This minimal model also has the advantage of being more directly related to the eleven-dimensional supergravity theory.
 
 \begin{lem}
@@ -185,10 +191,10 @@ The central element maps to $c \mapsto - 1 \in \Omega^0(\RR^{11})$.
 The summand $L_\lambda$ is mapped to the linear functions in $\Omega^0(\RR^{11})$ and $\Pi L_{\Tilde{\lambda}}$ is sent to the constant coefficient one-forms in $\Pi \Omega^1(\RR^{11})$. 
 It remains to define where $\psi \in \wedge^2 L$ is mapped.
 
-Notice that naively, $\psi \in \wedge^2 L$ is not $Q$-closed due to the presence of the central extension. 
-To embed $\wedge^2 L$ we introduce the following operator
+Notice that, at least naively, $\psi \in \wedge^2 L$ is not $Q$-closed due to the presence of the central extension. 
+To embed $\wedge^2 L$ we introduce the operator
 \[
-H \colon \Omega^2 (\RR^{11}) \to \Omega^1(\RR^{11})
+H \colon \Omega^2 (\RR^{11}) \to \Omega^1(\RR^{11}),
 \]
 which sends a two-form $\alpha$ to the one-form $H \alpha$ defined by the formula $(H \alpha) (x) = \int_0^x \alpha$
 where we integrate over a straight line path from $0$ to $x$.
@@ -215,10 +221,10 @@ Together with the cochain map described above, this bilinear term prescribes the
 \end{proof}
 
 \parsec[]
-We now proceed to the proof of proposition \ref{prop:susycoh}
+We now proceed to the proof of proposition \ref{prop:susycoh}.
 
 \begin{proof}[Proof of Proposition \ref{prop:susycoh}]
-Using the model $\fg$ the first part of Proposition \ref{prop:susycoh} follows immediately. 
+Using the model $\fg$, the first part of Proposition \ref{prop:susycoh} follows immediately. 
 We deduce the second part using homotopy transfer. 
 
 Recall that we described the cohomology of $\m2^Q$ in \eqref{eqn:susycoh}.
@@ -230,7 +236,7 @@ We produce the homotopy data
 \end{tikzcd}
 \end{equation}
 as follows.
-\begin{itemize}
+\begin{itemize}[leftmargin=\parindent]
 \item The operator $K$ annihilates $H^\bu(\m2^Q)$ and is the identity map~$K \colon \Pi L_{\til \lambda} \to L_\lambda$. 
 \item The map $q$ is the identity on $H^\bu(\m2^Q)$ and annihilates the summand~$L \to \Pi L$. 
 \item The map $i$ embeds $H^\bu(\m2^Q)$ in the obvious way. 
@@ -271,22 +277,19 @@ H^\bu(\m2^Q) \rightsquigarrow \cL (\CC^5 \times \RR)
 In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
 \end{prop}
 \begin{proof}
-Recall the cohomology of $\m2^Q$ takes the following form
+Recall that the cohomology of $\m2^Q$ takes the following form
 \beqn 
 \begin{tikzcd}
 \ul{even} & \ul{odd} & \ul{even} \\
- L^\vee & \wedge^2 L^\vee_2 & L \\
-\wedge^2 L_1^\vee & & \\
-\lie{sl}(5) && \CC_b  \\
-%L_2 \ar[r, "\id"] & L_3 \\ 
- .
+ L^\vee & (\wedge^2 L^\vee)_2 & L \\
+(\wedge^2 L^\vee)_1 & & \\
+\lie{sl}(5) && \CC_b 
 \end{tikzcd}
 \eeqn
 The lefthand column is ${\rm Stab}(Q)$. 
-The subscripts in $\wedge^2 L_1, \wedge^2 L_2$ are used to distinguish between the two copies of $\wedge^2 L$.
+The subscripts are used to distinguish between the two copies of $\wedge^2 L^\vee$.
 
-The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted eleven-dimensional supergravity theory has a linear $\Phi^{(1)}$ and quadratic $\Phi^{(2)}$ piece.
-
+The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted eleven-dimensional supergravity theory has a linear piece $\Phi^{(1)}$ and a quadratic piece $\Phi^{(2)}$.
 Define the linear map $\Phi^{(1)} \colon \fg \to \cL$ as follows:
 \begin{align*}
  L^\vee & \mapsto 0 \\
@@ -298,7 +301,7 @@ A_{ij} \in \lie{sl}(5) & \mapsto \sum_{ij} A_{ij} z_i \partial_{z_j} \in \PV^{1,
 1 \in \CC_b & \mapsto 1 \in \Omega^{0,0}(\CC^5) \hotimes \Omega^0 (\RR) .
 \end{align*}
 
-It is immediate to check that this is a map of cochain complexes since all elements in the image of this map lie in the kernel of the linearized BRST operator \eqref{eqn:linearBRST}. 
+It is immediate to check that this is a map of cochain complexes, since all elements in the image of this map lie in the kernel of the linearized BRST operator~\eqref{eqn:linearBRST}. 
 
 This map also preserves the bracket between odd elements in $\wedge^2 L_2^\vee$. 
 In the cohomology of $\m2^Q$ we have the bracket
@@ -340,14 +343,14 @@ The two terms in the second line of \eqref{eqn:cubicrln} cancel for symmetry rea
 \begin{cor}
 There is a map of super $L_\infty$ algebras 
 \[
-H^\bu(\m2^Q)\to \Hat{E(5,10)}
+H^\bu(\m2^Q)\to \Hat{E(5,10)},
 \]
-where $\Hat{E(5,10)}$ is a central extension $E(5,10)$ by the cocycle \eqref{eqn:cocycle}
+where $\Hat{E(5,10)}$ is a central extension of~$E(5,10)$ by the cocycle~\eqref{eqn:cocycle}.
 \end{cor}
 \begin{proof}
 Because this map preserves differentials, it descends to a map in cohomology. 
-We have already computed the cohomology of $\cL$ on $\CC^5 \times \RR$, it is the trivial one-dimensional central extension of $E (5,10)$. 
-The Lie algebra structure present in the cohomology of $\m2^Q$ is described in part (1) of Proposition \ref{prop:susycoh}. 
+We have already computed the cohomology of $\cL$ on $\CC^5 \times \RR$; it is the trivial one-dimensional central extension of $E (5,10)$. 
+The Lie algebra structure present in the cohomology of $\m2^Q$ is described in part (1) of Proposition~\ref{prop:susycoh}. 
 The map
 \[
 L \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^3 L \right) \oplus \CC_b \to E (5,10) \oplus \CC_{b'}
@@ -365,23 +368,21 @@ b \in \CC_b & \mapsto b \in \CC_{b'} .
 The relationship between the transferred $L_\infty$ structures can be described as follows. 
 Recall that the linear BRST cohomology of the parity shift of the fields of the eleven-dimensional theory is equivalent to the super $L_\infty$ 
 algebra $\Hat{E(5,10)}$.
-Also, we described the $L_\infty$ structure present in the cohomology of $\m2^Q$ in part (2) of Proposition \ref{prop:susycoh}. 
+Also, we described the $L_\infty$ structure present in the cohomology of $\m2^Q$ in part (2) of Proposition~\ref{prop:susycoh}. 
 Each of these $L_\infty$ structure involved introducing a single new $3$-ary bracket, which are easily seen to be compatible. 
 \end{proof}
 \parsec[]
 
-In this section we compare to another description of the $M2$ brane algebra given as a one-dimensional $L_\infty$ central extension of the super Poincar\'e algebra.
-Such central extensions were studied in the work \cite{BHsusyII, SSS, FSS} following \cite{CDF}. 
-
+In this section we compare to another description of the M2 brane algebra given as a one-dimensional $L_\infty$ central extension of the super Poincar\'e algebra.
+Such central extensions were studied in~\cite{BHsusyII, SSS, FSS}, following~\cite{CDF}. 
 In these references, the algebra $\m2$ is defined as an $L_\infty$  
 central extension of $\lie{siso}_{11d}$. 
+
 Recall that given two spinors $\psi, \psi' \in S$ we can form the constant coefficient two-form $\Gamma_{\wedge^2} (\psi, \psi')$. 
 Using this two-form we can define the following four-linear expression
 \[
 \mu_2 (\psi, \psi',v,v') = \<v \wedge v', \Gamma(\psi, \psi')\> .
 \]
-This expression is symmetric on the spinors and anti-symmetric on the vectors, therefore it defines an element in $\clie^4(\lie{siso}_{11d})$. 
+This expression is symmetric on the spinors and antisymmetric on the vectors, therefore it defines an element in $\clie^4(\lie{siso}_{11d})$. 
 This expression defines a nontrivial class in $H^4(\lie{siso}_{11d})$ so defines a one dimensional central extension of $\lie{siso}_{11d}$ as a Lie 3-algebra. 
 Instead of working with a one-dimensional central extension by $\CC[2]$, we work with a central extension by the resolution $\Omega^\bullet(\RR^{11})[2]$. There is a quasi-isomorphism $\clie^4(\lie{siso}_{11d})\to \clie^4(\lie{siso}_{11d}, \Omega^\bullet (\R^{11}))$ such that the induced map on cohomology identifies $\mu_2$ with the $\Omega^\bullet(\RR^{11})[2]$-valued two-cocycle we use. 
-
-%For clarity we adjust notation for $\lie{sl}(5)$-representations. Denote by $V^{1,0} = L^\vee$ the space of holomorphic translations on $\CC^5$ and $V^{\vee 1,0}$ the translation invariant holomorphic one-forms on $\CC^5$. 
