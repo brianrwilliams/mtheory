@@ -112,6 +112,7 @@ Let $X$ be a Calabi-Yau manifold of complex dimension four.
 The $\ZZ/2$ graded complex of fields of minimal Kodaira--Spencer theory on $X$ takes the form
 \beqn
 \begin{tikzcd}
+- & + & - & + \\ \hline
                         &                          &                                     & {\PV^{0,\bu}}    \\
                         &                          & {\PV^{1,\bu}} \arrow[r, "u\div"]    & {u\PV^{0,\bu}}   \\
                         & {\PV^{2,\bu}} \arrow[r, "u\div"]  & {u\PV^{1,\bu}} \arrow[r, "u\div"]   & {u^2\PV^{0,\bu}} \\
@@ -127,10 +128,10 @@ With this in hand the conjecture of \cite{CLsugra} takes the following form.
 
 \begin{conj}
 The $SU(4)$-invariant twist of type IIA supergravity on $\RR^2\times \CC^4$ is the $\Z/2$-graded Poisson BV theory with fields 
-\beqn\label{eqn:IIAfields}. 
+\beqn\label{eqn:IIAfields}
 \alpha = \sum_n \alpha_n u^n \in \cE_{mKS}(\CC^4) \otimes \Omega^{\bu}(\RR^2).
 \eeqn
-The classical interaction takes the form $I_{IIA} = \int_{\CC^4 \times \RR^2} \alpha_0^3 + {\rm higher\;order\;terms}.$
+The classical interaction takes the form \[I_{IIA} = \int_{\CC^4 \times \RR^2} \alpha_0^3 + \cdots\]
 %The $L_{\infty}$ structure is the natural one on the tensor product of the cdga $\Omega^{\bu}(M)$ with the $L_{\infty}$-algebra $\cE_{mKS}$.
 \end{conj}
 
@@ -225,7 +226,7 @@ M \times V \to M \times V_\RR
 induced by ${\rm Re} \colon V \to V_\RR$.
 Most relevant for us is the case when $V = \CC$ and $M$ is $\CC^4 \times \RR$, but the explicit form of the theory along $M$ is not important at the moment.
 
-In fact, we might as well assume that $M$ is a point and that the space of fields is of the form $\Omega^{0,\bu}(V) \otimes W$ for $W$ some graded vector space. 
+For illustrative purposes, let us first assume that $M$ is a point and that the space of fields is of the form $\Omega^{0,\bu}(V) \otimes W$ for $W$ some graded vector space. 
 As properly formulated in \cite{ESW}, it is shown that the dimensional reduction along $V \to V_\RR$ is equivalent to the theory whose fields are $\Omega^\bu(V_\RR) \otimes W$. 
 In other words, the dimensional reduction of the holomorphic theory on $V$ is a topological theory on $V_\RR$. 
 
@@ -333,7 +334,7 @@ Integrating by parts and applying the BV relation, we can write the second line 
 \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \left(\frac{1}{1-\nu} \til\eta\right)\wedge \div (\til\theta \wedge \mu)  = \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} (\til\eta \wedge \mu) \vee \partial \til \theta + \int^{\Omega_{\CC^4}}_{\CC^4 \times \RR^2} \frac{1}{1-\nu} \til \eta \wedge \div \mu \wedge \til \theta .
 \]
 The first term in this equation agrees precisely with the second term in \eqref{eqn:IIAactionpot}. 
-The final term is cohomological trivial via the odd Lagrangian $\int^\Omega \log(1-\nu) \wedge \til \eta \wedge \til \theta$.
+The final term is cohomologically trivial via the odd Lagrangian $\int^\Omega \log(1-\nu) \wedge \til \eta \wedge \til \theta$.
 %
 %Let $\pi : \R\times \C^{\times}\times X \to \R^{2}\times X$ be the projection with fiber $S^{1}\subset \C^{\times}$. Note that there is an isomorphism \[\int: \pi^{*}(\Omega^{\bullet}(\R^{2})\otimes \cE_{pot})\to \cE\] given by \[(\eta, \mu, \nu, \beta,\gamma,\theta)\mapsto (\nu = \nu, \mu = \mu + \theta \vee \Omega_{X} \wedge\del_{z}, \beta = \beta, \gamma = \gamma\vee \Omega_{X} \eta dz ).\] It is clear that this isomorphism presrves the BV pairings; we need only check that $\int^{*} I$ is cohomologous to $I_{pot}$ in the deformation-obstruction complex of the free limit of $\Omega^{\bu}(\R^{2})\otimes \cE_{pot}$.
 %
@@ -344,7 +345,7 @@ The final term is cohomological trivial via the odd Lagrangian $\int^\Omega \log
 \subsection{The twist of type I supergravity}
 
 We now turn to a different type of redution of the 11-dimensional theory, this time involving type I supergravity. 
-In this section, we briefly recall the description of type I supergravity following \cite{CLtypeI} which was motivated by the unoriented $B$-model. 
+We begin by briefly recalling the description of type I supergravity following \cite{CLtypeI} which was motivated by the unoriented $B$-model. 
 In \cite{SWspinor}, the second two authors verified the conjectural description of the space of fields recalled below using the pure spinor formalism. 
 Unlike type IIA supergravity, there only exists an $SU(5)$ invariant twist of type I supergravity and it is holomorphic in the maximal number of dimensions.
 
@@ -426,7 +427,7 @@ To make sense of the theory on $\CC^5 \times [0,1]$ we must make the choice of t
 \[
 \cM_{t=0} , \cM_{t=1} \subset \cE_{\del} .
 \]
-Moreover, these boundary conditions carry non linear BRST endowing their parity shifts $\Pi \cM_{t=0} , \Pi\cM_{t=1}$ with the structures of $L_\infty$ algebras. 
+Moreover, these boundary conditions carry non linear BRST operators endowing their parity shifts $\Pi \cM_{t=0} , \Pi\cM_{t=1}$ with the structures of $L_\infty$ algebras. 
 These $L_\infty$ structures must be compatible with the one on the phase space.
 In fact, in our context these boundary conditions are abstractly isomorphic. 
 We will explain the explicit boundary conditions momentarily. 
@@ -443,13 +444,13 @@ At $t=0$, the boundary condition of the 11-dimensional theory is determined by d
 \[
 \cM_{t=0}: \quad \gamma|_{t=0} = \beta|_{t=0} = 0 .
 \]
-To place the theory on $\CC^5 \times [0,1]$ we take the same boundary condition at $t=1$:
+We will place the theory on $\CC^5 \times [0,1]$ by imposing the same boundary condition at $t=1$:
 \[
 \cM_{t=1}: \quad \gamma|_{t=1} = \beta|_{t=1} = 0 .
 \]
 
 \begin{prop}
-With these boundary conditions of the classical 11-dimensional theory on $\CC^5 \times [0,1]$, the compactification along 
+With these boundary conditions for the classical 11-dimensional theory on $\CC^5 \times [0,1]$, the dimensional reduction along 
 \[
 \CC^5 \times [0,1] \to \CC^5
 \]
@@ -610,7 +611,7 @@ A thorough computation of the twist has yet to appear, though some checks have b
 We give a description of the twist now, but leave a detailed computation from first principles to future work. 
 
 The gravity multiplet, see \cite{CCDF} for instance, consists of a graviton $e$, a gravitino $\psi$, and a one-form gauge field $\cA_{grav}$.
-After twisting, the graviton and components of gravitino decompose into two Dolbeault-de Rham valued fields 
+After twisting, the graviton and components of the gravitino decompose into two Dolbeault-de Rham valued fields 
 \[
 \alpha, \eta \in \Pi \Omega^{0,\bu}(\CC^2) \otimes \Omega^\bu(\RR) ,
 \]
@@ -645,12 +646,14 @@ The action is
 
 With this description of the twist of five-dimensional supergravity, we turn to the proof of Proposition \ref{prop:5dsugra}. 
 
+
 First, we set up some notation. 
 Let $\Omega_X$ be the holomorphic volume form on $X$. 
 To define the $11$-dimensional theory on $X \times \CC^2 \times \RR$ we use the Calabi--Yau form $\Omega_X \wedge \d z_1 \wedge \d z_2$, where $\{z_i\}$ is a holomorphic coordinate on $\CC^2$. 
 Let $\omega \in \Omega^{1,1}(X)$ be a fixed K\"ahler form on $X$.
 For any $k$, let $H^k(X, \Omega^k_X)_\perp$ denote the cohomology of the primitive elements. 
 
+\begin{proof}
 Consider the 11-dimensional field $\nu_{11d}$. 
 Under the equivalence
 \begin{align*}
@@ -728,6 +731,7 @@ This induces the five-dimensional Chern--Simons term
 \frac16 \int_{\CC^2 \times \RR} B_{grav} \del B_{grav} \del B_{grav} .
 \eeqn
 This completes the proof. 
+\end{proof}
 
 \parsec[s:5dglobal]
 

@@ -1,13 +1,13 @@
 \section{Residual supersymmetry} 
 \label{sec:susy}
-%m2brane
 
-In this section we consider the minimal twist of 11-dimensional supersymmetry explicitly. 
-We compute the residual supersymmetry algebra given by taking the cohomology of the 11-dimensional supersymmetry algebra with respect to the minimal twisting supercharge. 
-In order for this to be a symmetry of the 11-dimensional theory it is necessary to perform a central extension of the 11-dimensional supersymmetry algebra by the $M2$ brane.
-We will see how this central extension is compatible, upon twisting by the minimal supercharge, with the central extension of $E(5,10)$ we found as the global symmetry algebra in the previous section. 
+In this section we consider the minimal twist of eleven-dimensional supersymmetry explicitly. 
+We compute the residual supersymmetry algebra given by taking the cohomology of the eleven-dimensional supersymmetry algebra with respect to the minimal twisting supercharge. 
+In order for this to be a symmetry of the eleven-dimensional theory it is necessary to consider an extension of the eleven-dimensional supersymmetry algebra corresponding to the $M2$ brane.
+We will see how this extension is compatible, upon twisting by the minimal supercharge, with the central extension of $E(5,10)$ we found as the global symmetry algebra in the previous section. 
 
-\subsection{Supersymmetry in 11 dimensions}
+
+\subsection{Supersymmetry in eleven dimensions}
 \label{sec:11dsusy}
 
 The (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
@@ -29,20 +29,20 @@ The super Poincar\'{e} algebra is
 \[
   \lie{siso}_{11d} = \lie{so}(11 , \CC) \ltimes \ft_{11d} .
 \]
-The $R$-symmetry is trivial in 11-dimensional supersymmetry. 
+The $R$-symmetry is trivial in eleven-dimensional supersymmetry. 
 
-\subsection{Central extensions of the supersymmetry algebra} 
+\subsection{Extensions of the supersymmetry algebra} 
 \label{sec:m2brane}
 
 Extensions of the supersymmetry algebra correspond to the existence of extended objects, such as branes, in the supergravity theory.
-In 11-dimensional supersymmetry, there are two such extensions corresponding to the $M2$ brane and the $M5$ brane.
+In eleven-dimensional supersymmetry, there are two such extensions corresponding to the $M2$ brane and the $M5$ brane.
 We begin by describing a less standard dg Lie algebra model for the $M2$ brane algebra.
 In the next section we will explain the relationship to other descriptions in terms of $L_\infty$ algebras \cite{Basu_2005,Bagger_2007,fiorenza2015super}. 
 
 Our model for the $M2$ brane algebra is a dg Lie algebra extension of the super Poincar\'e algebra $\lie{siso}_{11d}$.
  
 Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.
-The $M2$ brane algebra arises as a central extension of $\lie{siso}_{11d}$ by $\Omega^\bu(\RR^{11})[2]$ and is defined by a cocycle
+The $M2$ brane algebra arises as an extension of $\lie{siso}_{11d}$ by the cochain complex $\Omega^\bu(\RR^{11})[2]$ and is defined by a cocycle
 \[
     c_{M2} \in \clie^{2,+} \left(\lie{siso}_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right) .
 \]
@@ -55,7 +55,7 @@ The super Poincar\'e algebra is concentrated in zero integer grading and carries
 The complex $\Omega^{\bu}(\RR^{11})[2]$ is concentrated in integer degrees $[-2,9]$ and has even parity.
 
 \begin{dfn}
-The algebra $\m2$ is the $\ZZ \times \ZZ/2$-graded dg Lie algebra defined by the central extension of $\lie{siso}_{11d}$ by the cocycle $c_{M2}$.  
+The algebra $\m2$ is the $\ZZ \times \ZZ/2$-graded dg Lie algebra defined by the extension of $\lie{siso}_{11d}$ by the cocycle $c_{M2}$.  
 \end{dfn}
 
 The bracket in $\m2$ is bidegree $(0,+)$ and the differential is bidegree $(1,+)$.
@@ -64,7 +64,7 @@ The bracket in $\m2$ is bidegree $(0,+)$ and the differential is bidegree $(1,+)
 \label{sec:mintwist}
 
 Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$.
-Such a supercharge has a six-dimensional image in the space of (complexified) translations on $\RR^{11}$ and defines the minimal twist of 11-dimensional supersymmetry \cite{SWspinor}. 
+Such a supercharge has a six-dimensional image in the space of (complexified) translations on $\RR^{11}$ and defines the minimal twist of eleven-dimensional supersymmetry \cite{SWspinor}. 
 We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
 
 $Q$ defines a maximal isotropic subspace $L \subset V$. 
@@ -92,7 +92,7 @@ This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$.
 Any element $Q \in S$ satisfying $Q^2 = 0$ determines a deformation of the dg Lie algebra $\m2$.
 To deform $\d$ by $Q$ we must break the $\ZZ \times \ZZ/2$ bigrading.
 The supercharge $Q$ is odd and of cohomological degree zero.
-Recall, the original differential on $\m2$ is the de Rham differential $\d$ which just acts on the central summand and is even of cohomological degree $+1$.
+Recall, the original differential on $\m2$ is the de Rham differential $\d$ which just acts on the summand $\Omega^\bu(\R^11)[2]$ and is even of cohomological degree $+1$.
 Thus, only the totalized $\ZZ/2$ grading makes the differential $\d + [Q,-]$ homogenous. 
 
 \begin{dfn}
@@ -100,17 +100,36 @@ The $Q$-twist $\m2^Q$ of $\m2$ is the super dg Lie algebra whose differential is
 The bracket is unchanged.
 \end{dfn}
 
-We now assume that $Q$ is a rank one, or minimal, supercharge satisfying $Q^2 = 0$. 
+Let $Q$ be a rank one, or minimal, supercharge satisfying $Q^2 = 0$. We first determine $H^\bullet(\m2^q)$ as a super vector space. 
 
-\begin{prop}\label{prop:susycoh}
+\begin{lem}
 As a $\ZZ/2$ graded space, the cohomology of the $Q$-twist $\m2^Q$ is
 \beqn\label{eqn:susycoh}
 L \oplus {\rm Stab}(Q) \oplus \Pi \left(\wedge^2 L^\vee\right) \oplus \CC
 \eeqn
 whose elements we denote by $(v, m, \psi, c)$.
+\end{lem}
+\begin{proof}
+The cohomology of the non-centrally extended algebra was computed in \cite{SWspinor}, we briefly recall the result. 
+The element $Q$ only acts nontrivially on the summands $\wedge^4 L$ and $\wedge^5 L$ in $S$. 
+The image of $\wedge^4 L \cong L^\vee$ trivializes the antiholomorphic translations while the image of $\wedge^5 L$ trivializes the time translation.
+So, of the translations, only the holomorphic ones, which live in $L$, survive.
+The map 
+\[
+[Q,-] \colon \lie{so}(11,\CC) \to S 
+\] 
+is the projection onto $\wedge^0 L \oplus \wedge^1 L \oplus \wedge^2 L$. 
+The kernel of $[Q,-]$ is the stabilizer~${\rm Stab}(Q)$.
 
+In summary, the space of odd translations which survive cohomology is $\wedge^3 L \cong \wedge^2 L^\vee$.
+This completes the calculation of the cohomology. 
+\end{proof}
+
+The main result of this subsection is the following:
+\begin{prop}\label{prop:susycoh}
+The cohomology of the $Q$-twist $H^\bu(\m2^Q)$ has the following structures:
 \begin{enumerate}
-\item As a super Lie algebra, the cohomology of $\m2^Q$ is the natural extension of ${\rm Stab}(Q)$ together with the bracket
+\item As a super Lie algebra, $H^\bu(\m2^Q)$ is the natural extension of ${\rm Stab}(Q)$ together with the bracket
 \beqn\label{eqn:susy2bra}
 [\psi, \psi']_2 = \psi \wedge \psi' \in \wedge^4 L^\vee \cong L_v \\
 \eeqn
@@ -136,11 +155,10 @@ and the $3$-ary bracket is
 \] 
 
 \parsec[]
-
-One outcome of this proposition is that the dg Lie algebra $\m2^Q$ is {\em not} formal; there is a 3-ary $L_\infty$ bracket present in cohomology. 
-One way to prove the proposition above is to use homotopy transfer directly to $\m2^Q$, just as we did in \S \ref{s:ht} to deduce the form of the $3$-ary bracket. 
+ 
+One way to prove the proposition above is to use homotopy transfer directly to $\m2^Q$, just as we did in the proof of Theorem \ref{thm:global} to deduce the form of the $3$-ary bracket. 
 Instead, we will use the following minimal model for $\m2^Q$ to prove Proposition \ref{prop:susycoh}.
-This minimal model also has the advantage of being more directly related to the 11-dimensional supergravity theory.
+This minimal model also has the advantage of being more directly related to the eleven-dimensional supergravity theory.
 
 \begin{lem}
 \label{lem:gmodel}
@@ -162,21 +180,6 @@ There is an $L_\infty$ map
 which is a quasi-isomorphism of cochain complexes.  
 \end{lem}
 \begin{proof}
-
-The cohomology of the non-centrally extended algebra was computed in \cite{SWspinor}, we briefly recall the result. 
-The element $Q$ only acts nontrivially on the summands $\wedge^4 L$ and $\wedge^5 L$ in $S$. 
-The image of $\wedge^4 L \cong L^\vee$ trivializes the antiholomorphic translations while the image of $\wedge^5 L$ trivializes the time translation.
-So, of the translations, only the holomorphic ones, which live in $L$, survive.
-The map 
-\[
-[Q,-] \colon \lie{so}(11,\CC) \to S 
-\] 
-is the projection onto $\wedge^0 L \oplus \wedge^1 L \oplus \wedge^2 L$. 
-The kernel of $[Q,-]$ is the stabilizer~${\rm Stab}(Q)$.
-
-In summary, the space of odd translations which survive cohomology is $\wedge^3 L \cong \wedge^2 L^\vee$.
-This completes the calculation of the cohomology. 
-
 We embed $\fg$ into $\m2^Q$ in the following way: ${\rm Stab}(Q)$ and $L$ sit inside in the evident way.
 The central element maps to $c \mapsto - 1 \in \Omega^0(\RR^{11})$.
 The summand $L_\lambda$ is mapped to the linear functions in $\Omega^0(\RR^{11})$ and $\Pi L_{\Tilde{\lambda}}$ is sent to the constant coefficient one-forms in $\Pi \Omega^1(\RR^{11})$. 
@@ -212,7 +215,9 @@ Together with the cochain map described above, this bilinear term prescribes the
 \end{proof}
 
 \parsec[]
+We now proceed to the proof of proposition \ref{prop:susycoh}
 
+\begin{proof}[Proof of Proposition \ref{prop:susycoh}]
 Using the model $\fg$ the first part of Proposition \ref{prop:susycoh} follows immediately. 
 We deduce the second part using homotopy transfer. 
 
@@ -250,19 +255,20 @@ It is determined by the following tree diagram
 \end{equation}
 together with a similar diagram with the $v$ and $v'$ reversed. 
 It is an immediate calculation to show that these trees recover the formula in (2) of Proposition \ref{prop:susycoh}.
+\end{proof}
 
-\subsection{Embedding supersymmetry into the 11-dimensional theory} \label{s:residual}
+\subsection{Embedding supersymmetry into the eleven-dimensional theory} \label{s:residual}
 
 Consider now the super $L_\infty$ algebra $\cL$ underlying the eleven-dimensional theory on $\CC^5 \times \RR$. 
 
 \begin{prop}
-Endow the cohomology of $\m2^Q$ with the $L_\infty$ structure of Proposition \ref{prop:susycoh} and let $\cL(\CC^5 \times \RR)$ be the super $L_\infty$ algebra underlying 11-dimensional supergravity on $\CC^5 \times \RR$. 
+Endow the cohomology of $\m2^Q$ with the $L_\infty$ structure of Proposition \ref{prop:susycoh} and let $\cL(\CC^5 \times \RR)$ be the super $L_\infty$ algebra underlying eleven-dimensional supergravity on $\CC^5 \times \RR$. 
 There is a map of super $L_\infty$ algebras 
 \[
 H^\bu(\m2^Q) \rightsquigarrow \cL (\CC^5 \times \RR)
 \]
 %where $\fg$ is the model for the $Q$-cohomology of the super Lie algebra $\m2$ from Proposition \ref{lem:gmodel}. 
-In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of 11-dimensional theory on $\CC^5 \times \RR$. 
+In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimensional theory on $\CC^5 \times \RR$. 
 \end{prop}
 \begin{proof}
 Recall the cohomology of $\m2^Q$ takes the following form
@@ -279,7 +285,7 @@ Recall the cohomology of $\m2^Q$ takes the following form
 The lefthand column is ${\rm Stab}(Q)$. 
 The subscripts in $\wedge^2 L_1, \wedge^2 L_2$ are used to distinguish between the two copies of $\wedge^2 L$.
 
-The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted $11$-dimensional supergravity theory has a linear $\Phi^{(1)}$ and quadratic $\Phi^{(2)}$ piece.
+The $L_\infty$ map from the dg Lie model $\fg$ to the fields of the twisted eleven-dimensional supergravity theory has a linear $\Phi^{(1)}$ and quadratic $\Phi^{(2)}$ piece.
 
 Define the linear map $\Phi^{(1)} \colon \fg \to \cL$ as follows:
 \begin{align*}
@@ -302,12 +308,12 @@ In the cohomology of $\m2^Q$ we have the bracket
 which is precisely the bracket induced by the cubic term in the action $J = \frac16 \in \gamma \del \gamma \del \gamma$. 
 
 This map does not preserve all of the brackets, however. 
-Indeed, in the 11-dimensional theory $\cL(\CC^5 \times \RR)$ there is the bracket 
+Indeed, in the eleven-dimensional theory $\cL(\CC^5 \times \RR)$ there is the bracket 
 \[
 \left[\partial_{z_i}, z_j \d z_k - z_k \d z_j\right] = \delta^i_j \d z_k - \delta^i_k \d z_j 
 \]
 arising from the cubic term in $\frac12 \int \frac{1}{1-\nu} \mu^2 \del \gamma$. 
-To remedy the failure for $\Phi^{(1)}$ to preserve the brackets, we introduce the odd bilinear map $\Phi^{(2)} \colon \fg \times \fg \to \Pi \cL$ defined by 
+To remedy the failure for $\Phi^{(1)}$ to preserve the brackets, we introduce the odd bilinear map $\Phi^{(2)} \colon \fg \otimes \fg \to \Pi \cL$ defined by 
 \beqn\label{eqn:phi2}
 \Phi^{(2)} \left(\partial_{z_i} , z_j \wedge z_k\right) = \frac12 (\delta^i_j z_k - \delta^i_k z_j) .
 \eeqn
@@ -330,8 +336,15 @@ The two terms in the second line of \eqref{eqn:cubicrln} cancel for symmetry rea
 %$[\Phi^{(1)}(z_i \wedge z_j), \Phi^{(1)}(z_k \wedge z_l), \Phi^{(1)} (z_m \wedge z_n)]_3 = \Phi^{(2)} ([z_i \wedge z_j, z_k\wedge z_l)], z_m \wedge z_n) + $permutations, where $[-]_3$ is the $3$-ary bracket arising from the 
 \end{proof}
 
-\parsec[]
-
+\parsec[] From the previous proposition we can readily compare the super $L_\infty$ algebra $H^\bu(\m2^Q)$ with the global symmetry algebra of our theory.
+\begin{cor}
+There is a map of super $L_\infty$ algebras 
+\[
+H^\bu(\m2^Q)\to \Hat{E(5,10)}
+\]
+where $\Hat{E(5,10)}$ is a central extension $E(5,10)$ by the cocycle \eqref{eqn:cocycle}
+\end{cor}
+\begin{proof}
 Because this map preserves differentials, it descends to a map in cohomology. 
 We have already computed the cohomology of $\cL$ on $\CC^5 \times \RR$, it is the trivial one-dimensional central extension of $E (5,10)$. 
 The Lie algebra structure present in the cohomology of $\m2^Q$ is described in part (1) of Proposition \ref{prop:susycoh}. 
@@ -350,11 +363,11 @@ b \in \CC_b & \mapsto b \in \CC_{b'} .
 \end{align*}
 
 The relationship between the transferred $L_\infty$ structures can be described as follows. 
-Recall, that the linear BRST cohomology of the parity shift of the fields of the 11-dimensional theory is equivalent to the super $L_\infty$ 
-algebra $\Hat{E(5,10)}$ which is a central extension $E(5,10)$ by the cocycle \eqref{eqn:cocycle}.
+Recall that the linear BRST cohomology of the parity shift of the fields of the eleven-dimensional theory is equivalent to the super $L_\infty$ 
+algebra $\Hat{E(5,10)}$.
 Also, we described the $L_\infty$ structure present in the cohomology of $\m2^Q$ in part (2) of Proposition \ref{prop:susycoh}. 
 Each of these $L_\infty$ structure involved introducing a single new $3$-ary bracket, which are easily seen to be compatible. 
-
+\end{proof}
 \parsec[]
 
 In this section we compare to another description of the $M2$ brane algebra given as a one-dimensional $L_\infty$ central extension of the super Poincar\'e algebra.

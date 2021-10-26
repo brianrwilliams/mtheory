@@ -55,7 +55,7 @@ We will fix the non-minimal supercharge
 \[
 Q_{nm} = \d z_1 \wedge \d z_2 .
 \]
-Notice that this choice of supercharge breaks the holonomy of the 11-dimensional theory from $SU(5)$ to $SU(3) \times SU(2)$. 
+Notice that this choice of supercharge breaks the holonomy of the 11-dimensional theory from $SU(5)$ to $SU(2) \times SU(3)$. 
 
 \subsection{Index matching}
 \label{sec:indexcheck}
@@ -72,7 +72,7 @@ This agrees with the specializaiton of the local character computed in propositi
 \begin{proof}
 The space of solutions to linearized equations of motion is parametrized by a holomorphic function $A$ on $\C^2_{w_j}$. The corresponding linear local operators are labeled by $(n_1,n_2)\in \Z^2_{\geq 0}$  and are given by 
 \[
-A_{(n_1,n_2)} : A \mapsto \partial_{w_1}^{n_1}\partial_{w_2}^{n_2} A (0).
+\boldsymbol{A}_{(n_1,n_2)} : A \mapsto \partial_{w_1}^{n_1}\partial_{w_2}^{n_2} A (0).
 \]
 
 The character of the linear span of these is given by the geometric series
@@ -84,12 +84,12 @@ with plethystic exponential given by
 \prod _{(n_1,n_2)\in \Z^2_{\geq 0}} \frac{1}{1-q^{-n_1+n_2}}.
 \]
 
-For the last part, it suffices to observe the specialization at the level of single particle indices. A natural choice of fugacities for $SU(3)\times SU(2)$ is given in terms of the fugacities $q_i$ for $SU(5)$ chosen in \ref{sec:locchar} by requiring the additional constraints \[q_1q_2q_3 = 1, \ \ \ q_4q_5=1.\]
+For the last part, it suffices to observe the specialization at the level of single particle indices. A natural choice of fugacities for $SU(2)\times SU(3)$ is given in terms of the fugacities $q_i$ for $SU(5)$ chosen in \ref{sec:locchar} by requiring the additional constraints \[q_1q_2 = 1, \ \ \ q_3q_4q_5=1.\]
 After imposing the above constraints, the single particle index \ref{singleparticleindex} is
 \[
 i(q) = \frac{1}{(1-q)(1-q^{-1})}
 \]
-where $q = q_4=q_5^{-1}$. This is exactly the sum of the geometric series \ref{nonmin:singleparticle}
+where $q = q_1=q_1^{-1}$. This is exactly the sum of the geometric series \ref{nonmin:singleparticle}
 
 \end{proof}
 
@@ -137,6 +137,7 @@ where $f_l \partial_{z_l}$, $g_a \partial_{w_a}$ are divergence-free vector fiel
 
 From these relations, we see that the following elements are in the kernel of $[\d z_1 \wedge \d z_2, -]$:
 \begin{itemize}
+\item $f(z_i, w_a)dz_1\wedge dz_2$ for $f$ a holomorphic function on $\CC^5$.
 \item $f(z_i) \partial_{z_1} + g(z_i) \partial_{z_2}$ for holomorphic functions $f,g$ on $\CC_{z_1} \times \CC_{z_2}$ which satisfy 
 \[
 \del_{z_1} f + \del_{z_2} g = 0 .
@@ -145,7 +146,7 @@ In other words, this is a divergence-free vector field on $\CC_{z_1} \times \CC_
 \item $f_b(z_i, w_a) \partial_{w_b}$ for $f_b$ a holomorphic function on $\CC^5$ where $b=1,2,3$. 
 \end{itemize}
 It is immediate to check that these are the only nonzero elements in the kernel. 
-Further, any element of the second type is clearly exact by the closed two-form $\ep^{ijklm} f \d z_l \d z_m$. 
+Further, any element of the first type is clearly exact and any element of the last type is clearly exact by the closed two-form $\ep^{ijklm} f \d w_l \d w_m$. 
 
 Thus, the cohomology is the (purely bosonic) Lie algebra of divergence-free vector fields on $\CC^2 = \CC_i \times \CC_j$
 \[
@@ -190,7 +191,7 @@ We will see that this is compatible with the calculation of the non-minimal twis
 
 \subsection{The non-minimal twist of the 11-dimensional theory}
 
-Now, we turn to deducing the action function of the non-minimal twist and hence the proof of Theorem \ref{thm:nonmin}. 
+Now, we turn to deducing the action functional of the non-minimal twist and hence the proof of Theorem \ref{thm:nonmin}. 
 We will show that the eleven-dimensional theory on $\CC^5 \times \RR$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma_{nm}$ \eqref{eqn:gammanm} is equivalent to a theory with a purely Chern--Simons-like action functional that we referred to in the introduction to this section. 
 
 Poisson Chern--Siimons theory is defined on any manifold of the form
@@ -218,7 +219,8 @@ where $\{-,-\}$ is the Poisson bracket induced from the symplectic form $\omega_
 For simplicity, we will work only on flat space $\CC^5 \times \RR = \CC^2_z \times (\CC^3_w \times \RR)$, where we view $Z = \CC^2_z$ as a hyper K\"ahler manifold with its standard holomorphic symplectic form $\omega^{2,0} = \d^2 z$.
 
 We will decompose the fields according to these coordinates. 
-For example, we decompose the $\mu$-field as $\mu = \mu_z + \mu_w$ where
+\begin{proof}[Proof of Theorem \ref{thm:nonmin}]
+Decompose the $\mu$-field as $\mu = \mu_z + \mu_w$ where
 \begin{align*}
 \mu_z  &\in \PV^{1,\bu}(\CC^2_z) \otimes \PV^{0,\bu}(\CC^3_w) \otimes \Omega^\bu(\RR) \\
 \mu_w & \in \PV^{0,\bu}(\CC^2_z) \otimes \PV^{1,\bu}(\CC^3_w) \otimes \Omega^\bu(\RR)  .
@@ -376,7 +378,7 @@ Consider the (non-translation invariant) odd local functional
 \]
 Using $\del^w \eta = \d^3 w$, we see that this functional trivializes the remaining terms in parentheses in \eqref{eqn:pcs1}.
 This completes the argument. 
-
+\end{proof}
 %
 %Restricting the action \eqref{eqn:delta1} along the map \eqref{eqn:g2map} we obtain
 %\begin{multline}
