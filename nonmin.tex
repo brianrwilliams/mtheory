@@ -272,7 +272,7 @@ The new terms in the non-minimally twisted linearized BRST differential arise fr
   \frac{1}{2} \int (\d^2 z \vee \mu_z^2) \wedge (\d^2 z \wedge \d^3 w) + \frac{1}{2} \int \left(\gamma_w \wedge \partial^w \gamma_w \right) \wedge \d^2 z .
 \end{equation}
 The non-minimally twisted linear BRST complex thus takes the form
-\[
+\beqn\label{eqn:twisteddiagram}
   \begin{tikzcd}
   & \PV^{1,\bu}_Z \hotimes \PV^{0,\bu}_W \ar[dr, "\div^z"] \ar[dashed, rounded corners, to path={ -- ([yshift=-2ex]\tikztostart.west) |- ([xshift=-1.5ex]\tikztotarget.west) -- (\tikztotarget)}, dddddr]\\
   & & \PV^{0,\bu}_Z \hotimes \PV^{0,\bu}_W \\
@@ -282,7 +282,7 @@ The non-minimally twisted linear BRST complex thus takes the form
   & & \Omega^{1,\bu}_Z \hotimes \Omega^{0,\bu}_W
   %\ar[uuuuul, start anchor =  {[yshift = 0ex, xshift=0ex]}, end anchor = {[yshift=1.0ex, xshift=-5ex]}, bend left = 90, dotted] .
   \end{tikzcd}
-\]
+\eeqn
 Here, we write $Z = \CC^2_z$ and $X = \CC^3_w$ for notational simplicity. 
 
 Here, the dashed arrow along the outside of the diagram corresponds to the BV antibracket with the first term in (\ref{eqn:newterms}).
@@ -305,20 +305,23 @@ given by applying the holomorphic de Rham operator along $X$ followed by contrac
 
 We replace this linear BRST complex, up to quasi-isomorphism, with a smaller BRST complex. 
 Consider the complex
-\beqn
+\beqn\label{eqn:zw}
 \Omega^{0,\bu}_Z \hotimes \Omega^{\bu,\bu}_W \hotimes \Omega^\bu_L = \oplus_{k =0}^3 \Omega^{0,\bu}_Z \hotimes \Omega^{k,\bu}_W \hotimes \Omega^\bu_L 
 %[-k] 
 \eeqn
 which is equipped with the differential $\dbar^z + \dbar^w + \del^w + \d_{\RR}$. 
 Write $\alpha = \alpha^0 + \cdots + \alpha^3$ for a field in this complex, using the decomposition on the right hand side. 
+The full Poisson Chern--Simons action $S_{pCS}$ equips this complex with the structure of a dg Lie algebra. 
 
-There is a map of linear BRST complexes from this one to the original one defined by the following equations 
+Define the following non-linear map of BRST complexes from \eqref{eqn:zw} to the twisted theory \eqref{eqn:twisteddiagram}.
+It is defined by the equations
 \begin{multline}
-\mu_z = (\del_{z_1} \wedge \del_{z_2}) \vee \del^z \alpha^0, \quad \mu_w = (\del_{w_1} \wedge \del_{w_2} \wedge \del_{w_3}) \vee \alpha^2, \quad \nu = \til{\alpha}^3 \\
+\mu_z = (1-\til \alpha^3) (\del_{z_1} \wedge \del_{z_2}) \vee \del^z \alpha^0 , \quad \mu_w = (\del_{w_1} \wedge \del_{w_2} \wedge \del_{w_3}) \vee \alpha^2, \quad \nu = \til{\alpha}^3 \\
 \beta = \alpha^0 , \quad \gamma_w = \alpha^1 , \quad \gamma_z = 0 .
 \label{eqn:g2map}
 \end{multline}
 In the above equation we have introduced the notation $\til{\alpha}^3 = \Omega_X^{-1} \vee \alpha^3$. 
+Notice the only non-linearity appears in the definition of $\mu_z$. 
 
 The restriction of the kinetic terms $\int \gamma (\dbar + \d_{\RR}) \mu + \beta (\dbar + \d_{\RR}) \nu$ along \eqref{eqn:g2map} is
 \beqn\label{eqn:kin1}
@@ -326,58 +329,62 @@ The restriction of the kinetic terms $\int \gamma (\dbar + \d_{\RR}) \mu + \beta
 \eeqn
 The restriction of the kinetic term $\int \beta \div \mu$ along \eqref{eqn:g2map} is
 \beqn\label{eqn:kin2}
-\int \alpha^0 \del^w \alpha^2 . 
+\int \alpha^0 \del^w \alpha^2 - \int \alpha^0 \del^z \alpha^0 \del^z \alpha^3 . 
 \eeqn
-Finally, the restriction of the kinetic term $\gamma \del^w \gamma$ along \eqref{eqn:g2map} is 
+Finally, the restriction of the kinetic term $\frac12 \int \gamma \del^w \gamma$ in \eqref{eqn:delta2} along \eqref{eqn:g2map} is 
 \beqn\label{eqn:kin3} 
 \int \frac12 \alpha^1 \del^w \alpha^1 . 
 \eeqn
 Together, \eqref{eqn:kin1}--\eqref{eqn:kin3} give the kinetic term in Poisson Chern--Simons theory. 
 
-This shows that \eqref{eqn:g2map} is a map of linear BRST complexes.
-Applying the obvious contracting homotopy, we see that this map is a quasi-isomorphism.
+The formulas above show that the linear terms in \eqref{eqn:g2map} define a map of linear BRST complexes.
+Applying the apparent contracting homotopy, we see that this map is a quasi-isomorphism.
 We will show that the full non-linear map intertwines the action functionals up to cohomologically exact terms, and hence defines an equivalence of BV theories.
 
-We first substitute the values for the fields in \eqref{eqn:g2map} into the original 11-dimensional action. 
-The terms which are at least cubic in the action in \eqref{eqn:delta1} become
-\beqn
-\int \frac{1}{1-\til\alpha^3} \left(\frac12 \del^w \alpha^1 (\til \alpha^2)^2 \d^2 z + \alpha^2 \del^z \alpha^1 \del^z \alpha^0 + \alpha^3 \del^z \alpha^0 \del^z \alpha^0 \right) .
+We substitute the values for the fields in \eqref{eqn:g2map} into the original 11-dimensional action. 
+Notice that any terms involving $\gamma_z$ can be discarded. 
+Restricting \eqref{eqn:delta1} along this map, we obtain the action functional
+\beqn\label{eqn:rest1}
+\frac12 \int \frac{1}{1-\til\alpha^3}  \del^w \alpha^1 (\til \alpha^2)^2 \d^2 z + \int \alpha^2 \del^z \alpha^0 \del^z \alpha^1
++ \frac12 \int (1-\alpha^3) \del^z \alpha^0 \del^z \alpha^0 .
 \eeqn
 Here, $\til \alpha^2$ denotes the element of $\Omega^{0,\bu}_Z \hotimes \PV^{1,\bu}_W \hotimes \Omega^\bu_L$ corresponding to $\alpha^2$ determined by the Calabi--Yau form $\d^3 w$. 
+Notice that the very last term is equivalent to the functional $-\frac12\int \alpha^3 \del^z \alpha^0 \del^z \alpha^0$ since the quadratic part is a total derivative. 
+
 There is only one cubic term left in \eqref{eqn:delta2} when we substitute the fields according to \eqref{eqn:g2map}.
 It is
 \beqn
 \frac16 \int \alpha^1 \del^z \alpha^1 \del^z \alpha^1. 
 \eeqn
 
-Notice that the total action is of the form 
+Combining all of these terms, we see that the total action restricted along the map \eqref{eqn:g2map} is 
 \beqn\label{eqn:pcs1}
-S_{pCS} (\alpha) + \int \frac{1}{1-\til\alpha^3} \left(\frac12 \del^w \alpha^1 (\til \alpha^2)^2 \d^2 z + \til\alpha^3 \alpha^2 \del^z \alpha^1 \del^z \alpha^0 + \til\alpha^3 \alpha^3 \del^z \alpha^0 \del^z \alpha^0 \right)
+S_{pCS} (\alpha) + \int \frac12 \frac{1}{1-\til\alpha^3} \del^w \alpha^1 (\til \alpha^2)^2 \d^2 z
 \eeqn
 where $S_{pCS}$ is the Poisson Chern--Simons action in \eqref{eqn:pcsaction}.
 
-We will show that the terms not appearing in $S_{pCS}(\alpha)$ are cohomologically trivial. 
-First, consider the odd local functional
+We will show that the term not appearing in $S_{pCS}(\alpha)$ is cohomologically trivial. 
+Consider the odd local functional
 \beqn\label{eqn:triv1}
-\int \frac{1}{1 - \til \alpha^3} \alpha^2 (\til \alpha^2)^2 .
+\frac16 \int \frac{1}{1 - \til \alpha^3} \alpha^2 (\til \alpha^2)^2 .
 \eeqn
 Applying the linearized BRST operator (in the non-minimal twist) this becomes 
 \[
-\int \frac{1}{1 - \til \alpha^3} \del^w \alpha^1 (\til \alpha^2)^2 +  \int \frac{1}{1 - \til \alpha^3} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2 .
+\frac12 \int \frac{1}{1 - \til \alpha^3} \del^w \alpha^1 (\til \alpha^2)^2 + \frac16 \int \frac{1}{1 - \til \alpha^3} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2 .
 \]
-The first term in this expression agrees the first term in parentheses in \eqref{eqn:pcs1}.
+The first term in this expression agrees the term in \eqref{eqn:pcs1} which is not in $S_{pCS}(\alpha)$.
 The second term is zero for symmetry reasons. 
-Thus, \eqref{eqn:triv1} trivializes the first term in parentheses in \eqref{eqn:pcs1}. 
+This completes the proof that the non-minimal twist is equivalent to Poisson Chern--Simons theory. 
 
-It remains to trivialize the remaining terms in parentheses. 
-To do this, we fix a primitive $\eta$ of the holomorphic volume form $\d^3 w$. 
-That is, $\eta$ is a holomorphic two-form on $W$ satisfying $\del \eta = \d^3 w$. 
-Consider the (non-translation invariant) odd local functional
-\[
-\int \frac{1}{1-\til \alpha^3} \eta (\til \alpha^3)^2 \del^z \alpha^1 \del^z \alpha^0   .
-\]
-Using $\del^w \eta = \d^3 w$, we see that this functional trivializes the remaining terms in parentheses in \eqref{eqn:pcs1}.
-This completes the argument. 
+%It remains to trivialize the remaining terms in parentheses. 
+%To do this, we fix a primitive $\eta$ of the holomorphic volume form $\d^3 w$. 
+%That is, $\eta$ is a holomorphic two-form on $W$ satisfying $\del \eta = \d^3 w$. 
+%Consider the (non-translation invariant) odd local functional
+%\[
+%\int \frac{1}{1-\til \alpha^3} \eta (\til \alpha^3)^2 \del^z \alpha^1 \del^z \alpha^0   .
+%\]
+%Using $\del^w \eta = \d^3 w$, we see that this functional trivializes the remaining terms in parentheses in \eqref{eqn:pcs1}.
+%This completes the argument. 
 \end{proof}
 %
 %Restricting the action \eqref{eqn:delta1} along the map \eqref{eqn:g2map} we obtain
