@@ -164,13 +164,9 @@ These two central extension are compatible.
 %Thus, the Lie algebra of gauge symmetries of Poisson Chern--Simons theory on $\CC_i \times \CC_j \times \RR^7$ is a trivial one-dimensional central extension of the cohomology of $E(5,10)$. 
 
 \begin{prop}
-<<<<<<< HEAD
-Let $\Hat{E(5,10)}$ be the central extension of $E(5,10)$ which is equivalent to the global symmetry algebra of the eleven-dimensional theory on $\CC^5 \times \RR$. 
-=======
 \label{prop:ham}
-Let $\Hat{E(5,10)}$ be the central extension of $E(5,10)$ which is equivalent to the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$. 
->>>>>>> 1bed3362cf79562cd750369d6edd119f0d2cf046
-Then, there is an isomorphism of Lie algebras 
+Let $\Hat{E(5,10)}$ be the central extension of $E(5,10)$ which is equivalent to the global symmetry algebra of the eleven-dimensional theory on $\CC^5 \times \RR$. 
+Then there is an isomorphism of Lie algebras 
 \[
 H^\bu \big(\Hat{E(5,10)} , [\d z_1 \wedge \d z_2, -] \big) \simeq \cO(\CC^2) .
 \]
@@ -198,7 +194,7 @@ We will see that this is compatible with the calculation of the non-minimal twis
 Now, we turn to deducing the action functional of the non-minimal twist and hence the proof of Theorem \ref{thm:nonmin}. 
 We will show that the eleven-dimensional theory on $\CC^5 \times \RR$ placed in the background where the $(1,0)$ component of $\gamma$ takes the value $\gamma_{nm}$ \eqref{eqn:gammanm} is equivalent to a theory with a purely Chern--Simons-like action functional that we referred to in the introduction to this section. 
 
-Poisson Chern--Siimons theory is defined on any manifold of the form
+Poisson Chern--Simons theory is defined on any manifold of the form
 \[
 Z \times M
 \]
@@ -378,64 +374,16 @@ Applying the linearized BRST operator (in the non-minimal twist) this becomes
 \]
 The first term in this expression agrees the term in \eqref{eqn:pcs1} which is not in $S_{pCS}(\alpha)$.
 
-The latter term $\frac{1}{1 - \til \alpha^3} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2$ is of polynomial degree $\geq 4$. 
-Since this term has trivial self BV bracket it determines a cocycle for the dg Lie algebra underlying Poisson Chern--Simons theory. 
+The latter term $(1 - \til \alpha^3)^{-1} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2$ is of polynomial degree $\geq 4$. 
+Since this term has trivial self BV bracket, it determines a cocycle for the dg Lie algebra underlying Poisson Chern--Simons theory. 
 Since it is manifestly translation invariant, it arises via descent from a cocycle in the dg Lie algebra of $\infty$-jets of fields at $0 \in\CC^2 \times \RR^7$.
 This dg Lie algebra is quasi-isomorphic to the Lie algebra $\CC[[z_1,z_2]]$ equipped with the holomorphic Poisson bracket.
 (This is the formal power series version of the Lie algebra from Proposition~\ref{prop:ham}.)
-There is a weight grading on this Lie algebra given by declaring $|z_1^{n+1} z_2^{m+1}| = n+m$ which induces a grading on the Gelfand--Fuks Lie algebra cohomology.  
-The weight of the Gelfand--Fuks class corresponding to our deformation is $+2$ since no derivatives of $z_1$ or $z_2$ appear. 
-Results from \cite{Fuks} show that there is no cohomology in this weight. 
-This completes the proof that the non-minimal twist is equivalent to Poisson Chern--Simons theory. 
 
-%It remains to trivialize the remaining terms in parentheses. 
-%To do this, we fix a primitive $\eta$ of the holomorphic volume form $\d^3 w$. 
-%That is, $\eta$ is a holomorphic two-form on $W$ satisfying $\del \eta = \d^3 w$. 
-%Consider the (non-translation invariant) odd local functional
-%\[
-%\int \frac{1}{1-\til \alpha^3} \eta (\til \alpha^3)^2 \del^z \alpha^1 \del^z \alpha^0   .
-%\]
-%Using $\del^w \eta = \d^3 w$, we see that this functional trivializes the remaining terms in parentheses in \eqref{eqn:pcs1}.
-%This completes the argument. 
+There is a weight grading on this Lie algebra, given by declaring $|z_1^{n+1} z_2^{m+1}| = n+m$; in turn, this induces a grading on the Gelfand--Fuks Lie algebra cohomology.  
+The weight of the Gelfand--Fuks class corresponding to our deformation is $+2$, since no derivatives of $z_1$ or $z_2$ appear. 
+Results from~\cite{Fuks} show that there is no cohomology in this weight. 
+As such, the cocycle must define a trivial deformation of the dg Lie algebra up to equivalence.
+This completes the proof that the non-minimal twist is equivalent to Poisson Chern--Simons theory. 
 \end{proof}
-%
-%Restricting the action \eqref{eqn:delta1} along the map \eqref{eqn:g2map} we obtain
-%\begin{multline}
-%\frac12 \alpha^1 (\alpha^2)^2 \del^X \til{\alpha}^3 + \frac12 \del^X \alpha^1 (\alpha^2)^2 
-%\end{multline}
-%
-%\begin{multline}
-%\int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \left(\frac12 \del^X \alpha^1  [ \alpha^2 \vee (\alpha^2 \vee \Omega_X^{-1})] + \alpha^2 \del^Z \alpha^1 \del^Z \alpha^0\right) \\
-%+ \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^1 \partial^Z \alpha^1 \partial^Z \alpha^1 \\ + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^3 \partial^Z \alpha^0 \partial^Z \alpha^0 + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \partial^X \alpha^1 (\alpha^1 \Omega^{-1}_X \alpha^3) .
-%\end{multline}
-%
-%More invariantly, we can write the total BV action as
-%\[
-%\Tilde{I} = I_{CS} + I' 
-%\]
-%where $I_{CS} = \frac16 \int \alpha\{\alpha,\alpha\}$ and 
-%\beqn
-%I' = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \partial^X \alpha [\alpha \vee (\alpha \vee \Omega_X^{-1})] + \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_Z)] \{\alpha,\alpha\} .
-%\label{eqn:Iprime}
-%\eeqn
-%
-%Consider the odd functional
-%\[
-%K = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \alpha \wedge [\alpha \vee (\alpha \vee \Omega_X^{-1})] .
-%\]
-%
-%\begin{lem}
-%$Q K + \{I_{CS}, K\} = I'$ .
-%\end{lem}
-%
-%The linear differential applied to $K$ is 
-%\[
-%\frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} \partial^X \alpha \wedge [\alpha \vee (\alpha \vee \Omega_X^{-1})] \omega_Z .
-%\]
-%This is the first term in \eqref{eqn:Iprime}. 
-%
-%Next, we compute
-%\[
-%\{I_{CS}, K\} = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_X)] \{\alpha,\alpha\} 
-%\]
-%which is the second term in \eqref{eqn:Iprime}. 
+
