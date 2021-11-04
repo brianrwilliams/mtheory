@@ -164,6 +164,7 @@ These two central extension are compatible.
 %Thus, the Lie algebra of gauge symmetries of Poisson Chern--Simons theory on $\CC_i \times \CC_j \times \RR^7$ is a trivial one-dimensional central extension of the cohomology of $E(5,10)$. 
 
 \begin{prop}
+\label{prop:ham}
 Let $\Hat{E(5,10)}$ be the central extension of $E(5,10)$ which is equivalent to the global symmetry algebra of the 11-dimensional theory on $\CC^5 \times \RR$. 
 Then, there is an isomorphism of Lie algebras 
 \[
@@ -372,7 +373,15 @@ Applying the linearized BRST operator (in the non-minimal twist) this becomes
 \frac12 \int \frac{1}{1 - \til \alpha^3} \del^w \alpha^1 (\til \alpha^2)^2 + \frac16 \int \frac{1}{1 - \til \alpha^3} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2 .
 \]
 The first term in this expression agrees the term in \eqref{eqn:pcs1} which is not in $S_{pCS}(\alpha)$.
-The second term is zero for symmetry reasons. 
+
+The latter term $\frac{1}{1 - \til \alpha^3} \del^w (\alpha^2) \alpha^2 (\til \alpha^2)^2$ is of polynomial degree $\geq 4$. 
+Since this term has trivial self BV bracket it determines a cocycle for the dg Lie algebra underlying Poisson Chern--Simons theory. 
+Since it is manifestly translation invariant, it arises via descent from a cocycle in the dg Lie algebra of $\infty$-jets of fields at $0 \in\CC^2 \times \RR^7$.
+This dg Lie algebra is quasi-isomorphic to the Lie algebra $\CC[[z_1,z_2]]$ equipped with the holomorphic Poisson bracket.
+(This is the formal power series version of the Lie algebra from Proposition~\ref{prop:ham}.)
+There is a weight grading on this Lie algebra given by declaring $|z_1^{n+1} z_2^{m+1}| = n+m$ which induces a grading on the Gelfand--Fuks Lie algebra cohomology.  
+The weight of the Gelfand--Fuks class corresponding to our deformation is $+2$ since no derivatives of $z_1$ or $z_2$ appear. 
+Results from \cite{Fuks} show that there is no cohomology in this weight. 
 This completes the proof that the non-minimal twist is equivalent to Poisson Chern--Simons theory. 
 
 %It remains to trivialize the remaining terms in parentheses. 
