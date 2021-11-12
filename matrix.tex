@@ -170,11 +170,12 @@ For part (2), we first produce the following homotopy data:
 
 \begin{itemize}
 \item On the $\nu$'s we take $K$ to be any operator $K \colon \cO \to \Vect$ such that $\div K \nu = \nu$. 
-On the $\gamma$'s we take $K$ to be any operator $K \colon \Omega^1 \to \Omega^0$ such that $\del K(\gamma) = \gamma$. 
-Also, introduce the auxiliary operator $\til{K} \colon \Omega^2_{cl} \to \Omega^1$ which satisfies the homotopy relation
+On the $\gamma$'s we take $K$ to be any operator $K \colon \Omega^1 \to \Omega^0$ which satisfies the homotopy relation
 \beqn\label{eqn:htpy1}
-\til{K} \del \gamma + \del K \gamma = \gamma . 
+\til{K} \del \gamma + \del K \gamma = \gamma
 \eeqn
+for some auxiliary operator $\til{K} \colon \Omega^2_{cl} \to \Omega^1$.
+
 The precise form of each of these operators will not be needed.
 The existence of such operators is guaranteed by the holomorphic Poincar\'e lemma.
 The operator $K$ annihilates fields $\beta$ and $\mu$. 
@@ -182,12 +183,10 @@ The operator $K$ annihilates fields $\beta$ and $\mu$.
 The map $q$ is described as follows. 
 First $q(\mu) = \mu - K \div (\mu)$.
 Notice that $q(\mu)$ is automatically divergence-free.
-Next, $q(\gamma) = [\gamma]$, the equivalence class in $\Omega^1 / \d$. 
+Next, $q(\gamma) = \del \gamma$.
 If $\beta$ is a holomorphic function, then $q(\beta) = \beta (z=0)$.
 \item 
-The map $i$ embeds $\mu$ and $b$ in the obvious way.
-On the equivalence class $[\gamma] \in \Omega^1 / \d$ we define $i([\gamma]) = \gamma - \til{K} \del \gamma$. 
-Notice that this is independent of the choice of representative $\gamma$. 
+The map $i$ embeds $\mu$ and $b$ in the obvious way. On a closed two form $\alpha$, we have that $i(\alpha) = \til{K}\gamma$.
 \end{itemize}
 
 It is straightforward to check that this comprises well-defined homotopy data, the only nontrivial thing to check is the relation $\id - i \circ q = \delta^{(1)} K - K \delta^{(1)}$. 
