@@ -27,7 +27,6 @@ This super Lie algebra will play the role of the isometries in the twisted AdS b
 \subsection{The ${\rm AdS}_4 \times S^7$ background}
 
 In this section we introduce the analog of the ${\rm AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of eleven-dimensional supergravity. 
-%In the physical AdS background, the only bosonic fields which are non-zero are the metric and the \brian{finish}
 
 \parsec[]
 
@@ -109,14 +108,14 @@ The Lie algebra $\lie{sl}(4)$ represents rotations along the plane $\CC^4_w$.
 \frac{\del}{\del z} ,\quad z \frac{\del}{\del z} - \frac14 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} , \quad z \left(z \frac{\del}{\del z} - \frac12 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} \right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
 \]
 Notice that these vector fields are divergence-free and reduce to the usual holomorphic conformal transformations along $w=0$.
-\item The bosonic summand $\lie{sl}(4)$ is mapped to the $4$-dimensional rotations: 
+\item The bosonic summand $\lie{sl}(4)$ is mapped to four-dimensional rotations: 
 \[
 \sum_{a,b=1}^4 B_{ab} w_a \frac{\del}{\del w_b} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad (B_{ab}) \in \lie{sl}(4) .
 \]
 \end{itemize}
 
 The odd part of the algebra $\lie{osp}(6|1)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\lie{sl}(4)$ representation and $R$ is the fundamental $\lie{sl}(2)$ representation. 
-It is natural to split $R = \CC_{+1} \oplus \CC_{-1}$ so that the odd part decomposes as
+It is natural to split $R = \CC_{+1} \oplus \CC_{-1}$, so that the odd part decomposes as
 \[
 (\wedge^2 \CC^4)_{+1} \oplus (\wedge^2 \CC^4)_{-1} .
 \]
@@ -144,7 +143,7 @@ i_{M2} \colon \lie{osp}(6|1) \hookrightarrow E(5,10) .
 \]
 \end{lem} 
 \begin{proof}
-The second assertion follows from Theorem \ref{thm:global} that as a super Lie algebra the linearized BRST cohomology of the global symmetry algebra of the eleven-dimensional theory on $\CC^5 \times \RR$ is the trivial central extension of $E(5,10)$. 
+The second assertion follows from Theorem \ref{thm:global}, which shows that, as a super Lie algebra, the linearized BRST cohomology of the global symmetry algebra of the eleven-dimensional theory on $\CC^5 \times \RR$ is the trivial central extension of $E(5,10)$. 
 Recall that the odd part of $E(5,10)$ is precisely the module of closed two-forms on $\CC^5$. 
 To explicitly describe the embedding into $E(5,10)$ we simply apply the de Rham differential to the last two formulas above.
 Recall, we are using the holomorphic coordinates $(z,w_1,\ldots,w_4)$ on $\CC^5$ where $z$ is the holomorphic coordinate along the M2 brane. 
@@ -162,7 +161,7 @@ z \d w_a  \wedge \d w_b + \frac12 \d z \wedge (w_a \d w_b - w_b \d w_a) , \quad 
 \end{proof}
 \parsec[]
 
-Next, we turn on a nontrivial unit of flux $N \ne 0$. 
+Next, we turn on $N \ne 0$ units of nontrivial flux. 
 Since not all of the fields we wrote down above commute with the flux $N F_{M2}$, they are not compatible with the total differential $\delta^{(1)} + [N F_{M2}, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w=0\}$. 
 Nevertheless, we have the following. 
 
@@ -243,8 +242,8 @@ H^3(\CC^4\setminus 0, \cO) [z] \ar[r, dotted, "\del"] \ar[dr, dotted, "\del"'] &
 \end{tikzcd}
 \end{equation}
 The remaining piece of the original BRST operator is drawn in dotted lines. 
-The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to dotted line operators. 
-In this description the image of the flux $F$ at this page in the spectral sequence corresponds to the class 
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\CC^5 \times \RR$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to the dotted-line operators. 
+In this description, the image of the flux $F$ at this page in the spectral sequence corresponds to the class 
 \[
 [F] = (w_1 \cdots w_4)^{-1} \partial_z \in H^3(\CC^4\setminus 0, \cO) [z] \partial_z .
 \]
@@ -320,11 +319,6 @@ Let
 \[
 F_{M5} = \frac{1}{(2\pi i)^3} \frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} \wedge \d w_1 \wedge \d w_2
 \]
-%and suppose 
-%\[
-%\til F \in \Bar{\Omega}^{1,2} (\CC^5) \otimes \Bar{\Omega}^1(\RR)
-%\]
-%satisfies $\del \til F = F$. 
 Then, $\del\gamma = N F_{M5}$, $\mu = 0$, and $\nu = 0$ satisfies the equations of motion in the presence of a stack of $N$ M5 branes sourced by the term $N \delta_{w_1=w_2=t=0}$:
 \begin{align*}
 \dbar (NF_{M5}) + \d_{\RR} (NF_{M5}) & = N \delta_{w_1=w_2=t=0}  \\ 
@@ -334,11 +328,11 @@ Here, we set all components of the field $\mu$ equal to zero (as well as the fie
 \end{lem}
 
 \begin{proof}
-The first equation equation 
+The first equation,
 \[
-\dbar F + \d_{\RR} F = N \delta_{w_1=w_2=t=0}
+\dbar F + \d_{\RR} F = N \delta_{w_1=w_2=t=0},
 \]
-characterizes the kernel representing $N$ times the residue class for a $4$-sphere in 
+characterizes the kernel representing $N$ times the residue class for a four-sphere in 
 \[
 (\CC^2 \times \RR) \setminus 0 \simeq S^4 \times \RR .
 \] 
@@ -375,14 +369,14 @@ The embedding of the bosonic piece of $\lie{osp}(6|1)$ can be described as follo
 \lie{sl}(4) \oplus \lie{sl}(2) .
 \]
 which we write as $\lie{sl}(W) \oplus \lie{sl}(R)$ with $W,R$ complex four, two dimensional complex vector spaces. The roles of the $\lie{sl}(4)$ and $\lie{sl}(2)$ summands are interchanged compared to the case of the M2 brane. 
-The Lie algebra $\lie{sl}(4)$ represents conformal transformations along the plane $\CC^3_z$.
-Since not all such infinitesimal transformations are divergence-free, there precise formulas must be adjusted.   
-The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence free.
+The Lie algebra $\lie{sl}(4)$ represents (holomorphic) conformal transformations along the plane $\CC^3_z$, again coming from the natural action on $P^3(\C)$.
+Since not all such infinitesimal transformations are divergence-free, the precise vector fields must be adjusted.   
+The Lie algebra $\lie{sl}(2)$ represents rotations in $\CC^2_w$; the vector fields representing these transformations are automatically divergence-free.
 In more detail, the embedding of the bosonic piece can be given by the following explicit formulas. 
 
 \begin{itemize}[leftmargin=\parindent]
 \item
-The bosonic abelian subalgebra $\CC^3 \subset \lie{sl}(4)$ is mapped to the translations 
+The bosonic abelian subalgebra $\CC^3 \subset \lie{sl}(4)$ of translations is mapped to the obvious vector fields 
 \[
 \frac{\del}{\del z_i} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) , \quad i=1,2,3.
 \]
@@ -395,11 +389,11 @@ A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\CC^5)\otimes \Omega^0(\RR) , \qu
 \]
 
 \item
-The bosonic subalgebra $\CC \subset \lie{sl}(4)$ is mapped to the element
+The bosonic subalgebra $\CC \subset \lie{sl}(4)$ corresponding to rescaling $\C^3$ is mapped to the element
 \[
 \sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR)  .
 \] 
-Notice that these vector fields are divergence-free and restrict to the ordinary dilation along $w=0$. 
+Notice that this vector field are divergence-free and restricts to the ordinary dilation (Euler vector field) along $w=0$. 
 \item 
 The bosonic subalgebra of $\lie{sl}(4)$ describing special conformal transformations on $\CC^3$ is mapped to the elements 
 \[
@@ -407,7 +401,7 @@ z_j \left(\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - 2 \sum_{a=1}^2 w_a \frac{\del
 \] 
 Notice that these vector fields are divergence-free and restrict to the ordinary special conformal transformations along $w=0$. 
 \item 
-The bosonic summand $\lie{sl}(2)$ is mapped to the triple
+The bosonic summand $\lie{sl}(2)$ ($R$-symmetry) is mapped to the triple
 \[
 w_1 \frac{\del}{\del w_2}, w_2 \frac{\del}{\del w_1}, \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) \in \PV^{1,0}(\CC^5) \otimes \Omega^0(\RR) .
 \]
@@ -421,7 +415,7 @@ L \otimes R \oplus \wedge^2 L \otimes R \cong \CC^3 \otimes \CC^2 \oplus \wedge^
 \]
 
 \begin{itemize} 
-\item The summand $L \otimes R$ consists of the remaining 6d superstranlsations. 
+\item The summand $L \otimes R$ consists of the remaining 6d supertranslations. 
 It is mapped to the fields 
 \[
 z_i \d w_a \in \Omega^{1,0}(\CC^5) \otimes \Omega^0(\RR) ,\quad a=1,2, \quad i =1,2,3.
@@ -459,7 +453,7 @@ w_a \d z_i  \wedge \d z_j + \frac12 \d w_a \wedge (z_i \d z_j - z_j \d z_i) , \q
 \end{proof}
 \parsec[]
 
-Next, we turn on a nontrivial unit of flux $N \ne 0$. 
+Next, we turn on $N \ne 0$  units of nontrivial flux. 
 Since not all of the fields we wrote down above commute with the flux $N F$, they are not compatible with the total differential $\delta^{(1)} + [N F, -]$ acting on the fields supported on $\CC^5 \times \RR \setminus \{w_1=w_2=t=0\}$. 
 Nevertheless, we have the following.
 
@@ -518,18 +512,18 @@ w_{1}^{-1} w_2^{-1} \CC[w_1,w_2] \hookrightarrow H^2 \bigg( \Omega^\bu\left(\CC^
 
 It will be useful to explain this last embedding in more detail. 
 Consider the homogenous element $w_1^{-1} w_2^{-1}$. 
-This represents the class of the Dolbeault-de Rham $2$-form
+This represents the class of the Dolbeault-de Rham two-form
 \[
 \frac{\wbar_1 \d \wbar_2 \wedge \d t - \wbar_2 \d \wbar_1 \wedge \d t + t \d \wbar_1 \wedge \d \wbar_2}{(\|w\|^2 + t^2)^{5/2}} .
 \]
-Notice that if we wedge with the volume form $\d w_1 \d w_2$ this is the unit $N=1$ flux introduced in Lemma \ref{lem:ads7flux}. 
-The homogenous element $w_1^{-n-1} w_2^{-m-1}$ represents the class of the holomorphic derivatives $\partial_{w_1}^n \partial_{w_2}^{m}$ applied to this $2$-form. 
+Notice that, if we wedge with the volume form $\d w_1 \d w_2$, this is the unit  flux ($N=1$) introduced in Lemma \ref{lem:ads7flux}. 
+The homogenous element $w_1^{-n-1} w_2^{-m-1}$ represents the class of the holomorphic derivatives $\partial_{w_1}^n \partial_{w_2}^{m}$ applied to this two-form. 
 
-Observe that when restricted to $\CC^5 \times \RR \setminus \CC^3$ the holomorphic tangent bundle along $\CC^5$ is still trivializable. 
+Observe that, when restricted to $\CC^5 \times \RR \setminus \CC^3$, the holomorphic tangent bundle along $\CC^5$ is still trivializable. 
 
 \parsec[]
 
-Let's turn to the proof of Proposition \ref{prop:brads7}.
+Let's turn to the proof of Proposition~\ref{prop:brads7}.
 We proceed completely analogously to the case of backreacted M2 branes as in the proof of Proposition \ref{prop:brads4}. 
 
 \begin{proof}[Proof of Proposition \ref{prop:brads7}]
