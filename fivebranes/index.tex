@@ -1,12 +1,12 @@
 \subsection{Large $N$ Holomorphic Character}
 
-We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of M5 branes. Let us briefly recall the proposal specialized to our situation \surya{this should go elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ M5 branes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\iota : \{0\}\times \C^{3} \times \{0\}\to \R\times \C^{5}$ denote the inclusion of their support. The twisted holography proposal asserts that the algebra of local operators of the minimally twisted M5 brane theory in the large $N$ limit is a deformation of the factorization envelope $\mc U(\mc L) = C_{\bullet}\left (\iota^{*}\cL)_{c} \right )$.
+We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of M5 branes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ M5 branes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\iota : \{0\}\times \C^{3} \times \{0\}\to \R\times \C^{5}$ denote the inclusion of their support. The twisted holography proposal asserts that the algebra of local operators of the minimally twisted M5 brane theory in the large $N$ limit is a deformation of the factorization envelope $\cU(\iota^{*} \cL) = C_{\bullet}\left ((\iota^{*}\cL)_{c} \right )$.
 
 Since quantities like indices are deformation invariants, we need not consider such deformations for now. In fact we may replace $\cL$ with the abelian local dg Lie algebra describing the free limit. Explicitly, $\cL$ is given by the following sheaf of $\Z/2$-graded cochain complexes
 
 \[
 \begin{tikzcd}
-  &  \ul{\rm odd} & \ul{\rm even} \\
+  &  \ul{\rm even} & \ul{\rm odd} \\
  \mu \in & \Omega^{\bullet}_{\R}\otimes\PV^{1,\bullet}_{C^{5}} \ar[r, "\del_{\Omega}"] & \Omega^{\bullet}_{\R}\otimes\PV^{0,\bullet}_{\C^{5}}\\
  \gamma \in & \Omega^{\bullet}_{\R}\otimes\Omega^{1,\bullet}_{\C^{5}}& \Omega^{\bullet}_{\R}\otimes\Omega^{0,\bullet}_{\C^{5}} \ar[l, "\del"]
 \end{tikzcd}
@@ -19,26 +19,41 @@ We begin by computing the hypercohomology of the factorization envelope. Strictl
 We first introduce the following notation for representatives of classes in compactly supported Dolbeault cohomology. We write $\delta^{(a,b,c)}$ to denote the derivative of the delta function $\del_{z_{1}}^{a}\del_{z_{2}}^{b}\del_{z_{3}}^{c}\delta_{t=w_{a}=0}$.
 
 \begin{lem}
-  The hypercohomology of the factorization envelope is given by \[\sym (V_{\gamma}\oplus \Pi V_{\mu})\] where
+  As $\Z/2$-graded vector spaces, we have that \[H^{\bu}(\C^{3}_{z}, \c U (\iota^{*}cL))\Sym (V_{\gamma}\oplus \Pi V_{\mu})\] where
   \begin{itemize}
     \item $V_{\gamma}$ is spanned by
           \begin{align}
-            \delta^{(0,b,c)}w_{1}^{k}w_{2}^{l}dz_{1} \\
-            \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dz_{2} \\
-            \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dz_{3} \\
-            \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dw_{1}\\
+            & \delta^{(0,b,c)}w_{1}^{k}w_{2}^{l}dz_{1} \\
+            & \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dz_{2}, \ \ \
+             \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dz_{3} \\
+            & \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dw_{1}, \ \ \
             \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}dw_{2}
           \end{align}
 
           where $a, b, c, k, l \geq 0$.
     \item $V_{\mu}$ is spanned by
           \begin{align}
-
+            & \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}\del_{w_1}-k\delta^{(a-1,b, c)}w_{1}^{k-1}w_{2}^{l}\del_{z_{1}},\
+             \delta^{(a,b,c)}w_{1}^{k}w_{2}^{l}\del_{w_2}-l\delta^{(a-1,b, c)}w_{1}^{k-1}w_{2}^{l-1}\del_{z_{1}}\text{ where }a > 0, b,c,k,l \geq 0 \\
+            & \delta^{(0,b,c)}w_{1}^{k}w_{2}^{l}\del_{w_1}-k\delta^{(0,b-1,c)}w_{1}^{k-1}w_{2}^{l}\del_{z_{2}}, \ \delta^{(0,b,c)}w_{1}^{k}w_{2}^{l}\del_{w_2}-l\delta^{(0,b-1,c)}w_{1}^{k}w_{2}^{l-1}\del_{z_{2}}\text{ where }b > 0,c,k,l \geq 0 \\
+            & \delta^{(0,0,c)}w_{1}^{k}w_{2}^{l}\del_{w_1}-k\delta^{(0,0,c-1)}w_{1}^{k-1}w_{2}^{l}\del_{z_{3}}, \ \delta^{(0,0,c)}w_{1}^{k}w_{2}^{l}\del_{w_1}-l\delta^{(0,0,c-1)}w_{1}^{k}w_{2}^{l-1}\del_{z_{3}}\text{ where } c > 0,k,l \geq 0 \\
+            & \delta^{(0,0,0)}w_{2}^{l}\del_{w_1}, \ \delta^{(0,0,0)}w_{1}^{k}\del_{w_2}\text{ where }k,l \geq 0
           \end{align}
   \end{itemize}
 \end{lem}
+\begin{proof}
+  We compute cohomology using a spectral sequence associated to a two-step filtration by polyvector field and form degree. The $E_{1}$ page is the $d+\delbar$ cohomology and is given by the symmetric algebra on
+\[
+\begin{tikzcd}
+\ul{\rm even} & \ul{\rm odd} \\
+H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \iota^{*}T_{\C^{5}}) \ar[r, "\del_{\Omega}"] & \H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO) \ar[r, "\del_{\Omega}"] \
+H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO) \ar[r, "\del_{\Omega}"] & H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \iota^{*}T^{*}_{\C^{5}}) \ar[l, "\del"]
+\end{tikzcd}
+.\]
 
-Here, we have introduced the notation $\delta^{(a,b,c)}$
+\surya{...}
+
+\end{proof}
 
 The index we compute will have four fugacities, which we label as follows:
 \begin{itemize}
