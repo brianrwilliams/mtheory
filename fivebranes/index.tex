@@ -8,8 +8,8 @@ Since quantities like indices are deformation invariants, we need not consider s
 \begin{tikzcd}
   &  \ul{\rm even} & \ul{\rm odd} \\
  \mu \in & \Omega^{\bullet}_{\R}\otimes\PV^{1,\bullet}_{C^{5}} \ar[r, "\del_{\Omega}"] & \Omega^{\bullet}_{\R}\otimes\PV^{0,\bullet}_{\C^{5}}\\
- \gamma \in & \Omega^{\bullet}_{\R}\otimes\Omega^{1,\bullet}_{\C^{5}}& \Omega^{\bullet}_{\R}\otimes\Omega^{0,\bullet}_{\C^{5}} \ar[l, "\del"]
-\end{tikzcd}
+ \gamma \in & \Omega^{\bullet}_{\R}\otimes\Omega^{0,\bullet}_{\C^{5}} \ar[r, "\del"]
+& \Omega^{\bullet}_{\R}\otimes\Omega^{1,\bullet}_{\C^{5}}\end{tikzcd}
 .\]
 
 
@@ -42,12 +42,13 @@ We first introduce the following notation for representatives of classes in comp
   \end{itemize}
 \end{lem}
 \begin{proof}
-  We compute cohomology using a spectral sequence associated to a two-step filtration by polyvector field and form degree. The $E_{1}$ page is the $d+\delbar$ cohomology and is given by the symmetric algebra on
-\[
+  We compute cohomology using a spectral sequence associated to a two-step filtration by polyvector field and holomorphic form degree. The $E_{1}$ page is the $d+\dbar$ cohomology and is given by the symmetric algebra on
+
+  \[
 \begin{tikzcd}
 \ul{\rm even} & \ul{\rm odd} \\
-H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \iota^{*}T_{\C^{5}}) \ar[r, "\del_{\Omega}"] & \H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO) \ar[r, "\del_{\Omega}"] \
-H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO) \ar[r, "\del_{\Omega}"] & H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \iota^{*}T^{*}_{\C^{5}}) \ar[l, "\del"]
+H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \iota^{*}T_{\C^{5}})) \ar[r, "\del_{\Omega}"] & H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO) )\\
+H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3},  \iota^{*}T^{*}_{\C^{5}}))& H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3}, \cO)) \ar[l, "\del"]
 \end{tikzcd}
 .\]
 
