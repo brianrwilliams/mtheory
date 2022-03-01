@@ -102,7 +102,7 @@ f_{five} (x,y_1,y_2,z) = \frac{x^6(z^{\frac12} + z^{-\frac12}) - x^8 (y_1^{-1} +
 \eeqn
 \end{prop}
 
-\section{The $J$'s}
+\section{The $E(3,6)$ symmetry}
 
 For $d > 1$ punctured affine space $\CC^d \setminus 0$ is not affine. 
 We denote by $\sfA_3$ a particular algebraic model for the derived space of functions on punctured affine space. 
@@ -166,5 +166,72 @@ The gauge variation of $\mu_1$ is
 %	Q \mu_1^{3;0} & = \dbar \mu^{2;0} + \mu_{w_a} \partial_{w_a} \fc_{w_1} + \mu_{z_i} \partial_{z_i} \fc_{w_1} - \fc_{w_a} \partial_{w_a} \mu_1 - \fc_{z_i} \partial_{z_i} \mu_{w_1} \\
 %& + \partial_{w_2} \fc_\gamma \partial_z \alpha -  \partial_z\fc_\gamma \partial_{w_2} \alpha + \partial_{w_2} \fc_\alpha \partial_z \gamma - \partial_z \fc_\alpha \partial_{w_2} \gamma .
 %\end{align*}
+
+\subsection{Embedding $E(3|6)$ into twisted supergravity}
+
+
+\parsec[]
+First we explain how $E(3|6)$ embeds inside of $E(5|10)$. 
+We follow \cite{KacCheng}. 
+
+A vector field $X = X(z) \in \Vect(\C^3)$ embeds as the vector field
+\[
+X \mapsto X(z) - \frac12 (\del X)(z) \sum_{i=1}^2 w_a \del_{w_a} .
+\]
+Here, $\del X$ is the divergence of $X$ with respect to the standard holomorphic volume form on $\C^3$. 
+The elements $e,h,f \otimes f(z) \in \lie{sl}(2) \otimes \C[z_i]$ embed as the vector fields
+\[
+f(z) w_1 \del_{w_2} , \quad f(z) (w_1 \del_{w_2} - w_2 \del_{w_1}, \quad f(z) w_2 \del_{w_1} . 
+\]
+respectively. 
+
+Next, we explain how the odd summand embeds. 
+Recall, a general element in the odd part of $E(3|6)$ can be written as
+\[
+g(z) \del_{z_i}^{1/2} \otimes r_\pm .
+\]
+This element embeds into $E(5|10)$ as the following closed two-form
+\[
+\del \left((w_1-w_2) g(z) \d z_i \right) .
+\]
+\brian{check this}
+
+\subsection{The local Lie algebra} 
+
+Let $\cE(5|10)$ be the following local Lie algebra on $X \times \C^2 \times \R$. 
+
+Let $\pi \colon X \times \C^2 \times \RR \to X$. 
+We will give a model $\cG_{grav}$ for $\pi_* \cE(5|10)$ as a local Lie algebra on $\C^3$. 
+
+First, introduce the holomorphic line bundle 
+\[
+w_1^k w_2^\ell \cO_{X} \define ??  .
+\]
+Let $\lie{s}_2$ denote the Lie algebra of polynomial vector fields in the variables $w_1,w_2$ which preserve the holomorphic volume form $\d w_1 \d w_2$. 
+
+\begin{dfn}
+Let $\cG_{grav}$ be the following local Lie algebra on the complex three-fold $X$. 
+\begin{itemize}
+\item The even part is 
+\[
+\Omega^{0,\bu}(X , \T_X \otimes \cO_X [w_1,w_2]) \oplus \Omega^{0,\bu}(X , \lie{s}_2) .
+\]
+\item The odd part is 
+\[
+\Omega^{\geq 2, \bu}(X, \cO_X[w_1,w_2]) \oplus \Omega^{1,\bu}(X, w_1 \cO_X[w_1,w_2]) \oplus \Omega^{1,\bu}(X, w_2 \cO_X[w_1,w_2]) \oplus \cdots
+\]
+\end{itemize} 
+\end{dfn}
+
+\parsec
+
+Consider the following auxiliary grading on the local Lie algebra $\cG_{grav}$. 
+The variables $w_a$ are declared to have weight $+1$. 
+%The variables $\til w_a$ are declared to have weight $-1$. 
+Additionally, parity has weight $-1$.
+Thus, for example, the weight of $w_1 \d z_1 \d z_2$ is zero.
+
+
+
 
 \end{document}
