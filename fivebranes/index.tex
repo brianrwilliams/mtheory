@@ -1,12 +1,10 @@
 \subsection{Large $N$ Holomorphic Character}
 
-We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of M5 branes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ M5 branes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\iota : \{0\}\times \C^{3} \times \{0\}\to \R\times \C^{5}$ denote the inclusion of their support. The twisted holography proposal asserts that the algebra of local operators of the minimally twisted M5 brane theory in the large $N$ limit is a deformation of the factorization enveloping algebra 
-\[
-\bU(\iota^{*} \cL) = C_{\bullet}\left( (\iota^{*}\cL)_{c} \right) .
-\]
+We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of M5 branes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ M5 branes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\pi : \R\times \C^{5}\to \C^{3}_{z_{i}}$ denote the canonical projection. The pushforward $\pi_{*} C^{*}(\cL)$ has the structure of a factorization algebra on $\C^{3}$
 
-Since quantities like indices are deformation invariant, we need not consider such deformations for now. 
-In fact in this section we may, and will, replace the local Lie algebra $\cL$ with the abelian local dg Lie algebra which underlies the free limit of the twisted supergravity theory. 
+The twisted holography proposal asserts that the factorization algebra of local observables $\Obs_{M5}$ of the minimally twisted M5 brane theory in the large $N$ limit is a deformation of the Koszul dual $(\pi_{*} C^{\bullet}(\cL))^{!}$.
+
+Since quantities like indices are deformation invariant, we need not consider such deformations for now. In fact in this section we may, and will, replace the local Lie algebra $\cL$ with the abelian local dg Lie algebra which underlies the free limit of the twisted supergravity theory.
 Explicitly, $\cL$ is given by the following sheaf of $\Z/2$-graded cochain complexes
 \[
 \begin{tikzcd}
@@ -19,11 +17,11 @@ Explicitly, $\cL$ is given by the following sheaf of $\Z/2$-graded cochain compl
 
 \parsec
 
-Let us describe the restriction $\iota^* \cL$ along the inclusion of the brane.
-The $\mu$-field decomposes into vector field components which point along and transverse to the brane
-\[
-\mu
-\]
+%Let us describe the restriction $\iota^* \cL$ along the inclusion of the brane.
+%The $\mu$-field decomposes into vector field components which point along and transverse to the brane
+%\[
+%\mu
+%\]
 %
 %is the sheaf of $\Z/2$-graded cochain complexes
 %\[
@@ -34,12 +32,17 @@ The $\mu$-field decomposes into vector field components which point along and tr
 %& \Omega^{1,\bullet}_{\C^{3}}\end{tikzcd}
 %.\]
 
-We begin by computing the hypercohomology of the factorization enveloping algebra. Strictly speaking, this is not necessary for computing the index, but will be useful in later calculations.
+We wish to count local operators, which are given by the costalk at $0\in \C^{3}$ of $\Obs_{M5}$. Let us first describe $\Obs_{M5}$ more explicitly. By the Poincare and $\dbar$ Poincare lemmas, we have quasi-isomorphisms for each $U\subset \C^{3}$ open
+\[
+\Obs_{M5}(U) = \Sym \left( \begin{tikzcd}  \end{tikzcd} \right)
+\]
+
+The local observables are given by $\lim _{U\ni 0} \Obs_{M5}(U)$.
 
 We first introduce the following notation for representatives of classes in compactly supported Dolbeault cohomology. We write $\delta^{(a,b,c)}$ to denote the derivative of the delta function $\del_{z_{1}}^{a}\del_{z_{2}}^{b}\del_{z_{3}}^{c}\delta_{t=w_{a}=0}$.
 
 \begin{lem}
-  As $\Z/2$-graded vector spaces, we have that \[H^{\bu}(\C^{3}_{z}, \cU (\iota^{*}cL))\Sym (V_{\gamma}\oplus \Pi V_{\mu})\] where
+  As $\Z/2$-graded vector spaces, we have that \[H^{\bu}\left ( \Obs_{M5}(0))=\Sym (\Pi V_{\gamma}\oplus  V_{\mu})\] where
   \begin{itemize}
     \item $V_{\gamma}$ is spanned by
           \begin{align}
