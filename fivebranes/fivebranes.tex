@@ -7,8 +7,6 @@
 
 \addbibresource{references.bib}
 
-\newcommand\thooft{`t Hooft\,}
-
 \begin{document}
 
 \title{Fivebranes}
@@ -231,7 +229,41 @@ The variables $w_a$ are declared to have weight $+1$.
 Additionally, parity has weight $-1$.
 Thus, for example, the weight of $w_1 \d z_1 \d z_2$ is zero.
 
+\section{Careful index computation}
 
+Let's compute the index of a single fivebrane. 
 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrr}
+ & $t_1$ & $t_2$ & $q$ & $r$ \\
+$z_1$ & $1$ & 0 & 0 & $-1$\\
+$z_2$ & $-1$ & $1$ & 0 & $-1$\\
+$z_3$ & $0$ & $-1$ & 0 & $-1$\\
+$w_1$ & $0$ & $0$ & $1$ & $3/2$\\
+$w_2$ & 0& 0 & $-1$ & $3/2$ \\
+\\
+\end{tabular}
+\caption{Assignment of fugacities}
+\end{table}
 
+\begin{itemize}
+\item Single particle operators on the odd copy of holomorphic two-forms $\Pi \Omega^{2,hol}$ contribute
+\[
+- r^3 \frac{t_1 r^{-1} + t_1^{-1} t_2 r^{-1} + t_2^{-1} r^{-1} }{(1-t_1^{-1}r) (1-t_1 t_2^{-1} r) (1-t_2 r)} 
+\]
+\item Single particle operators on the even copy of holomorphic three-forms $\Omega^{3,hol}$ contribute
+\[
+r^3 \frac{1}{(1-t_1^{-1}r) (1-t_1 t_2^{-1} r) (1-t_2 r)} 
+\]
+\item Single particle operators on $K^{-1/2} \otimes \C^2$ contribute
+\[
+f_{single} (t_1,t_2,q,r) = r^{\frac32} \frac{q + q^{-1}}{(1-t_1^{-1}r) (1-t_1 t_2^{-1} r) (1-t_2 r)}
+\]
+\end{itemize}
+
+Putting this all together we get 
+\[
+f_{tensor} (t_1,t_2,q,r) = \frac{(q + q^{-1})r^{\frac32} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )r^2 + r^3}{(1-t_1^{-1}r) (1-t_1 t_2^{-1} r) (1-t_2 r)} 
+\]
 \end{document}
