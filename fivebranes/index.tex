@@ -62,8 +62,8 @@ In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the h
 
 The index we compute has four fugacities, which we label as follows:
 \begin{itemize}
-  \item $t_{1}, t_{2}$ denote generators for the cartan of $SU(3)$ which acts on $\C^{3}_{z}$.
-  \item $r$ denotes a generator for the cartan of a $SU(2)$ rotating the normal directions $\C^{2}_{w}$
+  \item $t_{1}, t_{2}$ denote generators for the Cartan of $SU(3)$ which acts on $\C^{3}_{z}$.
+  \item $r$ denotes a generator for the Cartan of a $SU(2)$ rotating the normal directions $\C^{2}_{w}$
   \item $q$ denotes a generator for the Cartan of an additional $U(1)$ acting on $\C^{5}$ preserving the volume form
 \end{itemize}
 These $U(1)$ weights are summarized in table \ref{tbl:weights1}.
@@ -84,15 +84,15 @@ These $U(1)$ weights are summarized in table \ref{tbl:weights1}.
 \begin{itemize}
 \item Single particle operators on the odd copy of holomorphic two-forms $\Pi \Omega^{2,hol}$ contribute
 \[
-- q^3 \frac{t_1 q^{-2} + t_1^{-1} t_2 q^{-2} + t_2^{-1} q^{-2} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+- q^2 \frac{t_1  + t_1^{-1} t_2  + t_2^{-1} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
 \]
 \item Single particle operators on the even copy of holomorphic three-forms $\Omega^{3,hol}$ contribute
 \[
-q^3 \frac{q^{-3}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+q^3 \frac{1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
 \]
-\item Single particle operators on $K^{-1/2} \otimes \C^2$ contribute
+\item Single particle operators on $K^{1/2} \otimes \C^2$ contribute
 \[
-q^3 \frac{q^{-3/2} r + q^{-3/2}r^{-1}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
+q^{3/2}\frac{r + r^{-1}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 \]
 \end{itemize}
 
@@ -105,7 +105,7 @@ The character of local operators of the holomorphic twist of the theory on a sin
 \]
 where the single particle index is
 \[
-f_{tensor} (t_1,t_2,q,r) = \frac{(r + r^{-1})q^{3/2} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )q + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+f_{tensor} (t_1,t_2,q,r) = \frac{(r + r^{-1})q^{3/2} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )q^2 + q^3}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
 \]
 \end{prop}
 
@@ -129,7 +129,7 @@ q = r^2 , \quad t_2 = 1 .
 \]
 As one can easily check, this specialization yields the following single particle index
 \[
-f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{1}{1-q} 
+f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{q}{1-q} 
 \]
 which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
 
