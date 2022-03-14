@@ -1,6 +1,144 @@
+\documentclass[11pt]{amsart}
+
+%\usepackage{../macros-master}
+\usepackage{macros-fivebrane}
+
+\begin{document}
+\section{Supersymmetric indices}
+
+\subsection{A single fivebrane}
+
+We recall the description of the holomorphic twist of a single fivebrane theory \cite{SWtensor}
+
+\parsec[]
+
+The holomorphic twist of the fivebrane theory is defined on any complex three-fold $X$ (which is not necessarily Calabi--Yau).
+In full generality, we must assume that $X$ is equipped with a square-root of the canonical bundle $K_X^{1/2}$. 
+
+The theory is $\Z \times \Z/2$ graded but in this section we only need to recall its totalization as a $\Z/2$ graded theory. 
+There are four fundamental fields $(\mu, \Omega, \phi_\pm)$ which consist of even Dolbeault forms of type $(1,1)$ and $(0,2)$ on $X$:
+\[
+\mu \in \Omega^{2,1}(X), \quad \Omega \in \Omega^{3,0}(X),
+\]
+and a pair of even sections:
+\[
+(\phi_+,\phi_-) \in \Omega^0(X , K^{1/2}_X) \otimes \C^2 .
+\]
+%where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation. 
+The equations of motion read
+\beqn
+\label{eqn:eom}
+\begin{split}
+\del \mu + \dbar \Omega & = 0 \\
+\dbar \mu = \dbar \phi = \dbar \psi & = 0 .
+\end{split}
+\eeqn
+
+There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b$ which is a Dolbeault form of type $(2,0)$ which acts simply by
+\beqn
+\label{eqn:ghost}
+\begin{split}
+\mu & \mapsto \mu + \dbar b  \\
+\Omega & \mapsto \Omega + \del b .
+\end{split}
+\eeqn
+
+This theory does not admit a Lagrangian description. 
+However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
+
+\begin{lem}
+The $\Z/2$ algebra of local operators of the holomorphic single fivebrane theory is quasi-isomorphic to the graded symmetric algebra on the linear dual of the topological vector space
+\[
+\Pi \Omega^{2,hol}_{cl} (\Hat{D}^3) \oplus \Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2 .
+\]
+\end{lem}
+
+\parsec
+
+In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the holomorphic twist of the free tensor multiplet was constructed.
+\brian{recall}
+
+\parsec
+
+The index we compute has four fugacities, which we label as follows:
+\begin{itemize}
+  \item $t_{1}, t_{2}$ denote generators for the cartan of $SU(3)$ which acts on $\C^{3}_{z}$.
+  \item $r$ denotes a generator for the cartan of a $SU(2)$ rotating the normal directions $\C^{2}_{w}$
+  \item $q$ denotes a generator for the Cartan of an additional $U(1)$ acting on $\C^{5}$ preserving the volume form
+\end{itemize}
+These $U(1)$ weights are summarized in table \ref{tbl:weights1}.
+
+\begin{center}
+\begin{tabular}{c c c c c c}
+  & $z_{1}$ & $z_{2}$ & $z_{3}$ & $w_{1}$ & $w_{2}$ \\
+  \hline
+  $t_{1}$ & $1$ & $-1$ & $0$ & $0$ & $0$ \\
+  $t_{2}$ & $0$ & $1$ & $-1$ & $0$ & $0$ \\
+  $r$ & $0$ & $0$ & $0$ & $1$ & $-1$ \\
+  $q$ & $-1$ & $-1$ & $-1$ & $0$ & $0$
+\end{tabular}
+\end{center}
+
+\parsec
+
+\begin{itemize}
+\item Single particle operators on the odd copy of holomorphic two-forms $\Pi \Omega^{2,hol}$ contribute
+\[
+- q^3 \frac{t_1 q^{-2} + t_1^{-1} t_2 q^{-2} + t_2^{-1} q^{-2} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+\]
+\item Single particle operators on the even copy of holomorphic three-forms $\Omega^{3,hol}$ contribute
+\[
+q^3 \frac{q^{-3}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+\]
+\item Single particle operators on $K^{-1/2} \otimes \C^2$ contribute
+\[
+q^3 \frac{q^{-3/2} r + q^{-3/2}r^{-1}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
+\]
+\end{itemize}
+
+Putting this all together we obtain the following.
+
+\begin{prop}
+The character of local operators of the holomorphic twist of the theory on a single fivebrane is given by the following plethystic exponential
+\[
+{\rm PExp} \left[f_{tensor} (t_1,t_2,q,r) \right] .
+\]
+where the single particle index is
+\[
+f_{tensor} (t_1,t_2,q,r) = \frac{(r + r^{-1})q^{3/2} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )q + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+\]
+\end{prop}
+
+\parsec
+
+A remark comparing to Kac \cite{KR1}. 
+
+\parsec
+
+There are various specializations of this character that one can consider. 
+One which is motivated from supersymmetry produces...
+
+\begin{itemize}
+\item The deformation $\d z_1 \otimes r_+$.
+\item The deformation $(z_2 \d z_3 - z_3 \d z_2) \otimes r_-$. 
+\end{itemize}
+
+Both characters break the global Cartan subgroup down to $U(1) \times U(1)$ according to the specializations
+\[
+q = r^2 , \quad t_2 = 1 .
+\]
+As one can easily check, this specialization yields the following single particle index
+\[
+f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{1}{1-q} 
+\]
+which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
+
+\subsection{Character of E(3|6)}
+
+
 \subsection{Large $N$ Holomorphic Character}
 
-We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of M5 branes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ M5 branes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\pi : \R\times \C^{5}\to \C^{3}_{z_{i}}$ denote the canonical projection. The pushforward $\pi_{*} C^{*}(\cL)$ has the structure of a factorization algebra on $\C^{3}$
+We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of fivebranes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ fivebranes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\pi : \R\times \C^{5}\to \C^{3}_{z_{i}}$ denote the canonical projection. The pushforward $\pi_{*} C^{*}(\cL)$ has the structure of a factorization algebra on $\C^{3}$
 
 The twisted holography proposal asserts that the factorization algebra of local observables $\Obs_{M5}$ of the minimally twisted M5 brane theory in the large $N$ limit is a deformation of the Koszul dual $(\pi_{*} C^{\bullet}(\cL))^{!}$.
 
@@ -81,8 +219,8 @@ H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3},  \iota^{*}T^{*}_{\C^{5}}))& H^{\bull
 
 The index we compute will have four fugacities, which we label as follows:
 \begin{itemize}
-  \item $t_{1}, t_{2}$ denote generators for the cartan of $\SU(3)$ which acts on $\C^{3}_{z}$.
-  \item $q$ denotes a generator for the cartan of a $\SU(2)$ rotating the normal directions $\C^{2}_{w}$
+  \item $t_{1}, t_{2}$ denote generators for the cartan of $SU(3)$ which acts on $\C^{3}_{z}$.
+  \item $q$ denotes a generator for the cartan of a $SU(2)$ rotating the normal directions $\C^{2}_{w}$
   \item $r$ denotes a generator for the cartan of an additional $U(1)$ acting on $\C^{5}$ preserving the volume form
 \end{itemize}
 
@@ -105,3 +243,5 @@ A convenient choice of choice of weights is as in the following table:
   \[ \operatorname{PExp} \left (\frac{r^{3}\left (\begin{aligned} & t_{1}^{-1}r+t_{1}t_{2}^{-1}r+t_{2}r+q^{-1}r^{-3/2}+qr^{-3/2} \\  - & t_{1}r^{-1}-t_{1}^{-1}t_{2}r^{-1}-t_{2}^{-1}r^{-1}-qr^{3/2}-q^{-1}r^{3/2}
           \end{aligned}\right)}{(1-t_{1}^{-1}r)(1-t_{2}r)(1-t_{1}t_{2}^{-1}r)(1-r^{3/2}q)(1-r^{3/2}q^{-1})}\right ).\]
   \end{prop}
+  
+\end{document}
