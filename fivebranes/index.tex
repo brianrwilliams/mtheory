@@ -123,18 +123,55 @@ One which is motivated from supersymmetry produces...
 \item The deformation $(z_2 \d z_3 - z_3 \d z_2) \otimes r_-$. 
 \end{itemize}
 
-Both characters break the global Cartan subgroup down to $U(1) \times U(1)$ according to the specializations
-\[
+Both deformations break the global Cartan subgroup down to $U(1) \times U(1)$ according to the specializations
+\beqn\label{eqn:special1}
 q = r^2 , \quad t_2 = 1 .
-\]
+\eeqn
 As one can easily check, this specialization yields the following single particle index
 \[
 f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{q}{1-q} 
 \]
 which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
 
-\subsection{Character of E(3|6)}
+\subsection{Character of $E(3|6)$}
 
+\parsec[]
+
+Recall that the even part of $E(3|6)$ ... 
+
+\begin{itemize}
+\item Single particle operators coming from the copy of holomorphic vector fields $\Vect^{hol}(\C^3)$ contribute
+\[
+q^3 \frac{t_1^{-1} q + t_1 t_2^{-1} q + t_2 q }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+\]
+\item Single particle operators coming from $\lie{sl}(2)$-valued holomorphic functions $\lie{sl}(2) \otimes \cO^{hol}(\C^3)$ contribute
+\[
+q^3\frac{r^2 + r^{-2} + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+\]
+\item Single particle operators coming from the odd piece of $E(3|6)$ which is $\Omega^{1,hol} \otimes K^{-1/2} \otimes \C^2$ contribute
+\[
+q^{3}\frac{q^{1/2} r + q^{1/2} r^{-1}}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
+\]
+\end{itemize}
+
+\begin{conj}
+The character of local operators of the holomorphic twist of the theory on a stack of two fivebranes is given by the following plethystic exponential
+\[
+{\rm PExp} \left[f_{two} (t_1,t_2,q,r) \right] .
+\]
+where the single particle index is
+\[
+f_{two} (t_1,t_2,q,r) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+\]
+\end{conj}
+
+\parsec[]
+
+The specialization of this index in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
+\[
+f_{two}(t_1, 1, q, q^{1/2}) = \frac{q^2}{1-q} 
+\]
+which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
 \subsection{Large $N$ Holomorphic Character}
 
