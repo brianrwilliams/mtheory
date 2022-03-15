@@ -4,51 +4,70 @@
 \usepackage{macros-fivebrane}
 
 \begin{document}
-\section{Supersymmetric indices}
 
-\subsection{A single fivebrane}
+\section{The representation theory of local operators}
 
-We recall the description of the holomorphic twist of a single fivebrane theory \cite{SWtensor}
+operators, indices, etc..
+relationship to the $S^5$ partition function.
+
+\subsection{Local operators in a holomorphic theory} 
 
 \parsec[]
 
-The holomorphic twist of the fivebrane theory is defined on any complex three-fold $X$ (which is not necessarily Calabi--Yau).
-To define the theory we must assume that $X$ is equipped with a square-root of the canonical bundle $K_X^{1/2}$. 
-
-The theory is $\Z \times \Z/2$ graded but in this section we only need to recall its totalization as a $\Z/2$ graded theory. 
-There are four fundamental fields $(\mu, \Omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $X$:
+Suppose that $V$ is a translation invariant holomorphic vector bundle on $\C^n$ equipped with a $\Z \times \Z/2$ bigrading. 
+Let $\cV$ denote its sheaf of holomorphic sections.
+The {\em space of fields} of a holomorphic field theory on $\C^n$ is the $\Z \times \Z/2$ graded complex of vector bundles
 \[
-\mu \in \Omega^{2,1}(X), \quad \Omega \in \Omega^{3,0}(X),
+\Omega^{0,\bu}(\C^n, V) \cong \Omega^{0,\bu}(\C^n) \otimes V_0 
 \]
-and a pair of even sections:
+where $V_0$ is the fiber of $V$ at $0 \in \C^n$.
+Our grading conventions are so that $\d \zbar_i$ has bidegree $(1,0)$.
+
+As introduced in \cite{BWhol,LiVertex,CG2}, a {\em holomorphic field theory} is a holomorphic vector bundle $V$ as above equipped additionally with:
+\begin{itemize}
+\item The structure of a local (super) $L_\infty$ algebra on $V[-1]$ with structure maps given by holomorphic polydifferential operators
 \[
-(\phi_1,\phi_2) \in \Omega^0(X , K^{1/2}_X) \otimes \C^2 .
+[\cdot]_k \colon \cV[-1]^{\times k} \to \cV[1-k] .
 \]
-%where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation. 
-The equations of motion read
+\end{itemize}
+A {\em free} holomorphic theory has $[\cdot]_k = 0$ for $k > 1$.
+
+\parsec[s:localops]
+
+\begin{eg}
+Suppose that $V$ is the trivial bundle on $\C^n$. 
+Then, the space of local operators is the symmetric algebra on the topological vector space which is linear dual to 
+\[
+\cO^{hol}(\Hat{D}^n) = \C[[z_1,\ldots,z_n]] .
+\]
+Via the $n$-dimensional residue one can identify the algebra of local operators with 
+\[
+\Sym\left(\frac{\d z_1}{z_1} \cdots \frac{\d z_n}{z_n}  \C[z_1^{-1}, \ldots , z_n^{-1}]\right) .
+\]
+
+Consider the standard torus action $\C^\times \times \cdots \C^\times$ on $\C^n$. 
+The equivariant character of local operators with respect to this symmetry is given by the plethystic exponential of the following `single particle index'
+\[
+\frac{1}{(1-q_1)\cdots (1-q_n)} .
+\]
+\end{eg}
+
+\subsection{Operators on a single fivebrane}
+
+We recalled the description of the holomorphic twist of the theory on a single fivebrane in \ref{s:single}. 
+This theory exists on any complex three-fold $X$. 
+To describe the algebra of local operators we specialize to $X = \C^3$ and consider the local operators supported at $0 \in \C^3$. 
+
+The theory on a single fivebrane is free and the underlying cochain complex of fields on $\C^3$ is given by 
 \beqn
-\label{eqn:eom}
-\begin{split}
-\del \mu + \dbar \Omega & = 0 \\
-\dbar \mu = \dbar \phi = \dbar \psi & = 0 .
-\end{split}
+\begin{tikzcd}
+\ul{-1} & \ul{0} \\
+\Omega^{2,\bu}(\C^3) \ar[r,"\del"] & \Omega^{3,\bu}(\C^3) \\
+\Pi \Omega^{0,\bu}(\C^3, K_{\C^3}^{1/2} \otimes \C^2) . 
+\end{tikzcd} 
 \eeqn
+Here we recall the $\Z \times \Z/2$ bigrading where the differential has bidegree $(1,0)$. 
 
-There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b$ which is a Dolbeault form of type $(2,0)$ which acts simply by
-\beqn
-\label{eqn:ghost}
-\begin{split}
-\mu & \mapsto \mu + \dbar b  \\
-\Omega & \mapsto \Omega + \del b .
-\end{split}
-\eeqn
-
-This theory does not admit a Lagrangian description. 
-However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
-
-\parsec
-
-We now consider the case $X = \C^3$ and consider the local operators of the single fivebrane theory supported at $0 \in \C^3$. 
 
 \begin{lem}
 \label{lem:single}
@@ -59,6 +78,8 @@ The $\Z/2$ algebra of local operators of the holomorphic single fivebrane theory
 \end{lem}
 
 \parsec
+
+\brian{i think I will recall some of this in the language of `fields' in Section 1, but it'd be good to say a few words about operators.}
 
 In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the holomorphic twist of the free tensor multiplet was constructed.
 We recall the action of its even part on local operators of the holomorphic twist of the free tensor multiplet. 
@@ -165,8 +186,9 @@ As one can easily check, this specialization yields the following single particl
 f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{q}{1-q} 
 \]
 which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
+Notice that although the Cartan subalgebra generated by the vector field $z_1 \del_{z_1} - z_2 \del_{z_2}$ is unbroken by this deformation, the dependence on its fugacity $t_1$ completely drops out of the expression.
 
-\subsection{Character of $E(3|6)$}
+\subsection{A stack of two fivebranes}
 
 \parsec[]
 
@@ -206,7 +228,7 @@ f_{two}(t_1, 1, q, q^{1/2}) = \frac{q^2}{1-q}
 \]
 which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
-\subsection{Large $N$ Holomorphic Character}
+\subsection{The large $N$ limit}
 
 We begin by using the twisted holography proposal to compute an index counting local operators of the holomorphic twist of the theory on a large number of fivebranes. Let us briefly recall the proposal specialized to our situation \surya{more elaboration elsewhere}. Let $\cL$ denote the local $L_{\infty}$ algebra underlying the minimal twist of 11 dimensional supergravity on $\R_{t}\times \C^{3}_{z_{i}}\times \C^{2}_{w_{a}}$. Consider a stack of $N$ fivebranes supported at the origin in $\R\times \C^{2}_{w_{a}}$ and let $\pi : \R\times \C^{5}\to \C^{3}_{z_{i}}$ denote the canonical projection. The pushforward $\pi_{*} C^{*}(\cL)$ has the structure of a factorization algebra on $\C^{3}$
 
