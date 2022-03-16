@@ -309,15 +309,25 @@ H^{\bullet}(\Omega^{0,\bullet}_{c} (\C^{3},  \iota^{*}T^{*}_{\C^{5}}))& H^{\bull
 
 \end{proof}
 
-The index we compute will have four fugacities, which we label as follows:
+\parsec
+
+We consider the equivariant character of local operators of the holomorphic twist of a large number of fivebranes with respect to a finite dimensional subalgebra $\lie{sl}(3)\times \lie{sl}(2)\times \lie {gl}(1)\subset E(5|10)$ which embeds in the following way:
+
 \begin{itemize}
-  \item $t_{1}, t_{2}$ denote generators for the cartan of $SU(3)$ which acts on $\C^{3}_{z}$.
-  \item $q$ denotes a generator for the cartan of a $SU(2)$ rotating the normal directions $\C^{2}_{w}$
-  \item $r$ denotes a generator for the cartan of an additional $U(1)$ acting on $\C^{5}$ preserving the volume form
 \end{itemize}
 
-A convenient choice of choice of weights is as in the following table:
+This is the image of the subalgebra chosen in the calculation in \ref{} via under the map $E(3|6)\to E(5|10)$ discussed in \surya{earlier}
 
+The equivariant character thus has four fugacities, which we label as follows:
+\begin{itemize}
+  \item $t_{1}, t_{2}$ again denote generators for the Cartan of $\lie{sl}(3)$ acting by vector fields on $\C^{3}_{z}$.
+  \item $r$ denotes a generators for the Cartan of a $\lie{sl}(2)$ acting by the fundamental representation on the normal directions $\C_{w}$.
+  \item $q$ denotes a generator for the cartan of additional $\lie{gl}(1)$ acting by a divergence free vector field on $\C^{5}$ that restricts to a dilation on $\C^{3}$.
+\end{itemize}
+
+This choice of subalgebra is such that it restricts to the choice made in
+
+The convenient choice of weights is summarized in the following table:
 \begin{center}
 \begin{tabular}{c c c c c c}
   & $z_{1}$ & $z_{2}$ & $z_{3}$ & $w_{1}$ & $w_{2}$ \\
@@ -328,12 +338,26 @@ A convenient choice of choice of weights is as in the following table:
   $q$ & -1 & -1 & -1 & $\frac{3}{2}$ & $\frac{3}{2}$
 \end{tabular}
 \end{center}
+\parsec
+
 
 \begin{prop}
-  The $\SU(3)\times \SU(2)\times U(1)$ character of the large $N$ local operators of the M5 brane theory is given by
+  The character of local operators of the holomorphic twist of the theory on a large number of fivebranes is given by the following plethystic exponential
 
-  \[ \operatorname{PExp} \left (\frac{q^{3}\left (\begin{aligned} & t_{1}^{-1}q+t_{1}t_{2}^{-1}q+t_{2}q+r^{-1}q^{-3/2}+rq^{-3/2} \\  - & t_{1}q^{-1}-t_{1}^{-1}t_{2}q^{-1}-t_{2}^{-1}q^{-1}-rq^{3/2}-r^{-1}q^{3/2}
-          \end{aligned}\right)}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}\right ).\]
-  \end{prop}
-  
+  \[ \rm PExp [f_{large N}(t_{1}, t_{2}, q, r)] \]
+
+  where the single particle index is \[f_{large N}(t_{1}, t_{2}, q, r) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1}+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.\]
+\end{prop}
+
+
+
+\parsec The specialization of this index in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
+\[
+f_{two}(t_1, 1, q, q^{1/2}) = \frac{q}{1-q)^{2}.
+\]
+
+This plethystic exponential yields the Macmahon function, which is the character of the vacuum module of the $W_{1+\infty}$-algebra.
+
+\parsec The same change of variables in \eqref{eqn:special2} agrees with previously computed indices for single particle states for supergravity on $\rm AdS_{7}\times S^{4}$ \surya{...}
+
 \end{document}
