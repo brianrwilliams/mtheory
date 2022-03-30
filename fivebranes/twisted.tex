@@ -9,6 +9,35 @@
 
 \subsection{Observables in a holomorphic-topological theory}
 
+One of the main results of \cite{CG2}.
+
+\begin{dfn} 
+Let $\Obs$ be a factorization algebra on a smooth manifold $M$.
+The classical \defterm{point observables} at $p \in M$ is the limit $\Obs(p) = \lim_{U \ni p} \Obs(U)$ where the limit runs over open sets $U \subset M$ containing $p$.
+\end{dfn}
+
+\parsec
+
+Without loss of generality we will assume our holomorphic-topological local Lie algebra on $M \times X$ is of the form
+\[
+\cL = \Omega^\bu (M) \hotimes \Omega^{0,\bu}(X, L) 
+\]
+where $L$ is a graded holomorphic vector bundle on $X$.
+
+\begin{lem}
+\label{lem:localops}
+Suppose that $\cL$ is a holomorphic-topological local Lie algebra on $\R^m \times \C^n$ and consider the factorization algebra $\Obs = \clie^\bu (\cL)$. 
+Then, the Taylor expansion map
+\[
+\cL(\C^n \times \R^m) \to L_0[[z_0,\ldots,z_n]]
+\]
+induces a quasi-isomorphism of commutative dg algebras
+\[
+\Obs(0) \simeq \clie^\bu \left( L_0[[z_1,\ldots,z_n]] \right) .
+\]
+\end{lem}
+
+ 
 \subsection{A model for twisted supergravity}
 
 Let $X$ be a Calabi--Yau five-fold. 
@@ -17,19 +46,93 @@ Within the BV formalism, the theory is only $\Z/2$ graded.
 
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory. 
 
-\begin{thm}[\cite{RSW}]
-On $X \times \R = \C^5 \times \R$ there is a quasi-isomorphism of the local observables of the minimal twist of eleven-dimensional supergravity 
+\parsec[s:fields]
+The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold. 
+
+\parsec[s:e510]
+
+Let $\Hat{D}^5$ denote the formal five-disk whose algebra of functions is 
 \[
-{\rm Ops}_{11d} \simeq \clie^\bu(\Hat{E}(5|10)) 
+\cO(\Hat{D}^5) = \C[[z_1,\ldots,z_5]] .
 \]
-\end{thm}
+
+\parsec[s:L0]
+
+For us, a $\Z/2$ graded $L_\infty$ algebra is a $\Z/2$ graded vector space $L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
+\[
+\ell_k \colon L^{\times k} \to \Pi^k L 
+\]
+are multilinear maps which satisfy the ordinary higher Jacobi relations defining an $L_\infty$ algebra \cite{??}. 
+Here, $\Pi^k L = L$ if $k$ is even and $\Pi^k L = \Pi L$ if $k$ is odd. 
+Thus, $\ell_k$ is an even operation if $k$ is even and an odd operation if $k$ is odd. 
+\footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
+A $\Z/2$ graded $L_\infty$ algebra is simply what one gets when they apply the forgetful function from $\Z$ graded vector spaces to $\Z/2$ graded vector spaces.}
+
+Let $L_{sugra}$ be the following $\Z/2$ graded $L_\infty$ algebra. 
+The even part is 
+\[
+\Vect (\Hat{D}^5) \oplus \cO (\Hat{D}^5) .
+\]
+We will denote even elements by $(\mu, \beta)$ according to the decomposition. 
+The odd part is 
+\[
+\cO(\Hat{D}^5) \oplus \Omega^1(\Hat{D}^5) .
+\]
+We will denote odd elements by $(\nu, \gamma)$ according to the decomposition. 
+
+The $L_\infty$ structure is described as follows. 
+First, $\d = [-]_1$, the differential, is simply given by 
+\begin{align*}
+\d \beta & = \del \beta \in \Omega^1(\Hat{D}^5) \subset L_{sugra,-} \\
+\d \mu & = \div \mu \in \cO(\Hat{D}^5) \subset L_{sugra, -}
+\end{align*}
+and $\d \gamma = \d \nu = 0$. 
+
+For $k \geq 2$ the general formula for the $k$-ary brackets is 
+\begin{align*}
+[\nu_1, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) \\
+[\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma .\\
+[\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma .
+\end{align*}
+In \cite{RSW} it is shown that this endows $L_{sugra}$ with the structure of a $\Z/2$ graded $L_\infty$ algebra.
+
+\parsec[s:sugraobs]
+
+By the usual methods of the BV formalism the action functional $S_{sugra}$ described above endows the parity shift of the fields $\cL_{sugra} = \Pi \cE_{sugra}$ with the structure of a holomorphic-topological local $\Z/2$ graded $L_\infty$ algebra. 
+
+On $\C^5 \times \R$ we can describe this super Lie algebra structure explicitly. 
+First, by the Dolbeault and de Rham Poincar\'e lemmas it is easy that the even part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to a one-dimensional central summand $\C$ plus the Lie algebra of divergence-free vector fields on $\C^5$:
+\[
+\Vect_0 (\C^5) = \{X \in \Vect(\C^5) \; | \; \div X = 0\} .
+\]
+The odd part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to the space of holomorphic one-forms on $\C^5$ modulo exact one-forms
+\[
+\Omega^{1,hol}(\C^5) / {\rm Im}(\del) 
+\]
+which is, of course, equivalent to the space of closed holomorphic two-forms $\Omega^{2,hol}_{cl}(\C^5)$. 
+
+\begin{thm}[\cite{RSW}[Theorem 2.1]]
+The Taylor expansion map determines a map of $\Z/2$ graded $L_\infty$ algebras
+\[
+j_\infty \colon \cL_{sugra}(\C^5 \times \R) \to L_{sugra} .
+\]
+Furthermore, $L_{sugra}$ is equivalent as a $\Z/2$ graded $L_\infty$ algebra to $\Hat{E(5|10)}$. 
+\end{thm} 
+
+As an immediate corollary of this result we obtain by Lemma \ref{lem:localops} the following.
+
+\begin{cor}
+Let $\Obs_{sugra}$ be the factorization algebra on $\C^5 \times \R$ of classical observables of the minimal twist of eleven-dimensional supergravity.
+There is a quasi-isomorphism of commutative dg algebras
+\[
+\Obs_{sugra} (0) \simeq \clie^\bu \left( \Hat{E(5|10)} \right) .
+\]
+\end{cor}
 
 
 \subsection{Twisted fivebranes} 
 
 %\subsection{Twisted AdS backgrounds}
-
-\parsec
 
 \parsec[s:coupling]
 
@@ -43,7 +146,7 @@ We briefly recall this desription.
 The holomorphic twist of the fivebrane theory is defined on any complex three-fold $X$ (which is not necessarily Calabi--Yau).
 To define the theory we must assume that $X$ is equipped with a square-root of the canonical bundle $K_X^{1/2}$. 
 
-The theory is $\Z \times \Z/2$ graded but in this section we only need to recall its totalization as a $\Z/2$ graded theory. 
+The theory is $\Z \times \Z/2$ graded but at first pass we recall its totalization as a $\Z/2$ graded theory. 
 There are four fundamental fields $(\mu, \Omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $X$:
 \[
 \mu \in \Omega^{2,1}(X), \quad \Omega \in \Omega^{3,0}(X),
@@ -71,19 +174,47 @@ There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b
 \end{split}
 \eeqn
 
-This theory does not admit a Lagrangian description. 
+This theory notoriously does not admit a Lagrangian description. 
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
+We describe this Poisson bivector explicitly  
 
-\parsec
+\parsec[s:zz2]
 
+In the BV formalism the fields of a free theory together with the ghosts and the (partial) antifields combine to form a cochain complex. 
+
+\parsec[s:singleops]
+
+\begin{prop}
+Let $\Obs_{fivebrane}$ be the observables of the theory on a single fivebrane on $\C^3$ after performing the holomorphic twist.
+There is a quasi-isomorphism of super commutative dg algebras 
+\[
+\Obs_{fivebrane} (0) \simeq \Sym \left( I(0,0;1;-1)^* \right) .
+\]
+\end{prop}
 
 \subsection{Enhanced symmetry in a flat background}
 
-\parsec[s:e510]
+\parsec[s:weight]
 
-The super Lie algebra $E(5|10)$. 
 
 \parsec[s:e36]
+
+The super Lie algebra $E(3|6)$. 
+
+\begin{lem} 
+The map $E(3|6) \hookrightarrow E(5|10)$ lifts to a map of super $L_\infty$ algebras 
+\[
+E(3|6) \hookrightarrow \Hat{E(5|10)} .
+\]
+\end{lem}
+\begin{proof}
+It suffices to show that the central extension of $E(5|10)$ splits when restricted to the subalgebra $E(3|6)$. 
+Recall that the even cocycle defining this extension is 
+\[
+(\mu, \mu', \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>|_{z=0} .
+\]
+This is clearly zero since the image 
+\end{proof}
 
 \end{document}
 
