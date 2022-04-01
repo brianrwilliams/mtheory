@@ -191,8 +191,31 @@ There is a quasi-isomorphism of super commutative dg algebras
 \Obs_{fivebrane} (0) \simeq \Sym \left( I(0,0;1;-1)^* \right) .
 \]
 \end{prop}
+\begin{proof}
+This follows from Lemma \ref{lem:localops}.
+In \cite{SWsuca6d} a dg lift of Kac's module $I(0,0;1;-1)$ was defined with the following bigraded pieces:
+\beqn
+\text{bidegree} (-1,+)\colon \quad \Hat{\Omega}_3^{2} , \qquad \text{bidegree} (0,+)\colon \quad \Hat{\Omega}^{3}_3
+\eeqn
+and
+\beqn
+\text{bidegree} (-1, -)\colon \quad \Hat{\Omega}^{3/2}_{3} \otimes R .
+\eeqn
+The differential is the (algebraic) de Rham differential $\del \colon \Hat{\Omega}^2 \to \Hat{\Omega}^3$. 
+The differential is zero on the odd summand.
+We will call this cochain complex $(E_{fivebrane}(\Hat{D}^3), \del)$.
+
+From the description of the fields of the holomorphic twist of the single fivebrane it is easy to see that the Taylor expansion at $0 \in \C^3$ defines a cochain map
+\[
+(\cE_{fivebrane} (\C^3), Q) \to (E_{fivebrane}(\Hat{D}^3), \del) 
+\]
+That this induces a quasi-isomorphism $J_0^\infty \cE_{fivebrane} \simeq E (\Hat{D}^3)$ follows from the Dolbeault Poincar\'e lemma.
+\end{proof}
 
 \subsection{Enhanced symmetry in a flat background}
+
+\parsec[s:locallieE510]
+
 
 \parsec[s:weight]
 
@@ -215,6 +238,39 @@ Recall that the even cocycle defining this extension is
 \]
 This is clearly zero since the image 
 \end{proof}
+
+\section{Example} 
+
+Consider the holomorphic local Lie algebra on $\C^n$
+\[
+\Omega^{0,\bu}(\C^n) 
+\]
+and corresponding factorization algebra $\cF = \clie^\bu(\Omega^{0,\bu}(\C^n))$. 
+Now, we can restrict this to a factorization algebra on
+\[
+\C^n - 0 \subset \C^n
+\]
+that we denote by $\cF|_{\C^n - 0}$. 
+
+Next, consider the radial projection
+\[
+r \colon \C^n - 0 \to \R .
+\]
+Notice that $r_* (\cF|_{\C^n - 0})$ will not be the observables of any ordinary local Lie algebra.
+Nevertheless we can come up with a nice algebraic model.  
+
+Let $A_n$ be the usual dg model for the formal punctured disk $\Hat{D}^n - 0$ as defined in \cite{FHK,GWkm}.
+
+\begin{lem}
+There is an injective map of factorization algebras on $\RR_{>0}$:
+\[
+\clie^\bu(\Omega^\bu(\RR_{>0}) \otimes A_n) \to r_* (\cF|_{\C^n - 0}) 
+\]
+which is dense in cohomology.
+\end{lem}
+
+This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
+
 
 \end{document}
 
