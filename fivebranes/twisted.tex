@@ -98,7 +98,7 @@ In \cite{RSW} it is shown that this endows $L_{sugra}$ with the structure of a $
 
 \parsec[s:sugraobs]
 
-By the usual methods of the BV formalism the action functional $S_{sugra}$ described above endows the parity shift of the fields $\cL_{sugra} = \Pi \cE_{sugra}$ with the structure of a holomorphic-topological local $\Z/2$ graded $L_\infty$ algebra. 
+By the usual methods of the BV formalism the action functional $S_{sugra}$ described above endows the parity shift of the fields $\cL_{sugra} = \Pi \cF_{sugra}$ with the structure of a holomorphic-topological local $\Z/2$ graded $L_\infty$ algebra. 
 
 On $\C^5 \times \R$ we can describe this super Lie algebra structure explicitly. 
 First, by the Dolbeault and de Rham Poincar\'e lemmas it is easy that the even part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to a one-dimensional central summand $\C$ plus the Lie algebra of divergence-free vector fields on $\C^5$:
@@ -122,6 +122,7 @@ Furthermore, $L_{sugra}$ is equivalent as a $\Z/2$ graded $L_\infty$ algebra to 
 As an immediate corollary of this result we obtain by Lemma \ref{lem:localops} the following.
 
 \begin{cor}
+\label{cor:sugraops}
 Let $\Obs_{sugra}$ be the factorization algebra on $\C^5 \times \R$ of classical observables of the minimal twist of eleven-dimensional supergravity.
 There is a quasi-isomorphism of commutative dg algebras
 \[
@@ -214,30 +215,169 @@ That this induces a quasi-isomorphism $J_0^\infty \cE_{fivebrane} \simeq E (\Hat
 
 \subsection{Enhanced symmetry in a flat background}
 
-\parsec[s:locallieE510]
+\parsec[s:e36]
 
+We recall the definition of the exceptional super Lie algebra $E(3|6)$. 
+We follow \cite{Kac_class, KacRudakov}.
+
+The even part of the super Lie algebra $E(3|6)$ is 
+\[
+\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
+\]
+The Lie bracket is determined by the obvious commutators and the action of vector fields on functions. 
+
+The odd part is of the form
+\[
+\Omega^{-1/2}(\Hat{D}^3) \otimes \C^2 .
+\]
+where $\Omega^{-1/2}(\Hat{D}^3)$ is the space of formal power series sections of the bundle
+\[
+\T_{\Hat{D}^3}^{*} \otimes K_{\Hat{D}^3}^{-1/2}
+\]
+where $K_{\Hat{D}^3}^{-1/2}$ is the negative square-root of the canonical bundle on $\Hat{D}^3$. 
+We will write a general element of this module as 
+\[
+\alpha = \sum_i g^i \d z_i^{-1/2} 
+\]
+where $g^i \in \cO(\Hat{D}^3)$. 
+The action by the even part of the super Lie algebra is by Lie derivative and by the fundamental $\lie{sl}(2)$ action on $\C^2$.
+We will write $r \in \C^2$ for a vector in the fundamental representation.
+Finally, there is a bracket 
+\[
+E(3|6)_- \times E(3|6)_- \to E(3|6)_+
+\]
+defined by
+\[
+[\alpha_1 \otimes r_1, \alpha_2 \otimes r_2] = - (\alpha_1 \wedge \alpha_2) \otimes (r_1 \wedge r_2) - (\d \alpha_1 \otimes \alpha_2 + \alpha_1 \otimes \d \alpha_2) \otimes (r_1 \odot r_2) .
+\]
+%The first term in the above equation arises from the composition 
+%\[
+%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{\wedge \otimes \wedge} \Hat{\Omega}_3^{-1} \otimes \wedge^2 R \cong \fw_3 .
+%\] 
+%The second term uses the composition 
+%\[
+%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{(\d \otimes \id) \otimes \odot} (\Hat{\Omega}_3^{1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes \Sym^2 (R) \cong \lie{sl}(2) \otimes \Hat{\cO}_3 . 
+%\] 
+
+\brian{suca enhancement following \cite{SWsuca6d}}
 
 \parsec[s:weight]
 
+In \cite{KacRudakov} an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
 
-\parsec[s:e36]
+We first split the coordinates on the formal five-disk as
+\[
+(z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
+\]
+In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
 
-The super Lie algebra $E(3|6)$. 
+Assign the following weights to the super Lie algebra $E(5|10)$. 
+\begin{itemize} 
+\item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
+\item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
+\item the parity of an element carries an additional weight of $-1$. 
+Thus, for example, the odd element $[w_1 \d z_1] \in \Pi \Omega^1(\Hat{D}^5)/{\rm Im}(\del)$ carries weight $+1 - 1 = 0$. 
+\end{itemize} 
+The weight grading is concentrated in degrees $\geq -1$. 
+In particular, there is a decomposition of super vector spaces
+\beqn\label{eqn:decomp1}
+E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
+\eeqn
+with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
+It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. 
+In particular 
+\beqn 
+\label{eqn:e36iso}
+E(3|6) \cong V_0 \subset E(5|10)
+\eeqn
+is a sub super Lie algebra and each $V_n$ is a module for $E(3|6)$. 
+
+We can extend the weight grading of $E(5|10)$ to a weight grading of the central extension $\Hat{E(5|10)}$ by declaring that the central term have weight $-1$.
+In this way, we get a related decomposition of super vector spaces
+\beqn\label{eqn:decomp1}
+E(5|10) = \prod_{n \geq -1} V_n
+\eeqn
+Here $V_{-1}$ is a $\C$-extension of the module $\til V_{-1}$ defined in the decomposition above.
+Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
+In particular, we have the following. 
 
 \begin{lem} 
-The map $E(3|6) \hookrightarrow E(5|10)$ lifts to a map of super $L_\infty$ algebras 
+The embedding $E(3|6) \hookrightarrow E(5|10)$ lifts to a map of super $L_\infty$ algebras 
 \[
 E(3|6) \hookrightarrow \Hat{E(5|10)} .
 \]
 \end{lem}
-\begin{proof}
-It suffices to show that the central extension of $E(5|10)$ splits when restricted to the subalgebra $E(3|6)$. 
-Recall that the even cocycle defining this extension is 
+%\begin{proof}
+%It suffices to show that the central extension of $E(5|10)$ splits when restricted to the subalgebra $E(3|6)$. 
+%Recall that the even cocycle defining this extension is 
+%\[
+%(\mu, \mu', \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>|_{z=0} .
+%\]
+%This is clearly zero since the image 
+%\end{proof}
+
+Notice that as a consequence of this decomposition there is a corresponding decomposition of local operators of the eleven-dimensional theory on $\C^5 \times \R$. 
+By corollary \ref{cor:sugraops} there is a decomposition of $\Z/2$-graded cochain complexes 
+\begin{align*}
+\Obs_{sugra} (0) & = \clie^\bu \left( \Hat{V}_{-1} \times \prod_{n \geq 0} V_n \right) \\
+& = \Sym(\Pi \Hat{V}^*_{-1}) \otimes \bigotimes_{n \geq 0} \Sym\left(\Pi V^*_n\right) .
+\end{align*}
+The differential $Q$, which is defined using the Lie bracket on $\Hat{E(5|10)}$ is of the form
+$Q = Q_0 + \Hat{Q}$ where $Q_0$ acts on linear generators via
 \[
-(\mu, \mu', \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>|_{z=0} .
+Q_0 \colon V^*_n \to \oplus_{m + \ell = n} V^*_m \otimes V^*_\ell
 \]
-This is clearly zero since the image 
-\end{proof}
+and $\Hat{Q}$ acts on linear generators via
+\[
+\Hat{Q} \colon \CC \to \oplus_{m + \ell + n = -1} V^*_m \otimes V^*_\ell \otimes V^*_n .
+\]
+
+\parsec[s:locallieE510]
+
+We have recollected how the super Lie algebra $E(5|10)$ (and its central extension) decomposes as a module for the super Lie algebra $E(3|6)$. 
+We now wish to lift this to a decomposition of factorization algebras on $\C^3$, or more generally, factorization algebras on any complex three-fold $Z$. 
+
+We outline an approach to constructing the factorization algebras via enveloping factorization algebras of certain (infinite rank) local Lie algebras on the three-fold $X$. 
+For another approach \brian{pointer}. 
+
+We have already discussed the local Lie algebra $\cL_{sugra}$ on $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a smooth one-manifold. 
+We take $X = Z \times \C^2$ and $S = \R$. 
+and view $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ as a factorization algebra on $Z \times \C^2 \times \R$. 
+Then, we can consider the pushforward of $\Obs_{sugra}$ along the map
+\[
+\pi \colon Z \times \C^2 \times \R \to Z 
+\]
+which leads to a factorization algebra $\pi_* \Obs_{sugra}$ on the three-fold $Z$. 
+
+Since $\pi$ is not a proper map (the fibers are not compact) we cannot exhibit $\pi_*\Obs_{sugra}$ as the Chevalley--Eilenberg complex of some ordinary local Lie algebra on $Z$. 
+Nevertheless we will find a pro local Lie algebra $\cL_{sugra,\pi}$ on $Z$ which is a particularly nice `small model' for this pushforward factorization algebra.
+
+A local Lie algebra enhancement for $E(3|6)$ has been given in \cite{SWsuca6d} \brian{finish}
+
+\begin{prop}
+Let $Z$ be a Calabi--Yau three-fold and $\pi \colon Z \times \C^2 \times \R \to Z$ be the projection. 
+There is a pro local Lie algebra $\cL_{\pi, sugra}$ on $Z$ such that:
+\begin{itemize}
+\item[(1)] there is a map of factorization algebras
+\[
+\clie^\bu(\cL_{\pi,sugra}) \to \pi_* \Obs_{sugra}
+\]
+which is dense in cohomology. 
+\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
+\beqn\label{eqn:decomp3}
+\cL_{\pi,sugra} = \prod_{n \geq -1} \cV_{n} 
+\eeqn
+\item[(3)]
+In weight zero, there is an equivalence of local Lie algebras on $Z$ 
+\[
+\cV_0 \simeq \cE(3|6)|Z .
+\]
+\end{itemize}
+\end{prop}
+
+
+
+
 
 \section{Example} 
 
