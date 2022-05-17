@@ -7,58 +7,24 @@
 
 \section{Twisted eleven-dimensional supergravity}
 
-\subsection{Observables in a holomorphic-topological theory}
-
-One of the main results of \cite{CG2}.
-
-\begin{dfn} 
-Let $\Obs$ be a factorization algebra on a smooth manifold $M$.
-The classical \defterm{point observables} at $p \in M$ is the limit $\Obs(p) = \lim_{U \ni p} \Obs(U)$ where the limit runs over open sets $U \subset M$ containing $p$.
-\end{dfn}
-
-\parsec
-
-Without loss of generality we will assume our holomorphic-topological local Lie algebra on $M \times X$ is of the form
-\[
-\cL = \Omega^\bu (M) \hotimes \Omega^{0,\bu}(X, L) 
-\]
-where $L$ is a graded holomorphic vector bundle on $X$.
-
-\begin{lem}
-\label{lem:localops}
-Suppose that $\cL$ is a holomorphic-topological local Lie algebra on $\R^m \times \C^n$ and consider the factorization algebra $\Obs = \clie^\bu (\cL)$. 
-Then, the Taylor expansion map
-\[
-\cL(\C^n \times \R^m) \to L_0[[z_0,\ldots,z_n]]
-\]
-induces a quasi-isomorphism of commutative dg algebras
-\[
-\Obs(0) \simeq \clie^\bu \left( L_0[[z_1,\ldots,z_n]] \right) .
-\]
-\end{lem}
-
- 
 \subsection{A model for twisted supergravity}
 
-Let $X$ be a Calabi--Yau five-fold. 
-In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given. 
+In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded.
+In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory which we recall here.
 
-In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory. 
-
-\parsec[s:fields]
 The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold. 
 
-\parsec[s:e510]
+%\parsec[s:e510]
+%
+%Let $\Hat{D}^5$ denote the formal five-disk whose algebra of functions is 
+%\[
+%\cO(\Hat{D}^5) = \C[[z_1,\ldots,z_5]] .
+%\]
 
-Let $\Hat{D}^5$ denote the formal five-disk whose algebra of functions is 
-\[
-\cO(\Hat{D}^5) = \C[[z_1,\ldots,z_5]] .
-\]
+\parsec[s:Lsugra]
 
-\parsec[s:L0]
-
-For us, a $\Z/2$ graded $L_\infty$ algebra is a $\Z/2$ graded vector space $L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
+In this paper a $\Z/2$ graded $L_\infty$ algebra is a $\Z/2$ graded vector space $L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
 \[
 \ell_k \colon L^{\times k} \to \Pi^k L 
 \]
@@ -68,89 +34,76 @@ Thus, $\ell_k$ is an even operation if $k$ is even and an odd operation if $k$ i
 \footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
 A $\Z/2$ graded $L_\infty$ algebra is simply what one gets when they apply the forgetful function from $\Z$ graded vector spaces to $\Z/2$ graded vector spaces.}
 
-Let $L_{sugra}$ be the following $\Z/2$ graded $L_\infty$ algebra. 
-The even part is 
+Let $L_X$ be the following sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau five-fold $X$.
+As a sheaf of super vector spaces, $L_X$ is given as the holomorphic sections of a super vector bundle. 
+The even part of this super vector bundle is
 \[
-\Vect (\Hat{D}^5) \oplus \cO (\Hat{D}^5) .
+\T_X \oplus \C_X 
 \]
-We will denote even elements by $(\mu, \beta)$ according to the decomposition. 
+where $\T_X$ is the holomorphic tangent bundle and $\C_X$ is the trivial bundle.
+We will denote even sections by $(\mu, \beta)$ according to the decomposition. 
 The odd part is 
 \[
-\cO(\Hat{D}^5) \oplus \Omega^1(\Hat{D}^5) .
+\C_X \oplus \T^*_X .
 \]
 We will denote odd elements by $(\nu, \gamma)$ according to the decomposition. 
 
 The $L_\infty$ structure is described as follows. 
 First, $\d = [-]_1$, the differential, is simply given by 
 \begin{align*}
-\d \beta & = \del \beta \in \Omega^1(\Hat{D}^5) \subset L_{sugra,-} \\
-\d \mu & = \div \mu \in \cO(\Hat{D}^5) \subset L_{sugra, -}
+\d \beta & = \del \beta \in \Omega^1_X \subset L_{X,-} \\
+\d \mu & = \div \mu \in \cO_X \subset L_{X, -}
 \end{align*}
 and $\d \gamma = \d \nu = 0$. 
-
 For $k \geq 2$ the general formula for the $k$-ary brackets is 
 \begin{align*}
 [\nu_1, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) \\
 [\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma .\\
 [\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma .
 \end{align*}
-In \cite{RSW} it is shown that this endows $L_{sugra}$ with the structure of a $\Z/2$ graded $L_\infty$ algebra.
+In \cite{RSW} it is shown that this endows $L_{X}$ with the structure of a sheaf of $\Z/2$ graded $L_\infty$ algebras.
+
+As all operations above are given in terms of holomorphic polydifferential operators, the $L_\infty$ algebra structure above induces a $\Z/2$ graded $L_\infty$ algebra structure on the Dolbeault resolution $\Omega^{0,\bu}(X,L_X)$ of the holomorphic vector bundle $L_X$.
+
+Finally, to obtain a local $L_\infty$ algebra on $X \times S$, where $S$ denotes an arbitrary real oriented smooth one-manifold, we simply tensor with the de Rham complex along~$S$.
+We denote by $\cL_{sugra}$ the following local $\Z/2$ graded $L_\infty$ algebra on $X \times S$
+\beqn
+\cL_{sugra} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(X,L_X) .
+\eeqn
+
+\parsec[s:rsw]
+It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate odd pairing which is compatible with the $L_\infty$ structure above. 
+All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism. 
+On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that this BV theory is equivalent to the holomorphic (or minimal) twist of perturbative eleven-dimensional supergravity. 
 
 \parsec[s:sugraobs]
 
-By the usual methods of the BV formalism the action functional $S_{sugra}$ described above endows the parity shift of the fields $\cL_{sugra} = \Pi \cF_{sugra}$ with the structure of a holomorphic-topological local $\Z/2$ graded $L_\infty$ algebra. 
-
-On $\C^5 \times \R$ we can describe this super Lie algebra structure explicitly. 
-First, by the Dolbeault and de Rham Poincar\'e lemmas it is easy that the even part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to a one-dimensional central summand $\C$ plus the Lie algebra of divergence-free vector fields on $\C^5$:
+The factorization algebra of classical observables of the eleven-dimensional theory assigns to an open set 
 \[
-\Vect_0 (\C^5) = \{X \in \Vect(\C^5) \; | \; \div X = 0\} .
+U \subset S \times X 
 \]
-The odd part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to the space of holomorphic one-forms on $\C^5$ modulo exact one-forms
+the cochain complex
 \[
-\Omega^{1,hol}(\C^5) / {\rm Im}(\del) 
+\clie^\bu\left(\cL_{sugra}(U)\right) .
 \]
-which is, of course, equivalent to the space of closed holomorphic two-forms $\Omega^{2,hol}_{cl}(\C^5)$. 
-
-\begin{thm}[\cite{RSW}[Theorem 2.1]]
-The Taylor expansion map determines a map of $\Z/2$ graded $L_\infty$ algebras
-\[
-j_\infty \colon \cL_{sugra}(\C^5 \times \R) \to L_{sugra} .
-\]
-Furthermore, $L_{sugra}$ is equivalent as a $\Z/2$ graded $L_\infty$ algebra to $\Hat{E(5|10)}$. 
-\end{thm} 
-
-As an immediate corollary of this result we obtain by Lemma \ref{lem:localops} the following.
-
-\begin{cor}
-\label{cor:sugraops}
-Let $\Obs_{sugra}$ be the factorization algebra on $\C^5 \times \R$ of classical observables of the minimal twist of eleven-dimensional supergravity.
-There is a quasi-isomorphism of commutative dg algebras
-\[
-\Obs_{sugra} (0) \simeq \clie^\bu \left( \Hat{E(5|10)} \right) .
-\]
-\end{cor}
 
 
 \subsection{Twisted fivebranes} 
 
 %\subsection{Twisted AdS backgrounds}
 
-\parsec[s:coupling]
-
 \parsec[s:single]
 
 An explicit characterization of the holomorphic twist of a single fivebrane theory was given in \cite{SWtensor}. 
 We briefly recall this desription. 
 
-\parsec[]
-
-The holomorphic twist of the fivebrane theory is defined on any complex three-fold $X$ (which is not necessarily Calabi--Yau).
-To define the theory we must assume that $X$ is equipped with a square-root of the canonical bundle $K_X^{1/2}$. 
+The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
+In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$. 
 
 The theory is $\Z \times \Z/2$ graded but at first pass we recall its totalization as a $\Z/2$ graded theory. 
-There are four fundamental fields $(\mu, \Omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $X$:
+There are four fundamental fields $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $X$:
 \[
-\mu \in \Omega^{2,1}(X), \quad \Omega \in \Omega^{3,0}(X),
+\alpha \in \Omega^{2,1}(X), \quad \omega \in \Omega^{3,0}(X),
 \]
 and a pair of even sections:
 \[
@@ -161,8 +114,8 @@ The equations of motion read
 \beqn
 \label{eqn:eom}
 \begin{split}
-\del \mu + \dbar \Omega & = 0 \\
-\dbar \mu = \dbar \phi = \dbar \psi & = 0 .
+\del \alpha + \dbar \omega & = 0 \\
+\dbar \alpha = \dbar \phi_i & = 0 .
 \end{split}
 \eeqn
 
@@ -177,41 +130,144 @@ There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b
 
 This theory notoriously does not admit a Lagrangian description. 
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
-We describe this Poisson bivector explicitly  
+We describe this Poisson bivector explicitly
 
-\parsec[s:zz2]
+In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\ZZ/2$ graded local Lie algebra on $Z$ which is of the form 
+\[
+\cL_{single} = \Omega^{\leq 1, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
+\]
+The full space of BV fields is simply $\Pi \cL_{single}$. 
 
-In the BV formalism the fields of a free theory together with the ghosts and the (partial) antifields combine to form a cochain complex. 
+\parsec[s:singleobs]
 
-\parsec[s:singleops]
+The factorization algebra of classical observables of the eleven-dimensional theory assigns to an open set 
+\[
+U \subset Z
+\]
+the cochain complex
+\[
+\clie^\bu\left(\cL_{single}(U)\right) .
+\]
+
+\parsec[s:coupling]
+
+The holographic description of the ${\rm AdS}_7 \times S^4$ background in eleven-dimensional supergravity is obtained by backreacting some number of fivebranes \brian{references}. 
+In \cite{RSW} we gave a description of the twisted avatar of this background and described how it arises by backreacting some number of holomorphically twisted fivebranes. 
+We briefly recall the relevant setup here. 
+
+As above, let $Z$ be a three-fold equipped with $K^{1/2}_Z$.
+Consider the rank two vector bundle $K^{1/2}_Z \otimes \C^2$ on $Z$. 
+Via the linear holomorphic symplectic form on $\C^2$, the total space of this vector bundle ${\rm Tot}(K^{1/2}_Z \otimes \C^2)$ is equipped with a Calabi--Yau structure. 
+We consider the eleven-dimensional theory on 
+\[
+\R \times {\rm Tot}(K^{1/2}_Z) 
+\]
+with a stack of fivebranes supported at $0 \in \R$ and along the zero section in the total space of the vector bundle
+\[
+0 \times Z \subset \R \times {\rm Tot}(K^{1/2}_Z \otimes \C^2)  .
+\]
+Let us denote $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
+
+It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction 
+\beqn\label{eqn:br1}
+I_{M5} = N\int_{Z} \div^{-1}\mu \vee \Omega +\cdots 
+\eeqn
+where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)$ is a component of a field in the eleven-dimensional theory which satisfies $\div \mu = 0$. 
+
+\subsection{Supergravity at the boundary of AdS}
+
+Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\RR \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
+We are furthermore placing some number of fivebranes along the locus $Z$ cut out by the zero section. 
+If we remove this locus we obtain the following manifold 
+\[
+\R \times X - \left(0 \times Z\right) \simeq Z \times \left({\rm Tot}(N_Z) - 0\right) 
+\]
+where on the right hand side ${\rm Tot}(N_Z) - 0$ is the total space of the normal bundle to $Z$ in $\R \times X$ minus the zero section.
+
+\parsec[s:flat]
+
+%In the simple case where $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ then the manifold obtained by removing the locus of the brane is homeomorphic to
+%\[
+%\C^3 \times (\R \times \C^2 - 0) .
+%\]
+%
+%Let $\pi \colon \R \times \C^5 - (0 \times \C^3) \to \C^3 \times \R_{>0}$ be the projection map whose fibers are homeomorphic to the sphere $S^4$ which links the location of the fivebranes.
+%We restrict the factorization algebra of the eleven dimensional theory $\Obs_{sugra}$ to the open set obtained by removing the locus of the brane.
+
+In the simple case that $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ there is a more direct construction of the factorization algebra $\Obs_{sugra}|_{Z}$. 
+
+Let $\pi \colon \R \times \C^5 \to \C^3$ be the projection map.
+Then, via $\pi$ we can pushforward the factorization algebra associated to the eleven-dimensional theory to obtain a factorization algebra
+\[
+\pi_* \Obs_{sugra} 
+\]
+on $\C^3$.
+This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
+Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
+
+For any open set $U \subset \C^3$ we can consider the following $\C^\times$ action on the fields of the eleven-dimensional theory supported on $\R \times \C^2 \times U$ defined by
+\begin{itemize}
+\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \mu(t;w,z) = \mu(t;\lambda w , z).
+\]
+\item On the fields $\nu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \nu(t;w,z) = \nu(t;\lambda w , z).
+\]
+\item On the fields $\beta(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(t;\lambda w , z).
+\]
+\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(t;\lambda w , z).
+\]
+\end{itemize}
+
+For each $n \in \ZZ$ and open set $U \subset \C^3$, let 
+\[
+\pi_* \cL_{sugra}(U)^{(n)} \subset \cL_{sugra}(\R \times \C^2 \times U)
+\]
+be the weight $n$ eigenspace with respect to this $\C^\times$ action. 
+The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
+Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
+\[
+(\Bar{\pi}_* \cL_{sugra})(U) \define \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
+\]
+is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
+In this way, the assignment 
+\[
+\Bar{\pi}_* \cL_{sugra} \colon U \mapsto (\Bar{\pi}_* \cL_{sugra})(U) 
+\]
+defines a sheaf of $\Z/2$ graded $L_\infty$ algebras on $\C^3$. 
 
 \begin{prop}
-Let $\Obs_{fivebrane}$ be the observables of the theory on a single fivebrane on $\C^3$ after performing the holomorphic twist.
-There is a quasi-isomorphism of super commutative dg algebras 
+For each $n$, the sheaf of cochain complexes $U \mapsto \pi_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
 \[
-\Obs_{fivebrane} (0) \simeq \Sym \left( I(0,0;1;-1)^* \right) .
+\Omega^{0,\bu}(U, \cV^{(n)})
 \]
+for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$. 
+In particular, this endows $\Bar{\pi}_* \cL_{sugra}$ with the structure of a pro-vector bundle on $\C^3$. 
 \end{prop}
-\begin{proof}
-This follows from Lemma \ref{lem:localops}.
-In \cite{SWsuca6d} a dg lift of Kac's module $I(0,0;1;-1)$ was defined with the following bigraded pieces:
-\beqn
-\text{bidegree} (-1,+)\colon \quad \Hat{\Omega}_3^{2} , \qquad \text{bidegree} (0,+)\colon \quad \Hat{\Omega}^{3}_3
-\eeqn
-and
-\beqn
-\text{bidegree} (-1, -)\colon \quad \Hat{\Omega}^{3/2}_{3} \otimes R .
-\eeqn
-The differential is the (algebraic) de Rham differential $\del \colon \Hat{\Omega}^2 \to \Hat{\Omega}^3$. 
-The differential is zero on the odd summand.
-We will call this cochain complex $(E_{fivebrane}(\Hat{D}^3), \del)$.
 
-From the description of the fields of the holomorphic twist of the single fivebrane it is easy to see that the Taylor expansion at $0 \in \C^3$ defines a cochain map
+Now, since $\Bar{\pi}_* \cL_{sugra}$ is a pro-vector bundle with a compatible $L_\infty$ structure, the assignment 
 \[
-(\cE_{fivebrane} (\C^3), Q) \to (E_{fivebrane}(\Hat{D}^3), \del) 
+U\subset \C^3 \mapsto \clie^\bu\left(\Bar{\pi}_* \cL_{sugra}(U)\right) 
 \]
-That this induces a quasi-isomorphism $J_0^\infty \cE_{fivebrane} \simeq E (\Hat{D}^3)$ follows from the Dolbeault Poincar\'e lemma.
-\end{proof}
+has the structure of a factorization algebra on $\C^3$ which we denote by $\Bar{\pi}_* \Obs_{sugra}$. 
+
+\begin{prop}
+There is a natural inclusion of of factorization algebras 
+\[
+\Bar{\pi}_* \Obs_{sugra} \hookrightarrow \pi_* \Obs_{sugra}
+\]
+which is dense at the level of cohomology. 
+\end{prop} 
+
+We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
+
+\brian{old below}
 
 \subsection{Enhanced symmetry in a flat background}
 
