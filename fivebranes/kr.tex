@@ -178,7 +178,7 @@ We have $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where we recall that $
 
 Given this description, there is a simple expression for the character 
 \[
-\ch\, {M(F(\lambda_1,\lambda_2;\lambda_3;y))} = q^{-y} t_1^{\lambda_1}t_2^{\lambda_2} r^{\lambda_3} R(q,t_1,t_2,r) \cdot {\rm sdim}( V )
+\ch\, {M(F(\lambda_1,\lambda_2;\lambda_3;y))} = q^{-\frac32 y} t_1^{\lambda_1}t_2^{\lambda_2} r^{\lambda_3} R(q,t_1,t_2,r) \cdot {\rm sdim}( V )
 \]
 where $R = \ch \Sym(\fg_{<0})$. 
 
@@ -189,22 +189,74 @@ R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} 
 \eeqn
 \end{lem}
 
-\parsec[s:typeA]
+For notational simplicity, we will set $q = t^2$.
+
+\subsection{Characters for degenerate modules of type A} \label{s:typeA}
 
 There is a cohomological description of the irreducible modules of type $A$
 \[
-I(p,0;r;\frac23 p - r) .
+I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
 \]
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
+\beqn\label{eqn:les1}
+0 \leftarrow I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) \leftarrow M(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) \leftarrow M(\lambda_1+1,0,\lambda_3+1;\frac23 \lambda_1 - \lambda_3-\frac13) \leftarrow \cdots .
+\eeqn
+%which is
+%\[
+%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+%\]
+
+\parsec[s:typeAunrefinedKR]
+In this section we compute the {\em unrefined} character of the type A modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
+From the long exact sequence \eqref{eqn:les1} we have the following expression 
 \[
-0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(p, 0 ; r;\frac23 p - r) \leftarrow M(p+1, 0;r+1;\frac23 p - r - \frac13) \leftarrow \cdots 
-\]
-which is
-\[
-0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+\ch I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} = \sum_{j \geq 0} \ch M(\lambda_1+j,0,\lambda_3+j;\frac23 \lambda_1 - \lambda_3 - \frac{j}{3}) .
 \]
 
-84rPqzleGThz
+Let $M_j$ be the $j$th Verma module appearing in the sum above. 
+Then
+\beqn
+\ch M_j = R(r,t) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^j \left(r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \right) .
+\eeqn
+Notice that 
+\[
+r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
+\]
+so the above expression for $\ch M_j$ reduces to
+\[
+\ch M_j = R(r,t) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} t^j .
+\]
+Observe the formal identity 
+\[
+\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p(x)}{(1-x)^3}  .
+\]
+where $p(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
+
+Using this identity, we evaluate
+\begin{align*}
+\ch I_A(\lambda_1,\lambda_3) & = \frac{R(r,t) t^{3 \lambda_3 - 2 \lambda_1}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p(tr)}{(1-tr)^3} - \frac{r^{-\lambda_3-2}p(tr^{-1})}{(1-tr^{-1})^3} \right) \\ 
+& = \frac{t^{3 \lambda_3-2\lambda_1}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p(tr) (1-tr^{-1})^3 - r^{-\lambda_3-2} p(tr^{-1})(1-tr)^3 \right) .
+\end{align*}
+
+Finally, we specialize further $t=r$ and substitute $q = t^2$ to obtain
+\[
+\ch I_A(\lambda_1,\lambda_3) = \frac{q^{\lambda_3 - \lambda_1}}{1-q} .
+\]
+
+\subsection{Characters for degenerate modules of type B} \label{s:typeB}
+
+There is a cohomological description of the irreducible modules of type $B$ similar to the type A case above.
+Let $I_B(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3+2)$. 
+We are only interested in the case $\lambda_1 = 0$.  
+In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
+\begin{multline}\label{eqn:les1}
+0 \leftarrow  I_B(0,\lambda_3) \leftarrow \\ \leftarrow M(0,0,\lambda_3;\lambda_3 + 2) \leftarrow  M(1,0,\lambda_3-1;\frac{11}{3} - \lambda_3)  \leftarrow \cdots \leftarrow M(\lambda_3, 0, 0;\frac23 \lambda_3 +2) \leftarrow \\
+ \leftarrow M(\lambda_3+2, 0, 0; \frac23 \lambda_3 + \frac43) \leftarrow M(\lambda_3+3, 0, 1; \frac23 \lambda_3 + 2) \leftarrow \cdots .
+\end{multline}
+There are $\lambda_3+1$ terms in the second line above .  
+
+
+\parsec[s:typeBunrefinedKR]
 
 
 \end{document}
