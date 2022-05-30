@@ -8,13 +8,13 @@
 \section{Kac-Rudokov}
 
 In \cite{KacRudakov} an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
-
 We first split the coordinates on the formal five-disk as
 \[
 (z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
 \]
 In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
 
+\parsec[s:e510weight]
 Assign the following weights to the super Lie algebra $E(5|10)$. 
 \begin{itemize} 
 \item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
@@ -46,7 +46,7 @@ The central extension of $E(5|10)$ is defined by the (totally even) cocycle
 We can extend the weight grading of $E(5|10)$ to a weight grading of the central extension $\Hat{E(5|10)}$ by declaring that the central term have weight $-1$.
 In this way, we get a related decomposition of super vector spaces
 \beqn\label{eqn:decomp1}
-E(5|10) = \prod_{n \geq -1} V_n
+\Hat{E(5|10)} = \prod_{n \geq -1} V_n
 \eeqn
 Here $V_{-1}$ is a $\C$-extension of the module $\til V_{-1}$ defined in the decomposition above.
 Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
@@ -92,6 +92,7 @@ The super Lie algebra $E(5|10)$ carries a (non-cohomological) consistent $\Z$-gr
 \item $\deg \d z_i = \deg \d w_a = -1/2$.
 \end{itemize}
 This consistent $\Z$-grading extends to the central extension of $E(5|10)$ by declaring that the central term has degree $-5$. 
+Note that this is different from the weight grading we recalled in \S \ref{s:e510weight}. 
 
 \subsection{Irreducible representations of $E(3|6)$}
 Thinking of the super Lie algebra $E(3|6)$ as the weight zero subalgebra of $\Hat{E(5|10)}$ (or even before centrally extending) then it carries an induced consistent $\Z$-grading. 
@@ -100,7 +101,7 @@ In particular, as a super vector space
 \[
 E(3|6) = \oplus_{j \geq -2} \fg_j
 \]
-where
+where for small values of $j$ we have:
 \begin{itemize}
 \item $\fg_{-2} = {\rm span}\{\del_{z_i}\; | \; {i=1,2,3}\}$ which is completely even. 
 \item $\fg_{-1} = {\rm span}\{\d z_i \wedge \d w_a \; | \; i=1,2,3, a=1,2\}$ which is completely odd. 
@@ -147,12 +148,12 @@ Y_{[2]} = Y + 2 \id_{V_B} .
 \]
 For $X = A,B$ we let 
 \[
-V_X^{m,n} = \{f \in V_X \; | \; \sum z_i \del_{z_i} f = m f , \quad \sum w_a \del_{w_a} f = n f.\} 
+V_X^{m,n} = \{f \in V_X \; | \; \sum z_i \del_{z_i} f = m f , \quad \sum w_a \del_{w_a} f = n f.\} \subset V_X
 \]
-so that $V_X = \sum_{m,n} V_X^{m,n}$. 
+so that $V_X = \oplus_{m,n} V_X^{m,n}$. 
 There is a similar decomposition of the resulting Verma modules $M(V_X)$ in terms of the Verma modules $M(V_{X}^{m,n})$. 
 
-An irreducible $\fg_0$-module $F(\lambda_1,\lambda_2;\lambda_3;y)$ is characterized by a highest weight $\lambda$ which we denote by
+An irreducible $\fg_0$-module $F(\lambda_1,\lambda_2;\lambda_3;y)$ is characterized by a highest weight $\lambda$ whose components we denote by
 \begin{align*}
 \lambda_i & = \lambda (h_i) \in \Z_{\geq 0}, \\
  y & = \lambda(Y)\in \C . 
@@ -162,6 +163,13 @@ There is an isomorphism of $\fg_0$-modules
 V_A^{p,r} & \simeq F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 - \lambda_3) \\
 V_B^{p,-r} & \simeq F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 + \lambda_3 +2) .
 \end{align*} 
+Note for type $A,B$ we have $\lambda_2 = 0$. 
+To simplify notation we will write 
+\begin{align*}
+F_A(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 - \lambda_3) \\
+F_B(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 + \lambda_3 +2)  
+\end{align*}
+and similarly $M_A(\lambda_1,\lambda_3)$, $M_B(\lambda_1,\lambda_3)$ for the associated Verma modules. 
 
 \subsection{Character computations}
 
@@ -173,7 +181,8 @@ As a super vector space, the Verma module $M(V)$ associated to a $\fg_0$-module 
 \[
 M(V) = \Sym(\lie{g}_{<0}) \otimes V .
 \]
-We have $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where we recall that $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$. 
+
+Recall that $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$. 
 
 
 Given this description, there is a simple expression for the character 
@@ -191,15 +200,15 @@ R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} 
 
 For notational simplicity, we will set $q = t^2$.
 
-\subsection{Characters for degenerate modules of type A} \label{s:typeA}
+\subsection{Characters for degenerate modules of type $A$} \label{s:typeA}
 
 There is a cohomological description of the irreducible modules of type $A$
 \[
-I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
+I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
 \]
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 \beqn\label{eqn:les1}
-0 \leftarrow I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) \leftarrow M(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) \leftarrow M(\lambda_1+1,0,\lambda_3+1;\frac23 \lambda_1 - \lambda_3-\frac13) \leftarrow \cdots .
+0 \leftarrow I_A(\lambda_1,\lambda_3)\leftarrow M_A(\lambda_1,\lambda_3) \leftarrow M_A(\lambda_1+1,\lambda_3+1) \leftarrow \cdots .
 \eeqn
 %which is
 %\[
@@ -207,7 +216,7 @@ In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 %\]
 
 \parsec[s:typeAunrefinedKR]
-In this section we compute the {\em unrefined} character of the type A modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
+In this section we compute the {\em unrefined} character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
 From the long exact sequence \eqref{eqn:les1} we have the following expression 
 \[
 \ch I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} = \sum_{j \geq 0} \ch M(\lambda_1+j,0,\lambda_3+j;\frac23 \lambda_1 - \lambda_3 - \frac{j}{3}) .
@@ -245,9 +254,9 @@ Finally, we specialize further $t=r$ and substitute $q = t^2$ to obtain
 
 \subsection{Characters for degenerate modules of type B} \label{s:typeB}
 
-There is a cohomological description of the irreducible modules of type $B$ similar to the type A case above.
+There is a cohomological description of the irreducible modules of type B similar to the type A case above.
 Let $I_B(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3+2)$. 
-We are only interested in the case $\lambda_1 = 0$.  
+We are only interested in the case $\lambda_1 = 0$ with $\lambda_3=0,1,\ldots$.  
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 \begin{multline}\label{eqn:les1}
 0 \leftarrow  I_B(0,\lambda_3) \leftarrow \\ \leftarrow M(0,0,\lambda_3;\lambda_3 + 2) \leftarrow  M(1,0,\lambda_3-1;\frac{11}{3} - \lambda_3)  \leftarrow \cdots \leftarrow M(\lambda_3, 0, 0;\frac23 \lambda_3 +2) \leftarrow \\

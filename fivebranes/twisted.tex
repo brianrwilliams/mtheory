@@ -11,9 +11,12 @@
 
 In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded.
-In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory which we recall here.
+In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory.
+We recall this description here.
 
 The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold. 
+We opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
+The additional data of a theory in the BV formalism is a graded skew-symmetric pairing on this sheaf.
 
 %\parsec[s:e510]
 %
@@ -24,7 +27,7 @@ The eleven-dimensional theory exists on any manifold of the form $X \times S$ wh
 
 \parsec[s:Lsugra]
 
-In this paper a $\Z/2$ graded $L_\infty$ algebra is a $\Z/2$ graded vector space $L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
+In this paper $\Z/2$ graded $L_\infty$ algebra means a $\Z/2$ graded vector space~$L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
 \[
 \ell_k \colon L^{\times k} \to \Pi^k L 
 \]
@@ -62,6 +65,7 @@ For $k \geq 2$ the general formula for the $k$-ary brackets is
 [\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma .
 \end{align*}
 In \cite{RSW} it is shown that this endows $L_{X}$ with the structure of a sheaf of $\Z/2$ graded $L_\infty$ algebras.
+There is a sub sheaf given by the sections $\mu$ and $\nu$ which is $L_\infty$-equivalent to the sheaf of holomorphic divergence-free vector fields on $X$. 
 
 As all operations above are given in terms of holomorphic polydifferential operators, the $L_\infty$ algebra structure above induces a $\Z/2$ graded $L_\infty$ algebra structure on the Dolbeault resolution $\Omega^{0,\bu}(X,L_X)$ of the holomorphic vector bundle $L_X$.
 
@@ -78,11 +82,10 @@ On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that thi
 
 \parsec[s:sugraobs]
 
-The factorization algebra of classical observables of the eleven-dimensional theory assigns to an open set 
-\[
-U \subset S \times X 
-\]
-the cochain complex
+In the BV formalism, the sheaf of fields of the eleven-dimensional theory is $\Pi \cL_{sugra}$. 
+As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
+The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
+In other words, as a $\Z/2$ graded commutative dg algebra, the classical observables of the eleven-dimensional theory supported on an open set $U \subset X \times S$ is 
 \[
 \clie^\bu\left(\cL_{sugra}(U)\right) .
 \]
@@ -92,22 +95,36 @@ the cochain complex
 
 %\subsection{Twisted AdS backgrounds}
 
-\parsec[s:single]
+Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+\begin{itemize}
+\item 
+The holomorphic, or minimal, twist. 
+This twist leaves three real directions invariant. 
+The holomorphic twist of any $\cN=(2,0)$ theory can be defined on any complex three-fold $Z$ equipped with a square-root of its canonical bundle. 
+\item 
+The non-minimal twist. 
+This twist leaves five real directions invariant.
+The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface. 
+\end{itemize}
 
-An explicit characterization of the holomorphic twist of a single fivebrane theory was given in \cite{SWtensor}. 
-We briefly recall this desription. 
+By standard arguments, the theory on a stack of $N$ fivebranes in flat space is a theory with $\cN=(2,0)$ supersymmetry. 
+In later sections we provide arguments using the technology of twisted holography developed by Costello, Gaiotto, Li, and Paquette \cite{??} to provide a conjectural description of the twist of the theory for general $N > 1$. 
+An explicit characterization of the holomorphic and non-minimal twists of a single fivebrane theory has been given in \cite{SWtensor}. 
+We briefly recall this description. 
+
+\parsec[s:single]
 
 The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
 In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$. 
 
 The theory is $\Z \times \Z/2$ graded but at first pass we recall its totalization as a $\Z/2$ graded theory. 
-There are four fundamental fields $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $X$:
+There are four fundamental fields $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
 \[
-\alpha \in \Omega^{2,1}(X), \quad \omega \in \Omega^{3,0}(X),
+\alpha \in \Omega^{2,1}(Z), \quad \omega \in \Omega^{3,0}(Z),
 \]
 and a pair of even sections:
 \[
-(\phi_1,\phi_2) \in \Omega^0(X , K^{1/2}_X) \otimes \C^2 .
+(\phi_1,\phi_2) \in \Omega^0(Z , K^{1/2}_Z) \otimes \C^2 .
 \]
 %where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation. 
 The equations of motion read
@@ -132,7 +149,7 @@ This theory notoriously does not admit a Lagrangian description.
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
 We describe this Poisson bivector explicitly
 
-In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\ZZ/2$ graded local Lie algebra on $Z$ which is of the form 
+In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
 \cL_{single} = \Omega^{\leq 1, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
@@ -140,10 +157,7 @@ The full space of BV fields is simply $\Pi \cL_{single}$.
 
 \parsec[s:singleobs]
 
-The factorization algebra of classical observables of the eleven-dimensional theory assigns to an open set 
-\[
-U \subset Z
-\]
+The factorization algebra of classical observables of the holomorphic twist of the single fivebrane theory assigns to an open set $U \subset Z$
 the cochain complex
 \[
 \clie^\bu\left(\cL_{single}(U)\right) .
@@ -151,8 +165,8 @@ the cochain complex
 
 \parsec[s:coupling]
 
-The holographic description of the ${\rm AdS}_7 \times S^4$ background in eleven-dimensional supergravity is obtained by backreacting some number of fivebranes \brian{references}. 
-In \cite{RSW} we gave a description of the twisted avatar of this background and described how it arises by backreacting some number of holomorphically twisted fivebranes. 
+The holographic description of the ${\rm AdS}_7 \times S^4$ background in eleven-dimensional supergravity is obtained by backreacting a number of fivebranes \brian{references}. 
+In \cite{RSW} we gave a description of the twisted avatar of this background and described how it arises by backreacting a number of holomorphically twisted fivebranes. 
 We briefly recall the relevant setup here. 
 
 As above, let $Z$ be a three-fold equipped with $K^{1/2}_Z$.
@@ -176,7 +190,7 @@ where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)$ is a component of a field in
 
 \subsection{Supergravity at the boundary of AdS}
 
-Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\RR \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
+Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\R \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
 We are furthermore placing some number of fivebranes along the locus $Z$ cut out by the zero section. 
 If we remove this locus we obtain the following manifold 
 \[
@@ -209,19 +223,19 @@ For any open set $U \subset \C^3$ we can consider the following $\C^\times$ acti
 \begin{itemize}
 \item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{1,\bu}(\C^2 \times U)$ the action is
 \[
-\lambda \cdot \mu(t;w,z) = \mu(t;\lambda w , z).
+\lambda \cdot \mu(t;w,z) = \mu(\lambda t;\lambda w , z).
 \]
 \item On the fields $\nu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{0,\bu}(\C^2 \times U)$ the action is
 \[
-\lambda \cdot \nu(t;w,z) = \nu(t;\lambda w , z).
+\lambda \cdot \nu(t;w,z) = \nu(\lambda t;\lambda w , z).
 \]
 \item On the fields $\beta(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^2 \times U)$ the action is
 \[
-\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(t;\lambda w , z).
+\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(\lambda t;\lambda w , z).
 \]
 \item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
 \[
-\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(t;\lambda w , z).
+\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(\lambda t;\lambda w , z).
 \]
 \end{itemize}
 
@@ -319,74 +333,6 @@ defined by
 
 \parsec[s:weight]
 
-In \cite{KacRudakov} an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
-
-We first split the coordinates on the formal five-disk as
-\[
-(z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
-\]
-In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
-
-Assign the following weights to the super Lie algebra $E(5|10)$. 
-\begin{itemize} 
-\item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
-\item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
-\item the parity of an element carries an additional weight of $-1$. 
-Thus, for example, the odd element $[w_1 \d z_1] \in \Pi \Omega^1(\Hat{D}^5)/{\rm Im}(\del)$ carries weight $+1 - 1 = 0$. 
-\end{itemize} 
-The weight grading is concentrated in degrees $\geq -1$. 
-In particular, there is a decomposition of super vector spaces
-\beqn\label{eqn:decomp1}
-E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
-\eeqn
-with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
-It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. 
-In particular 
-\beqn 
-\label{eqn:e36iso}
-E(3|6) \cong V_0 \subset E(5|10)
-\eeqn
-is a sub super Lie algebra and each $V_n$ is a module for $E(3|6)$. 
-
-We can extend the weight grading of $E(5|10)$ to a weight grading of the central extension $\Hat{E(5|10)}$ by declaring that the central term have weight $-1$.
-In this way, we get a related decomposition of super vector spaces
-\beqn\label{eqn:decomp1}
-E(5|10) = \prod_{n \geq -1} V_n
-\eeqn
-Here $V_{-1}$ is a $\C$-extension of the module $\til V_{-1}$ defined in the decomposition above.
-Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
-In particular, we have the following. 
-
-\begin{lem} 
-The embedding $E(3|6) \hookrightarrow E(5|10)$ lifts to a map of super $L_\infty$ algebras 
-\[
-E(3|6) \hookrightarrow \Hat{E(5|10)} .
-\]
-\end{lem}
-%\begin{proof}
-%It suffices to show that the central extension of $E(5|10)$ splits when restricted to the subalgebra $E(3|6)$. 
-%Recall that the even cocycle defining this extension is 
-%\[
-%(\mu, \mu', \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>|_{z=0} .
-%\]
-%This is clearly zero since the image 
-%\end{proof}
-
-Notice that as a consequence of this decomposition there is a corresponding decomposition of local operators of the eleven-dimensional theory on $\C^5 \times \R$. 
-By corollary \ref{cor:sugraops} there is a decomposition of $\Z/2$-graded cochain complexes 
-\begin{align*}
-\Obs_{sugra} (0) & = \clie^\bu \left( \Hat{V}_{-1} \times \prod_{n \geq 0} V_n \right) \\
-& = \Sym(\Pi \Hat{V}^*_{-1}) \otimes \bigotimes_{n \geq 0} \Sym\left(\Pi V^*_n\right) .
-\end{align*}
-The differential $Q$, which is defined using the Lie bracket on $\Hat{E(5|10)}$ is of the form
-$Q = Q_0 + \Hat{Q}$ where $Q_0$ acts on linear generators via
-\[
-Q_0 \colon V^*_n \to \oplus_{m + \ell = n} V^*_m \otimes V^*_\ell
-\]
-and $\Hat{Q}$ acts on linear generators via
-\[
-\Hat{Q} \colon \CC \to \oplus_{m + \ell + n = -1} V^*_m \otimes V^*_\ell \otimes V^*_n .
-\]
 
 \parsec[s:locallieE510]
 
