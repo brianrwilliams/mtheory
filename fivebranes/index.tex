@@ -17,14 +17,57 @@ Let $\Obs$ be a factorization algebra on a smooth manifold $M$.
 The classical \defterm{point observables} at $p \in M$ is the limit $\Obs(p) = \lim_{U \ni p} \Obs(U)$ where the limit runs over open sets $U \subset M$ containing $p$.
 \end{dfn}
 
-\parsec
+\parsec[]
 
-Without loss of generality we will assume our holomorphic-topological local Lie algebra on $M \times X$ is of the form
-\[
+In this paper we are interested in theories obtained from twists of supersymmetric theories. 
+Generally speaking, such twists have a mixed holomorphic and topological behavior.
+%Suppose that $V$ is a translation invariant holomorphic vector bundle on $\C^n$ equipped with a $\Z \times \Z/2$ bigrading. 
+%Let $\cV$ denote its sheaf of holomorphic sections.
+%The {\em space of fields} of a holomorphic field theory on $\C^n$ is the $\Z \times \Z/2$ graded complex of vector bundles
+%\[
+%\Omega^{0,\bu}(\C^n, V) \cong \Omega^{0,\bu}(\C^n) \otimes V_0 
+%\]
+%where $V_0$ is the fiber of $V$ at $0 \in \C^n$.
+%Our grading conventions are so that $\d \zbar_i$ has bidegree $(1,0)$.
+%
+%As introduced in \cite{BWhol,LiVertex,CG2}, a {\em holomorphic field theory} is a holomorphic vector bundle $V$ as above equipped additionally with:
+%\begin{itemize}
+%\item The structure of a local (super) $L_\infty$ algebra on $V[-1]$ with structure maps given by holomorphic polydifferential operators
+%\[
+%[\cdot]_k \colon \cV[-1]^{\times k} \to \cV[1-k] .
+%\]
+%\end{itemize}
+%A {\em free} holomorphic theory has $[\cdot]_k = 0$ for $k > 1$.
+%
+%\parsec
+
+Without loss of generality we will assume our holomorphic-topological local $L_\infty$ algebra on $M \times X$ is of the form
+\beqn\label{eqn:cL}
 \cL = \Omega^\bu (M) \hotimes \Omega^{0,\bu}(X, L) 
-\]
+\eeqn
 where $L$ is a graded holomorphic vector bundle on $X$.
+The structure maps of the local $L_\infty$ algebra are required to be given by holomorphic polydifferential operators. 
+For more details we refer to the definitions in \cite{GRWthf}.
 
+In part, the data of a holomorphic-topological theory in the BV formalism is prescribed by a holomorphic-topological local $L_\infty$ algebra. 
+The factorization algebra of classical observables supported on an open set $U \subset M \times X$ is given by the Chevalley--Eilenberg cochain on the $L_\infty$ algebra $\cL(U)$. 
+We will give a concise presentation for the {\em local} operators in a topological-holomorphic theory. 
+
+Suppose that $M \times X = \R^m \times \C^n$ and suppose that the bundle $L \to \C^n$ is translation invariant with fiber $L_0$ over $0 \in \R^m \times \C^n$.
+We also assume that all structure maps of the $L_\infty$ algebra are translation invariant.
+The jet expansion at $0 \in \R^m \times \C^n$ determines a map of $L_\infty$ algebras
+\[
+\cL(\C^n \times \R^m) \to L_0 [[x_i, \d x_i,z_j, \zbar_j, \d \zbar_j]] 
+\]
+The differential, or one-ary, operation of the $L_\infty$ algebra on the right hand side is $\d_{dR} + \dbar + Q^{hol} = \d x_i \del_{x_i} + \d \zbar_j \del_{\zbar_j} + Q^{hol}$ where $Q^{hol}$ is some holomorphic differential operator in the $z_j$ variables. 
+Since all structure maps are given by holomorphic polydifferential operators, the canonical map 
+\[
+L_0 [[x_i, \d x_i,z_j, \zbar_j, \d \zbar_j]] \xto{\simeq} L_0 [[z_j]] 
+\]
+is a quasi-isomorphism. 
+The only remaining differential on the right hand side is~$Q^{hol}$. 
+In total, the jet expansion at $0 \in \R^m \times \C^n$ determines a map of $L_\infty$ algebras $\cL(\R^m \times \C^n) \to L_0[[z_j]]$. 
+ 
 \begin{lem}
 \label{lem:localops}
 Suppose that $\cL$ is a holomorphic-topological local Lie algebra on $\R^m \times \C^n$ and consider the factorization algebra $\Obs = \clie^\bu (\cL)$. 
@@ -36,33 +79,32 @@ induces a quasi-isomorphism of commutative dg algebras
 \[
 \Obs(0) \simeq \clie^\bu \left( L_0[[z_1,\ldots,z_n]] \right) .
 \]
+Notice that when $\cL$ is abelian with differential $\d_{dR} + \dbar + Q^{hol}$, then there is a quasi-isomorphism
+\[
+\Obs(0) \simeq \cO \left( L_0[[z_1,\ldots,z_n]][1] \right) 
+\]
+where the right hand side is equipped with the differential $Q^{hol}$. 
 \end{lem}
 
+We recall the reader of the standard dictionary between the space of fields of a BV theory and the local $L_\infty$ algebra---
+if the local Lie algebra is $\cL$, then the space of fields is $\cL[1]$. 
+The Chevalley--Eilenberg complex of $\cL$ is then functions on the fields $\cO(\cL[1])$ equipped with the non-linear BRST operator.
 
-\parsec[]
+\parsec[s:pexp]
 
-Suppose that $V$ is a translation invariant holomorphic vector bundle on $\C^n$ equipped with a $\Z \times \Z/2$ bigrading. 
-Let $\cV$ denote its sheaf of holomorphic sections.
-The {\em space of fields} of a holomorphic field theory on $\C^n$ is the $\Z \times \Z/2$ graded complex of vector bundles
-\[
-\Omega^{0,\bu}(\C^n, V) \cong \Omega^{0,\bu}(\C^n) \otimes V_0 
-\]
-where $V_0$ is the fiber of $V$ at $0 \in \C^n$.
-Our grading conventions are so that $\d \zbar_i$ has bidegree $(1,0)$.
-
-As introduced in \cite{BWhol,LiVertex,CG2}, a {\em holomorphic field theory} is a holomorphic vector bundle $V$ as above equipped additionally with:
-\begin{itemize}
-\item The structure of a local (super) $L_\infty$ algebra on $V[-1]$ with structure maps given by holomorphic polydifferential operators
-\[
-[\cdot]_k \colon \cV[-1]^{\times k} \to \cV[1-k] .
-\]
-\end{itemize}
-A {\em free} holomorphic theory has $[\cdot]_k = 0$ for $k > 1$.
+\brian{characters, plethystic, etc.}
 
 \parsec[s:localops]
 
+We present some simple examples. 
+
 \begin{eg}
-Suppose that $V$ is the trivial bundle on $\C^n$. 
+Suppose that $L$ is the trivial bundle on $\C^n$ and consider the abelian holomorphic-topological local Lie algebra 
+\[
+\Omega^\bu(\R^m) \otimes \Omega^{0,\bu}(X) [-1]
+\]
+where the differential is just $\d_{dR} + \dbar$. 
+Notice that with the shift functions on $\R^m \times \C^n$ are in cohomological degree $+1$.
 Then, the space of local operators is the symmetric algebra on the topological vector space which is linear dual to 
 \[
 \cO^{hol}(\Hat{D}^n) = \C[[z_1,\ldots,z_n]] .
@@ -73,7 +115,7 @@ Via the $n$-dimensional residue one can identify the algebra of local operators 
 \]
 
 Consider the standard torus action $\C^\times \times \cdots \C^\times$ on $\C^n$. 
-The equivariant character of local operators with respect to this symmetry is given by the plethystic exponential of the following `single particle index'
+The equivariant character of local operators with respect to this symmetry is given by the plethystic exponential of the following single particle index
 \[
 \frac{1}{(1-q_1)\cdots (1-q_n)} .
 \]
@@ -113,53 +155,41 @@ The equivariant character of local operators with respect to this symmetry is gi
 %\]
 %\end{cor}
 
-\subsection{Operators on a single fivebrane}
-
-We recalled the description of the holomorphic twist of the theory on a single fivebrane in \ref{s:single}. 
-This theory exists on any complex three-fold $X$. 
-To describe the algebra of local operators we specialize to $X = \C^3$ and consider the local operators supported at $0 \in \C^3$. 
-
-The theory on a single fivebrane is free and the underlying cochain complex of fields on $\C^3$ is given by 
-\beqn
-\begin{tikzcd}
-\ul{-1} & \ul{0} \\
-\Omega^{2,\bu}(\C^3) \ar[r,"\del"] & \Omega^{3,\bu}(\C^3) \\
-\Pi \Omega^{0,\bu}(\C^3, K_{\C^3}^{1/2} \otimes \C^2) . 
-\end{tikzcd} 
-\eeqn
-Here we recall the $\Z \times \Z/2$ bigrading where the differential has bidegree $(1,0)$. 
-
-
-\begin{lem}
-\label{lem:single}
-The $\Z/2$ algebra of local operators of the holomorphic single fivebrane theory is quasi-isomorphic to the graded symmetric algebra on the linear dual of the topological vector space
-\beqn\label{eqn:localfree}
-\Pi \Omega^{2,hol}_{cl} (\Hat{D}^3) \oplus \Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2 .
-\eeqn
-\end{lem}
-
-\parsec
+\subsection{Twisted global symmetry}
 
 \brian{i think I will recall some of this in the language of `fields' in Section 1, but it'd be good to say a few words about operators.}
 
-In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the holomorphic twist of the free tensor multiplet was constructed.
-We recall the action of its even part on local operators of the holomorphic twist of the free tensor multiplet. 
-We recount how it acts on the vector space \eqref{eqn:localfree}.
- 
-Recall that the even part of $E(3|6)$ consists of two summands:
-\[
-\Vect(\Hat{D}^3) \times \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
-\]
-Formal vector fields act naturally by Lie derivative on both summands in \eqref{eqn:localfree}. 
-An $\lie{sl}(2)$-valued function acts on $\Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2$ where we view $\C^2 = {\rm span}\{r_+,r_-\}$ as the fundamental $\lie{sl}(2)$ representation. 
+%In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the holomorphic twist of the free tensor multiplet was constructed.
+%We recall the action of its even part on local operators of the holomorphic twist of the free tensor multiplet. 
+%We recount how it acts on the vector space \eqref{eqn:localfree}.
+% 
+%Recall that the even part of $E(3|6)$ consists of two summands:
+%\[
+%\Vect(\Hat{D}^3) \times \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
+%\]
+%Formal vector fields act naturally by Lie derivative on both summands in \eqref{eqn:localfree}. 
+%An $\lie{sl}(2)$-valued function acts on $\Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2$ where we view $\C^2 = {\rm span}\{r_+,r_-\}$ as the fundamental $\lie{sl}(2)$ representation. 
 
-\parsec
-
-We consider the equivariant character of local operators on the holomorphic twist of a single fivebrane with respect to the following finite dimensional subalgebra of $E(3|6)$ 
+After complexification, the six-dimensional superconformal algebra is $\lie{osp}(8|4)$. 
+The holomorphic supercharge is a supertranslation 
 \[
-\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1) \subset E(3|6) 
+Q \in \Pi S_+ \otimes \C^4 \subset \lie{osp}(8|4)
 \]
-which embeds in the following way: 
+which has the properties that $Q^2 = 0$ and that its image
+\[
+{\rm Im}\left(Q|_{\Pi S_+ \otimes \C^4} \right) \subset \R^6 \otimes_\R \C \cong \C^6
+\]
+is three-dimensional (spanned by the anti-holomorphic translations). 
+The supercharge $Q$ acts on $\lie{osp}(8|4)$ by commutator, and its cohomology will automatically act on the holomorphic twist of any six-dimensional superconformal field theory. 
+This cohomology can be identified with the subalgebra $\lie{osp}(6|2)$, see \cite{SWe36}. 
+
+We consider the symmetry of the holomorphic twist of a six-dimensional superconormal theory with respect to the even subalgebra 
+\[
+\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1) \subset \lie{osp}(6|2) .
+\]
+
+
+which acts in the following way: 
 \begin{itemize}
 \item The Lie algebra $\lie{sl}(3)$ is a subalgebra of $\Vect(\Hat{D}^3)$ consisting of linear coefficient vector fields $\sum_{i,j} a_{ij} z_i \frac{\del}{\del z_j}.$
 where $(a_{ij}) \in \lie{sl}(3)$. 
@@ -200,6 +230,45 @@ Recall that the coordinates $(r_1,r_2)$ are used to label the basis of $\C^2$ in
 \end{center}
 \label{tbl:weights1}
 \end{table}
+
+
+
+\subsection{Operators on a single fivebrane}
+
+We recalled the description of the holomorphic twist of the theory on a single fivebrane in \ref{s:single}. 
+This theory exists on any complex three-fold $X$. 
+To describe the algebra of local operators we specialize to $X = \C^3$ and consider the local operators supported at $0 \in \C^3$. 
+
+The theory on a single fivebrane is free and the underlying cochain complex of the abelian holomorphic local Lie algebra on $\C^3$ is given by 
+\beqn
+\begin{tikzcd}
+\ul{-1} & \ul{0} \\
+\Omega^{2,\bu}(\C^3) \ar[r,"\del"] & \Omega^{3,\bu}(\C^3) \\
+\Pi \Omega^{0,\bu}(\C^3, K_{\C^3}^{1/2} \otimes \C^2) . 
+\end{tikzcd} 
+\eeqn
+Here we recall the $\Z \times \Z/2$ bigrading where the differential has bidegree $(1,0)$. 
+
+
+\begin{lem}
+\label{lem:single}
+The $\Z \times \Z/2$ algebra of local operators of the holomorphic single fivebrane theory is quasi-isomorphic to the graded symmetric algebra on the linear dual of the topological vector space
+\beqn\label{eqn:localfree}
+\Omega^{2}_{cl} (\Hat{D}^3)[1] \oplus \Pi \Omega^0(\Hat{D}^3, K^{1/2}) \otimes \C^2 [1].
+\eeqn
+\end{lem}
+
+\begin{proof}
+The jet expansion at $0 \in \C^3$ determines a map from the section of the abelian holomorphic-topological local Lie algebra on $\C^3$ to the cochain complex
+\beqn
+\begin{tikzcd}
+\ul{-1} & \ul{0} \\
+\Omega^{2}(\Hat{D}^3) \ar[r,"\del"] & \Omega^{3}(\Hat{D}^3) \\
+\Pi \Omega^0(\Hat{D}^3, K^{1/2} \otimes \C^2) . 
+\end{tikzcd} 
+\eeqn
+On the formal disk all closed two-forms are automatically exact, which implies the lemma.
+\end{proof}
 
 \parsec
 
