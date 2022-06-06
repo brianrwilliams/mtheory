@@ -7,16 +7,15 @@
 
 \section{Twisted eleven-dimensional supergravity}
 
-\subsection{A model for twisted supergravity}
+\subsection{A model for holomorphically twisted supergravity}
 
 In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded.
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory.
 We recall this description here.
 
-The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold. 
-We opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
-The additional data of a theory in the BV formalism is a graded skew-symmetric pairing on this sheaf.
+The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold.
+In the first few sections we describe the fields and equations of motion of the eleven-dimensional theory. 
 
 %\parsec[s:e510]
 %
@@ -25,7 +24,16 @@ The additional data of a theory in the BV formalism is a graded skew-symmetric p
 %\cO(\Hat{D}^5) = \C[[z_1,\ldots,z_5]] .
 %\]
 
+\parsec[s:sugrafields]
+
+
+
 \parsec[s:Lsugra]
+
+We move on to give a complete description of our eleven-dimensional model.
+In the BV formalism one introduces antifields and antighosts to the fields and ghosts that we have just described.
+It is then fundamental to consider a graded skew-symmetric pairing between fields and antifields (ghosts and antighosts). 
+Once such a pairing is introduced, one can opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
 
 In this paper $\Z/2$ graded $L_\infty$ algebra means a $\Z/2$ graded vector space~$L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
 \[
@@ -79,16 +87,6 @@ We denote by $\cL_{sugra}$ the following local $\Z/2$ graded $L_\infty$ algebra 
 It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate odd pairing which is compatible with the $L_\infty$ structure above. 
 All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism. 
 On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that this BV theory is equivalent to the holomorphic (or minimal) twist of perturbative eleven-dimensional supergravity. 
-
-\parsec[s:sugraobs]
-
-In the BV formalism, the sheaf of fields of the eleven-dimensional theory is $\Pi \cL_{sugra}$. 
-As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
-The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
-In other words, as a $\Z/2$ graded commutative dg algebra, the classical observables of the eleven-dimensional theory supported on an open set $U \subset X \times S$ is 
-\[
-\clie^\bu\left(\cL_{sugra}(U)\right) .
-\]
 
 
 \subsection{Twisted fivebranes} 
@@ -154,14 +152,6 @@ In the (degenerate) BV formalism, this free theory can be packaged into the data
 \cL_{single} = \Omega^{\leq 1, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
 The full space of BV fields is simply $\Pi \cL_{single}$. 
-
-\parsec[s:singleobs]
-
-The factorization algebra of classical observables of the holomorphic twist of the single fivebrane theory assigns to an open set $U \subset Z$
-the cochain complex
-\[
-\clie^\bu\left(\cL_{single}(U)\right) .
-\]
 
 \parsec[s:coupling]
 

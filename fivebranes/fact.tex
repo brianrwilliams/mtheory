@@ -1,0 +1,55 @@
+\documentclass[11pt]{amsart}
+
+%\usepackage{../macros-master}
+\usepackage{macros-fivebrane}
+
+\begin{document}
+
+\section{Factorization algebras in twisted $M$ theory}
+
+The observables of any theory in the BV formalism enhance to the structure of a factorization algebra on spacetime \cite{CG2}. 
+Classically, if a theory in the BV formalism is described by a local $L_\infty$ algebra $\cL$ on spacetime $M$ then to an open set $U \subset M$ the factorization algebra of classical observables assigns the cochain complex
+\[
+\clie^\bu(\cL(U))
+\]
+which computes the Lie algebra cohomology of $\cL(U)$. 
+The differential on this cochain complex is precisely the Chevellay--Eilenberg differential associated to the $L_\infty$ structure maps. 
+
+The notion of a factorization algebra captures both the local and non-local operators in a quantum field theory. 
+From the data of a factorization algebra, one can recover local operators by the following formal construction. 
+
+\begin{dfn} 
+Let $\Obs$ be a factorization algebra on a smooth manifold $M$.
+The classical \defterm{point observables} at $p \in M$ is the limit $\Obs(p) = \lim_{U \ni p} \Obs(U)$ where the limit runs over open sets $U \subset M$ containing $p$.
+\end{dfn}
+
+Generally this limit is difficult to compute, but for certain theories it is possible to give a concise expression which captures \brian{difference between limit and homotopy limit}
+
+\subsection{The factorization algebra associated to twisted supergravity}
+
+\parsec[s:sugraobs]
+
+As above, let $X$ be a Calabi--Yau fivefold and $S$ a real oriented one-manifold. 
+In the first section we recalled a proposal for the description of the minimal twist of eleven-dimensional supergravity on $X \times S$. 
+The primary object we used to describe the solutions of the equations of motion was the $\Z/2$ graded local $L_\infty$ algebra $\cL_{sugra}$, see \S \ref{s:Lsugra}. 
+%As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
+%The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
+The $\Z/2$ graded commutative dg algebra of classical observables supported on an open set $U \subset X \times S$ is 
+\[
+\clie^\bu\left(\cL_{sugra}(U)\right) .
+\]
+We will denote the entire factorization algebra on $X \times S$ of classical observables by~$\clie^\bu(\cL_{sugra})$. 
+
+\parsec[s:singleobs]
+
+Let $Z$ be a complex threefold. 
+In \ref{s:single} we have described the holomorphic twist of a theory on a single fivebrane within the (degenerate) BV formalism in terms of the (abelian) local $L_\infty$ algebra $\cL_{single}$ on $Z$. 
+The factorization algebra of classical observables of the holomorphic twist of the single fivebrane theory assigns to an open set $U \subset Z$
+the cochain complex
+\[
+\clie^\bu\left(\cL_{single}(U)\right) .
+\]
+We will denote the entire factorization algebra on $Z$ of classical observables by~$\clie^\bu(\cL_{single})$.
+
+
+\end{document}
