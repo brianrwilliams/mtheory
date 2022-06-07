@@ -138,14 +138,38 @@ To an open set $U \subset \R$ this produces the Chevellay--Eilenberg complex com
 
 \parsec[s:generalkoszul]
 
+In analogy with the case of $\EE_1$, or locally constant factorization, algebras above we make the following definition. 
+
 \begin{dfn}
 Let $\cL$ be a local $L_\infty$ algebra on a manifold $M$ and consider the factorization algebra $\clie^\bu(\cL)$ which assigns to an open set $U \subset M$ the cochain complex $\clie^\bu(\cL(U))$. 
-The \defterm{Koszul dual factorization algebra} is 
+The \defterm{$!$-dual factorization algebra} is 
 \[
-\clie^\bu(\cL(U))^! \define \clie_\bu (\cL_{c}(U)) .
+\clie^\bu(\cL)^! \define \clie_\bu (\cL_{c}) 
 \]
-In other words, the Koszul dual factorization algebra of $\clie^\bu(\cL)$ is the (untwisted) factorization enveloping algebra of the local Lie algebra $\cL$. 
+where $\clie_\bu(\cL_c)$ assigns to an open set $U \subset M$ the cochain complex $\clie_\bu(\cL_c(U))$.
+In other words, the $!$-dual factorization algebra of $\clie^\bu(\cL)$ is the (untwisted) factorization enveloping algebra of the local Lie algebra $\cL$. 
 \end{dfn} 
+
+There are many things lacking in this definition. 
+First off we do not define the $!$-dual for an arbitrary factorization algebra, only for ones of the form $\clie^\bu(\cL)$ where $\cL$ is a local Lie algebra. 
+Also, we will not prove that $!$-dual satisfies any Koszul duality axioms. 
+From the discussion above we see that $!$-dual does agree with Koszul duality in the case of associative algebras.\footnote{It is not difficult to see that $!$-duality for locally constant factorization algebras on $\R^n$ agrees with $\EE_n$ Koszul duality between $\clie^\bu(\fg)$, viewed as an $\EE_n$ algebra, and the $\EE_n$ enveloping algebra $U_{\EE_n} \fg$ \cite{Knudsen, Lurie,...}}
+
+With an eye towards couplings, we do point out a universality that is satisfied by $!$-duality. 
+In \cite[Chapter ??]{CG2} a factorization algebra enhancement of Noether's theorem is formulated. 
+The general context is the following: 
+\begin{itemize}
+\item $\Obs$ is the factorization algebra of classical observables of a theory in the BV formalism on a manifold $M$.
+\item $\cG$ is a local Lie algebra on $M$ which acs on the theory by local symmetries. 
+\end{itemize}
+Then, the classical version of Noether's theorem for factorization algebras produces a map of factorization algebras 
+\[
+\clie_\bu(\cG_c) \to \Obs .
+\]
+
+We arrive at $!$-duality in our situation above in the case that $\Obs$ is a factorization algebra of the form $\clie^\bu(\cL)$ where $\cL$ is another local $L_\infty$ algebra on $M$. 
+This is always possible in the BV formalism: on an open set $U$ the space of Maurer--Cartan elements in the $L_\infty$ algebra $\cL(U)$ is the space of solutions to the equations of motion on $U$.
+Thus, tautologically, the local Lie algebra $\cL$ is a symmetry of the classical theory. 
 
 \subsection{The restricted factorization algebra}
 
@@ -190,7 +214,7 @@ For any open set $U \subset \C^3$ we can consider the following $\C^\times$ acti
 \[
 \lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(\lambda t;\lambda w , z).
 \]
-\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
+\item On the fields $\gamma(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
 \[
 \lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(\lambda t;\lambda w , z).
 \]
@@ -214,13 +238,63 @@ In this way, the assignment
 defines a sheaf of $\Z/2$ graded $L_\infty$ algebras on $\C^3$. 
 
 \begin{prop}
-For each $n$, the sheaf of cochain complexes $U \mapsto \pi_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
+For each $n$, the sheaf of cochain complexes $U \mapsto \Bar{\pi}_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
 \[
 \Omega^{0,\bu}(U, \cV^{(n)})
 \]
-for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$. 
+for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$.
+For each $n$, the differential is of the form $\dbar + Q^{hol}$.
 In particular, this endows $\Bar{\pi}_* \cL_{sugra}$ with the structure of a pro-vector bundle on $\C^3$. 
 \end{prop}
+
+\parsec[s:weight-1]
+
+As an example, let us consider the weight $(-1)$ piece of the decomposition $\Omega^{0,\bu}(Z, \cV^{(-1)})$. 
+We will show that 
+\[
+\cV^{(-1)} = K^{-1/2}_Z \otimes \C^2 \oplus \cO_Z \oplus \Pi \T^*_Z 
+\]
+whose Dolbeault forms are equipped with the $\dbar$ operator and the $\del$ operator which takes functions to one-forms. 
+
+Explicitly weight zero summand $\cV^{(0)}$ consists of:
+\begin{itemize}
+\item 
+Vector fields which are locally of the form $f^a(z) \del_{w_a}$ where $f^{a}(z)$ is a holomorphic function on $\C^3$.
+Notice that these vector fields are automatically divergence-free.
+Since $\del_{w_a}$ is treated as a section of $K^{-1/2}_Z$ we see that these are local sections of $K^{-1/2}_Z \otimes \C^2$. 
+\item 
+Next there are holomorphic functions (type $\beta$) and holomorphic $one$-forms (type $\gamma$) which do not depend on $w_a$. 
+Since $\del$ is weight zero for the decomposition these forms combine to form the $\Z/2$ graded complex of sheaves
+\[
+\cO_Z \xto{\del} \Pi \Omega^{1,hol}_Z .
+\]
+\end{itemize}
+
+\parsec[s:weight0]
+
+Particularly important for us will be the weight zero part $\Omega^{0,\bu}(Z, \cV^{(0)})$ of the $\Z/2$ graded $L_\infty$ algebra $\Bar{\pi}_* \cL_{sugra}$ which inherits the structure of a $\Z/2$ graded $L_\infty$ algebra.
+When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is quasi-isomorphic to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
+In other words, the weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
+
+As a holomorphic vector bundle, we will see that
+\[
+\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
+\]
+The $L_\infty$ structure of $\cL_{sugra}$ endows the sheaf of sections of this holomorphic vector bundle with a Lie bracket which we will describe.
+
+Explicitly, we enumerate all weight zero holomorphic sections:
+\begin{itemize}
+\item Vector fields which are locally of the form $\mu = f^i(z) \del_{z_i}$ or $\mu = g(z) A^{ab} w_a \del_{w_b}$ where $(A^{ab}) \in \lie{sl}(2)$.
+\item Holomorphic functions of the form $\beta = w_a f(z)$ and holomorphic one-forms of the form $\gamma = g^{a}(z) \d w_a + h^{a} (z) w_a \d z$. 
+Since $\del$ is weight zero, such sections are equipped with a differential 
+\[
+\Gamma^{hol}(Z, K^{1/2}) \xto{D} \Pi \Gamma^{hol}(Z, K^{1/2}) \oplus \Pi\Omega^{1,hol}(Z, K^{1/2}) 
+\]
+which sends $w_a f(z) \mapsto (f(z) , w_a \del f (z))$. 
+The $\Z/2$ graded complex of sheaves is clearly equivalent to $\Pi\Omega^{1,hol}(Z, K^{1/2})$. 
+\end{itemize}
+
+\parsec[s:??]
 
 Now, since $\Bar{\pi}_* \cL_{sugra}$ is a pro-vector bundle with a compatible $L_\infty$ structure, the assignment 
 \[
@@ -231,7 +305,7 @@ has the structure of a factorization algebra on $\C^3$ which we denote by $\Bar{
 
 \begin{prop}
 Let $Z$ be a Calabi--Yau three-fold and $\pi \colon Z \times \C^2 \times \R \to Z$ be the projection. 
-There is a pro local Lie algebra $\cL_{\pi, sugra}$ on $Z$ such that:
+There is a pro local Lie algebra $\Bar{\pi}_*\cL_{sugra}$ and a factorization algebra $\Bar{\pi}_* \Obs_{sugra} = \clie^\bu(\Bar{\pi}_* \cL_{sugra})$ on $Z$ such that:
 \begin{itemize}
 \item[(1)] there is a natural inclusion of of factorization algebras on $Z$
 \[
@@ -245,17 +319,48 @@ which is dense at the level of cohomology.
 \item[(3)]
 In weight zero, there is an equivalence of local Lie algebras on $Z$ 
 \[
-\cV_0 \simeq \cE(3|6)|Z .
+\cV_0 \simeq \cE(3|6)|Z 
 \]
+where $\cE(3|6)|Z$ is a local Lie algebra enhancement of the exceptional simple super Lie algebra $E(3|6)$. 
 \end{itemize}
 \end{prop}
 
 %We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
 
+\parsec[s:e36]
+The exceptional super Lie algebra $E(3|6)$ 
+
+Let $Z$ be a complex manifold of complex dimension three equipped with a square-root of the canonical bundle.
+To freely resolve the space of holomorphic sections
+we employ the Dolbeault complex of the appropriate holomorphic vector bundle. 
+For holomorphic vector fields we introduce the dg Lie algebra
+\[
+\Omega^{0,\bu}(X , \T_X)
+\]
+of $(0,\bu)$ Dolbeault forms with values in the holomorphic tangent bundle. 
+Also, for any holomorphic vector bundle $V$ let
+\[
+\Omega^{-1/2 , \bu}(X, V) = \Omega^{0,\bu}(X , V \otimes \T_X^* \otimes \sigma^{-1}) .
+\]
+
 \parsec
 
-\begin{prop}
-On flat space 
-\end{prop}
+We define a super dg Lie algebra to be a $\Z \times \Z/2$ graded Lie algebra $\fg = \fg_+^\bu \oplus \Pi \fg_-^\bu$ which satisfies totalized graded skew symmetry and is equipped with a differential $\d$ of bidegree $(1,+)$ that is square zero and a derivation for the bracket. 
+For more details see \cite[Section 2]{EHSW}. 
+
+\begin{dfn}
+Let $\sigma$ and $P$ be as above. 
+Define the following local super Lie algebra $\cE_{P,\sigma}$ on $X$ whose even and odd parts are
+\begin{align*}
+\cE_{P,\sigma,+} & = \Omega^{0,\bu}(X , \T_X) \oplus \Omega^{0,\bu}(X , \ad P)\\
+\cE_{P,\sigma,-} & = \Omega^{1 , \bu}(X, R_X \otimes \sigma^{-1}) .
+\end{align*}
+The differential is given by the natural $\dbar$-operator whenever it makes sense.
+The bracket is defined analogously as in formulas \brian{ref}. 
+\end{dfn} 
+
+On $X = \C^3$ there is a natural choice for $\sigma = K^{1/2}_{\CC^3}$, and we can take $P$ to be the trivial $SL(2)$ bundle. 
+With these choices we have the following easy lemma. 
+
 
 %\end{document}
