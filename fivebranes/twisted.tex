@@ -9,7 +9,7 @@
 %
 \subsection{A model for holomorphically twisted supergravity}
 
-In \cite{SWspinor} a complete desc%%ription of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
+In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded.
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory.
 We recall this description here.
@@ -115,14 +115,14 @@ We briefly recall this description.
 The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
 In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$. 
 
-The theory is $\Z \times \Z/2$ graded but at first pass we recall its totalization as a $\Z/2$ graded theory. 
-There are four fundamental fields $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
+The theory is $\Z \times \Z/2$ graded where $\Z$ is the ghost number (or cohomological degree) and $\Z/2$ is parity. 
+There are four fundamental fields of ghost number zero $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
 \[
 \alpha \in \Omega^{2,1}(Z), \quad \omega \in \Omega^{3,0}(Z),
 \]
-and a pair of even sections:
+and a pair of odd $(0,1)$ forms twisted by the line bundle $K^{1/2}_Z$:
 \[
-(\phi_1,\phi_2) \in \Omega^0(Z , K^{1/2}_Z) \otimes \C^2 .
+(\phi_1,\phi_2) \in \Pi \Omega^{0,1}(Z , K^{1/2}_Z) \otimes \C^2 .
 \]
 %where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation. 
 The equations of motion read
@@ -142,14 +142,19 @@ There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b
 \Omega & \mapsto \Omega + \del b .
 \end{split}
 \eeqn
+There are also odd gauge symmetries for the odd fields $\phi_i$ given by
+\beqn
+\phi_i \mapsto \phi_i + \dbar \chi 
+\eeqn
+where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$. 
 
 This theory notoriously does not admit a Lagrangian description. 
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
 We describe this Poisson bivector explicitly
 
-In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z/2$ graded local Lie algebra on $Z$ which is of the form 
+In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z \times \Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
-\cL_{single} = \Omega^{\leq 1, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
+\cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
 The full space of BV fields is simply $\Pi \cL_{single}$. 
 
