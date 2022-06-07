@@ -15,15 +15,20 @@ Classically, if a theory in the BV formalism is described by a local $L_\infty$ 
 which computes the Lie algebra cohomology of $\cL(U)$. 
 The differential on this cochain complex is precisely the Chevellay--Eilenberg differential associated to the $L_\infty$ structure maps. 
 
+\begin{rmk}
 The notion of a factorization algebra captures both the local and non-local operators in a quantum field theory. 
 From the data of a factorization algebra, one can recover local operators by the following formal construction. 
 
-\begin{dfn} 
 Let $\Obs$ be a factorization algebra on a smooth manifold $M$.
 The classical \defterm{point observables} at $p \in M$ is the limit $\Obs(p) = \lim_{U \ni p} \Obs(U)$ where the limit runs over open sets $U \subset M$ containing $p$.
-\end{dfn}
 
 Generally this limit is difficult to compute, but for certain theories it is possible to give a concise expression which captures \brian{difference between limit and homotopy limit}
+\end{rmk}
+
+At the quantum level this Chevellay--Eilenberg complex is deformed.
+The BV formalism ...
+Even in perturbation theory the full quantum behavior of the holomorphical-topological eleven-dimensional theory is an open question. 
+We leave the problem to characterize the quantization to future work. 
 
 \subsection{The factorization algebra associated to twisted supergravity}
 
@@ -38,9 +43,12 @@ The $\Z/2$ graded commutative dg algebra of classical observables supported on a
 \[
 \clie^\bu\left(\cL_{sugra}(U)\right) .
 \]
-We will denote the entire factorization algebra on $X \times S$ of classical observables by~$\clie^\bu(\cL_{sugra})$. 
+We will denote the entire classical factorization algebra on $X \times S$ of classical observables by~$\clie^\bu(\cL_{sugra})$.
 
-\parsec[s:singleobs]
+\parsec[s:membraneobs]
+
+
+\parsec[s:fivebraneobs]
 
 Let $Z$ be a complex threefold. 
 In \ref{s:single} we have described the holomorphic twist of a theory on a single fivebrane within the (degenerate) BV formalism in terms of the (abelian) local $L_\infty$ algebra $\cL_{single}$ on $Z$. 
@@ -51,5 +59,203 @@ the cochain complex
 \]
 We will denote the entire factorization algebra on $Z$ of classical observables by~$\clie^\bu(\cL_{single})$.
 
+\subsection{Koszul duality for factorization algebras: an ansatz} 
+
+In quantum field theory Koszul duality naturally appears in the problem of coupling topological line operators to some ambient bulk theory. 
+More generally, for higher dimensional topological defects, this problem is encoded by Koszul duality for the theory of $\EE_n$ algebras \cite{??}.
+
+More generally, we anticipate a general theory of Koszul duality for factorization algebras which should encode the problem of coupling arbitrary defects (without the condition of being topological).
+Even for factorization algebras of holomorphic-topological nature this theory has not been studied in mathematics. 
+Nevertheless, we will emphasize features that we expect this general form of Koszul duality to possess which will allow us to nail down its behavior on a rather general class of factorization algebras. 
+
+In this first part of this subsection we briefly recall how Koszul duality enters in the problem of coupling line operators. 
+We refer~\cite[\S 6]{CP1},~\cite[\S ??]{CG1}, or the review~\cite{PWkoszul} for more details. 
+Then, we give an ansatz for Koszul duality for factorization algebras of the form $\clie^\bu(\cL)$ where $\cL$ is some local Lie algebra. 
+From the point of view of the BV formalism this is not much of a condition, all such factorization algebras of classical observables can be cast in this form. 
+
+\parsec[s:lines]
+Suppose that we have a bulk theory living on a spacetime of the form 
+\[
+\R \times M 
+\]
+where $M$ is some smooth manifold. 
+Denote by $\cA$ the corresponding factorization algebra on $\R \times M$. 
+The theory could have arbitrary behavior along $M$, but we assume that the theory is topological along $\R$. 
+This means that when viewed as a factorization algebra on $\R$ that $\cA$ is locally constant and is hence equivalent to the data of an $\EE_1$ or $A_\infty$ algebra.
+
+Next, assume that $\cB$ is another $\EE_1$ algebra, which we think of as being associated to some quantum mechanical system along the real line.
+This is a local model for the desired line operator that we are attempting to couple to the bulk theory.
+Koszul duality enters in the problem of coupling the two quantum mechanical systems $\cA$ and $\cB$---where we view $\cA$ simply as an $\EE_1$ algebra. 
+
+A coupling of the two systems is Maurer--Cartan element in the algebra
+\[
+\alpha \in \cA \otimes \cB .
+\]
+That is, $\alpha$ is an element of ghost degree one which satisfies the Maurer--Cartan equation
+\[
+\delta \alpha + \alpha \star \alpha = 0 .
+\]
+Given such an $\alpha$ we can deform the algebra $\cA \otimes \cB$ by adding the term $[\alpha,-]$ to the differential. 
+In other words, at the cochain level only the differential, not the product structure, is modified. 
+
+In principle, there are more general ways to `couple' two $\EE_1$ algebras; generally this is controlled by the Hochschild cohomology which governs algebra deformations of $\cA \otimes \cB$. 
+we will elaborate further on this definition. 
+In \cite{CG1} (see also \cite{PWkoszul}) it is shown how this notion relates to the physicists description of coupling in terms of local Lagrangians.
+
+To see Koszul duality, the key observation is that the data of the Maurer--Cartan element $\alpha$ is equivalent to the data of a map of $\EE_1$ algebras
+\[
+\alpha \colon \cA^! \to \cB 
+\]
+where $\cA^!$ is Koszul dual to the algebra $\cA$. 
+We then have the following slogan: the Koszul dual of the algebra of observables of the bulk theory $\cA^!$ is the algebra of operators on the {\em universal} line defect supported on $\RR \times \{x\}$, where $x \in M$.  
+
+\parsec[s:celine]
+
+Before moving towards our definition of Koszul duality for a general class of factorization algebras, we briefly recast the case of duality for $\EE_1$ algebras in terms of factorization algebras. 
+
+We will focus on a slight generalization of the standard Koszul duality between the exterior and symmetric algebras.
+
+\begin{prop}
+Let $\lie{g}$ be a Lie algebra and equip the associative dg algebra $\clie^\bu(\fg)$ with the augmentation induced by the tautological Lie map $0 \to \lie{g}$.
+The Koszul dual of $\clie^\bu(\lie{g})$ with respect to this augmentation is equivalent to the universal enveloping algebra $U \fg$. 
+\end{prop}
+
+There are explicit models for the associative dg algebras $\clie^\bu(\lie{g})$ and $U \lie{g}$ as locally constant factorization algebras on $\R$.
+First, observe that we can tensor $\fg$ with the commutative dg algebra of de Rham forms to obtain a dg Lie algebra $\fg \otimes \Omega^\bu(\R)$. 
+This has a natural enhancement to a local dg Lie algebra as this is simply the smooth sections of the bundle of Lie algebras $\fg \otimes \wedge^\bu \T^*_\RR$ equipped with the de Rham operator.
+
+Using this local Lie algebra, we obtain a model for the associative (and commutative) dg algebra $\clie^\bu(\fg)$ as the factorization algebra
+\[
+\clie^\bu(\fg \otimes \Omega^\bu_\R).
+\]
+To an open set $U \subset \R$ this produces the Chevellay--Eilenberg complex computing the Lie algebra {\em cohomology} of the dg Lie algebra $\fg \otimes \Omega^\bu(U)$---the $\fg$-valued de Rham forms on $U$.
+ 
+Similarly, a model for $U \fg$ is the locally constant factorization algebra
+\[
+\clie_\bu(\fg \otimes \Omega^\bu_{\R,c}).
+\]
+To an open set $U \subset \R$ this produces the Chevellay--Eilenberg complex computing the Lie algebra {\em homology} of the dg Lie algebra $\fg \otimes \Omega^\bu_c(U)$---the $\fg$-valued compactly supported de Rham forms on $U$.
+
+\parsec[s:generalkoszul]
+
+\begin{dfn}
+Let $\cL$ be a local $L_\infty$ algebra on a manifold $M$ and consider the factorization algebra $\clie^\bu(\cL)$ which assigns to an open set $U \subset M$ the cochain complex $\clie^\bu(\cL(U))$. 
+The \defterm{Koszul dual factorization algebra} is 
+\[
+\clie^\bu(\cL(U))^! \define \clie_\bu (\cL_{c}(U)) .
+\]
+In other words, the Koszul dual factorization algebra of $\clie^\bu(\cL)$ is the (untwisted) factorization enveloping algebra of the local Lie algebra $\cL$. 
+\end{dfn} 
+
+\subsection{The restricted factorization algebra}
+
+For simplicity let us consider the eleven-dimensional theory on flat space $\R \times \C^5$ with some number of fivebranes supported on
+\[
+0 \times 0 \times \C^3 \subset \C^5 .
+\]
+The general prescription of twisted holography is that (after taking into account the backreaction) the observables on a large number of fivebranes is Koszul dual to the factorization algebra 
+
+\parsec[s:flat]
+
+%In the simple case where $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ then the manifold obtained by removing the locus of the brane is homeomorphic to
+%\[
+%\C^3 \times (\R \times \C^2 - 0) .
+%\]
+%
+%Let $\pi \colon \R \times \C^5 - (0 \times \C^3) \to \C^3 \times \R_{>0}$ be the projection map whose fibers are homeomorphic to the sphere $S^4$ which links the location of the fivebranes.
+%We restrict the factorization algebra of the eleven dimensional theory $\Obs_{sugra}$ to the open set obtained by removing the locus of the brane.
+
+In the simple case that $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ there is a more direct construction of the factorization algebra $\Obs_{sugra}|_{Z}$. 
+
+Let $\pi \colon \R \times \C^5 \to \C^3$ be the projection map.
+Then, via $\pi$ we can pushforward the factorization algebra associated to the eleven-dimensional theory to obtain a factorization algebra
+\[
+\pi_* \Obs_{sugra} 
+\]
+on $\C^3$.
+This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
+Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
+
+For any open set $U \subset \C^3$ we can consider the following $\C^\times$ action on the fields of the eleven-dimensional theory supported on $\R \times \C^2 \times U$ defined by
+\begin{itemize}
+\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \mu(t;w,z) = \mu(\lambda t;\lambda w , z).
+\]
+\item On the fields $\nu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \nu(t;w,z) = \nu(\lambda t;\lambda w , z).
+\]
+\item On the fields $\beta(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(\lambda t;\lambda w , z).
+\]
+\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(\lambda t;\lambda w , z).
+\]
+\end{itemize}
+
+For each $n \in \ZZ$ and open set $U \subset \C^3$, let 
+\[
+\pi_* \cL_{sugra}(U)^{(n)} \subset \cL_{sugra}(\R \times \C^2 \times U)
+\]
+be the weight $n$ eigenspace with respect to this $\C^\times$ action. 
+The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
+Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
+\[
+(\Bar{\pi}_* \cL_{sugra})(U) \define \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
+\]
+is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
+In this way, the assignment 
+\[
+\Bar{\pi}_* \cL_{sugra} \colon U \mapsto (\Bar{\pi}_* \cL_{sugra})(U) 
+\]
+defines a sheaf of $\Z/2$ graded $L_\infty$ algebras on $\C^3$. 
+
+\begin{prop}
+For each $n$, the sheaf of cochain complexes $U \mapsto \pi_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
+\[
+\Omega^{0,\bu}(U, \cV^{(n)})
+\]
+for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$. 
+In particular, this endows $\Bar{\pi}_* \cL_{sugra}$ with the structure of a pro-vector bundle on $\C^3$. 
+\end{prop}
+
+Now, since $\Bar{\pi}_* \cL_{sugra}$ is a pro-vector bundle with a compatible $L_\infty$ structure, the assignment 
+\[
+U\subset \C^3 \mapsto \clie^\bu\left(\Bar{\pi}_* \cL_{sugra}(U)\right) 
+\]
+has the structure of a factorization algebra on $\C^3$ which we denote by $\Bar{\pi}_* \Obs_{sugra}$. 
+
+
+\begin{prop}
+Let $Z$ be a Calabi--Yau three-fold and $\pi \colon Z \times \C^2 \times \R \to Z$ be the projection. 
+There is a pro local Lie algebra $\cL_{\pi, sugra}$ on $Z$ such that:
+\begin{itemize}
+\item[(1)] there is a natural inclusion of of factorization algebras on $Z$
+\[
+\Bar{\pi}_* \Obs_{sugra} \hookrightarrow \pi_* \Obs_{sugra}
+\]
+which is dense at the level of cohomology. 
+\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
+\beqn\label{eqn:decomp3}
+\Bar{\pi}_{*} \cL_{sugra} = \prod_{n \geq -1} \cV_{n} 
+\eeqn
+\item[(3)]
+In weight zero, there is an equivalence of local Lie algebras on $Z$ 
+\[
+\cV_0 \simeq \cE(3|6)|Z .
+\]
+\end{itemize}
+\end{prop}
+
+%We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
+
+\parsec
+
+\begin{prop}
+On flat space 
+\end{prop}
 
 \end{document}
