@@ -158,30 +158,37 @@ In the (degenerate) BV formalism, this free theory can be packaged into the data
 \]
 The full space of BV fields is simply $\Pi \cL_{single}$. 
 
-\parsec[s:coupling]
+\subsection{Twisted Backreactions}
 
-The holographic description of the ${\rm AdS}_7 \times S^4$ background in eleven-dimensional supergravity is obtained by backreacting a number of fivebranes \brian{references}. 
-In \cite{RSW} we gave a description of the twisted avatar of this background and described how it arises by backreacting a number of holomorphically twisted fivebranes. 
-We briefly recall the relevant setup here. 
+In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \brian{references}.
 
-As above, let $Z$ be a three-fold equipped with $K^{1/2}_Z$.
-Consider the rank two vector bundle $K^{1/2}_Z \otimes \C^2$ on $Z$. 
-Via the linear holomorphic symplectic form on $\C^2$, the total space of this vector bundle ${\rm Tot}(K^{1/2}_Z \otimes \C^2)$ is equipped with a Calabi--Yau structure. 
-We consider the eleven-dimensional theory on 
-\[
-\R \times {\rm Tot}(K^{1/2}_Z) 
-\]
-with a stack of fivebranes supported at $0 \in \R$ and along the zero section in the total space of the vector bundle
-\[
-0 \times Z \subset \R \times {\rm Tot}(K^{1/2}_Z \otimes \C^2)  .
-\]
-Let us denote $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
+In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We recall the results therein, adapted to our situation.
+
+\parsec
+
+As above, let $Z$ be a three-fold, $V\to Z$ a rank 2 holomorphic vector bundle such that $\wedge^{2} V \cong K_{Z}$, and let $X = {\rm Tot}V$. The condition on $V$ ensures that $X$ is a Calabi-Yau five-fold - in the main body of the paper we will restrict ourselves to $V = K_{Z}^{1/2}\otimes \C^{2}$. We will view $\R\times X = {\rm Tot}(\R\oplus V)$, and consider a stack of N fivebranes wrapping the zero section in $\R\oplus V$.
+
+The theory in the backreacted geometry will be defineed to be a deformation of the 11d theory placed on the complement of the zero section. The complement of the zero section admits additional structures inherited from the obvious THF structure on $\R \times X$. Note that $\R\oplus V$ has an obvious rank 1 subbundle together with a complex structure on the quotient. Accordingly, we may choose as fiber coordinates $t, w_{1}, w_{2}, \bar w_{1}, \bar w_{2}$ and a fiberwise partially hermitian metric $h$. Explicitly, the corresponding norm is given by
+\begin{align*}
+ \pi:  \R\times X & \to \R_{+} \\
+  (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
+\end{align*}
+Letting $p : \R\times X \to Z$, we have an $S^{4}$-bundle $(\pi, p) : \R\times X - Z \to \R_{>0}\times Z$. The fiber spheres have a canonical foliation
+
 
 It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction 
 \beqn\label{eqn:br1}
 I_{M5} = N\int_{Z} \div^{-1}\mu \vee \Omega +\cdots 
 \eeqn
-where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)$ is a component of a field in the eleven-dimensional theory which satisfies $\div \mu = 0$. 
+where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)$ is a component of a field in the eleven-dimensional theory which satisfies $\div \mu = 0$.
+
+\parsec
+Let $C$ be a curve, and let $V\to C$ be a rank 4-holomorphic vector bundle over $C$ such that $\wedge^{4} V = K_{C}$. This condition again ensures that $X = {\rm Tot} V$ is a Calabi-Yau five-fold - in the main body of the paper, we will take $V = K^{1/2}_{C}\otimes \C^{4}$. Abusively letting $V$ also denote its pullback along the canonical projection $\R\times C \to C$, we may view $\R\times X$ as the total space of $V$ on $\R\times C$. As before we will consider wrapping a stack of $N$ membranes along the zero section.
+
+Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric, and as before, we may view $\R\times X \setminus \R\times C$ as an $S^{7}$-bundle over $\R_{>0}\times \R\times C$.
+
+
+
 
 \subsection{Supergravity at the boundary of AdS}
 
