@@ -1,9 +1,9 @@
-%\documentclass[11pt]{amsart}
+\documentclass[11pt]{amsart}
 
 %\usepackage{../macros-master}
-%\usepackage{macros-fivebrane}
+\usepackage{macros-fivebrane}
 
-%\begin{document}
+\begin{document}
 
 \section{Factorization algebras in twisted $M$ theory}
 
@@ -32,32 +32,257 @@ We leave the problem to characterize the quantization to future work.
 
 \subsection{The factorization algebra associated to twisted supergravity}
 
+In this section we consider the classical factorization algebra of observables of our prototype for the holomorphic twist of eleven-dimensional supergravity.
+
 \parsec[s:sugraobs]
 
 As above, let $X$ be a Calabi--Yau fivefold and $S$ a real oriented one-manifold. 
-In the first section we recalled a proposal for the description of the minimal twist of eleven-dimensional supergravity on $X \times S$. 
+In the first section we recalled a proposal for the description of the minimal twist of eleven-dimensional supergravity on $S \times X$. 
 The primary object we used to describe the solutions of the equations of motion was the $\Z/2$ graded local $L_\infty$ algebra $\cL_{sugra}$, see \S \ref{s:Lsugra}. 
 %As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
 %The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
+
 The $\Z/2$ graded commutative dg algebra of classical observables supported on an open set $U \subset X \times S$ is 
 \[
 \clie^\bu\left(\cL_{sugra}(U)\right) .
 \]
 We will denote the entire classical factorization algebra on $X \times S$ of classical observables by~$\clie^\bu(\cL_{sugra})$.
 
-\parsec[s:membraneobs]
 
 
-\parsec[s:fivebraneobs]
+%\parsec[s:membraneobs]
+%
+%
+%\parsec[s:fivebraneobs]
+%
+%Let $Z$ be a complex threefold. 
+%In \ref{s:single} we have described the holomorphic twist of a theory on a single fivebrane within the (degenerate) BV formalism in terms of the (abelian) local $L_\infty$ algebra $\cL_{single}$ on $Z$. 
+%The factorization algebra of classical observables of the holomorphic twist of the single fivebrane theory assigns to an open set $U \subset Z$
+%the cochain complex
+%\[
+%\clie^\bu\left(\cL_{single}(U)\right) .
+%\]
+%We will denote the entire factorization algebra on $Z$ of classical observables by~$\clie^\bu(\cL_{single})$.
 
-Let $Z$ be a complex threefold. 
-In \ref{s:single} we have described the holomorphic twist of a theory on a single fivebrane within the (degenerate) BV formalism in terms of the (abelian) local $L_\infty$ algebra $\cL_{single}$ on $Z$. 
-The factorization algebra of classical observables of the holomorphic twist of the single fivebrane theory assigns to an open set $U \subset Z$
-the cochain complex
+\parsec[s:restricted]
+
+With an eye towards holography for fivebranes we fix a complex three-fold $Z$ where the fivebranes will be supported and consider the eleven-dimensional theory on $\R \times X_Z$ where $X_Z$ is the Calabi--Yau fivefold
 \[
-\clie^\bu\left(\cL_{single}(U)\right) .
+X_Z = \text{Tot}(K_Z^{1/2} \otimes \C^2),
 \]
-We will denote the entire factorization algebra on $Z$ of classical observables by~$\clie^\bu(\cL_{single})$.
+the total space of the rank two bundle $K_Z^{1/2} \otimes \C^2$ over $Z$. 
+Here the holomorphic volume form
+One can also think about $\R \times X_Z$ as the total space of the {\em real} rank five bundle over $Z$; although this description obfuscates the geometric structure used to define the eleven-dimensional theory.
+Let 
+\[
+\pi \colon \R \times X_Z \to Z 
+\]
+be the map which projects out the real factor followed by the projection to the base of the total space of the complex rank two bundle $p \colon X_Z \to Z$.
+
+Like sheaves, factorization algebras can be pushed forward; thus from the factorization algebra $\Obs_{sugra}$ on $\R \times X_Z$ we obtain a factorization algebra $\pi_* \Obs_{sugra}$ on $Z$. 
+To an open set $U \subset Z$ the value of this factorization algebra is
+\begin{align*}
+(\pi_* \Obs_{sugra}) (U) & = \Obs_{sugra} \left(\pi^{-1} U\right) \\
+& = \Obs_{sugra}(\R \times p^{-1}U) .
+\end{align*}
+
+This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $Z$.
+Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
+This grading is determined by a $\C^\times$ action on the fields of the eleven-dimensional theory on $\R \times X_Z$ which we now describe. 
+
+\parsec[s:gradingfivebrane]
+
+In a local chart $U \subset Z$ we can write a generic field of the eleven-dimensional theory on $\pi^{-1} U$ in coordinates as $f(t;w,z)$ where $t \in \R$ is the real coordinate, $w=(w_1,w_2)$ is the holomorphic fiber coordinate of the rank two bundle $X_Z$ over $Z$, and $z = (z_1,z_2,z_3)$ is a local holomorphic coordinate for $U \subset Z$. 
+
+%For simplicity let us consider the eleven-dimensional theory on flat space $\R \times \C^5$ with some number of fivebranes supported on
+%\[
+%0 \times 0 \times \C^3 \subset \C^5 .
+%\]
+%is that (after taking into account the backreaction) the observables on a large number of fivebranes is Koszul dual to the factorization algebra 
+%
+%\parsec[s:flatdecomp]
+%
+%%In the simple case where $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ then the manifold obtained by removing the locus of the brane is homeomorphic to
+%%\[
+%%\C^3 \times (\R \times \C^2 - 0) .
+%%\]
+%%
+%%Let $\pi \colon \R \times \C^5 - (0 \times \C^3) \to \C^3 \times \R_{>0}$ be the projection map whose fibers are homeomorphic to the sphere $S^4$ which links the location of the fivebranes.
+%%We restrict the factorization algebra of the eleven dimensional theory $\Obs_{sugra}$ to the open set obtained by removing the locus of the brane.
+%
+%In the simple case that $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ there is a more direct construction of the factorization algebra $\Obs_{sugra}|_{Z}$. 
+%
+%Let $\pi \colon \R \times \C^5 \to \C^3$ be the projection map.
+%Then, via $\pi$ we can pushforward the factorization algebra associated to the eleven-dimensional theory to obtain a factorization algebra
+%\[
+%\pi_* \Obs_{sugra} 
+%\]
+%on $\C^3$.
+%This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
+%Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
+
+With this notation in place, we introduce the following $\C^\times$ action on the fields of the eleven-dimensional theory:
+\begin{itemize}
+\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \mu(t;w,z) = \mu(\lambda t;\lambda w , z).
+\]
+\item On the fields $\nu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \nu(t;w,z) = \nu(\lambda t;\lambda w , z).
+\]
+\item On the fields $\beta(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(\lambda t;\lambda w , z).
+\]
+\item On the fields $\gamma(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
+\[
+\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(\lambda t;\lambda w , z).
+\]
+\end{itemize}
+
+The main result of this section is the following. 
+
+\begin{prop}
+\end{prop}
+
+
+For each $n \in \ZZ$ and open set $U \subset \C^3$, let 
+\[
+\pi_* \cL_{sugra}(U)^{(n)} \subset \cL_{sugra}(\pi^{-1} U)
+\]
+be the weight $n$ eigenspace with respect to this $\C^\times$ action. 
+The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
+Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
+\[
+(\Bar{\pi}_* \cL_{sugra})(U) \define \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
+\]
+is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
+In this way, the assignment 
+\[
+\Bar{\pi}_* \cL_{sugra} \colon U \mapsto (\Bar{\pi}_* \cL_{sugra})(U) 
+\]
+defines a sheaf of $\Z/2$ graded $L_\infty$ algebras on $\C^3$. 
+
+\begin{prop}
+For each $n$, the sheaf of cochain complexes $U \mapsto \Bar{\pi}_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
+\[
+\Omega^{0,\bu}(U, \cV^{(n)})
+\]
+for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$.
+For each $n$, the differential is of the form $\dbar + Q^{hol}$.
+In particular, this endows $\Bar{\pi}_* \cL_{sugra}$ with the structure of a pro-vector bundle on $\C^3$. 
+\end{prop}
+
+We explicitly describe the first homogenous weights of $\Bar{\pi}_* \cL_{sugra}$. 
+
+\parsec[s:weight-1]
+
+As an example, let us consider the weight $(-1)$ piece of the decomposition $\Omega^{0,\bu}(Z, \cV^{(-1)})$. 
+We will show that 
+\[
+\cV^{(-1)} = K^{1/2}_Z \otimes \C^2 \oplus \cO_Z \oplus \Pi \T^*_Z 
+\]
+whose Dolbeault forms are equipped with the $\dbar$ operator and the $\del$ operator which takes functions to one-forms. 
+
+Explicitly weight zero summand $\cV^{(0)}$ consists of:
+\begin{itemize}
+\item 
+Vector fields which are locally of the form $f^a(z) \del_{w_a}$ where $f^{a}(z)$ is a holomorphic function on $\C^3$.
+Notice that these vector fields are automatically divergence-free.
+Since $\del_{w_a}$ is treated as a section of $K^{1/2}_Z$ we see that these are local sections of $K^{1/2}_Z \otimes \C^2$. 
+\item 
+Next there are holomorphic functions (type $\beta$) and holomorphic $one$-forms (type $\gamma$) which do not depend on $w_a$. 
+Since $\del$ is weight zero for the decomposition these forms combine to form the $\Z/2$ graded complex of sheaves
+\[
+\cO_Z \xto{\del} \Pi \Omega^{1,hol}_Z .
+\]
+\end{itemize}
+
+\parsec[s:weight0]
+
+Particularly important for us will be the weight zero part $\Omega^{0,\bu}(Z, \cV^{(0)})$ of the $\Z/2$ graded $L_\infty$ algebra $\Bar{\pi}_* \cL_{sugra}$ which inherits the structure of a $\Z/2$ graded $L_\infty$ algebra.
+When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is quasi-isomorphic to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
+In other words, the weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
+
+As a holomorphic vector bundle, we will see that $\cV^{(0)}$ is 
+\[
+\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
+\]
+The $L_\infty$ structure of $\cL_{sugra}$ endows the sheaf of sections of this holomorphic vector bundle with a Lie bracket which we will describe.
+
+Explicitly, we enumerate all weight zero holomorphic sections:
+\begin{itemize}
+\item Vector fields which are locally of the form 
+\[
+\mu = f^i(z) \del_{z_i} - \frac12 \del_{z_i} f^i(z) w_a \del_{w_a}
+\]
+and vector fields which are locally of the form
+\[
+\mu = g(z) A^{ab} w_a \del_{w_b}.
+\]
+The condition that $\mu$ be divergence-free implies that $(A^{ab}) \in \lie{sl}(2)$.
+We will identify the first such vector fields with sections of $\T_Z$ and the second such vector fields with sections of $\lie{sl}(2) \otimes \cO_Z$. 
+\item Holomorphic functions of the form $\beta = w_a f(z)$ and holomorphic one-forms of the form $\gamma = g^{a}(z) \d w_a + h^{a} (z) w_a \d z$. 
+Since $\del$ is weight zero, such sections are equipped with a differential 
+\[
+\Gamma^{hol}(Z, K^{-1/2}) \xto{D} \Pi \Gamma^{hol}(Z, K^{-1/2}) \oplus \Pi\Omega^{1,hol}(Z, K^{-1/2}) 
+\]
+which sends $w_a f(z) \mapsto (f(z) , w_a \del f (z))$. 
+This $\Z/2$ graded complex of sheaves is clearly equivalent to $\Pi\Omega^{1,hol}(Z, K^{-1/2})$. 
+\end{itemize}
+
+The $L_\infty$ structure on $\Bar{\pi}_* \cL_{sugra}$ induces the structure of a local $\Z/2$ graded dg Lie algebra on $\Omega^{0,\bu}(Z, \cV^{(0)})$. 
+The differential is simply $\dbar$. 
+The Lie bracket is induced from a Lie algebra structure on holomorphic sections of $\cV^{(0)}$ which we can describe as follows:
+\begin{itemize}
+\item For $\Vect^{hol}(Z)$ there is the standard commutator of holomorphic vector fields. 
+This acts on the sections of $\lie{sl}(2) \otimes \cO_Z$ and $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ by Lie derivative. 
+\item On sections of $\lie{sl}(2) \otimes \cO_Z$ there is the matrix commutator. 
+This acts on the odd part $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ where we view $\C^2$ as the fundamental $\lie{sl}(2)$ representation. 
+\item Finally, and most interestingly, there is a bracket of the form
+\[
+\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \times \Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \to \Vect^{hol}(Z) \oplus \lie{sl}(2) \otimes \cO_Z 
+\]
+given in coordinates by
+\[
+[f^a(z) \d w_a , g^a \d w_b] = \left(??, ??\right).
+\]
+\end{itemize}
+
+
+\parsec[s:mainfact]
+
+Now, since $\Bar{\pi}_* \cL_{sugra}$ is a pro-vector bundle with a compatible $L_\infty$ structure, the assignment 
+\[
+U\subset \C^3 \mapsto \clie^\bu\left(\Bar{\pi}_* \cL_{sugra}(U)\right) 
+\]
+has the structure of a factorization algebra on $\C^3$ which we denote by $\Bar{\pi}_* \Obs_{sugra}$. 
+
+
+\begin{prop}
+Let $Z$ be a Calabi--Yau three-fold and $\pi \colon Z \times \C^2 \times \R \to Z$ be the projection. 
+There is a pro local Lie algebra $\Bar{\pi}_*\cL_{sugra}$ and a factorization algebra $\Bar{\pi}_* \Obs_{sugra} = \clie^\bu(\Bar{\pi}_* \cL_{sugra})$ on $Z$ such that:
+\begin{itemize}
+\item[(1)] there is a natural inclusion of of factorization algebras on $Z$
+\[
+\Bar{\pi}_* \Obs_{sugra} \hookrightarrow \pi_* \Obs_{sugra}
+\]
+which is dense at the level of cohomology. 
+\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
+\beqn\label{eqn:decomp3}
+\Bar{\pi}_{*} \cL_{sugra} = \prod_{n \geq -1} \cV_{n} 
+\eeqn
+\item[(3)]
+In weight zero, there is an equivalence of local Lie algebras on $Z$ 
+\[
+\cV_0 \simeq \cE(3|6)|Z 
+\]
+where $\cE(3|6)|Z$ is a local Lie algebra enhancement of the exceptional simple super Lie algebra $E(3|6)$. 
+\end{itemize}
+\end{prop}
+
+%We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
 
 \subsection{Koszul duality for factorization algebras: an ansatz} 
 
@@ -171,196 +396,4 @@ We arrive at $!$-duality in our situation above in the case that $\Obs$ is a fac
 This is always possible in the BV formalism: on an open set $U$ the space of Maurer--Cartan elements in the $L_\infty$ algebra $\cL(U)$ is the space of solutions to the equations of motion on $U$.
 Thus, tautologically, the local Lie algebra $\cL$ is a symmetry of the classical theory. 
 
-\subsection{The restricted factorization algebra}
-
-For simplicity let us consider the eleven-dimensional theory on flat space $\R \times \C^5$ with some number of fivebranes supported on
-\[
-0 \times 0 \times \C^3 \subset \C^5 .
-\]
-The general prescription of twisted holography is that (after taking into account the backreaction) the observables on a large number of fivebranes is Koszul dual to the factorization algebra 
-
-\parsec[s:flat]
-
-%In the simple case where $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ then the manifold obtained by removing the locus of the brane is homeomorphic to
-%\[
-%\C^3 \times (\R \times \C^2 - 0) .
-%\]
-%
-%Let $\pi \colon \R \times \C^5 - (0 \times \C^3) \to \C^3 \times \R_{>0}$ be the projection map whose fibers are homeomorphic to the sphere $S^4$ which links the location of the fivebranes.
-%We restrict the factorization algebra of the eleven dimensional theory $\Obs_{sugra}$ to the open set obtained by removing the locus of the brane.
-
-In the simple case that $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ there is a more direct construction of the factorization algebra $\Obs_{sugra}|_{Z}$. 
-
-Let $\pi \colon \R \times \C^5 \to \C^3$ be the projection map.
-Then, via $\pi$ we can pushforward the factorization algebra associated to the eleven-dimensional theory to obtain a factorization algebra
-\[
-\pi_* \Obs_{sugra} 
-\]
-on $\C^3$.
-This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
-Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
-
-For any open set $U \subset \C^3$ we can consider the following $\C^\times$ action on the fields of the eleven-dimensional theory supported on $\R \times \C^2 \times U$ defined by
-\begin{itemize}
-\item On the fields $\mu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{1,\bu}(\C^2 \times U)$ the action is
-\[
-\lambda \cdot \mu(t;w,z) = \mu(\lambda t;\lambda w , z).
-\]
-\item On the fields $\nu(t;w,z) \in \Omega^\bu(\R) \otimes \PV^{0,\bu}(\C^2 \times U)$ the action is
-\[
-\lambda \cdot \nu(t;w,z) = \nu(\lambda t;\lambda w , z).
-\]
-\item On the fields $\beta(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^2 \times U)$ the action is
-\[
-\lambda \cdot \beta(t;w,z) = \lambda^{-1} \beta(\lambda t;\lambda w , z).
-\]
-\item On the fields $\gamma(t;w,z) \in \Omega^\bu(\R) \otimes \Omega^{1,\bu}(\C^2 \times U)$ the action is
-\[
-\lambda \cdot \gamma(t;w,z) = \lambda^{-1} \gamma(\lambda t;\lambda w , z).
-\]
-\end{itemize}
-
-For each $n \in \ZZ$ and open set $U \subset \C^3$, let 
-\[
-\pi_* \cL_{sugra}(U)^{(n)} \subset \cL_{sugra}(\R \times \C^2 \times U)
-\]
-be the weight $n$ eigenspace with respect to this $\C^\times$ action. 
-The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
-Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
-\[
-(\Bar{\pi}_* \cL_{sugra})(U) \define \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
-\]
-is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
-In this way, the assignment 
-\[
-\Bar{\pi}_* \cL_{sugra} \colon U \mapsto (\Bar{\pi}_* \cL_{sugra})(U) 
-\]
-defines a sheaf of $\Z/2$ graded $L_\infty$ algebras on $\C^3$. 
-
-\begin{prop}
-For each $n$, the sheaf of cochain complexes $U \mapsto \Bar{\pi}_* \cL_{sugra}(U)^{(n)}$ is quasi-isomorphic to one of the form
-\[
-\Omega^{0,\bu}(U, \cV^{(n)})
-\]
-for some finite rank super holomorphic vector bundle $\cV^{(n)}$ on $\C^3$.
-For each $n$, the differential is of the form $\dbar + Q^{hol}$.
-In particular, this endows $\Bar{\pi}_* \cL_{sugra}$ with the structure of a pro-vector bundle on $\C^3$. 
-\end{prop}
-
-\parsec[s:weight-1]
-
-As an example, let us consider the weight $(-1)$ piece of the decomposition $\Omega^{0,\bu}(Z, \cV^{(-1)})$. 
-We will show that 
-\[
-\cV^{(-1)} = K^{-1/2}_Z \otimes \C^2 \oplus \cO_Z \oplus \Pi \T^*_Z 
-\]
-whose Dolbeault forms are equipped with the $\dbar$ operator and the $\del$ operator which takes functions to one-forms. 
-
-Explicitly weight zero summand $\cV^{(0)}$ consists of:
-\begin{itemize}
-\item 
-Vector fields which are locally of the form $f^a(z) \del_{w_a}$ where $f^{a}(z)$ is a holomorphic function on $\C^3$.
-Notice that these vector fields are automatically divergence-free.
-Since $\del_{w_a}$ is treated as a section of $K^{-1/2}_Z$ we see that these are local sections of $K^{-1/2}_Z \otimes \C^2$. 
-\item 
-Next there are holomorphic functions (type $\beta$) and holomorphic $one$-forms (type $\gamma$) which do not depend on $w_a$. 
-Since $\del$ is weight zero for the decomposition these forms combine to form the $\Z/2$ graded complex of sheaves
-\[
-\cO_Z \xto{\del} \Pi \Omega^{1,hol}_Z .
-\]
-\end{itemize}
-
-\parsec[s:weight0]
-
-Particularly important for us will be the weight zero part $\Omega^{0,\bu}(Z, \cV^{(0)})$ of the $\Z/2$ graded $L_\infty$ algebra $\Bar{\pi}_* \cL_{sugra}$ which inherits the structure of a $\Z/2$ graded $L_\infty$ algebra.
-When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is quasi-isomorphic to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
-In other words, the weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
-
-As a holomorphic vector bundle, we will see that
-\[
-\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
-\]
-The $L_\infty$ structure of $\cL_{sugra}$ endows the sheaf of sections of this holomorphic vector bundle with a Lie bracket which we will describe.
-
-Explicitly, we enumerate all weight zero holomorphic sections:
-\begin{itemize}
-\item Vector fields which are locally of the form $\mu = f^i(z) \del_{z_i}$ or $\mu = g(z) A^{ab} w_a \del_{w_b}$ where $(A^{ab}) \in \lie{sl}(2)$.
-\item Holomorphic functions of the form $\beta = w_a f(z)$ and holomorphic one-forms of the form $\gamma = g^{a}(z) \d w_a + h^{a} (z) w_a \d z$. 
-Since $\del$ is weight zero, such sections are equipped with a differential 
-\[
-\Gamma^{hol}(Z, K^{1/2}) \xto{D} \Pi \Gamma^{hol}(Z, K^{1/2}) \oplus \Pi\Omega^{1,hol}(Z, K^{1/2}) 
-\]
-which sends $w_a f(z) \mapsto (f(z) , w_a \del f (z))$. 
-The $\Z/2$ graded complex of sheaves is clearly equivalent to $\Pi\Omega^{1,hol}(Z, K^{1/2})$. 
-\end{itemize}
-
-\parsec[s:??]
-
-Now, since $\Bar{\pi}_* \cL_{sugra}$ is a pro-vector bundle with a compatible $L_\infty$ structure, the assignment 
-\[
-U\subset \C^3 \mapsto \clie^\bu\left(\Bar{\pi}_* \cL_{sugra}(U)\right) 
-\]
-has the structure of a factorization algebra on $\C^3$ which we denote by $\Bar{\pi}_* \Obs_{sugra}$. 
-
-
-\begin{prop}
-Let $Z$ be a Calabi--Yau three-fold and $\pi \colon Z \times \C^2 \times \R \to Z$ be the projection. 
-There is a pro local Lie algebra $\Bar{\pi}_*\cL_{sugra}$ and a factorization algebra $\Bar{\pi}_* \Obs_{sugra} = \clie^\bu(\Bar{\pi}_* \cL_{sugra})$ on $Z$ such that:
-\begin{itemize}
-\item[(1)] there is a natural inclusion of of factorization algebras on $Z$
-\[
-\Bar{\pi}_* \Obs_{sugra} \hookrightarrow \pi_* \Obs_{sugra}
-\]
-which is dense at the level of cohomology. 
-\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
-\beqn\label{eqn:decomp3}
-\Bar{\pi}_{*} \cL_{sugra} = \prod_{n \geq -1} \cV_{n} 
-\eeqn
-\item[(3)]
-In weight zero, there is an equivalence of local Lie algebras on $Z$ 
-\[
-\cV_0 \simeq \cE(3|6)|Z 
-\]
-where $\cE(3|6)|Z$ is a local Lie algebra enhancement of the exceptional simple super Lie algebra $E(3|6)$. 
-\end{itemize}
-\end{prop}
-
-%We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
-
-\parsec[s:e36]
-The exceptional super Lie algebra $E(3|6)$ 
-
-Let $Z$ be a complex manifold of complex dimension three equipped with a square-root of the canonical bundle.
-To freely resolve the space of holomorphic sections
-we employ the Dolbeault complex of the appropriate holomorphic vector bundle. 
-For holomorphic vector fields we introduce the dg Lie algebra
-\[
-\Omega^{0,\bu}(X , \T_X)
-\]
-of $(0,\bu)$ Dolbeault forms with values in the holomorphic tangent bundle. 
-Also, for any holomorphic vector bundle $V$ let
-\[
-\Omega^{-1/2 , \bu}(X, V) = \Omega^{0,\bu}(X , V \otimes \T_X^* \otimes \sigma^{-1}) .
-\]
-
-\parsec
-
-We define a super dg Lie algebra to be a $\Z \times \Z/2$ graded Lie algebra $\fg = \fg_+^\bu \oplus \Pi \fg_-^\bu$ which satisfies totalized graded skew symmetry and is equipped with a differential $\d$ of bidegree $(1,+)$ that is square zero and a derivation for the bracket. 
-For more details see \cite[Section 2]{EHSW}. 
-
-\begin{dfn}
-Let $\sigma$ and $P$ be as above. 
-Define the following local super Lie algebra $\cE_{P,\sigma}$ on $X$ whose even and odd parts are
-\begin{align*}
-\cE_{P,\sigma,+} & = \Omega^{0,\bu}(X , \T_X) \oplus \Omega^{0,\bu}(X , \ad P)\\
-\cE_{P,\sigma,-} & = \Omega^{1 , \bu}(X, R_X \otimes \sigma^{-1}) .
-\end{align*}
-The differential is given by the natural $\dbar$-operator whenever it makes sense.
-The bracket is defined analogously as in formulas \brian{ref}. 
-\end{dfn} 
-
-On $X = \C^3$ there is a natural choice for $\sigma = K^{1/2}_{\CC^3}$, and we can take $P$ to be the trivial $SL(2)$ bundle. 
-With these choices we have the following easy lemma. 
-
-
-%\end{document}
+\end{document}
