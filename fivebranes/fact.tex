@@ -144,15 +144,79 @@ With this notation in place, we introduce the following $\C^\times$ action on th
 The main result of this section is the following. 
 
 \begin{prop}
+The $L_\infty$ structure on $\cL_{sugra}$ equivariant for this $\C^\times$ action. 
+The odd symplectic form on $\cL_{sugra}$ is weight $-1$ for this $\C^\times$ action. 
 \end{prop}
+\begin{proof}
+The only nontrivial bracket to check compatibility with the $\C^\times$ action is the one which takes two $\gamma$-type sections to a $\mu$-type section of the form
+\[
+[\gamma_1, \gamma_2] = \Omega^{-1} \vee (\del \gamma_1 \wedge \del \gamma_2) 
+\]
+where $\Omega \vee (-)$ is the operation which takes a four-form 
 
+It suffices to check equivariance in local coordinates; there are three cases.
+Suppose $\gamma_1(t;w,z) = f^i(t;w,z) \d z_i$ and $\gamma_2(t;w,z) = g^j(t;w,z) \d z_j$where $f^i,g^j$ are de Rham--Dolbeault forms for $i,j=1,2,3$. 
+Then $\lambda \cdot \gamma_1 = \lambda^{-1} f^i(\lambda t;\lambda w, z) \d z_i$ and $\lambda \cdot \gamma_2 = \lambda^{-1} g^j(\lambda t;\lambda w, z) \d z_j$. 
+Thus, if the $\mu$-type field is expanded as $[\gamma_1,\gamma_2] = F^k(t;w,z) \del_{z_k} + G^a (t;w,z) \del_{w_a}$ for some de Rham--Dolbeault forms $F^k,G^a$, $k=1,2,3,a=1,2$, it suffices to show that 
+\beqn
+\begin{array}{llll}
+\label{eqn:lambda1} \lambda \cdot \left(F^k(t;w,z) \del_{z_k} \right) & = \lambda^{-2} F^k(\lambda t;\lambda w,z) \del_{z_k} \\
+\lambda \cdot \left(G^a(t;w,z) \del_{w_a} \right) & = \lambda^{-2} G^a(\lambda t;\lambda w,z) \del_{w_a} .
+\end{array}
+\eeqn
+We expand $\del \gamma_1 \wedge \del \gamma_2$ to three terms
+\begin{multline}
+\del_{w_a} f^i(t;w,z) \del_{z_l} g^j(t;w,z) \d w_a \d z_i \d z_l \d z_j + \del_{z_k} f^i(t;w,z) \del_{w_b} g^j(t;w,z) \d z_k \d z_i \d w_b \d z_j \\  + \del_{w_a} f^i(t;w,z) \del_{w_b} g^j(t;w,z) \d w_a \d z_i \d w_b \d z_j .
+\end{multline}
+Thus in the notation above we have 
+\begin{align*}
+F^k (t;w,z) & = \ep_{ab} \ep_{ijk} \del_{w_a} f^i(t;w,z) \del_{w_b} g^j(t;w,z) \\
+G^a(t;w,z) & = \ep_{ilj} \ep_{ab} \del_{w_a} f^i(t;w,z) \del_{z_l} g^j(t;w,z)
++ \ep_{kij} \ep_{ab} \del_{z_k} f^i(t;w,z) \del_{w_a} g^j(t;w,z)  .
+\end{align*}
+We compute the action of $\lambda \in \C^\times$ on $\mu = F^k \del_{z_k}$
+\[
+\lambda \cdot \left(F^k \del_{z_k} \right) = \ep_{ab} \ep_{ijk} \lambda^{-1} \del_{w_a} f^i(\lambda t;\lambda w,z) \lambda^{-1} \del_{w_b} g^j(\lambda t;\lambda w,z) \del_{z_k} .
+\]
+Thus the first part of \eqref{eqn:lambda1} is satisfied. 
+Similarly we observe that $\lambda \cdot \left(G^a(t;w,z) \del_{w_a} \right)  = \lambda^{-2} G^a(\lambda t;\lambda w,z) \del_{w_a}$. 
 
-For each $n \in \ZZ$ and open set $U \subset \C^3$, let 
+The next case is when $\gamma_1(t;w,z) = f^i(t;w,z) \d z_i$ and $\gamma_2(t;w,z) = g^a(t;w,z) \d w_a$where $f^i,g^a$ are de Rham--Dolbeault forms for $i=1,2,3$ and $a=1,2$. 
+Then $\lambda \cdot \gamma_1 = \lambda^{-1} f^i(\lambda t;\lambda w, z) \d z_i$ and $\lambda \cdot \gamma_2 = g^a(\lambda t;\lambda w, z) \d w_a$. 
+Thus, if the $\mu$-type field is expanded as $[\gamma_1,\gamma_2] = F^k(t;w,z) \del_{z_k} + G^a (t;w,z) \del_{w_a}$ for some de Rham--Dolbeault forms $F^k,G^a$, $k=1,2,3,a=1,2$, it suffices to show that 
+\beqn
+\begin{array}{llll}
+\label{eqn:lambda2} \lambda \cdot \left(F^k(t;w,z) \del_{z_k} \right) & = \lambda^{-1} F^k(\lambda t;\lambda w,z) \del_{z_k} \\
+\lambda \cdot \left(G^a(t;w,z) \del_{w_a} \right) & = \lambda^{-1} G^a(\lambda t;\lambda w,z) \del_{w_a} .
+\end{array}
+\eeqn
+We expand $\del \gamma_1 \wedge \del \gamma_2$ to three terms
+\begin{multline}
+\del_{w_b} f^i(t;w,z) \del_{z_j} g^a(t;w,z) \d w_b \d z_i \d z_j \d w_a + \del_{z_k} f^i(t;w,z) \del_{w_b} g^a(t;w,z) \d z_k \d z_i \d w_b \d w_a \\  + \del_{z_j} f^i(t;w,z) \del_{z_k} g^a(t;w,z) \d z_j \d z_i \d z_k \d w_a .
+\end{multline}
+Thus in the notation above we have 
+\begin{align*}
+F^k (t;w,z) & = \ep_{ab} \ep_{ijk} \del_{w_a} f^i(t;w,z) \del_{z_l} g^b(t;w,z) + \ep_{ab} \ep_{kij} \del_{z_k} f^i(t;w,z) \del_{w_a} g^b(t;w,z) \\
+G^a(t;w,z) & = \ep_{ab} \ep_{jik} \del_{z_j} f^i(t;w,z) \del_{z_k} g^b(t;w,z) .
+\end{align*}
+We compute the action of $\lambda \in \C^\times$ on $\mu = G^a \del_{z_a}$
+\[
+\lambda \cdot \left(G^a \del_{w_a} \right) = \ep_{ab} \ep_{jik} \del_{z_j} f^i(t;w,z) \del_{z_k} g^b(t;w,z) \lambda^{-1} \del_{w_a} .
+\]
+Thus the second part of \eqref{eqn:lambda2} is satisfied. 
+Similarly we observe that $\lambda \cdot \left(F^k(t;w,z) \del_{z_k} \right)  = \lambda^{-2} F^k(\lambda t;\lambda w,z) \del_{z_k}$. 
+
+The last case is when $\gamma_1(t;w,z) = f^a(t;w,z) \d w_a$ and $\gamma_2(t;w,z) = g^b(t;w,z) \d w_b$where $f^a,g^b$ are de Rham--Dolbeault forms for and $a,b=1,2$.
+The argument is nearly identical so we omit the details. 
+
+\end{proof}
+
+For each $n \in \ZZ$ and open set $U \subset Z$, let 
 \[
 \pi_* \cL_{sugra}(U)^{(n)} \subset \cL_{sugra}(\pi^{-1} U)
 \]
 be the weight $n$ eigenspace with respect to this $\C^\times$ action. 
-The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
+%The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
 Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
 \[
 (\Bar{\pi}_* \cL_{sugra})(U) \define \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
