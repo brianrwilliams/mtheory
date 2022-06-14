@@ -1,20 +1,19 @@
-%\documentclass[11pt]{amsart}%
+\documentclass[11pt]{amsart}%
 
 %\usepackage{../macros-master}
-%\usepackage{macros-%%fivebrane}
+\usepackage{macros-fivebrane}
 
-%%\begin{document}
+\begin{document}
 
 \section{Twisted eleven-dimensional supergravity}
 %
-\subsection{A model for holomorphically twisted supergravity}
+\subsection{A model for minimally twisted supergravity}
 
 In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded.
-In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory.
-We recall this description here.
+In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory in a background with global symmetry group $SU(5)$.
+As such, the eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold.
 
-The eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold.
 In the first few sections we describe the fields and equations of motion of the eleven-dimensional theory. 
 
 %\parsec[s:e510]
@@ -26,27 +25,84 @@ In the first few sections we describe the fields and equations of motion of the 
 
 \parsec[s:sugrafields]
 
+To begin this section we highlight some of the important features of the eleven-dimensional model considered in \cite{RSW}. 
+The theory utilizes the complex structure on the Calabi--Yau fivefold $X$.
+We let $\T_X$ stand for the holomorphic tangent bundle of $X$ and $\Bar{\T}_X$ its complex conjugate.
+Thus, the complexified tangent bundle of the eleven-manifold $S \times X$ decomposes as
+\[
+\T_S \oplus \T_X \oplus \Bar{\T}_X 
+\]
+where $\T_S$ is the complexified tangent bundle of the smooth one-manifold $S$.
+Locally, we choose coordinates $(t;z,\zbar)$ where $t$ is a smooth coordinate for $S$ and $z$ is a holomorphic coordinate for $X$. 
 
+Before giving a rigorous description of the fields and equations of motion, we focus on bosonic fields in our model which have an obvious analog in the untwisted theory. 
+One of the primary fields of eleven-dimensional supergravity describes deformations of the metric $g$.
+Since we work in a background which has $SU(5)$ holonomy we can take the background metric on $S \times X$ to be the product of the flat metric on $S$ with a Calabi--Yau metric $g_{CY}$ on $X$. 
+
+Deformations of the background metric which survive the twist can be identified with Beltrami differentials, that is, sections of 
+\[
+\Bar{\T}_X^* \otimes \T_X \cong \Bar{\T}^*_X \otimes \Bar{\T}_X^* 
+\]
+which we will denote by $\mu$. 
+In local holomorphic coordinates $\mu$ admits a description like
+\[
+\mu = \mu^{\Bar{i}}_j (t;z,\zbar) \d \zbar_{\Bar{i}} \otimes \del_{z_i} .
+\]
+
+One of the other bosonic fields of eleven-dimensional supergravity is a three-form which is usually denoted by~$C$. 
+On $S \times X$ the space of complex-valued three-forms decomposes into de Rham--Dolbeault forms as in
+\[
+\oplus_{k+p+q=3} \Omega^k(S) \otimes \Omega^{p,q}(X) .
+\]
+We denote the homogenous pieces as the space of $(k;p,q)$ forms, these admit local presentations as
+\[
+\sum_{P,Q} f_{PQ} (t;z,\zbar) \d z_P \d \zbar_Q + \sum_{P',Q'} g_{P'Q'}(t;z,\zbar) \d t \d z_{P'}\d \zbar_{Q'} 
+\]
+where the first sum is over tuples $P=(p_1,p_2,p_3),Q=(q_1,q_2,q_3)$ such that $\sum_i (p_i + q_i) = 3$, $0 \leq p_i,q_i \leq 3$.
+The second sum is over tuples $P',Q'$ such that $\sum_i (p_i'+q_i') = 2$. 
+
+In the minimal twist only forms with $p_i ,p_i'\leq 1$ survive. 
+Thus, the components of the three-form which survive live in
+\[
+\left(\oplus_{k+q = 3} \Omega^k(S) \otimes \Omega^{0,q}(X)\right) \oplus 
+\left(\oplus_{k+q = 2} \Omega^k(S) \otimes \Omega^{1,q}(X)\right) .
+\]
+We denote a general (non-homogenous) element in the first summand by $\beta$ and an element in the second summand by $\gamma$.
+When we want to be specific by the form type we use the notation $\beta^{k;q}$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}$ for the $(k;1,q)$ component of the three-form.
 
 \parsec[s:Lsugra]
 
-We move on to give a complete description of our eleven-dimensional model.
-In the BV formalism one introduces antifields and antighosts to the fields and ghosts that we have just described.
-It is then fundamental to consider a graded skew-symmetric pairing between fields and antifields (ghosts and antighosts). 
-Once such a pairing is introduced, one can opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
+We move on to give a complete description of our eleven-dimensional model within the Batalin--Vilkovisky (BV) formalism.
+This amounts to introducing antifields and antighosts to the fields and ghosts that we have just described.
+One of the key structures is the graded skew-symmetric pairing between fields and antifields (ghosts and antighosts).
+Once such a pairing $\omega_{BV}$ is introduced, one can opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
 
-In this paper $\Z/2$ graded $L_\infty$ algebra means a $\Z/2$ graded vector space~$L$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
+An $L_\infty$ algebra is a graded vector space~$L=\oplus_{p\in \Z} L^p$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
 \[
-\ell_k \colon L^{\times k} \to \Pi^k L 
+[-]_k \colon L^{\times k} \to L[2-k] 
 \]
 are multilinear maps which satisfy the ordinary higher Jacobi relations defining an $L_\infty$ algebra \cite{??}. 
-Here, $\Pi^k L = L$ if $k$ is even and $\Pi^k L = \Pi L$ if $k$ is odd. 
-Thus, $\ell_k$ is an even operation if $k$ is even and an odd operation if $k$ is odd. 
-\footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
+The shift $[2-k]$ means that $[-]_k$ is of cohomological degree $k-2$. 
+
+The BV fields arise as the sections of a sheaf of $L_\infty$ algebras $\cL$ over the spacetime manifold $M$.
+There is an overall shift in the relationship between the cohomological grading of $\cL$ and the ghost number in physics terminology. 
+In cohomological degree zero sit the ghosts, in cohomological degree zero sit the fields, etc..
+In this sense it is more accurate to refer to the BV fields as sections of the shift of the sheaf of $L_\infty$ algebras $\cL[1]$. 
+Together with the skew symmetric pairing $\omega_{BV}$ on the fields structure maps $[-]_k$ organize together to define the full BV action which takes the general form
+\[
+S(\Phi) = \sum_{k \geq 1} \omega_{BV} \left(\Phi , [\Phi,\ldots,\Phi]_{k}\right) .
+\]
+
+One feature of our proposal for the minimal twist of eleven-dimensional supergravity is that it only carries an overall $\Z/2$ grading. 
+This $\Z/2$ grading totalizes the original ghost grading (which is by the group $\Z$) and the fermion number which is present in the untwisted theory.
+We thus make use of $\Z/2$ graded versions of the usual BV formalism.
+In this paper $\Z/2$ graded $L_\infty$ algebra means that we just have a $\Z/2$ graded vector space.
+There are operations $\{[-]_k\}_{k = 1,2,\ldots}$ which satisfy the same higher Jacobi identities.
+The operation $[-]_k$ is even if $k$ is even and odd if $k$ is odd.\footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
 A $\Z/2$ graded $L_\infty$ algebra is simply what one gets when they apply the forgetful function from $\Z$ graded vector spaces to $\Z/2$ graded vector spaces.}
 
-Let $L_X$ be the following sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau five-fold $X$.
-As a sheaf of super vector spaces, $L_X$ is given as the holomorphic sections of a super vector bundle. 
+We introduce a sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau five-fold $X$.
+As a sheaf of super vector spaces, it will be given as the holomorphic sections of a super vector bundle that we denote by $L_X$. 
 The even part of this super vector bundle is
 \[
 \T_X \oplus \C_X 
@@ -59,7 +115,7 @@ The odd part is
 \]
 We will denote odd elements by $(\nu, \gamma)$ according to the decomposition. 
 
-The $L_\infty$ structure is described as follows. 
+The $L_\infty$ structure on the sheaf of holomorphic sections of $L_X$ is described as follows. 
 First, $\d = [-]_1$, the differential, is simply given by 
 \begin{align*}
 \d \beta & = \del \beta \in \Omega^1_X \subset L_{X,-} \\
@@ -314,4 +370,4 @@ which is dense in cohomology.
 This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
 
 
-%\end{document}
+\end{document}
