@@ -125,9 +125,8 @@ and $\d \gamma = \d \nu = 0$.
 For $k \geq 2$ the general formula for the $k$-ary brackets is 
 \begin{align*}
 [\nu_1, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) \\
-[\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma \\
-[\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma \\
-[\gamma_1,\gamma_2]_2 & = \Omega^{-1} \left(\del \gamma_1 \wedge \del \gamma_2 \right) .
+[\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma .\\
+[\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma .
 \end{align*}
 In \cite{RSW} it is shown that this endows $L_{X}$ with the structure of a sheaf of $\Z/2$ graded $L_\infty$ algebras.
 There is a sub sheaf given by the sections $\mu$ and $\nu$ which is $L_\infty$-equivalent to the sheaf of holomorphic divergence-free vector fields on $X$. 
@@ -219,18 +218,30 @@ The full space of BV fields is simply $\Pi \cL_{single}$.
 
 In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \brian{references}.
 
-In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We recall the results therein, adapted to our situation.
+In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We recall this construction, adapted to a slightly more global situation. We will consider the eleven-dimensional theory on 11-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a 3-step procedure:
+
+\begin{itemize}
+  \item Place the eleven dimensional theory on the complement of the zero section. To do so, we will wish to describe the complement of the zero-section in a way that facilitates natural operations on holomorphic-topological local $L_{\infty}$-algebras.
+
+  \item Deform the theory on the complement of the zero section by a certain maurer-cartan element. The Maurer-Cartan element is thought of as the flux sourced by branes wrapping the zero section.
+
+  \item The complement of the zero section is a manifold with boundary - we impose a natural boundary condition.
+
+\end{itemize}
 
 \parsec
 
 As above, let $Z$ be a three-fold, $V\to Z$ a rank 2 holomorphic vector bundle such that $\wedge^{2} V \cong K_{Z}$, and let $X = {\rm Tot}V$. The condition on $V$ ensures that $X$ is a Calabi-Yau five-fold - in the main body of the paper we will restrict ourselves to $V = K_{Z}^{1/2}\otimes \C^{2}$. We will view $\R\times X = {\rm Tot}(\R\oplus V)$, and consider a stack of N fivebranes wrapping the zero section in $\R\oplus V$.
 
-The theory in the backreacted geometry will be defineed to be a deformation of the 11d theory placed on the complement of the zero section. The complement of the zero section admits additional structures inherited from the obvious THF structure on $\R \times X$. Note that $\R\oplus V$ has an obvious rank 1 subbundle together with a complex structure on the quotient. Accordingly, we may choose as fiber coordinates $t, w_{1}, w_{2}, \bar w_{1}, \bar w_{2}$ and a fiberwise partially hermitian metric $h$. Explicitly, the corresponding norm is given by
+We begin by describing the complement of the zero section
+\[
+\R\oplus V \setminus 0\times Z
+\]. Note that $\R \times X$ is equipped with a natural transverseley-holomorphic foliation. That is, there is a rank 1 subbundle $\R\subset \R\oplus V$ together with a complex structure on the quotient. Accordingly, we may choose as fiber coordinates $t, w_{1}, w_{2}, \bar w_{1}, \bar w_{2}$ and a fiberwise partially hermitian metric $h$. Explicitly, the corresponding norm is given by
 \begin{align*}
  \pi:  \R\times X & \to \R_{+} \\
   (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
 \end{align*}
-Letting $p : \R\times X \to Z$, we have an $S^{4}$-bundle $(\pi, p) : \R\times X - Z \to \R_{>0}\times Z$. The fiber spheres have a canonical foliation
+Letting $p : \R\times X \to Z$, we have an $S^{4}$-bundle $(\pi, p) : \R\times X - Z \to \R_{>0}\times Z$. The vertical tangent bundle of this $S^{4}$ bundle inherits a natural subbundle coming from the THF structure of the ambient manifold; the fibers of this subbundle equip
 
 
 It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction 
