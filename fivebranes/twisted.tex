@@ -9,10 +9,22 @@
 %
 \subsection{A model for minimally twisted supergravity}
 
-In \cite{SWspinor} a complete description of the free limit of the holomorphic twist of eleven-dimensional supergravity is given.
-Within the BV formalism, the theory is only $\Z/2$ graded.
+Eleven-dimensional supergravity is the unique...
+Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+\begin{itemize}
+\item 
+The minimal twist. 
+This twist leaves six real directions invariant and is preserved by the subgroup $SU(5)$ of the Lorentz group. 
+\item 
+The non-minimal twist. 
+This twist leaves nine real directions invariant and is preserved by the subgroup $SU(2) \times G_2$ of the Lorentz group. 
+\end{itemize}
+
+In this paper we will focus primarily on the minimal twist. 
+In \cite{SWspinor} a complete description of the free limit of this twist of eleven-dimensional supergravity is given.
+Within the BV formalism, the theory is only $\Z/2$ graded, a point we will elaborate on further soon. 
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory in a background with global symmetry group $SU(5)$.
-As such, the eleven-dimensional theory exists on any manifold of the form $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a real oriented smooth one-dimensional manifold.
+Globally, the eleven-dimensional theory exists on any manifold of the form $S \times X$ where $X$ is a Calabi--Yau fivefold and $S$ is a real oriented smooth one-dimensional manifold.
 
 In the first few sections we describe the fields and equations of motion of the eleven-dimensional theory. 
 
@@ -101,7 +113,7 @@ There are operations $\{[-]_k\}_{k = 1,2,\ldots}$ which satisfy the same higher 
 The operation $[-]_k$ is even if $k$ is even and odd if $k$ is odd.\footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
 A $\Z/2$ graded $L_\infty$ algebra is simply what one gets when they apply the forgetful function from $\Z$ graded vector spaces to $\Z/2$ graded vector spaces.}
 
-We introduce a sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau five-fold $X$.
+To build the $L_\infty$ algebra associated to the eleven-dimensional theory, we first introduce a sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau fivefold $X$.
 As a sheaf of super vector spaces, it will be given as the holomorphic sections of a super vector bundle that we denote by $L_X$. 
 The even part of this super vector bundle is
 \[
@@ -144,6 +156,8 @@ It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate o
 All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism. 
 On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that this BV theory is equivalent to the holomorphic (or minimal) twist of perturbative eleven-dimensional supergravity. 
 
+Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras. 
+\brian{elaborate gauge symmetries, write action, etc.}
 
 \subsection{Twisted fivebranes} 
 
@@ -212,10 +226,6 @@ In the (degenerate) BV formalism, this free theory can be packaged into the data
 \[
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
-The full space of BV fields is simply $\Pi \cL_{single}$.
-
-\subsection{Twisted Membranes}
-\surya{add}
 
 \subsection{Twisted Backreactions}
 
@@ -292,127 +302,127 @@ Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric
 
 
 
-\subsection{Supergravity at the boundary of AdS}
-
-Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\R \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
-We are furthermore placing some number of fivebranes along the locus $Z$ cut out by the zero section. 
-If we remove this locus we obtain the following manifold 
-\[
-\R \times X - \left(0 \times Z\right) \simeq Z \times \left({\rm Tot}(N_Z) - 0\right) 
-\]
-where on the right hand side ${\rm Tot}(N_Z) - 0$ is the total space of the normal bundle to $Z$ in $\R \times X$ minus the zero section.
-
-
-\subsection{Enhanced symmetry in a flat background}
-
-\parsec[s:e36]
-
-We recall the definition of the exceptional super Lie algebra $E(3|6)$. 
-We follow \cite{Kac_class, KacRudakov}.
-
-The even part of the super Lie algebra $E(3|6)$ is 
-\[
-\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
-\]
-The Lie bracket is determined by the obvious commutators and the action of vector fields on functions. 
-
-The odd part is of the form
-\[
-\Omega^{-1/2}(\Hat{D}^3) \otimes \C^2 .
-\]
-where $\Omega^{-1/2}(\Hat{D}^3)$ is the space of formal power series sections of the bundle
-\[
-\T_{\Hat{D}^3}^{*} \otimes K_{\Hat{D}^3}^{-1/2}
-\]
-where $K_{\Hat{D}^3}^{-1/2}$ is the negative square-root of the canonical bundle on $\Hat{D}^3$. 
-We will write a general element of this module as 
-\[
-\alpha = \sum_i g^i \d z_i^{-1/2} 
-\]
-where $g^i \in \cO(\Hat{D}^3)$. 
-The action by the even part of the super Lie algebra is by Lie derivative and by the fundamental $\lie{sl}(2)$ action on $\C^2$.
-We will write $r \in \C^2$ for a vector in the fundamental representation.
-Finally, there is a bracket 
-\[
-E(3|6)_- \times E(3|6)_- \to E(3|6)_+
-\]
-defined by
-\[
-[\alpha_1 \otimes r_1, \alpha_2 \otimes r_2] = - (\alpha_1 \wedge \alpha_2) \otimes (r_1 \wedge r_2) - (\d \alpha_1 \otimes \alpha_2 + \alpha_1 \otimes \d \alpha_2) \otimes (r_1 \odot r_2) .
-\]
-%The first term in the above equation arises from the composition 
+%\subsection{Supergravity at the boundary of AdS}
+%
+%Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\R \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
+%We are furthermore placing some number of fivebranes along the locus $Z$ cut out by the zero section. 
+%If we remove this locus we obtain the following manifold 
 %\[
-%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{\wedge \otimes \wedge} \Hat{\Omega}_3^{-1} \otimes \wedge^2 R \cong \fw_3 .
-%\] 
-%The second term uses the composition 
+%\R \times X - \left(0 \times Z\right) \simeq Z \times \left({\rm Tot}(N_Z) - 0\right) 
+%\]
+%where on the right hand side ${\rm Tot}(N_Z) - 0$ is the total space of the normal bundle to $Z$ in $\R \times X$ minus the zero section.
+%
+%
+%\subsection{Enhanced symmetry in a flat background}
+%
+%\parsec[s:e36]
+%
+%We recall the definition of the exceptional super Lie algebra $E(3|6)$. 
+%We follow \cite{Kac_class, KacRudakov}.
+%
+%The even part of the super Lie algebra $E(3|6)$ is 
 %\[
-%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{(\d \otimes \id) \otimes \odot} (\Hat{\Omega}_3^{1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes \Sym^2 (R) \cong \lie{sl}(2) \otimes \Hat{\cO}_3 . 
-%\] 
-
-\brian{suca enhancement following \cite{SWsuca6d}}
-
-\parsec[s:weight]
-
-
-\parsec[s:locallieE510]
-
-We have recollected how the super Lie algebra $E(5|10)$ (and its central extension) decomposes as a module for the super Lie algebra $E(3|6)$. 
-We now wish to lift this to a decomposition of factorization algebras on $\C^3$, or more generally, factorization algebras on any complex three-fold $Z$. 
-
-We outline an approach to constructing the factorization algebras via enveloping factorization algebras of certain (infinite rank) local Lie algebras on the three-fold $X$. 
-For another approach \brian{pointer}. 
-
-We have already discussed the local Lie algebra $\cL_{sugra}$ on $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a smooth one-manifold. 
-We take $X = Z \times \C^2$ and $S = \R$. 
-and view $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ as a factorization algebra on $Z \times \C^2 \times \R$. 
-Then, we can consider the pushforward of $\Obs_{sugra}$ along the map
-\[
-\pi \colon Z \times \C^2 \times \R \to Z 
-\]
-which leads to a factorization algebra $\pi_* \Obs_{sugra}$ on the three-fold $Z$. 
-
-Since $\pi$ is not a proper map (the fibers are not compact) we cannot exhibit $\pi_*\Obs_{sugra}$ as the Chevalley--Eilenberg complex of some ordinary local Lie algebra on $Z$. 
-Nevertheless we will find a pro local Lie algebra $\cL_{sugra,\pi}$ on $Z$ which is a particularly nice `small model' for this pushforward factorization algebra.
-
-A local Lie algebra enhancement for $E(3|6)$ has been given in \cite{SWsuca6d} \brian{finish}
-
-
-
-
-
-
-
-\section{Example} 
-
-Consider the holomorphic local Lie algebra on $\C^n$
-\[
-\Omega^{0,\bu}(\C^n) 
-\]
-and corresponding factorization algebra $\cF = \clie^\bu(\Omega^{0,\bu}(\C^n))$. 
-Now, we can restrict this to a factorization algebra on
-\[
-\C^n - 0 \subset \C^n
-\]
-that we denote by $\cF|_{\C^n - 0}$. 
-
-Next, consider the radial projection
-\[
-r \colon \C^n - 0 \to \R .
-\]
-Notice that $r_* (\cF|_{\C^n - 0})$ will not be the observables of any ordinary local Lie algebra.
-Nevertheless we can come up with a nice algebraic model.  
-
-Let $A_n$ be the usual dg model for the formal punctured disk $\Hat{D}^n - 0$ as defined in \cite{FHK,GWkm}.
-
-\begin{lem}
-There is an injective map of factorization algebras on $\RR_{>0}$:
-\[
-\clie^\bu(\Omega^\bu(\RR_{>0}) \otimes A_n) \to r_* (\cF|_{\C^n - 0}) 
-\]
-which is dense in cohomology.
-\end{lem}
-
-This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
+%\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
+%\]
+%The Lie bracket is determined by the obvious commutators and the action of vector fields on functions. 
+%
+%The odd part is of the form
+%\[
+%\Omega^{-1/2}(\Hat{D}^3) \otimes \C^2 .
+%\]
+%where $\Omega^{-1/2}(\Hat{D}^3)$ is the space of formal power series sections of the bundle
+%\[
+%\T_{\Hat{D}^3}^{*} \otimes K_{\Hat{D}^3}^{-1/2}
+%\]
+%where $K_{\Hat{D}^3}^{-1/2}$ is the negative square-root of the canonical bundle on $\Hat{D}^3$. 
+%We will write a general element of this module as 
+%\[
+%\alpha = \sum_i g^i \d z_i^{-1/2} 
+%\]
+%where $g^i \in \cO(\Hat{D}^3)$. 
+%The action by the even part of the super Lie algebra is by Lie derivative and by the fundamental $\lie{sl}(2)$ action on $\C^2$.
+%We will write $r \in \C^2$ for a vector in the fundamental representation.
+%Finally, there is a bracket 
+%\[
+%E(3|6)_- \times E(3|6)_- \to E(3|6)_+
+%\]
+%defined by
+%\[
+%[\alpha_1 \otimes r_1, \alpha_2 \otimes r_2] = - (\alpha_1 \wedge \alpha_2) \otimes (r_1 \wedge r_2) - (\d \alpha_1 \otimes \alpha_2 + \alpha_1 \otimes \d \alpha_2) \otimes (r_1 \odot r_2) .
+%\]
+%%The first term in the above equation arises from the composition 
+%%\[
+%%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{\wedge \otimes \wedge} \Hat{\Omega}_3^{-1} \otimes \wedge^2 R \cong \fw_3 .
+%%\] 
+%%The second term uses the composition 
+%%\[
+%%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{(\d \otimes \id) \otimes \odot} (\Hat{\Omega}_3^{1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes \Sym^2 (R) \cong \lie{sl}(2) \otimes \Hat{\cO}_3 . 
+%%\] 
+%
+%\brian{suca enhancement following \cite{SWsuca6d}}
+%
+%\parsec[s:weight]
+%
+%
+%\parsec[s:locallieE510]
+%
+%We have recollected how the super Lie algebra $E(5|10)$ (and its central extension) decomposes as a module for the super Lie algebra $E(3|6)$. 
+%We now wish to lift this to a decomposition of factorization algebras on $\C^3$, or more generally, factorization algebras on any complex three-fold $Z$. 
+%
+%We outline an approach to constructing the factorization algebras via enveloping factorization algebras of certain (infinite rank) local Lie algebras on the three-fold $X$. 
+%For another approach \brian{pointer}. 
+%
+%We have already discussed the local Lie algebra $\cL_{sugra}$ on $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a smooth one-manifold. 
+%We take $X = Z \times \C^2$ and $S = \R$. 
+%and view $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ as a factorization algebra on $Z \times \C^2 \times \R$. 
+%Then, we can consider the pushforward of $\Obs_{sugra}$ along the map
+%\[
+%\pi \colon Z \times \C^2 \times \R \to Z 
+%\]
+%which leads to a factorization algebra $\pi_* \Obs_{sugra}$ on the three-fold $Z$. 
+%
+%Since $\pi$ is not a proper map (the fibers are not compact) we cannot exhibit $\pi_*\Obs_{sugra}$ as the Chevalley--Eilenberg complex of some ordinary local Lie algebra on $Z$. 
+%Nevertheless we will find a pro local Lie algebra $\cL_{sugra,\pi}$ on $Z$ which is a particularly nice `small model' for this pushforward factorization algebra.
+%
+%A local Lie algebra enhancement for $E(3|6)$ has been given in \cite{SWsuca6d} \brian{finish}
+%
+%
+%
+%
+%
+%
+%
+%\section{Example} 
+%
+%Consider the holomorphic local Lie algebra on $\C^n$
+%\[
+%\Omega^{0,\bu}(\C^n) 
+%\]
+%and corresponding factorization algebra $\cF = \clie^\bu(\Omega^{0,\bu}(\C^n))$. 
+%Now, we can restrict this to a factorization algebra on
+%\[
+%\C^n - 0 \subset \C^n
+%\]
+%that we denote by $\cF|_{\C^n - 0}$. 
+%
+%Next, consider the radial projection
+%\[
+%r \colon \C^n - 0 \to \R .
+%\]
+%Notice that $r_* (\cF|_{\C^n - 0})$ will not be the observables of any ordinary local Lie algebra.
+%Nevertheless we can come up with a nice algebraic model.  
+%
+%Let $A_n$ be the usual dg model for the formal punctured disk $\Hat{D}^n - 0$ as defined in \cite{FHK,GWkm}.
+%
+%\begin{lem}
+%There is an injective map of factorization algebras on $\RR_{>0}$:
+%\[
+%\clie^\bu(\Omega^\bu(\RR_{>0}) \otimes A_n) \to r_* (\cF|_{\C^n - 0}) 
+%\]
+%which is dense in cohomology.
+%\end{lem}
+%
+%This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
 
 
 %\end{document}
