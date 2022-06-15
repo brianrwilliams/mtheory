@@ -1,9 +1,9 @@
-\documentclass[11pt]{amsart}%
+%\documentclass[11pt]{amsart}%
 
 %\usepackage{../macros-master}
-\usepackage{macros-fivebrane}
+%\usepackage{macros-fivebrane}
 
-\begin{document}
+%\begin{document}
 
 \section{Twisted eleven-dimensional supergravity}
 %
@@ -212,7 +212,10 @@ In the (degenerate) BV formalism, this free theory can be packaged into the data
 \[
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
-The full space of BV fields is simply $\Pi \cL_{single}$. 
+The full space of BV fields is simply $\Pi \cL_{single}$.
+
+\subsection{Twisted Membranes}
+\surya{add}
 
 \subsection{Twisted Backreactions}
 
@@ -235,13 +238,44 @@ As above, let $Z$ be a three-fold, $V\to Z$ a rank 2 holomorphic vector bundle s
 
 We begin by describing the complement of the zero section
 \[
-\R\oplus V \setminus 0\times Z
-\]. Note that $\R \times X$ is equipped with a natural transverseley-holomorphic foliation. That is, there is a rank 1 subbundle $\R\subset \R\oplus V$ together with a complex structure on the quotient. Accordingly, we may choose as fiber coordinates $t, w_{1}, w_{2}, \bar w_{1}, \bar w_{2}$ and a fiberwise partially hermitian metric $h$. Explicitly, the corresponding norm is given by
+M = \R\oplus V \setminus 0\times Z.
+\]
+
+Note that $\R \times X$ is equipped with a natural transverseley-holomorphic foliation - the complexified tangent bundle decomposes as $T_{\R}\oplus T_{Z}\oplus \bar T_{Z}$. Accordingly, we may choose as fiber coordinates $t, w_{1}, w_{2}, \bar w_{1}, \bar w_{2}$ and a fiberwise partially hermitian metric $h$. Explicitly, the corresponding norm is given by
 \begin{align*}
  \pi:  \R\times X & \to \R_{+} \\
   (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
 \end{align*}
-Letting $p : \R\times X \to Z$, we have an $S^{4}$-bundle $(\pi, p) : \R\times X - Z \to \R_{>0}\times Z$. The vertical tangent bundle of this $S^{4}$ bundle inherits a natural subbundle coming from the THF structure of the ambient manifold; the fibers of this subbundle equip
+Letting $p : \R\times X \to Z$, we have an $S^{4}$-bundle $(\pi, p) : \R\times X - Z \to \R_{>0}\times Z$. Let $V_{M}$ denote the vertical tangent bundle to $(\pi, p)$, which we view as a subbundle of the real tangent bundle $T_{M}$. The complexification $V_{M}^{\C}$ inherits some natural subbundles coming from the ambient THF structure. Indeed, letting $\iota : M \to \R\times X$ denote the standard inclusion, we may consider the pair
+\[
+  V_{M}\cap \iota^{*} T_{\R}, \ \ \ \ \ V\cap \iota^{*} T_{Z}.
+\]
+
+The fibers of the composition $V_{M}\to M\to \R_{+}\times Z$ are copies of the tangent bundle of $S^{4}$, and the corresponding fibers of $V_{M}$ are subbundles of $TS^{4}$ that equip the fiber 4-spheres with a generalized Cauchy-Riemann structure. \surya{CITE}
+
+We wish to describe the pushforward $(\pi, p)_{*}\cL_{sugra}$. The underlying sheaf of cochain complexes is given by
+
+\[
+\Omega^{\bullet}(\R_{+})\otimes \left ( \begin{tikzcd}
+\ul{\rm even} & \ul{\rm odd} \\
+\PV^{1,\bu}(Z) \ar[r, "\del_{\Omega}"] & \PV^{0,\bu}(Z)\\
+\Omega^{0,\bu}(Z) & \Omega^{1,\bu}(Z) \ar[l, "\del"]
+\end{tikzcd}
+ \right ) \otimes CR (S^{4}).
+\]
+
+
+Here $CR (S^{4})$ denotes the cohomology of the tangential Cauchy-Riemann complex of $S^{4}$ \surya{CITE}, equipped with the above Cauchy-Riemann structure. Its computation is facilitated by the following lemma:
+
+\begin{lem}
+  Let $\R^{d}\times \C^{n}$ be an affine THF manifold, and choose a partial hermitian metric. Let $S^{d+2n-1}$ denote the corresponding unit sphere, equipped with its standard generalized Cauchy-Riemann structure. Then there is a quasi-isomorphism
+
+  \[CR (S^{n+2d-1})\cong \cA^{\bu;\bu}\left ( (\R^{d}\times \C^{n})\setminus 0 \right )\]
+
+  where the right-hand-side denotes the Dolbeault-deRham complex.
+\end{lem}
+
+The cohomology of the Dolbeault-deRham complex of $\R\times \C^{2}$ is easy to describe.
 
 
 It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction 
@@ -381,4 +415,4 @@ which is dense in cohomology.
 This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
 
 
-\end{document}
+%\end{document}
