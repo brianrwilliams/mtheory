@@ -161,6 +161,11 @@ On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that thi
 Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras. 
 \brian{elaborate gauge symmetries, write action, etc.}
 
+\parsec[s:twistedsugra]
+
+In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze `twisted $M$ theory'. 
+This theory is obtained from \brian{finish}
+
 \subsection{Twisted fivebranes} 
 
 %\subsection{Twisted AdS backgrounds}
@@ -244,6 +249,45 @@ In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We 
   \item The complement of the zero section is a manifold with boundary---we impose a natural boundary condition.
 
 \end{itemize}
+
+\parsec[s:brkevin]
+
+As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \C \times C$, where $C$ is a Riemann surface, with some number of twisted `fivebranes' wrapping 
+\[
+0 \times 0 \times C \subset \R \times \C \times C .
+\]
+It will be convenient to view $\R \times \C \times C$ as the total space of the real rank two bundle $\R \oplus K_C$ over $C$. 
+Removing the zero section and deforming by the backreaction associated to $C$ corresponds to the twisted version of the $S^2 \times AdS_3$ background. 
+We proceed to describe the twisted version of states at the boundary of this version of $AdS$. 
+We first proceed before turning on the backreaction.
+
+If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection ${\rm Tot}(\R \oplus K_C) \to \R_+ \times C$ which combines the fiberwise norm with the natural bundle projection.
+Denote by $r$ a coordinate for the direction $\R_+$ normal to the brane and let $z \in C$ be a local holomorphic coordinate. 
+The fibers of this projection away from $r = 0$ are all homeomorphic to the two-sphere.
+
+Compactification along this projection results in a theory with infinitely many Kaluza--Klein modes roughly parametrized by the Cauchy--Riemann cohomology of the two sphere as a hypersurface in $\R \oplus K_C|_z \simeq \R \times \C$. 
+We will elaborate on the appearance of this sort of cohomology momentarily.
+The theory admits a natural `vacuum' boundary condition at $r=0$.
+In local coordinates, these are fields $\alpha(t,z,w)$ on the complement to the brane which extend to regular functions along the brane.
+
+The `supergravity states' are, by definition, fields which satisfy the linearized equations of motion and satisfy the vacuum boundary condition except at a single point. 
+The linearized equations of motion are simply $(\d_{dR} + \dbar) \alpha = 0$. 
+Thus, up to equivalence, all solutions to the linearized equations of motion are constant in the real variable $t$, and holomorphic in $z,w$. 
+
+Modifications of the boundary condition at the point $z = 0$ on the boundary take the form
+\[
+\alpha = f(w) \delta^{(r)}_{z=0} 
+\]
+where $f$ is some holomorphic function. 
+Here $\delta^{(r)}_{z=0}$ denotes the $r$th derivative of the $\delta$-function at $z=0$. 
+It is convenient to parameterize such boundary modifications algebraically by expressions of the form 
+\[
+\alpha_{k,r} = w^k \delta^{(r)}_{z=0} .
+\]
+
+
+
+\brian{finish}
 
 \parsec[s:brfive]
 
