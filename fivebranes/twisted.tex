@@ -252,11 +252,12 @@ In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We 
 
 \parsec[s:brkevin]
 
-As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \C \times C$, where $C$ is a Riemann surface, with some number of twisted `fivebranes' wrapping 
+As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \C \times C$, where $C$ is a Riemann surface equipped with a nonvanishing holomorphic one-form $\d z$, with some number of twisted `fivebranes' wrapping 
 \[
 0 \times 0 \times C \subset \R \times \C \times C .
 \]
 It will be convenient to view $\R \times \C \times C$ as the total space of the real rank two bundle $\R \oplus K_C$ over $C$. 
+Denote by $(t,w)$ the fiber coordinates.
 Removing the zero section and deforming by the backreaction associated to $C$ corresponds to the twisted version of the $S^2 \times AdS_3$ background. 
 We proceed to describe the twisted version of states at the boundary of this version of $AdS$. 
 We first proceed before turning on the backreaction.
@@ -274,7 +275,7 @@ The `supergravity states' are, by definition, fields which satisfy the linearize
 The linearized equations of motion are simply $(\d_{dR} + \dbar) \alpha = 0$. 
 Thus, up to equivalence, all solutions to the linearized equations of motion are constant in the real variable $t$, and holomorphic in $z,w$. 
 
-Modifications of the boundary condition at the point $z = 0$ on the boundary take the form
+Modifications of the boundary condition at the point~$z = 0$ on the boundary take the form
 \[
 \alpha = f(w) \delta^{(r)}_{z=0} 
 \]
@@ -285,15 +286,28 @@ It is convenient to parameterize such boundary modifications algebraically by ex
 \alpha_{k,r} = w^k \delta^{(r)}_{z=0} .
 \]
 
+The reason that the boundary modifications take this form can be seen by understanding in more explicit terms the vacuum boundary condition.
+The phase space at the boundary $C$ can be identified with the following cohomology
+\[
+\Omega^{0,\bu}(C) \otimes \cA^{0;\bu}(\R \times \C - 0) [1]
+\]
+where $\cA^{0;\bu}$ denotes the mixed de Rham--Dolbeault cohomology of $\R \times \C - 0$ as a manifold equipped with a transversely holomorphic foliation. 
+We refer to the section below for a reminder on this geometric structure.
 
+The phase space is equipped with a natural symplectic form given by
+\[
+\int_C \d z \oint_{S^2} \d w \, \alpha \wedge \alpha' .
+\]
+There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C \setminus 0$ which extends to zero. 
+The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$.
 
 \brian{finish}
 
 \parsec[s:brfive]
 
-We first consider the situation of backreacting some number of (twisted) fivebrans.
+We now consider the situation of backreacting some number of (twisted) fivebranes in our eleven-dimensional model.
 Let $Z$ be a three-fold that the fivebranes wrap. 
-Let $V\to Z$ a rank 2 holomorphic vector bundle such that $\wedge^{2} V \cong K_{Z}$, and let $X = \text{Tot}(V)$. 
+We also fix a rank 2 holomorphic vector bundle $V\to Z$ such that $\wedge^{2} V \cong K_{Z}$, and let $X = \text{Tot}(V)$. 
 The condition on $V$ ensures that $X$ is a Calabi-Yau five-fold---in the main body of the paper we will choose $V$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$. 
 The eleven-manifold we place our theory on is $\R\times X_V$, which we can view as the total space of the \textit{real} rank five bundle $\R\oplus V$ over $Z$.
 
