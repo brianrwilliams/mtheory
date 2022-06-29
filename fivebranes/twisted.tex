@@ -1,14 +1,17 @@
-\documentclass[11pt]{amsart}%
+%\documentclass[11pt]{amsart}%
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
 
-%\usepackage{../macros-master}
-\usepackage{macros-fivebrane}
+%
+%\begin{document}
+%
+
 \newcommand{\thfd}{\Bar{D}}
 \newcommand{\thfdel}{D} 
 
-\begin{document}
-
 \section{Twisted eleven-dimensional supergravity}
-%
+
 \subsection{A model for minimally twisted supergravity}
 
 Eleven-dimensional supergravity is the unique supersymmetric theory in eleven dimensions.
@@ -251,7 +254,7 @@ In the (degenerate) BV formalism, this free theory can be packaged into the data
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
 
-\subsection{Twisted Backreactions}
+\subsection{States in twisted supergravity}
 
 In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \brian{references}.
 
@@ -302,6 +305,7 @@ It is convenient to parameterize such boundary modifications algebraically by ex
 \[
 \alpha_{k,r} = w^k \delta^{(r)}_{z=0} .
 \]
+Linear combinations of such states form a dense subspace of all possible modifications at the boundary. 
 
 The reason that the boundary modifications take this form can be seen by understanding in more explicit terms the vacuum boundary condition.
 The phase space at the boundary $C$ can be identified with the following cohomology
@@ -317,8 +321,6 @@ The phase space is equipped with a natural symplectic form given by
 \]
 There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C - 0$ which extends to zero. 
 The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$.
-
-\brian{finish}
 
 \parsec[s:brfive]
 
@@ -582,4 +584,4 @@ Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric
 %This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
 
 
-\end{document}
+%\end{document}

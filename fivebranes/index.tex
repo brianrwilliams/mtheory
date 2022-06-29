@@ -1,25 +1,14 @@
-\documentclass[11pt]{amsart}
-
-%\usepackage{../macros-master}
-\usepackage{macros-fivebrane}
-
-\begin{document}
+%\documentclass[11pt]{amsart}
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
+%
+%\begin{document}
 
 \section{Twisted supergravity states}
 
 operators, indices, etc..
 relationship to the $S^5$ partition function.
-
-\subsection{Counting supergravity states}
-
-Generally speaking, twists of supersymmetric theories have a mixed holomorphic and topological behavior.
-
-
-\parsec[]
-
-\parsec[s:pexp]
-
-\brian{characters, plethystic, etc.}
 
 %\parsec[s:sugraops]
 %
@@ -57,19 +46,8 @@ Generally speaking, twists of supersymmetric theories have a mixed holomorphic a
 
 \subsection{Global symmetry for twisted fivebranes}
 
-%In \cite{SW6d} a symmetry by the exceptional super Lie algebra $E(3|6)$ on the holomorphic twist of the free tensor multiplet was constructed.
-%We recall the action of its even part on local operators of the holomorphic twist of the free tensor multiplet. 
-%We recount how it acts on the vector space \eqref{eqn:localfree}.
-% 
-%Recall that the even part of $E(3|6)$ consists of two summands:
-%\[
-%\Vect(\Hat{D}^3) \times \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
-%\]
-%Formal vector fields act naturally by Lie derivative on both summands in \eqref{eqn:localfree}. 
-%An $\lie{sl}(2)$-valued function acts on $\Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2$ where we view $\C^2 = {\rm span}\{r_+,r_-\}$ as the fundamental $\lie{sl}(2)$ representation. 
-
 After complexification, the~six-dimensional superconformal algebra is $\lie{osp}(8|4)$ whose even part is $\lie{so}(8) \times \lie{sp}(4)$. 
-This algebra contains the $\cN=(2,0)$ supersymmetry algebra whose odd part is four copies of $S_+$, the positive irreducible complex spin representation of $\lie{so}(6)$.
+This algebra contains the six-dimensional $\cN=(2,0)$ supersymmetry algebra whose odd part is four copies of $S_+$, the positive irreducible complex spin representation of $\lie{so}(6)$.
 The holomorphic supercharge is a supertranslation 
 \[
 Q \in \Pi S_+ \otimes \C^4 \subset \lie{osp}(8|4)
@@ -82,44 +60,49 @@ is three-dimensional (spanned by the anti-holomorphic translations).
 The supercharge $Q$ acts on $\lie{osp}(8|4)$ by commutator and the resulting cohomology will automatically act on the holomorphic twist of any six-dimensional superconformal field theory. 
 This cohomology can readily be identified with the subalgebra $\lie{osp}(6|2)$, see \cite{SWe36}. 
 
-To compute characters of local operators the fivebrane worldvolume theory we will consider the symmetry of the holomorphic twist of a six-dimensional superconormal theory with respect to the even subalgebra 
-\beqn\label{eqn:bosonic1}
-\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1) \subset \lie{osp}(6|2) .
-\eeqn
-We will understand how the twisted superconformal algebra acts on fivebranes via holographic principles.
-
 In the untwisted situation, the symmetry of solutions to eleven-dimensional supergravity in the presence of fivebranes wrapping a six-dimensional affine subspace is exactly the superconformal algebra $\lie{osp}(8|4)$ (after complexification). 
 Geometrically, this background is $AdS_7 \times S^4$. 
 In \cite{RSW} we have proposed a twisted analog of the AdS background and have shown that solutions to equations of motion of our eleven-dimensional theory in the presence of twisted fivebranes contains the symmetry algebra $\lie{osp}(6|2)$---which is precisely the twisted superconformal algebra.
+
+In this section we will compute characters of the single-particle gravitational states in our eleven-dimensional model for the geometry resulting from backreacting twisted fivebranes.
+Such states have a symmetry by the twisted superconformal algebra $\lie{osp}(6|2)$. 
+We will enumerate states via considering a Cartan in the even subalgebra
+\beqn\label{eqn:bosonic1}
+\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1) \subset \lie{osp}(6|2) .
+\eeqn
+%We will understand how the twisted superconformal algebra acts on fivebranes via holographic principles.
+
+
 
 We recall how the bosonic subalgebra \eqref{eqn:bosonic1} of this twisted superconformal algebra embeds as symmetries of the eleven-dimensional theory in this twisted background. 
 This manifests as an embedding of this bosonic subalgebra into the ghosts of the eleven-dimensional theory. 
 
 For convenience we choose coordinates on the eleven manifold as
 \[
-\C^5 \times \R = \C_z^3 \times \C_w^2 \times \R_t
+\R \times \C^5 = \R_t \times \C^2_w \times \C_z^3 
 \]
-with $z_i, i=1,2,3$ and $w_a, a=1,2$.
+with $z = (z_i), i=1,2,3$ and $w = (w_a), a=1,2$.
 The stack of fivebranes wrap $w_1=w_2=t=0$. 
 Important for us is to recall that part of the ghost system for our eleven-dimensional theory consists of divergence-free vector fields on $\C^5$ which are locally constant along $\R$. 
 
 \begin{itemize}
 \item
 The subalgebra $\lie{sl}(3)$ embeds as vector fields
-\[
+\beqn
 \sum_{ij} A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\C^5)\otimes \Omega^0(\R) , \quad (A_{ij}) \in \lie{sl}(3) .
-\]
+\eeqn
+By definition, these vector fields are automatically divergence-free.
 \item
-The subalgebra $\lie{gl}(1)$ is mapped to the element
-\[
-\sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\C^5) \otimes \Omega^0(\R)  .
-\] 
-Notice that this vector field are divergence-free and restricts to the ordinary dilation (Euler vector field) along $w=0$. 
+The generator of the subalgebra $\lie{gl}(1)$ is mapped to the element
+\beqn\label{eqn:Y}
+Y = \sum_{i=1}^3 z_i \frac{\del}{\del z_i} - \frac32 \sum_{a=1}^2 w_a \frac{\del}{\del w_a} \in \PV^{1,0}(\C^5) \otimes \Omega^0(\R)  .
+\eeqn 
+Notice that this vector field are divergence-free and restricts to the ordinary dilation (Euler vector field) along $t=w=0$. 
 \item 
 The subalgebra $\lie{sl}(2)$ ($R$-symmetry) is mapped to the triple
-\[
+\beqn
 w_1 \frac{\del}{\del w_2}, w_2 \frac{\del}{\del w_1}, \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) \in \PV^{1,0}(\C^5) \otimes \Omega^0(\R) .
-\]
+\eeqn
 \end{itemize}
 
 \begin{rmk}
@@ -132,132 +115,42 @@ We choose these explicitly as follows:
 \begin{itemize}
   \item $t_{1}, t_{2}$ denote generators for the Cartan of $\lie{sl}(3)$ which is generated by the vector fields
   \beqn
-  z_1 \del_{z_1} - z_2 \del_{z_2} , \quad z_2 \del_{z_2} - z_3 \del_{z_3}
+  h_1 = z_1 \del_{z_1} - z_2 \del_{z_2} , \quad h_2 = z_2 \del_{z_2} - z_3 \del_{z_3}.
   \eeqn
-  on~$\C^{3}_{z}$.
-  \item $r$ denotes a generator for the Cartan of a $\lie{sl}(2)$ acting by the fundamental representation on $\C^{2} = {\rm span}\{r_+,r_-\}$. 
-  \item $q$ denotes a generator for the Cartan of an additional $\lie{gl}(1)$ which acts by dilations on $\C^3$. 
+   \item $q$ denotes a generator for the Cartan of the~$\lie{gl}(1)$ which is generated by the element~$\eqref{eqn:Y}$. 
+  \item $r$ denotes a generator for the Cartan of a $\lie{sl}(2)$ which is generated by the element 
+  \beqn
+  h = \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) .
+  \eeqn
 \end{itemize}
 The weights are summarized in table \ref{tbl:weights1}.
 Recall that the coordinates $(r_1,r_2)$ are used to label the basis of $\C^2$ in the space of fields $\Gamma^{hol}(\Hat{D}^3, K^{1/2}) \otimes \C^2$. 
 
-\begin{table}
-\begin{center}
-\begin{tabular}{c c c c c c}
-  & $z_{1}$ & $z_{2}$ & $z_{3}$ & $r_{1}$ & $r_{2}$ \\
-  \hline
-  $t_{1}$ & $1$ & $-1$ & $0$ & $0$ & $0$ \\
-  $t_{2}$ & $0$ & $1$ & $-1$ & $0$ & $0$ \\
-  $r$ & $0$ & $0$ & $0$ & $1$ & $-1$ \\
-  $q$ & $-1$ & $-1$ & $-1$ & $0$ & $0$
-\end{tabular}
-\caption{Fugacities for a single fivebrane.}
-\end{center}
-\label{tbl:weights1}
-\end{table}
+%\begin{table}
+%\begin{center}
+%\begin{tabular}{c c c c c c}
+%  & $z_{1}$ & $z_{2}$ & $z_{3}$ & $r_{1}$ & $r_{2}$ \\
+%  \hline
+%  $t_{1}$ & $1$ & $-1$ & $0$ & $0$ & $0$ \\
+%  $t_{2}$ & $0$ & $1$ & $-1$ & $0$ & $0$ \\
+%  $r$ & $0$ & $0$ & $0$ & $1$ & $-1$ \\
+%  $q$ & $-1$ & $-1$ & $-1$ & $0$ & $0$
+%\end{tabular}
+%\caption{Fugacities for a single fivebrane.}
+%\end{center}
+%\label{tbl:weights1}
+%\end{table}
 
+\subsection{Global symmetry for twisted membranes}
 
+\subsection{Counting supergravity states}
 
-\subsection{Operators on a single fivebrane}
+We enumerate single particle supergravity states via computing the super trace of the operator $t_1^{h_1} t_2^{h_2} q^Y r^h$. 
+The super trace means that there is an extra factor of $(-1)^F$, where $F$ is parity (fermion number), when computing the ordinary trace.
 
-We recalled the description of the holomorphic twist of the theory on a single fivebrane in \ref{s:single}. 
-This theory exists on any complex three-fold $X$. 
-To describe the algebra of local operators we specialize to $X = \C^3$ and consider the local operators supported at $0 \in \C^3$. 
+\parsec[s:pexp]
 
-The theory on a single fivebrane is free and the underlying cochain complex of the abelian holomorphic local Lie algebra on $\C^3$ is given by 
-\beqn
-\begin{tikzcd}
-\ul{-1} & \ul{0} \\
-\Omega^{2,\bu}(\C^3) \ar[r,"\del"] & \Omega^{3,\bu}(\C^3) \\
-\Pi \Omega^{0,\bu}(\C^3, K_{\C^3}^{1/2} \otimes \C^2) . 
-\end{tikzcd} 
-\eeqn
-Here we recall the $\Z \times \Z/2$ bigrading where the differential has bidegree $(1,0)$. 
-
-
-\begin{lem}
-\label{lem:single}
-The $\Z \times \Z/2$ algebra of local operators of the holomorphic single fivebrane theory is quasi-isomorphic to the graded symmetric algebra on the linear dual of the topological vector space
-\beqn\label{eqn:localfree}
-\Omega^{2}_{cl} (\Hat{D}^3)[1] \oplus \Pi \Omega^0(\Hat{D}^3, K^{1/2}) \otimes \C^2 [1].
-\eeqn
-\end{lem}
-
-\begin{proof}
-The jet expansion at $0 \in \C^3$ determines a map from the section of the abelian holomorphic-topological local Lie algebra on $\C^3$ to the cochain complex
-\beqn
-\begin{tikzcd}
-\ul{-1} & \ul{0} \\
-\Omega^{2}(\Hat{D}^3) \ar[r,"\del"] & \Omega^{3}(\Hat{D}^3) \\
-\Pi \Omega^0(\Hat{D}^3, K^{1/2} \otimes \C^2) . 
-\end{tikzcd} 
-\eeqn
-On the formal disk all closed two-forms are automatically exact, which implies the lemma.
-\end{proof}
-
-\parsec
-
-We now move on to the computation of the character of local operators on a single fivebrane.
-According to the weights listed above and using the description of local operators in Lemma \label{lem:single} we have the following contributions to the character.
-
-\begin{itemize}
-\item Single particle operators on the odd copy of holomorphic two-forms $\Pi \Omega^{2,hol}$ contribute
-\[
-- q^2 \frac{t_1  + t_1^{-1} t_2  + t_2^{-1} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
-\]
-\item Single particle operators on the even copy of holomorphic three-forms $\Omega^{3,hol}$ contribute
-\[
-q^3 \frac{1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
-\]
-\item Single particle operators on $K^{1/2} \otimes \C^2$ contribute
-\[
-q^{3/2}\frac{(r + r^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
-\]
-\end{itemize}
-
-Putting this all together we obtain the following.
-
-\begin{prop}
-The character of local operators of the holomorphic twist of the theory on a single fivebrane is given by the following plethystic exponential
-\[
-{\rm PExp} \left[f_{tensor} (t_1,t_2,q,r) \right] .
-\]
-where the single particle index is
-\[
-f_{tensor} (t_1,t_2,q,r) = \frac{(r + r^{-1})q^{3/2} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )q^2 + q^3}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
-\]
-\end{prop}
-
-\parsec
-
-A degeneration of this character was computed in \cite{KR1}. 
-They compute the absolute (non-super) character of the module $I(0,0;1;-1)$ where they additionally specialize $t_1=t_2=r=1$. 
-In a similar method to the one used in \cite{KR1}, one can compute the specialized (super) character of $I(0,0;1;-1)$ to find
-\[
-\frac{2 q^{3/2} - 3 q^2 + q^3}{(1-q)^3}
-\]
-which agrees with our direct analysis above.
-
-\parsec
-
-There are various specializations of this character that one can consider. 
-One which is motivated from supersymmetry produces...
-
-\begin{itemize}
-\item The deformation $\d z_1 \otimes r_+$.
-\item The deformation $(z_2 \d z_3 - z_3 \d z_2) \otimes r_-$. 
-\end{itemize}
-
-Both deformations break the global Cartan subgroup down to $U(1) \times U(1)$ according to the specializations
-\beqn\label{eqn:special1}
-q = r^2 , \quad t_2 = 1 .
-\eeqn
-As one can easily check, this specialization yields the following single particle index
-\[
-f_{tensor}(t_1, 1, q, q^{1/2}) = \frac{q}{1-q} 
-\]
-which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
-Notice that although the Cartan subalgebra generated by the vector field $z_1 \del_{z_1} - z_2 \del_{z_2}$ is unbroken by this deformation, the dependence on its fugacity $t_1$ completely drops out of the expression.
+\brian{characters, plethystic, etc.}
 
 %\parsec[s:singleops]
 %
@@ -406,4 +299,4 @@ This plethystic exponential yields the Macmahon function, which is the character
 
 \parsec The same change of variables in \eqref{eqn:special2} agrees with previously computed indices for single particle states for supergravity on $AdS_{7}\times S^{4}$ \surya{...}
 
-\end{document}
+%\end{document}

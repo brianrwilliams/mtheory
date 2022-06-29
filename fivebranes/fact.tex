@@ -1,9 +1,9 @@
-\documentclass[11pt]{amsart}
-
-%\usepackage{../macros-master}
-\usepackage{macros-fivebrane}
-
-\begin{document}
+%\documentclass[11pt]{amsart}
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
+%
+%\begin{document}
 
 \section{Factorization algebras in twisted $M$ theory}
 
@@ -663,5 +663,43 @@ In this sense, $\Obs^!$ is the universal factorization algebra which couples to 
 
 \subsection{Summary}
 
+We summarize the key points of this section.
+In both the fivebrane and membrane case, we have described a factorization algebra $\Bar{\pi}_*\Obs_{sugra}$ which we think about as being the factorization algebra of observables restricted to the worldvolume of the fivebrane or membrane.
+This factorization algebra is of the form 
+\[
+\pi_*\Obs_{sugra} = \clie^\bu(\cG)
+\]
+where $\cG$ is a sheaf of $L_\infty$ algebras on the worldvolume of the fivebrane or membrane.
+While $\infty$ rank, $\cG$ is still well-behaved geometrically. 
+It is given as the sheaf of sections of a pro vector bundle. 
 
-\end{document}
+This local $L_\infty$ algebra came with a natural decomposition 
+\[
+\cG = \oplus_{j \geq -1} \cG^{(j)} .
+\]
+The subalgebra $\cG^{(\geq k)} = \oplus_{j \geq k} \cG^{(j)}$ is an ideal for every $k$. 
+This sequence of ideals induces a limit diagram of vector bundles
+\beqn\label{eqn:lim}
+0 = \cG / \cG^{(\geq -1)} \leftarrow \cG / \cG^{(\geq 0)} \leftarrow \cG / \cG^{(\geq 1)} \leftarrow \cdots ,
+\eeqn
+where $0$ is the zero vector bundle.
+For each $k$, we point out that $\cG / \cG^{(\geq k)}$ is genuinely a finite rank vector bundle on the worldvolume.
+For $N > 0$, we define 
+\beqn
+\til \cG_N \define \cG / \cG^{(\geq N-1)} 
+\eeqn
+which has the induced structure of a local $L_\infty$ algebra on the worldvolume.
+
+The limit diagram \eqref{eqn:lim} induces a diagram of factorization algebras
+\beqn\label{eqn:colim}
+\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\cG_2) \to \cdots ,
+\eeqn
+whose colimit is~$\Bar{\pi}_* \Obs_{sugra}$. 
+Here $\ul\C$ is the constant factorization algebra whose value is $\C$ on every open set. 
+There is a similar diagram upon applying~$!$-duals
+\beqn
+\ul\C \leftarrow \clie_\bu(\cG_{1,c}) \leftarrow \clie_\bu (\cG_{2,c}) \leftarrow \cdots ,
+\eeqn 
+whose limit is $\clie_\bu(\cG_c) = (\Bar{\pi}_* \Obs_{sugra})^!$. 
+
+%\end{document}
