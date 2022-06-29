@@ -11,7 +11,13 @@
 %
 \subsection{A model for minimally twisted supergravity}
 
-Eleven-dimensional supergravity is the unique...
+Eleven-dimensional supergravity is the unique supersymmetric theory in eleven dimensions.
+It plays an important role as the low energy limit of $M$ theory.
+
+Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
+In any theory of supergravity, there is an collection of bosonic ghosts which, in part, incorporate local supersymmetry.
+By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a twisting supercharge.
+
 Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
 \begin{itemize}
 \item 
@@ -26,7 +32,11 @@ In this paper we will focus primarily on the minimal twist.
 In \cite{SWspinor} a complete description of the free limit of this twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded, a point we will elaborate on further soon. 
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory in a background with global symmetry group $SU(5)$.
-Globally, the eleven-dimensional theory exists on any manifold of the form $S \times X$ where $X$ is a Calabi--Yau fivefold and $S$ is a real oriented smooth one-dimensional manifold.
+Globally, the eleven-dimensional theory exists on any manifold of the form 
+\[
+S \times X 
+\] 
+where $X$ is a Calabi--Yau fivefold and $S$ is a real oriented smooth one-dimensional manifold.
 
 In the first few sections we describe the fields and equations of motion of the eleven-dimensional theory. 
 
@@ -62,8 +72,11 @@ In local holomorphic coordinates $\mu$ admits a description like
 \[
 \mu = \mu^{\Bar{i}}_j (t;z,\zbar) \d \zbar_{\Bar{i}} \otimes \del_{z_i} .
 \]
+Part of the equations of motion for $\mu$ dictate that it be locally constant along~$S$.
+Ordinarily, for $\mu$ to describe a deformation of complex structure in the $X$ direction we would require that it satisfy the Muarer--Cartan equation.
+For twisted supergravity, however, we find a modification of this equation which involves the twisted analog of another familiar field.
 
-One of the other bosonic fields of eleven-dimensional supergravity is a three-form which is usually denoted by~$C$. 
+One of the other bosonic fields of eleven-dimensional supergravity is a three-form that we denote by~$\sf C$. 
 On $S \times X$ the space of complex-valued three-forms decomposes into de Rham--Dolbeault forms as in
 \[
 \oplus_{k+p+q=3} \Omega^k(S) \otimes \Omega^{p,q}(X) .
@@ -83,6 +96,10 @@ Thus, the components of the three-form which survive live in
 \]
 We denote a general (non-homogenous) element in the first summand by $\beta$ and an element in the second summand by $\gamma$.
 When we want to be specific by the form type we use the notation $\beta^{k;q}$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}$ for the $(k;1,q)$ component of the three-form.
+
+Along $S$, $\beta$ and $\gamma$ behave like abelian gauge fields.
+Thus, locally we can assume that the $\Omega^1(S)$ components are exact and the $\Omega^0(S)$ components are locally constant.
+
 
 \parsec[s:Lsugra]
 
@@ -298,7 +315,7 @@ The phase space is equipped with a natural symplectic form given by
 \[
 \int_C \d z \oint_{S^2} \d w \, \alpha \wedge \alpha' .
 \]
-There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C \setminus 0$ which extends to zero. 
+There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C - 0$ which extends to zero. 
 The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$.
 
 \brian{finish}

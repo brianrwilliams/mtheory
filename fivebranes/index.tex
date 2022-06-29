@@ -1,124 +1,25 @@
-%\documentclass[11pt]{amsart}
+\documentclass[11pt]{amsart}
 
 %\usepackage{../macros-master}
-%\usepackage{macros-fivebrane}
+\usepackage{macros-fivebrane}
 
-%\begin{document}
+\begin{document}
 
 \section{Twisted supergravity states}
 
 operators, indices, etc..
 relationship to the $S^5$ partition function.
 
-\subsection{Local operators in a holomorphic-topological theory}
+\subsection{Counting supergravity states}
 
 Generally speaking, twists of supersymmetric theories have a mixed holomorphic and topological behavior.
 
 
 \parsec[]
 
-%Suppose that $V$ is a translation invariant holomorphic vector bundle on $\C^n$ equipped with a $\Z \times \Z/2$ bigrading. 
-%Let $\cV$ denote its sheaf of holomorphic sections.
-%The {\em space of fields} of a holomorphic field theory on $\C^n$ is the $\Z \times \Z/2$ graded complex of vector bundles
-%\[
-%\Omega^{0,\bu}(\C^n, V) \cong \Omega^{0,\bu}(\C^n) \otimes V_0 
-%\]
-%where $V_0$ is the fiber of $V$ at $0 \in \C^n$.
-%Our grading conventions are so that $\d \zbar_i$ has bidegree $(1,0)$.
-%
-%As introduced in \cite{BWhol,LiVertex,CG2}, a {\em holomorphic field theory} is a holomorphic vector bundle $V$ as above equipped additionally with:
-%\begin{itemize}
-%\item The structure of a local (super) $L_\infty$ algebra on $V[-1]$ with structure maps given by holomorphic polydifferential operators
-%\[
-%[\cdot]_k \colon \cV[-1]^{\times k} \to \cV[1-k] .
-%\]
-%\end{itemize}
-%A {\em free} holomorphic theory has $[\cdot]_k = 0$ for $k > 1$.
-%
-%\parsec
-In part, the data of a holomorphic-topological theory in the BV formalism is prescribed by a holomorphic-topological local $L_\infty$ algebra $\cL$.
-Without loss of generality we will assume our holomorphic-topological local $L_\infty$ algebra on $M \times X$ is of the form
-\beqn\label{eqn:cL}
-\cL = \Omega^\bu (M) \hotimes \Omega^{0,\bu}(X, L) 
-\eeqn
-where $L$ is a graded holomorphic vector bundle on $X$.
-The differential is required to be of the form
-\[
-\d_{dR} + \dbar + Q^{hol}
-\]
-where $\d_{dR}$ is the de Rham differential acting on $M$, $\dbar$ is the Dolbeault operator acting on $X$, and $Q^{hol} \colon L \to L[1]$ is a holomorphic differential operator of cohomological degree $+1$. 
-The higher $L_\infty$ structure maps of the local $L_\infty$ algebra are required to be given by holomorphic polydifferential operators. 
-For more details we refer to the definitions in \cite{GRWthf}.
-
-In this situation, the factorization algebra of classical observables supported on an open set $U \subset M \times X$ is given by the Chevalley--Eilenberg cochains on the $L_\infty$ algebra $\cL(U)$. 
-We will give a concise presentation for the {\em local} operators in a topological-holomorphic theory. 
-
-Suppose that $M \times X = \R^m \times \C^n$ and suppose that the bundle $L \to \C^n$ is translation invariant with fiber $L_0$ over $0 \in \R^m \times \C^n$.
-We also assume that all structure maps of the $L_\infty$ algebra are translation invariant.
-The jet expansion at $0 \in \R^m \times \C^n$ determines a map of $L_\infty$ algebras
-\[
-\cL(\C^n \times \R^m) \to L_0 [[x_i, \d x_i,z_j, \zbar_j, \d \zbar_j]] 
-\]
-The differential on the right hand side is $\d_{dR} + \dbar + Q^{hol} = \d x_i \del_{x_i} + \d \zbar_j \del_{\zbar_j} + Q^{hol}$ where $Q^{hol}$ is some holomorphic differential operator in the $z_j$ variables. 
-Since all structure maps are given by holomorphic polydifferential operators, the canonical map 
-\[
-L_0 [[x_i, \d x_i,z_j, \zbar_j, \d \zbar_j]] \xto{\simeq} L_0 [[z_j]] 
-\]
-which sends $x_i, \d x_i,\zbar_j \d \zbar_j \mapsto 0$ is a quasi-isomorphism. 
-The only remaining differential on the right hand side is~$Q^{hol}$. 
-In summary, we see that the jet expansion at $0 \in \R^m \times \C^n$ determines a map of $L_\infty$ algebras $\cL(\R^m \times \C^n) \to L_0[[z_j]]$. 
- 
-\begin{lem}
-\label{lem:localops}
-Suppose that $\cL$ is a holomorphic-topological local Lie algebra on $\R^m \times \C^n$ and consider the factorization algebra $\Obs = \clie^\bu (\cL)$. 
-Then, the Taylor expansion map
-\[
-\cL(\C^n \times \R^m) \to L_0[[z_0,\ldots,z_n]]
-\]
-induces a quasi-isomorphism of commutative dg algebras
-\[
-\Obs(0) \simeq \clie^\bu \left( L_0[[z_1,\ldots,z_n]] \right) .
-\]
-Notice that when $\cL$ is abelian with differential $\d_{dR} + \dbar + Q^{hol}$, then there is a quasi-isomorphism
-\[
-\Obs(0) \simeq \cO \left( L_0[[z_1,\ldots,z_n]][1] \right) 
-\]
-where the right hand side is equipped with the differential $Q^{hol}$. 
-\end{lem}
-
-We recall the reader of the standard dictionary between the space of fields of a BV theory and the local $L_\infty$ algebra---
-if the local Lie algebra is $\cL$, then the space of fields is $\cL[1]$. 
-The Chevalley--Eilenberg complex of $\cL$ is then functions on the fields $\cO(\cL[1])$ equipped with the non-linear BRST operator.
-
 \parsec[s:pexp]
 
 \brian{characters, plethystic, etc.}
-
-\parsec[s:localops]
-
-We present some simple examples. 
-
-Suppose that $L$ is the trivial bundle on $\C^n$ and consider the abelian holomorphic-topological local Lie algebra 
-\[
-\Omega^\bu(\R^m) \otimes \Omega^{0,\bu}(\C^n) [-1]
-\]
-where the differential is just $\d_{dR} + \dbar$. 
-Notice that with the shift, functions on $\R^m \times \C^n$ are in cohomological degree $+1$.
-Then, the space of local operators is the symmetric algebra on the topological vector space which is linear dual to 
-\[
-\cO^{hol}(\Hat{D}^n) = \C[[z_1,\ldots,z_n]] .
-\]
-Via the $n$-dimensional residue one can identify the algebra of local operators with 
-\[
-\Sym\left(\frac{\d z_1}{z_1} \cdots \frac{\d z_n}{z_n}  \C[z_1^{-1}, \ldots , z_n^{-1}]\right) .
-\]
-
-Consider the standard torus action $\C^\times \times \cdots \C^\times$ on $\C^n$. 
-The equivariant character of local operators with respect to this symmetry is given by the plethystic exponential of the following single particle index
-\[
-\frac{1}{(1-q_1)\cdots (1-q_n)} .
-\]
-
 
 %\parsec[s:sugraops]
 %
@@ -588,4 +489,4 @@ This plethystic exponential yields the Macmahon function, which is the character
 
 \parsec The same change of variables in \eqref{eqn:special2} agrees with previously computed indices for single particle states for supergravity on $AdS_{7}\times S^{4}$ \surya{...}
 
-%\end{document}
+\end{document}

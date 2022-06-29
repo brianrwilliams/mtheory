@@ -1,26 +1,56 @@
-%\documentclass[11pt]{amsart}
+\documentclass[11pt]{amsart}
 
 %\usepackage{../macros-master}
-%\usepackage{macros-fivebrane}
+\usepackage{macros-fivebrane}
 
-%\begin{document}
+\begin{document}
 
 \section{Kac-Rudokov}
 
-In \cite{KacRudakov} an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
-We first split the coordinates on the formal five-disk as
-\[
-(z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
-\]
-In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
+A result of \cite{RSW} relates the global sections of the $L_\infty$ algebra $\cL_{sugra}$ describing the minimal twist of eleven-dimensional supergravity on $\R \times \C^5$ with a central ($L_\infty$) extension of the exceptional super Lie algebra $E(5|10)$.
+From the point of view of (twisted) extended objects in $M$ theory like membranes and fivebranes there are two very important subalgebras of $E(5|10)$: the exceptional super Lie algebras $E(1|6)$ and $E(3|6)$. 
+
+The exceptional super Lie algebras $E(1|6)$ and $E(3|6)$ play the role of infinite-dimensional `enhanced' superconformal algebras---we expect that they act on the holomorphic twist of any superconformal field theory in dimensions three and six, respectively.
+From the point of view of $M$ theory these super Lie algebras act as symmetries of supergravity backgrounds which are twisted analogs of $AdS_4 \times S^7$ and $AdS_7 \times S^4$, respectively---these arise from backreacting, in flat space, some number of twisted membranes and fivebranes, respectively. 
+
+In \cite{KR1}, a $\Z$-graded decomposition of $E(5|10)$ is defined which has the property that the weight zero subalgebra is isomorphic to the exceptional super Lie algebra $E(3|6)$.
+In this section we compare our decomposition of the $!$-dual factorization algebra of $\clie^\bu(\cL_{sugra})$ on the complex three-fold $Z = \C^3$, see \S \ref{s:flatdecomp}, to this decomposition considered in \cite{KR1}.
+
+Naturally, every other graded summand appearing in the decomposition of $E(5|10)$ is a module for $E(3|6)$---it turns out that every module that appears in this way is irreducible.
+Following the description of these irreducible modules given in \cite{KR1,KR2} we compute (un)refined characters and proceed to give a conjectural procedure for computing (un)refined fivebrane indices.
+
+There is a different decomposition of $E(5|10)$ (and its central extension) which has as its weight zero piece the subalgebra $E(1|6)$; this decomposition is natural from the point of view of membranes. 
+
+
+%an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
+%We first split the coordinates on the formal five-disk as
+%\[
+%(z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
+%\]
+%In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
+
+\subsection{The fivebrane decomposition of $E(5|10)$}
+
+%Following the prescription of twisted holography our ansatz for 
+
+We begin by turning to the algebraic side of things and start by recalling the weight decomposition of $E(5|10)$ constructed in \cite{KR1}.
+In \S \ref{s:m5localops} we return to fivebranes and use this algebraic decomposition to characterize local operators of the twisted theory.
 
 \parsec[s:e510weight]
+
+As above, we denote by $\{z_i\}$ the local coordinates along the fivebrane $Z=\C^3$ and $\{w_a\}$ the transverse holomorphic coordinates to the zero section in the fivefold ${\rm Tot}(K_{\C^3}^{1/2} \otimes \C^2)$.
+
+The even part of the super Lie algebra $E(5|10)$ is formal vector fields on the formal disk $\Hat{D}^3_z \times \Hat{D}^2_w$, whose elements we denote by $\mu$. 
+The odd part is given by the space of closed two-forms on the formal disk, whose elements we denote by $\alpha$.
+Equivalently, we can think of the space of closed two-forms as the space of equivalence classes of one-forms $\Omega^1(\Hat{D}^3_z \times \Hat{D}^2) / \text{Im}(\del)$. 
+
 Assign the following weights to the super Lie algebra $E(5|10)$. 
 \begin{itemize} 
 \item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
 \item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
 \item the parity of an element carries an additional weight of $-1$. 
 Thus, for example, the odd element $[w_1 \d z_1] \in \Pi \Omega^1(\Hat{D}^5)/{\rm Im}(\del)$ carries weight $+1 - 1 = 0$. 
+(If we think about the odd part as the space of closed two-forms then equivalently this grading translates to the one-form symbol $\d(-)$ as carrying weight $-1/2$.)
 \end{itemize} 
 The weight grading is concentrated in degrees $\geq -1$. 
 In particular, there is a decomposition of super vector spaces
@@ -29,18 +59,20 @@ E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n
 \eeqn
 with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
 It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. 
-In particular 
+In weight zero, $V_0$ is isomorphic to the super Lie algebra $E(3|6)$.
+In particular, 
 \beqn 
 \label{eqn:e36iso}
 E(3|6) \cong V_0 \subset E(5|10)
 \eeqn
-is a sub super Lie algebra and each $V_n$ is a module for $E(3|6)$. 
+is a sub super Lie algebra and each $\til{V}_{-1}, V_n, n \geq 0$ is a module for $E(3|6)$. 
 
 \parsec[s:e510central]
 
-The central extension of $E(5|10)$ is defined by the (totally even) cocycle
+As we will recall momentarily, our eleven-dimensional model is more closely related to an $L_\infty$ central extension $\Hat{E(5|10)}$ of $E(5|10)$\cite[\S 3]{RSW}. 
+The central extension of $E(5|10)$ is defined by the (totally even) three-linear cocycle
 \beqn\label{eqn:e510central}
-(\mu, \mu' , \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>_{z=w=0} .
+(\mu, \mu' , \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>_{z=w=0} \in \C .
 \eeqn
 
 We can extend the weight grading of $E(5|10)$ to a weight grading of the central extension $\Hat{E(5|10)}$ by declaring that the central term have weight $-1$.
@@ -48,6 +80,7 @@ In this way, we get a related decomposition of super vector spaces
 \beqn\label{eqn:decomp1}
 \Hat{E(5|10)} = \prod_{n \geq -1} V_n
 \eeqn
+We will refer to this as the \textit{fivebrane decomposition} of $\Hat{E(5|10)}$.
 Here $V_{-1}$ is a $\C$-extension of the module $\til V_{-1}$ defined in the decomposition above.
 Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
 In particular, we have the following. 
@@ -67,45 +100,47 @@ E(3|6) \hookrightarrow \Hat{E(5|10)} .
 %This is clearly zero since the image 
 %\end{proof}
 
-\parsec[s:localopsdecompose]
-Notice that as a consequence of this decomposition there is a corresponding decomposition of local operators of the eleven-dimensional theory on $\C^5 \times \R$. 
-By corollary \ref{cor:sugraops} there is a decomposition of $\Z/2$-graded cochain complexes 
-\begin{align*}
-\Obs_{sugra} (0) & = \clie^\bu \left( \Hat{V}_{-1} \times \prod_{n \geq 0} V_n \right) \\
-& = \Sym(\Pi \Hat{V}^*_{-1}) \otimes \bigotimes_{n \geq 0} \Sym\left(\Pi V^*_n\right) .
-\end{align*}
-The differential $Q$, which is defined using the Lie bracket on $\Hat{E(5|10)}$ is of the form
-$Q = Q_0 + \Hat{Q}$ where $Q_0$ acts on linear generators via
-\[
-Q_0 \colon V^*_n \to \oplus_{m + \ell = n} V^*_m \otimes V^*_\ell
-\]
-and $\Hat{Q}$ acts on linear generators via
-\[
-\Hat{Q} \colon \CC \to \oplus_{m + \ell + n = -1} V^*_m \otimes V^*_\ell \otimes V^*_n .
-\]
+%\parsec[s:localopsdecompose]
+%Notice that as a consequence of this decomposition there is a corresponding decomposition of local operators of the eleven-dimensional theory on $\C^5 \times \R$. 
+%By corollary \ref{cor:sugraops} there is a decomposition of $\Z/2$-graded cochain complexes 
+%\begin{align*}
+%\Obs_{sugra} (0) & = \clie^\bu \left( \Hat{V}_{-1} \times \prod_{n \geq 0} V_n \right) \\
+%& = \Sym(\Pi \Hat{V}^*_{-1}) \otimes \bigotimes_{n \geq 0} \Sym\left(\Pi V^*_n\right) .
+%\end{align*}
+%The differential $Q$, which is defined using the Lie bracket on $\Hat{E(5|10)}$ is of the form
+%$Q = Q_0 + \Hat{Q}$ where $Q_0$ acts on linear generators via
+%\[
+%Q_0 \colon V^*_n \to \oplus_{m + \ell = n} V^*_m \otimes V^*_\ell
+%\]
+%and $\Hat{Q}$ acts on linear generators via
+%\[
+%\Hat{Q} \colon \CC \to \oplus_{m + \ell + n = -1} V^*_m \otimes V^*_\ell \otimes V^*_n .
+%\]
 
 \parsec[s:e510grading]
 
+There is another auxiliary grading that we will make use of which is also defined in \cite{KR,KacClass}. 
 The super Lie algebra $E(5|10)$ carries a (non-cohomological) consistent $\Z$-grading by declaring 
 \begin{itemize}
 \item $\deg z_i = \deg w_a = 2$, so that $\deg \del_{z_i} = \deg \del_{w_a} = -2$. 
-\item $\deg \d z_i = \deg \d w_a = -1/2$.
+\item Parity carries an additional degree of $-3/2$, so that $\deg \d z_i = \deg \d w_a = -1/2$.
 \end{itemize}
 This consistent $\Z$-grading extends to the central extension of $E(5|10)$ by declaring that the central term has degree $-5$. 
-Note that this is different from the weight grading we recalled in \S \ref{s:e510weight}. 
+To distinguish this from the `weight' grading above, we will refer to this grading as `degree'.
 
 \subsection{Irreducible representations of $E(3|6)$}
-Thinking of the super Lie algebra $E(3|6)$ as the weight zero subalgebra of $\Hat{E(5|10)}$ (or even before centrally extending) then it carries an induced consistent $\Z$-grading. 
+We recall the requisite knowledge of irreducible representations of $E(3|6)$ as characterized in \cite{KR1,KR2,KR3}.
+Since we have realized the super Lie algebra $E(3|6)$ as the weight zero subalgebra of $\Hat{E(5|10)}$ we then see that it carries an induced consistent $\Z$-grading by degree. 
 Denote by $\fg_j$ the degree $j$ super subspace of $E(3|6)$.
-In particular, as a super vector space
+One can check that the algebra is supported in degrees $j \geq -2$ so that as a super vector space
 \[
-E(3|6) = \oplus_{j \geq -2} \fg_j
+E(3|6) = \prod_{j \geq -2} \fg_j
 \]
 where for small values of $j$ we have:
 \begin{itemize}
-\item $\fg_{-2} = {\rm span}\{\del_{z_i}\; | \; {i=1,2,3}\}$ which is completely even. 
-\item $\fg_{-1} = {\rm span}\{\d z_i \wedge \d w_a \; | \; i=1,2,3, a=1,2\}$ which is completely odd. 
-\item $\fg_0 \cong \lie{sl}(3) \oplus \lie{sl}(2) \oplus \lie{gl}(1)$ which is completely even. 
+\item $\fg_{-2} = {\rm span}\{\del_{z_i}\; | \; {i=1,2,3}\}$ which is a completely even super vector space. 
+\item $\fg_{-1} = {\rm span}\{\d z_i \wedge \d w_a \; | \; i=1,2,3, a=1,2\}$ which is a completely odd super vector space.
+\item $\fg_0 \cong \lie{sl}(3) \oplus \lie{sl}(2) \oplus \lie{gl}(1)$ which is a completely even super vector space.
 Explicitly, the Cartan of $\lie{sl}(3)$ is spanned by 
 \[
 h_1 = z_1 \del_{z_1} - z_2 \del_{z_2}, \quad h_2 = z_2 \del_{z_2} - z_3 \del_{z_3} .
@@ -122,20 +157,18 @@ Y = \frac23 \sum_{i=1,2,3} z_i \del_{z_i} - \sum_{a=1,2} w_a \del_{w_a} .
 
 \parsec[s:vermas]
 
+The irreducible modules that we consider are constructed via resolutions of particular Verma modules \cite{KR2} that we now recall.
 Denote by $\fg = E(3|6)$ and let 
 \[
 \fg_{<0} = \fg_{-2} \oplus \fg_{-1} , \quad \lie{g}_{>0} = \oplus_{j>0} \fg_j 
 \]
 so that $\fg = \fg_{<0} \oplus \fg_0 \oplus \fg_{>0}$. 
 Given a $\fg_0$-module $V$ let 
-\[
+\beqn\label{eqn:verma1}
 M (V) \define U(\fg) \otimes_{U(\fg_{\geq 0})} V 
-\]
+\eeqn
 be the induced $\fg$-module. 
-Notice that as super vector spaces 
-\[
-M(V) = \Sym(\fg_{<0}) \otimes_\C V .
-\]
+Notice that as super vector spaces~$M(V) = \Sym(\fg_{<0}) \otimes_\C V$.
 
 We will be interested in Verma modules associated to two particular types of $\fg_0$-modules
 \begin{align*}
@@ -153,7 +186,7 @@ V_X^{m,n} = \{f \in V_X \; | \; \sum z_i \del_{z_i} f = m f , \quad \sum w_a \de
 so that $V_X = \oplus_{m,n} V_X^{m,n}$. 
 There is a similar decomposition of the resulting Verma modules $M(V_X)$ in terms of the Verma modules $M(V_{X}^{m,n})$. 
 
-An irreducible $\fg_0$-module $F(\lambda_1,\lambda_2;\lambda_3;y)$ is characterized by a highest weight $\lambda$ whose components we denote by
+An irreducible $\fg_0$-module $F(\lambda_1,\lambda_2;\lambda_3;y)$ is characterized by a highest weight $\lambda = (\lambda_1,\lambda_2,\lambda_3,y)$ whose components we denote by
 \begin{align*}
 \lambda_i & = \lambda (h_i) \in \Z_{\geq 0}, \\
  y & = \lambda(Y)\in \C . 
@@ -169,7 +202,84 @@ To simplify notation we will write
 F_A(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 - \lambda_3) \\
 F_B(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 + \lambda_3 +2)  
 \end{align*}
-and similarly $M_A(\lambda_1,\lambda_3)$, $M_B(\lambda_1,\lambda_3)$ for the associated Verma modules. 
+and similarly $M_A(\lambda_1,\lambda_3)$, $M_B(\lambda_1,\lambda_3)$ for the associated Verma modules \eqref{eqn:verma1}.
+
+One of the main results of \cite{KR1} characterizes the irreducible quotients of these Verma modules. 
+\begin{thm}[\cite{KR1}]
+The Verma modules $M_A(\lambda_1,\lambda_3)$ and $M_A(\lambda_1,\lambda_3)$ have unique irreducible quotients denoted by $I_A(\lambda_1,\lambda_3)$ and $I_B(\lambda_1,\lambda_3)$, respectively. 
+Furthermore, for any $\lambda_1,\lambda_3 \in \Z_+$ one has $M_A(\lambda_1,\lambda_3) \ne I_A(\lambda_1,\lambda_3)$ and $M_B(\lambda_1,\lambda_3) \ne I_B(\lambda_1,\lambda_3)$.
+\end{thm}
+
+\parsec[]
+
+The last bit of algebraic input we need is a result of \cite{KR2} which uses these irreducible quotients $I_A(\lambda_1,\lambda_3)$ and $I_{B} (\lambda_1,\lambda_3)$ to characterize the $E(3|6)$-representations which appear in the decomposition of $E(5|10)$. 
+
+\begin{thm}[\cite{KR2}]
+Consider the decomposition \eqref{eqn:decomp1} of the super Lie algebra
+\beqn
+E(5|10) = \til V_{-1} \times \prod_{i \geq -1} V_n
+\eeqn
+where $V_0 \simeq E(3|6)$. 
+Then, as $E(3|6)$-modules there are isomorphisms 
+\begin{align*}
+\til V_{-1}^* & \simeq I_A(0,1) \\
+E(3|6)^* = V_0^* & \simeq I_A(1,0) \\
+V_j^* & \simeq I_B(0,j-1), \quad j \geq 1
+\end{align*}
+where $(-)^*$ denotes the topological dual.
+\end{thm}
+
+For the centrally extension of $E(5|10)$ we need to adjust things slightly. 
+The decomposition of the central extension is $\prod_{j \geq -1} V_j$, where only $V_{-1}$ differs from the weight $(-1)$ part $\til V_{-1}$ of $E(5|10)$.
+It is easy to see that as $E(3|6)$-modules $V_{-1}^*$ is a direct sum 
+\[
+V_{-1}^* = \til V_{-1}^* \oplus \C = I_A(0,1) \oplus \C
+\]
+with $\C$ the trivial module. 
+(In \cite[\S 5]{KR2} they refer to the module $V_{-1}^*$ as~$P$.)
+
+\subsection{Decomposing fivebrane local operators}
+
+The factorization algebra of classical observables for our model of twisted supergravity is $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ where $\cL_{sugra}$ is the local $L_\infty$ algebra of \S\ref{s:sugraL}. 
+As in \S\ref{s:fact}, let us take the eleven-manifold that this theory is defined on to be $\R \times {\rm Tot}(K^{1/2}_Z \otimes \C^2)$ where $Z$ is a complex three-fold.
+In \S\ref{s:??}, we defined the restriction $\Obs_{sugra}|_{Z}$ of the factorization algebra of twisted supergravity observables to the submanifold~$Z$.
+%is a dense subfactorization algebra of the pushforward of $\clie^\bu(\cL_{sugra})$ along the obvious projection. 
+
+The general prescription of twisted holography is that the $!$-dual of $\Obs_{sugra}|_Z$ is the factorization algebra of the universal defect supported along $Z$ in the eleven-dimensional theory.
+As a factorization algebra on the three-fold $Z$ the $!$-dual factorization algebra $\Obs_{sugra}|_Z$ is of the form $\clie_\bu (\Bar{\pi}_* \cL_{sugra,c})$ where $\Bar{\pi}_* \cL_{sugra}$ is an infinite-dimensional local Lie algebra on $Z$ which admits a (non-cohomological) weight grading
+\beqn\label{eqn:decomp2a}
+\Bar{\pi}_* \cL_{sugra} = \bigoplus_{n \geq -1} \Omega^{0,\bu}(Z, \cV^{(n)}) 
+\eeqn
+where $\cV^{(n)}$ is some holomorphic vector bundle on $Z$.
+
+For the remainder of this section we focus on the case $Z = \C^3$. 
+Our goal is to relate this decomposition to the purely algebraic one of \cite{KR1} that we just recalled.
+In turn, this will give us a description of fivebrane local operators supported at $0 \in \C^3$ in terms of irreducible representations of the super Lie algebra $E(3|6)$. 
+
+\parsec[]
+
+First, we recall the precise relationship between the central extension of the super Lie algebra $E(5|10)$ and the local Lie algebra~$\cL_{sugra}$ on~$\R \times \C^5$.
+The local $L_\infty$ algebra $\cL_{sugra}$ on $\R \times \C^5$ can be written as 
+\[
+\cL_{sugra} = \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^5, L) \simeq \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^5) \otimes L_0 ,
+\]
+where $L$ is a translation invariant holomorphic vector bundle and~$L_0$ its fiber over~$0 \in \C^5$.
+As in \S \ref{s:interacting}, the local $L_\infty$ algebra structure on $\cL_{sugra}$ induces an $L_\infty$ structure on the $\infty$-jets at~$0 \in \R \times \C^5$ of $\cL_{sugra}$, which we can identify using the Poincar\'e lemma with~$L_0[[z_1,\ldots,z_5]]$.
+Furthermore, the Taylor expansion map at $0 \in \R \times \C^5$ defines an $L_\infty$ map
+\[
+\cL_{sugra}(\R \times \C^5) \to L_0[[z_1,\ldots,z_5]] .
+\]
+
+In~\cite{RSW} it is shown that $L_0[[z_1,\ldots,z_5]]$ is equivalent to the super Lie algebra $\Hat{E(5|10)}$ which is the central extension of $E(5|10)$ by the cocycle in \brian{finish}. 
+There is a similar result for the restricted local $L_\infty$ algebra $\Bar{\pi}_*\cL_{sugra}$.
+
+If we take the threefold $Z = \C^3$ then of course $\R \times {\rm Tot}(K^{1/2}_Z \otimes \C^2) \simeq \R \times \C^5$. 
+
+
+
+%First, we will see how to relate the decomposition at the level of global sections of~$\cL_{sugra}$ over~$Z = \C^3$. 
+
+%In the decomposition \eqref{eqn:decomp2a} the 
 
 \subsection{Character computations}
 
@@ -268,4 +378,4 @@ There are $\lambda_3+1$ terms in the second line above .
 \parsec[s:typeBunrefinedKR]
 
 
-%\end{document}
+\end{document}
