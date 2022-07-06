@@ -376,13 +376,12 @@ In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 %\]
 
 \parsec[s:typeAunrefinedKR]
-In this section we compute the {\em unrefined} character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
 From the long exact sequence \eqref{eqn:les1} we have the following expression 
 \beqn
 \ch I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch M_A(\lambda_1+j,\lambda_3+j)  .
 \eeqn 
 We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term
-\beqn
+\beqn\label{eqn:chA1}
 \ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} R(t,r,t_1,t_2) \ch_{SU(3)}^{\lambda_1+j}(t_1,t_2) \ch_{SU(2)}^{\lambda_3+j} (r)  .
 \eeqn
 
@@ -397,11 +396,11 @@ and $SU(2)$ character
 \ch_{SU(2)}^{\lambda_3+j} (r) & = r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \\ & = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} .
 \end{align*}
 
-Given these formulas we see that we need to compute the sum
+We proceed to evaluate the sum in \eqref{eqn:chA1}
 \begin{multline}
-\sum_{j \geq 0} t^j \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
-= \frac{1}{1-t_1^{-1} t_2^{-1}} \sum_{j\geq 0} t^j \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
-= \sum_{k=0}^{\lambda_1+j} \sum_{l=0}^k 
+t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
+= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
 \end{multline}
 
 Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
@@ -411,7 +410,7 @@ Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
 
 
 \parsec
-
+In this section we compute the {\em unrefined} character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
 \beqn
 \ch M_j = R(r,t) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^j \left(r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \right) .
 \eeqn
