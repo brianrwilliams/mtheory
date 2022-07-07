@@ -350,18 +350,20 @@ is the $SU(3) \times SU(2)$ character of the representation $V_A^{\lambda_1,\lam
 In this expression $\ch_{SU(3)}^{\lambda_1}$ is the character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1,0)$ and $\ch^{\lambda_3}_{SU(2)}$ is the character of the irreducible $SU(2)$ representation of highest weight $\lambda_3$.
 
 \begin{lem}
+\label{lem:R}
 We have
 \beqn
 R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
 \eeqn
 \end{lem}
+%which is
+%\[
+%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+%\]
 
-Before moving on, we point out that in the formula for $R$ if we specialize $t_1=t_2=1$we obtain
-\[
-R(q,r) = \frac{(1-q^{1/2}r)^3 (1-q^{1/2} r^{-1})^3}{(1-q)^3} .
-\]
-Finally, in the computations of the sections that follow we will make the substitution $q = t^2$ for notational simplicity.
+In the computations of the sections that follow we will make the substitution $q = t^2$ for notational simplicity.
 
+\parsec[s:typeAunrefinedKR]
 To obtain the formula for the character we will use a cohomological description of the irreducible modules of type $A$
 \[
 I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
@@ -369,14 +371,8 @@ I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 \beqn\label{eqn:les1}
 0 \leftarrow I_A(\lambda_1,\lambda_3)\leftarrow M_A(\lambda_1,\lambda_3) \leftarrow M_A(\lambda_1+1,\lambda_3+1) \leftarrow \cdots .
-\eeqn
-%which is
-%\[
-%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
-%\]
-
-\parsec[s:typeAunrefinedKR]
-From the long exact sequence \eqref{eqn:les1} we have the following expression 
+\eeqn 
+From the long exact sequence \eqref{eqn:les1} we have the following expression for the character
 \beqn
 \ch I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch M_A(\lambda_1+j,\lambda_3+j)  .
 \eeqn 
@@ -387,7 +383,7 @@ We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term
 
 Applying the Weyl character formula we obtain the explicit expressions for the $SU(3)$ character
 \begin{align*}
-\ch_{SU(3)}^{\lambda_1+j} (t_1,t_2) & = t_1^{-\lambda_1-j} t_2^{\lambda_1 + j} \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}} 
+\ch_{SU(3)}^{\lambda_1+j} (t_1,t_2) & = t_1^{\lambda_1+j} t_2^{-\lambda_1 -j} \sum_{k=0}^{\lambda_1 + j} t_1^{-k} t_2^{2k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}} 
 %\\ 
 %& = t_1^{-2/3} t_2^{2/3} \sum_{k=0}^{\lambda_1 + j} t_1^{k/2} t_2^{-3k/2} \sum_{l = 0}^k (t_1 t_2)^l .
 \end{align*}
@@ -398,10 +394,30 @@ and $SU(2)$ character
 
 We proceed to evaluate the sum in \eqref{eqn:chA1}
 \begin{multline}
-t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
-= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
-= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
+t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) R \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
+= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ =
+\frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \times \\ 
+\left[(1-t_1 t_2^{-2})(1-(t_1^2 t_2^{-1})^{\lambda_1+j+1}) - t_1^{-1}t_2^{-1} (1-t_1^2 t_2^{-1}) (1 - (t_1 t_2^{-2})^{\lambda_1+j+1}) \right]
+%
+%\\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
 \end{multline}
+
+We split the sum $\sum_{j \geq 0}$ into four terms
+\begin{itemize}
+\item the first term is 
+\beqn
+(1-t_1t_2^{-2}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{2 \lambda_1 + j + 2} t_2^{-\lambda_1 - 1} \right) .
+\eeqn
+Evaluating the infinite series this becomes
+\begin{multline} 
+r^{\lambda_3} (1-t_1 t_2^{-2}) \left(\frac1{1-trt_1^{-1}t_2} - \frac{t_1^{2\lambda_1+2}t_2^{-\lambda_1-1}}{1 - t r t_1} \right) \\ = \frac{r^{\lambda_3}(1-t_1 t_2^{-2})}{(1-trt_1^{-1}t_2)(1 - t r t_1)} \left(1 - trt_1-t_1^{2\lambda_1+2} t_2^{-\lambda_1-1}+tr t_1^{2 \lambda_1+1} t_2^{-\lambda_2}\right)
+\end{multline}
+\item the second term is
+\beqn
+t_1^{-1} t_2^{-1}(1-t_1^2 t_2^{-1}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{\lambda_1+1} t_2^{-2\lambda_1 - j - 2}\right) .
+\eeqn
+\end{itemize}
 
 Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
 \begin{multline} 
@@ -409,20 +425,30 @@ Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
 \end{multline}
 
 
+
 \parsec
-In this section we compute the {\em unrefined} character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ where we specialize $t_1=t_2=1$.
-\beqn
-\ch M_j = R(r,t) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^j \left(r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \right) .
+In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
+In this specialization it is easy to see that 
+\[
+\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} ,
+\]
+which is just the dimension of polynomials of homogenous degree $\lambda_1+j$ in three variables. 
+
+We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:IA1}:
+\beqn\label{eqn:chA1}
+\ch M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^j \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
 \eeqn
-Notice that 
+where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$
+\[
+R(t,r) = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} ,
+\]
+which we read off readily from Lemma \ref{lem:R}
+In this expression we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$: 
 \[
 r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
 \]
-so the above expression for $\ch M_j$ reduces to
-\[
-\ch M_j = R(r,t) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} t^j .
-\]
-Observe the formal identity 
+
+Now, observe the formal identity 
 \[
 \sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p(x)}{(1-x)^3}  .
 \]
@@ -434,15 +460,21 @@ Using this identity, we evaluate
 & = \frac{t^{3 \lambda_3-2\lambda_1}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p(tr) (1-tr^{-1})^3 - r^{-\lambda_3-2} p(tr^{-1})(1-tr)^3 \right) .
 \end{align*}
 
-In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character specializes to
-\[
-\ch I_A(1,0)|_{t_1=t_2=1} = \frac{r^2}{(1-t^2)^3} \left[ t^2 (r^2 + r^{-2} + 1) - 3 t (r + r^{-1}) + 3 \right] .
-\]
+In the case that $\lambda_1=0$ and $\lambda_3=1$ we see that this specialized character simplifies to
+\beqn
+\ch I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + t^6 - 3 t^4}{(1-t^2)^3} .
+\eeqn
 
-Finally, we specialize further $t=r$ and substitute $q = t^2$ to obtain
-\[
+In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character simplifies to
+\beqn
+\ch I_A(1,0)|_{t_1=t_2=1} = \frac{(r^2 + r^{-2} + 1) - 3 t^{-1} (r + r^{-1}) + 3t^{-2} }{(1-t^2)^3} .
+\eeqn
+\brian{The $(1,0)$ character differs from $N=2$ index by a factor of $t^6 = q^3$ as expected.}
+
+Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
+\beqn
 \ch I_A(\lambda_1,\lambda_3) = \frac{q^{\lambda_3 - \lambda_1}}{1-q} .
-\]
+\eeqn
 
 \subsection{Characters for degenerate modules of type B} \label{s:typeB}
 
