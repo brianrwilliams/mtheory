@@ -284,7 +284,11 @@ and similarly $M_A(\lambda_1,\lambda_3)$, $M_B(\lambda_1,\lambda_3)$ for the ass
 
 One of the main results of \cite{KR1} characterizes the irreducible quotients of these Verma modules. 
 \begin{thm}[\cite{KR1}]
-The Verma modules $M_A(\lambda_1,\lambda_3)$ and $M_A(\lambda_1,\lambda_3)$ have unique irreducible quotients denoted by $I_A(\lambda_1,\lambda_3)$ and $I_B(\lambda_1,\lambda_3)$, respectively. 
+The Verma modules $M_A(\lambda_1,\lambda_3)$ and $M_A(\lambda_1,\lambda_3)$ have unique irreducible quotients denoted by 
+\beqn
+I_A(\lambda_1,\lambda_3), \quad \text{and} \quad I_B(\lambda_1,\lambda_3)
+\eeqn
+respectively. 
 Furthermore, for any $\lambda_1,\lambda_3 \in \Z_+$ one has $M_A(\lambda_1,\lambda_3) \ne I_A(\lambda_1,\lambda_3)$ and $M_B(\lambda_1,\lambda_3) \ne I_B(\lambda_1,\lambda_3)$.
 \end{thm}
 
@@ -318,68 +322,93 @@ V_{-1}^* = \til V_{-1}^* \oplus \C = I_A(0,1) \oplus \C
 with $\C$ the trivial module. 
 (In \cite[\S 5]{KR2} they refer to the module $V_{-1}^*$ as~$P$.)
 
-\subsection{Characters for degenerate modules of type $A$} \label{s:typeA}
+\subsection{Modified characters for degenerate modules of type $A$} \label{s:typeA}
 
 The (super) character of an $E(3|6)$-module $M$ is given by the formula
 \[
-\ch \, M  \define {\rm tr}_M q^{Y} t_1^{h_1} t_2^{h_2} r^{h_3} .
+\ch (M) \define {\rm tr}_M q^{Y} t_1^{h_1} t_2^{h_2} r^{h_3} .
 \]
-Our goal in this section is to compute the explicit formula for the character of the degenerate modules $I_A(\lambda_1,\lambda_3)$ of type $A$ which are irreducible quotients of the Verma modules $M_A(\lambda_1,\lambda_3)$. 
+Our goal in this section is to compute the explicit formula for a modified version of this character in the case of the degenerate modules $I_A(\lambda_1,\lambda_3)$ of type $A$ which are irreducible quotients of the Verma modules $M_A(\lambda_1,\lambda_3)$. 
 
 As a super vector space, the Verma module $M(V)$ associated to a $\fg_0$-module $V$ is 
 \[
 M(V) = \Sym(\lie{g}_{<0}) \otimes V .
 \]
-
-%Recall that $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$. 
-
-For type $A$ degenerate modules we start with the $\fg_0$-module 
+We define the modified character of a Verma module by the formula
 \[
-V = V^{\lambda_1,\lambda_3}_A \subset \C[z_i,w_a]
-\] 
-given by polynomials of homogenous degree $\lambda_1,\lambda_3$ in the variables $z_i,w_a$ respectively.
-There is thus a simple expression for the character 
-\beqn\label{eqn:MA}
-\ch\, {M_A(\lambda_1,\lambda_3)} = q^{-\frac32 y} R(q,r,t_1,t_2) \cdot \ch (V_A^{\lambda_1,\lambda_3}) 
-\eeqn
-where $R = \ch \Sym(\fg_{<0})$ and 
-\[
-\ch(V_A^{\lambda_1,\lambda_3}) = \ch_{SU(3)}^{\lambda_1}(t_1,t_2) \ch_{SU(2)}^{\lambda_3} (r) 
+\til{\ch} \, M(V) = \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) \cdot \ch (V) \left(q^{-1}, t_1^{-1}, t_2^{-1}, r^{-1} \right)  .
 \]
-is the $SU(3) \times SU(2)$ character of the representation $V_A^{\lambda_1,\lambda_3}$. 
-In this expression $\ch_{SU(3)}^{\lambda_1}$ is the character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1,0)$ and $\ch^{\lambda_3}_{SU(2)}$ is the character of the irreducible $SU(2)$ representation of highest weight $\lambda_3$.
+Define
+\[
+R(q,t_1,t_2,r) \define \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) ,
+\]
+so that the character of the Verma module $M(V)$ is a product of $R$ with the character of the $\fg_0$ representation $V$.
+%Recall that $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$.
 
-\begin{lem}
-\label{lem:R}
-We have
-\beqn
-R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
-\eeqn
-\end{lem}
-%which is
+Our definition of the modified character relies on a cohomological description of the irreducible modules $I_A(\lambda_1,\lambda_3)$ of type~$A$.
 %\[
-%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+%I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
 %\]
-
-In the computations of the sections that follow we will make the substitution $q = t^2$ for notational simplicity.
-
-\parsec[s:typeAunrefinedKR]
-To obtain the formula for the character we will use a cohomological description of the irreducible modules of type $A$
-\[
-I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
-\]
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 \beqn\label{eqn:les1}
 0 \leftarrow I_A(\lambda_1,\lambda_3)\leftarrow M_A(\lambda_1,\lambda_3) \leftarrow M_A(\lambda_1+1,\lambda_3+1) \leftarrow \cdots .
 \eeqn 
 From the long exact sequence \eqref{eqn:les1} we have the following expression for the character
 \beqn
+\label{eqn:chA1}
 \ch I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch M_A(\lambda_1+j,\lambda_3+j)  .
 \eeqn 
-We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term
-\beqn\label{eqn:chA1}
+Like the Verma modules, we can defined a modified version of this character by the formula
+\beqn
+\label{eqn:chA2}
+\til \ch \, I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \til\ch \, M_A(\lambda_1+j,\lambda_3+j)  .
+\eeqn 
+
+We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term the sum in \eqref{eqn:chA1}
+\beqn\label{eqn:chA3}
 \ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} R(t,r,t_1,t_2) \ch_{SU(3)}^{\lambda_1+j}(t_1,t_2) \ch_{SU(2)}^{\lambda_3+j} (r)  .
 \eeqn
+And similarly for the sum in \eqref{eqn:chA2}.
+
+The first ingredient in determining an explicit formula for the modified character of type $A$ Verma modules is a direct calculation.
+\begin{lem}
+\label{lem:R}
+Then
+%\beqn
+%R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
+%\eeqn
+\beqn
+R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
+\eeqn
+\end{lem} 
+
+Recall that the type $A$ degenerate modules are defined by induction from the $\fg_0$-module 
+\[
+V = V^{\lambda_1,\lambda_3}_A \subset \C[z_i,w_a]
+\] 
+given by polynomials of homogenous degree $\lambda_1,\lambda_3$ in the variables $z_i,w_a$ respectively.
+Thus, we have the following explicit presentation for the modified character of type $A$ modules. 
+\begin{prop}
+One has
+\beqn\label{eqn:MA}
+\til \ch \, {M_A(\lambda_1,\lambda_3)} = q^{y} R(q,r,t_1,t_2) \cdot \ch (V_A^{\lambda_1,\lambda_3}) (t_1^{-1},t_2^{-1},r^{-1})
+\eeqn
+where $y = \lambda_1 - \frac32 \lambda_3$, $R$ is as in Lemma \ref{lem:R} and 
+\beqn\label{eqn:su}
+\ch(V_A^{\lambda_1,\lambda_3}) = \ch_{SU(3)}^{\lambda_1}(t_1,t_2) \ch_{SU(2)}^{\lambda_3} (r) 
+\eeqn
+is the $SU(3) \times SU(2)$ character of the representation $V_A^{\lambda_1,\lambda_3}$. 
+\end{prop}
+
+In expression \eqref{eqn:su}, $\ch_{SU(3)}^{\lambda_1}$ denotes the character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1,0)$ and $\ch^{\lambda_3}_{SU(2)}$ is the character of the irreducible $SU(2)$ representation of highest weight $\lambda_3$.
+
+
+%which is
+%\[
+%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+%\]
+
+In the computations of the sections that follow we will make the substitution $q = t^2$ for notational simplicity.
 
 Applying the Weyl character formula we obtain the explicit expressions for the $SU(3)$ character
 \begin{align*}
@@ -428,21 +457,33 @@ Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
 
 \parsec
 In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
+
+\begin{prop}
+\label{prop:chA}
+Let $\lambda_1,\lambda_3 \geq 0$. 
+The $t_1=t_2=1$ specialization of the modified character $\til \ch \, I_A(\lambda_1,\lambda_3)$ is given by the expression
+\beqn
+\frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) 
+\eeqn
+where $p_{\lambda_1}(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
+\end{prop}
+
+\begin{proof}
 In this specialization it is easy to see that 
 \[
 \ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} ,
 \]
 which is just the dimension of polynomials of homogenous degree $\lambda_1+j$ in three variables. 
 
-We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:IA1}:
-\beqn\label{eqn:chA1}
-\ch M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{3 \lambda_3 - 2 \lambda_1} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^j \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
+We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:chA2}:
+\beqn
+\til\ch M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^{-j} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
 \eeqn
 where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$
 \[
 R(t,r) = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} ,
 \]
-which we read off readily from Lemma \ref{lem:R}
+which we read off from Lemma \ref{lem:R}.
 In this expression we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$: 
 \[
 r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
@@ -450,46 +491,89 @@ r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambd
 
 Now, observe the formal identity 
 \[
-\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p(x)}{(1-x)^3}  .
+\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p_{\lambda_1}(x)}{(1-x)^3}  
 \]
-where $p(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
-
+where $p_{\lambda_1}(x)$ is as in the statement of the proposition.
 Using this identity, we evaluate
 \begin{align*}
-\ch I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} & = \frac{R(r,t) t^{3 \lambda_3 - 2 \lambda_1}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p(tr)}{(1-tr)^3} - \frac{r^{-\lambda_3-2}p(tr^{-1})}{(1-tr^{-1})^3} \right) \\ 
-& = \frac{t^{3 \lambda_3-2\lambda_1}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p(tr) (1-tr^{-1})^3 - r^{-\lambda_3-2} p(tr^{-1})(1-tr)^3 \right) .
+\til \ch \, I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} & = \frac{R(r,t) t^{2 \lambda_1-3 \lambda_3}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p_{\lambda_1}(t^{-1}r)}{(1-t^{-1}r)^3} - \frac{r^{-\lambda_3-2}p_{\lambda_1}(t^{-1}r^{-1})}{(1-t^{-1}r^{-1})^3} \right) \\ 
+& = \frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) .
 \end{align*}
+This completes the proof
+\end{proof}
 
 In the case that $\lambda_1=0$ and $\lambda_3=1$ we see that this specialized character simplifies to
 \beqn
-\ch I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + t^6 - 3 t^4}{(1-t^2)^3} .
+\til \ch \, I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + 1 - 3 t^2}{(1-t^2)^3} .
 \eeqn
 
 In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character simplifies to
 \beqn
-\ch I_A(1,0)|_{t_1=t_2=1} = \frac{(r^2 + r^{-2} + 1) - 3 t^{-1} (r + r^{-1}) + 3t^{-2} }{(1-t^2)^3} .
+\til \ch \, I_A(1,0)|_{t_1=t_2=1} = \frac{t^6(r^2 + r^{-2} + 1) - 3 t^7 (r + r^{-1}) + 3t^8 }{(1-t^2)^3} .
 \eeqn
-\brian{The $(1,0)$ character differs from $N=2$ index by a factor of $t^6 = q^3$ as expected.}
 
 Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
 \beqn
-\ch I_A(\lambda_1,\lambda_3) = \frac{q^{\lambda_3 - \lambda_1}}{1-q} .
+\til \ch \, I_A(\lambda_1,\lambda_3) = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
 \eeqn
 
 \subsection{Characters for degenerate modules of type B} \label{s:typeB}
 
 There is a cohomological description of the irreducible modules of type B similar to the type A case above.
-Let $I_B(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3+2)$. 
-We are only interested in the case $\lambda_1 = 0$ with $\lambda_3=0,1,\ldots$.  
+Recall that the degenerate module of type $B$ is $I_B(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3+2)$. 
+We are only interested in the case $\lambda_1 = 0$ with $\lambda_3\geq 0$.  
 In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
 \begin{multline}\label{eqn:les1}
-0 \leftarrow  I_B(0,\lambda_3) \leftarrow \\ \leftarrow M(0,0,\lambda_3;\lambda_3 + 2) \leftarrow  M(1,0,\lambda_3-1;\frac{11}{3} - \lambda_3)  \leftarrow \cdots \leftarrow M(\lambda_3, 0, 0;\frac23 \lambda_3 +2) \leftarrow \\
- \leftarrow M(\lambda_3+2, 0, 0; \frac23 \lambda_3 + \frac43) \leftarrow M(\lambda_3+3, 0, 1; \frac23 \lambda_3 + 2) \leftarrow \cdots .
+0 \leftarrow  I_B(0,\lambda_3) \\ \leftarrow M_B(0,\lambda_3) \leftarrow  M_B(1,\lambda_3-1)  \leftarrow \cdots \leftarrow M(\lambda_3, 0) \\
+ \leftarrow M_A(\lambda_3+2, 0) \leftarrow M_A(\lambda_3+3,1) \leftarrow \cdots .
 \end{multline}
 There are $\lambda_3+1$ terms in the second line above .  
+Notice that the bottom line is simply the resolution for the module $I(\lambda_3+2, 0)$ of type $A$. 
+Using this long exact sequence we obtain a simple formula for the character of type $B$ modules
+\beqn\label{eqn:chB1}
+\ch I_B(0,\lambda_3) = \sum_{k=0}^{\lambda_3} \ch M_B(k, \lambda_3-k) + \ch I_A(\lambda_3+2,0) .
+\eeqn
+And similarly we have the following formula for the modified character
+\beqn\label{eqn:chB2}
+\til \ch \, I_B(0,\lambda_3) = \sum_{k=0}^{\lambda_3}\til \ch\, M_B(k, \lambda_3-k) + \til \ch \, I_A(\lambda_3+2,0) .
+\eeqn
+
+\begin{prop}
+\label{prop:chB}
+The modified character $\til \ch \, I_B(0,\lambda_3)$ is given by the expression
+\begin{multline}
+t^{2 \lambda_3 + 6} R(t,r) \frac{1-t^{\lambda_3+1}}{1 - t} \\ + \frac{t^{2\lambda_3 + 10}}{(1-t^2)^3 (1-r^{-2})} \left(p_{\lambda_3+2} (t^{-1} r) (1 - t^{-1} r^{-1})^3 - r^{-2} p_{\lambda_3}(t^{-1} r^{-1})(1-t^{-1}r)^3 \right) 
+\end{multline}
+where $p_{\lambda_3 + 2}(x)$ is as in Proposition \ref{prop:chA}. 
+\end{prop}
+
+\begin{proof}
+We have already computed $\til \ch \, I_A(\lambda_1,\lambda_3)$ for any pair $(\lambda_1,\lambda_3)$ above. 
+Thus, it suffices to compute the modified character of the type $B$ Verma modules.
+
+As above, the modified character for the Verma module $M_B(k,\lambda_3-k)$, for $0 \leq k \leq \lambda_3$ is given by
+\[
+\til \ch \, M_B(k,\lambda_3-k)|_{t_1=t_2=1} = t^{3 \lambda_3 - k + 6} R(t,r) .
+\]
+Thus, \eqref{eqn:chB2} simplifies to 
+\[
+\til \ch \, I_B(0,\lambda_3) = t^{2 \lambda_3 + 6} R(t,r) \frac{1-t^{\lambda_3+1}}{1 - t} + \til \ch \, I_{A}(\lambda_3+2,0) .
+\]
+The result now follows from Proposition \ref{prop:chA}.
+\end{proof}
+
 
 
 \parsec[s:typeBunrefinedKR]
 
+
+For integer $N$ let 
+\[
+p_{N}(x) = \frac12 \left(N^2 x^2 + N x^2 - 2N^2x -4 N x + N^2 + 3N +2\right) .
+\]
+Then the index for $N > 2$ fivebranes after specializing the $SU(3)$ fugacities is
+\begin{multline}
+t^{2 N} \frac{(1-tr)^3 (1-tr^{-1})^3 (1-t^{\lambda_3+1})}{(1-t^2)^3(1 - t)} \\ + \frac{t^{2N + 4}}{(1-t^2)^3 (1-r^{-2})} \left(p_{N-1} (t^{-1} r) (1 - t^{-1} r^{-1})^3 - r^{-2} p_{N-1}(t^{-1} r^{-1})(1-t^{-1}r)^3 \right) 
+\end{multline}
 
 \end{document}
