@@ -18,7 +18,8 @@ Eleven-dimensional supergravity is the unique supersymmetric theory in eleven di
 It plays an important role as the low energy limit of $M$ theory.
 
 Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
-In any theory of supergravity, there is an collection of bosonic ghosts which, in part, incorporate local supersymmetry.
+In any theory of supergravity, the action of supersymmetry is gauged. When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
+
 By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a twisting supercharge.
 
 Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
@@ -195,10 +196,13 @@ where $Y$ is a holomorphic-symplectic surface and $S$ is a real oriented smooth 
 The fields of the theory are given by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
 \beqn
 \cL_{5d} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
-\eeq.
+\eeq
 
-The sheaf of holomorphic functions on $Y$ has a natural lie bracket given by the holomorphic poisson bracket. This can be extended in a graded way to the entire Dolbeault complex; \cL_{5d} is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
-The five-dimensional theory
+The sheaf of holomorphic functions on $Y$ has a natural lie bracket given by the holomorphic poisson bracket $\{-,-\}_{Y}$. This can be extended in a graded way to the entire Dolbeault complex; $\cL_{5d}$ is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
+
+Wedging and integrating against the holomorphic volume form on $Y$ defines an odd pairing on $\cL_{5d}$; together with the above, this equips $\cL_{5d}$ with the structure of a $\Z/2$-graded BV theory.
+
+The equations of motion of $\cL_{5d}$ describe locally-constant families of deformations of the fixed holomorphic Poisson structure on $Y$.
 
 \subsection{Twisted fivebranes} 
 
@@ -266,6 +270,29 @@ We describe this Poisson bivector explicitly
 In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z \times \Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
+\]
+
+\subsection{Twisted membranes}
+
+The theory on a stack of $N$ membranes probing the origin in $\C^{4}/\Z_{k}$ is expected to be described by the ABJM theory - a 3d $\cN=6$ superconformal gauge theory with gauge group $U(N)\times U(N)$ at levels $\pm k$ respectively \cite{} For $k=1,2$ the theory witnesses an enhancement to $\cN=8$ due to a nonperturbative effect. \cite{}
+
+Twists of $\cN=8$ gauge theories in 3d were classified in \cite{}. Moreover, the ABJM theories are examples of 3d $\cN=2$ Chern-Simons matter theories, whose twists were studied in \cite{}. Twists of such occur in two inequivalent classes, similarly labeled by the dimension of the subspace of translations given by the image of the twisting supercharge:
+
+\begin{itemize}
+  \item The minimal twist. This twist leaves 2 real directions invariant. The theory can be defined on a 3-manifold of the form $S\times \Sigma$ where $S$ is a smooth oriented one-manifold and $\Sigma$ is a Riemann surface equipped with a fourth-root of its canonical bundle.
+
+  \item The nonminimal twists. There are two such twists, both of which leave 3 real directions invariant, and are permuted under 3d mirror symmetry.
+\end{itemize}
+
+\parsec
+
+We briefly recall the description of the minimal twist of the ABJM theory for $N=1$.
+
+\surya{fields, gauge symmetries, etc}
+
+In the BV formalism, this free theory can be packaged into the data of an abelian $\Z$ graded local Lie algebra on $\Sigma$ which takes the form
+\[
+\Omega^{\bu}(S)\times \left (\Omega^{0,\bu}(\Sigma) \oplus \Pi \Omega^{0,\bu} (\Sigma )\right ) \otimes \C^{4}.
 \]
 
 \subsection{States in twisted supergravity}
