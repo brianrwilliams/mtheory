@@ -10,7 +10,7 @@
 \newcommand{\thfd}{\Bar{D}}
 \newcommand{\thfdel}{D} 
 
-\section{Twisted eleven-dimensional supergravity}
+\section{Twists in dimensions eleven, six, and three}
 
 \subsection{A model for minimally twisted supergravity}
 
@@ -18,10 +18,11 @@ Eleven-dimensional supergravity is the unique supersymmetric theory in eleven di
 It plays an important role as the low energy limit of $M$ theory.
 
 Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
-In any theory of supergravity, there is an collection of bosonic ghosts which, in part, incorporate local supersymmetry.
-By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a twisting supercharge.
+In any theory of supergravity, the action of supersymmetry is gauged. When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
 
-Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge. Such backgrounds have the feature that the worldvolume theories of branes in their presence are twisted.
+
+Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the dimension of the subspace of translations spanned by the image of $Q$.
 \begin{itemize}
 \item 
 The minimal twist. 
@@ -183,28 +184,61 @@ Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otime
 
 \parsec[s:twistedsugra]
 
-In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze twists of $M$ theory, starting with an $\Omega$-deformation of the nonminimal twist of eleven-dimensional supergravity. Using a type IIA description, the theory was shown to admit a description in terms of a holomorphic-topological gauge theory in five dimensions with a well-behaved quantization.
+\surya{ FINISH }
 
-The five-dimensional theory is also a $\Z/2$-graded within the BV formalism and exists on any manifold of the form
+In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze holography for membranes and fivebranes in eleven dimensional supergravity, starting with an $\Omega$-deformation of the nonminimal twists.
+
+The $\Omega$-deformation of the nonminimal twist of the eleven dimensional supergravity was constructed directly from the physical theory and was argued to admit a description in terms of a holomorphic-topological gauge theory in five dimensions.
+
+The five-dimensional theory is $\Z$-graded within the BV formalism and exists on any manifold of the form
 \[
   S\times Y
 \]
 
 where $Y$ is a holomorphic-symplectic surface and $S$ is a real oriented smooth one-dimensional manifold.
 
-The fields of the theory are given by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
+As a gauge theory, the fundamental field is a one-form. The space of complex-valued one-forms on $S\times Y$ decomposes into de Rham-Dolbeault forms as
+\[
+\oplus_{k+p+q=1}\Omega^{k}(S)\otimes \Omega^{p,q}(Y).
+\]
+
+and we continue to label elements of the homogeneous pieces as $(k;p,q)$ forms. The fields of ghost number zero are those one-forms with $p=0$. We will use the notation $\alpha^{k;q}$ with $k+q=1$ for the corresponding component of the one-form.
+
+These fields are subject to the equations of motion
+
+\beqn
+0 = \dbar \alpha^{0;1} + \frac{1}{2}\{\alpha^{0;1}, \alpha^{0;1}\}_Y
+0 = d\alpha^{0;1}+\dbar \alpha^{1;0}+ \{\alpha^{0;1}, \alpha^{1;0}\}_Y
+\eeqn
+
+where $\{-,-\}_{Y}$ denotes the holomorphic Poisson bracket on $Y$.
+
+We may get a better feeling for these equations upon giving $\alpha^{{1;0}}$ a VEV such that $\dbar\alpha^{{1;0}}=0$. The secnod equation then reads
+
+\beqn
+0 = d\alpha^{0;1} + \{\alpha^{1;0}, \alpha^{0;1}\}
+\eqn
+
+The fields $\alpha^{{k;q}}$ have a gauge symmetry determined by a ghost $b \in \Omega^{0}(S\times Y)$. Explicitly, the corresponding infinitessimal gauge transformation is given by
+\[
+\alpha^{k;q}\mapsto \alpha^{k;q} + db+\dbar b + \{b, \alpha^{k;q}\}_{Y}
+\].
+
+In the BV formalism, the fields are described by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
+
 \beqn
 \cL_{5d} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
-\eeq.
+\eeqn
 
-The sheaf of holomorphic functions on $Y$ has a natural lie bracket given by the holomorphic poisson bracket. This can be extended in a graded way to the entire Dolbeault complex; \cL_{5d} is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
-The five-dimensional theory
+The holomorphic poisson bracket $\{-,-\}_{Y}$ can be extended to define a lie bracket on the entire Dolbeault complex; $\cL_{5d}$ is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
+
+Wedging and integrating against the holomorphic volume form on $Y$ defines an odd pairing on $\cL_{5d}$; together with the above, this equips $\cL_{5d}$ with the structure of a $\Z/2$-graded BV theory.
 
 \subsection{Twisted fivebranes} 
 
 %\subsection{Twisted AdS backgrounds}
 
-Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+It is expected that the theory on a stack of $N$ fivebranes in flat space has $\cN=(2,0)$ superconformal symmetry. Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
 \begin{itemize}
 \item 
 The holomorphic, or minimal, twist. 
@@ -216,10 +250,7 @@ This twist leaves five real directions invariant.
 The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface. 
 \end{itemize}
 
-By standard arguments, the theory on a stack of $N$ fivebranes in flat space is a theory with $\cN=(2,0)$ supersymmetry. 
-In later sections we provide arguments using the technology of twisted holography developed by Costello, Gaiotto, Li, and Paquette \cite{??} to provide a conjectural description of the twist of the theory for general $N > 1$. 
-An explicit characterization of the holomorphic and non-minimal twists of a single fivebrane theory has been given in \cite{SWtensor}. 
-We briefly recall this description. 
+An explicit characterization of these twists for $N=1$ has been given in \cite{SWtensor}; we recall the description of the minimal twist.
 
 \parsec[s:single]
 
@@ -262,215 +293,34 @@ where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$.
 This theory notoriously does not admit a Lagrangian description. 
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
 We describe this Poisson bivector explicitly
-
+\surya{ FINISH }
 In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z \times \Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
 
-\subsection{States in twisted supergravity}
+\subsection{Twisted membranes}
 
-In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \brian{references}.
+The theory on a stack of $N$ membranes probing the origin in $\C^{4}/\Z_{k}$ is expected to be described by the ABJM theory - a 3d $\cN=6$ superconformal gauge theory with gauge group $U(N)\times U(N)$ at levels $\pm k$ respectively \cite{} For $k=1,2$ the theory witnesses an enhancement to $\cN=8$ due to a nonperturbative effect. \cite{}
 
-In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We recall this construction, adapted to a slightly more global situation. We will consider the eleven-dimensional theory on 11-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a 3-step procedure:
+Twists of $\cN=8$ gauge theories in 3d were classified in \cite{}. Moreover, the ABJM theories are examples of 3d $\cN=2$ Chern-Simons matter theories, whose twists were studied in \cite{}. Twists of such occur in two inequivalent classes, similarly labeled by the dimension of the subspace of translations given by the image of the twisting supercharge:
 
 \begin{itemize}
-  \item Place the eleven dimensional theory on the complement of the zero section. To do so, we will wish to describe the complement of the zero-section in a way that facilitates natural operations on holomorphic-topological local $L_{\infty}$-algebras.
+  \item The minimal twist. This twist leaves 2 real directions invariant. The theory can be defined on a 3-manifold of the form $S\times \Sigma$ where $S$ is a smooth oriented one-manifold and $\Sigma$ is a Riemann surface equipped with a fourth-root of its canonical bundle.
 
-  \item Deform the theory on the complement of the zero section by a certain Maurer--Cartan element. 
-  The Maurer--Cartan element is thought of as the flux sourced by branes wrapping the zero section.
-
-  \item The complement of the zero section is a manifold with boundary---we impose a natural boundary condition.
-
+  \item The nonminimal twists. There are two such twists, both of which leave 3 real directions invariant, and are permuted under 3d mirror symmetry.
 \end{itemize}
 
-\parsec[s:brkevin]
-
-As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \C \times C$, where $C$ is a Riemann surface equipped with a nonvanishing holomorphic one-form $\d z$, with some number of twisted `fivebranes' wrapping 
-\[
-0 \times 0 \times C \subset \R \times \C \times C .
-\]
-It will be convenient to view $\R \times \C \times C$ as the total space of the real rank two bundle $\R \oplus K_C$ over $C$. 
-Denote by $(t,w)$ the fiber coordinates.
-Removing the zero section and deforming by the backreaction associated to $C$ corresponds to the twisted version of the $S^2 \times AdS_3$ background. 
-We proceed to describe the twisted version of states at the boundary of this version of $AdS$. 
-We first proceed before turning on the backreaction.
-
-If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection ${\rm Tot}(\R \oplus K_C) \to \R_+ \times C$ which combines the fiberwise norm with the natural bundle projection.
-Denote by $r$ a coordinate for the direction $\R_+$ normal to the brane and let $z \in C$ be a local holomorphic coordinate. 
-The fibers of this projection away from $r = 0$ are all homeomorphic to the two-sphere.
-
-Compactification along this projection results in a theory with infinitely many Kaluza--Klein modes roughly parametrized by the Cauchy--Riemann cohomology of the two sphere as a hypersurface in $\R \oplus K_C|_z \simeq \R \times \C$. 
-We will elaborate on the appearance of this sort of cohomology momentarily.
-The theory admits a natural `vacuum' boundary condition at $r=0$.
-In local coordinates, these are fields $\alpha(t,z,w)$ on the complement to the brane which extend to regular functions along the brane.
-
-The `supergravity states' are, by definition, fields which satisfy the linearized equations of motion and satisfy the vacuum boundary condition except at a single point. 
-The linearized equations of motion are simply $(\d_{dR} + \dbar) \alpha = 0$. 
-Thus, up to equivalence, all solutions to the linearized equations of motion are constant in the real variable $t$, and holomorphic in $z,w$. 
-
-Modifications of the boundary condition at the point~$z = 0$ on the boundary take the form
-\[
-\alpha = f(w) \delta^{(r)}_{z=0} 
-\]
-where $f$ is some holomorphic function. 
-Here $\delta^{(r)}_{z=0}$ denotes the $r$th derivative of the $\delta$-function at $z=0$. 
-It is convenient to parameterize such boundary modifications algebraically by expressions of the form 
-\[
-\alpha_{k,r} = w^k \delta^{(r)}_{z=0} .
-\]
-Linear combinations of such states form a dense subspace of all possible modifications at the boundary. 
-
-The reason that the boundary modifications take this form can be seen by understanding in more explicit terms the vacuum boundary condition.
-The phase space at the boundary $C$ can be identified with the following cohomology
-\[
-\Omega^{0,\bu}(C) \otimes \cA^{0;\bu}(\R \times \C - 0) [1]
-\]
-where $\cA^{0;\bu}$ denotes the mixed de Rham--Dolbeault cohomology of $\R \times \C - 0$ as a manifold equipped with a transversely holomorphic foliation. 
-We refer to the section below for a reminder on this geometric structure.
-
-The phase space is equipped with a natural symplectic form given by
-\[
-\int_C \d z \oint_{S^2} \d w \, \alpha \wedge \alpha' .
-\]
-There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C - 0$ which extends to zero. 
-The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$.
-
-\parsec[s:brfive]
-
-We now consider the situation of backreacting some number of (twisted) fivebranes in our eleven-dimensional model.
-Let $Z$ be a three-fold that the fivebranes wrap. 
-We also fix a rank 2 holomorphic vector bundle $V\to Z$ such that $\wedge^{2} V \cong K_{Z}$, and let $X = \text{Tot}(V)$. 
-The condition on $V$ ensures that $X$ is a Calabi-Yau five-fold---in the main body of the paper we will choose $V$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$. 
-The eleven-manifold we place our theory on is $\R\times X_V$, which we can view as the total space of the \textit{real} rank five bundle $\R\oplus V$ over $Z$.
-
-We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus V$.
-Denote the complement of the zero section by
-\[
-M_V = \text{Tot}(\R\oplus V) - 0(Z).
-\]
-Notice that in \S \ref{s:Lsugra} we have only defined the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on a product of a smooth one-manifold times a Calabi--Yau five-fold.
-The eleven-manifold $M_V$ is not of this form, nevertheless there is a generalization of $\cL_{sugra}$ which one can define using the natural geometric structure present in our situation. 
-
-A transversely holomorphic foliation (THF) on a smooth manifold $M$ is an integrable subbundle $F \subset \T_M \otimes \C$ such that $F + \Bar{F} = \T_M \otimes \C$. 
-We will say that $F$ equips $M$ with the a THF structure. 
-%Suppose $M$ is a manifold equipped with a THF structure and let $\cF$ be the corresponding foliation of even codimension.
-The product $M = S \times X$, where $X$ is a complex manifold and $S$ is a smooth manifold has a natural THF structure with $F$ the restriction of the tangent bundle of $N$ along the projection. 
-Locally, any THF manifold is split of the form $\R^d \times \C^n$, whose coordinates we will denote by $(x_i ;  z_j)$.
-The bundle $F$ is locally spanned by the vector fields $\partial / \partial x_i$'s and $\del/\del \zbar_j$'s. 
-(Notice that when $F \cap \Bar{F} = 0$ we are just describing an ordinary complex structure on $M$.)
-
-Any submanifold of a THF manifold is itself a THF manifold. 
-We are most interested in the submanifold $M_V \subset {\rm Tot}(\R \oplus V) = \R \times X$ where we equip $\R \times X$ with its standard split THF structure.
-
-We have expressed the fields of the eleven-dimensional theory in terms of a mixed type of de Rham and Dolbeault cohomology. 
-Let us focus on the fields $\beta,\gamma$ which on $\R \times X$ combine to form the complex 
-\beqn\label{eqn:drdol}
-\Omega^{\bu}(\R) \otimes \Omega^{0,\bu}(X) \xto{1 \otimes \del} \Omega^{\bu}(\R) \otimes \Omega^{1,\bu}(X) .
-\eeqn
-As usual, we leave the $\d_{dR}$ and $\dbar$ operators implicit.
-More generally, there is a natural cohomology associated to a THF structure.
-Suppose $(M,F)$ is a THF structure and 
-denote by $Q$ the (complex) quotient bundle $\T_\C M / F$.
-For each $p,q$ denote by $\cA^{p;q}$ smooth sections of the bundle $\wedge^p Q^\vee \otimes \wedge^q F^\vee$. 
-The derivative along the leaves of the foliation defined by $V$ defines a map 
-\[
-\thfd \colon \cA^{p;q} \to \cA^{p;q+1}  .
-\]
-By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and so $\thfd$ equips $\cA^{p;\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$. 
-Locally in a split THF structure the operator $D$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$. 
-There is also an analog of the holomorphic $\del$ operator which takes the form $\thfdel \colon \cA^{p;q} \to \cA^{p+1;q}$. 
-The obvious exterior product $\cA^{p;q} \times \cA^{r;s} \to \cA^{p+r;q+s}$ further endows 
-\[
-\left(\cA^{\bu;\bu} (M), \thfd + \thfdel\right) = \left(\oplus_p \cA^{p;\bu}[-p] , \thfd + \thfdel \right) 
-\]
-with the structure of a bigraded commutative dg algebra.
-This complex is simply isomorphic to the de Rham complex of $M$, but this presentation lends itself to more interesting quotient complexes. 
-For example, the forms of type $(p,\bu)$ with $p \geq 2$ form an ideal inside of this dg algebra; hence we get a quotient dg algebra 
-\beqn\label{thfcoh1}
-\left(\cA^{\leq 1;\bu}(M), \thfd + \thfdel\right) = \quad \cA^{0;\bu} \xto{\thfdel} \cA^{1;\bu} .
-\eeqn
-We leave the $\thfd$ operator implicit in the presentation on the right hand side.
-When $M = M_V$, it is this complex that is the THF generalization of the truncated de Rham--Dolbeault complex in \eqref{eqn:drdol}---it is easy to see that it agrees with this complex in the case of a split THF manifold.
-There is a similar THF description for the fields $\mu,\nu$ in the eleven-dimensional theory.
-
-%Note that the eleven-manifold $\R \times X$ is equipped with a natural transverseley--holomorphic foliation (THF)---the complexified tangent bundle decomposes as $T_{\R}\oplus T_{Z}\oplus \Bar{T}_{Z}$.
-With this THF cohomological description of the eleven-dimensional theory in place we proceed to describe the boundary condition obtained by removing the location of the branes. 
-We may choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus V$ over $Z$ and a fiberwise partially hermitian metric. 
-Explicitly, the corresponding norm defines a map
-\begin{align*}
- h \colon  \R\times X & \to \R_{+} \\
-  (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
-\end{align*}
-Letting $\pi \colon \R\times X \to Z$ be the natural projection, we obtain the $S^{4}$ bundle 
-\[
-p \define (h,\pi) \colon \R \times X \to \R_{+}\times Z 
-\] 
-which restricts to an $S^4$ bundle $p|M \colon M \to \R_{>0} \times Z$.
-These embeddings and projections fit inside of the following commutative diagram
-\[
-\begin{tikzcd} 
-M \ar[d,"p|M"'] \ar[r,hook] & \R \times X \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
-\R_{>0} \times Z \ar[r,hook] & \R_{+} \times Z & \ar[l,hook',"0 \times \id"] Z.
-\end{tikzcd}
-\]
-The inclusions on the left are the natural embeddings. 
-The top right inclusion is the zero section of ${\rm Tot}(\R \oplus V) = \R \times X$ and the bottom right inclusion is the embedding at radius $r = 0$.
-
-As we just elaborated, the eleven-dimensional theory is defined on the THF manifold $M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $M$. 
-Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|M$.
-The resulting sheaf of $L_\infty$ algebras $(p|M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$. 
-
-The theory on $M$ extends to a theory on the manifold obtained by filling in the zero section of $\R \times V$; in other words, we know that the theory is defined on the entire space $\R \times X$.
-This means that there is a natural way to extend the theory on $\R_{>0} \times Z$ to the seven-manifold with boundary $\R_{+} \times Z$. 
-The restriction of this theory to the six-dimensional boundary plays the most important role for us. 
-
-\brian{trying to incorporate below}
-%To do this we will make use of the natural foliated geometric structures which we have around. 
-
-Let $V_{M}$ denote the vertical tangent bundle to $(h, \pi)$, which we view as a subbundle of the real tangent bundle $T_{M}$. 
-The complexification $V_{M}^{\C}$ inherits some natural subbundles coming from the ambient THF structure. Indeed, if $\iota \colon M \to \R\times X$ is inclusion, then we consider the pair
-\[
-  V_{M}\cap \iota^{*} T_{\R}, \ \ \ \ \ V\cap \iota^{*} T_{Z}.
-\]
-
-The fibers of the composition $V_{M}\to M\to \R_{+}\times Z$ are copies of the tangent bundle of $S^{4}$, and the corresponding fibers of $V_{M}$ are subbundles of $TS^{4}$ that equip the fiber 4-spheres with a generalized Cauchy-Riemann structure. \surya{CITE}
-
- The underlying sheaf of cochain complexes is given by
-
-\[
-\Omega^{\bullet}(\R_{+})\otimes \left ( \begin{tikzcd}
-\ul{\rm even} & \ul{\rm odd} \\
-\PV^{1,\bu}(Z) \ar[r, "\del_{\Omega}"] & \PV^{0,\bu}(Z)\\
-\Omega^{0,\bu}(Z) & \Omega^{1,\bu}(Z) \ar[l, "\del"]
-\end{tikzcd}
- \right ) \otimes CR (S^{4}).
-\]
-
-
-Here $CR (S^{4})$ denotes the cohomology of the tangential Cauchy-Riemann complex of $S^{4}$ \surya{CITE}, equipped with the above Cauchy-Riemann structure. Its computation is facilitated by the following lemma:
-
-\begin{lem}
-  Let $\R^{d}\times \C^{n}$ be an affine THF manifold, and choose a partial hermitian metric. Let $S^{d+2n-1}$ denote the corresponding unit sphere, equipped with its standard generalized Cauchy-Riemann structure. Then there is a quasi-isomorphism
-
-  \[CR (S^{n+2d-1})\cong \cA^{\bu;\bu}\left ( (\R^{d}\times \C^{n})\setminus 0 \right )\]
-
-  where the right-hand-side denotes the Dolbeault-deRham complex.
-\end{lem}
-
-The cohomology of the Dolbeault-deRham complex of $\R\times \C^{2}$ is easy to describe.
-
-
-It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction 
-\beqn\label{eqn:br1}
-I_{M5} = N\int_{Z} \div^{-1}\mu \vee \Omega +\cdots 
-\eeqn
-where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)$ is a component of a field in the eleven-dimensional theory which satisfies $\div \mu = 0$.
-
 \parsec
-Let $C$ be a curve, and let $V\to C$ be a rank 4-holomorphic vector bundle over $C$ such that $\wedge^{4} V = K_{C}$. This condition again ensures that $X = {\rm Tot} V$ is a Calabi-Yau five-fold - in the main body of the paper, we will take $V = K^{1/2}_{C}\otimes \C^{4}$. Abusively letting $V$ also denote its pullback along the canonical projection $\R\times C \to C$, we may view $\R\times X$ as the total space of $V$ on $\R\times C$. As before we will consider wrapping a stack of $N$ membranes along the zero section.
 
-Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric, and as before, we may view $\R\times X \setminus \R\times C$ as an $S^{7}$-bundle over $\R_{>0}\times \R\times C$.
+We briefly recall the description of the minimal twist of the ABJM theory for $N=1$.
+
+\surya{fields, gauge symmetries, etc}
+
+In the BV formalism, this free theory can be packaged into the data of an abelian $\Z$ graded local Lie algebra on $\Sigma$ which takes the form
+\[
+\Omega^{\bu}(S)\times \left (\Omega^{0,\bu}(\Sigma) \oplus \Pi \Omega^{0,\bu} (\Sigma )\right ) \otimes \C^{4}.
+\]
 
 
 
