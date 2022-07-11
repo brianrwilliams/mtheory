@@ -10,7 +10,7 @@
 \newcommand{\thfd}{\Bar{D}}
 \newcommand{\thfdel}{D} 
 
-\section{Twists in dimensions three, six, and eleven}
+\section{Twists in dimensions eleven, six, and three}
 
 \subsection{A model for minimally twisted supergravity}
 
@@ -20,9 +20,9 @@ It plays an important role as the low energy limit of $M$ theory.
 Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
 In any theory of supergravity, the action of supersymmetry is gauged. When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
 
-By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a twisting supercharge.
+By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge. Such backgrounds have the feature that the worldvolume theories of branes in their presence are twisted.
 
-Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the dimension of the subspace of translations spanned by the image of $Q$.
 \begin{itemize}
 \item 
 The minimal twist. 
@@ -184,25 +184,55 @@ Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otime
 
 \parsec[s:twistedsugra]
 
-In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze twists of $M$ theory, starting with an $\Omega$-deformation of the nonminimal twist of eleven-dimensional supergravity. Using a type IIA description, the theory was shown to admit a description in terms of a holomorphic-topological gauge theory in five dimensions with a well-behaved quantization.
+\surya{ FINISH }
 
-The five-dimensional theory is also a $\Z/2$-graded within the BV formalism and exists on any manifold of the form
+In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze holography for membranes and fivebranes in eleven dimensional supergravity, starting with an $\Omega$-deformation of the nonminimal twists.
+
+The $\Omega$-deformation of the nonminimal twist of the eleven dimensional supergravity was constructed directly from the physical theory and was argued to admit a description in terms of a holomorphic-topological gauge theory in five dimensions.
+
+The five-dimensional theory is $\Z$-graded within the BV formalism and exists on any manifold of the form
 \[
   S\times Y
 \]
 
 where $Y$ is a holomorphic-symplectic surface and $S$ is a real oriented smooth one-dimensional manifold.
 
-The fields of the theory are given by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
+As a gauge theory, the fundamental field is a one-form. The space of complex-valued one-forms on $S\times Y$ decomposes into de Rham-Dolbeault forms as
+\[
+\oplus_{k+p+q=1}\Omega^{k}(S)\otimes \Omega^{p,q}(Y).
+\]
+
+and we continue to label elements of the homogeneous pieces as $(k;p,q)$ forms. The fields of ghost number zero are those one-forms with $p=0$. We will use the notation $\alpha^{k;q}$ with $k+q=1$ for the corresponding component of the one-form.
+
+These fields are subject to the equations of motion
+
+\beqn
+0 = \dbar \alpha^{0;1} + \frac{1}{2}\{\alpha^{0;1}, \alpha^{0;1}\}_Y
+0 = d\alpha^{0;1}+\dbar \alpha^{1;0}+ \{\alpha^{0;1}, \alpha^{1;0}\}_Y
+\eeqn
+
+where $\{-,-\}_{Y}$ denotes the holomorphic Poisson bracket on $Y$.
+
+We may get a better feeling for these equations upon giving $\alpha^{{1;0}}$ a VEV such that $\dbar\alpha^{{1;0}}=0$. The secnod equation then reads
+
+\beqn
+0 = d\alpha^{0;1} + \{\alpha^{1;0}, \alpha^{0;1}\}
+\eqn
+
+The fields $\alpha^{{k;q}}$ have a gauge symmetry determined by a ghost $b \in \Omega^{0}(S\times Y)$. Explicitly, the corresponding infinitessimal gauge transformation is given by
+\[
+\alpha^{k;q}\mapsto \alpha^{k;q} + db+\dbar b + \{b, \alpha^{k;q}\}_{Y}
+\].
+
+In the BV formalism, the fields are described by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
+
 \beqn
 \cL_{5d} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
-\eeq
+\eeqn
 
-The sheaf of holomorphic functions on $Y$ has a natural lie bracket given by the holomorphic poisson bracket $\{-,-\}_{Y}$. This can be extended in a graded way to the entire Dolbeault complex; $\cL_{5d}$ is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
+The holomorphic poisson bracket $\{-,-\}_{Y}$ can be extended to define a lie bracket on the entire Dolbeault complex; $\cL_{5d}$ is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
 
 Wedging and integrating against the holomorphic volume form on $Y$ defines an odd pairing on $\cL_{5d}$; together with the above, this equips $\cL_{5d}$ with the structure of a $\Z/2$-graded BV theory.
-
-The equations of motion of $\cL_{5d}$ describe locally-constant families of deformations of the fixed holomorphic Poisson structure on $Y$.
 
 \subsection{Twisted fivebranes} 
 
@@ -263,7 +293,7 @@ where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$.
 This theory notoriously does not admit a Lagrangian description. 
 However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
 We describe this Poisson bivector explicitly
-
+\surya{ FINISH }
 In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z \times \Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
 \cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
