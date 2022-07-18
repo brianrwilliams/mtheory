@@ -64,7 +64,8 @@ The complexified tangent bundle of the eleven-manifold $S \times X$ decomposes a
 where $\T_S$ is the complexified tangent bundle of the smooth one-manifold $S$.
 Locally, we choose coordinates $(t;z,\zbar)$ where $t$ is a smooth coordinate for $S$ and $z$ is a holomorphic coordinate for $X$. 
 
-Before giving a rigorous description of the fields and equations of motion, we focus on bosonic fields in our model which have an obvious analog in the untwisted theory. 
+Before giving a full description of the fields and equations of motion wrapped up into the BV formalism, we give an explicit description of the equations of motion and gauge symmetries. 
+ 
 One of the primary fields of eleven-dimensional supergravity describes deformations of the metric $g$.
 Since we work in a background which has $SU(5)$ holonomy we can take the background metric on $S \times X$ to be the product of the flat metric on $S$ with a Calabi--Yau metric $g_{CY}$ on $X$. 
 
@@ -75,35 +76,64 @@ Deformations of the background metric which survive the twist can be identified 
 which we will denote by $\mu$. 
 In local holomorphic coordinates $\mu$ admits a description like
 \[
-\mu = \mu^{\Bar{i}}_j (t;z,\zbar) \d \zbar_{\Bar{i}} \otimes \del_{z_i} .
+\mu^{\Bar{i}}_j (t;z,\zbar) \d \zbar_{\Bar{i}} \otimes \del_{z_j} .
 \]
-Part of the equations of motion for $\mu$ dictate that it be locally constant along~$S$.
-Ordinarily, for $\mu$ to describe a deformation of complex structure in the $X$ direction we would require that it satisfy the Muarer--Cartan equation.
+More generally, the fields of this model include sections of the holomorphic tangent bundle with coefficients in Dolbeault forms of arbitrary Dolbeault type, which we can write in superfield notation as 
+\[
+\mu = \mu^{\Bar{I}}_j (t;z,\zbar) \d \zbar_{\Bar{I}} \otimes \del_{z_j}
+\]
+where there is a sum over the multi-index $\Bar{I}$. 
+In this notation, the component of the field $\mu$ is {\em odd} if $|I|=0,2,4$ is even and {\em even} if $|I| = 1,3,5$ is odd.
+In particular we have odd fields $\mu_j(t;z,\zbar) \del_{z_j}$ which play the role of ghosts for infinitesimal changes of coordinates.
+We will see that the equations of motion dictate that we only see changes of holomorphic coordinates.
+
+The field $\mu$ satisfies a condition that it be {\em divergence-free} for the Calabi--Yau structure on the fivefold~$X$. 
+This means that it is required to satisfy the condition 
+\beqn
+\div \mu = 0
+\eeqn
+where $\div(-)$ is the divergence with respect to the holomorphic volume form $\Omega$ on $X$.
+In the BV formalism one can encode this by introducing another field, but for the sake of discussion we omit that approach for now.
+Another piece of the equations of motion for~$\mu$ dictate that it be locally constant along~$S$.
+
+Ordinarily, for $\mu$ to describe a deformation of complex structure in the $X$ direction we would require that it satisfy the Maurer--Cartan equation.
 For twisted supergravity, however, we find a modification of this equation which involves the twisted analog of another familiar field.
 
-One of the other bosonic fields of eleven-dimensional supergravity is a three-form that we denote by~$\sf C$. 
-On $S \times X$ the space of complex-valued three-forms decomposes into de Rham--Dolbeault forms as in
+One of the other bosonic fields of eleven-dimensional supergravity is a three-form that we denote by~$\sf C$.
+In the BV formalism we see all types of differential forms corresponding to a tower of ghosts for this $C$-field together with antifields and antighosts. 
+ 
+On $S \times X$ the space of complex-valued differential forms decomposes into de Rham--Dolbeault forms as in
 \[
-\oplus_{k+p+q=3} \Omega^k(S) \otimes \Omega^{p,q}(X) .
+\oplus_{k,p,q} \Omega^k(S) \otimes \Omega^{p,q}(X) .
 \]
-We denote the homogenous pieces as the space of $(k;p,q)$ forms, these admit local presentations as
+We refer to the homogenous pieces as the space of $(k;p,q)$ forms, these admit local presentations as
 \[
 \sum_{P,Q} f_{PQ} (t;z,\zbar) \d z_P \d \zbar_Q + \sum_{P',Q'} g_{P'Q'}(t;z,\zbar) \d t \d z_{P'}\d \zbar_{Q'} 
 \]
-where the first sum is over tuples $P=(p_1,p_2,p_3),Q=(q_1,q_2,q_3)$ such that $\sum_i (p_i + q_i) = 3$, $0 \leq p_i,q_i \leq 3$.
-The second sum is over tuples $P',Q'$ such that $\sum_i (p_i'+q_i') = 2$. 
+where the first sum is over tuples $P=(p_1,p_2,p_3),Q=(q_1,q_2,q_3)$.
+%The second sum is over tuples $P',Q'$ such that $\sum_i (p_i'+q_i') = 2$. 
 
 In the minimal twist only forms with $p_i ,p_i'\leq 1$ survive. 
-Thus, the components of the three-form which survive live in
+Thus, we have as part of the complex of fields in the twisted theory
 \[
-\left(\oplus_{k+q = 3} \Omega^k(S) \otimes \Omega^{0,q}(X)\right) \oplus 
-\left(\oplus_{k+q = 2} \Omega^k(S) \otimes \Omega^{1,q}(X)\right) .
+\left(\oplus_{k,q} \Omega^k(S) \otimes \Omega^{0,q}(X)\right) \oplus 
+\left(\oplus_{k',q'} \Omega^{k'}(S) \otimes \Omega^{1,q'}(X)\right) .
 \]
 We denote a general (non-homogenous) element in the first summand by $\beta$ and an element in the second summand by $\gamma$.
-When we want to be specific by the form type we use the notation $\beta^{k;q}$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}$ for the $(k;1,q)$ component of the three-form.
+When we want to be specific by the form type we use the notation $\beta^{k;q}(t;z,\zbar)$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}(t;z,\zbar)$ for the $(k;1,q)$ component of the three-form.
+Fields $\beta^{k;q}$ with $k+q = $even are {\em odd} and fields $\gamma^{k;q}$ with $k+q = $odd are {\em even} fields. 
 
-Along $S$, $\beta$ and $\gamma$ behave like abelian gauge fields.
-Thus, locally we can assume that the $\Omega^1(S)$ components are exact and the $\Omega^0(S)$ components are locally constant.
+The most important equation of motion of the eleven-dimensional theory involves both the fields $\mu$ and $\gamma$. 
+When $\div \mu = 0$ it takes the form
+\beqn\label{eqn:eom2}
+\dbar \mu + \frac12 [\mu,\mu] = \del \gamma \del \gamma .
+\eeqn
+
+The theory also enjoys the following gauge symmetries.
+First, for any 
+\brian{finish}
+%Along $S$, $\beta$ and $\gamma$ behave like abelian gauge fields.
+%Thus, locally we can assume that the $\Omega^1(S)$ components are exact and the $\Omega^0(S)$ components are locally constant.
 
 
 \parsec[s:Lsugra]
