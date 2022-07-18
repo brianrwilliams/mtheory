@@ -1,26 +1,25 @@
-%\documentclass[11pt]{amsart}%
+\documentclass[11pt]{amsart}%
 %
 %%\usepackage{../macros-master}
-%\usepackage{macros-fivebrane}
+\usepackage{macros-fivebrane}
 
 %
-%\begin{document}
+\begin{document}
 %
-
-\newcommand{\thfd}{\Bar{D}}
-\newcommand{\thfdel}{D} 
 
 \section{Twists in dimensions eleven, six, and three}
 
 \subsection{A model for minimally twisted supergravity}
 
-Eleven-dimensional supergravity is the unique supersymmetric theory in eleven dimensions.
-It plays an important role as the low energy limit of $M$ theory.
+%Eleven-dimensional supergravity is the unique supersymmetric theory in eleven dimensions.
+%It plays an important role as the low energy limit of $M$-theory.
 
 Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
-In any theory of supergravity, the action of supersymmetry is gauged. When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
-
-By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge. Such backgrounds have the feature that the worldvolume theories of branes in their presence are twisted.
+The idea is roughly the following.
+In any theory of supergravity, the action of supersymmetry is gauged. 
+When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
+By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge. 
+Such backgrounds have the feature that the worldvolume theories of branes in their presence are twisted in a way that is compatible with the usual notion of twisting supersymmetric gauge theories.
 
 Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the dimension of the subspace of translations spanned by the image of $Q$.
 \begin{itemize}
@@ -36,13 +35,15 @@ In this paper we will focus primarily on the minimal twist.
 In \cite{SWspinor} a complete description of the free limit of this twist of eleven-dimensional supergravity is given.
 Within the BV formalism, the theory is only $\Z/2$ graded, a point we will elaborate on further soon. 
 In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory in a background with global symmetry group $SU(5)$.
-Globally, the eleven-dimensional theory exists on any manifold of the form 
+
+The eleven-dimensional theory exists on any manifold which is locally of the form 
 \[
 S \times X 
 \] 
 where $X$ is a Calabi--Yau fivefold and $S$ is a real oriented smooth one-dimensional manifold.
+More generally, the eleven-dimensional theory can be constructed on any eleven-manifold equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
 
-In the first few sections we describe the fields and equations of motion of the eleven-dimensional theory. 
+In the first few sections we recall the fields and equations of motion of this eleven-dimensional theory. 
 
 %\parsec[s:e510]
 %
@@ -54,9 +55,9 @@ In the first few sections we describe the fields and equations of motion of the 
 \parsec[s:sugrafields]
 
 To begin this section we highlight some of the important features of the eleven-dimensional model considered in \cite{RSW}. 
-The theory utilizes the complex structure on the Calabi--Yau fivefold $X$.
+Let's first consider the case that the eleven-dimensional manifold is of the form $S \times X$, where $X$ is a Calabi--Yau fivefold.
 We let $\T_X$ stand for the holomorphic tangent bundle of $X$ and $\Bar{\T}_X$ its complex conjugate.
-Thus, the complexified tangent bundle of the eleven-manifold $S \times X$ decomposes as
+The complexified tangent bundle of the eleven-manifold $S \times X$ decomposes as
 \[
 \T_S \oplus \T_X \oplus \Bar{\T}_X 
 \]
@@ -116,17 +117,20 @@ An $L_\infty$ algebra is a graded vector space~$L=\oplus_{p\in \Z} L^p$ equipped
 \[
 [-]_k \colon L^{\times k} \to L[2-k] 
 \]
-are multilinear maps which satisfy the ordinary higher Jacobi relations defining an $L_\infty$ algebra \cite{??}. 
+are multilinear maps which satisfy the ordinary higher Jacobi relations defining an $L_\infty$ algebra.
 The shift $[2-k]$ means that $[-]_k$ is of cohomological degree $k-2$. 
 
 The BV fields arise as the sections of a sheaf of $L_\infty$ algebras $\cL$ over the spacetime manifold $M$.
 There is an overall shift in the relationship between the cohomological grading of $\cL$ and the ghost number in physics terminology. 
-In cohomological degree zero sit the ghosts, in cohomological degree zero sit the fields, etc..
+In cohomological degree zero of $\cL$ sit the ghosts, in cohomological degree one sit the fields, etc..
 In this sense it is more accurate to refer to the BV fields as sections of the shift of the sheaf of $L_\infty$ algebras $\cL[1]$. 
-Together with the skew symmetric pairing $\omega_{BV}$ on the fields structure maps $[-]_k$ organize together to define the full BV action which takes the general form
-\[
-S(\Phi) = \sum_{k \geq 1} \omega_{BV} \left(\Phi , [\Phi,\ldots,\Phi]_{k}\right) .
-\]
+We refer to \cite{CG2,ESW} for a further review of these conventions.
+Together with the skew symmetric pairing $\omega_{BV}$ of cohomological degree $-1$ on $\cL[1]$, the structure maps $[-]_k$ organize together to define the full BV action which takes the general form
+\beqn
+\label{eqn:Sbv}
+S(\Phi) = \sum_{k \geq 1} \omega_{BV} \left(\Phi , [\Phi,\ldots,\Phi]_{k}\right) ,
+\eeqn
+which we can think of as a functional on $\cL[1]$ of cohomological degree zero.
 
 One feature of our proposal for the minimal twist of eleven-dimensional supergravity is that it only carries an overall $\Z/2$ grading. 
 This $\Z/2$ grading totalizes the original ghost grading (which is by the group $\Z$) and the fermion number which is present in the untwisted theory.
@@ -168,77 +172,76 @@ There is a sub sheaf given by the sections $\mu$ and $\nu$ which is $L_\infty$-e
 
 As all operations above are given in terms of holomorphic polydifferential operators, the $L_\infty$ algebra structure above induces a $\Z/2$ graded $L_\infty$ algebra structure on the Dolbeault resolution $\Omega^{0,\bu}(X,L_X)$ of the holomorphic vector bundle $L_X$.
 
-Finally, to obtain a local $L_\infty$ algebra on $X \times S$, where $S$ denotes an arbitrary real oriented smooth one-manifold, we simply tensor with the de Rham complex along~$S$.
+Finally, to obtain a local $L_\infty$ algebra on $S \times X$, where $S$ denotes a real oriented smooth one-manifold, we simply tensor with the de Rham complex along~$S$.
 We denote by $\cL_{sugra}$ the following local $\Z/2$ graded $L_\infty$ algebra on $X \times S$
 \beqn
 \cL_{sugra} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(X,L_X) .
 \eeqn
 
-\parsec[s:rsw]
-It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate odd pairing which is compatible with the $L_\infty$ structure above. 
-All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism. 
-On $X \times S = \C^5 \times \R$ it is furthermore argued in \cite{RSW} that this BV theory is equivalent to the holomorphic (or minimal) twist of perturbative eleven-dimensional supergravity. 
+It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate skew symmetric odd pairing $\omega_{BV,sugra}$ which is compatible with the $L_\infty$ structure above. 
+All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism where the BV action is as in \eqref{eqn:Sbv}.
 
-Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras. 
-\brian{elaborate gauge symmetries, write action, etc.}
+Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras.
 
 \parsec[s:twistedsugra]
 
-\surya{ FINISH }
+Before proceeding with the appearance of extended objects such as membranes and fivebranes in the minimal twist of eleven-dimensional supergravity we discuss a related, but simpler, five-dimensional theory.
+This five-dimensional theory, as argued by Costello \cite{CostelloM5}, arises from placing eleven-dimensional supergravity in the so-called `twisted $\Omega$-background'.
+We will use this theory for the sake of highlighting more accessible examples of the constructions later on in the paper. 
 
-In \cite{CostelloM5,CostelloM2}, Costello introduced a program to analyze holography for membranes and fivebranes in eleven dimensional supergravity, starting with an $\Omega$-deformation of the nonminimal twists.
-
+In the works \cite{CostelloM5,CostelloM2} Costello has introduced a program to analyze holography for membranes and fivebranes in eleven dimensional supergravity, starting with an $\Omega$-deformation of the nonminimal twists defined on multi Taub--NUT spaces.
 The $\Omega$-deformation of the nonminimal twist of the eleven dimensional supergravity was constructed directly from the physical theory and was argued to admit a description in terms of a holomorphic-topological gauge theory in five dimensions.
 
-The five-dimensional theory is $\Z$-graded within the BV formalism and exists on any manifold of the form
+The five-dimensional theory exists on any manifold of the form
 \[
   S\times Y
 \]
+where $Y$ is a complex surface equipped with a holomorphic symplectic structure and $S$ is a real oriented smooth one-dimensional manifold.
 
-where $Y$ is a holomorphic-symplectic surface and $S$ is a real oriented smooth one-dimensional manifold.
-
-As a gauge theory, the fundamental field is a one-form. The space of complex-valued one-forms on $S\times Y$ decomposes into de Rham-Dolbeault forms as
+The fundamental field of the five-dimensional theory is a one-form. 
+The space of complex-valued one-forms on $S\times Y$ decomposes into de Rham-Dolbeault forms as
 \[
 \oplus_{k+p+q=1}\Omega^{k}(S)\otimes \Omega^{p,q}(Y).
 \]
+We continue to label elements of the homogeneous pieces as $(k;p,q)$ forms. 
+The fields of ghost number zero are those one-forms with $p=0$. 
+We will use the notation $\alpha^{k;q}$ with $k+q=1$ for the corresponding component of the one-form.
 
-and we continue to label elements of the homogeneous pieces as $(k;p,q)$ forms. The fields of ghost number zero are those one-forms with $p=0$. We will use the notation $\alpha^{k;q}$ with $k+q=1$ for the corresponding component of the one-form.
-
+\brian{this is just the `semi-classical' limit of what Kevin looks at?}
 These fields are subject to the equations of motion
-
 \beqn
-0 = \dbar \alpha^{0;1} + \frac{1}{2}\{\alpha^{0;1}, \alpha^{0;1}\}_Y
-0 = d\alpha^{0;1}+\dbar \alpha^{1;0}+ \{\alpha^{0;1}, \alpha^{1;0}\}_Y
+0 = \dbar \alpha^{0;1} + \frac{1}{2}\{\alpha^{0;1}, \alpha^{0;1}\}_Y , \qquad
+0 = \d \alpha^{0;1}+\dbar \alpha^{1;0}+ \{\alpha^{0;1}, \alpha^{1;0}\}_Y
 \eeqn
+where $\{-,-\}_{Y}$ denotes the holomorphic Poisson bracket on $Y$ and $\d$, $\dbar$ denote the de Rham and Dolbeault differentials along $S$,$Y$ respectively.
 
-where $\{-,-\}_{Y}$ denotes the holomorphic Poisson bracket on $Y$.
+%We may get a better feeling for these equations after assuming that $\alpha^{1;0}$ is holomorphic $\alpha^{{1;0}}$ a VEV such that $\dbar\alpha^{{1;0}}=0$. 
+%The second equation then reads
+%
+%\beqn
+%0 = d\alpha^{0;1} + \{\alpha^{1;0}, \alpha^{0;1}\}
+%\eeqn
 
-We may get a better feeling for these equations upon giving $\alpha^{{1;0}}$ a VEV such that $\dbar\alpha^{{1;0}}=0$. The secnod equation then reads
-
-\beqn
-0 = d\alpha^{0;1} + \{\alpha^{1;0}, \alpha^{0;1}\}
-\eqn
-
-The fields $\alpha^{{k;q}}$ have a gauge symmetry determined by a ghost $b \in \Omega^{0}(S\times Y)$. Explicitly, the corresponding infinitessimal gauge transformation is given by
+There is a non-linear gauge symmetry determined by a ghost $b \in C^\infty (S\times Y)$. 
+Explicitly, the corresponding infinitesimal gauge transformation is given by
 \[
 \alpha^{k;q}\mapsto \alpha^{k;q} + db+\dbar b + \{b, \alpha^{k;q}\}_{Y}
-\].
+\]
 
-In the BV formalism, the fields are described by a local dg-lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
-
+In the BV formalism, the full space of BV fields together with equations of motion and gauge symmetries can described by a local dg Lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
 \beqn
-\cL_{5d} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
+\Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
 \eeqn
-
-The holomorphic poisson bracket $\{-,-\}_{Y}$ can be extended to define a lie bracket on the entire Dolbeault complex; $\cL_{5d}$ is then the tensor product of a commutative algebra and a lie algebra so is canonically a local dg-lie algebra.
-
-Wedging and integrating against the holomorphic volume form on $Y$ defines an odd pairing on $\cL_{5d}$; together with the above, this equips $\cL_{5d}$ with the structure of a $\Z/2$-graded BV theory.
+The holomorphic poisson bracket $\{-,-\}_{Y}$ can be extended to define a Lie bracket on the entire Dolbeault complex $\Omega^{0,\bu}(Y)$.
+The dg lie algebra structure is then obtained by the tensor product with the commutative dg algebra $\Omega^\bu(S)$. 
+The BV pairing is given by integrating against the holomorphic volume form on $Y$.
 
 \subsection{Twisted fivebranes} 
 
 %\subsection{Twisted AdS backgrounds}
 
-It is expected that the theory on a stack of $N$ fivebranes in flat space has $\cN=(2,0)$ superconformal symmetry. Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+It is expected that the worldvolume theory of fivebranes in $M$-theory on flat space is equipped with $\cN=(2,0)$ superconformal symmetry. 
+Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
 \begin{itemize}
 \item 
 The holomorphic, or minimal, twist. 
@@ -250,7 +253,8 @@ This twist leaves five real directions invariant.
 The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface. 
 \end{itemize}
 
-An explicit characterization of these twists for $N=1$ has been given in \cite{SWtensor}; we recall the description of the minimal twist.
+An explicit characterization of these twists in the case of the stack of a single fivebrane has been given in \cite{SWtensor}.
+We recall the description of the minimal twist.
 
 \parsec[s:single]
 
@@ -296,7 +300,7 @@ We describe this Poisson bivector explicitly
 \surya{ FINISH }
 In the (degenerate) BV formalism, this free theory can be packaged into the data of an abelian $\Z \times \Z/2$ graded local Lie algebra on $Z$ which is of the form 
 \[
-\cL_{single} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
+\cL_{N=1} = \Omega^{\geq 2, \bu}(Z) \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 .
 \]
 
 \subsection{Twisted membranes}
@@ -448,4 +452,4 @@ In the BV formalism, this free theory can be packaged into the data of an abelia
 %This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
 
 
-%\end{document}
+\end{document}
