@@ -9,12 +9,13 @@
 
 \subsection{States in twisted supergravity}
 
-In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \brian{references}.
+In eleven-dimensional supergravity, the ${\rm AdS}_7 \times S^4$ and ${\rm AdS}_{4}\times S^{7}$ backgrounds are obtained by backreacting a number of fivebranes and membranes respectively in flat space \cite{Maldacena:1997re,WittenAdS}.
+In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We will recall this construction, adapted to a slightly more global situation than is considered in \textit{loc. cit.}.
 
-In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We recall this construction, adapted to a slightly more global situation. We will consider the eleven-dimensional theory on 11-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a 3-step procedure:
+We will consider the eleven-dimensional theory on eleven-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a 3-step procedure:
 
 \begin{itemize}
-  \item Place the eleven dimensional theory on the complement of the zero section. To do so, we will wish to describe the complement of the zero-section in a way that facilitates natural operations on holomorphic-topological local $L_{\infty}$-algebras.
+  \item Place the eleven-dimensional theory on the complement of the zero section. To do so, we will wish to describe the complement of the zero-section in a way that facilitates natural operations on holomorphic-topological local $L_{\infty}$-algebras.
 
   \item Deform the theory on the complement of the zero section by a certain Maurer--Cartan element.
   The Maurer--Cartan element is thought of as the flux sourced by branes wrapping the zero section.
@@ -25,17 +26,23 @@ In \cite{RSW} we gave descriptions of twisted versions of these backgrounds. We 
 
 \parsec[s:brkevin]
 
-As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \C \times C$, where $C$ is a Riemann surface equipped with a nonvanishing holomorphic one-form $\d z$, with some number of twisted `fivebranes' wrapping
+As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \T^* C$, where $C$ is a Riemann surface equipped with a nonvanishing holomorphic one-form $\d z$, with some number of twisted `fivebranes' wrapping the zero section
 \[
-0 \times 0 \times C \subset \R \times \C \times C .
+0 \times C \subset \R \times \T^* C .
 \]
-It will be convenient to view $\R \times \C \times C$ as the total space of the real rank two bundle $\R \oplus K_C$ over $C$.
-Denote by $(t,w)$ the fiber coordinates.
-Removing the zero section and deforming by the backreaction associated to $C$ corresponds to the twisted version of the $S^2 \times AdS_3$ background.
+Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$.
+If we remove the defect we obtain the manifold 
+\[
+\left(\R \times \T^* C\right) - C \simeq C \times \R_{>0} \times S^2 
+\]
+where this identification requires the choice of a fiberwise partially hermitian metric.  
+This manifold is equipped with the natural structure of a transversely holomorphic foliation (THF).
+We will see that the including the backreaction corresponds to deforming this tructure. 
+For sake of analogy, we think of as being a twisted version of $AdS_3 \times S^2$. \footnote{It is an interesting question if this corresponds the actual twist of a five--dimensional supersymmetric background of this form.}
 We proceed to describe the twisted version of states at the boundary of this version of $AdS$.
 We first proceed before turning on the backreaction.
 
-If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection ${\rm Tot}(\R \oplus K_C) \to \R_+ \times C$ which combines the fiberwise norm with the natural bundle projection.
+If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $\R \times \T^*C \to \R_{>0} \times C$ which combines the fiberwise norm with the natural bundle projection.
 Denote by $r$ a coordinate for the direction $\R_+$ normal to the brane and let $z \in C$ be a local holomorphic coordinate.
 The fibers of this projection away from $r = 0$ are all homeomorphic to the two-sphere.
 
@@ -248,6 +255,7 @@ Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric
 %\end{cor}
 
 \subsection{Global symmetry for twisted fivebranes}
+\label{s:global1}
 
 After complexification, the~six-dimensional superconformal algebra is $\lie{osp}(8|4)$ whose even part is $\lie{so}(8) \times \lie{sp}(4)$. 
 This algebra contains the six-dimensional $\cN=(2,0)$ supersymmetry algebra whose odd part is four copies of $S_+$, the positive irreducible complex spin representation of $\lie{so}(6)$.
@@ -384,53 +392,6 @@ The super trace means that there is an extra factor of $(-1)^F$, where $F$ is pa
 %\]
 %That this induces a quasi-isomorphism $J_0^\infty \cE_{fivebrane} \simeq E (\Hat{D}^3)$ follows from the Dolbeault Poincar\'e lemma.
 %\end{proof}
-
-\subsection{A stack of two fivebranes}
-
-\parsec[]
-
-Recall that the even part of $E(3|6)$ ... 
-
-\begin{itemize}
-\item Single particle operators coming from the copy of holomorphic vector fields $\Vect^{hol}(\C^3)$ contribute
-\[
-q^3 \frac{t_1^{-1} q + t_1 t_2^{-1} q + t_2 q }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
-\]
-\item Single particle operators coming from $\lie{sl}(2)$-valued holomorphic functions $\lie{sl}(2) \otimes \cO^{hol}(\C^3)$ contribute
-\[
-q^3\frac{r^2 + r^{-2} + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
-\]
-\item Single particle operators coming from the odd piece of $E(3|6)$ which is $\Omega^{1,hol} \otimes K^{-1/2} \otimes \C^2$ contribute
-\[
-q^{3}\frac{(q^{1/2} r + q^{1/2} r^{-1})(t_1^{-1} + t_1t_2^{-1} + t_2)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
-\]
-\end{itemize}
-
-\begin{conj}
-The character of local operators of the holomorphic twist of the theory on a stack of two fivebranes is given by the following plethystic exponential
-\[
-{\rm PExp} \left[f_{two} (t_1,t_2,q,r) \right] .
-\]
-where the single particle index is
-\[
-f_{two} (t_1,t_2,q,r) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1^{-1} + t_1t_2^{-1} + t_2)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
-\]
-\end{conj}
-
-\parsec[]
-
-The specialization of this index $t_1=t_2=r=1$ yields the single particle index
-\[
-\frac{3q^4 + 3 q^3 - 6 q^{7/2}}{(1-q)^3}. 
-\]
-
-\parsec[]
-
-The specialization of this index $q=r^2, t_2=1$ in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
-\[
-f_{two}(t_1, 1, q, q^{1/2}) = \frac{q^2}{1-q} 
-\]
-which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
 \subsection{The large $N$ limit}
 

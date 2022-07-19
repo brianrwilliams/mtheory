@@ -1,11 +1,14 @@
-%\documentclass[11pt]{amsart}
+\documentclass[11pt]{amsart}
 %
 %%\usepackage{../macros-master}
-%\usepackage{macros-fivebrane}
+\usepackage{macros-fivebrane}
 %
-%\begin{document}
+\begin{document}
 
 \section{Factorization algebras in twisted $M$ theory}
+
+In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal membrane and fivebrane worldvolume theories (after twisting). 
+Our ansatz relies on a proposal for twisted holography developed by \brian{cites}.
 
 The observables of any theory in the BV formalism have the structure of a factorization algebra on spacetime \cite{CG2}. 
 Classically, if a theory in the BV formalism is described by a local $L_\infty$ algebra $\cL$ on spacetime $M$ then to an open set $U \subset M$ the factorization algebra of observables assigns the cochain complex
@@ -13,25 +16,24 @@ Classically, if a theory in the BV formalism is described by a local $L_\infty$ 
 \clie^\bu(\cL(U))
 \]
 which computes the Lie algebra cohomology of $\cL(U)$. 
-The differential on this cochain complex is precisely the Chevellay--Eilenberg differential associated to the $L_\infty$ structure maps. 
+The differential on this cochain complex is precisely the Chevellay--Eilenberg differential associated to the~$L_\infty$ structure maps. 
 
 At the quantum level the factorization algebra of classical observables is deformed.
 Perturbatively, Costello and Gwilliam use the BV formalism to give a systematic way to study quantization within the context of factorization algebras~\cite{CG2}. 
-Even in perturbation theory, the full quantum behavior of the holomorphic-topological eleven-dimensional theory is an open question. 
+Even in perturbation theory, the full quantum behavior of our proposal for the minimal twist of eleven-dimensional theory is an open question. 
 We leave the problem to characterize the quantization to future work, and in this paper we do not address anything past tree-level in the bulk eleven-dimensional theory.
 
-In this section we focus on the factorization algebra of classical observables of our prototype for the minimal twist of eleven-dimensional supergravity which we recalled in \S \ref{s:twisted}. 
+We start with the factorization algebra of classical observables of our prototype for the minimal twist of eleven-dimensional supergravity which we recalled in \S \ref{s:twisted}. 
 This model is defined on any eleven-manifold $S \times X$ where $X$ is a Calabi--Yau fivefold and $S$ a real oriented one-manifold. 
 %In the \S \ref{s:twisted} we recalled a proposal for the description of the minimal twist of eleven-dimensional supergravity on $S \times X$. 
 The primary object we used to describe the solutions of the equations of motion was the $\Z/2$ graded local $L_\infty$ algebra $\cL_{sugra}$, see \S \ref{s:Lsugra}. 
 %As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
 %The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
-
 In terms of this local $L_\infty$ algebra, the $\Z/2$ graded commutative dg algebra of classical observables supported on an open set $U \subset S \times X$ is 
 \[
 \clie^\bu\left(\cL_{sugra}(U)\right) .
 \]
-We will denote the entire classical factorization algebra on $S \times X$ of classical observables by~$\Obs_{sugra}$.
+We will denote the classical factorization algebra on $S \times X$ of classical observables by~$\Obs_{sugra}$.
 
 
 %\parsec[s:membraneobs]
@@ -64,8 +66,9 @@ Let
 \]
 be the map which projects out the real factor followed by the projection to the base of the total space of the complex rank two bundle $p \colon X_Z \to Z$.
 
-Like sheaves, factorization algebras can be pushed forward; thus from the factorization algebra $\Obs_{sugra}$ on $\R \times X_Z$ we obtain a factorization algebra $\pi_* \Obs_{sugra}$ on $Z$. 
-To an open set $U \subset Z$ the value of this factorization algebra is
+Like sheaves, factorization algebras can be pushed forward.
+Thus, from the factorization algebra $\Obs_{sugra}$ on $\R \times X_Z$ we obtain a factorization algebra $\pi_* \Obs_{sugra}$ defined on the three-fold $Z$.
+Explicitly, to an open set $U \subset Z$ the factorization assigns the cochain complex
 \begin{align*}
 (\pi_* \Obs_{sugra}) (U) & = \Obs_{sugra} \left(\pi^{-1} U\right) \\
 & = \Obs_{sugra}(\R \times p^{-1}U) .
@@ -75,16 +78,19 @@ This factorization algebra is not the factorization algebra associated to an ord
 Nevertheless there is a subfactorization algebra $\Bar{\pi}_* \Obs_{sugra}$ which admits a natural grading so that each filtered component can be understood as such. 
 This grading is determined by looking at an eigenspace decomposition of a certain compact abelian group acting on the fields of the eleven-dimensional theory on $\R \times X_Z$ which we now describe. 
 
-One of the primary features of the factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is that it is of the form $\clie^\bu(\cG)$ where $\cG$ is a sheaf of $L_\infty$ algebras on $Z$ which is presented as the $C^\infty$-sections of a pro vector bundle.
-To get a sense of the construction of this factorization algebra we take a brief excursion to a simpler construction related to branes in five-dimensional Chern--Simons theory. 
+One of the primary features of the factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is that it is of the form $\clie^\bu(\cG)$ where $\cG$ is a sheaf of $L_\infty$ algebras on $Z$ which is presented as the $C^\infty$-sections of an $\infty$-dimensional pro vector bundle.
+To get a sense of the construction of this factorization algebra we take a brief excursion to a simpler situation related to branes in five-dimensional Chern--Simons theory. 
 
 \parsec[]
 
 As we recalled in~\S \ref{??}, Costello's five-dimensional Chern--Simons theory is the result of applying the $\Omega$-background to $M$ theory on a Taub--NUT space.
-In this setting, fivebranes which hit the tip of the Taub--NUT become chiral defects supported along a Riemann surface $C$ in the five-manifold. 
-In analogy with the situation above, we take the five-manifold to be $\R \times {\rm Tot}(K_C)$ with the fivebranes wrapping the zero section.
-Denote by $\Obs_{CS}$ the observables of five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
-Let $\pi \colon \R \times {\rm Tot}(K_C) \to C$ be the natural projection and consider the factorization algebra $\pi_* \Obs_{CS}$ on $C$. 
+In this setting, fivebranes which hit the tip of the Taub--NUT are deformed into chiral defects supported along a Riemann surface~$C$ in the five-manifold. 
+In analogy with our eleven-dimensional setup, we take the five-manifold to be $\R \times {\rm Tot}(K_C)$ with the deformed fivebranes wrapping the zero section.
+Denote by $\Obs_{CS}$ the observables of the semi-classical limit of non-commmutative five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
+Let 
+\[\pi \colon \R \times {\rm Tot}(K_C) \to C
+\]
+be the natural projection and consider the factorization algebra $\pi_* \Obs_{CS}$ on $C$. 
 
 Notice that there is a $U(1)$ action on the fields of the five-dimensional theory induced by the $U(1)$ action on the five-manifold which scales the fiber of~$K_C$.
 Using this we can look at the subfactorization algebra 
@@ -93,7 +99,7 @@ Using this we can look at the subfactorization algebra
 \eeqn
 which to an open set $U \subset C$ assigns the complex of observables in $\Obs_{CS} (\pi^{-1} U)$ which are finite sums of integral eigenvectors for this $U(1)$ action.
 
-For the rank one abelian gauge group, the space of fields of non-commutative Chern--Simons theory on $\R \times {\rm Tot}(K_C)$ is
+For the rank one abelian gauge group, the space of fields of the five-dimensional theory on $\R \times {\rm Tot}(K_C)$ is
 \[
 \Omega^\bu(\R) \otimes \Omega^{0,\bu}({\rm Tot}(K_C)) [1] .
 \]
@@ -104,7 +110,8 @@ For $U \subset C$, the complex of observables is given in terms of the Lie algeb
 (\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(p^{-1}U)\right)
 \]
 where $p \colon K_C \to C$.
-If, moreover, $U$ is a trivializing cover then
+The Chevalley--Eilenberg complex is taken with respect to the dg Lie algebra structure coming from the holomorphic Poisson structure on the total space of~$K_C$. 
+If $U$ is a trivializing cover then
 \[
 (\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(C) \otimes \cO^{hol}(\C)\right) .
 \]
@@ -113,7 +120,13 @@ On the other hand, we have
 (\Bar{\pi}_* \Obs_{CS})(U) \simeq \clie^\bu\left(\Omega^{0,\bu}(C) [[w]] \right) .
 \]
 Here, $w$ plays the role of a formal coordinate on the fiber of $K_C$ and $w^{k}$ as parametrizes the weight $k$ eigenspace---locally, $w$ is simply the one-form $\d z$.
-Using this notation, the embedding \eqref{eqn:taylor1a} is induced by the Taylor series expansion map $\cO^{hol}(\C) \to \C[[w]]$.
+Using this notation, the embedding \eqref{eqn:taylor1a} is induced by the Taylor series expansion map $\cO(\C) \to \C[[w]]$.
+The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is similar to the non-formal case---it is the natural one if we understand $\cO(C)[[w]]$ as functions on the formal neighborhood of the zero section in $K_C$.
+
+%The differential is simply $\dbar$ in the direction of the curve $C$. 
+%If we write an arbitrary element of this complex as $w^k \alpha$, where $\alpha \in \Omega^{0,\bu}(C)$, then the Lie bracket is
+%\[
+%[w^k \alpha, w^l \beta] 
 
 \parsec[]
 
@@ -662,6 +675,7 @@ Then, this result produces a map of factorization algebras $\Obs^! \to \cB$.
 In this sense, $\Obs^!$ is the universal factorization algebra which couples to $\Obs$.
 
 \subsection{Summary}
+\label{sec:factsummary}
 
 We summarize the key points of this section.
 In both the fivebrane and membrane case, we have described a factorization algebra $\Bar{\pi}_*\Obs_{sugra}$ which we think about as being the factorization algebra of observables restricted to the worldvolume of the fivebrane or membrane.
@@ -684,22 +698,37 @@ This sequence of ideals induces a limit diagram of vector bundles
 \eeqn
 where $0$ is the zero vector bundle.
 For each $k$, we point out that $\cG / \cG^{(\geq k)}$ is genuinely a finite rank vector bundle on the worldvolume.
-For $N > 0$, we define 
+
+Define 
 \beqn
-\til \cG_N \define \cG / \cG^{(\geq N-1)} 
+\cG_1 \define \cG / \cG^{(\geq 0)} 
 \eeqn
-which has the induced structure of a local $L_\infty$ algebra on the worldvolume.
+and for $N > 1$
+\beqn
+\til \cG_N \define \cG / \cG^{(\geq N-1)} , \quad \cG_N \define \cG^{\geq 0} / \cG^{(\geq N-1)} .
+\eeqn
+Each of $\cG_1, \cG_{N}, \til \cG_N$ has the induced structure of a local $L_\infty$ algebra on the worldvolume.
+Notice that as factorization algebras of graded vector spaces one has
+\[
+\til \cG_N = \cG_N \otimes \cG_1
+\]
+for $N > 1$. 
 
 The limit diagram \eqref{eqn:lim} induces a diagram of factorization algebras
 \beqn\label{eqn:colim}
-\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\cG_2) \to \cdots ,
+\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\til \cG_2) \to \cdots ,
 \eeqn
 whose colimit is~$\Bar{\pi}_* \Obs_{sugra}$. 
 Here $\ul\C$ is the constant factorization algebra whose value is $\C$ on every open set. 
-There is a similar diagram upon applying~$!$-duals
+Applying~$!$-duals we obtain a sequence
 \beqn
-\ul\C \leftarrow \clie_\bu(\cG_{1,c}) \leftarrow \clie_\bu (\cG_{2,c}) \leftarrow \cdots ,
+\ul\C \leftarrow \clie_\bu(\cG_{1,c}) \leftarrow \clie_\bu (\til \cG_{2,c}) \leftarrow \cdots ,
 \eeqn 
 whose limit is $\clie_\bu(\cG_c) = (\Bar{\pi}_* \Obs_{sugra})^!$. 
+We also point out that there is a similar diagram of the form
+\beqn
+\clie_\bu (\cG_{2,c}) \leftarrow \clie_\bu (\cG_{2,c}) \leftarrow \cdots .
+\eeqn 
 
-%\end{document}
+
+\end{document}
