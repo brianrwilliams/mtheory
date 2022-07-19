@@ -1,18 +1,42 @@
-\documentclass[11pt]{amsart}
+%\documentclass[11pt]{amsart}
 %
 %%\usepackage{../macros-master}
-\usepackage{macros-fivebrane}
+%\usepackage{macros-fivebrane}
 %
-\begin{document}
+%\begin{document}
 
 \section{Introduction}
+Superconformal field theories admit a plethora of exactly computable, protected quantities, giving them a distinguished role in supersymmetric physics. Since it is believed that all supersymmetric field theories flow to superconformal fixed points, such quantities provide robust invariants of supersymmetric field theories. Examples of such a quantities are superconformal indices, which are generating functions for the R-charges of BPS local operators. Crucial steps towards a more microscopic understanding of superconformal indices were taken in \cite{}, articulated through the construction of twisting.
 
-The six-dimensional $\cN=(2,0)$ supersymmetric theory 
+Introduced by Witten \cite{} and further developed by Costello \cite{}, twisting refers to a fixed-point construction for field theories equipped with the action of a supersymmetry algebra. Operationally, one modifies the BRST differential of the theory by a nilpotent supercharge - the result is a theory on which the translations in the image of the supercharge act homotopically trivially. Every supersymmetric field theory admits a so-called minimal twist; the resulting theory is a holomorphic-topological field theory that is holomorphic in the maximal number of spacetime directions.
+
+One of the insights of \cite{} was that superconformal indices count exactly local operators in the minimal twist - accordingly, we may think of the algebra of local operators in the minimal twist as \textit{categorifying} the superconformal index. Moreover, the algebra of local operators is part of the richer structure of a \textit{factorization algebra}. Whilst the former governs the behavior of observables supported at points, the latter organizes observables that are supported on any open set.
+
+A principal goal of the present paper is to initiate a study of factorization algebras associated to the minimal twists of the six-dimensional $\cN=(2,0)$ and three-dimensional $\cN=8$ superconformal field theories. However, the six-dimensional $\cN=(2,0)$ supersymmetric theory remains quite elusive - it is non-lagrangian, and outside of the abelian case, is not known to admit a field-realization. In light of this, we propose to access the minimal twist and its local operators via \textit{twisted holography}.
+
+\subsection{Twisted Holography}
+Introduced by Costello and Li in \cite{CLsugra}, the twisted holography proposal posits an avatar of the AdS/CFT correspondence that holds at the level of twists. The main objects involved are factorization algebras associated to a gravitational theory and to the worldvolume theory of a number of branes therein.
+
+A more concrete, albeit informal, statement is as follows. Let $X$ be a smooth manifold, and let $\Obs_{grav}$ denote a factorization algebra on $X$ that we view as the observables of some bulk gravitational theory. Suppose we in addition have a stack of $N$ branes, wrapping a submanifold $\iota: Y\into X$, whose worldvolume theory has a factorization algebra of observables $\Obs^{N}_{brane}$.
+
+\begin{}[Twisted Holographic Principle]
+  There is a map of factorization algebras
+  \[
+        (\iota^{*}\Obs_{grav})^{!}\to \Obs^{N}_{brane}
+  \]
+
+      that becomes an equivalence in the large $N$ limit.
+    \end{}
+
+    This statement has been tested in many examples \cite{}.
 
 
-In this paper we apply the proposal of \textit{twisted holography} introduced by Costello and Li in \cite{CLsugra} to access the worldvolume theory on a stack of fivebranes in minimally twisted eleven-dimensional supergravity.
-Twisted holography shares, in many ways, the spirit of familiar gauge-gravity dualities such as the AdS/CFT correspondence. 
-The heart of the program relates the algebra of observables of the bulk gravity theory, which lives on a twisted version of AdS space, to the observables of the worldvolume theory living on a defect, which plays the role of the CFT.
+\subsection{Infinite dimensional symmetry enhancement by exceptional simple lie superalgebras}
 
+\subsection{Outline}
 
-\end{document}
+The paper is organized as follows. The first section is the present introduction.
+
+In section 2 we begin by recalling descriptions of minimal twists of eleven dimensional supergravity \cite{} and the abelian six-dimensional $\cN=(2,0)$ \cite{} and three-dimensional $\cN=8$ \cite{} superconformal field theories.
+
+%\end{document}
