@@ -276,24 +276,9 @@ with $\C$ the trivial module.
 
 The (super) character of an $E(3|6)$-module $M$ is given by the formula
 \[
-\ch (M) \define {\rm tr}_M q^{Y} t_1^{h_1} t_2^{h_2} r^{h_3} .
+\ch (M) \define {\rm str}_M q^{Y} t_1^{h_1} t_2^{h_2} r^{h_3} .
 \]
 Our goal in this section is to compute the explicit formula for this character in the case of the degenerate modules $I_A(\lambda_1,\lambda_3)$ of type $A$ (and its modified version $\til I_A(\lambda_1,\lambda_3)$) which are irreducible quotients of the Verma modules $M_A(\lambda_1,\lambda_3)$ (respectively, $\til M_A(\lambda_1,\lambda_3)$).
-
-As a super vector space, the Verma module $M(V)$ associated to a $\fg_0$-module $V$ is 
-\[
-M(V) = \Sym(\lie{g}_{<0}) \otimes V .
-\]
-%We define the modified character of a Verma module by the formula
-%\[
-%\til{\ch} \, M(V) = \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) \cdot \ch (V) \left(q^{-1}, t_1^{-1}, t_2^{-1}, r^{-1} \right)  .
-%\]
-Define
-\[
-R(q,t_1,t_2,r) \define \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) ,
-\]
-so that the character of the Verma module $M(V)$ is a product of $R$ with the character of the finite-dimensional $\fg_0$-representation $V$.
-In the computations of the sections that follow we will make the substitution $\boxed{q = t^2}$ for notational simplicity.
 
 %Recall that $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$.
 
@@ -316,13 +301,25 @@ There is a similar formula for the module $\til{I}_A(\lambda_1,\lambda_3)$ in te
 \ch \, \til I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch \, \til M_A(\lambda_1+j,\lambda_3+j)  .
 \eeqn 
 
-We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term the sum in \eqref{eqn:chA1}
-\beqn\label{eqn:chA3}
-\ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} R(t,r,t_1,t_2) \ch_{SU(3)}^{\lambda_1+j}(t_1,t_2) \ch_{SU(2)}^{\lambda_3+j} (r)  .
-\eeqn
-And similarly for the sum in \eqref{eqn:chA2}---the $SU(2)$ part of the character remains the same and the $SU(3)$ part is related by $t_i\leftrightarrow t_i^{-1}$. 
+As a super vector space, the Verma module $M(V)$ associated to a $\fg_0$-module $V$ is 
+\[
+M(V) = \Sym(\lie{g}_{<0}) \otimes V .
+\]
+%We define the modified character of a Verma module by the formula
+%\[
+%\til{\ch} \, M(V) = \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) \cdot \ch (V) \left(q^{-1}, t_1^{-1}, t_2^{-1}, r^{-1} \right)  .
+%\]
+Define
+\[
+R(q,t_1,t_2,r) \define \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) ,
+\]
+so that the character of the Verma module $M(V)$ is a product of $R$ with the character of the finite-dimensional $\fg_0$-representation $V$
+\[
+\ch M(V) (q,t_1,t_2,r) = R(q,t_1,t_2,r) \cdot \ch (V) (q,t_1,t_2,r).
+\]
+In the computations of the sections that follow we will make the substitution $\boxed{q = t^2}$ for notational simplicity.
 
-The first ingredient in determining an explicit formula for the modified character of type $A$ Verma modules is a direct calculation.
+The first ingredient in determining an explicit formula for Verma modules is a direct calculation.
 \begin{lem}
 \label{lem:R}
 The explicit formula for $R = R(t,t_1,t_2,r)$ is
@@ -332,7 +329,7 @@ The explicit formula for $R = R(t,t_1,t_2,r)$ is
 \beqn
 R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
 \eeqn
-\end{lem} 
+\end{lem}
 
 Recall that the type $A$ degenerate modules are defined by induction from the $\fg_0$-module 
 \[
@@ -343,7 +340,7 @@ Thus, we have the following explicit presentation for the modified character of 
 \begin{prop}
 One has
 \beqn\label{eqn:MA}
-\ch \, \til M_A(\lambda_1,\lambda_3) = q^{y} R(q,r,t_1,t_2) \cdot \ch (V_A^{\lambda_1,\lambda_3}) (t_1^{-1},t_2^{-1},r)
+\ch \, \til M_A(\lambda_1,\lambda_3) = q^{y} R(t,r,t_1,t_2) \cdot \ch (V_A^{\lambda_1,\lambda_3}) (t_1^{-1},t_2^{-1},r)
 \eeqn
 where $y = \lambda_1 - \frac32 \lambda_3$, $R$ is as in Lemma \ref{lem:R} and 
 \beqn\label{eqn:su}
@@ -353,7 +350,6 @@ is the $SU(3) \times SU(2)$ character of the representation $V_A^{\lambda_1,\lam
 \end{prop}
 
 In expression \eqref{eqn:su}, $\ch_{SU(3)}^{\lambda_1}$ denotes the character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1,0)$ and $\ch^{\lambda_3}_{SU(2)}$ is the character of the irreducible $SU(2)$ representation of highest weight $\lambda_3$.
-
 
 %which is
 %\[
@@ -370,41 +366,14 @@ and $SU(2)$ character
 \ch_{SU(2)}^{\lambda_3+j} (r) & = r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \\ & = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} .
 \end{align*}
 
-We proceed to evaluate the sum in \eqref{eqn:chA1}
-\begin{multline}
-t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) R \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
-= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
-= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ =
-\frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \times \\ 
-\left[(1-t_1 t_2^{-2})(1-(t_1^2 t_2^{-1})^{\lambda_1+j+1}) - t_1^{-1}t_2^{-1} (1-t_1^2 t_2^{-1}) (1 - (t_1 t_2^{-2})^{\lambda_1+j+1}) \right]
-%
-%\\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
-\end{multline}
-
-We split the sum $\sum_{j \geq 0}$ into four terms
-\begin{itemize}
-\item the first term is 
-\beqn
-(1-t_1t_2^{-2}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{2 \lambda_1 + j + 2} t_2^{-\lambda_1 - 1} \right) .
+We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term the sum in \eqref{eqn:chA1}
+\beqn\label{eqn:chA3}
+\ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} R(t,r,t_1,t_2) \ch_{SU(3)}^{\lambda_1+j}(t_1,t_2) \ch_{SU(2)}^{\lambda_3+j} (r)  .
 \eeqn
-Evaluating the infinite series this becomes
-\begin{multline} 
-r^{\lambda_3} (1-t_1 t_2^{-2}) \left(\frac1{1-trt_1^{-1}t_2} - \frac{t_1^{2\lambda_1+2}t_2^{-\lambda_1-1}}{1 - t r t_1} \right) \\ = \frac{r^{\lambda_3}(1-t_1 t_2^{-2})}{(1-trt_1^{-1}t_2)(1 - t r t_1)} \left(1 - trt_1-t_1^{2\lambda_1+2} t_2^{-\lambda_1-1}+tr t_1^{2 \lambda_1+1} t_2^{-\lambda_2}\right)
-\end{multline}
-\item the second term is
-\beqn
-t_1^{-1} t_2^{-1}(1-t_1^2 t_2^{-1}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{\lambda_1+1} t_2^{-2\lambda_1 - j - 2}\right) .
-\eeqn
-\end{itemize}
+And similarly for the sum in \eqref{eqn:chA2}---the $SU(2)$ part of the character remains the same and the $SU(3)$ part is related by $t_i\leftrightarrow t_i^{-1}$. 
 
-Combining with the formula for $R(t,r,t_1,t_2)$ we arrive at the formula
-\begin{multline} 
-\ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} 
-\end{multline}
+\parsec[s:unrefinedA]
 
-
-
-\parsec
 In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
 
 \begin{prop}
@@ -418,25 +387,23 @@ where $p_{\lambda_1}(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lamb
 \end{prop}
 
 \begin{proof}
-In this specialization it is easy to see that 
+In this specialization we just see the dimension of the highest weight $SU(3)$ representations
 \[
-\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} ,
+\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} .
 \]
-which is just the dimension of polynomials of homogenous degree $\lambda_1+j$ in three variables. 
 
 We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:chA2}:
-\beqn
-\ch \til M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} t^{-j} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
+\beqn\label{eqn:MA2}
+\ch \til M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3-j} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
 \eeqn
-where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$
+where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$ from Lemma \ref{lem:R}:
 \[
-R(t,r) = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} ,
+R(t,r) = R|_{t_1=t_2=1} = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} .
 \]
-which we read off from Lemma \ref{lem:R}.
-In this expression we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$: 
-\[
-r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
-\]
+In equation \eqref{eqn:MA2} we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$. 
+%\[
+%r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
+%\]
 
 Now, observe the formal identity 
 \[
@@ -463,9 +430,130 @@ In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined 
 
 Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
 \beqn
-\ch \til I_A(\lambda_1,\lambda_3) = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
+\ch \til I_A(\lambda_1,\lambda_3) = \frac{t^{2 \lambda_1 - 2 \lambda_3 + 2}}{1 - t^2} = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
 \eeqn
 
+\parsec[s:refinedA]
+
+We now turn to the formula for the totally unrefined character of $\til I_A(\lambda_1,\lambda_3)$, before specializing $t_1=t_2=1$.
+The character will be given in terms of a generating function for highest weight $SU(3)$ representations.
+
+Our first aim is to deduce a closed formula for the following generating function
+\beqn
+\til p^{\lambda_1} (x,t_1,t_2) = \sum_{j \geq 0} \ch_{SU(3)}^{\lambda_3+j} (t_1^{-1},t_2^{-1}) x^j .
+\eeqn
+where we recall that $\ch_{SU(3)}^{\lambda_3+j} (t_1,t_2)$ is the $SU(3)$ character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1+j,0)$. 
+It will be convenient to define the polynomial 
+\beqn\label{eqn:h1}
+h_{\lambda_1}(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_2 -2}\right)  .
+\eeqn
+
+\begin{lem}
+One has
+\beqn
+\til p_{\lambda_1} (x,t_1,t_2) = \frac{p_{\lambda_1}(x,t_1,t_2)}{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)} .
+\eeqn
+where the polynomial $p_{\lambda_1}(x,t_1,t_2)$ is given by
+\beqn
+p_{\lambda_1}(x,t_1,t_2) = 1 + (1+t_1 t_2 - t_2 x) h(t_1,t_2,x)
+\eeqn 
+\end{lem} 
+\begin{proof}
+\begin{multline}
+t_1^{\lambda_1} t_2^{-\lambda_1} \sum_{j \geq 0} t_1^{j} t_2^{-j} x^j \sum_{k=0}^{\lambda_1 + j}t_1^{-k} t_2^{2k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j \geq 0} \sum_{k=0}^{\lambda_1 + j} t_1^{j-k} t_2^{-j+2k} x^j \left(1 - t_1^{-k-1} t_2^{-k-1}\right) \\ 
+= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j \geq 0} \left(t_1^j t_2^{-j} \frac{1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1}}{1-t_1^{-1} t_2^{2}} - t_1^{j-1} t_2^{-j-1} \frac{1 - (t_1^{-2} t_2)^{\lambda_1+j+1}}{1 - t_1^{-2} t_2} \right) x^j  \\
+%= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{(1-t_1^{-1} t_2^{2})} \sum_{j \geq 0} \left( t_1^j t_2^{-j} (1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1})(1 - t_1^{-2} t_2) \right. \\ \left. - t_1^{j-1} t_2^{-j-1} (1 - (t_1^{-2} t_2)^{\lambda_1+j+1})(1-t_1^{-1} t_2^{2}) \right) x^j \\ 
+= F(t_1,t_2) \left( G_1 (t_1,t_2,x) - t_1^{-1} t_2^{-1} G_2 (t_1,t_2,x)\right) .
+\end{multline}
+
+Where
+\begin{itemize}
+\item $F(t_1,t_2) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{(1-t_1^{-1} t_2^{-1}) (1-t_1^{-1} t_2^{2}) (1 - t_1^{-2} t_2)}$. 
+\item $G_1(t_1,t_2,x) = \frac{1}{1 - t_1^{-1} t_2^2} \sum_{j \geq 0}  t_1^j t_2^{-j} (1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1}) x^j$. 
+\item $G_2(t_1,t_2,x) = \frac{1}{1 - t_1^{-2} t_2}\sum_{j \geq 0} t_1^{j} t_2^{-j} (1 - (t_1^{-2} t_2)^{\lambda_1+j+1}) x^j$. 
+\end{itemize}
+%
+%Directly, we compute
+%\begin{align*}
+%G_1(t_1,t_2,x) & = \frac{1}{1 - t_1 t_2^{-1} x} - \frac{t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2}}{1 - t_2 x} \\
+%G_2(t_1,t_2,x) & = \frac{1}{1-t_1 t_2^{-1} x} - \frac{t_1^{-2\lambda_1-2}t_2^{\lambda_1+1}}{1-t_1^{-1}x}
+%\end{align*}
+We state an intermediate lemma.
+\begin{lem}
+One has
+\begin{align*}
+G_1(t_1,t_2,x) & = \frac{1}{(1 - t_1 t_2^{-1} x)(1-t_2 x)} \big(1 + h(t_1,t_2,x) \big) \\
+G_2(t_1,t_2,x) & = \frac{1}{(1 - t_1 t_2^{-1} x)(1-t_1^{-1} x)} \left(1 + t_1^{-1} t_2^{-1} h(t_1,t_2,x) \right) .
+\end{align*}
+where $h_{\lambda_1}(t_1,t_2,x)$ is as in equation \eqref{eqn:h}. 
+\end{lem}
+
+\begin{proof}
+Formally evaluating the sum over $j$ we obtain
+\begin{align*}
+G_1(t_1,t_2,x) & = \frac{1}{1 - t_1^{-1} t_2^2} \left(\frac{1}{1 - t_1 t_2^{-1} x} - \frac{t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2}}{1 - t_2 x} \right) \\
+G_2(t_1,t_2,x) & = \frac{1}{1 - t_1^{-2} t_2} \left(\frac{1}{1-t_1 t_2^{-1} x} - \frac{t_1^{-2\lambda_1-2}t_2^{\lambda_1+1}}{1-t_1^{-1}x}\right) .
+\end{align*}
+
+Write $G_1 = g_1 / (1- t_1^{-1} t_2^2)$ and consider the polynomial
+\beqn
+\label{eqn:h2}
+ (1-t_2 x)(1-t_1 t_2^{-1} x) g_1(t_1,t_2,x)
+= 1 - t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} - t_2 x + t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} x .
+\eeqn
+This polynomial is clearly divisible by $1-t_1^{-1} t_2^2$ so we can define the polynomial
+\beqn
+\til h_{\lambda_1}(t_1,t_2,x) = \frac{(1-t_2 x)(1-t_1 t_2^{-1} x) g_1(t_1,t_2,x)}{1-t_1^{-1} t_2^2} 
+\eeqn
+By definition we have
+\beqn
+G_1(t_1,t_2,x) = \frac{\til h (t_1, t_2,x)}{(1-t_2 x)(1-t_1 t_2^{-1} x)} .
+\eeqn
+
+We are interested in the polynomial $h_{\lambda_1} = \til h_{\lambda_1} - 1$. 
+By equation \eqref{eqn:h2} we see that 
+\beqn
+h_{\lambda_1} (t_1,t_2,x) = \frac{t_2 (t_1^{-1} t_2 - x) (1-t_1^{-\lambda_1} t_2^{2\lambda_1})}{1-t_1^{-1} t_2^2} .
+\eeqn
+The lemma immediately follows.
+%\beqn
+%h(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_2 -2}\right)  .
+%\eeqn
+\end{proof}
+
+From this lemma we conclude that
+\beqn
+\til{p}_{\lambda_1}(t_1,t_2,x) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)}} \left(1 + (1+t_1 t_2 - t_2 x) h(t_1,t_2,x)\right)
+\eeqn
+and the result follows.
+\end{proof}
+
+%\begin{multline}
+%t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) R \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+%= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
+%= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ =
+%\frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \times \\ 
+%\left[(1-t_1 t_2^{-2})(1-(t_1^2 t_2^{-1})^{\lambda_1+j+1}) - t_1^{-1}t_2^{-1} (1-t_1^2 t_2^{-1}) (1 - (t_1 t_2^{-2})^{\lambda_1+j+1}) \right]
+%%
+%%\\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
+%\end{multline}
+%
+%We split the sum $\sum_{j \geq 0}$ into four terms
+%\begin{itemize}
+%\item the first term is 
+%\beqn
+%(1-t_1t_2^{-2}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{2 \lambda_1 + j + 2} t_2^{-\lambda_1 - 1} \right) .
+%\eeqn
+%Evaluating the infinite series this becomes
+%\begin{multline} 
+%r^{\lambda_3} (1-t_1 t_2^{-2}) \left(\frac1{1-trt_1^{-1}t_2} - \frac{t_1^{2\lambda_1+2}t_2^{-\lambda_1-1}}{1 - t r t_1} \right) \\ = \frac{r^{\lambda_3}(1-t_1 t_2^{-2})}{(1-trt_1^{-1}t_2)(1 - t r t_1)} \left(1 - trt_1-t_1^{2\lambda_1+2} t_2^{-\lambda_1-1}+tr t_1^{2 \lambda_1+1} t_2^{-\lambda_2}\right)
+%\end{multline}
+%\item the second term is
+%\beqn
+%t_1^{-1} t_2^{-1}(1-t_1^2 t_2^{-1}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{\lambda_1+1} t_2^{-2\lambda_1 - j - 2}\right) .
+%\eeqn
+%\end{itemize}
 \subsection{Characters for degenerate modules of type B} \label{s:typeB}
 
 There is a cohomological description of the irreducible modules of type B similar to the type A case above.
@@ -532,7 +620,6 @@ Then the index for $N > 2$ fivebranes after specializing the $SU(3)$ fugacities 
 t^{2 N} \frac{(1-tr)^3 (1-tr^{-1})^3 (1-t^{N+2})}{(1-t^2)^3(1 - t)} \\ + \frac{t^{2N + 4}}{(1-t^2)^3 (1-r^{-2})} \left(p_{N-1} (t^{-1} r) (1 - t^{-1} r^{-1})^3 - r^{-2} p_{N-1}(t^{-1} r^{-1})(1-t^{-1}r)^3 \right) 
 \end{multline}
 
-<<<<<<< HEAD
 \subsection{Decomposing fivebrane local operators}
 
 The factorization algebra of classical observables for our model of twisted supergravity is $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ where $\cL_{sugra}$ is the local $L_\infty$ algebra of \S\ref{s:sugraL}. 
