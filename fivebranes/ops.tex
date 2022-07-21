@@ -490,10 +490,11 @@ q^{3/2}\frac{(r + r^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 Putting this all together we obtain the following.
 
 \begin{prop}
+\label{prop:6done}
 The character $\chi_{u(1)}(q,t_1,t_2,r)$ of local operators of the holomorphic twist of the theory on a single fivebrane is given by the plethystic exponential of the single particle index
-\[
+\beqn\label{eqn:6done}
 f^{6d}_{u(1)} (q,t_1,t_2,r) = \frac{(r + r^{-1})q^{3/2} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )q^2 + q^3}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
-\]
+\eeqn
 \end{prop}
 
 \parsec
@@ -640,19 +641,29 @@ q^3\frac{r^2 + r^{-2} + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 \]
 \item Single particle operators coming from the odd piece of $E(3|6)$ which is $\Omega^{1,hol} \otimes K^{-1/2} \otimes \C^2$ contribute
 \[
-q^{3}\frac{(q^{1/2} r + q^{1/2} r^{-1})(t_1^{-1} + t_1t_2^{-1} + t_2)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
+q^{3}\frac{(q^{1/2} r + q^{1/2} r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 \]
 \end{itemize}
 
-\begin{conj}
+Combining these expressions we obtain the following.
+
+\begin{prop} \label{prop:6dtwo}
+The character of local operators of the factorization algebra $\clie_\bu(\cG_{2,c})$ on $\C^3$ is given by the following expression
+\beqn\label{eqn:6dtwo1}
+\frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+\eeqn
+\end{prop}
+
+Based on our discussion above we are led to the following conjecture.
+\begin{conj}\label{conj:6dtwo}
 The character of local operators of the holomorphic twist of the theory on a stack of two fivebranes is given by the following plethystic exponential
 \[
 \chi_{\lie{sl}(2)}^{6d} (q,t_1,t_2,r) = {\rm PExp} \left[f_{\lie{sl}(2)}^{6d} (t_1,t_2,q,r) \right] .
 \]
 where the single particle index is
-\[
-f_{\lie{sl}(2)}^{6d} (q, t_1,t_2,r) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1^{-1} + t_1t_2^{-1} + t_2)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
-\]
+\beqn\label{eqn:6dtwo}
+f_{\lie{sl}(2)}^{6d} (q, t_1,t_2,r) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+\eeqn
 \end{conj}
 
 Following the general relationship between characters of holomorphic twists of supersymmetric theories and supersymmetric indices, this our conjecture for the supersymmetric index of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(2)$. 

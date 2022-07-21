@@ -327,9 +327,10 @@ The explicit formula for $R = R(t,t_1,t_2,r)$ is
 %R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
 %\eeqn
 \beqn
-R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
+R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1 q^{1/2} r^a)(1-t_1^{-1} t_2 q^{1/2} r^a)(1-t_2^{-1} q^{1/2} r^a)
 \eeqn
 \end{lem}
+
 
 Recall that the type $A$ degenerate modules are defined by induction from the $\fg_0$-module 
 \[
@@ -372,91 +373,118 @@ We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term the 
 \eeqn
 And similarly for the sum in \eqref{eqn:chA2}---the $SU(2)$ part of the character remains the same and the $SU(3)$ part is related by $t_i\leftrightarrow t_i^{-1}$. 
 
-\parsec[s:unrefinedA]
-
-In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
-
-\begin{prop}
-\label{prop:chA}
-Let $\lambda_1,\lambda_3 \geq 0$. 
-The $t_1=t_2=1$ specialization of $\ch \, \til I_A(\lambda_1,\lambda_3)$ is given by the expression
-\beqn
-\frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) 
-\eeqn
-where $p_{\lambda_1}(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
-\end{prop}
-
-\begin{proof}
-In this specialization we just see the dimension of the highest weight $SU(3)$ representations
-\[
-\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} .
-\]
-
-We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:chA2}:
-\beqn\label{eqn:MA2}
-\ch \til M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3-j} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
-\eeqn
-where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$ from Lemma \ref{lem:R}:
-\[
-R(t,r) = R|_{t_1=t_2=1} = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} .
-\]
-In equation \eqref{eqn:MA2} we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$. 
+%\parsec[s:unrefinedA]
+%
+%In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
+%
+%\begin{prop}
+%\label{prop:chA}
+%Let $\lambda_1,\lambda_3 \geq 0$. 
+%The $t_1=t_2=1$ specialization of $\ch \, \til I_A(\lambda_1,\lambda_3)$ is given by the expression
+%\beqn
+%\frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) 
+%\eeqn
+%where $p_{\lambda_1}(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
+%\end{prop}
+%
+%\begin{proof}
+%In this specialization we just see the dimension of the highest weight $SU(3)$ representations
 %\[
-%r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
+%\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} .
 %\]
-
-Now, observe the formal identity 
-\[
-\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p_{\lambda_1}(x)}{(1-x)^3}  
-\]
-where $p_{\lambda_1}(x)$ is as in the statement of the proposition.
-Using this identity, we evaluate
-\begin{align*}
-\ch \til I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} & = \frac{R(r,t) t^{2 \lambda_1-3 \lambda_3}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p_{\lambda_1}(t^{-1}r)}{(1-t^{-1}r)^3} - \frac{r^{-\lambda_3-2}p_{\lambda_1}(t^{-1}r^{-1})}{(1-t^{-1}r^{-1})^3} \right) \\ 
-& = \frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) .
-\end{align*}
-This completes the proof
-\end{proof}
-
-In the case that $\lambda_1=0$ and $\lambda_3=1$ we see that this specialized character simplifies to
-\beqn
-\ch \til I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + 1 - 3 t^2}{(1-t^2)^3} .
-\eeqn
-
-In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character simplifies to
-\beqn
- \ch \til I_A(1,0)|_{t_1=t_2=1} = \frac{t^6(r^2 + r^{-2} + 1) - 3 t^7 (r + r^{-1}) + 3t^8 }{(1-t^2)^3} .
-\eeqn
-
-Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
-\beqn
-\ch \til I_A(\lambda_1,\lambda_3) = \frac{t^{2 \lambda_1 - 2 \lambda_3 + 2}}{1 - t^2} = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
-\eeqn
+%
+%We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:chA2}:
+%\beqn\label{eqn:MA2}
+%\ch \til M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3-j} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
+%\eeqn
+%where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$ from Lemma \ref{lem:R}:
+%\[
+%R(t,r) = R|_{t_1=t_2=1} = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} .
+%\]
+%In equation \eqref{eqn:MA2} we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$. 
+%%\[
+%%r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
+%%\]
+%
+%Now, observe the formal identity 
+%\[
+%\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p_{\lambda_1}(x)}{(1-x)^3}  
+%\]
+%where $p_{\lambda_1}(x)$ is as in the statement of the proposition.
+%Using this identity, we evaluate
+%\begin{align*}
+%\ch \til I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} & = \frac{R(r,t) t^{2 \lambda_1-3 \lambda_3}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p_{\lambda_1}(t^{-1}r)}{(1-t^{-1}r)^3} - \frac{r^{-\lambda_3-2}p_{\lambda_1}(t^{-1}r^{-1})}{(1-t^{-1}r^{-1})^3} \right) \\ 
+%& = \frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 \right. \\ & \left. - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) .
+%\end{align*}
+%This completes the proof
+%\end{proof}
+%
+%In the case that $\lambda_1=0$ and $\lambda_3=1$ we see that this specialized character simplifies to
+%\beqn
+%\ch \til I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + 1 - 3 t^2}{(1-t^2)^3} .
+%\eeqn
+%
+%In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character simplifies to
+%\beqn
+% \ch \til I_A(1,0)|_{t_1=t_2=1} = \frac{t^6(r^2 + r^{-2} + 1) - 3 t^7 (r + r^{-1}) + 3t^8 }{(1-t^2)^3} .
+%\eeqn
+%
+%Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
+%\beqn
+%\ch \til I_A(\lambda_1,\lambda_3) = \frac{t^{2 \lambda_1 - 2 \lambda_3 + 2}}{1 - t^2} = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
+%\eeqn
 
 \parsec[s:refinedA]
 
-We now turn to the formula for the totally unrefined character of $\til I_A(\lambda_1,\lambda_3)$, before specializing $t_1=t_2=1$.
-The character will be given in terms of a generating function for highest weight $SU(3)$ representations.
+We now turn to the formula for the totally unrefined character of $\til I_A(\lambda_1,\lambda_3)$ as a function of the fugacities $t,t_1,t_2,r$.
+To state the result we introduce some notation.  
 
-Our first aim is to deduce a closed formula for the following generating function
+For $\lambda_1 \geq 0$ define the polynomial in the variables $t_i^{\pm 1}$ and an auxiliary variable $x$
+\beqn\label{eqn:p}
+p_{\lambda_1}(t_1,t_2,x) = t_1^{\lambda_1} t_2^{-\lambda_1} \left(1 + (1+t_1^{-1} t_2^{-1} - t_1^{-1} x) h(t_1,t_2,x)\right) 
+\eeqn
+where for $\lambda_1 > 0$
+\beqn\label{eqn:h1}
+h_{\lambda_1}(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_2 -2}\right)  
+\eeqn
+and for $\lambda_1 = 0$ we set $h_0 (t_1,t_2,x) = 0$. 
+
+Our main result of this section is the following.
+\begin{thm}
+\label{thm:refinedA}
+For any $\lambda_1,\lambda_3 \geq 0$ the character of $\til I_A(\lambda_1,\lambda_3)$ is given by the following expression
+\begin{multline}
+\frac{t^{2 \lambda_1 - 3 \lambda_3+6}}{(1-t_1^{-1} t^2)(1-t_1t_2^{-1}t^2)(1-t_2 t^2)(1-r^{-2})} \times \\
+\left(r^{\lambda_3} p_{\lambda_1}(t_1,t_2,t^{-1} r) (1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1}) \right.
+\\
+- \left. r^{-\lambda_3 - 2} p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1}) \right)
+\end{multline}
+\end{thm}
+
+Recall that the character is given by the infinite sum
+\beqn
+\ch \til I_A (\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch \til M_A(\lambda_1+j, \lambda_3+j)
+\eeqn
+For each $j \geq 0$ we have
+\begin{multline}
+\ch \til M_A(\lambda_1+j, \lambda_3+j) = R \cdot t^{2 \lambda_1-3 \lambda_3-j} \cdot \ch_{SU(3)}^{\lambda_1+j} \cdot \ch^{\lambda_3+j}_{SU(2)} \\ =
+\frac{t^{2 \lambda_1 - 3 \lambda_3} R}{1-r^{-2}} \ch_{SU(3)}^{\lambda_1+j} t^{-j} (r^{\lambda_3 + j} - r^{-\lambda_3 - j - 2}).
+\end{multline}
+
+The first step is to deduce a closed formula for the following generating function
 \beqn
 \til p^{\lambda_1} (x,t_1,t_2) = \sum_{j \geq 0} \ch_{SU(3)}^{\lambda_3+j} (t_1^{-1},t_2^{-1}) x^j .
 \eeqn
 where we recall that $\ch_{SU(3)}^{\lambda_3+j} (t_1,t_2)$ is the $SU(3)$ character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1+j,0)$. 
-It will be convenient to define the polynomial 
-\beqn\label{eqn:h1}
-h_{\lambda_1}(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_2 -2}\right)  .
-\eeqn
 
 \begin{lem}
+\label{lem:generating}
 One has
 \beqn
-\til p_{\lambda_1} (x,t_1,t_2) = \frac{p_{\lambda_1}(x,t_1,t_2)}{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)} .
+\til p_{\lambda_1} (t_1,t_2,x) = \frac{p_{\lambda_1}(t_1,t_2,x)}{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)} .
 \eeqn
-where the polynomial $p_{\lambda_1}(x,t_1,t_2)$ is given by
-\beqn
-p_{\lambda_1}(x,t_1,t_2) = t_1^{\lambda_1} t_2^{-\lambda_2} \left(1 + (1+t_1 t_2 - t_2 x) h(t_1,t_2,x)\right) 
-\eeqn 
+where the polynomial $p_{\lambda_1}(x,t_1,t_2)$ is given by equation \eqref{eqn:p}.
+
 \end{lem} 
 \begin{proof}
 \begin{multline}
@@ -500,7 +528,7 @@ Write $G_1 = g_1 / (1- t_1^{-1} t_2^2)$ and consider the polynomial
 \beqn
 \label{eqn:h2}
  (1-t_2 x)(1-t_1 t_2^{-1} x) g_1(t_1,t_2,x)
-= 1 - t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} - t_2 x + t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} x .
+= 1 - t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2} - t_2 x + t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} x .
 \eeqn
 This polynomial is clearly divisible by $1-t_1^{-1} t_2^2$ so we can define the polynomial
 \beqn
@@ -522,12 +550,49 @@ The lemma immediately follows.
 %\eeqn
 \end{proof}
 
-From this lemma we conclude that
+From this intermediate lemma we conclude that
 \beqn
-\til{p}_{\lambda_1}(t_1,t_2,x) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)}} \left(1 + (1+t_1 t_2 - t_2 x) h(t_1,t_2,x)\right)
+\til{p}_{\lambda_1}(t_1,t_2,x) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)}} \left(1 + (1 +t_1^{-1}t_2^{-1}- t_1^{-1} x) h(t_1,t_2,x)\right)
 \eeqn
-and the result follows.
+Which completes the proof of Lemma \ref{lem:generating}. 
 \end{proof}
+
+Now, the proof of Theorem \ref{thm:refinedA} is an immediate computation. 
+\begin{multline}
+\ch \til I_A(\lambda_1,\lambda_2) = \frac{t^{2 \lambda_1 - 3 \lambda_3} R}{1-r^{-2}} \left(r^{\lambda_3} \frac{p_{\lambda_1}(t_1,t_2,r t^{-1})}{(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1})}  \right. \\ \left. - r^{-\lambda_3-2} \frac{p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})}{(1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1})}\right) \\  
+= \frac{t^{2 \lambda_1 - 3 \lambda_3+6}}{(1-t_1^{-1} t^2)(1-t_1t_2^{-1}t^2)(1-t_2 t^2)(1-r^{-2})} \times \\
+\left(r^{\lambda_3} p_{\lambda_1}(t_1,t_2,t^{-1} r) (1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1}) \right.
+\\
+- \left. r^{-\lambda_3 - 2} p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1}) \right) .
+\end{multline} 
+
+\parsec[s:tests]
+
+We can greatly simplify expressions for the character of $\til I_A(\lambda_1,\lambda_3)$ for small values of $\lambda_1,\lambda_3$. 
+The following corollaries are immediate computations. 
+
+\begin{cor} 
+\label{cor:6dtest1}
+When $(\lambda_1,\lambda_3) = (0,1)$ one has 
+\beqn\label{eqn:6doneTest}
+\ch \til I_A(0,1) = \frac{(r + r^{-1})t^{3} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )t^4 + t^6}{(1-t_1^{-1}t^2) (1-t_1 t_2^{-1} t^2) (1-t_2 t^2)} .
+\eeqn
+\end{cor}
+
+Note that upon substituting $q = t^2$ this agrees with the our direct computation of the character of local operators on the holomorphic twist of the six-dimensional theory abelian superconformal theory from Proposition \ref{prop:6done}.
+
+The next easy case is the following.
+\begin{cor}
+\label{cor:6dtest2}
+When $(\lambda_1,\lambda_3) = (1,0)$ one has  
+\beqn\label{eqn:6dtwo}
+\ch \til I_A(1,0) = \frac{t^8(t_1^{-1} + t_1 t_2^{-1}  + t_2) + t^6 (r^2 + r^{-2} + 1) - t^{7} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}t^2) (1-t_1 t_2^{-1} t^2) (1-t_2 t^2)} .
+\eeqn
+\end{cor}
+
+Again, we note that upon substituting $q = t^2$ this agrees with the our direct computation of the character of local operators on the holomorphic twist of our conjectural description of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(2)$ which we computed in Proposition \ref{prop:6dtwo}. 
+
+
 
 %\begin{multline}
 %t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) R \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
