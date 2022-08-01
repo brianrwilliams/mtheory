@@ -26,25 +26,22 @@ We will consider the eleven-dimensional theory on eleven-manifolds that arise as
 \end{itemize}
 
 \parsec[s:brkevin]
-As a way to highlight the key aspects of the construction, we consider the simplified model of Costello's twisted $M$ theory on $\R \times \T^* C$, where $C$ is a Riemann surface equipped with a nonvanishing holomorphic one-form $\d z$, with some number of twisted `fivebranes' wrapping the zero section
+As a way to highlight the key aspects of the construction, we detail the ingredients in the simplified model of Costello's twisted $M$ theory. The relevant local calculation can be found in the appendix of \cite{}; our goal here is to simply identify the salient global features that allow one to reduce to said local calculation.
+
+We consider the theory on $X = Tot (\R\oplus K_{C})$, with some number of twisted `fivebranes' wrapping the zero section
 \[
 0 \times C \subset \R \times \T^* C .
 \]
-Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$.
+Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$. We wish to describe the complement of the zero section $M = X - 0 \times C$.
 
-If we remove the defect we obtain the manifold
-\[
-\left(\R \times \T^* C\right) - C \simeq C \times \R_{>0} \times S^2
-\]
+Note that the bundle $\R\oplus K_{C}$ is equipped with a partially flat connection - this data equips the total space $X$ with the data of a transversely holomorphic foliation (THF).
 
-This manifold is equipped with the natural structure of a transversely holomorphic foliation (THF).
+If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $p: \R \times \T^*C \to \R_{+} \times C$ which combines the fiberwise norm with the natural bundle projection. The restriction $p|M$ equips $M$ with the structure of an $S^{2}$-bundle over $\R_{>0}\times C$. Moreover, the partial flat connection on $\R\oplus K_{C}$ induces a partially flat connection on $M$. As part of this data, each of the fiber spheres is equipped with a complex foliation of rank 1.
 
-If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $\R \times \T^*C \to \R_{+} \times C$ which combines the fiberwise norm with the natural bundle projection.
-Denote by $r$ a coordinate for the direction $\R_+$ normal to the brane and let $z \in C$ be a local holomorphic coordinate.
+Compactification amounts to pushing forward a local $L_{\infty}$-algebra along $p|M$. The result is a theory with infinitely many Kaluza--Klein modes along the fiber spheres. In the holomorphic-topological setting, the Kaluza-Klein modes will be modeled by a variant of Cauchy-Riemann cohomology.
 
-The fibers of this projection away from $r = 0$ are all homeomorphic to the two-sphere. Moreover, they come equipped with a canonical complexified foliation of rank 1. Compactification along this projection results in a theory with infinitely many Kaluza--Klein modes roughly parametrized by the  Cauchy--Riemann cohomology of the two sphere as a hypersurface in $\R \oplus K_C|_z \simeq \R \times \C$.
+Moreover, including the flux sourced by the brane deforms this structure. The lowest lying Kaluza-Klein modes in the deformed theory are equivalent to 3d Chern-Simons.
 
-We will see that the including the backreaction corresponds to deforming this structure.
 For sake of analogy, we think of the resulting deformation as being a twisted version of $AdS_3 \times S^2$. \footnote{It is an interesting question if this corresponds the actual twist of a five--dimensional supersymmetric background of this form.}
 We proceed to describe the twisted version of states at the boundary of this version of $AdS$.
 We first proceed before turning on the flux sourced by the brane.
@@ -87,9 +84,10 @@ The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ 
 
 We now consider the situation of backreacting some number of (twisted) fivebranes in our eleven-dimensional model.
 Let $Z$ be a three-fold that the fivebranes wrap.
-We also fix a rank 2 holomorphic vector bundle $V\to Z$ such that $\wedge^{2} V \cong K_{Z}$, and let $X = \text{Tot}(V)$.
-The condition on $V$ ensures that $X$ is a Calabi-Yau five-fold---in the main body of the paper we will choose $V$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
-The eleven-manifold we place our theory on is $\R\times X_V$, which we can view as the total space of the \textit{real} rank five bundle $\R\oplus V$ over $Z$.
+We also fix a rank 2 holomorphic vector bundle $V\to Z$ such that $\wedge^{2} V \cong K_{Z}$;
+this condition ensures that the total space of $V$ is a Calabi-Yau five-fold. In the main body of the paper we will choose $V$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
+
+Consider the bundle $\R\oplus V$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $X = Tot (\R\oplus V)$ which is the total space of the \textit{real} rank five bundle $\R\oplus V$ over $Z$. The partially flat connection on $\R\oplus V$ equips $X$ with a canonical THF structure.
 
 We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus V$.
 Denote the complement of the zero section by
@@ -146,10 +144,10 @@ With this THF cohomological description of the eleven-dimensional theory in plac
 We may choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus V$ over $Z$ and a fiberwise partially hermitian metric.
 Explicitly, the corresponding norm defines a map
 \begin{align*}
- h \colon  \R\times X & \to \R_{+} \\
+ h \colon  X & \to \R_{+} \\
   (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
 \end{align*}
-Letting $\pi \colon \R\times X \to Z$ be the natural projection, we obtain the $S^{4}$ bundle
+Letting $\pi \colon X \to Z$ be the natural projection, we obtain the $S^{4}$ bundle
 \[
 p \define (h,\pi) \colon \R \times X \to \R_{+}\times Z
 \]
@@ -157,12 +155,12 @@ which restricts to an $S^4$ bundle $p|M \colon M \to \R_{>0} \times Z$.
 These embeddings and projections fit inside of the following commutative diagram
 \[
 \begin{tikzcd}
-M \ar[d,"p|M"'] \ar[r,hook] & \R \times X \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
+M \ar[d,"p|M"'] \ar[r,hook] & X \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
 \R_{>0} \times Z \ar[r,hook] & \R_{+} \times Z & \ar[l,hook',"0 \times \id"] Z.
 \end{tikzcd}
 \]
 The inclusions on the left are the natural embeddings.
-The top right inclusion is the zero section of ${\rm Tot}(\R \oplus V) = \R \times X$ and the bottom right inclusion is the embedding at radius $r = 0$.
+The top right inclusion is the zero section of ${\rm Tot}(\R \oplus V) = X$ and the bottom right inclusion is the embedding at radius $r = 0$.
 
 As we just elaborated, the eleven-dimensional theory is defined on the THF manifold $M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $M$.
 Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|M$.
