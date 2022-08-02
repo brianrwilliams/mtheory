@@ -7,9 +7,15 @@
 
 \section{Factorization algebras in twisted $M$ theory}
 
-In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal membrane and fivebrane worldvolume theories (after twisting). 
-Our ansatz relies on a proposal for twisted holography developed by \brian{cites}.
+In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal membrane and fivebrane worldvolume theories (after twisting).
+For the case at hand, our expectation for universal can be understood as the theory on a large number of membranes and fivebranes. 
+We will see how this interpretation is supported by the supergravity index calculations presented in the last section. 
 
+Our ansatz for the worldvolume theories in the large $N$ limit relies on a proposal for twisted holography proposed by Costello and Li in \cite{CLsugra} and further developed by Costello, Gaiotto, Paquette in \cite{CostelloM2,CostelloOmega,costello2021twisted,CP}.
+The core idea is that the algebra of operators on both sides of the duality are Koszul dual. 
+Many other examples and support for this twisted holographic principle have been carried out in \cite{Oh:2021wes,Oh:2020hph,Gaiotto:2021xce}. \brian{surya add more?}
+
+It is absolutely crucial for this proposal that we work in a derived setting using the BV formalism. 
 The observables of any theory in the BV formalism have the structure of a factorization algebra on spacetime \cite{CG2}. 
 Classically, if a theory in the BV formalism is described by a local $L_\infty$ algebra $\cL$ on spacetime $M$ then to an open set $U \subset M$ the factorization algebra of observables assigns the cochain complex
 \[
@@ -459,7 +465,7 @@ The top line is a holomorphic vector field on~$Z$ and the bottom line is a $\lie
 
 \subsection{The membrane decomposition}
 
-We briefly highlight an analogous construction of the restricted factorization algebra which is natural from the point of view of membranes.
+We briefly highlight an analogous construction of the restricted factorization algebra describing membranes.
 Recall that in the twist we are considering the worldvolume theory of membranes is a three-dimensional partially topological-holomorphic field theory which exist on a product $\R \times C$ where $C$ is a Riemann surface.
 
 We consider the eleven-dimensional theory on $\R \times X_C$ where $X_C$ is the Calabi--Yau fivefold
@@ -541,7 +547,7 @@ The $L_\infty$ structure on $\cL_{sugra}$ is equivariant for this $\C^\times$ ac
 \end{prop}
 
 As in the case of fivebranes, this proposition allows us to decompose the local Lie algebra $\cG_{\R \times C}$ into weights. 
-Similarly to the proof of Lemma \ref{lem:technical} one can show that the $n$th eigenspace is quasi-isomorphic to a local Lie algebra of the form
+Similarly as above one can show that the $n$th eigenspace is quasi-isomorphic to a local Lie algebra of the form
 \[
 \Omega^\bu(\R) \otimes \Omega^{0,\bu}\left(C, \cV^{(n)}\right)
 \]
@@ -557,20 +563,21 @@ For $n=0$ one has
 \[
 \cV^{(0)} \simeq \T_C \oplus \lie{sl}(4) \otimes \cO_C \oplus \Pi \left(K^{-1/2}_C \otimes \wedge^2 \C^4 \oplus K^{-1/2}_C \otimes S^2 \C^4\right) .
 \]
+As in the case of fivebranes, the $n=0$ eigenspace is equipped with the structure of a super Lie algebra whose exact form we do not state now.
 
 \subsection{Koszul duality for factorization algebras: an ansatz} 
 
 In quantum field theory Koszul duality naturally appears in the problem of coupling topological line operators to some ambient bulk theory. 
-More generally, for higher dimensional topological defects, this problem is encoded by Koszul duality for the theory of $\EE_n$ algebras \cite{??}.
+More generally, for higher dimensional topological defects, this problem is encoded by Koszul duality for the theory of $\EE_n$ algebras \cite{FrancisGaitsgory} \cite[\S 5.2]{LurieHA}.
 
 More generally, we anticipate a general theory of Koszul duality for factorization algebras which should encode the problem of coupling arbitrary defects (without the condition of being topological).
 Even for factorization algebras of holomorphic-topological nature this theory has not been studied in mathematics. 
 Nevertheless, we will emphasize features that we expect this general form of Koszul duality to possess which will allow us to nail down its behavior on a rather general class of factorization algebras. 
 
 In this first part of this subsection we briefly recall how Koszul duality enters in the problem of coupling line operators. 
-We refer~\cite[\S 6]{CP1},~\cite[\S ??]{CG1}, or the review~\cite{PWkoszul} for more details. 
+We refer~\cite[\S 6]{CP1},~\cite[\S 8]{CG1}, or the review~\cite{PWkoszul} for more details. 
 Then, we give an ansatz for Koszul duality for factorization algebras of the form $\clie^\bu(\cL)$ where $\cL$ is some local Lie algebra. 
-From the point of view of the BV formalism this is not much of a condition, all such factorization algebras of classical observables can be cast in this form. 
+From the point of view of the perturbative BV formalism this is not much of a restriction, all such factorization algebras of classical observables can be cast in this form. 
 
 \parsec[s:lines]
 Suppose that we have a bulk theory living on a spacetime of the form 
@@ -615,7 +622,7 @@ Before moving towards our definition of Koszul duality for a general class of fa
 We will focus on a slight generalization of the standard Koszul duality between the exterior and symmetric algebras.
 
 \begin{prop}
-Let $\lie{g}$ be a Lie algebra and equip the associative (and commutative) dg algebra $\clie^\bu(\fg)$ with the augmentation induced by the tautological homomorphism $0 \to \lie{g}$.
+Let $\lie{g}$ be a Lie algebra and equip the filtered associative (and commutative) dg algebra $\clie^\bu(\fg)$ with the augmentation induced by the tautological homomorphism $0 \to \lie{g}$.
 The Koszul dual of $\clie^\bu(\lie{g})$ with respect to this augmentation is equivalent to the universal enveloping algebra $U \fg$. 
 \end{prop}
 
@@ -631,8 +638,9 @@ To an open set $U \subset \R$ this produces the Chevellay--Eilenberg complex com
  
 Similarly, a model for $U \fg$ is the locally constant factorization algebra
 \[
-\clie_\bu(\fg \otimes \Omega^\bu_{\R,c}).
+\clie_\bu(\fg \otimes \Omega^\bu_{\R,c}),
 \]
+see \cite[\S 3.4]{CG1}.
 To an open set $U \subset \R$ this produces the Chevellay--Eilenberg complex computing the Lie algebra {\em homology} of the dg Lie algebra $\fg \otimes \Omega^\bu_c(U)$---the $\fg$-valued compactly supported de Rham forms on $U$.
 
 \parsec[s:generalkoszul]
@@ -657,7 +665,7 @@ From the discussion above we see that $!$-dual does agree with Koszul duality in
 \parsec[s:noether]
 
 While we don't prove that the factorization algebra $\clie^\bu(\cL)^!$ satisfies any sort of categorical duality, we point out a universality that is satisfied with reference to couplings.
-In \cite[Chapter ??]{CG2} a factorization algebra enhancement of Noether's theorem is formulated. 
+In \cite[Part 3]{CG2} a factorization algebra enhancement of Noether's theorem is formulated. 
 The general context is the following: 
 \begin{itemize}
 \item $\cB$ is the factorization algebra on spacetime $M$ of classical observables for some auxiliary theory in the BV formalism.
@@ -726,7 +734,7 @@ Applying~$!$-duals we obtain a sequence
 \eeqn 
 whose limit is $\clie_\bu(\cG_c) = (\Bar{\pi}_* \Obs_{sugra})^!$. 
 We also point out that there is a similar diagram of the form
-\beqn
+\beqn\label{eqn:limit2}
 \clie_\bu (\cG_{2,c}) \leftarrow \clie_\bu (\cG_{2,c}) \leftarrow \cdots .
 \eeqn 
 
