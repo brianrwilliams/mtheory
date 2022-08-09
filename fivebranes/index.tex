@@ -42,7 +42,7 @@ If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C
 
 Compactification amounts to pushing forward a local $L_{\infty}$-algebra along $p|M$. The result is a theory with infinitely many Kaluza--Klein modes along the fiber spheres. In the holomorphic-topological setting, the Kaluza-Klein modes will be modeled by a variant of Cauchy-Riemann cohomology.
 
-Moreover, including the flux sourced by the brane deforms this structure. The lowest lying Kaluza-Klein modes in the deformed theory are equivalent to 3d Chern-Simons.
+Moreover, including the flux sourced by the brane deforms this structure. The lowest lying Kaluza-Klein modes in the deformed theory are equivalent to three-dimensional Chern-Simons theory.
 
 For sake of analogy, we think of the resulting deformation as being a twisted version of $AdS_3 \times S^2$. \footnote{It is an interesting question if this corresponds the actual twist of a five--dimensional supersymmetric background of this form.}
 We proceed to describe the twisted version of states at the boundary of this version of $AdS$.
@@ -99,47 +99,6 @@ M_V = \text{Tot}(\R\oplus V) - 0(Z).
 Notice that in \S \ref{s:Lsugra} we have only defined the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on a product of a smooth one-manifold times a Calabi--Yau five-fold.
 The eleven-manifold $M_V$ is not of this form, nevertheless there is a generalization of $\cL_{sugra}$ which one can define using the natural geometric structure present in our situation.
 
-A transversely holomorphic foliation (THF) on a smooth manifold $M$ is an integrable subbundle $F \subset \T_M \otimes \C$ such that $F + \Bar{F} = \T_M \otimes \C$.
-We will say that $F$ equips $M$ with the a THF structure.
-%Suppose $M$ is a manifold equipped with a THF structure and let $\cF$ be the corresponding foliation of even codimension.
-The product $M = S \times X$, where $X$ is a complex manifold and $S$ is a smooth manifold has a natural THF structure with $F$ the restriction of the tangent bundle of $N$ along the projection.
-Locally, any THF manifold is split of the form $\R^d \times \C^n$, whose coordinates we will denote by $(x_i ;  z_j)$.
-The bundle $F$ is locally spanned by the vector fields $\partial / \partial x_i$'s and $\del/\del \zbar_j$'s.
-(Notice that when $F \cap \Bar{F} = 0$ we are just describing an ordinary complex structure on $M$.)
-
-Any submanifold of a THF manifold is itself a THF manifold.
-We are most interested in the submanifold $M_V \subset {\rm Tot}(\R \oplus V) = \R \times X$ where we equip $\R \times X$ with its standard split THF structure.
-
-We have expressed the fields of the eleven-dimensional theory in terms of a mixed type of de Rham and Dolbeault cohomology.
-Let us focus on the fields $\beta,\gamma$ which on $\R \times X$ combine to form the complex
-\beqn\label{eqn:drdol}
-\Omega^{\bu}(\R) \otimes \Omega^{0,\bu}(X) \xto{1 \otimes \del} \Omega^{\bu}(\R) \otimes \Omega^{1,\bu}(X) .
-\eeqn
-As usual, we leave the $\d_{dR}$ and $\dbar$ operators implicit.
-More generally, there is a natural cohomology associated to a THF structure.
-Suppose $(M,F)$ is a THF structure and
-denote by $Q$ the (complex) quotient bundle $\T_\C M / F$.
-For each $p,q$ denote by $\cA^{p;q}$ smooth sections of the bundle $\wedge^p Q^\vee \otimes \wedge^q F^\vee$.
-The derivative along the leaves of the foliation defined by $V$ defines a map
-\[
-\thfd \colon \cA^{p;q} \to \cA^{p;q+1}  .
-\]
-By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and so $\thfd$ equips $\cA^{p;\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
-Locally in a split THF structure the operator $D$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
-There is also an analog of the holomorphic $\del$ operator which takes the form $\thfdel \colon \cA^{p;q} \to \cA^{p+1;q}$.
-The obvious exterior product $\cA^{p;q} \times \cA^{r;s} \to \cA^{p+r;q+s}$ further endows
-\[
-\left(\cA^{\bu;\bu} (M), \thfd + \thfdel\right) = \left(\oplus_p \cA^{p;\bu}[-p] , \thfd + \thfdel \right)
-\]
-with the structure of a bigraded commutative dg algebra.
-This complex is simply isomorphic to the de Rham complex of $M$, but this presentation lends itself to more interesting quotient complexes.
-For example, the forms of type $(p,\bu)$ with $p \geq 2$ form an ideal inside of this dg algebra; hence we get a quotient dg algebra
-\beqn\label{thfcoh1}
-\left(\cA^{\leq 1;\bu}(M), \thfd + \thfdel\right) = \quad \cA^{0;\bu} \xto{\thfdel} \cA^{1;\bu} .
-\eeqn
-We leave the $\thfd$ operator implicit in the presentation on the right hand side.
-When $M = M_V$, it is this complex that is the THF generalization of the truncated de Rham--Dolbeault complex in \eqref{eqn:drdol}---it is easy to see that it agrees with this complex in the case of a split THF manifold.
-There is a similar THF description for the fields $\mu,\nu$ in the eleven-dimensional theory.
 
 %Note that the eleven-manifold $\R \times X$ is equipped with a natural transverseley--holomorphic foliation (THF)---the complexified tangent bundle decomposes as $T_{\R}\oplus T_{Z}\oplus \Bar{T}_{Z}$.
 With this THF cohomological description of the eleven-dimensional theory in place we proceed to describe the boundary condition obtained by removing the location of the branes.
