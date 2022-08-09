@@ -8,7 +8,7 @@
 \section{Twisted supergravity states}
 \label{sec:states}
 
-The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT. 
+The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT.
 The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. The state spaces on ${\rm AdS}_{7}\times S^{4}$ and ${\rm AdS}_{4}\times S^{7}$ have a remarkable property---they are naturally modules for certain infinite-dimensional exceptional super Lie algebras. We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
 
 Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
@@ -30,17 +30,17 @@ We will consider the eleven-dimensional theory on eleven-manifolds that arise as
 \parsec[s:brkevin]
 As a way to highlight the key aspects of the construction, we detail the ingredients in the simplified model of Costello's twisted $M$ theory. The relevant local calculation can be found in the appendix of \cite{}; our goal here is to simply identify the salient global features that allow one to reduce to said local calculation.
 
-We consider the theory on $X = \text{Tot} (\R\oplus K_{C})$, with some number of twisted `fivebranes' wrapping the zero section
+We consider the theory on $M = \text{Tot} (\R\oplus K_{C})$, with some number of twisted `fivebranes' wrapping the zero section
 \[
 0 \times C \subset \R \times \T^* C .
 \]
-Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$. We wish to describe the complement of the zero section $M = X - 0 \times C$.
+Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$. We wish to describe the complement of the zero section $\mathring M = M - 0 \times C$.
 
-Note that the bundle $\R\oplus K_{C}$ is equipped with a partially flat connection - this data equips the total space $X$ with the data of a transversely holomorphic foliation (THF) \cite{DuchampKalka}. 
+Note that the bundle $\R\oplus K_{C}$ is equipped with a partially flat connection - this data equips the total space $M$ with the data of a transversely holomorphic foliation (THF) \cite{DuchampKalka}.
 
-If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $p: \R \times \T^*C \to \R_{+} \times C$ which combines the fiberwise norm with the natural bundle projection. The restriction $p|M$ equips $M$ with the structure of an $S^{2}$-bundle over $\R_{>0}\times C$. Moreover, the partial flat connection on $\R\oplus K_{C}$ induces a partially flat connection on $M$. As part of this data, each of the fiber spheres is equipped with a complex foliation of rank 1.
+If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $p: \R \times \T^*C \to \R_{+} \times C$ which combines the fiberwise norm with the natural bundle projection. The restriction $p| \mathring M$ equips $\mathring M$ with the structure of an $S^{2}$-bundle over $\R_{>0}\times C$. Moreover, the partial flat connection on $\R\oplus K_{C}$ induces a partially flat connection on $\mathring M$. As part of this data, each of the fiber spheres is equipped with a complex foliation of rank 1.
 
-Compactification amounts to pushing forward a local $L_{\infty}$-algebra along $p|M$. The result is a theory with infinitely many Kaluza--Klein modes along the fiber spheres. In the holomorphic-topological setting, the Kaluza-Klein modes will be modeled by a variant of Cauchy-Riemann cohomology.
+Compactification amounts to pushing forward a local $L_{\infty}$-algebra along $p| \mathring M$. The result is a theory with infinitely many Kaluza--Klein modes along the fiber spheres. In the holomorphic-topological setting, the Kaluza-Klein modes will be modeled by a variant of Cauchy-Riemann cohomology.
 
 Moreover, including the flux sourced by the brane deforms this structure. The lowest lying Kaluza-Klein modes in the deformed theory are equivalent to three-dimensional Chern-Simons theory.
 
@@ -86,37 +86,33 @@ The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ 
 
 We now consider the situation of backreacting some number of (twisted) fivebranes in our eleven-dimensional model.
 Let $Z$ be a three-fold that the fivebranes wrap.
-We also fix a rank 2 holomorphic vector bundle $V\to Z$ such that $\wedge^{2} V \cong K_{Z}$;
-this condition ensures that the total space of $V$ is a Calabi-Yau five-fold. In the main body of the paper we will choose $V$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
+We also fix a rank 2 holomorphic vector bundle $W\to Z$ such that $\wedge^{2} W \cong K_{Z}$;
+this condition ensures that the total space of $W$ is a Calabi-Yau five-fold. In the main body of the paper we will choose $W$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
 
-Consider the bundle $\R\oplus V$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $X = Tot (\R\oplus V)$ which is the total space of the \textit{real} rank five bundle $\R\oplus V$ over $Z$. The partially flat connection on $\R\oplus V$ equips $X$ with a canonical THF structure $F_{X}\subset T_{X}$.
+Consider the bundle $\R\oplus W$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $M = Tot (\R\oplus W)$ which is the total space of the \textit{real} rank five bundle $\R\oplus W$ over $Z$. The partially flat connection on $\R\oplus W$ equips $M$ with a canonical THF structure $F_{M}\subset T_{M}^{\C}$.
 
-We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus V$.
+We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus W$.
 Denote the complement of the zero section by
 \[
-M_V = \text{Tot}(\R\oplus V) - 0(Z).
+\mathring{M} = \text{Tot}(\R\oplus W) - 0(Z).
 \]
-Notice that in \S \ref{s:Lsugra} we have only defined the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on a product of a smooth one-manifold times a Calabi--Yau five-fold.
-The eleven-manifold $M_V$ is not of this form, nevertheless there is a generalization of $\cL_{sugra}$ which one can define using the natural geometric structure present in our situation.
 
+We may choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus W$ over $Z$ and a fiberwise partially hermitian metric.
 
-%Note that the eleven-manifold $\R \times X$ is equipped with a natural transverseley--holomorphic foliation (THF)---the complexified tangent bundle decomposes as $T_{\R}\oplus T_{Z}\oplus \Bar{T}_{Z}$.
-With this THF cohomological description of the eleven-dimensional theory in place we proceed to describe the boundary condition obtained by removing the location of the branes.
-We may choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus V$ over $Z$ and a fiberwise partially hermitian metric.
 Explicitly, the corresponding norm defines a map
 \begin{align*}
- h \colon  X & \to \R_{+} \\
+ h \colon  M & \to \R_{+} \\
   (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
 \end{align*}
-Letting $\pi \colon X \to Z$ be the natural projection, we obtain the $S^{4}$ bundle
+Letting $\pi \colon M \to Z$ be the natural projection, we obtain the $S^{4}$ bundle
 \[
-p \define (h,\pi) \colon \R \times X \to \R_{+}\times Z
+p \define (h,\pi) \colon M \to \R_{+}\times Z
 \]
-which restricts to an $S^4$ bundle $p|M \colon M \to \R_{>0} \times Z$.
+which restricts to an $S^4$ bundle $p|\mathring {M} \colon \mathring{M} \to \R_{>0} \times Z$.
 These embeddings and projections fit inside of the following commutative diagram
 \[
 \begin{tikzcd}
-M \ar[d,"p|M"'] \ar[r,hook] & X \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
+M \ar[d,"p|\mathring M"'] \ar[r,hook] & \mathring{M} \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
 \R_{>0} \times Z \ar[r,hook] & \R_{+} \times Z & \ar[l,hook',"0 \times \id"] Z.
 \end{tikzcd}
 \]
@@ -124,53 +120,20 @@ The inclusions on the left are the natural embeddings.
 The top right inclusion is the zero section of ${\rm Tot}(\R \oplus V) = X$ and the bottom right inclusion is the embedding at radius $r = 0$.
 
 As we just elaborated, the eleven-dimensional theory is defined on the THF manifold $M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $M$.
-Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|M$.
-The resulting sheaf of $L_\infty$ algebras $(p|M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
+Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$.
+The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
 
 The theory on $M$ extends to a theory on the manifold obtained by filling in the zero section of $\R \times V$; in other words, we know that the theory is defined on the entire space $\R \times X$.
 This means that there is a natural way to extend the theory on $\R_{>0} \times Z$ to the seven-manifold with boundary $\R_{+} \times Z$.
 The restriction of this theory to the six-dimensional boundary plays the most important role for us.
 
-\brian{trying to incorporate below}
-%To do this we will make use of the natural foliated geometric structures which we have around.
-
-Recall that we have a THF structure on $X$ induced from a partially flat conneciton on $\R\oplus V$; this is codified by saying that there is a splitting of the exact sequence
+Recall that we have a THF structure on $M$ induced from a partially flat conneciton on $\R\oplus W$. The partial connection amounts to a splitting of the exact sequence
 
 \[
-0 \to \ker \to F_{X}\to \pi^{*}T^{1,0}_{Z}\to 0
+  0 \to F_{X}\cap T_{M/Z}^{\C}\to F_{X}\to \pi^{*}T^{1,0}_{Z}\to 0
 .\]
 
 Both $F_{X}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that that the splitting preserves the lie brackets on sections.
-
-Consider the relevant tangent sequence of the map
-
-
-The fibers of the composition $V_{M}\to M\to \R_{+}\times Z$ are copies of the tangent bundle of $S^{4}$, and the corresponding fibers of $V_{M}$ are subbundles of $TS^{4}$ that equip the fiber 4-spheres with a generalized Cauchy-Riemann structure. \surya{CITE}
-
- The underlying sheaf of cochain complexes is given by
-
-\[
-\Omega^{\bullet}(\R_{+})\otimes \left ( \begin{tikzcd}
-\ul{\rm even} & \ul{\rm odd} \\
-\PV^{1,\bu}(Z) \ar[r, "\del_{\Omega}"] & \PV^{0,\bu}(Z)\\
-\Omega^{0,\bu}(Z) & \Omega^{1,\bu}(Z) \ar[l, "\del"]
-\end{tikzcd}
- \right ) \otimes CR (S^{4}).
-\]
-
-
-Here $CR (S^{4})$ denotes the cohomology of the tangential Cauchy-Riemann complex of $S^{4}$ \surya{CITE}, equipped with the above Cauchy-Riemann structure. Its computation is facilitated by the following lemma:
-
-\begin{lem}
-  Let $\R^{d}\times \C^{n}$ be an affine THF manifold, and choose a partial hermitian metric. Let $S^{d+2n-1}$ denote the corresponding unit sphere, equipped with its standard generalized Cauchy-Riemann structure. Then there is a quasi-isomorphism
-
-  \[CR (S^{n+2d-1})\cong \cA^{\bu;\bu}\left ( (\R^{d}\times \C^{n})\setminus 0 \right )\]
-
-  where the right-hand-side denotes the Dolbeault-deRham complex.
-\end{lem}
-
-The cohomology of the Dolbeault-deRham complex of $\R\times \C^{2}$ is easy to describe.
-
 
 It was argued in \cite{RSW} that to leading order the coupling of a stack of twisted fivebranes to the eleven-dimensional theory is given by the nonlocal interaction
 \beqn\label{eqn:br1}
