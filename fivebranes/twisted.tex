@@ -231,7 +231,8 @@ All together, this data prescribes the structure of a $\Z/2$ graded theory in th
 
 The free part of the BV action is easy to describe
 \beqn
-\int_{S \times X} \left(\gamma \d \mu\right) \Omega_X + \int_{S \times X} (\beta \dbar \nu) \Omega_X + \int_{S \times X} (\beta \div \mu) \Omega_X ,
+\label{eqn:free}
+\int_{S \times X} \left(\gamma (\d_{dR} + \dbar) \mu\right) \Omega_X + \int_{S \times X} (\beta (\d_{dR} + \dbar) \nu) \Omega_X + \int_{S \times X} (\beta \div \mu) \Omega_X ,
 \eeqn
 where $\Omega_X$ is the holomorphic volume form on~$X$.
 Notice that in the first two terms no holomorphic derivatives appear in the direction of $X$ due to the presence of this holomorphic volume form.
@@ -239,6 +240,7 @@ Notice that in the first two terms no holomorphic derivatives appear in the dire
 The interacting part of the action is more complicated, partly for the reason that in our presentation above it is given by a formal series in the space of fields, rather than just a polynomial in the fields. 
 Explicitly, the interaction can be written as
 \beqn
+\label{eqn:int}
 \frac12 \int_{S \times X} (\mu^2 \del \gamma) \frac{\Omega_X}{1- \nu} + \frac16 \int_{S \times X} \gamma \del \gamma \del \gamma .
 \eeqn
 %
@@ -393,17 +395,19 @@ where the $\dbar$ operator acts implicitly on each summand.
 
 \subsection{Twisted membranes}
 
+\brian{non BV setup}
+
 The theory on a stack of $N$ membranes probing the origin in $\C^{4}/\Z_{k}$ is expected to be described by the ABJM theory---a 3d $\cN=6$ superconformal gauge theory with gauge group $U(N)\times U(N)$ at levels $\pm k$ respectively \cite{Aharony:2008ug}. 
 For $k=1,2$ the theory witnesses an enhancement to $\cN=8$ due to a nonperturbative effect \cite{Bagger:2007jr,Gustavsson:2007vu}. 
 
 Twists of three-dimensional $\cN=8$ supersymmetric gauge theories were classified and characterized in \cite{ESsusy,ESW,Garner:2022vds}. 
-Moreover, the ABJM theories are examples of 3d $\cN=2$ Chern-Simons matter theories, whose twists were studied in \cite{Aganagic:2017tvx}. 
+Moreover, the ABJM theories are examples of three-dimensional $\cN=2$ Chern-Simons matter theories, whose twists were studied in \cite{Aganagic:2017tvx}. 
 Twists of such occur in two inequivalent classes, similarly labeled by the dimension of the subspace of translations given by the image of the twisting supercharge:
 
 \begin{itemize}
-  \item The minimal twist. This twist leaves 2 real directions invariant. The theory can be defined on a 3-manifold of the form $S\times C$ where $S$ is a smooth oriented one-manifold and $C$ is a Riemann surface equipped with a fourth-root of its canonical bundle.
+  \item The minimal twist. This twist leaves two real directions invariant. The theory can be defined on a three-manifold of the form $S\times C$ where $S$ is a smooth oriented one-manifold and $C$ is a Riemann surface equipped with a fourth-root of its canonical bundle.
 
-  \item The nonminimal twists. There are two such twists, both of which leave 3 real directions invariant, and are permuted under 3d mirror symmetry.
+  \item The nonminimal twists. There are two such twists, both of which leave three real directions invariant, and are permuted under three-dimensional mirror symmetry.
 \end{itemize}
 
 \parsec
@@ -422,128 +426,119 @@ If we split the fields according to the direct sum above by $X, \Psi$ then the a
 Here, we have implicitly chosen a non-degenerate symmetric pairing on $\C^4$.
 
 
+\subsection{A more general background}
 
-%\subsection{Supergravity at the boundary of AdS}
-%
-%Suppose we are in the situation in the last section where we place the eleven-dimensional theory on $\R \times X$ where $X = {\rm Tot}(K^{1/2}_Z \otimes \C^2)$. 
-%We are furthermore placing some number of fivebranes along the locus $Z$ cut out by the zero section. 
-%If we remove this locus we obtain the following manifold 
-%\[
-%\R \times X - \left(0 \times Z\right) \simeq Z \times \left({\rm Tot}(N_Z) - 0\right) 
-%\]
-%where on the right hand side ${\rm Tot}(N_Z) - 0$ is the total space of the normal bundle to $Z$ in $\R \times X$ minus the zero section.
-%
-%
-%\subsection{Enhanced symmetry in a flat background}
-%
-%\parsec[s:e36]
-%
-%We recall the definition of the exceptional super Lie algebra $E(3|6)$. 
-%We follow \cite{Kac_class, KacRudakov}.
-%
-%The even part of the super Lie algebra $E(3|6)$ is 
-%\[
-%\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) .
-%\]
-%The Lie bracket is determined by the obvious commutators and the action of vector fields on functions. 
-%
-%The odd part is of the form
-%\[
-%\Omega^{-1/2}(\Hat{D}^3) \otimes \C^2 .
-%\]
-%where $\Omega^{-1/2}(\Hat{D}^3)$ is the space of formal power series sections of the bundle
-%\[
-%\T_{\Hat{D}^3}^{*} \otimes K_{\Hat{D}^3}^{-1/2}
-%\]
-%where $K_{\Hat{D}^3}^{-1/2}$ is the negative square-root of the canonical bundle on $\Hat{D}^3$. 
-%We will write a general element of this module as 
-%\[
-%\alpha = \sum_i g^i \d z_i^{-1/2} 
-%\]
-%where $g^i \in \cO(\Hat{D}^3)$. 
-%The action by the even part of the super Lie algebra is by Lie derivative and by the fundamental $\lie{sl}(2)$ action on $\C^2$.
-%We will write $r \in \C^2$ for a vector in the fundamental representation.
-%Finally, there is a bracket 
-%\[
-%E(3|6)_- \times E(3|6)_- \to E(3|6)_+
-%\]
-%defined by
-%\[
-%[\alpha_1 \otimes r_1, \alpha_2 \otimes r_2] = - (\alpha_1 \wedge \alpha_2) \otimes (r_1 \wedge r_2) - (\d \alpha_1 \otimes \alpha_2 + \alpha_1 \otimes \d \alpha_2) \otimes (r_1 \odot r_2) .
-%\]
-%%The first term in the above equation arises from the composition 
-%%\[
-%%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{\wedge \otimes \wedge} \Hat{\Omega}_3^{-1} \otimes \wedge^2 R \cong \fw_3 .
-%%\] 
-%%The second term uses the composition 
-%%\[
-%%(\Hat{\Omega}_3^{-1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes (R \otimes R) \xto{(\d \otimes \id) \otimes \odot} (\Hat{\Omega}_3^{1/2} \otimes \Hat{\Omega}_3^{-1/2}) \otimes \Sym^2 (R) \cong \lie{sl}(2) \otimes \Hat{\cO}_3 . 
-%%\] 
-%
-%\brian{suca enhancement following \cite{SWsuca6d}}
-%
-%\parsec[s:weight]
-%
-%
-%\parsec[s:locallieE510]
-%
-%We have recollected how the super Lie algebra $E(5|10)$ (and its central extension) decomposes as a module for the super Lie algebra $E(3|6)$. 
-%We now wish to lift this to a decomposition of factorization algebras on $\C^3$, or more generally, factorization algebras on any complex three-fold $Z$. 
-%
-%We outline an approach to constructing the factorization algebras via enveloping factorization algebras of certain (infinite rank) local Lie algebras on the three-fold $X$. 
-%For another approach \brian{pointer}. 
-%
-%We have already discussed the local Lie algebra $\cL_{sugra}$ on $X \times S$ where $X$ is a Calabi--Yau five-fold and $S$ is a smooth one-manifold. 
-%We take $X = Z \times \C^2$ and $S = \R$. 
-%and view $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ as a factorization algebra on $Z \times \C^2 \times \R$. 
-%Then, we can consider the pushforward of $\Obs_{sugra}$ along the map
-%\[
-%\pi \colon Z \times \C^2 \times \R \to Z 
-%\]
-%which leads to a factorization algebra $\pi_* \Obs_{sugra}$ on the three-fold $Z$. 
-%
-%Since $\pi$ is not a proper map (the fibers are not compact) we cannot exhibit $\pi_*\Obs_{sugra}$ as the Chevalley--Eilenberg complex of some ordinary local Lie algebra on $Z$. 
-%Nevertheless we will find a pro local Lie algebra $\cL_{sugra,\pi}$ on $Z$ which is a particularly nice `small model' for this pushforward factorization algebra.
-%
-%A local Lie algebra enhancement for $E(3|6)$ has been given in \cite{SWsuca6d} \brian{finish}
-%
-%
-%
-%
-%
-%
-%
-%\section{Example} 
-%
-%Consider the holomorphic local Lie algebra on $\C^n$
-%\[
-%\Omega^{0,\bu}(\C^n) 
-%\]
-%and corresponding factorization algebra $\cF = \clie^\bu(\Omega^{0,\bu}(\C^n))$. 
-%Now, we can restrict this to a factorization algebra on
-%\[
-%\C^n - 0 \subset \C^n
-%\]
-%that we denote by $\cF|_{\C^n - 0}$. 
-%
-%Next, consider the radial projection
-%\[
-%r \colon \C^n - 0 \to \R .
-%\]
-%Notice that $r_* (\cF|_{\C^n - 0})$ will not be the observables of any ordinary local Lie algebra.
-%Nevertheless we can come up with a nice algebraic model.  
-%
-%Let $A_n$ be the usual dg model for the formal punctured disk $\Hat{D}^n - 0$ as defined in \cite{FHK,GWkm}.
-%
-%\begin{lem}
-%There is an injective map of factorization algebras on $\RR_{>0}$:
-%\[
-%\clie^\bu(\Omega^\bu(\RR_{>0}) \otimes A_n) \to r_* (\cF|_{\C^n - 0}) 
-%\]
-%which is dense in cohomology.
-%\end{lem}
-%
-%This tells us that the correct `fields' of the dimensionally reduced theory on $\RR_{>0}$ is $\Omega^\bu(\R_{>0}) \otimes A_n$. 
+The eleven-dimensional model for twisted supergravity can be extended to more general geometries than products $S \times X$ where $S$ is a real one-dimensional manifold and $X$ is a Calabi--Yau fivefold.
+More generally, we can define the model on an eleven-manifold $M$ equipped with a transversely holomorphic foliation (THF) equipped with the data of a non-vanishing volume form on the leaf space.
+
+A THF structure on a smooth manifold $M$ is an integrable subbundle $F \subset \T_M \otimes \C$ such that $F + \Bar{F} = \T_M \otimes \C$.
+Equivalently, this allows you to choose an atlas of coordinates $(t_i, z_j)$ on $M$ which transform smoothly in the $t_i$-variables and holomorphically in the $z_j$-variables. 
+So, locally we may take a local patch in a THF manifold to be of the form $\R^m \times \C^n$. 
+%Suppose $M$ is a manifold equipped with a THF structure and let $\cF$ be the corresponding foliation of even codimension.
+%he product $M = S \times X$, where $X$ is a complex manifold and $S$ is a smooth manifold has a natural THF structure with $F$ the restriction of the tangent bundle of $M$ along the projection.
+%Locally, any THF manifold is split of the form $\R^d \times \C^n$, whose coordinates we will denote by $(x_i ;  z_j)$.
+The bundle $F$ is locally spanned by the vector fields $\partial / \partial t_i$'s and $\del/\del \zbar_j$'s.
+(Notice that when $F \cap \Bar{F} = 0$ we are just describing an ordinary complex structure on $M$.)
+We will say that $M$ is of dimension $(m,n)$ (so it is a manifold of real dimension $m + 2n$).
+
+We will assume in addition to having a THF structure that $M$ is equipped with the data of a bundle isomorphism $\wedge^{n} (\T_M \otimes \C / F)^* \cong \C$ which we will denote by~$\Omega_F$. 
+If $F \cap \Bar{F} = 0$ then $\Omega_F$ returns the usual notion of a non-vanishing holomorphic top form.
+
+There is a notion of the sheaf of `holomorphic functions' $\cO_F$ on any manifold $M$ equipped with a THF~$F$---in the language of foliations these are the functions on $M$ which are constant along the leaves of $F$.
+Locally, on a coordinate patch it is given by functions which only depend on the holomorphic variables $z_i$.
+There is a resolution $\cA^\bu_F$ for $\cO_F$ by locally free sheaves on $M$ which is the THF analog of the de Rham and Dolbeault complexes. 
+In degree zero $\cA^0_F$ is just the sheaf of smooth functions on $M$.
+In degree $k$ one takes $\cA^k_F$ the sheaf of sections of the bundle $\wedge^\bu F^*$.
+The derivative along the leaves of the foliation defined by $F$ defines a map of sheaves
+\[
+\thfd \colon \cA^{q}_F \to \cA^{q+1}_F  .
+\]
+By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and one can show that the natural map $\cO_F \xto{\simeq} \cA^\bu_F$ provides a resolution.
+% and so $\thfd$ equips $\cA^{\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
+Locally in a split THF structure like $\R^m \times \C^n$ the operator $\thfd$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
+
+There is also the notion of the sheaf of `holomorphic vector fields' $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$. 
+Locally, on $\R^m \times \C^n$ these are vector fields of the form $f^i \del / \del z_i$ where each $f^i \in \cO_F$.
+Let $\theta_F$ be the bundle $T_M \otimes \C / F$ on $M$ and declare 
+$\cA^k(Q_F)$ to be the sheaf of $C^\infty$-sections of the bundle $\wedge^\bu F^k \otimes \theta_F$.
+Then we obtain a resolution
+\beqn
+\vartheta_F \xto{\simeq} \left(\cA^\bu(\theta_F) , \thfd \otimes \id\right) .
+\eeqn
+Similarly, there is a resolution for the holomorphic one-forms as $\Omega^1_F \xto{\simeq} \cA^{1,\bu}_F$ where in degree $q$ the space $\cA^{1,q}_F$ is the sheaf of $C^\infty$-sections of $\wedge^q F^* \otimes \theta_F^*$.
+Similarly, we let $\cA^{p,q}_F$ be the $C^\infty$-sections $\wedge^q F^* \otimes \wedge^p \theta_F^*$.
+
+We have expressed the fields of the eleven-dimensional theory in terms of a mixed type of de Rham and Dolbeault cohomology.
+Let us focus on the fields $\beta,\gamma$ which on $S \times X$ combine to form the complex
+\beqn\label{eqn:drdol}
+\Omega^{\bu}(S) \otimes \Omega^{0,\bu}(X) \xto{1 \otimes \del} \Omega^{\bu}(S) \otimes \Omega^{1,\bu}(X) .
+\eeqn
+As usual, we leave the $\d_{dR}$ and $\dbar$ operators implicit.
+There is an analog of this operator $1 \otimes \del$ on a manifold $M$ equipped with a THF~$F$.
+It is a differential operator 
+\beqn
+D \colon \cA^{p,\bu}_F \to \cA^{p+1,\bu}_F
+\eeqn
+which locally is just the holomorphic de Rham operator. 
+This operator commutes with $\thfd$.
+The generalized $\beta$ and $\gamma$ fields will be sections of the two-term complex of sheaves $\cA^\bu_F \xto{D} \cA^{1,\bu}_F$.
+
+\newcommand\Div{D_\Omega}
+
+Next we should say where the generalized $\mu$ and $\nu$ fields live. 
+The volume form $\Omega_F \colon \C \cong \wedge^n \theta_F^*$ determines an isomorphism $\cA^{p,q}_F \cong \cA^{n-p,q}_F$ for each $p,q$.
+Via this isomorphism we can identify $D \colon \cA^{n-1,\bu}_F \to \cA^{n,\bu}_F$ with a differential operator
+\beqn
+\Div \colon \cA_F^{\bu}(\theta_F) \to \cA^\bu_F .
+\eeqn
+The $\mu$ and $\nu$ fields will be sections of the two-term complex of sheaves $\cA^\bu_F(\theta_F) \xto{\Div} \cA^\bu_F$. 
+This resolves the THF version of the sheaf of holomorphic vector fields on $M$ which preserve the form $\Omega_F$. 
+
+Now we are in a place to describe a BV theory defined on an eleven-manifold $M$ equipped with a THF $F$ and a volume form $\Omega_F$ on the leaf space.
+The space of fields of the theory consist of fields $\beta,\gamma, \mu, \nu$ as before but where
+\beqn
+\beta \in \Pi \cA_F^\bu, \quad \gamma \in \cA^{1,\bu}_F, \quad \mu \in \Pi \cA^\bu_F(\theta_F), \quad \nu \in \cA_F^\bu  .
+\eeqn
+Notice that there is a natural odd pairing between the fields $\mu, \gamma$ and $\beta, \nu$. 
+The free part of the action functional (cf. \eqref{eqn:free}) is 
+\beqn
+\int_M (\gamma \thfd \mu) \Omega_F + \int_M (\beta \thfd \gamma) \Omega_F + \int_M (\beta \Div \mu) \Omega_F .
+\eeqn
+The interaction (cf. \eqref{eqn:int}) is
+\beqn
+\label{eqn:int}
+\frac12 \int_{M} (\mu^2 D \gamma) \frac{\Omega_F}{1- \nu} + \frac16 \int_{M} \gamma D \gamma D \gamma .
+\eeqn
 
 
+
+
+%More generally, there is a natural cohomology associated to a THF structure.
+%Suppose $(M,F)$ is a THF structure and
+%denote by $Q$ the (complex) quotient bundle $\T_\C M / F$.
+%For each $p,q$ denote by $\cA^{p;q}$ smooth sections of the bundle $\wedge^p Q^\vee \otimes \wedge^q F^\vee$.
+%The derivative along the leaves of the foliation defined by $V$ defines a map
+%\[
+%\thfd \colon \cA^{p;q} \to \cA^{p;q+1}  .
+%\]
+%By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and so $\thfd$ equips $\cA^{p;\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
+%Locally in a split THF structure the operator $D$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
+%There is also an analog of the holomorphic $\del$ operator which takes the form $\thfdel \colon \cA^{p;q} \to \cA^{p+1;q}$.
+%The obvious exterior product $\cA^{p;q} \times \cA^{r;s} \to \cA^{p+r;q+s}$ further endows
+%\[
+%\left(\cA^{\bu;\bu} (M), \thfd + \thfdel\right) = \left(\oplus_p \cA^{p;\bu}[-p] , \thfd + \thfdel \right)
+%\]
+%with the structure of a bigraded commutative dg algebra.
+%This complex is simply isomorphic to the de Rham complex of $M$, but this presentation lends itself to more interesting quotient complexes.
+%For example, the forms of type $(p,\bu)$ with $p \geq 2$ form an ideal inside of this dg algebra; hence we get a quotient dg algebra
+%\beqn\label{thfcoh1}
+%\left(\cA^{\leq 1;\bu}(M), \thfd + \thfdel\right) = \quad \cA^{0;\bu} \xto{\thfdel} \cA^{1;\bu} .
+%\eeqn
+%We leave the $\thfd$ operator implicit in the presentation on the right hand side.
+%When $M = M_V$, it is this complex that is the THF generalization of the truncated de Rham--Dolbeault complex in \eqref{eqn:drdol}---it is easy to see that it agrees with this complex in the case of a split THF manifold.
+%There is a similar THF description for the fields $\mu,\nu$ in the eleven-dimensional theory.
+%
+%Any submanifold of a THF manifold is itself a THF manifold.
+%We are most interested in the submanifold $M_V \subset {\rm Tot}(\R \oplus V) = \R \times X$ where we equip $\R \times X$ with its standard split THF structure.
+%
 %\end{document}
