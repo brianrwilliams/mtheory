@@ -16,14 +16,14 @@ Our ansatz for the worldvolume theories in the large $N$ limit relies on a propo
 The core idea is that the algebra of operators on both sides of the duality are Koszul dual. 
 Many other examples and support for this twisted holographic principle have been carried out in \cite{Oh:2021wes,Oh:2020hph,Gaiotto:2021xce}. \brian{surya add more?}
 
-It is absolutely crucial for this proposal that we work in a derived setting using the BV formalism. 
+It is absolutely crucial for this proposal that we work in a derived setting using the Batalin--Vilkovisky (BV) formalism. 
 The observables of any theory in the BV formalism have the structure of a factorization algebra on spacetime \cite{CG2}. 
 Classically, if a theory in the BV formalism is described by a local $L_\infty$ algebra $\cL$ on spacetime $M$ then to an open set $U \subset M$ the factorization algebra of observables assigns the cochain complex
 \[
 \clie^\bu(\cL(U))
 \]
 which computes the Lie algebra cohomology of $\cL(U)$. 
-The differential on this cochain complex is precisely the Chevellay--Eilenberg differential associated to the~$L_\infty$ structure maps. 
+The differential on this cochain complex is precisely the Chevalley--Eilenberg differential associated to the~$L_\infty$ structure maps. 
 
 At the quantum level the factorization algebra of classical observables is deformed.
 Perturbatively, Costello and Gwilliam use the BV formalism to give a systematic way to study quantization within the context of factorization algebras~\cite{CG2}. 
@@ -37,9 +37,9 @@ The primary object we used to describe the solutions of the equations of motion 
 %As a graded vector space, observables on an open set $U \subset X \times S$ are thus $\cO(\cL_{sugra}(U)) = \Sym (\Pi \cL_{sugra})^\vee$.
 %The differential is encoded by the $L_\infty$ structure which is exactly the Chevalley--Eilenberg differential. 
 In terms of this local $L_\infty$ algebra, the $\Z/2$ graded commutative dg algebra of classical observables supported on an open set $U \subset S \times X$ is 
-\[
+\beqn\label{eqn:sugraobs}
 \clie^\bu\left(\cL_{sugra}(U)\right) .
-\]
+\eeqn
 We will denote the classical factorization algebra on $S \times X$ of classical observables by~$\Obs_{sugra}$.
 
 
@@ -60,21 +60,23 @@ We will denote the classical factorization algebra on $S \times X$ of classical 
 
 \subsection{The fivebrane decomposition of twisted supergravity}\label{s:resm5}
 
-With an eye towards holography for fivebranes we fix a complex three-fold $Z$ where the fivebranes will be supported and consider the eleven-dimensional theory on $\R \times X_Z$ where $X_Z$ is the Calabi--Yau fivefold
-\[
-X_Z = \text{Tot}(K_Z^{1/2} \otimes \C^2),
-\]
-the total space of the rank two holomorphic vector bundle $K_Z^{1/2} \otimes \C^2$ over $Z$. 
+Fix a complex three-fold $Z$, where the fivebranes will be supported, and assume that it is equipped with a sqaure-root of its canonical bundle $K^{1/2}_Z$.
+We consider the eleven-dimensional theory that we introduced in \S \ref{s:twisted} on $\R \times X_Z$ where $X_Z$ is the Calabi--Yau fivefold
+\beqn
+X_Z = \text{Tot}(K_Z^{1/2} \otimes \C^2).
+\eeqn
+This is the total space of the rank two holomorphic vector bundle $K_Z^{1/2} \otimes \C^2$ over~$Z$. 
 %In the remainder of this section we denote by $V \to Z$ this rank two holomorphic vector bundle. 
-One can also think about $\R \times X_Z$ as the total space of the {\em real} rank five bundle over $Z$; although this description obfuscates the geometric structure used to define the eleven-dimensional theory.
+One can also think about $\R \times X_Z$ as the total space of the {\em real} rank five bundle over~$Z$; although this description obfuscates the geometric structure used to define the eleven-dimensional theory.
 Let 
-\[
+\beqn
 \pi \colon \R \times X_Z \to Z 
-\]
+\eeqn
 be the map which projects out the real factor followed by the projection to the base of the total space of the complex rank two bundle $p \colon X_Z \to Z$.
 
+The classical observables of the eleven-dimensional theory form a factorization algebra on $\R \times X_Z$ that we have denoted by $\Obs_{sugra}$.
 Like sheaves, factorization algebras can be pushed forward.
-Thus, from the factorization algebra $\Obs_{sugra}$ on $\R \times X_Z$ we obtain a factorization algebra $\pi_* \Obs_{sugra}$ defined on the three-fold $Z$.
+Thus, using $\pi$ we obtain a factorization algebra $\pi_* \Obs_{sugra}$ defined on the three-fold~$Z$.
 Explicitly, to an open set $U \subset Z$ the factorization assigns the cochain complex
 \begin{align*}
 (\pi_* \Obs_{sugra}) (U) & = \Obs_{sugra} \left(\pi^{-1} U\right) \\
@@ -82,21 +84,28 @@ Explicitly, to an open set $U \subset Z$ the factorization assigns the cochain c
 \end{align*}
 
 This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $Z$.
+In physics terminology this feature is due to the presence of an infinite tower of so-called Kaluza--Klein modes which means that the space of fields is not given as the sections of a finite rank vector bundle on~$Z$.
+Mathematically, this is due to the fact that the map $\pi$ is not proper.
 Nevertheless there is a subfactorization algebra $\Bar{\pi}_* \Obs_{sugra}$ which admits a natural grading so that each filtered component can be understood as such. 
 This grading is determined by looking at an eigenspace decomposition of a certain compact abelian group acting on the fields of the eleven-dimensional theory on $\R \times X_Z$ which we now describe. 
 
-One of the primary features of the factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is that it is of the form $\clie^\bu(\cG)$ where $\cG$ is a sheaf of $L_\infty$ algebras on $Z$ which is presented as the $C^\infty$-sections of an $\infty$-dimensional pro vector bundle.
+Like $\Obs_{sugra}$ in equation \eqref{eqn:sugraobs}, the factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is of the form $\clie^\bu(\cG)$.
+Here, $\cG$ is a sheaf of $L_\infty$ algebras on $Z$ which is presented as the $C^\infty$-sections of an $\infty$-dimensional pro vector bundle.
 To get a sense of the construction of this factorization algebra we take a brief excursion to a simpler situation related to branes in five-dimensional Chern--Simons theory. 
 
 \parsec[]
 
-As we recalled in~\S \ref{??}, Costello's five-dimensional Chern--Simons theory is the result of applying the $\Omega$-background to $M$ theory on a Taub--NUT space.
-In this setting, fivebranes which hit the tip of the Taub--NUT are deformed into chiral defects supported along a Riemann surface~$C$ in the five-manifold. 
+In~\S \ref{s:twistedsugra} we recalled some features of a five-dimensional Chern--Simons type theory that Costello has shown to be the result of applying the $\Omega$-background to $M$-theory on a Taub--NUT space \cite{CostelloM5}.
+In this setting fivebranes which hit the tip of the Taub--NUT are deformed into chiral defects supported along a Riemann surface~$C$ in the five-manifold. 
 In analogy with our eleven-dimensional setup, we take the five-manifold to be $\R \times {\rm Tot}(K_C)$ with the deformed fivebranes wrapping the zero section.
-Denote by $\Obs_{CS}$ the observables of the semi-classical limit of non-commmutative five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
+Denote by $\Obs_{CS}$ the classical observables\footnote{We treat the theory classically as a perturbative theory on $\R \times {\rm Tot}(K_C)$.
+We note that the theory is defined in terms of two parameters $\ep, \delta$ where $\delta$ is the Chern--Simons coupling and $\ep$ is the non-commutative parameter controlling the deformation quantization of the holomorphic symplectic manifold ${\rm Tot}(K_C)$.
+For convenience we set both $\ep, \delta$ to be one.}
+of the non-commmutative five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
 Let 
-\[\pi \colon \R \times {\rm Tot}(K_C) \to C
-\]
+\beqn
+\pi \colon \R \times {\rm Tot}(K_C) \to C
+\eeqn
 be the natural projection and consider the factorization algebra $\pi_* \Obs_{CS}$ on $C$. 
 
 Notice that there is a $U(1)$ action on the fields of the five-dimensional theory induced by the $U(1)$ action on the five-manifold which scales the fiber of~$K_C$.
@@ -128,7 +137,8 @@ On the other hand, we have
 \]
 Here, $w$ plays the role of a formal coordinate on the fiber of $K_C$ and $w^{k}$ as parametrizes the weight $k$ eigenspace---locally, $w$ is simply the one-form $\d z$.
 Using this notation, the embedding \eqref{eqn:taylor1a} is induced by the Taylor series expansion map $\cO(\C) \to \C[[w]]$.
-The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is similar to the non-formal case---it is the natural one if we understand $\cO(C)[[w]]$ as functions on the formal neighborhood of the zero section in $K_C$.
+The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is given by the Moyal commutator. 
+This is similar to the non-formal case---it is the natural bracket if we understand $\cO(C)[[w]]$ as functions on the formal neighborhood of the zero section in~$K_C$.
 
 %The differential is simply $\dbar$ in the direction of the curve $C$. 
 %If we write an arbitrary element of this complex as $w^k \alpha$, where $\alpha \in \Omega^{0,\bu}(C)$, then the Lie bracket is
@@ -137,8 +147,8 @@ The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is similar to the non-
 
 \parsec[]
 
-Let us return to the situation of a three-fold $Z$ in the eleven-manifold $\R \times \text{Tot}(K_{Z}^{1/2} \otimes \C^2)$. 
-The construction of the restricted factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is completely similar to the simple case of five-dimensional Chern--Simons theory. 
+Let us return to the situation of a complex three-fold $Z$ as submanifold the eleven-manifold~$\R \times \text{Tot}(K_{Z}^{1/2} \otimes \C^2)$. 
+The construction of the restricted factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is completely similar to the simple case of five-dimensional Chern--Simons theory as we just discussed.
 
 This time we consider the group $U(1) \times U(1)$ rotating the fibers of the rank two bundle $K_Z^{1/2} \otimes \C^2$. 
 Using this we can define the subfactorization algebra 
@@ -379,8 +389,11 @@ Since $\del$ is weight zero for the decomposition these forms combine to form th
 
 \parsec[s:weight0]
 
+\brian{make precise statement using $E(3|6)$.}
+
 Particularly important for us will be the weight zero summand $\cG_Z^{(0)}$.
 Again, as a local Lie algebra it is equivalent to one of the form $\Omega^{0,\bu}(Z, \cV^{(0)})$.
+Since this is the weight zero component, the sheaf of sections is endowed with the structure of a Lie algebra inherited from the local $L_\infty$ algebra $\cL_{sugra}$.
 When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is closely related to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
 %More precisely he weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
 
@@ -464,107 +477,40 @@ The top line is a holomorphic vector field on~$Z$ and the bottom line is a $\lie
 
 %We want to argue that $\Obs_{sugra} |_{\C^3} \cong \Bar{\pi}_* \Obs_{sugra}$. 
 
-\subsection{The membrane decomposition}
+\parsec[s:general_decomp]
 
-We briefly highlight an analogous construction of the restricted factorization algebra describing membranes.
-Recall that in the twist we are considering the worldvolume theory of membranes is a three-dimensional partially topological-holomorphic field theory which exist on a product $\R \times C$ where $C$ is a Riemann surface.
-
-We consider the eleven-dimensional theory on $\R \times X_C$ where $X_C$ is the Calabi--Yau fivefold
-\[
-X_C = \text{Tot}(K_C^{1/4} \otimes \C^4),
-\]
-the total space of the rank four bundle $K_C^{1/4} \otimes \C^4$ over $C$.
-Denote by 
-\[
-\pi \colon V \to \R \times C
-\] 
-the pullback of this vector bundle along the projection $\R \times C \to C$.
-We can equivalently think of the eleven-manifold as the total space of the bundle $V$ over $\R \times C$. 
-In this description, the twisted membranes will be supported along the zero section of $V$. 
-The factorization algebra $\Obs_{sugra}$ on ${\rm Tot}(V)$ can be pushed forward along $\pi$ to a factorization algebra $\pi_* \Obs_{sugra}$ on $\R \times C$. 
-
-As in the fivebrane case, this is not the factorization algebra associated to an ordinary field theory on $\R \times C$.
-Nevertheless there is a subfactorization algebra $\Bar{\pi}_* \Obs_{sugra}$ which admits a natural grading so that each filtered component can be understood as such.
-
-To construct this factorization algebra we consider the action of the compact torus $U(1)^{\times 4}$ which rotates the fibers of the bundle $K_C^{1/4} \otimes \C^4$.
-We let $\Bar{\pi}_* \Obs_{sugra}$ be the factorization algebra on $\R \times C$ consisting of observables which are finite sums of integral eigenvectors for this group action.
-Again, we find that $\Bar{\pi}_* \Obs_{sugra}$ is of the form $\clie^\bu(\cG_{\R \times C})$ for some $\infty$ sheaf of $L_\infty$ algebras $\cG_{\R \times C}$ on $\R \times C$ which is the sections of a pro vector bundle. 
-
-Analogous to the decomposition determined by the $\C^\times$ action considered in \ref{s:cstarfive}, there is a decomposition of $\cG_{\R \times C}$ determined by a (different) $\C^\times$ acting on the fields of the eleven-dimensional theory on ${\rm Tot}(V) \cong \R \times X_C$.
-
-In a local THF chart $U \subset \R \times C$ we can write a generic field of the eleven-dimensional theory on $\pi^{-1} U$ in coordinates as $f(t;z,w)$ where $(t;z) \in U \subset\R \times C$ is THF coordinate and $w=(w_1,w_2,w_3,w_4)$ is the holomorphic fiber coordinate of the rank four bundle $V$.
-
-%For simplicity let us consider the eleven-dimensional theory on flat space $\R \times \C^5$ with some number of fivebranes supported on
-%\[
-%0 \times 0 \times \C^3 \subset \C^5 .
-%\]
-%is that (after taking into account the backreaction) the observables on a large number of fivebranes is Koszul dual to the factorization algebra 
-%
-%\parsec[s:flatdecomp]
-%
-%%In the simple case where $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ then the manifold obtained by removing the locus of the brane is homeomorphic to
-%%\[
-%%\C^3 \times (\R \times \C^2 - 0) .
-%%\]
-%%
-%%Let $\pi \colon \R \times \C^5 - (0 \times \C^3) \to \C^3 \times \R_{>0}$ be the projection map whose fibers are homeomorphic to the sphere $S^4$ which links the location of the fivebranes.
-%%We restrict the factorization algebra of the eleven dimensional theory $\Obs_{sugra}$ to the open set obtained by removing the locus of the brane.
-%
-%In the simple case that $Z = \C^3$ and we identify the total space of $K^{1/2}_Z \otimes \C^2$ with $\C^5$ there is a more direct construction of the factorization algebra $\Obs_{sugra}|_{Z}$. 
-%
-%Let $\pi \colon \R \times \C^5 \to \C^3$ be the projection map.
-%Then, via $\pi$ we can pushforward the factorization algebra associated to the eleven-dimensional theory to obtain a factorization algebra
-%\[
-%\pi_* \Obs_{sugra} 
-%\]
-%on $\C^3$.
-%This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
-%Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
-
-With this notation in place, we introduce the following $\C^\times$ action on the fields of the eleven-dimensional theory:
-\begin{itemize}
-\item On the fields $\mu(t;w,z)$ the action is
-\[
-\lambda \cdot \mu(t;z,w) = \mu(t; z , \lambda w).
-\]
-\item On the fields $\nu(t;w,z)$ the action is
-\[
-\lambda \cdot \nu(t;z,w) = \nu(t;z ,\lambda w).
-\]
-\item On the fields $\beta(t;w,z)$ the action is
-\[
-\lambda \cdot \beta(t;z,w) = \lambda^{-2} \beta(t; z, \lambda w).
-\]
-\item On the fields $\gamma(t;w,z)$ the action is
-\[
-\lambda \cdot \gamma(t;z,w) = \lambda^{-2} \gamma(t; z ,\lambda w).
-\]
-\end{itemize}
- 
+\brian{mention $E(3|6)$ module structure}
 
 \begin{prop}
-The $L_\infty$ structure on $\cL_{sugra}$ is equivariant for this $\C^\times$ action. 
-%The odd symplectic form on $\cL_{sugra}$ is weight $-1$ for this $\C^\times$ action. 
+Let $j \geq 1$. 
+The complex of vector bundles $\cG^{(j)}$ is quasi-isomorphic to
+\beqn
+\Omega^{0,\bu}(Z, \cV^{(j)}) 
+\eeqn
+where $\cV^{(j)}$ is the super holomorphic vector bundle 
+\beqn
+\begin{tikzcd}
+\ul{even} & \ul{odd} \\
+S^{j}(\C^2) \otimes \T_Z \otimes K^{-j/2}_Z & S^{j-1}(\C^2) \otimes K^{-(j+1)/2}_Z \\
+S^{j+2}(\C^2) \otimes K^{-j/2}_Z & S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-(j+1)/2}_Z .
+\end{tikzcd}
+\eeqn
 \end{prop}
 
-As in the case of fivebranes, this proposition allows us to decompose the local Lie algebra $\cG_{\R \times C}$ into weights. 
-Similarly as above one can show that the $n$th eigenspace is quasi-isomorphic to a local Lie algebra of the form
-\[
-\Omega^\bu(\R) \otimes \Omega^{0,\bu}\left(C, \cV^{(n)}\right)
-\]
-where $\cV^{(n)}$ is a holomorphic super vector bundle on $C$.
+\begin{proof}
 
-We will state explicit descriptions of the first few eigenspaces without details of the proof. 
-The first nontrivial eigenspace is, as in the fivebrane case, $n=-1$. 
-Here, one can see that 
-\[
-\cV^{(-1)} \simeq K_{C}^{1/4} \otimes \C^4 \oplus \Pi K^{3/4}_C \otimes \C^4 .
-\]
-For $n=0$ one has 
-\[
-\cV^{(0)} \simeq \T_C \oplus \lie{sl}(4) \otimes \cO_C \oplus \Pi \left(K^{-1/2}_C \otimes \wedge^2 \C^4 \oplus K^{-1/2}_C \otimes S^2 \C^4\right) .
-\]
-As in the case of fivebranes, the $n=0$ eigenspace is equipped with the structure of a super Lie algebra whose exact form we do not state now.
+\begin{itemize}
+\item Let $f(w) \in \C[w_1,w_2]_j$ be a homogenous degree $j$ polynomial in the variables $w_1,w_2$ and suppose that $g(z) \del_{z_i}$ is a holomorphic vector field on $Z$. 
+Define the $\mu$-type field
+\beqn
+f(w) g(z) \del_{z_i} + \cdots
+\eeqn
+\item Let $f(w) \in \C[w_1,w_2]_{j+2}$ be a homogenous degree $j+2$ polynomial and consider the one-form $\del f(w) = \del_{w_1} f(w)\d w_1 + \del_{w_2} f(w) \d w_2$. Using the holomorphic symplectic form we obtain the vector field
+\beqn
+g(z) \left(\del_{w_1} f(w) \del_{w_2} - \del_{w_2} f(w) \del_{w_1}\right) .
+\eeqn
+\end{itemize}
+\end{proof}
 
 \subsection{Koszul duality for factorization algebras: an ansatz} 
 
