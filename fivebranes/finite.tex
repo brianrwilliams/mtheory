@@ -1,14 +1,16 @@
-\section{Operators on a finite number of fivebranes} 
+\section{Conjectures for operators on a finite number of fivebranes}
 
 In conjecture \ref{conj:fact} we have formulated a conjectural description of the factorization algebra of classical observables $\Obs_{N}$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
-Concretely, for each $N$ we have constructed a local Lie algebra $\cG_N$ on the worldvolume three-fold $Z$. 
+In this section we begin to provide some evidence for this description at the level of local operators, which is just a small piece of the factorization algebra.
+
+For each $N$ we have constructed a local Lie algebra $\cG_N$ on the worldvolume three-fold $Z$. 
 Our conjecture is that the factorization algebra associated to a stack of $N$ holomorphically twisted fivebranes is $\Obs_N \simeq \clie_\bu(\cG_{N,c})$, where $\cG_{N,c}$ denotes the cosheaf of compactly supported sections. 
-The main goal of this section is to extract the algebra of local operators from this factorization algebra and to then deduce explicit formulas for  local characters.
+The main goal of this section is to extract the algebra of local operators from this factorization algebra and to then deduce explicit formulas for local characters.
 
 For a stack of $N=1$ fivebranes, which corresponds to the abelian six-dimensional superconformal field theory, we find that our local character matches exactly with the expressions in the literature. 
 This is not a surprise as we have shown that even at the level of factorization algebras $\clie_\bu(\cG_{1,c})$ is quasi-isomorphic to~$\Obs_1$, see Proposition~\ref{prop:factabelian}.
 
-The main result of this section is a closed formula for the local character of the factorization algebra $\clie_\bu(\cG_{N,c})$ for $N > 1$, see Theorem \ref{thm:finite}. 
+The main computation of this section is a closed formula for the local character of the factorization algebra $\clie_\bu(\cG_{N,c})$ for $N > 1$, see Theorem \ref{thm:finite}. 
 Following conjecture \ref{conj:fact} and the general discussion of \S \ref{sec:sucaindex} we are led to hypothesize a closed formula for the superconformal index for the theory on a finite number of fivebranes (in flat space).
 As far as the authors are aware of there is no closed formula for the refined superconformal index (with four independent fugacities) for the theory on a stack of $N > 1$ fivebranes.
 For small values of $N$ we expand our closed formulas to low orders in the fugacity $q$ (which roughly counts instanton charge) to match exactly with expressions in the literature. 
@@ -106,7 +108,7 @@ In Proposition \ref{lem:single} we have shown that $\clie_\bu (\cG_{c}^{(-1)})$ 
 On $\C^3$, the global sections of the local Lie algebra $\cG^{(0)}$ is closely related to $E(3|6)$---the $\infty$-jets of $\cG^{(0)}$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$.
 Combining these facts we see that $\Obs_{1}(0)$ is a module for $E(3|6)$. 
 
-In \S \ref{s:kr} we will express this module from a purely representation theoretic point of view and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
+In appendix \S \ref{s:kr} we will describe this module from a purely representation theoretic point of view and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
 
 %\parsec
 %
@@ -125,20 +127,29 @@ In \S \ref{s:kr} we will express this module from a purely representation theore
 
 \parsec
 There are various degenerations, or specializations, of this character which are interesting to consider.
-A particularly meaningful one is related to two deformations of the theory by elements in the (twisted) superconformal algebra.
-Recall that after performing the holomorphic twist of six-dimensional $\cN=(2,0)$ supersymmetry, the residual superconformal algebra is~$\lie{osp}(6|2)$. 
+A particularly meaningful one is related to two different deformations of the theory by elements in the (twisted) superconformal algebra.
+Recall that after performing the holomorphic twist the residual superconformal algebra is~$\lie{osp}(6|2)$.
 We have recalled in \ref{s:global1} how the bosonic part of this algebra is represented by fields of the eleven-dimensional theory. 
 
 There are two types of odd elements of~$\lie{osp}(6|2)$ that also have a natural interpretation in the eleven-dimensional theory.
 The odd part of~$\lie{osp}(6|2)$ can be identified with 
 \[
-\C^3 \otimes \C^2 \oplus \Sym^2(\C^3) \otimes \C^2 
+\C^3 \otimes \C^2 \oplus \wedge^2(\C^3) \otimes \C^2 
 \]
-where $\C^3, \C^2$ are the fundamental $SU(3)$ and $SU(2)$ representations, respectively. 
+where $\C^3, \C^2$ are the fundamental $\lie{sl}(3)$ and $\lie{sl}(2)$ representations, respectively. 
 
 \begin{itemize}
-\item The space $\C^3 \otimes \C^2$ is spanned by twisted supergravity fields of the form $\gamma = w_a \d z_i$. 
-\item The deformation $(z_2 \d z_3 - z_3 \d z_2) \otimes r_-$. 
+\item The summand $\C^3 \otimes \C^2$ embeds into the ghosts of twisted supergravity via the $\gamma$-type fields which satisfy
+\[
+\del \gamma = \d w_a \d z_i .
+\]
+where $i=1,2,3$ and $a = 1,2$.
+Note that $\gamma$ appears to be ambiguous up to a closed holomorphic one-form, but since there is a linear gauge symmetry which sends $\beta \mapsto \del \beta$, it implies that $\gamma$ is unique up to a BRST exact term. 
+Since in our model all closed one-forms are rendered trivial in cohomology
+\item The summand $\wedge^2(\C^3) \otimes \C^2$ embeds as another $\gamma$-type field which satisfies 
+\[
+\del \gamma = w_a \d z_i \d z_j .
+\]
 \end{itemize}
 
 Both deformations break the global Cartan subalgebra down to $\lie{gl}(1) \times \lie{gl}(1)$ according to the specializations
