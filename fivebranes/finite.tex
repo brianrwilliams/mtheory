@@ -252,7 +252,7 @@ f_{2}(y_1, y_2, y_3=1, y=1, q) = \frac{q^2}{1-q}
 \]
 which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
-\subsection{Finite $N$ index}
+\subsection{A closed formula for the finite $N$ index}
 
 Before exhibiting the general formula for the local character of the factorization algebra $\clie_\bu(\cG_{N,c})$ on $\C^3$ we set up some notation. 
 As above, we let $\chi_k^{\lie{sl}(2)}$ and $\chi^{\lie{sl}(3)}_{[k,l]}$ denote the highest weight $\lie{sl}(2)$ and $\lie{sl}(3)$ characters. 
@@ -262,34 +262,39 @@ d(y_i,y,q) = (1-y_1 q)(1-y_2q)(1-y_3q) .
 \eeqn 
 To simplify formulas, we will temporarily denote the single particle character for the $N=1$ theory $\Obs_1$ by 
 \beqn
-g_1 (y_i,y,q) = f_1(y_i,y,q)
+g_{-1} (y_i,y,q) = f_1(y_i,y,q)
 \eeqn
 where $f_1(y_i,y,q)$ is as in equation \eqref{eqn:6done1} and also denote by 
 \beqn
-g_2 (y_i,y,q) = f_2(y_i,y,q)
+g_0 (y_i,y,q) = f_2(y_i,y,q)
 \eeqn
 where $f_2(y_i,y,q)$ is as in equation \eqref{eqn:6dtwo}. 
-Thus $g_2$ is the single particle local character of $\Obs_2 = \clie_\bu(\cG_{2,c})$.
-Finally, for $k \geq 3$ let
+Thus $g_2$ is the single particle local character of $\Obs_2 = \clie_\bu(\cG_{2,c}) = \clie_{\bu}(\cG_c^{(0)})$.
+Finally, for $k \geq 1$ let
 %\begin{align*}
 %f_k (y_1,y_2,y_3,y,q) & \define q^{3k/2} \left(q \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
 %& \left.  - q \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right) .
 %\end{align*}
+%\begin{align*}
+%g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 (k-2)/2} \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3(k-2)/2} \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
+%& \frac{\left.  - q^{3(k-1)/2} \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - q^{-1 + 3(k-1)/2} \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
+%\end{align*}
 \begin{align*}
-g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 (k-2)/2} \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3(k-2)/2} \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
-& \frac{\left.  - q^{3(k-1)/2} \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - q^{-1 + 3(k-1)/2} \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
+g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 k/2} \chi^{\lie{sl}(2)}_{k}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3k/2} \chi^{\lie{sl}(2)}_{k+2}(q^{-1/2} y) \right. \\
+& \frac{\left.  - q^{3(k+1)/2} \chi^{\lie{sl}(2)}_{k-1}(q^{-1/2}y) - q^{-1 + 3(k+1)/2} \chi^{\lie{sl}(2)}_{k+1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
 \end{align*}
 %and hence the conjectural single particle index for the superconformal theory associated to the Lie algebra $\lie{sl}(2)$. 
 
 \begin{thm}
 \label{thm:finite}
+Let $N \geq 3$. 
 The local character of the factorization algebra $\clie_{\bu}(\cG_{N,c})$ is
 \beqn
-\chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=2}^N g_k(y_1,y_2,y_3,y,q)\right].
+\chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=0}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
 Similarly, the local character of the factorization algebra $\clie_\bu(\til{\cG}_{N,c})$ is 
 \beqn
-\til{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=1}^N g_k(y_1,y_2,y_3,y,q)\right].
+\til{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=-1}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
 \end{thm}
 \begin{proof}
@@ -298,17 +303,17 @@ By Lemma~\ref{lem:envelope} the character of $\clie_\bu (\cG_{N,c})$ is given by
 \chi_N = \text{PExp} \left[f_N\right]
 \eeqn
 where $f_N$ is the single particle local character.
-Thus, it suffices to show that $f_N = \sum_{k = 2}^N g_k$.
+Thus, it suffices to show that $f_N = \sum_{k = 0}^{N-2} g_k$.
 Recall that we have the following filtration of the factorization algebra $\clie_\bu(\cG_{N,c})$ given by 
 \beqn
-\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \clie_\bu (\cG_{N,c}) .
+\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \leftarrow \clie_\bu (\cG_{N,c}) .
 \eeqn
 Thus we have the following expression for the associated graded factorization algebra 
 \beqn
-\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=2}^N \clie_\bu(\cG^{(k)}.
+\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=0}^N \clie_\bu(\cG^{(k)}).
 \eeqn
 
-Thus, it suffices to show that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG_{k,c})$, which is a direct computation.
+Thus, we must see that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG^{(k)}_c)$, which is a direct observation using the description of $\cG^{(k)}$ we have given in Proposition \ref{prop:Vj}.
 \end{proof}
 
 We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$.
@@ -316,6 +321,8 @@ We thus arrive at the following conjecture for the index of the worldvolume theo
 \begin{conj} 
 The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\chi_{N}(y_1,y_2,y_3,y,q)$. 
 \end{conj}
+
+\parsec
 
 It follows from the fact that limit of the diagram in \ref{eqn:limit1} is $(\Bar{\pi}_* \Obs_{sugra})^! \simeq \clie_\bu(\cG_c)$ that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in Proposition~\ref{prop:sugraindex1}. 
 Alternatively, we have the following direct proof of this fact. 
@@ -330,9 +337,9 @@ One has
 \begin{proof}
 It suffices to show that at the level of single particle indices one has
 \beqn
-f_{sugra}(y_i, y, q) = \lim_{N \to \infty} f_N(y_i,y,q) ,
+f_{sugra}(y_i, y, q) = \lim_{N \to \infty} \til{f}_N(y_i,y,q) ,
 \eeqn
-where $f_N = \sum_{k = 1}^N g_k$. 
+where $\til{f}_N = \sum_{k = -1}^{N-2} g_k$. 
 
 We will use the following identity 
 \beqn
@@ -360,3 +367,36 @@ For any $N \geq 1$ one has
 \chi_{sugra}(y_i,y,q) = \til{\chi}_N(y_i,y,q) \mod q^{N+1} .
 \eeqn
 \end{cor}
+\begin{proof}
+This follows from observing that at the level of single particle states $f_N$ is of order $q^{N}$.
+\end{proof}
+
+\parsec
+
+We can also apply the specialization $y=1, y_3=1$ to $\chi_N$.
+\begin{prop}
+Upon specializing $y=1,y_3=1$ (so that $y_1 y_2 = 1$) one has the following single particle index
+\beqn
+f_N (y_1,y_2, y_3=1,y=1,q) = \frac{q^2 + q^3 + \cdots + q^{N}}{1-q} 
+\eeqn
+\end{prop}
+\begin{proof}
+By induction it suffices to show that the specialization of the single particle local character $g_k$ of the factorization algebra $\clie_\bu(\cG^{(k)})$ is $q^{k+2} / (1-q)$. 
+We have already seen this in the case $k=-1,0$, so it suffices to show this when $k \geq 1$.
+
+First observe that the denominator becomes
+\beqn
+d(y_1,y_2,y_3=1,y=1,q) = (1-y_1 q)(1-y_2q) (1-q) .
+\eeqn
+
+Next, we observe that the numerator of $g_k (y_1,y_2,y_3=1,y=1,q)$ can be factored as
+\begin{align*}
+q^{3 + 3k/2} \left(q^{-(k+2)/2} + q^{-(k-2)/2} - q^{-k/2} (y_1+y_2) \right) 
+& = q^{k+2} (1 + q^2 - q (y_1 + y_2)) \\
+& = q^{k+2} (1 - y_1 q) (1-y_2 q) 
+\end{align*}
+where in the last line we have used $y_1 y_2 = 1$.
+The result follows.
+\end{proof}
+
+
