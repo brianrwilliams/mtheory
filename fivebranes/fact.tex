@@ -403,7 +403,7 @@ When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\i
 
 To see that $\cG^{(0)}$ and $\cE(3|6)$ are equivalent as super vector bundles we must show that
 \[
-\cV^{(0)} \simeq \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
+\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
 \]
 The local $L_\infty$ structure of $\cL_{sugra}$ endows the Dolbeault complex of this holomorphic vector bundle with a local Lie algebra structure.
 The differential turns out to be the natural $\dbar$ operator.
@@ -599,10 +599,61 @@ f(w) g^i (z) \d z_i .
 The complex $\cG^{(j)}$ is manifestly a local module for the local Lie algebra $\cG^{(0)}$. 
 With the identification $\cG^{(0)} \simeq \cE(3|6)$ and $\cG^{(j)} \simeq \Omega^{0,\bu}(Z, \cV^{(j)})$ we can read off this module structure completely explicitly. 
 
-Recall that as a complex of vector bundles $\cE(3|6) = \Omega^{0,\bu}(Z, \cV^{(0)}$ where 
+Recall that as a complex of vector bundles $\cE(3|6) = \Omega^{0,\bu}(Z, \cV^{(0)})$ where 
 \beqn
-\cV^{(0)} 
+\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right) .
 \eeqn
+The local Lie algebra structure on $\cE(3|6)$ arises from a Lie algebra structure on the sheaf of holomorphic sections of $\cV^{(0)}$.
+Likewise, the $\cE(3|6)$-module structure on $\cG^{(j)} \simeq \Omega^{0,\bu}(Z, \cV^{(j)})$ arises from a holomorphic $\cV^{(0)}$-module structure on the holomorphic sections of $\cV^{(j)}$. 
+By holomorphic, we mean that the structure maps are all holomorphic differential operators. 
+
+We describe this $\cV^{(0)}$-module structure on $\cV^{(j)}$ explicitly.
+Holomorphic sections of $\T_Z$ will act by Lie derivative on $\cV^{(j)}$.
+Holomorphic $\sl(2)$-valued functions will also act in the natural way since each component of $\cV^{(j)}$ is labeled by an irreducible $\lie{sl}(2)$ representation. 
+
+Finally, we need to explain how holomorphic sections of the odd component $\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2$ of $\cV^{(0)}$ act.
+We first give a global description of this action, and then we will write down the explicit formula in local coordinates.
+For the local coordinate description recall that a general section of $\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2$ has the form $w_a g^i(z) \d z_i$ where $g^i(z)$ is a holomorphic function. 
+\begin{itemize}
+\item The odd part of $\cV^{(0)}$ acts on the component $S^{j}(\C^2) \otimes \T_Z \otimes K^{-j/2}_Z$ through the composition
+\beqn
+\begin{tikzcd}
+\left(\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2\right) \otimes \left(S^{j}(\C^2) \otimes \T_Z \otimes K^{-j/2}_Z\right) \ar[r,"\cong"] & \left(S^{j-1}(\C^2) \oplus S^{j+1}(\C^2)\right) \otimes \left(\T_Z \otimes \T^*_Z \otimes K^{-(j+1)/2}_Z\right) \ar[dl] \ar[d] \\
+S^{j-1}(\C^2) \otimes K^{-(j+1)/2}_Z & S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-(j+1)/2}_Z 
+\end{tikzcd}
+\eeqn
+Here, the leftmost downward arrow is the evident $\lie{sl}(2)$ projection together with the canonical pairing between sections of $\T_Z$ and $\T^*_Z$.
+The rightmost downward arrow is the other $\lie{sl}(2)$ projection together with the Lie derivative of holomorphic one-forms.  
+Given a local section $f(w) \otimes h_i(z) \del_{z_i}$ of $S^j(\C^2) \otimes \T_Z \otimes K_Z^{-j/2}$ an explicit formula for this action is
+\begin{align*}
+(w_a g^i(z) \d z_i) \cdot (f(w) \otimes h_k(z) \del_{z_k}) & = \ep_{ab} (\del_{w_b} f(w)) (g^i h_i)(z)  \\ & + w_a f(w) L_{h_k \del_{z_k}} (g^i \d z_i) .
+\end{align*}
+\item The odd part of $\cV^{(0)}$ acts on the component $S^{j+2}(\C^2) \otimes K^{-j/2}_Z$ through the composition
+\beqn
+\begin{tikzcd}
+\left(\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2\right) \otimes \left(S^{j+2}(\C^2) \otimes K^{-j/2}_Z\right) \ar[r,"\cong"] & \left(S^{j+1}(\C^2) \oplus S^{j+3}(\C^2)\right) \otimes \left(\T^*_Z \otimes K^{-(j+1)/2}_Z\right) \ar[d] \\
+& S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-(j+1)/2}_Z
+\end{tikzcd}
+\eeqn
+where the downward arrow is induced by the evident $\lie{sl}(2)$ projection.
+\item The odd part of $\cV^{(0)}$ acts on the component $S^{j-1}(\C^2) \otimes K^{-(j+1)/2}_Z$ through the composition
+\beqn
+\begin{tikzcd}
+\left(\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2\right) \otimes \left(S^{j-1}(\C^2) \otimes K^{-j/2}_Z\right) \ar[r,"\cong"] & \left(S^{j-2}(\C^2) \oplus S^{j}(\C^2)\right) \otimes \left(\T^*_Z \otimes K^{-1}_Z K^{-j/2}_Z\right) \ar[d] \\
+& S^{j}(\C^2) \otimes \T_Z \otimes K^{-j/2}_Z
+\end{tikzcd}
+\eeqn
+where the downward arrow is induced by the evident $\lie{sl}(2)$ projection together with the holomorphic de Rham operator taking holomorphic one-forms to holomorphic two-forms. 
+\item Finally, the odd part of $\cV^{(0)}$ acts on the component $S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-(j+1)/2}_Z$ through the composition
+\beqn
+\begin{tikzcd}
+\left(\T^*_Z \otimes K^{-1/2}_Z \otimes \C^2\right) \otimes \left(S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-j/2}_Z\right) \ar[r,"\cong"] & \left(S^{j}(\C^2) \oplus S^{j+2}(\C^2)\right) \otimes \left(\T^*_Z \otimes \T^*_Z \otimes K^{-1}_Z K^{-j/2}_Z\right) \ar[dl] \ar[d] \\
+S^j (\C^2) \otimes \T_Z \otimes K_Z^{-j/2} & S^{j+2}(\C^2)  \otimes K^{-j/2}_Z
+\end{tikzcd}
+\eeqn
+where the leftmost downward arrow is induced by the evident $\lie{sl}(2)$ projection.
+The rightmost downward arrow is induced by the remaining $\lie{sl}(2)$ projection together with the holomorphic de Rham operator taking holomorphic two-forms to holomorphic three-forms.
+\end{itemize}
 
 \parsec[s:kacrelation]
 
