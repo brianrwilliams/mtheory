@@ -2,10 +2,12 @@
 
 In conjecture \ref{conj:fact} we have formulated a conjectural description of the factorization algebra of classical observables $\Obs_{N}$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
 In this section we begin to provide some evidence for this description at the level of local operators, which is just a small piece of the factorization algebra.
+As we reviewed just in the previous section, the space of local operators is what categorifies the specific superconformal index that we study in this paper.
+%The structure of a three-dimensional holomorphic factorization algebra induces algebraic operations on the algebra of local operators
 
 For each $N$ we have constructed a local Lie algebra $\cG_N$ on the worldvolume three-fold $Z$. 
 Our conjecture is that the factorization algebra associated to a stack of $N$ holomorphically twisted fivebranes is $\Obs_N \simeq \clie_\bu(\cG_{N,c})$, where $\cG_{N,c}$ denotes the cosheaf of compactly supported sections. 
-The main goal of this section is to extract the algebra of local operators from this factorization algebra and to then deduce explicit formulas for local characters.
+The main goal of this section is to extract the algebra of local operators from this factorization algebra and to then deduce explicit formulas for the local character, and hence the superconformal index.
 
 For a stack of $N=1$ fivebranes, which corresponds to the abelian six-dimensional superconformal field theory, we find that our local character matches exactly with the expressions in the literature. 
 This is not a surprise as we have shown that even at the level of factorization algebras $\clie_\bu(\cG_{1,c})$ is quasi-isomorphic to~$\Obs_1$, see Proposition~\ref{prop:factabelian}.
@@ -17,7 +19,7 @@ For small values of $N$ we expand our closed formulas to low orders in the fugac
 
 \subsection{Operators on a single fivebrane}
 
-We deduce the character of the holomorphic twist of the theory on a single fivebrane and will find an exact match with the index of the six-dimensional superconformal theory for the abelian Lie algebra $\lie{gl}(1)$.
+We deduce the character of the holomorphic twist of the theory on a single fivebrane and will find an exact match with the index of the six-dimensional superconformal theory associated to the abelian Lie algebra $\lie{gl}(1)$.
 By the proposition \ref{prop:factabelian} we can compute this character either from a first principles description of the theory, or holographically by focusing on the weight $(-1)$ part of the decomposition of $\Bar{\pi}_* \Obs_{sugra}$.
 
 \begin{lem}
@@ -34,7 +36,7 @@ The jet expansion at $0 \in \C^3$ determines a map from the sections of the abel
 \begin{tikzcd}
 \ul{-1} & \ul{0} \\
 \Omega^{2}(\Hat{D}^3) \ar[r,"\del"] & \Omega^{3}(\Hat{D}^3) \\
-\Pi \Omega^0(\Hat{D}^3, K^{1/2} \otimes \C^2) . 
+\Pi \Omega^0(\Hat{D}^3, K^{1/2}_{\Hat{D}^3}\otimes \C^2) . 
 \end{tikzcd} 
 \eeqn
 On the formal disk all closed two-forms are automatically exact, which implies the lemma.
@@ -49,16 +51,18 @@ According to the weights listed above and using the description of local operato
 \begin{itemize}
 \item Single particle operators on the odd copy of holomorphic two-forms $\Pi \Omega^{2,hol}$ contribute
 \[
-- q^2 \frac{t_1  + t_1^{-1} t_2  + t_2^{-1} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
+- q^2 \frac{\chi^{\lie{sl}(3)}_{[0,1]}(t_1,t_2)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} = - q^2 \frac{t_1  + t_1^{-1} t_2  + t_2^{-1} }{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 \]
+where $\chi^{\lie{sl}(3)}_{[1,0]}(t_1,t_2)$ is the $\lie{sl}(3)$ character of highest weight $[1,0]$.
 \item Single particle operators on the even copy of holomorphic three-forms $\Omega^{3,hol}$ contribute
 \[
 q^3 \frac{1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
 \]
 \item Single particle operators on $K^{1/2} \otimes \C^2$ contribute
 \[
-q^{3/2}\frac{(r + r^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
+q^{3/2} \frac{\chi_{1}^{\lie{sl}(2)} (r)}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} = q^{3/2}\frac{(r + r^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)}
 \]
+where $\chi_{1}^{\lie{sl}(2)} (r)$ is the $\lie{sl}(2)$ character of highest weight one.
 \end{itemize}
 
 Putting this all together we obtain the following.
@@ -70,7 +74,6 @@ The local character $\chi_{1}(t_1,t_2,r,q)$ of the holomorphic twist of the theo
 f_{1} (t_1,t_2,r,q) = \frac{q^{3/2}(r + r^{-1}) - q^2(t_1 + t_1^{-1} t_2 + t_2^{-1} ) + q^3}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
 \eeqn
 \end{prop}
-testing
 
 In terms of the parameters $y_1,y_2,y_3,y,q$ this single particle character reads
 \beqn
@@ -184,23 +187,24 @@ Indeed, one can show (see the forthcoming work \cite{SW6d}) that the fiber of th
 
 \parsec
 
-We continue by computing the character of local operators associated to the factorization algebra $\clie_\bu(\cG_{2,c})$. 
+We continue by computing the character of local operators associated to the factorization algebra $\clie_\bu(\cG_{2,c})$ using Lemma~\ref{lem:envelope}.
+For simplicity we will use the fugacities $y_i, y, q$.
 
 \begin{itemize}
 \item Single particle operators coming from the copy of holomorphic vector fields $\Vect^{hol}(\C^3)$ contribute
 \[
-q^3 \frac{y_1 q + y_2 q + y_3 q }{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
+q^4 \frac{\chi^{\lie{sl}(3)}_{[1,0]}(y_i)}{(1-y_1q) (1-y_2 q) (1-y_3 q)}  = q^4 \frac{y_1 + y_2 + y_3}{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
 \]
 \item Single particle operators coming from $\lie{sl}(2)$-valued holomorphic functions $\lie{sl}(2) \otimes \cO^{hol}(\C^3)$ contribute
 \[
-\frac{q^2 y^2 + q^3 + q^4 y^{-2}}{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
+q^3 \frac{\chi_2^{\lie{sl}(2)} (q^{-1/2}y)}{(1-y_1q) (1-y_2 q) (1-y_3 q)}  = \frac{q^2 y^2 + q^3 + q^4 y^{-2}}{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
 \]
 %\[
 %q^3\frac{r^2 + r^{-2} + 1}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} 
 %\]
 \item Single particle operators coming from the odd piece of $E(3|6)$ which is $\Omega^{1,hol} \otimes K^{-1/2} \otimes \C^2$ contribute
 \[
-q^{3}\frac{(y + q y^{-1})(y_1^{-1} + y_2^{-1} + y_3^{-1})}{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
+q^{7/2}\frac{\chi^{\lie{sl}(2)}_{1}(q^{-1/2} y) \, \chi_{[0,1]}^{\lie{sl}(3)} (y_i)}{(1-y_1q) (1-y_2 q) (1-y_3 q)} = q^{3}\frac{(y + q y^{-1})(y_1^{-1} + y_2^{-1} + y_3^{-1})}{(1-y_1q) (1-y_2 q) (1-y_3 q)} 
 \]
 \end{itemize}
 
@@ -216,23 +220,22 @@ f_{2} (y_i,y,q) = \frac{q^4(y_1+y_2+y_3) + q^2 (y^2 + q + q^2 y^{-2}) - q^{3} (y
 %\eeqn
 \end{prop}
 
-\brian{add some better transition} 
-Based on our discussion above we are led to the following conjecture.
+Recall that our conjecture for the factorization algebra associated to the holomorphic twist of the six-dimensional worldvolume theory associated to a stack of two fivebranes is $\Obs_N \simeq \clie_\bu(\cG_{2,c})$. 
+We can now state a decategorified version of conjecture \ref{conj:fact} at the level of superconformal indices, or local characters.
+
 \begin{conj}\label{conj:6dtwo}
-The character of local operators of the holomorphic twist of the theory on a stack of two fivebranes is given by the following plethystic exponential
+The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(2)$ is given by
 \[
-\chi_{2} (t_1,t_2,r,q) = {\rm PExp} \left[f_2(t_1,t_2,r,q) \right] .
+\chi_{2} (y_i,y,q) = {\rm PExp} \left[f_2(y_i,y,q) \right] .
 \]
-where the single particle index is as in \eqref{eqn:6dtwo}.
+where $f_2(y_i,y,q)$ is as in \eqref{eqn:6dtwo}.
 \end{conj}
 
-Following the general relationship between characters of holomorphic twists of supersymmetric theories and supersymmetric indices, this our conjecture for the supersymmetric index of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(2)$. 
 Similarly, the index associated to the $\lie{gl}(2)$ theory is conjectured to be simply the product 
 \[
 \til \chi_{2} (y_i,y,q) = \chi_{2} (y_i,y,q) \cdot \chi_{1}(y_i,y,q)
 \]
 where the character $\chi_{1}$ for the $\lie{gl}(1)$ theory is given in the previous section. 
-As a factorization algebra \brian{finish}
 
 %\parsec[]
 %
@@ -251,21 +254,13 @@ which is the same as the single particle index of Virasoro vacuum module on the 
 
 \subsection{Finite $N$ index}
 
-Define
+Before exhibiting the general formula for the local character of the factorization algebra $\clie_\bu(\cG_{N,c})$ on $\C^3$ we set up some notation. 
+As above, we let $\chi_k^{\lie{sl}(2)}$ and $\chi^{\lie{sl}(3)}_{[k,l]}$ denote the highest weight $\lie{sl}(2)$ and $\lie{sl}(3)$ characters. 
+We also define the following expression which appears in the denominator in all of our characters
 \beqn
 d(y_i,y,q) = (1-y_1 q)(1-y_2q)(1-y_3q) .
 \eeqn 
-For $k \geq 3$ let
-%\begin{align*}
-%f_k (y_1,y_2,y_3,y,q) & \define q^{3k/2} \left(q \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
-%& \left.  - q \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right) .
-%\end{align*}
-\begin{align*}
-g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 (k-2)/2} \chi_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3(k-2)/2} \chi_k(q^{-1/2} y) \right. \\
-& \frac{\left.  - q^{3(k-1)/2} \chi_{k-3}(q^{-1/2}y) - q^{-1 + 3(k-1)/2} \chi_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
-\end{align*}
-
-To simplify formulas, we will temporarily denote the single particle character for the $N=1$ theory by 
+To simplify formulas, we will temporarily denote the single particle character for the $N=1$ theory $\Obs_1$ by 
 \beqn
 g_1 (y_i,y,q) = f_1(y_i,y,q)
 \eeqn
@@ -274,11 +269,21 @@ where $f_1(y_i,y,q)$ is as in equation \eqref{eqn:6done1} and also denote by
 g_2 (y_i,y,q) = f_2(y_i,y,q)
 \eeqn
 where $f_2(y_i,y,q)$ is as in equation \eqref{eqn:6dtwo}. 
-Thus $g_2$ is the single particle local character of $\clie_\bu(\cG_{2,c})$ and hence the conjectural single particle index for the superconformal theory associated to the Lie algebra $\lie{sl}(2)$. 
+Thus $g_2$ is the single particle local character of $\Obs_2 = \clie_\bu(\cG_{2,c})$.
+Finally, for $k \geq 3$ let
+%\begin{align*}
+%f_k (y_1,y_2,y_3,y,q) & \define q^{3k/2} \left(q \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
+%& \left.  - q \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right) .
+%\end{align*}
+\begin{align*}
+g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 (k-2)/2} \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3(k-2)/2} \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
+& \frac{\left.  - q^{3(k-1)/2} \chi^{\lie{sl}(2)}_{k-3}(q^{-1/2}y) - q^{-1 + 3(k-1)/2} \chi^{\lie{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
+\end{align*}
+%and hence the conjectural single particle index for the superconformal theory associated to the Lie algebra $\lie{sl}(2)$. 
 
 \begin{thm}
 \label{thm:finite}
-The local character of the factorization algebra $\clie_{\bu}(\cG_{N,c})$ on $Z=\C^3$ is 
+The local character of the factorization algebra $\clie_{\bu}(\cG_{N,c})$ is
 \beqn
 \chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=2}^N g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
@@ -287,12 +292,33 @@ Similarly, the local character of the factorization algebra $\clie_\bu(\til{\cG}
 \til{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=1}^N g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
 \end{thm}
+\begin{proof}
+By Lemma~\ref{lem:envelope} the character of $\clie_\bu (\cG_{N,c})$ is given by 
+\beqn
+\chi_N = \text{PExp} \left[f_N\right]
+\eeqn
+where $f_N$ is the single particle local character.
+Thus, it suffices to show that $f_N = \sum_{k = 2}^N g_k$.
+Recall that we have the following filtration of the factorization algebra $\clie_\bu(\cG_{N,c})$ given by 
+\beqn
+\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \clie_\bu (\cG_{N,c}) .
+\eeqn
+Thus we have the following expression for the associated graded factorization algebra 
+\beqn
+\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=2}^N \clie_\bu(\cG^{(k)}.
+\eeqn
+
+Thus, it suffices to show that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG_{k,c})$, which is a direct computation.
+\end{proof}
 
 We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$.
 
 \begin{conj} 
 The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\chi_{N}(y_1,y_2,y_3,y,q)$. 
 \end{conj}
+
+It follows from the fact that limit of the diagram in \ref{eqn:limit1} is $(\Bar{\pi}_* \Obs_{sugra})^! \simeq \clie_\bu(\cG_c)$ that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in Proposition~\ref{prop:sugraindex1}. 
+Alternatively, we have the following direct proof of this fact. 
 
 \begin{prop}
 One has
@@ -314,7 +340,7 @@ We will use the following identity
 \eeqn
 We will denote this expression by $S(y,q)$.
 
-From the form of $f_{sugra}$ and $g_k$, one can readily see that the result reduces to observing that
+Using this identity one can directly see that the result reduces to observing that
 \begin{multline}
 \left(q^4 (y_1+y_2+y_3) + 1 - q^6 - q^2 (y_1^{-1} + y_2^{-1} + y_3^{-1})\right)S(y,q) - 1 + q^3= \\
 \left(q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2) \right) S(y,q) .
