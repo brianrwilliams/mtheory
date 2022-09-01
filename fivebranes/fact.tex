@@ -8,13 +8,14 @@
 \section{Factorization algebras in twisted $M$ theory}
 \label{s:fact}
 
-In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal membrane and fivebrane worldvolume theories (after twisting).
-For the case at hand, our expectation for universal can be understood as the theory on a large number of membranes and fivebranes. 
-We will see how this interpretation is supported by the supergravity index calculations presented in the last section. 
+In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal fivebrane theory after performing the holomorphic twist.
+For the case at hand, our expectation for the universal theory can be understood as the worldvolume theory on a large number of fivebranes. 
+We will see how this relates to the description of the states in twisted supergravity as defined in the last section.
+Later, we see how our interpretation is supported by a relationship of the supergravity index to the fivebrane superconformal index.
 
 Our ansatz for the worldvolume theories in the large $N$ limit relies on a proposal for twisted holography proposed by Costello and Li in \cite{CLsugra} and further developed by Costello, Gaiotto, Paquette in \cite{CostelloM2,CostelloOmega,costello2021twisted,CP}.
 The core idea is that the algebra of operators on both sides of the duality are Koszul dual. 
-Many other examples and support for this twisted holographic principle have been carried out in \cite{Oh:2021wes,Oh:2020hph,Gaiotto:2021xce}. \brian{surya add more?}
+Many other examples and support for this twisted holographic principle have been carried out in \cite{Oh:2021wes,Oh:2020hph,Gaiotto:2021xce}.
 
 It is absolutely crucial for this proposal that we work in a derived setting using the Batalin--Vilkovisky (BV) formalism. 
 The observables of any theory in the BV formalism have the structure of a factorization algebra on spacetime \cite{CG2}. 
@@ -22,10 +23,10 @@ Classically, if a theory in the BV formalism is described by a local $L_\infty$ 
 \[
 \clie^\bu(\cL(U))
 \]
-which computes the Lie algebra cohomology of $\cL(U)$. 
+which computes the Lie algebra cohomology of the $L_\infty$ algebra $\cL(U)$. 
 The differential on this cochain complex is precisely the Chevalley--Eilenberg differential associated to the~$L_\infty$ structure maps. 
 
-At the quantum level the factorization algebra of classical observables is deformed.
+At the quantum level the factorization algebra of observables is deformed.
 Perturbatively, Costello and Gwilliam use the BV formalism to give a systematic way to study quantization within the context of factorization algebras~\cite{CG2}. 
 Even in perturbation theory, the full quantum behavior of our proposal for the minimal twist of eleven-dimensional theory is an open question. 
 We leave the problem to characterize the quantization to future work, and in this paper we do not address anything past tree-level in the bulk eleven-dimensional theory.
@@ -296,13 +297,12 @@ For each $n \in \Z$ and open set $U \subset Z$, let
 \]
 be the weight $n$ eigenspace with respect to this $\C^\times$ action.
 As a corollary of the proposition, we get a product decomposition 
-\[
+\beqn
+\label{eqn:Gdecomp}
 \cG_Z = \prod_{n \geq -1} \cG^{(n)} .
-\]
+\eeqn
 In particular, we see that $\cG^{(0)}_Z$ is itself a local Lie algebra (that we will soon describe). 
 Moreover, every $\cG^{(n)}$, $n \geq -1$ is a (local) module for this local Lie algebra.
- 
-We turn to explicitly describing the first few homogenous $\C^\times$-weights of~$\cG_Z$. 
 
 %The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
 %Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
@@ -371,7 +371,7 @@ $\cG_Z^{(-1)}$ is equivalent as an abelian local Lie algebra to one of the form 
 \[
 \cV^{(-1)} = K^{1/2}_Z \otimes \C^2 \oplus \cO_Z \oplus \Pi \T^*_Z .
 \]
-The Dolbeault forms are equipped with the natural $\dbar$ operator and the $\del$ operator which takes functions to one-forms.
+This Dolbeault complex is equipped with the natural $\dbar$ operator and the $\del$ operator which goes from $\Omega^{0,\bu}(Z)$ to $\Omega^{1,\bu}(Z)$. 
 
 Explicitly weight $(-1)$ summand $\cV^{(-1)}$ consists of:
 \begin{itemize}
@@ -389,17 +389,21 @@ Since $\del$ is weight zero for the decomposition these forms combine to form th
 
 \parsec[s:weight0]
 
-\brian{make precise statement using $E(3|6)$.}
+The weight zero summand $\cG_Z^{(0)}$ is special because it carries the induced structure of a local $L_\infty$ algebra on $Z$ inherited from the $L_\infty$ algebra $\cL_{sugra}$.
+As a local Lie algebra it is equivalent to one of the form $\Omega^{0,\bu}(Z, \cV^{(0)})$.
+We will prove the following.
 
-Particularly important for us will be the weight zero summand $\cG_Z^{(0)}$.
-Again, as a local Lie algebra it is equivalent to one of the form $\Omega^{0,\bu}(Z, \cV^{(0)})$.
-Since this is the weight zero component, the sheaf of sections is endowed with the structure of a Lie algebra inherited from the local $L_\infty$ algebra $\cL_{sugra}$.
+\begin{prop}\label{prop:v0}
+As a $\Z/2$ graded local Lie algebra on $Z$, the weight zero summand~$\cG^{(0)}_Z$ is equivalent to $\cE(3|6)$. 
+\end{prop}
+
+%Since this is the weight zero component, the sheaf of sections is endowed with the structure of a Lie algebra inherited from the local $L_\infty$ algebra $\cL_{sugra}$.
 When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is closely related to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
 %More precisely he weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
 
-The holomorphic vector bundle $\cV^{(0)}$ is 
+To see that $\cG^{(0)}$ and $\cE(3|6)$ are equivalent as super vector bundles we must show that
 \[
-\cV^{(0)} = \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
+\cV^{(0)} \simeq \T_Z \oplus \lie{sl}(2) \otimes \cO_Z \oplus \Pi \left( \T^*_Z \otimes K^{-1/2}_Z \otimes \C^2 \right).
 \]
 The local $L_\infty$ structure of $\cL_{sugra}$ endows the Dolbeault complex of this holomorphic vector bundle with a local Lie algebra structure.
 The differential turns out to be the natural $\dbar$ operator.
@@ -426,22 +430,32 @@ which sends $w_a f(z) \mapsto (f(z) , w_a \del f (z))$.
 This $\Z/2$ graded complex of sheaves is equivalent to $\Pi\Omega^{1,hol}(Z, K^{-1/2}\otimes \C^2)$. 
 \end{itemize}
 
-The Lie bracket on $\cG_Z^{(0)}$ is induced from a Lie algebra structure on holomorphic sections of $\cV^{(0)}$ which we can describe as follows:
-\begin{itemize}
-\item For $\Vect^{hol}(Z)$ there is the standard commutator of holomorphic vector fields. 
-This acts on the sections of $\lie{sl}(2) \otimes \cO_Z$ and $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ by Lie derivative. 
-\item On sections of $\lie{sl}(2) \otimes \cO_Z$ there is the matrix commutator. 
-This acts on the odd part $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ where we view $\C^2$ as the fundamental $\lie{sl}(2)$ representation. 
-\item Finally, and most interestingly, there is a bracket of the form
-\[
-\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \times \Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \to \Vect^{hol}(Z) \oplus \lie{sl}(2) \otimes \cO_Z 
-\]
-given in coordinates by
-\begin{multline}
-[f^{ai}(z) w_a \d z_i, g^{bj} (z) w_b \d z_j] = \ep_{ijk} \ep_{ab} f^{ai} (z) g^{bj}(z) \del_{z_k} \\ + \ep_{ijk} \ep_{bc}  \del_{z_k} f^{ai}(z) g^{bj}(z) w_a \del_{w_c} + \ep_{ijk} \ep_{ac} f^{ai}(z) \del_{z_k} g^{bj}(z) w_b \del_{w_c} .
-\end{multline}
-The top line is a holomorphic vector field on~$Z$ and the bottom line is a $\lie{sl}(2)$-valued holomorphic function on~$Z$.
-\end{itemize}
+The Lie bracket on $\cG_Z^{(0)}$ is defined from a Lie algebra structure on holomorphic sections of $\cV^{(0)}$ inherited from the $L_\infty$ algebra $\cL_{sugra}$. 
+In fact, there is only a two-ary bracket, and an immediate calculation shows that it agrees with the Lie bracket on $\cE(3|6)$. 
+
+%\begin{rmk}
+%In \cite{KacClass} an embedding of super Lie algebras from $E(3|6)$ into $E(5|10)$ is constructed.
+%Recall that in the case $Z = \C^3$, the $\infty$-jets at $0 \in \C^3$ of the local Lie algebra $\cE(3|6)$ is precisely the exceptional super Lie algebra $E(3|6)$.
+%Similarly, the $\infty$-jets at $0 \in \C^3$ of the local $L_\infty$ algebra $\cG_{\C^3}$ is $\Hat{E(5|10)}$.
+%The embedding of local $L_\infty$ algebras on $Z$ from $\cE(3|6)$ into $\cG_Z$ that we just described agrees with the embedding of \cite{KacClass} upon taking $\infty$-jets.
+%(Note that the central term in $\Hat{E(5|10)}$ plays no role herem since it sits in $\C^\times$-weight $-1$.)
+%\end{rmk}
+
+%\begin{itemize}
+%\item For $\Vect^{hol}(Z)$ there is the standard commutator of holomorphic vector fields. 
+%This acts on the sections of $\lie{sl}(2) \otimes \cO_Z$ and $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ by Lie derivative. 
+%\item On sections of $\lie{sl}(2) \otimes \cO_Z$ there is the matrix commutator. 
+%This acts on the odd part $\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2)$ where we view $\C^2$ as the fundamental $\lie{sl}(2)$ representation. 
+%\item Finally, and most interestingly, there is a bracket of the form
+%\[
+%\Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \times \Pi\Omega^{1,hol}(Z, K^{-1/2}_Z \otimes \C^2) \to \Vect^{hol}(Z) \oplus \lie{sl}(2) \otimes \cO_Z 
+%\]
+%given in coordinates by
+%\begin{multline}
+%[f^{ai}(z) w_a \d z_i, g^{bj} (z) w_b \d z_j] = \ep_{ijk} \ep_{ab} f^{ai} (z) g^{bj}(z) \del_{z_k} \\ + \ep_{ijk} \ep_{bc}  \del_{z_k} f^{ai}(z) g^{bj}(z) w_a \del_{w_c} + \ep_{ijk} \ep_{ac} f^{ai}(z) \del_{z_k} g^{bj}(z) w_b \del_{w_c} .
+%\end{multline}
+%The top line is a holomorphic vector field on~$Z$ and the bottom line is a $\lie{sl}(2)$-valued holomorphic function on~$Z$.
+%\end{itemize}
 
 
 %\parsec[s:mainfact]
@@ -479,7 +493,8 @@ The top line is a holomorphic vector field on~$Z$ and the bottom line is a $\lie
 
 \parsec[s:general_decomp]
 
-\brian{mention $E(3|6)$ module structure}
+We move on to give the following general description of the weight $j$ component $\cG^{(j)}$.
+Since we have already described $j = -1,0$ we focus on $j \geq 1$.
 
 \begin{prop}
 Let $j \geq 1$. 
@@ -489,6 +504,7 @@ The complex of vector bundles $\cG^{(j)}$ is quasi-isomorphic to
 \eeqn
 where $\cV^{(j)}$ is the super holomorphic vector bundle 
 \beqn
+\label{eqn:Vj}
 \begin{tikzcd}
 \ul{even} & \ul{odd} \\
 S^{j}(\C^2) \otimes \T_Z \otimes K^{-j/2}_Z & S^{j-1}(\C^2) \otimes K^{-(j+1)/2}_Z \\
@@ -498,19 +514,140 @@ S^{j+2}(\C^2) \otimes K^{-j/2}_Z & S^{j+1}(\C^2) \otimes \T^*_Z \otimes K^{-(j+1
 \end{prop}
 
 \begin{proof}
+As above, let $\C^2$ stand for the fundamental $\lie{sl}(2)$ representation and so the irreducible highest weight $j$ representation is $S^j(\C^2)$.
 
-\begin{itemize}
-\item Let $f(w) \in \C[w_1,w_2]_j$ be a homogenous degree $j$ polynomial in the variables $w_1,w_2$ and suppose that $g(z) \del_{z_i}$ is a holomorphic vector field on $Z$. 
-Define the $\mu$-type field
+The weight $j \geq 1$ complex of vector bundles $\cG^{(j)}$ is readily seen to be of the following form
 \beqn
-f(w) g(z) \del_{z_i} + \cdots
+\begin{tikzcd}
+\ul{even} & \ul{odd} \\
+\Omega^{0,\bu}(Z , \T_Z \otimes K^{-j/2}_Z) \otimes S^j(\C^2) \ar[dr, "D_1"] \\ & \Omega^{0,\bu}(Z, K^{-j/2}_Z) \otimes S^j(\C^2) \\ 
+\Omega^{0,\bu}(Z , K^{-j/2}_Z) \otimes S^{j+1}(\C^2) \otimes \C^2 \ar[ur, "D_2"'] & \\
+& \Omega^{1,\bu}(Z, K^{-(j+1)/2}_Z) \otimes S^{j+1}(\C^2) \\ 
+\Omega^{0,\bu}(Z, K^{-(j+1)/2}_Z) \otimes S^{j+1}(\C^2) \ar[ur, "D_3"] \ar[dr, "D_4"'] \\
+& \Omega^{0,\bu}(Z, K^{-(j+1)/2}_Z) \otimes S^j(\C^2) \otimes \C^2 . 
+\end{tikzcd}
 \eeqn
-\item Let $f(w) \in \C[w_1,w_2]_{j+2}$ be a homogenous degree $j+2$ polynomial and consider the one-form $\del f(w) = \del_{w_1} f(w)\d w_1 + \del_{w_2} f(w) \d w_2$. Using the holomorphic symplectic form we obtain the vector field
+
+Here, as usual, the $\dbar$ operator is left implicit.
+Let us describe the differentials $D_1,D_2,D_3,D_4$.
+Recall that the five-fold $X = \text{Tot}(K_Z^{1/2} \otimes \C^2)$ is equipped with a non-vanishing holomorphic volume form. 
+The corresponding divergence operator $\div$ restricted to the weight $j$ subspace is $\div = D_1 + D_2$. 
+The differential $D_2$ is given by the identity on $\Omega^{0,\bu}(Z, K^{-j/2}_Z)$ tensored with the natural $\lie{sl}(2)$-equivariant projection
 \beqn
-g(z) \left(\del_{w_1} f(w) \del_{w_2} - \del_{w_2} f(w) \del_{w_1}\right) .
+S^{j+1}(\C^2) \otimes \C^2 \cong S^{j+2}(\C^2) \oplus S^{j}(\C^2) \twoheadrightarrow S^{j}(\C^2) .
+\eeqn
+
+The holomorphic de Rham operator on $X$ is $\del = D_3+D_4$. 
+The differential $D_4$ is the identity on $\Omega^{0,\bu}(Z, K^{-(j+1)/2}$ tensored with the natural $\lie{sl}(2)$-equivariant inclusion
+\beqn
+S^{j+1}(\C^2) \hookrightarrow S^{j-1}(\C^2) \oplus S^{j+1}(\C^2) \cong S^j(\C^2) \otimes \C^2 .
+\eeqn
+
+There is a spectral sequence whose first term is computed by the $D_2,D_4$ cohomology. 
+This term in the spectral sequence is isomorphic the complex $\Omega^{0,\bu}(Z, \cV^{(j)})$ where $\cV^{(j)}$ is as in equation \eqref{eqn:Vj}.
+There are no further terms in the spectral sequence, so the result follows. 
+\end{proof}
+
+One can write down an explicit quasi-isomorphism
+\beqn
+\Phi \colon \Omega^{0,\bu}(Z, \cV^{(j)}) \to \cG^{(j)} 
+\eeqn 
+as follows.
+\begin{itemize}
+\item First we describe what the map looks like on the even summands.
+Locally a section of $\Omega^{0,\bu}(Z, S^j(\C^2) \otimes T_Z \otimes K^{-j/2}_Z)$ is of the form
+\beqn
+f(w) \otimes g_i(z) \del_{z_i} 
+\eeqn
+where $f(w) \in \C[w_1,w_2]_j$ is a homogenous degree $j$ polynomial in the variables $w_1,w_2$ and the $g_i(z)$'s are Dolbeault forms on $Z$.
+Define the divergence-free $\mu$-type field $\Phi(f(w) \otimes g_i(z) \del_{z_i})$ by the expression
+\beqn
+f(w) g(z) \del_{z_i} - \frac{1}{j+2} \left(\del_{z_i} g_i(z)\right) f(w) E_w
+\eeqn
+where $E_w = w_a \del_{w_a}$ is the Euler vector field in the direction transverse to the brane. 
+\item Locally a section of $\Omega^{0,\bu}(Z, S^{j+2} \otimes K^{-j/2}_Z)$ is of the form
+\beqn
+f(w) \otimes g(z)  
+\eeqn
+where $f(w) \in \C[w_1,w_2]_{j+2}$ is a homogenous degree $j$ polynomial in the variables $w_1,w_2$ and $g(z)$ is a Dolbeault form on $Z$.
+Define the divergence-free $\mu$-type field $\Phi(f(w) \otimes g(z))$ by the expression
+\beqn
+g(z)(\del_{w_1} f (w) \del_{w_2} - \del_{w_2} f(w) \del_{w_1}) 
+\eeqn
+\item Next for the odd summands.
+Locally a section of $\Omega^{0,\bu}(Z, S^{j-1} \otimes K^{-(j+1)/2}_Z)$ is of the form
+\beqn
+f(w) \otimes g(z)  
+\eeqn
+where $f(w) \in \C[w_1,w_2]_{j-1}$ is a homogenous degree $j-1$ polynomial in the variables $w_1,w_2$ and $g(z)$ is a Dolbeault form on $Z$.
+Define the $\gamma$-field $\Phi(f(w) \otimes g(z))$ by the expression
+\beqn
+\frac12 g(z)f(w)(w_1 \d w_2 - w_2 \d w_1) .
+\eeqn
+\item
+Locally a section of $\Omega^{0,\bu}(Z, S^{j+1} \otimes T^*_Z \otimes K^{-(j+1)/2}_Z)$ is of the form
+\beqn
+f(w) \otimes g^i(z)  \d z_i
+\eeqn
+where $f(w) \in \C[w_1,w_2]_{j+1}$ is a homogenous degree $j+1$ polynomial in the variables $w_1,w_2$ and the $g^i(z)$'s are Dolbeault forms on $Z$.
+Define the $\gamma$-field $\Phi(f(w) \otimes g^i(z) \d z_i)$ by the expression
+\beqn
+f(w) g^i (z) \d z_i .
 \eeqn
 \end{itemize}
-\end{proof}
+
+The complex $\cG^{(j)}$ is manifestly a local module for the local Lie algebra $\cG^{(0)}$. 
+With the identification $\cG^{(0)} \simeq \cE(3|6)$ and $\cG^{(j)} \simeq \Omega^{0,\bu}(Z, \cV^{(j)})$ we can read off this module structure completely explicitly. 
+
+Recall that as a complex of vector bundles $\cE(3|6) = \Omega^{0,\bu}(Z, \cV^{(0)}$ where 
+\beqn
+\cV^{(0)} 
+\eeqn
+
+\parsec[s:kacrelation]
+
+In the case $Z = \C^3$, the product decomposition of $\cG = \cG_{\C^3}$ in equation \eqref{eqn:Gdecomp} is closely related to a decomposition of the exceptional simple super Lie algebra $E(5|10)$ studied in \cite{KR2}. 
+Here, the eleven-manifold bulk is just 
+\beqn
+\R \times {\rm Tot}(K_{\C^3}^{1/2} \otimes \C^2) \simeq \R \times \C^5 .
+\eeqn
+
+In \S \ref{s:e510} we recalled the result from \cite{RSW} that the $\infty$-jets of $\cL_{sugra}$ at $0 \in \R \times \C^5$ is quasi-isomorphic to $\Hat{E(5|10)}$, a certain central extension of $E(5|10)$.
+It follows that the $\infty$-jets of the local Lie algebra $\cG$ at $0 \in \C^3$ is also quasi-isomorphic to $\Hat{E(5|10)}$. 
+
+In \cite{KR2} the following weight decomposition of $E(5|10)$ is constructed.
+Denote by $\{z_i\}$ the local coordinates along the three-fold $Z=\C^3$ that the fivebrane wraps and $\{w_a\}$ for the transverse holomorphic coordinates to the zero section in the five-fold ${\rm Tot}(K_{\C^3}^{1/2} \otimes \C^2)$.
+Assign the following weights to the super Lie algebra $E(5|10)$. 
+\begin{itemize} 
+\item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
+\item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
+\item the parity of an element carries an additional weight of $-1$. 
+Thus, for example, the odd element $[\d w_1 \d z_1] \in \Omega^{2,cl}(\Hat{D}^5)$ carries weight $+1 - 1 = 0$. 
+(If we think about the odd part as the space of closed two-forms then equivalently this grading translates to the one-form symbol $\d(-)$ as carrying weight $-1/2$.)
+\end{itemize} 
+The weight grading is concentrated in degrees $\geq -1$. 
+In particular, there is a decomposition of super vector spaces
+\beqn\label{eqn:decomp1}
+E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
+\eeqn
+with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
+It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$.
+
+
+At the level of $\infty$-jets the the decomposition in equation \eqref{eqn:Gdecomp} induces a weight grading of $\Hat{E(5|10)}$ which extends the one on $E(5|10)$ that we just described by declaring that the central term have weight $-1$.
+In this way, we get a related decomposition of super $L_\infty$ algebras
+\beqn\label{eqn:decomp2}
+\Hat{E(5|10)} = \prod_{n \geq -1} V_n
+\eeqn
+We will refer to this as the \textit{fivebrane decomposition} of $\Hat{E(5|10)}$.
+Here $V_{-1}$ is a $\C$-extension of $\til V_{-1}$ defined in the decomposition \eqref{eqn:decomp1}.
+Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
+
+The decomposition in equation \eqref{eqn:decomp2} has the property that $V_0$ is isomorphic to $E(3|6)$ as super Lie algebras.
+In particular, for each $n$, $V_n$ is a module for $V_0 = E(3|6)$.
+This is compatible with our description in proposition~\ref{prop:v0} where we showed that as local Lie algebras $\cG^{(0)} \simeq \cE(3|6)$. 
+Indeed, the $\infty$-jets of the local Lie algebra $\cE(3|6)$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$. 
+By the compatibility of our decomposition with \cite{KR2} we see that $V_n$ is quasi-isomorphic to the $\infty$-jets of $\cG^{(n)}$ at $0 \in \C^3$. 
 
 \subsection{Koszul duality for factorization algebras: an ansatz} 
 
@@ -607,7 +744,7 @@ In other words, the $!$-dual factorization algebra of $\clie^\bu(\cL)$ is the (u
 There are many things lacking in this definition. 
 First, we do not define the $!$-dual for an arbitrary factorization algebra, only for ones of the form $\clie^\bu(\cL)$ where $\cL$ is a local Lie algebra. 
 Also, we will not prove that $!$-dual satisfies any Koszul duality axioms. 
-From the discussion above we see that $!$-dual does agree with Koszul duality in the case of associative algebras.\footnote{It is not difficult to see that $!$-duality for locally constant factorization algebras on $\R^n$ agrees with $\EE_n$ Koszul duality between $\clie^\bu(\fg)$, viewed as an $\EE_n$ algebra, and the $\EE_n$ enveloping algebra $U_{\EE_n} \fg$ \cite{Knudsen, Lurie,...}}
+From the discussion above we see that $!$-dual does agree with Koszul duality in the case of associative algebras.\footnote{It is not difficult to see that $!$-duality for locally constant factorization algebras on $\R^n$ agrees with $\EE_n$ Koszul duality between $\clie^\bu(\fg)$, viewed as an $\EE_n$ algebra, and the $\EE_n$ enveloping algebra $U_{\EE_n} \fg$ \cite{Knudsen, Lurie}}
 
 \parsec[s:noether]
 
