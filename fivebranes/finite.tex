@@ -155,35 +155,35 @@ Notice that the dependence on the parameter $y_1$ has completely dropped out eve
 
 \subsection{A conjectural description of operators on a stack of two fivebranes}
 
-In \S\ref{sec:factsummary} we saw that the decomposition of the local $L_\infty$ algebra $\cG = \cG_Z$ on $Z$ induces a tower of factorization algebras 
+In \S\ref{sec:factsummary} we saw that the decomposition of the local $L_\infty$ algebra $\cG = \cG_Z$ on $Z$ induces a filtration of the factorization algebra $\clie_\bu(\cG_c)$. 
 \[
-\clie_{\bu}(\cG_{1,c}) \leftarrow \clie_{\bu}(\til \cG_{2,c}) \leftarrow \cdots .
+\clie_{\bu}(\cG_{1,c}) \subset \clie_{\bu}(\cG_{2,c}) \subset \cdots .
 \]
-We now turn to the factorization algebra $\clie_{\bu}(\til \cG_{2,c})$.
+We now turn to the factorization algebra $\clie_{\bu}(\cG_{2,c})$.
 
-Recall that $\til \cG_{2}$ is the local $L_\infty$ algebra on $Z$ defined as $\til \cG_{2} = \cG / \cG^{\geq 1}$. 
+Recall that $\cG_{2}$ is the local $L_\infty$ algebra on $Z$ defined as $\cG_{2} = \cG / \cG^{\geq 1}$. 
 Since $\cG$ is concentrated in weights $\geq -1$ we see that $\til \cG_{2}$ is of the form
 \[
-\til \cG_2 = \cG_2 \ltimes \cG_1 
+\cG_2 = \til \cG_2 \ltimes \cG_1 
 \]
-where $\cG_1 = \cG^{(-1)}$ is the weight $(-1)$ piece and $\cG_2 = \cG^{\geq 0} / \cG^{\geq 1} = \cG^{(0)}$.  
-We focus mostly on the factorization algebra $\clie_\bu(\cG_{2,c})$.
+where $\cG_1 = \cG^{(-1)}$ is the weight $(-1)$ piece and $\til \cG_2 = \cG^{\geq 0} / \cG^{\geq 1} = \cG^{(0)}$.  
+We focus mostly on the factorization algebra $\clie_\bu(\til \cG_{2,c})$.
 
-We have already characterized the local dg Lie algebra $\cG_{2}$ as the weight zero part of $\cG$ on on any threefold $Z$ in \S\ref{s:weight0}. 
-We deduce that $\cG_2$ can be given a $\Z \times \Z/2$ grading where, as usual, we refer to $\Z$ as the cohomological grading and $\Z/2$ as the parity. 
-With this lift to a $\Z \times \Z/2$ grading, the even part of $\cG_2$ is
+We have already characterized the local dg Lie algebra $\til \cG_{2} = \cG^{(0)}$ as the weight zero part of $\cG$ on on any threefold $Z$ in \S\ref{s:weight0}. 
+We have also shown that $\cG^{(0)}$ is equivalent to the local Lie algebra $\cE(3|6)$. 
+The even part of $\cE(3|6)$ is
 \[
 \Omega^{0,\bu}(Z, \T_Z) \oplus \Omega^{0,\bu}(Z) \otimes \lie{sl}(2) 
 \]
 with its natural cohomological grading by Dolbeault form type. 
-The odd part of $\cG_2$ is
+The odd part of $\cE(3|6)$ is
 \[
 \Omega^{1,\bu}(Z, K_Z^{-1/2}) \otimes \C^2 .
 \]
 The differential is $\dbar$ and the Lie bracket has been described in \S\ref{s:weight0}.
 
-On $Z = \C^3$ this local dg Lie algebra is related to the exceptional simple super Lie algebra $E(3|6)$ classified by Kac \cite{KacClass}. 
-Indeed, one can show (see the forthcoming work \cite{SW6d}) that the fiber of the $\infty$-jet bundle of $\cG_2$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$. 
+%On $Z = \C^3$ this local dg Lie algebra is related to the exceptional simple super Lie algebra $E(3|6)$ classified by Kac \cite{KacClass}. 
+%Indeed, one can show (see the forthcoming work \cite{SW6d}) that the fiber of the $\infty$-jet bundle of $\cG_2$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$. 
 
 \parsec
 
@@ -211,31 +211,33 @@ q^{7/2}\frac{\chi^{\lie{sl}(2)}_{1}(q^{-1/2} y) \, \chi_{[0,1]}^{\lie{sl}(3)} (y
 Combining these expressions we obtain the following.
 
 \begin{prop} \label{prop:6dtwo}
-The character of local operators of the factorization algebra $\clie_\bu(\cG_{2,c})$ on $\C^3$ is given by the plethystic exponential of the following expression
+The character of local operators of the factorization algebra $\clie_\bu(\til \cG_{2,c})$ on $\C^3$ is given by the plethystic exponential of the following expression
 \beqn\label{eqn:6dtwo}
-f_{2} (y_i,y,q) = \frac{q^4(y_1+y_2+y_3) + q^2 (y^2 + q + q^2 y^{-2}) - q^{3} (y + q y^{-1})(y_1^{-1} + y_2^{-1} + y_3^{-1})}{(1-y_1q) (1-y_2 q) (1-y_3 q)}.
+\til f_{2} (y_i,y,q) = \frac{q^4(y_1+y_2+y_3) + q^2 (y^2 + q + q^2 y^{-2}) - q^{3} (y + q y^{-1})(y_1^{-1} + y_2^{-1} + y_3^{-1})}{(1-y_1q) (1-y_2 q) (1-y_3 q)}.
 \eeqn
 %\beqn\label{eqn:6dtwo}
 %f_{2} (t_1,t_2,r,q) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
 %\eeqn
 \end{prop}
 
-Recall that our conjecture for the factorization algebra associated to the holomorphic twist of the six-dimensional worldvolume theory associated to a stack of two fivebranes is $\Obs_N \simeq \clie_\bu(\cG_{2,c})$. 
+Recall that our conjecture for the factorization algebra associated to the holomorphic twist of the six-dimensional worldvolume theory associated to a stack of two fivebranes is $\Obs_2 \simeq \clie_\bu(\cG_{2,c}) \cong \clie_\bu(\cG_{1,c}) \otimes \clie_\bu(\til \cG_{2,c})$. 
+And after removing the center of mass degrees of freedom, our conjecture is $\til \Obs_2 \simeq \clie_\bu(\til \cG_{2,c})$.
 We can now state a decategorified version of conjecture \ref{conj:fact} at the level of superconformal indices, or local characters.
 
 \begin{conj}\label{conj:6dtwo}
 The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(2)$ is given by
 \[
-\chi_{2} (y_i,y,q) = {\rm PExp} \left[f_2(y_i,y,q) \right] .
+\til \chi_{2} (y_i,y,q) = {\rm PExp} \left[\til f_2(y_i,y,q) \right] .
 \]
-where $f_2(y_i,y,q)$ is as in \eqref{eqn:6dtwo}.
+where $\til f_2(y_i,y,q)$ is as in \eqref{eqn:6dtwo}.
 \end{conj}
 
-Similarly, the index associated to the $\lie{gl}(2)$ theory is conjectured to be simply the product 
+Similarly, the index associated to the $\lie{gl}(2)$ theory, which is the local character of $\clie_\bu(\cG_{2,c})$, is conjectured to be simply the product 
 \[
-\til \chi_{2} (y_i,y,q) = \chi_{2} (y_i,y,q) \cdot \chi_{1}(y_i,y,q)
+\chi_{2} (y_i,y,q) = \chi_{2} (y_i,y,q) \cdot \chi_{1}(y_i,y,q)
 \]
-where the character $\chi_{1}$ for the $\lie{gl}(1)$ theory is given in the previous section. 
+where the character $\chi_{1}$ for the $\lie{gl}(1)$ theory is given in proposition~\ref{prop:6done}
+Equivalently, $\chi_2$ is the plethystic exponential of $f_2 = f_1 + \til f_2$. 
 
 %\parsec[]
 %
@@ -248,7 +250,7 @@ where the character $\chi_{1}$ for the $\lie{gl}(1)$ theory is given in the prev
 
 The specialization of this index $y=1, y_3=1$ in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
 \[
-f_{2}(y_1, y_2, y_3=1, y=1, q) = \frac{q^2}{1-q} 
+\til f_{2}(y_1, y_2, y_3=1, y=1, q) = \frac{q^2}{1-q} 
 \]
 which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
@@ -266,10 +268,10 @@ g_{-1} (y_i,y,q) = f_1(y_i,y,q)
 \eeqn
 where $f_1(y_i,y,q)$ is as in equation \eqref{eqn:6done1} and also denote by 
 \beqn
-g_0 (y_i,y,q) = f_2(y_i,y,q)
+g_0 (y_i,y,q) = \til f_2(y_i,y,q)
 \eeqn
-where $f_2(y_i,y,q)$ is as in equation \eqref{eqn:6dtwo}. 
-Thus $g_2$ is the single particle local character of $\Obs_2 = \clie_\bu(\cG_{2,c}) = \clie_{\bu}(\cG_c^{(0)})$.
+where $\til f_2(y_i,y,q)$ is as in equation \eqref{eqn:6dtwo}. 
+Thus $g_2$ is the single particle local character of $\clie_\bu(\til \cG_{2,c}) = \clie_{\bu}(\cG_c^{(0)})$.
 Finally, for $k \geq 1$ let
 %\begin{align*}
 %f_k (y_1,y_2,y_3,y,q) & \define q^{3k/2} \left(q \chi^{\lie{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + \chi^{\lie{sl}(2)}_k(q^{-1/2} y) \right. \\
@@ -290,11 +292,11 @@ g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 k/2} \chi^{\lie{sl}(2)}_{k}(q^{-1/2
 Let $N \geq 3$. 
 The local character of the factorization algebra $\clie_{\bu}(\cG_{N,c})$ is
 \beqn
-\chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=0}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
+\chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=-1}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
 Similarly, the local character of the factorization algebra $\clie_\bu(\til{\cG}_{N,c})$ is 
 \beqn
-\til{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=-1}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
+\til{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=0}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
 \eeqn
 \end{thm}
 \begin{proof}
@@ -303,14 +305,17 @@ By Lemma~\ref{lem:envelope} the character of $\clie_\bu (\cG_{N,c})$ is given by
 \chi_N = \text{PExp} \left[f_N\right]
 \eeqn
 where $f_N$ is the single particle local character.
-Thus, it suffices to show that $f_N = \sum_{k = 0}^{N-2} g_k$.
-Recall that we have the following filtration of the factorization algebra $\clie_\bu(\cG_{N,c})$ given by 
+Thus, it suffices to show that $f_N = \sum_{k = -1}^{N-2} g_k$.
+Recall that from the filtration \eqref{eqn:fil1} we obtain a filtration of the factorization algebra $\clie_\bu(\cG_{N,c})$:
 \beqn
-\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \leftarrow \clie_\bu (\cG_{N,c}) .
+\clie_{\bu}(\cG_{1,c}) \subset \clie_\bu(\cG_{2,c}) \subset \cdots \subset \clie_{\bu}(\cG_{N,c}) .
 \eeqn
-Thus we have the following expression for the associated graded factorization algebra 
+%\beqn
+%\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \leftarrow \clie_\bu (\cG_{N,c}) .
+%\eeqn
+associated graded factorization algebra is of the form
 \beqn
-\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=0}^N \clie_\bu(\cG^{(k)}).
+\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=-1}^N \Sym \left(\cG^{(k)}_c\right).
 \eeqn
 
 Thus, we must see that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG^{(k)}_c)$, which is a direct observation using the description of $\cG^{(k)}$ we have given in Proposition \ref{prop:Vj}.
@@ -319,18 +324,18 @@ Thus, we must see that $g_k$ is the single particle index of the factorization a
 We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$.
 
 \begin{conj} 
-The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\chi_{N}(y_1,y_2,y_3,y,q)$. 
+The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\til \chi_{N}(y_1,y_2,y_3,y,q)$. 
 \end{conj}
 
 \parsec
 
-It follows from the fact that limit of the diagram in \ref{eqn:limit1} is $(\Bar{\pi}_* \Obs_{sugra})^! \simeq \clie_\bu(\cG_c)$ that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in Proposition~\ref{prop:sugraindex1}. 
+It follows from the filtration in \eqref{eqn:fil1} that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in proposition~\ref{prop:sugraindex1}. 
 Alternatively, we have the following direct proof of this fact. 
 
 \begin{prop}
 One has
 \beqn
-\chi_{sugra}(y_i, y, q) = \lim_{N \to \infty} \til{\chi}_N(y_i,y,q)
+\chi_{sugra}(y_i, y, q) = \lim_{N \to \infty} \chi_N(y_i,y,q)
 \eeqn
 \end{prop}
 

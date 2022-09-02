@@ -497,6 +497,7 @@ We move on to give the following general description of the weight $j$ component
 Since we have already described $j = -1,0$ we focus on $j \geq 1$.
 
 \begin{prop}
+\label{prop:Vj}
 Let $j \geq 1$. 
 The complex of vector bundles $\cG^{(j)}$ is quasi-isomorphic to
 \beqn
@@ -825,64 +826,93 @@ In this sense, $\Obs^!$ is the universal factorization algebra which couples to 
 We summarize the key points of this section which will lead to a general conjecture for the factorization algebra of observables for the worldvolume theory on a finite number of fivebranes in the holomorphic twist.
 In the beginning of this section we defined a factorization algebra $\Bar{\pi}_*\Obs_{sugra}$ which we think about as being the factorization algebra of observables of twisted supergravity restricted to the worldvolume of the fivebrane or membrane.
 This factorization algebra is of the form 
-\[
+\beqn
+\label{eqn:factgrad}
 \Bar{\pi}_*\Obs_{sugra} = \clie^\bu(\cG)
-\]
+\eeqn
 where $\cG = \cG_Z$ is a sheaf of $L_\infty$ algebras on the worldvolume~$Z$ of the fivebrane.
 
 We have seen that $\cG$ is given as the sheaf of sections of a pro vector bundle. 
 In fact, the local $L_\infty$ algebra $\cG$ came with a natural decomposition 
 \[
-\cG = \oplus_{j \geq -1} \cG^{(j)} .
+\cG = \prod_{k \geq -1} \cG^{(k)} .
 \]
-The subalgebra $\cG^{(\geq k)} = \oplus_{j \geq k} \cG^{(j)}$ is an ideal for every $k$. 
-This sequence of ideals induces a limit diagram of vector bundles
-\beqn\label{eqn:lim}
-0 = \cG / \cG^{(\geq -1)} \leftarrow \cG / \cG^{(\geq 0)} \leftarrow \cG / \cG^{(\geq 1)} \leftarrow \cdots ,
-\eeqn
-where $0$ is the zero vector bundle.
-For each $k$, we point out that $\cG / \cG^{(\geq k)}$ is genuinely a finite rank vector bundle on the worldvolume.
-
-Define 
+There is a related local $L_\infty$ algebra 
 \beqn
-\cG_1 \define \cG / \cG^{(\geq 0)} 
+\til \cG \define \prod_{k \geq 0} \cG^{(k)}
 \eeqn
-and for $N > 1$
+where we simply forget the weight $-1$ component. 
+
+This weight grading on $\cG$ induces a filtration on the factorization algebra \eqref{eqn:factgrad} and on its $!$-dual $\clie_\bu (\cG_{c})$. 
+For $k \geq -1$ define
 \beqn
-\til \cG_N \define \cG / \cG^{(\geq N-1)} , \quad \cG_N \define \cG^{\geq 0} / \cG^{(\geq N-1)} .
+\cG^{(\geq k)} = \prod_{j \geq k} \cG^{(j)}  .
 \eeqn
-Each of $\cG_1, \cG_{N}, \til \cG_N$ has the induced structure of a local $L_\infty$ algebra on the worldvolume.
-Notice that as factorization algebras of graded vector spaces one has
-\[
-\til \cG_N = \cG_N \otimes \cG_1
-\]
-for $N > 1$. 
-
-The limit diagram \eqref{eqn:lim} induces a diagram of factorization algebras
-\beqn\label{eqn:colim}
-\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\til \cG_2) \to \cdots ,
+Notice that $\cG^{(\geq -1)} = \cG$.
+For $N \geq 1$ define the local $L_\infty$ algebra
+\beqn
+\cG_N \define \cG / \cG^{(\geq N-1)} .
 \eeqn
-whose colimit is~$\Bar{\pi}_* \Obs_{sugra}$. 
-Here $\ul\C$ is the constant factorization algebra whose value is $\C$ on every open set. 
-Applying~$!$-duals we obtain a sequence
-\beqn\label{eqn:limit1}
-\ul\C \leftarrow \clie_\bu(\cG_{1,c}) \leftarrow \clie_\bu (\til \cG_{2,c}) \leftarrow \cdots ,
-\eeqn 
-whose limit is $\clie_\bu(\cG_c) = (\Bar{\pi}_* \Obs_{sugra})^!$. 
-We also point out that there is a similar diagram of the form
-\beqn\label{eqn:limit2}
-\clie_\bu (\cG_{2,c}) \leftarrow \clie_\bu (\cG_{3,c}) \leftarrow \cdots .
-\eeqn 
-whose limit is the universal factorization algebra of classical observables on the fivebrane 
-\[
-(\Bar{\pi}_* \Obs_{sugra})^! = \clie_\bu(\cG_{Z,c}) .
-\]
+Similarly, for $N \geq 2$ define
+\beqn
+\til \cG_N \define \til \cG / \cG^{(N-1)} .
+\eeqn
+We have chosen a convenient chose of indexing for the constructions below.
 
-The first nonzero term in this limit diagram \eqref{eqn:limit1} is 
+%The subalgebra $\cG^{(\geq k)} = \oplus_{j \geq k} \cG^{(j)}$ is an ideal for every $k$. 
+%This sequence of ideals induces a limit diagram of vector bundles
+%\beqn\label{eqn:lim}
+%0 = \cG / \cG^{(\geq -1)} \leftarrow \cG / \cG^{(\geq 0)} \leftarrow \cG / \cG^{(\geq 1)} \leftarrow \cdots ,
+%\eeqn
+%where $0$ is the zero vector bundle.
+%For each $k$, we point out that $\cG / \cG^{(\geq k)}$ is genuinely a finite rank vector bundle on the worldvolume.
+The resulting filtration of the $!$-dual
+\beqn
+\left(\Bar{\pi}_*\Obs_{sugra}\right)^! = \clie_\bu(\cG_{c})
+\eeqn 
+of the factorization algebra \eqref{eqn:factgrad} is of the form
+\beqn\label{eqn:fil1}
+\clie_\bu (\cG_{1,c}) \subset \clie_\bu (\cG_{2,c}) \subset \cdots \subset \clie_\bu(\cG_c) .
+\eeqn
+Similarly, there is a filtration on the factorization algebra $\clie_\bu (\til \cG_c)$ of the form
+\beqn
+\label{eqn:fil2}
+\clie_\bu(\til \cG_{2,c}) \subset \clie_\bu(\til \cG_{3,c}) \subset \cdots \subset \clie_\bu(\til \cG_c).
+\eeqn
+%Explicitly, the underlying super vector space of the weight $k$ component $\clie_\bu(\cG_{c})^{(k)}$ is 
+%\beqn
+%\bigoplus_{m \geq 0} \bigoplus_{\sum_{i=1}^m j_i = k} \left(\cG_c^{(j_1)} \otimes \cdots \otimes \cG_{c}^{(j_m)}\right)_{\Sigma_m} 
+%\eeqn
+%where we take coinvariants for the symmetric group $\Sigma_m$.
+%Similarly, the factorization algebra $\clie_\bu(\til \cG_c) = \oplus_{k \geq 0} \clie_\bu(\til \cG_c)^{(k)}$ is graded.
+
+
+%Define 
+%\beqn
+%\cG_1 \define \cG / \cG^{(\geq 0)} 
+%\eeqn
+%and for $N > 1$
+%\beqn
+%\til \cG_N \define \cG / \cG^{(\geq N-1)} , \quad \cG_N \define \cG^{\geq 0} / \cG^{(\geq N-1)} .
+%\eeqn
+%Each of $\cG_1, \cG_{N}, \til \cG_N$ has the induced structure of a local $L_\infty$ algebra on the worldvolume.
+%Notice that as factorization algebras of graded vector spaces one has
+%\[
+%\til \cG_N = \cG_N \otimes \cG_1
+%\]
+%for $N > 1$. 
+
+%\beqn\label{eqn:colim}
+%\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\til \cG_2) \to \cdots ,
+%\eeqn
+%whose colimit is~$\Bar{\pi}_* \Obs_{sugra}$. 
+%Here $\ul\C$ is the constant factorization algebra whose value is $\C$ on every open set. 
+
+The first term in the filtration \eqref{eqn:fil1} is 
 \[
 \clie_\bu(\cG_{1,c})
 \]
-where $\cG_1$ is the abelian local Lie algebra $\cG_{1} = \cG / \cG^{(\geq 0)} \cong \cG^{(-1)}$---this is just the weight $(-1)$ piece of the decomposition of $\cG$. 
+where $\cG_1$ is the abelian local Lie algebra $\cG_{1} \cong \cG^{(-1)}$---this is just the weight $(-1)$ piece of the decomposition of $\cG$. 
 In \cite{SWtensor}, Saberi and the second author have given an explicit description of the holomorphic twist of the worldvolume theory on a single fivebrane, that is, the six-dimensional superconformal theory associated to the abelian Lie algebra~$\lie{gl}(1)$.
 We denote the corresponding factorization algebra on the three-fold~$Z$ by~$\Obs_1$.
 
@@ -931,17 +961,24 @@ The result then follows by applying ellipticity.
 We remark that the Chevalley--Eilenberg complex of an $L_\infty$ algebra $\clie_\bu(\lie{g})$ does not have the structure of a commutative dg algebra.
 However, when $\lie{g}$ is abelian (so, a cochain complex) we can identify this complex with the symmetric algebra on the cochain complex $\fg^*[-1]$.
 
-We now formulate a general conjecture about the worldvolume theory on a stack of holomorphically twisted fivebranes.
-Recall that the holomorphic, or minimal, twist of a theory with six-dimensional $\cN=(2,0)$ supersymmetry exists on any complex three-fold $Z$ equipped with $K_Z^{1/2}$.
-In this form of the conjecture we focus only on the six-dimensional superconformal theories associated to Lie algebras of type $A$.
+We now formulate a conjecture about the worldvolume theory on a stack of holomorphically twisted fivebranes.
+Evidence for this conjecture will be given in the remaining parts of this paper.
+In this conjecrture, we recall that the holomorphic, or minimal, twist of a theory with six-dimensional $\cN=(2,0)$ supersymmetry exists on any complex three-fold $Z$ equipped with $K_Z^{1/2}$.
 
 \begin{conj}
 \label{conj:fact}
-For $N > 1$, let $\Obs_N$ be the factorization algebra on $Z$ of classical observables of the holomorphic twist of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(N)$.
-Then, there is an equivalence of factorization algebras on~$Z$:
+For $N \geq 1$, let $\Obs_{N}$ be the factorization algebra of classical observables of the holomorphic twist of the worldvolume theory on a stack of $N$ fivebranes. 
+Then, there is an equivalence of factorization algebras
 \beqn
-\Obs_{N} \simeq \clie_\bu(\cG_{N,c}) .
-\eeqn 
+\Obs_N \simeq \clie_\bu(\cG_{N,c}) .
+\eeqn
+
+Similarly, for $N > 1$, let $\til \Obs_N$ be the factorization algebra of classical observables of the holomorphic twist of the worldvolume theory on a stack of $N$ fivebranes with the center of mass degrees of freedom removed.
+Then, there is an equivalence of factorization algebras
+\beqn
+\til\Obs_N \simeq \clie_\bu(\til \cG_{N,c}) .
+\eeqn
+In the language of superconformal $\cN=(2,0)$ theories our conjecture is that $\clie_\bu(\til \cG_{N,c})$ is the factorization algebra of classical observables of the holomorphic twist of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(N)$.
 \end{conj}
 
 %\end{document}
