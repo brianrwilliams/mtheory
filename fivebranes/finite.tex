@@ -1,4 +1,4 @@
-\section{Conjectures for operators on a finite number of fivebranes}
+\section{Conjectures for operators on fivebranes}
 
 In conjecture \ref{conj:fact} we have formulated a conjectural description of the factorization algebra of classical observables $\Obs_{N}$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
 In this section we begin to provide some evidence for this description at the level of local operators, which is just a small piece of the factorization algebra.
@@ -114,10 +114,10 @@ In appendix \S \ref{s:kr} we will describe this module from a purely representat
 
 \parsec
 There are various degenerations, or specializations, of this character which are interesting to consider.
-A particularly meaningful one is related to two different deformations of the theory by elements in the (twisted) superconformal algebra.
+A particularly meaningful one is related to two different deformations of the theory by elements in the (twisted) superconformal algebra and is known as the Schur limit of the index.
+
 Recall that after performing the holomorphic twist the residual superconformal algebra is~$\lie{osp}(6|2)$.
 We have recalled in \S\ref{s:global1} how the bosonic part of this algebra is represented by fields of the eleven-dimensional theory. 
-
 There are two types of odd elements of~$\lie{osp}(6|2)$ that also have a natural interpretation in the eleven-dimensional theory.
 The odd part of~$\lie{osp}(6|2)$ can be identified with the twelve-dimensional space
 \[
@@ -248,11 +248,11 @@ Equivalently, $\chi_2$ is the plethystic exponential of $f_2 = f_1 + \til f_2$.
 
 \parsec[]
 
-The specialization of this index $y=1, y_3=1$ in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
+The Schur limit $y=1, y_3=1$ of $\til f_2$ in \eqref{eqn:special1} yields 
 \[
 \til f_{2}(y_1, y_2, y_3=1, y=1, q) = \frac{q^2}{1-q} 
 \]
-which is the same as the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
+which is the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
 
 \subsection{A closed formula for the finite $N$ index}
 
@@ -283,9 +283,9 @@ Finally, for $k \geq 1$ let
 %\end{align*}
 \beqn
 \label{eqn:gk}
-\begin{array}{cccc}
-g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 k/2} \chi^{\lie{sl}(2)}_{k}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3k/2} \chi^{\lie{sl}(2)}_{k+2}(q^{-1/2} y) \right. \\
-& \frac{\left.  - q^{3(k+1)/2} \chi^{\lie{sl}(2)}_{k-1}(q^{-1/2}y) - q^{-1 + 3(k+1)/2} \chi^{\lie{sl}(2)}_{k+1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
+\begin{array}{lllll}
+g_k (y_i,y,q) \define & q^{3} \left(q^{1 + 3 k/2} \chi^{\lie{sl}(2)}_{k}(q^{-1/2} y)\chi_{[1,0]}(y_i) + q^{3k/2} \chi^{\lie{sl}(2)}_{k+2}(q^{-1/2} y) \right. \\
+&\displaystyle \frac{\left.  - q^{3(k+1)/2} \chi^{\lie{sl}(2)}_{k-1}(q^{-1/2}y) - q^{-1 + 3(k+1)/2} \chi^{\lie{sl}(2)}_{k+1} (q^{-1/2} y) \chi_{[0,1]}(y_i) \right)}{d(y_i,y,q)} .
 \end{array}
 \eeqn
 %and hence the conjectural single particle index for the superconformal theory associated to the Lie algebra $\lie{sl}(2)$. 
@@ -329,6 +329,9 @@ We thus arrive at the following conjecture for the index of the worldvolume theo
 \begin{conj} 
 The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\til \chi_{N}(y_1,y_2,y_3,y,q)$. 
 \end{conj}
+
+We proceed to give some concrete evidence for this conjecture.
+First, we show that when we take the limit as $N \to \infty$ that we recover the index computed from the gravitational side.
 
 \parsec
 
@@ -381,12 +384,13 @@ This follows from observing that at the level of single particle states $f_N$ is
 
 \parsec
 
-We can also apply the specialization $y=1, y_3=1$ to $\chi_N$.
+We can also apply the Schur limit  $y,y_3\to 1$ to $\chi_N$.
 \begin{prop}
 Upon specializing $y=1,y_3=1$ (so that $y_1 y_2 = 1$) one has the following single particle index
 \beqn
 f_N (y_1,y_2, y_3=1,y=1,q) = \frac{q^2 + q^3 + \cdots + q^{N}}{1-q} 
 \eeqn
+The plethystic exponential of the right hand side is the vacuum character of the $W_{N}$ vertex algebra.
 \end{prop}
 \begin{proof}
 By induction it suffices to show that the specialization of the single particle local character $g_k$ of the factorization algebra $\clie_\bu(\cG^{(k)})$ is $q^{k+2} / (1-q)$. 
@@ -428,7 +432,7 @@ From this expression, we obtain the $q$-expansion of the index $\til \chi_2(y_i,
 Similarly, for the $\lie{gl}(2)$ theory $\chi_2 = \text{PExp}[f_1 + \til f_2] = \chi_1 \cdot \til \chi_2$ we find the expansion
 \begin{align*}
 \chi_2 (y_i,y,q) & = y q + \left(y^{-1} - \chi_{[0,1]}(y_i) + \chi_{[1,0]}(y_i) y + 2y^2 \right) q^2 \\ 
-& + \left( \chi_{[1,0]}(y_i) y^{-1} - (\chi_{[1,1]}(y_i)-2) + (\chi_{[2,0]}(y_i) - 2 \chi_{[0,1]}(y_i)) y + 2 \chi_{[1,0]}(y_i) y^2 + 2y^3\right) q^3 + O(q^4) .
+& + \left( \chi_{[1,0]}(y_i) y^{-1} - (\chi_{[1,1]}(y_i)-2) + (\chi_{[2,0]}(y_i) - 2 \chi_{[0,1]}(y_i)) y + 2 \chi_{[1,0]}(y_i) y^2 + 2y^3\right) q^3 \\ & + O(q^4) .
 \end{align*}
 
 We observe that these $q$-expansions agree precisely with the expansions in \cite{Kim:2013nva} for the $\lie{gl}(2)$ theory  
@@ -436,7 +440,7 @@ We observe that these $q$-expansions agree precisely with the expansions in \cit
 
 \parsec
 
-We proceed to compare expansions of our exact expression for the $\lie{gl}(3)$ theory to those in \cite{Kim:2031nva}. 
+We proceed to compare expansions of our exact expression for the $\lie{gl}(3)$ theory to those in \cite{Kim:2013nva}. 
 Recall that the conjectural $\lie{gl}(3)$ index is given by the local character of the holomorphic factorization algebra $\Obs_3$:
 \beqn
 \chi_3 (y_i,y,q) = \text{PExp}[f_3(y_i,y,q)] = \chi_2(y_i,y,q) \cdot \text{PExp}[g_3(y_i,y,q)]  .
@@ -465,15 +469,21 @@ Starting with the $\lie{sl}(2)$ theory we find that up to order $q^4$ the single
 & + \left(2 \chi_{[1,0]}(y_i) - \chi_{[2,1]}(y_i) x + \chi_{[4,0]}(y_i)x^2 \right)q^4 + O(q^5) .
 \end{align*}
 
-It follows that the plethystic exponential $\chi_2(y_i,y,q)$ of this expression has $q$-expansion
+It follows that the plethystic exponential $\til \chi_2(y_i,y,q)$ of this expression has $q$-expansion
 \begin{align*}
-\chi_2(y_i,y,q) & = \frac{1}{1-x^2} + \chi_{[1,0]}(y_i) x^2 \frac{1}{1-x^2} q \\
-& + \left(-\chi_{[0,1]}(y_i) x + \chi_{[2,0]}(y_i) x^2 (1+x^2)\right) \frac{1}{1-x^2} q^2 \\ 
-& + \left( 1 - x - x^3 + x^6 + \chi_{[1,1]}(y_i) (-x - x^3 + x^4) + \chi_{[3,0]}(y_i) (x^2 + x^4 + x^6) \right) \frac{1}{1-x^2} q^3 \\
+\til \chi_2(y_i,y,q) & = \frac{1}{1-x^2} +  \frac{x^2}{1-x^2} \chi_{[1,0]}(y_i) q \\
+& + \left(- x \chi_{[0,1]}(y_i) +  x^2 (1+x^2)\chi_{[2,0]}(y_i)\right) \frac{1}{1-x^2} q^2 \\ 
+& + \left( 1 - x - x^3 + x^6 + (-x - x^3 + x^4) \chi_{[1,1]}(y_i)  + (x^2 + x^4 + x^6)\chi_{[3,0]}(y_i)  \right) \frac{1}{1-x^2} q^3 \\
 & + O(q^4) 
 \end{align*}
 This agrees with the expansion in \cite{Imamura} (see equation (68)) except for the $\lie{sl}(3)$-scalar term at order $q^3$. 
 We find $(1-x-x^3+x^6) / (1-x^2) = (1-x^3-x^4-x^5) / (1+x)$ whereas Imamura's result is $1 / (1+x)$. 
 It would be interesting to explain the physical or representation theoretic source of this discrepancy.
 
-
+Similarly, we can obtain the $q$-expansions for the local character $\chi_3(y_i,x,q)$ of the factorization algebra $\Obs_3$ and compare it to the $q$-expansion for the superconformal index of the $\lie{sl}(3)$ theory in \cite{Imamura}. 
+Up to order $q^3$ we have
+\begin{align*}
+\chi_3(y_i,x,q) & = \frac{1}{(1-x^2)(1-x^3)} + \frac{x^2}{(1-x)(1-x^3)} \chi_{[1,0]}(y_i) q \\
+& + \left((-x -x^2 + x^5)\chi_{[0,1]}(y_i) + (x^2 + x^3 + x^4 + x^5+ x^6) \chi_{[2,0]}(y_i) \right) \frac{1}{(1-x^2)(1-x^3)} q^2 \\
+& + 
+\end{align*}
