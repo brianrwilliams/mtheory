@@ -299,7 +299,7 @@ be the weight $n$ eigenspace with respect to this $\C^\times$ action.
 As a corollary of the proposition, we get a product decomposition 
 \beqn
 \label{eqn:Gdecomp}
-\cG_Z = \prod_{n \geq -1} \cG^{(n)} .
+\cG_Z = \bigoplus_{n \geq -1} \cG^{(n)} .
 \eeqn
 In particular, we see that $\cG^{(0)}_Z$ is itself a local Lie algebra (that we will soon describe). 
 Moreover, every $\cG^{(n)}$, $n \geq -1$ is a (local) module for this local Lie algebra.
@@ -307,7 +307,7 @@ Moreover, every $\cG^{(n)}$, $n \geq -1$ is a (local) module for this local Lie 
 %The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
 %Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
 %\[
-%\cG_Z (U)  \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
+%\cG_Z (U)  \bigoplus_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
 %\]
 %is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
 %In this way, the assignment 
@@ -478,7 +478,7 @@ In fact, there is only a two-ary bracket, and an immediate calculation shows tha
 %which is dense at the level of cohomology. 
 %\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
 %\beqn\label{eqn:decomp3}
-%\Bar{\pi}_{*} \cL_{sugra} = \prod_{n \geq -1} \cV_{n} 
+%\Bar{\pi}_{*} \cL_{sugra} = \bigoplus_{n \geq -1} \cV_{n} 
 %\eeqn
 %\item[(3)]
 %In weight zero, there is an equivalence of local Lie algebras on $Z$ 
@@ -680,7 +680,7 @@ Thus, for example, the odd element $[\d w_1 \d z_1] \in \Omega^{2,cl}(\Hat{D}^5)
 The weight grading is concentrated in degrees $\geq -1$. 
 In particular, there is a decomposition of super vector spaces
 \beqn\label{eqn:decomp1}
-E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
+E(5|10) = \til V_{-1} \times \bigoplus_{n \geq 0} V_n 
 \eeqn
 with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
 It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$.
@@ -689,7 +689,7 @@ It is straightforward to verify that this weight grading is compatible with the 
 At the level of $\infty$-jets the the decomposition in equation \eqref{eqn:Gdecomp} induces a weight grading of $\Hat{E(5|10)}$ which extends the one on $E(5|10)$ that we just described by declaring that the central term have weight $-1$.
 In this way, we get a related decomposition of super $L_\infty$ algebras
 \beqn\label{eqn:decomp2}
-\Hat{E(5|10)} = \prod_{n \geq -1} V_n
+\Hat{E(5|10)} = \bigoplus_{n \geq -1} V_n
 \eeqn
 We will refer to this as the \textit{fivebrane decomposition} of $\Hat{E(5|10)}$.
 Here $V_{-1}$ is a $\C$-extension of $\til V_{-1}$ defined in the decomposition \eqref{eqn:decomp1}.
@@ -703,7 +703,8 @@ This is compatible with our description in proposition~\ref{prop:v0} where we sh
 Indeed, the $\infty$-jets of the local Lie algebra $\cE(3|6)$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$. 
 By the compatibility of our decomposition with \cite{KR2} we see that $V_n$ is quasi-isomorphic to the $\infty$-jets of $\cG^{(n)}$ at $0 \in \C^3$ as a module for $E(3|6)$.
 
-\subsection{Koszul duality for factorization algebras: an ansatz} 
+\subsection{Koszul duality for factorization algebras: an ansatz}
+\label{s:noether}
 
 In quantum field theory Koszul duality naturally appears in the problem of coupling topological line operators to some ambient bulk theory. 
 More generally, for higher dimensional topological defects, this problem is encoded by Koszul duality for the theory of $\EE_n$ algebras \cite{FrancisGaitsgory} \cite[\S 5.2]{LurieHA}.
@@ -835,30 +836,52 @@ where $\cG = \cG_Z$ is a sheaf of $L_\infty$ algebras on the worldvolume~$Z$ of 
 We have seen that $\cG$ is given as the sheaf of sections of a pro vector bundle. 
 In fact, the local $L_\infty$ algebra $\cG$ came with a natural decomposition 
 \[
-\cG = \prod_{k \geq -1} \cG^{(k)} .
+\cG = \bigoplus_{k \geq -1} \cG^{(k)} .
 \]
 There is a related local $L_\infty$ algebra 
 \beqn
-\til \cG \define \prod_{k \geq 0} \cG^{(k)}
+\til \cG \define \bigoplus_{k \geq 0} \cG^{(k)}
 \eeqn
 where we simply forget the weight $-1$ component. 
+These product decompositions also hold at the level of compactly supported sections. 
 
-This weight grading on $\cG$ induces a filtration on the factorization algebra \eqref{eqn:factgrad} and on its $!$-dual $\clie_\bu (\cG_{c})$. 
-For $k \geq -1$ define
+This weight grading on $\cG$ induces a filtration on the factorization algebra \eqref{eqn:factgrad} and on its $!$-dual 
 \beqn
-\cG^{(\geq k)} = \prod_{j \geq k} \cG^{(j)}  .
+\left(\Bar{\pi}_*\Obs_{sugra}\right)^! = \clie_\bu(\cG_{c}).
 \eeqn
-Notice that $\cG^{(\geq -1)} = \cG$.
-For $N \geq 1$ define the local $L_\infty$ algebra
+We will focus just on the $!$-dual factorization algebra.
+To construct the filtration, first consider the natural filtration on the local Lie algebra $\cG$ induced by the grading
 \beqn
-\cG_N \define \cG / \cG^{(\geq N-1)} .
+\cG = F^0 \cG \supset F^1 \cG \supset \cdots 
 \eeqn
-Similarly, for $N \geq 2$ define
+where for $N \geq 1$ we have
 \beqn
-\til \cG_N \define \til \cG / \cG^{(N-1)} .
+F^N \cG = \cG^{(\geq N-2)} = \bigoplus_{j \geq N-2} \cG^{(j)} ,
 \eeqn
-We have chosen a convenient chose of indexing for the constructions below.
+and similarly for $\til \cG$. 
+If we define 
+\beqn
+\cG_1 \define \cG / \cG^{(\geq 0)} 
+\eeqn
+and for $N > 1$
+\beqn\label{eqn:gN}
+\cG_N \define \cG / \cG^{(\geq N-1)} , \quad \til \cG_N \define \til \cG / \cG^{(\geq N-1)} ,
+\eeqn
+then the associated graded local Lie algebras $\op{Gr} \cG$ and $\op{Gr} \til{\cG}$ satisfy $\op{Gr} \cG = \op{colim} \cG_N$ and $\op{Gr} \til \cG = \op{colim} \til \cG_N$.
+These filtrations also hold at the level of compactly supported sections. 
 
+The filtration on $\cG$ induces a filtration of the factorization algebra $\clie_\bu (\cG_{c})$ 
+\beqn
+\clie_\bu (\cG_c) = F^0 \clie_\bu (\cG_c) \supset F^1 \clie_\bu (\cG_c) \supset \cdots 
+\eeqn
+where $F^N \clie_\bu(\cG_c) = \clie_\bu(F^N \cG_c)$. 
+Similarly, we have a filtration on the factorization algebra $\clie_\bu(\til \cG_c)$. 
+At the level of the associated graded, we have
+\beqn
+\label{eqn:lim}
+\op{Gr} \clie_\bu (\cG_{c}) = \op{colim}_{N \geq 1} \clie_\bu(\cG_{N,c}) .
+\eeqn
+Similarly $\op{Gr} \clie_\bu (\til \cG_{c}) = \op{colim}_{N \geq 2} \clie_\bu(\til \cG_{N,c})$.
 %The subalgebra $\cG^{(\geq k)} = \oplus_{j \geq k} \cG^{(j)}$ is an ideal for every $k$. 
 %This sequence of ideals induces a limit diagram of vector bundles
 %\beqn\label{eqn:lim}
@@ -866,49 +889,21 @@ We have chosen a convenient chose of indexing for the constructions below.
 %\eeqn
 %where $0$ is the zero vector bundle.
 %For each $k$, we point out that $\cG / \cG^{(\geq k)}$ is genuinely a finite rank vector bundle on the worldvolume.
-The resulting filtration of the $!$-dual
-\beqn
-\left(\Bar{\pi}_*\Obs_{sugra}\right)^! = \clie_\bu(\cG_{c})
-\eeqn 
-of the factorization algebra \eqref{eqn:factgrad} is of the form
-\beqn\label{eqn:fil1}
-\clie_\bu (\cG_{1,c}) \subset \clie_\bu (\cG_{2,c}) \subset \cdots \subset \clie_\bu(\cG_c) .
-\eeqn
-Similarly, there is a filtration on the factorization algebra $\clie_\bu (\til \cG_c)$ of the form
-\beqn
-\label{eqn:fil2}
-\clie_\bu(\til \cG_{2,c}) \subset \clie_\bu(\til \cG_{3,c}) \subset \cdots \subset \clie_\bu(\til \cG_c).
-\eeqn
-%Explicitly, the underlying super vector space of the weight $k$ component $\clie_\bu(\cG_{c})^{(k)}$ is 
+%The resulting filtration of the $!$-dual
 %\beqn
-%\bigoplus_{m \geq 0} \bigoplus_{\sum_{i=1}^m j_i = k} \left(\cG_c^{(j_1)} \otimes \cdots \otimes \cG_{c}^{(j_m)}\right)_{\Sigma_m} 
+%\left(\Bar{\pi}_*\Obs_{sugra}\right)^! = \clie_\bu(\cG_{c})
+%\eeqn 
+%of the factorization algebra \eqref{eqn:factgrad} is of the form
+%\beqn\label{eqn:fil1}
+%\clie_\bu (\cG_{1,c}) \subset \clie_\bu (\cG_{2,c}) \subset \cdots \subset \clie_\bu(\cG_c) .
 %\eeqn
-%where we take coinvariants for the symmetric group $\Sigma_m$.
-%Similarly, the factorization algebra $\clie_\bu(\til \cG_c) = \oplus_{k \geq 0} \clie_\bu(\til \cG_c)^{(k)}$ is graded.
-
-
-%Define 
+%Similarly, there is a filtration on the factorization algebra $\clie_\bu (\til \cG_c)$ of the form
 %\beqn
-%\cG_1 \define \cG / \cG^{(\geq 0)} 
+%\label{eqn:fil2}
+%\clie_\bu(\til \cG_{2,c}) \subset \clie_\bu(\til \cG_{3,c}) \subset \cdots \subset \clie_\bu(\til \cG_c).
 %\eeqn
-%and for $N > 1$
-%\beqn
-%\til \cG_N \define \cG / \cG^{(\geq N-1)} , \quad \cG_N \define \cG^{\geq 0} / \cG^{(\geq N-1)} .
-%\eeqn
-%Each of $\cG_1, \cG_{N}, \til \cG_N$ has the induced structure of a local $L_\infty$ algebra on the worldvolume.
-%Notice that as factorization algebras of graded vector spaces one has
-%\[
-%\til \cG_N = \cG_N \otimes \cG_1
-%\]
-%for $N > 1$. 
 
-%\beqn\label{eqn:colim}
-%\ul\C \to \clie^\bu(\cG_1) \to \clie^\bu(\til \cG_2) \to \cdots ,
-%\eeqn
-%whose colimit is~$\Bar{\pi}_* \Obs_{sugra}$. 
-%Here $\ul\C$ is the constant factorization algebra whose value is $\C$ on every open set. 
-
-The first term in the filtration \eqref{eqn:fil1} is 
+The first term in the limit \eqref{eqn:lim} is 
 \[
 \clie_\bu(\cG_{1,c})
 \]

@@ -309,19 +309,19 @@ By Lemma~\ref{lem:envelope} the character of $\clie_\bu (\cG_{N,c})$ is given by
 \eeqn
 where $f_N$ is the single particle local character.
 Thus, it suffices to show that $f_N = \sum_{k = -1}^{N-2} g_k$.
-Recall that from the filtration \eqref{eqn:fil1} we obtain a filtration of the factorization algebra $\clie_\bu(\cG_{N,c})$:
+Recall that from the description \eqref{eqn:gN} we have, as local Lie algebras:
 \beqn
-\clie_{\bu}(\cG_{1,c}) \subset \clie_\bu(\cG_{2,c}) \subset \cdots \subset \clie_{\bu}(\cG_{N,c}) .
-\eeqn
+\cG_N = \cG / \cG^{(\geq N-2)} ,
+\eeqn 
+for $N \geq 1$. 
+In particular, as a super vector bundle on the threefold $Z = \C^3$ we have
+\[
+\cG_N = \cG^{(-1)} \oplus \cG^{(0)} \oplus \cdots \oplus \cG^{(N-2)} .
+\]
 %\beqn
 %\clie_{\bu}(\cG_{2,c}) \leftarrow \clie_{\bu}(\cG_{3,c}) \leftarrow \cdots \leftarrow \clie_\bu (\cG_{N,c}) .
 %\eeqn
-associated graded factorization algebra is of the form
-\beqn
-\text{Gr} \, \clie_{\bu} (\cG_{N,c}) \simeq \bigoplus_{k=-1}^N \Sym \left(\cG^{(k)}_c\right).
-\eeqn
-
-Thus, we must see that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG^{(k)}_c)$, which is a direct observation using the description of $\cG^{(k)}$ we have given in Proposition \ref{prop:Vj}.
+So, it suffices to observe that $g_k$ is the single particle index of the factorization algebra $\clie_\bu(\cG^{(k)}_c)$, which is a direct observation using the description of $\cG^{(k)}$ we have given in Proposition \ref{prop:Vj}.
 \end{proof}
 
 We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$.
@@ -335,7 +335,7 @@ First, we show that when we take the limit as $N \to \infty$ that we recover the
 
 \parsec
 
-It follows from the filtration in \eqref{eqn:fil1} that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in proposition~\ref{prop:sugraindex1}. 
+It follows from the limit description in \eqref{eqn:lim} that the large $N$ limit of $\til{\chi}_N$ is precisely the multiparticle supergravity index we computed in proposition~\ref{prop:sugraindex1}. 
 Alternatively, we have the following direct proof of this fact. 
 
 \begin{prop}
