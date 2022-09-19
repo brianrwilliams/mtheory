@@ -133,12 +133,23 @@ As we elaborated in section \ref{s:thfmflds}, the eleven-dimensional theory is d
 Recall that we have a THF structure on $M$, given by an involutive subsheaf $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
 
 \[
-  0 \to F_{M}\cap T_{M/Z}^{\C}\to F_{M}\to \pi^{*}T^{0,1}_{Z}\to 0
+  \begin{tikzcd}
+    0 \ar[r] & F_{M}\cap T_{M/Z}^{\C}\ar[r]\ar[d] & F_{M}\ar[r]\ar[d]  & \pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{M/Z}^{\C}\ar[r] & T_{M}^{\C}\ar[r] & T_{Z}^{\C}\ar[r] & 0.
+  \end{tikzcd}
 \]
 
-The existence of a partially flat connection amounts to a choice of splitting $\pi^{*}T^{0,1}_{Z}\to F_{M}$ of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that that the splitting preserves the lie brackets on sections.
+The existence of a partially flat connection amounts to a choice of splitting \[\sigma: \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
 
+We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_{>0}\times Z$ is a map of THF manifolds when both the domain and codomain are equipped with the induced THF structures.
+\[
+  \begin{tikzcd}
+    0 \ar[r] & F_{\mathring M}\cap T_{\mathring M/\R_{>0}\times Z}^{\C}\ar[r]\ar[d] & F_{\mathring M}\ar[r]\ar[d]  & h^{*}T_{\R_{>0}}\oplus\pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{\mathring M/\R_{>0}\times Z}^{\C}\ar[r] & T_{\mathring M}^{\C}\ar[r] & h^{*}T_{\R_{>o}}\oplus T_{Z}^{\C}\ar[r] & 0.
+  \end{tikzcd}
+\]
 
+We
 \end{proof}
 
 
