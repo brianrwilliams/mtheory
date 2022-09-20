@@ -247,6 +247,29 @@ Notice that upon varying the field $\gamma$ and assuming that $\d_{dR} \mu = 0$ 
 %
 %Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras.
 
+\parsec[s:e510]
+
+In the case that $X = \C^5$ and $S = \R$ the eleven-dimensional model we have just described bears a close relationship to the exceptional simple super Lie algebra $E(5|10)$ classified in \cite{KacClass}.
+The even part of $E(5|10)$ is the Lie algebra of divergence-free vector fields on the formal five-disk $\Hat{D}^5$. 
+The odd part of $E(5|10)$ is the space of closed two-forms $\Omega^{2,cl}(\Hat{D}^5)$ on the formal five-disk.
+There is a natural action of divergence-free vector fields on closed two forms. 
+Additionally there is a Lie bracket between two closed two-forms $\alpha,\alpha'$ which produces a divergence-free vector field via the standard holomorphic volume form on the five-disk:
+\beqn
+[\alpha,\alpha'] = \Omega_{\Hat{D}^5}^{-1} \vee ( \alpha \wedge \alpha' ) .
+\eeqn
+
+Given a vector bundle $E \to M$, the bundle of $\infty$-jets $J^\infty E \to M$ is a $\infty$-dimensional pro vector bundle whose sections consist of $\infty$-jets of sections of $E$.
+If $M = \R^d$ and $E$ is translation invariant, then the bundle of $\infty$-jets can be identified with $E_0 \times \C[[x_i]]$ where $\{x_i\}$ is a chosen coordinate on~$\R^d$. 
+The process of taking $\infty$-jets is well-behaved for local Lie algebras:
+the $\infty$-jets of a translation invariant local Lie algebra on $\R^d$ at a point carries the natural structure of a Lie algebra.
+
+In \cite{RSW} it is shown that the $\infty$-jets of $\cL_{sugra}$ at $0 \in \R \times \C^5$ is quasi-isomorphic to a central extension $\Hat{E(5|10)}$ of the super Lie algebra $E(5|10)$.
+The central extension is defined by the (totally even) three-linear cocycle
+\beqn\label{eqn:e510central}
+(\mu, \mu' , \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>_{z=w=0} \in \C .
+\eeqn
+Since this is a three-linear functional the model we use for the central extension is a super $L_\infty$ algebra (with zero one-ary operation) rather than just a super Lie algebra.
+
 \parsec[s:twistedsugra]
 
 Before proceeding with the appearance of extended objects such as membranes and fivebranes in the minimal twist of eleven-dimensional supergravity we discuss a related, but simpler, five-dimensional theory.
@@ -450,7 +473,7 @@ There is a notion of the sheaf of `holomorphic functions' $\cO_F$ on any manifol
 Locally, on a coordinate patch it is given by functions which only depend on the holomorphic variables $z_i$.
 There is a resolution $\cA^\bu_F$ for $\cO_F$ by locally free sheaves on $M$ which is the THF analog of the de Rham and Dolbeault complexes. 
 In degree zero $\cA^0_F$ is just the sheaf of smooth functions on $M$.
-In degree $k$ one takes $\cA^k_F$ the sheaf of sections of the bundle $\wedge^\bu F^*$.
+In degree $k$ one takes $\cA^k_F$ the sheaf of sections of the bundle $\wedge^k F^*$.
 The derivative along the leaves of the foliation defined by $F$ defines a map of sheaves
 \[
 \thfd \colon \cA^{q}_F \to \cA^{q+1}_F  .
@@ -462,7 +485,7 @@ Locally in a split THF structure like $\R^m \times \C^n$ the operator $\thfd$ is
 There is also the notion of the sheaf of `holomorphic vector fields' $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$. 
 Locally, on $\R^m \times \C^n$ these are vector fields of the form $f^i \del / \del z_i$ where each $f^i \in \cO_F$.
 Let $\theta_F$ be the bundle $T_M \otimes \C / F$ on $M$ and declare 
-$\cA^k(Q_F)$ to be the sheaf of $C^\infty$-sections of the bundle $\wedge^\bu F^k \otimes \theta_F$.
+$\cA^k(\theta_F)$ to be the sheaf of $C^\infty$-sections of the bundle $\wedge^k F^* \otimes \theta_F$.
 Then we obtain a resolution
 \beqn
 \vartheta_F \xto{\simeq} \left(\cA^\bu(\theta_F) , \thfd \otimes \id\right) .
