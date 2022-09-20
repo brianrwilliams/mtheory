@@ -7,7 +7,7 @@
 %\begin{document}
 %
 
-\section{Twists in dimensions eleven, six, and three}
+\section{Twists in dimensions eleven and six}
 \label{s:twisted}
 
 In this section we review the descriptions of twists of the key players in $M$-theory including eleven-dimensional supergravity as well as the three and six-dimensional superconformal field theories associated to the abelian Lie algebra~$\lie{gl}(1)$.
@@ -272,7 +272,7 @@ Since this is a three-linear functional the model we use for the central extensi
 
 \parsec[s:twistedsugra]
 
-Before proceeding with the appearance of extended objects such as membranes and fivebranes in the minimal twist of eleven-dimensional supergravity we discuss a related, but simpler, five-dimensional theory.
+Before proceeding with the appearance of fivebranes in the minimal twist of eleven-dimensional supergravity we discuss a related, but simpler, five-dimensional theory.
 This five-dimensional theory, as argued by Costello \cite{CostelloM5}, arises from placing eleven-dimensional supergravity in the so-called `twisted $\Omega$-background'.
 We will use this theory for the sake of highlighting more accessible examples of the constructions later on in the paper. 
 
@@ -344,120 +344,15 @@ Here, $\alpha$ represents an arbitrary element of $\cL_{5d}[[\ep]]$ and $\d$ is 
 %The dg lie algebra structure is then obtained by the tensor product with the commutative dg algebra $\Omega^\bu(S)$. 
 %The BV pairing is given by integrating against the holomorphic volume form on $Y$.
 
-\subsection{Twisted fivebranes} 
-
-%\subsection{Twisted AdS backgrounds}
-
-It is expected that the worldvolume theory of fivebranes in $M$-theory on flat space is equipped with $\cN=(2,0)$ superconformal symmetry. 
-Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
-\begin{itemize}
-\item 
-The holomorphic, or minimal, twist. 
-This twist leaves three real directions invariant and is stabilized by the double cover of the group $U(3)$. 
-The holomorphic twist of any $\cN=(2,0)$ theory can be defined on any complex three-fold $Z$ equipped with a square-root of its canonical bundle. 
-\item 
-The non-minimal twist. 
-This twist leaves five real directions invariant and is stabilized by the group $SO(4) \times U(1)$. 
-The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface. 
-\end{itemize}
-
-An explicit characterization of these twists in the case of the stack of a single fivebrane has been given in \cite{SWtensor}.
-We recall the description of the minimal twist.
-
-\parsec[s:single]
-
-The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
-In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$. 
-
-The theory is $\Z \times \Z/2$ graded where $\Z$ is the ghost number (or cohomological degree) and $\Z/2$ is parity. 
-There are four fundamental fields of ghost number zero $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
-\[
-\alpha \in \Omega^{2,1}(Z), \quad \omega \in \Omega^{3,0}(Z),
-\]
-and a pair of odd $(0,1)$ forms twisted by the line bundle $K^{1/2}_Z$:
-\[
-(\phi_1,\phi_2) \in \Pi \Omega^{0,1}(Z , K^{1/2}_Z) \otimes \C^2 .
-\]
-%where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation. 
-The equations of motion read
-\beqn
-\label{eqn:eom}
-\begin{split}
-\del \alpha + \dbar \omega & = 0 \\
-\dbar \alpha = \dbar \phi_i & = 0 .
-\end{split}
-\eeqn
-
-There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b$ which is a Dolbeault form of type $(2,0)$ which acts simply by
-\beqn
-\label{eqn:ghost}
-\begin{split}
-\mu & \mapsto \mu + \dbar b  \\
-\Omega & \mapsto \Omega + \del b .
-\end{split}
-\eeqn
-There are also odd gauge symmetries for the odd fields $\phi_i$ given by
-\beqn
-\phi_i \mapsto \phi_i + \dbar \chi 
-\eeqn
-where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$. 
-
-This theory notoriously does not admit a Lagrangian description. 
-However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
-In the (degenerate) BV formalism, the space of fields of the theory is
-\beqn
-\cE^{6d}_{\lie{u}(1)} = \Omega^{\geq 2, \bu}(Z)[1] \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 [1] ,
-\eeqn
-and the linear BRST differential is described by the following diagram
-\beqn\label{eqn:weight-1a}
-\begin{tikzcd}
-\ul{-1} & \ul{0}\\
-\Pi \Omega^{0,\bu}(Z, K_Z^{1/2} \otimes \C^2) & \\
-\Omega^{2,\bu}(Z) \ar[r,"\del"] & \Omega^{3,\bu}(Z) ,
-\end{tikzcd}
-\eeqn
-where the $\dbar$ operator acts implicitly on each summand.
-
-\subsection{Twisted membranes}
-
-The theory on a stack of $N$ membranes probing the origin in $\C^{4}/\Z_{k}$ is expected to be described by the ABJM theory---a 3d $\cN=6$ superconformal gauge theory with gauge group $U(N)\times U(N)$ at levels $\pm k$ respectively \cite{Aharony:2008ug}. 
-For $k=1,2$ the theory witnesses an enhancement to $\cN=8$ due to a nonperturbative effect \cite{Bagger:2007jr,Gustavsson:2007vu}. 
-
-Twists of three-dimensional $\cN=8$ supersymmetric gauge theories were classified and characterized in \cite{ESsusy,ESW,Garner:2022vds}. 
-Moreover, the ABJM theories are examples of three-dimensional $\cN=2$ Chern-Simons matter theories, whose twists were studied in \cite{Aganagic:2017tvx}. 
-Twists of such occur in two inequivalent classes, similarly labeled by the dimension of the subspace of translations given by the image of the twisting supercharge:
-
-\begin{itemize}
-  \item The minimal twist. This twist leaves two real directions invariant. The theory can be defined on a three-manifold of the form $S\times C$ where $S$ is a smooth oriented one-manifold and $C$ is a Riemann surface equipped with a fourth-root of its canonical bundle.
-
-  \item The nonminimal twists. There are two such twists, both of which leave three real directions invariant, and are permuted under three-dimensional mirror symmetry.
-\end{itemize}
-
-\parsec
-
-We briefly recall the description of the minimal twist of the ABJM theory associated to the single membrane theory.
-Let $K^{1/4}_C$ be a fourth-root of the canonical bundle of $C$. 
-In the BV formalism, this free theory has underlying space of fields
-\[
-\Omega^{\bu}(S) \hotimes \left[ \Pi \Omega^{0,\bu}(C, K^{1/4}_C \otimes U) \oplus \Omega^{0,\bu} (C,K^{3/4}_C \otimes U^*) \right] 
-\]
-where $W\cong \C^4$ is the fundamental $\lie{sl}(4)$ representation.
-The linear BRST differential is of the form $\d_{S} + \dbar_C$ where $\d_S$ is the de Rham differential along $S$ and $\dbar_C$ is the anti-holomorphic Dolbeault operator along $\Sigma$.
-If we split the fields according to the direct sum above by $X, \Psi$ then the action is simply
-\[
-\int_{S \times C} \Psi \d_S X + \int_{S \times C} \Psi \dbar_\Sigma X .
-\]
-Here, we have implicitly chosen a non-degenerate symmetric pairing on $\C^4$.
-
 \subsection{A more general background}
 
 The eleven-dimensional model for twisted supergravity can be extended to more general geometries than products $S \times X$ where $S$ is a real one-dimensional manifold and $X$ is a Calabi--Yau fivefold.
 More generally, we can define the model on an eleven-manifold $M$ equipped with a transversely holomorphic foliation (THF) equipped with the data of a non-vanishing volume form on the leaf space.
-For general background on the theory of THFs we refer the reader to \cite{DuchampKalka,Rawnsley}. 
+For general background on the theory of THFs we refer the reader to \cite{DuchampKalka, KamberTondeur, Rawnsley}.
 
 A THF structure on a smooth manifold $M$ is an integrable subbundle $F \subset \T_M \otimes \C$ such that $F + \Bar{F} = \T_M \otimes \C$.
 Equivalently, this allows you to choose an atlas of coordinates $(t_i, z_j)$ on $M$ which transform smoothly in the $t_i$-variables and holomorphically in the $z_j$-variables. 
-So, locally we may take a local patch in a THF manifold to be of the form $\R^m \times \C^n$. 
+Accordingly, we may take a local patch in a THF manifold to be of the form $\R^m \times \C^n$.
 %Suppose $M$ is a manifold equipped with a THF structure and let $\cF$ be the corresponding foliation of even codimension.
 %he product $M = S \times X$, where $X$ is a complex manifold and $S$ is a smooth manifold has a natural THF structure with $F$ the restriction of the tangent bundle of $M$ along the projection.
 %Locally, any THF manifold is split of the form $\R^d \times \C^n$, whose coordinates we will denote by $(x_i ;  z_j)$.
@@ -465,9 +360,7 @@ The bundle $F$ is locally spanned by the vector fields $\partial / \partial t_i$
 (Notice that when $F \cap \Bar{F} = 0$ we are just describing an ordinary complex structure on $M$.)
 We will say that $M$ is of dimension $(m,n)$ (so it is a manifold of real dimension $m + 2n$).
 
-We will assume in addition to having a THF structure that $M$ is equipped with the data of a bundle isomorphism $\wedge^{n} (\T_M \otimes \C / F)^* \cong \C$ which we will denote by~$\Omega_F$. 
-If $F \cap \Bar{F} = 0$ then $\Omega_F$ returns the usual notion of a non-vanishing holomorphic top form.
-For our purposes, this is the appropriate notion of a transverse Calabi--Yau structure.
+Associated to a foliation $F$, its normal bundle is the quotient bundle $Q = T^{\C}_{M}/F$. We assume in addition to having a THF structure that $M$ is equipped with the data of a trivialization $\wedge^{n} Q^* \cong \C_{M}$ which we will denote by~$\Omega_F$. We require that the trivialization is constant along the leaves of $F$, i.e. that $D\Omega_{F} = 0$. If $F \cap \Bar{F} = 0$, then $\Omega_F$ returns the usual notion of a non-vanishing holomorphic top form. For our purposes, this is the appropriate notion of a transverse Calabi--Yau structure.
 
 There is a notion of the sheaf of `holomorphic functions' $\cO_F$ on any manifold $M$ equipped with a THF~$F$---in the language of foliations these are the functions on $M$ which are constant along the leaves of $F$.
 Locally, on a coordinate patch it is given by functions which only depend on the holomorphic variables $z_i$.
@@ -482,7 +375,10 @@ By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and one can show that
 % and so $\thfd$ equips $\cA^{\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
 Locally in a split THF structure like $\R^m \times \C^n$ the operator $\thfd$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
 
-There is also the notion of the sheaf of `holomorphic vector fields' $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$. 
+
+The fields of our eleven-dimensional theory may be described as sheaves of flat sections of some natural partially flat bundles on $M$. First, we note that the bundle normal bundle $Q$ and its dual $Q^{*}$ admit a natural connection defined along the leaves of $F$, the so-called Bott connection \cite{KamberTondeur}.
+
+There is also the notion of the sheaf of holomorphic vector fields $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$.
 Locally, on $\R^m \times \C^n$ these are vector fields of the form $f^i \del / \del z_i$ where each $f^i \in \cO_F$.
 Let $\theta_F$ be the bundle $T_M \otimes \C / F$ on $M$ and declare 
 $\cA^k(\theta_F)$ to be the sheaf of $C^\infty$-sections of the bundle $\wedge^k F^* \otimes \theta_F$.
@@ -542,6 +438,77 @@ If we assume that $\nu = \Div \mu = 0$ we recover the following equation of moti
 \eeqn
 This is a generalization of equation \eqref{eqn:eom2} for a general THF $F$ on the eleven-manifold~$M$.
 
+\subsection{Twisted fivebranes}
+
+It is expected that the worldvolume theory of fivebranes in $M$-theory on flat space is equipped with $\cN=(2,0)$ superconformal symmetry.
+Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+\begin{itemize}
+\item
+The holomorphic, or minimal, twist.
+This twist leaves three real directions invariant and is stabilized by the double cover of the group $U(3)$.
+The holomorphic twist of any $\cN=(2,0)$ theory can be defined on any complex three-fold $Z$ equipped with a square-root of its canonical bundle.
+\item
+The non-minimal twist.
+This twist leaves five real directions invariant and is stabilized by the group $SO(4) \times U(1)$.
+The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface.
+\end{itemize}
+
+An explicit characterization of these twists in the case of the stack of a single fivebrane has been given in \cite{SWtensor}.
+We recall the description of the minimal twist.
+
+\parsec[s:single]
+
+The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
+In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$.
+
+The theory is $\Z \times \Z/2$ graded where $\Z$ is the ghost number (or cohomological degree) and $\Z/2$ is parity.
+There are four fundamental fields of ghost number zero $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
+\[
+\alpha \in \Omega^{2,1}(Z), \quad \omega \in \Omega^{3,0}(Z),
+\]
+and a pair of odd $(0,1)$ forms twisted by the line bundle $K^{1/2}_Z$:
+\[
+(\phi_1,\phi_2) \in \Pi \Omega^{0,1}(Z , K^{1/2}_Z) \otimes \C^2 .
+\]
+%where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation.
+The equations of motion read
+\beqn
+\label{eqn:eom}
+\begin{split}
+\del \alpha + \dbar \omega & = 0 \\
+\dbar \alpha = \dbar \phi_i & = 0 .
+\end{split}
+\eeqn
+
+There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b$ which is a Dolbeault form of type $(2,0)$ which acts simply by
+\beqn
+\label{eqn:ghost}
+\begin{split}
+\mu & \mapsto \mu + \dbar b  \\
+\Omega & \mapsto \Omega + \del b .
+\end{split}
+\eeqn
+There are also odd gauge symmetries for the odd fields $\phi_i$ given by
+\beqn
+\phi_i \mapsto \phi_i + \dbar \chi
+\eeqn
+where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$.
+
+This theory notoriously does not admit a Lagrangian description.
+However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
+In the (degenerate) BV formalism, the space of fields of the theory is
+\beqn
+\cE^{6d}_{\lie{u}(1)} = \Omega^{\geq 2, \bu}(Z)[1] \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 [1] ,
+\eeqn
+and the linear BRST differential is described by the following diagram
+\beqn\label{eqn:weight-1a}
+\begin{tikzcd}
+\ul{-1} & \ul{0}\\
+\Pi \Omega^{0,\bu}(Z, K_Z^{1/2} \otimes \C^2) & \\
+\Omega^{2,\bu}(Z) \ar[r,"\del"] & \Omega^{3,\bu}(Z) ,
+\end{tikzcd}
+\eeqn
+where the $\dbar$ operator acts implicitly on each summand.
 
 %More generally, there is a natural cohomology associated to a THF structure.
 %Suppose $(M,F)$ is a THF structure and

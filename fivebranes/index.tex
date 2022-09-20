@@ -121,25 +121,57 @@ The top right inclusion is the zero section of $M = {\rm Tot}(\R \oplus V)$ and 
 
 As we elaborated in section \ref{s:thfmflds}, the eleven-dimensional theory is defined on the THF manifold $\mathring M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $\mathring M$. Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$. The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
 
+We will compute the pushforward using the prescription for pushing forward a $\cA^{\bu}_{F}$-module along a compatible submersion outlined in \cite{KormanThesis}. Recall that we have a THF structure on $M$, given by an involutive subsheaf $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
+
+\[
+  \begin{tikzcd}
+    0 \ar[r] & F_{M}\cap T_{M/Z}^{\C}\ar[r]\ar[d] & F_{M}\ar[r]\ar[d]  & \pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{M/Z}^{\C}\ar[r] & T_{M}^{\C}\ar[r] & T_{Z}^{\C}\ar[r] & 0.
+  \end{tikzcd}
+\]
+
+The existence of a partially flat connection amounts to a choice of splitting \[\sigma: \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
+
+We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_{>0}\times Z$ is a map of THF manifolds when both the domain and codomain are equipped with the induced THF structures.
+\[
+  \begin{tikzcd}
+    0 \ar[r] & F_{\mathring M}\cap T_{\mathring M/\R_{>0}\times Z}^{\C}\ar[r]\ar[d] & F_{\mathring M}\ar[r]\ar[d]  & h^{*}T_{\R_{>0}}\oplus\pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{\mathring M/\R_{>0}\times Z}^{\C}\ar[r] & T_{\mathring M}^{\C}\ar[r] & h^{*}T_{\R_{>o}}\oplus T_{Z}^{\C}\ar[r] & 0.
+  \end{tikzcd}
+\]
+
+\surya{conditions for top left to be a vector bundle}
+
+We claim that the splitting $\sigma$ induces a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$. \surya{is this obvious?} It is clear that $\mathring \sigma$ preserves lie brackets.
+
+For brevity, let $F_{\mathring M/\R_{>0}\times Z} = F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}$ and $p^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus\pi^{*}T^{0,1}_{Z}$. Our goal is to describe the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{F_{\R_{>0}\times Z}}$-module.
+
+The splitting affords an isomorphism of $C^{\infty}_{\mathring M}$-modules
+\[
+  \cA^{\bu}_{F_{\mathring M}}(\cL)\cong \cA^{\bu}_{F_{\R_{>0}\times Z}}\otimes \cA^{\bu}_{F_{{\mathring M/ \R_{>0}\times Z}}}\otimes \cL
+\]
+
+Accordingly, the differential splits
+
+Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the (a priori derived) functor $(p|\mathring M)_{*}$ has several nice properties. We may commute it past the tensor product above. Moreover, we may apply the functor term-wise. The result is that the pushforward is given by
+
+
+
+In sum, we have proven the following:
+
 \begin{prop}
   The pushforward $(p| \mathring M)_{*}\cL_{sugra}$ is described by the following complex of sheaves
   \beqn
+  \cA^{\bu}_{F_{\R_{>0}\times Z}}\left(H^\bu(\cA^\bu_{F_{\mathring M/ R_{>0}\times Z}}(\cL))\right)
   \eeqn
 
-  where . The BV pairing is given by
+  The BV pairing is given by
+  \beqn
+  \int_{}
+  \eeqn
 
 \end{prop}
-\begin{proof}
-Recall that we have a THF structure on $M$, given by an involutive subsheaf $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
 
-\[
-  0 \to F_{M}\cap T_{M/Z}^{\C}\to F_{M}\to \pi^{*}T^{0,1}_{Z}\to 0
-\]
-
-The existence of a partially flat connection amounts to a choice of splitting $\pi^{*}T^{0,1}_{Z}\to F_{M}$ of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that that the splitting preserves the lie brackets on sections.
-
-
-\end{proof}
 
 
 \parsec[s:flux]
