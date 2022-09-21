@@ -378,21 +378,17 @@ Locally in a split THF structure like $\R^m \times \C^n$ the operator $\thfd$ is
 
 The fields of our eleven-dimensional theory may be described as sheaves of flat sections of some natural partially flat bundles on $M$. First, we note that the bundle normal bundle $Q$ and its dual $Q^{*}$ admit a natural connection defined along the leaves of $F$, the so-called Bott connection \cite{KamberTondeur}.
 
-There is also the notion of the sheaf of holomorphic vector fields $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$.
-Locally, on $\R^m \times \C^n$ these are vector fields of the form $f^i \del / \del z_i$ where each $f^i \in \cO_F$.
-Let $\theta_F$ be the bundle $T_M \otimes \C / F$ on $M$ and declare 
-$\cA^k(\theta_F)$ to be the sheaf of $C^\infty$-sections of the bundle $\wedge^k F^* \otimes \theta_F$.
-Then we obtain a resolution
+These furnish the notion of the sheaf of holomorphic vector fields $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$. These are the sheaves of sections of $Q$ and $Q^{*}$ that are flat with respect to the Bott connection. Locally, on $\R^m \times \C^n$ these are of the form $f^i \del / \del z_i$ and $f^{i}dz_{i}$ where each $f^i \in \cO_F$.
+
+Let $\cA^k(Q), \cA^{k}(Q^{*})$ be the sheaves of $C^\infty$-sections of the bundles $\wedge^k F^{*} \otimes Q$ and $\wedge^{k}F^{*}\otimes Q^{*}$ respectively. Then we have fine resolutions
+
 \beqn
-\vartheta_F \xto{\simeq} \left(\cA^\bu(\theta_F) , \thfd \otimes \id\right) .
+\vartheta_F \xto{\simeq} \cA^\bu(Q) \ \ \ \ \ \ \ \Omega^1_F \xto{\simeq}  \cA^\bu(Q^*)
 \eeqn
-The sheaf $\vartheta_F$ is equipped with a Lie bracket which extends to endow $\cA^\bu(\theta_F)$ the structure of a dg Lie algebra.
+The sheaf $\vartheta_F$ is equipped with a Lie bracket which extends to endow $\cA^\bu(Q)$ the structure of a dg Lie algebra. Likewise, the sheaf $\Omega^{1}_{F}$ carries the contragradient action of $\vartheta_{F}$ which likewise extends to equip $\cA^{\bu}(Q^{*})$ with the structure of a dg-module over $\cA^{\bu}(Q)$.
 
-Similarly, there is a resolution for the holomorphic one-forms as $\Omega^1_F \xto{\simeq} \cA^{1,\bu}_F$ where in degree $q$ the space $\cA^{1,q}_F$ is the sheaf of $C^\infty$-sections of $\wedge^q F^* \otimes \theta_F^*$.
-Similarly, we let $\cA^{p,q}_F$ be the $C^\infty$-sections $\wedge^q F^* \otimes \wedge^p \theta_F^*$.
-
-We have expressed the fields of the eleven-dimensional theory in terms of a mixed type of de Rham and Dolbeault cohomology.
-Let us focus on the fields $\beta,\gamma$ which on $S \times X$ combine to form the complex
+The holomorphic derham and divergence operators also have analogues in the THF setting, which are now defined on the leaf space. First, for a vector bundle with  $\cA^{p,q}(Q)$ denote the sheaf of $C^{\infty}$ sections of $\wedge^{q} F^{*}\otimes \wedge^p Q$.
+The fields of the eleven-dimensional theory, which we phrased in terms of a mixed type of de Rham and Dolbeault cohomology, can now be elegantly repackaged in terms of the above. For illustration, let us focus on the fields $\beta,\gamma$ which on $S \times X$ combine to form the complex
 \beqn\label{eqn:drdol}
 \Omega^{\bu}(S) \otimes \Omega^{0,\bu}(X) \xto{1 \otimes \del} \Omega^{\bu}(S) \otimes \Omega^{1,\bu}(X) .
 \eeqn

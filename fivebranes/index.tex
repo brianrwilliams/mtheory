@@ -11,7 +11,7 @@
 The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT.
 The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. The state spaces on $AdS_{7}\times S^{4}$ and $AdS_{4}\times S^{7}$ have a remarkable property---they are naturally modules for certain infinite-dimensional exceptional super Lie algebras. We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
 
-Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{WittenHolography}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
 
 
 \subsection{Twisted Backreactions}
@@ -121,8 +121,7 @@ The top right inclusion is the zero section of $M = {\rm Tot}(\R \oplus V)$ and 
 
 As we elaborated in section \ref{s:thfmflds}, the eleven-dimensional theory is defined on the THF manifold $\mathring M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $\mathring M$. Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$. The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
 
-We will compute the pushforward using the prescription for pushing forward a $\cA^{\bu}_{F}$-module along a compatible submersion outlined in \cite{KormanThesis}. Recall that we have a THF structure on $M$, given by an involutive subsheaf $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
-
+We will compute the pushforward using the prescription for pushing forward a $\cA^{\bu}_{F}$-module along a compatible submersion outlined in \cite{KormanThesis}. Recall that we have a THF structure on $M$, given by an involutive subbundle $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
 \[
   \begin{tikzcd}
     0 \ar[r] & F_{M}\cap T_{M/Z}^{\C}\ar[r]\ar[d] & F_{M}\ar[r]\ar[d]  & \pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
@@ -144,35 +143,73 @@ We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_
 
 We claim that the splitting $\sigma$ induces a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$. \surya{is this obvious?} It is clear that $\mathring \sigma$ preserves lie brackets.
 
-For brevity, let $F_{\mathring M/\R_{>0}\times Z} = F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}$ and $p^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus\pi^{*}T^{0,1}_{Z}$. Our goal is to describe the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{F_{\R_{>0}\times Z}}$-module.
+For each of the involutive subbundles $F$ appearing in the top row of the above diagram, we wish to describe certain  To make the burden less cumbersome, we will drop mention of the foliation and instead refer to the whether the leaves lie along the base or fiber of the submersion $p$.
+
+Explicitly, we set
+\begin{align*}
+  \cA^{\bu}_{\mathring M/\R_{>0}\times Z} & = \cA^{\bu}_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}} \\
+  F_{\R_{>0}\times Z} &  = T_{\R_{>0}}\oplus T^{0,1}_{Z} \text{ so }p^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z} \\
+  \cA^{\bu}_{\R_{>0}\times Z}&  = \cA^{\bu}_{F _{\R_{>0}\times Z}} \text{ so }p^{*}\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{p^{*}F _{\R_{>0}\times Z}}
+\end{align*}
+
+Our goal is to describe the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
 
 The splitting affords an isomorphism of $C^{\infty}_{\mathring M}$-modules
 \[
-  \cA^{\bu}_{F_{\mathring M}}(\cL)\cong \cA^{\bu}_{F_{\R_{>0}\times Z}}\otimes \cA^{\bu}_{F_{{\mathring M/ \R_{>0}\times Z}}}\otimes \cL
+  \cA^{\bu}_{\mathring M}(L)\cong \cA^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L)
 \]
 
-Accordingly, the differential splits
+Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the (a priori derived) functor $(p|\mathring M)_{*}$ has several nice properties. We may commute it past the tensor product above. Moreover, we may apply the functor term-wise. The result is that the pushforward is given by \surya{finish}
 
-Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the (a priori derived) functor $(p|\mathring M)_{*}$ has several nice properties. We may commute it past the tensor product above. Moreover, we may apply the functor term-wise. The result is that the pushforward is given by
-
-
+We now analyze the THF differential $\thfD$ on $\cA^{\bu}_{\mathring M}(L)$ under the above splitting.
+\surya{finish}
 
 In sum, we have proven the following:
 
 \begin{prop}
   The pushforward $(p| \mathring M)_{*}\cL_{sugra}$ is described by the following complex of sheaves
   \beqn
-  \cA^{\bu}_{F_{\R_{>0}\times Z}}\left(H^\bu(\cA^\bu_{F_{\mathring M/ R_{>0}\times Z}}(\cL))\right)
+  \cA^\bu_{\R_{>0}\times Z}\otimes \mathbb{R}^\bu p_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)
   \eeqn
 
   The BV pairing is given by
   \beqn
-  \int_{}
   \eeqn
 
 \end{prop}
 
 
+The previous result gives a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $R_{>0}\times Z$. For computing the space of states, it will be useful to have a description of its global sections. For the computation of numerical invariants such as graded characters, of the space of states, a more drastic simplification is useful. Indeed, we may anticipate cohomological cancellations in the character and instead compute the character of any cochain complex that a spectral sequence whose first page is the global sections abuts to.
+
+The global sections of the sheaf in proposition \ref{dimred} appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KamberTondeur}
+\beqn
+E_1^{p,q} = \Gamma \left (\R_{>0}\times Z; \cA^p_{\R_{>0}\times Z}\otimes \mathbb{R}^q p _* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L)\right) \right)\implies \mathbb{H}^{p+q} (\cA^\bu_{\mathring M}(L)).
+\eeqn
+We emphasize that no page of this spectral sequence involves cohomology with respect to the operators $D, D_{\Omega}$; these differentials are kept internal.
+
+In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where
+\beqn
+M = Tot (\R\oplus \C^{2}\to \C^{3}), \ \ \ \ \ \ \mathring M = \R\times \C^2\times \C^3 \setminus (0 \times \C^3).
+\eeqn
+
+To recall the result, fix holomorphic coordinates $z_{i}, i=1, 2, 3$ on $\C^{3}$ and holomorphic fiber coordinates $w_{a}, a= 1, 2$ on $\C^{2}$.
+
+\begin{prop}
+  Up to completion, the cohomology
+  \beqn
+  \mathbb H^{\bu} (\cA_{\mathring M}^\bu (L) ) = H^{\bu}\left (\Gamma(\cA_{\mathring M}^{\bu}(L)), \thfd\right)
+  \eeqn
+  is a direct sum of the cohomology on flat space $H^{\bu}(\Gamma(\cA_{M}^{\bu}(L), \thfd)$ with the complex
+
+  \beeqn
+  \begin{tikzcd}[row sep = 1 ex]
+    + & - \\ \hline
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\partial_{w_i}\}  \ar[r, dotted, "D_{\Omega}"] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \{\del_{z_i}\} \ar[ur, dotted, "D_{\Omega}"'] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \ar[r, dotted, "D"] \ar[dr, dotted, "D"'] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d z_i\} \\ & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d w_i\} .
+\end{tikzcd}
+\eeqn
+\end{prop}
 
 \parsec[s:flux]
 The second step in the construction of the backreacted geometry involves deforming the pushforward $(p| \mathring{M})_{*}\cL_{sugra}$ by a certain Maurer-Cartan element. The Maurer-Cartan element is determined by the lowest order term in the coupling between the eleven dimensional theory and the stack of fivebranes. It was argued in \cite{RSW} that the relevant coupling is given by the nonlocal interaction
@@ -245,12 +282,12 @@ There is a symplectic pairing given by
 \subsection{Global symmetry for twisted $AdS$}
 \label{s:global1}
 
-After complexification, the~six-dimensional and three-dimensional superconformal algebras are isomorphic to $\lie{osp}(8|4)$.
+After complexification, the~six-dimensional superconformal algebra is isomorphic to $\lie{osp}(8|4)$.
 The even part of this algebra is $\lie{so}(8) \times \lie{sp}(4)$.
 This algebra contains the six-dimensional $\cN=(2,0)$ supersymmetry algebra whose odd part is four copies of $S^{6d}_+$, the positive irreducible complex spin representation of $\lie{so}(6)$.
-It also contains the three-dimensional $\cN=8$ supersymmetry algebra whose odd part is eight copies of $S^{3d}$, the irreducible complex spin representation of $\lie{so}(3)$. 
+%It also contains the three-dimensional $\cN=8$ supersymmetry algebra whose odd part is eight copies of $S^{3d}$, the irreducible complex spin representation of $\lie{so}(3)$.
 
-In the six-dimensional case, the holomorphic supercharge is a supertranslation 
+The holomorphic supercharge is a supertranslation
 \[
 Q \in \Pi S^{6d}_+ \otimes \C^4 \subset \lie{osp}(8|4)
 \]
@@ -262,27 +299,22 @@ is three-dimensional (spanned by the anti-holomorphic translations).
 The supercharge $Q$ acts on $\lie{osp}(8|4)$ by commutator and the resulting cohomology will automatically act on the holomorphic twist of any six-dimensional superconformal field theory. 
 This cohomology can readily be identified with the subalgebra $\lie{osp}(6|2)$, see \cite{SWe36}. 
 
-Similarly, the minimal twisting supercharge in the three-dimensional $\cN=8$ supersymmetry algebra is an element $Q \in \Pi S^{3d} \otimes \C^8$ which is characterized (up to equivalence) by the property that $Q^2 = 0$ and that the image of $[Q,-]$ is two-dimensional. 
-The cohomology of $\lie{osp}(8|4)$ with respect to this supercharge is also isomorphic to~$\lie{osp}(6|2)$. 
+%Similarly, the minimal twisting supercharge in the three-dimensional $\cN=8$ supersymmetry algebra is an element $Q \in \Pi S^{3d} \otimes \C^8$ which is characterized (up to equivalence) by the property that $Q^2 = 0$ and that the image of $[Q,-]$ is two-dimensional. The cohomology of $\lie{osp}(8|4)$ with respect to this supercharge is also isomorphic to~$\lie{osp}(6|2)$.
 
-In the untwisted situation, the symmetry of solutions to eleven-dimensional supergravity in the presence of fivebranes wrapping a six-dimensional affine subspace is exactly the superconformal algebra $\lie{osp}(8|4)$ (after complexification). 
-Geometrically, this background is $AdS_7 \times S^4$. 
+In \cite{RSW} we have shown that solutions to equations of motion of our eleven-dimensional theory in the twisted $AdS_{7}\times S^{4}$ background recalled in the previous subsection contains the symmetry algebra $\lie{osp}(6|2)$. This is precisely the twist of the superconformal algebra we just discussed, so this statement may be interpreted as the twisted avatar of the fact that $lie{osp}(8|4)$ acts as isometries on $AdS_{7}\times S^{4}.$ An easy consequence of the result of \cite{RSW} and the definition of $\cH_{sugra}$ in \ref{hilbert} is that the twisted symmetry algebra $\lie{osp}(6|2)$ acts on $\cH_{sugra}$.
 
-In \cite{RSW} we have proposed a twisted analog of the $AdS$ background and have shown that solutions to equations of motion of our eleven-dimensional theory in the presence of twisted fivebranes and membranes contains the symmetry algebra $\lie{osp}(6|2)$---which is precisely the twists of the superconformal algebras we just discussed.
-
-We will count the single-particle gravitational states in our eleven-dimensional model for the geometry resulting from backreacting twisted fivebranes and membranes.
-As recalled above, such states have a symmetry by the twisted superconformal algebra $\lie{osp}(6|2)$.
-We will enumerate states via choosing a Cartan in the bosonic subalgebra of the twisted superconformal algebra. 
+We will enumerate states via their weights a Cartan in the bosonic subalgebra of the twisted superconformal algebra.
 We recall below how the bosonic piece of the algebra
 \beqn
 \label{eqn:gut}
 \lie{sl}(4) \times \lie{sl}(2) \subset \lie{osp}(6|2) 
 \eeqn
 embeds as symmetries, or ghosts, of the eleven-dimensional theory in this twisted background.
-The embedding is distinct for fivebranes and membranes.
-We turn first to the fivebrane case.
 
 \brian{enhance to E(3|6)}.
+However, we first note that the hilbert space $\cH_{sugra}$ in fact enjoys an action of a much larger symmetry algebra.
+
+
 
 \subsection{Mass Spectroscopy on twisted $AdS_7\times S^{4}$}
 \label{s:ads7}
