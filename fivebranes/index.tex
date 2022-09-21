@@ -173,8 +173,18 @@ In sum, we have proven the following:
 
 The model for the pushforward in the previous proposition appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KormanThesis} that converges to the cohomology with respect to the totalized differential $D+\thfd$ $H^{\bullet}(\cA_{\mathring M}(\cL), D+\thfd)$. In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where $M = Tot (\R\oplus \C^{2}\to \C^{3})$. We recall the result. Fix holomorphic coordinates $z_{i}, i=1, 2, 3$ on $\C^{3}$ and holomorphic fiber coordinates $w_{a}, a= 1, 2$ on $\C^{2}$.
 
+\surya{sloppy about hypercohomology}
 \begin{prop}
-Up to completion, the cohomology $H^{\bu}(\Gamma(\cA_{\mathring M}^{\bu}(\cL)), \thfD)$ is a direct sum of the cohomology on flat space $H^{\bu}(\gamma(\cA)$
+  Up to completion, the cohomology $H^{\bu}(\Gamma(\cA_{\mathring M}^{\bu}(L)), \thfd)$ is a direct sum of the cohomology on flat space $H^{\bu}(\Gamma(\cA)(L), \thfd)$ with the complex
+
+  \beeqn
+  \begin{tikzcd}[row sep = 1 ex]
+    + & - \\ \hline
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\partial_{w_i}\}  \ar[r, dotted, "D_{\Omega}"] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \{\del_{z_i}\} \ar[ur, dotted, "D_{\Omega}"'] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \ar[r, dotted, "D"] \ar[dr, dotted, "D"'] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d z_i\} \\ & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d w_i\} .
+\end{tikzcd}
+\eeqn
 \end{prop}
 
 \parsec[s:flux]
