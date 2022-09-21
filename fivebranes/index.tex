@@ -11,7 +11,7 @@
 The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT.
 The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. The state spaces on ${\rm AdS}_{7}\times S^{4}$ and ${\rm AdS}_{4}\times S^{7}$ have a remarkable property---they are naturally modules for certain infinite-dimensional exceptional super Lie algebras. We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
 
-Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{WittenHolography}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
 
 
 \subsection{Twisted Backreactions}
@@ -143,17 +143,25 @@ We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_
 
 We claim that the splitting $\sigma$ induces a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$. \surya{is this obvious?} It is clear that $\mathring \sigma$ preserves lie brackets.
 
-We wish to describe $\cA^{\bu}_{F}$-modules, for $F$ an involutive subbundle appearing in the top row of the above diagram. To make the burden less cumbersome, we will drop mention of the foliation and instead refer to the directions in which the leaves lie. Explicitly, let $\cA_{\mathring M/\R_{>0}\times Z} = \cA_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}}$, $F_{\R_{>0}\times Z} = T_{\R_{>0}}\oplus T^{0,1}_{Z}$ and $\cA_{\R_{>0}\times Z} = \cA_{\pi^{*} F _{\R_{>0}\times Z}}$. Our goal is to describe the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
+For each of the involutive subbundles $F$ appearing in the top row of the above diagram, we wish to describe certain  To make the burden less cumbersome, we will drop mention of the foliation and instead refer to the whether the leaves lie along the base or fiber of the submersion $p$.
+
+Explicitly, we set
+\begin{align*}
+  \cA^{\bu}_{\mathring M/\R_{>0}\times Z} & = \cA^{\bu}_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}} \\
+  F_{\R_{>0}\times Z} &  = T_{\R_{>0}}\oplus T^{0,1}_{Z} \text{ so }p^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z} \\
+  \cA^{\bu}_{\R_{>0}\times Z}&  = \cA^{\bu}_{F _{\R_{>0}\times Z}} \text{ so }p^{*}\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{p^{*}F _{\R_{>0}\times Z}}
+\end{align*}
+
+Our goal is to describe the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
 
 The splitting affords an isomorphism of $C^{\infty}_{\mathring M}$-modules
 \[
-  \cA^{\bu}_{\mathring M}(L)\cong \cA^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}\otimes \cL
+  \cA^{\bu}_{\mathring M}(L)\cong \cA^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L)
 \]
 
 Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the (a priori derived) functor $(p|\mathring M)_{*}$ has several nice properties. We may commute it past the tensor product above. Moreover, we may apply the functor term-wise. The result is that the pushforward is given by \surya{finish}
 
-In \cite{KormanThesis}, the THF differential $\thfD$ on $\cA^{\bu}_{\mathring M}(L)$ is interpreted as defining a superconnection on the pushforward $\pi_{*}\cA^{\bu}_{\mathring M/R_{>0}\times Z}$ viewed as the sheaf of sections of a complex of pro-vector bundles on $\R_{+}\times Z$.
-
+We now analyze the THF differential $\thfD$ on $\cA^{\bu}_{\mathring M}(L)$ under the above splitting.
 \surya{finish}
 
 In sum, we have proven the following:
@@ -161,21 +169,37 @@ In sum, we have proven the following:
 \begin{prop}
   The pushforward $(p| \mathring M)_{*}\cL_{sugra}$ is described by the following complex of sheaves
   \beqn
-  \cA^{\bu}_{F_{\R_{>0}\times Z}}\left(H^\bu(\cA^\bu_{F_{\mathring M/ R_{>0}\times Z}}(\cL), \thfd)\right)
+  \cA^\bu_{\R_{>0}\times Z}\otimes \mathbb{R}^\bu p_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)
   \eeqn
 
   The BV pairing is given by
   \beqn
-  \int_{}
   \eeqn
 
 \end{prop}
 
-The model for the pushforward in the previous proposition appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KormanThesis} that converges to the cohomology with respect to the totalized differential $D+\thfd$ $H^{\bullet}(\cA_{\mathring M}(\cL), D+\thfd)$. In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where $M = Tot (\R\oplus \C^{2}\to \C^{3})$. We recall the result. Fix holomorphic coordinates $z_{i}, i=1, 2, 3$ on $\C^{3}$ and holomorphic fiber coordinates $w_{a}, a= 1, 2$ on $\C^{2}$.
 
-\surya{sloppy about hypercohomology}
+The previous result gives a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $R_{>0}\times Z$. For computing the space of states, it will be useful to have a description of its global sections. For the computation of numerical invariants such as graded characters, of the space of states, a more drastic simplification is useful. Indeed, we may anticipate cohomological cancellations in the character and instead compute the character of any cochain complex that a spectral sequence whose first page is the global sections abuts to.
+
+The global sections of the sheaf in proposition \ref{dimred} appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KamberTondeur}
+\beqn
+E_1^{p,q} = \Gamma \left (\R_{>0}\times Z; \cA^p_{\R_{>0}\times Z}\otimes \mathbb{R}^q p _* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L)\right) \right)\implies \mathbb{H}^{p+q} (\cA^\bu_{\mathring M}(L)).
+\eeqn
+We emphasize that no page of this spectral sequence involves cohomology with respect to the operators $D, D_{\Omega}$; these differentials are kept internal.
+
+In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where
+\beqn
+M = Tot (\R\oplus \C^{2}\to \C^{3}), \ \ \ \ \ \ \mathring M = \R\times \C^2\times \C^3 \setminus (0 \times \C^3).
+\eeqn
+
+To recall the result, fix holomorphic coordinates $z_{i}, i=1, 2, 3$ on $\C^{3}$ and holomorphic fiber coordinates $w_{a}, a= 1, 2$ on $\C^{2}$.
+
 \begin{prop}
-  Up to completion, the cohomology $H^{\bu}(\Gamma(\cA_{\mathring M}^{\bu}(L)), \thfd)$ is a direct sum of the cohomology on flat space $H^{\bu}(\Gamma(\cA)(L), \thfd)$ with the complex
+  Up to completion, the cohomology
+  \beqn
+  \mathbb H^{\bu} (\cA_{\mathring M}^\bu (L) ) = H^{\bu}\left (\Gamma(\cA_{\mathring M}^{\bu}(L)), \thfd\right)
+  \eeqn
+  is a direct sum of the cohomology on flat space $H^{\bu}(\Gamma(\cA_{M}^{\bu}(L), \thfd)$ with the complex
 
   \beeqn
   \begin{tikzcd}[row sep = 1 ex]
