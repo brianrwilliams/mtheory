@@ -299,7 +299,7 @@ be the weight $n$ eigenspace with respect to this $\C^\times$ action.
 As a corollary of the proposition, we get a product decomposition 
 \beqn
 \label{eqn:Gdecomp}
-\cG_Z = \bigoplus_{n \geq -1} \cG^{(n)} .
+\cG_Z = \prod_{n \geq -1} \cG^{(n)} .
 \eeqn
 In particular, we see that $\cG^{(0)}_Z$ is itself a local Lie algebra (that we will soon describe). 
 Moreover, every $\cG^{(n)}$, $n \geq -1$ is a (local) module for this local Lie algebra.
@@ -307,7 +307,7 @@ Moreover, every $\cG^{(n)}$, $n \geq -1$ is a (local) module for this local Lie 
 %The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\cL_{sugra}$. 
 %Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
 %\[
-%\cG_Z (U)  \bigoplus_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
+%\cG_Z (U)  \prod_{n \geq -1} (\pi_*\cL_{sugra})(U)^{(n)}
 %\]
 %is equipped with the structure of a $\Z/2$ graded $L_\infty$ algebra.
 %In this way, the assignment 
@@ -391,14 +391,30 @@ Since $\del$ is weight zero for the decomposition these forms combine to form th
 
 The weight zero summand $\cG_Z^{(0)}$ is special because it carries the induced structure of a local $L_\infty$ algebra on $Z$ inherited from the $L_\infty$ algebra $\cL_{sugra}$.
 As a local Lie algebra it is equivalent to one of the form $\Omega^{0,\bu}(Z, \cV^{(0)})$.
-We will prove the following.
+We will prove that it is equivalent to a local Lie algebra version of the exceptional super Lie algebra $E(3|6)$. 
+
+By local version, we mean a version of $E(3|6)$ which exists as a sheaf of super Lie algebras of the form $\Omega^{0,\bu}(Z, \cV^{(0)})$ on any complex threefold $Z$ equipped with a square-root of its canonical bundle.
+The even part of this sheaf is simply a semi-direct product 
+\beqn
+\Vect^{hol}(Z) \oplus \sl(2) \otimes \cO_Z .
+\eeqn
+Notice the similarity with the even part of $E(3|6)$ in equation \eqref{eqn:evenE36}. 
+The odd part is 
+\beqn
+\Omega^{1,hol}(Z, K^{-1/2}_Z) \otimes \C^2 
+\eeqn
+Again, we observe the similarities with the odd part of $E(3|6)$ given in equation \eqref{eqn:oddE36}. 
+The Lie bracket on this sheaf of super vector spaces is defined analogously to the bracket on $E(3|6)$. 
+In particular, the bracket operations only involve holomorphic differential operators and hence extends to a local dg super Lie algebra structure on the Dolbeault resolution of the above holomorphic vector bundles. 
+We denote this local dg super Lie algebra by $\cE(3|6)$.
+
+When $Z = \C^3$ the $\infty$-jets at $0 \in \C^3$ of the local Lie algebra $\cE(3|6)$ is equivalent to the exceptional super Lie algebra $E(3|6)$.
 
 \begin{prop}\label{prop:v0}
 As a $\Z/2$ graded local Lie algebra on $Z$, the weight zero summand~$\cG^{(0)}_Z$ is equivalent to $\cE(3|6)$. 
 \end{prop}
 
 %Since this is the weight zero component, the sheaf of sections is endowed with the structure of a Lie algebra inherited from the local $L_\infty$ algebra $\cL_{sugra}$.
-When $Z = \C^3$ we will see that the global sections of this $\Z/2$ graded $L_\infty$ algebra is closely related to the exceptional Lie algebra $E(3|6)$ studied by Kac \cite{KacClass}.
 %More precisely he weight zero piece is a local Lie algebra enhancement of this exceptional Lie algebra.
 
 To see that $\cG^{(0)}$ and $\cE(3|6)$ are equivalent as super vector bundles we must show that
@@ -478,7 +494,7 @@ In fact, there is only a two-ary bracket, and an immediate calculation shows tha
 %which is dense at the level of cohomology. 
 %\item[(2)] there is a weight grading on $\cL_{\pi,sugra}$ which is concentrated in degrees $\geq -1$ and gives rise to a decomposition of vector bundles
 %\beqn\label{eqn:decomp3}
-%\Bar{\pi}_{*} \cL_{sugra} = \bigoplus_{n \geq -1} \cV_{n} 
+%\Bar{\pi}_{*} \cL_{sugra} = \prod_{n \geq -1} \cV_{n} 
 %\eeqn
 %\item[(3)]
 %In weight zero, there is an equivalence of local Lie algebras on $Z$ 
@@ -680,7 +696,7 @@ Thus, for example, the odd element $[\d w_1 \d z_1] \in \Omega^{2,cl}(\Hat{D}^5)
 The weight grading is concentrated in degrees $\geq -1$. 
 In particular, there is a decomposition of super vector spaces
 \beqn\label{eqn:decomp1}
-E(5|10) = \til V_{-1} \times \bigoplus_{n \geq 0} V_n 
+E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
 \eeqn
 with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
 It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$.
@@ -689,7 +705,7 @@ It is straightforward to verify that this weight grading is compatible with the 
 At the level of $\infty$-jets the the decomposition in equation \eqref{eqn:Gdecomp} induces a weight grading of $\Hat{E(5|10)}$ which extends the one on $E(5|10)$ that we just described by declaring that the central term have weight $-1$.
 In this way, we get a related decomposition of super $L_\infty$ algebras
 \beqn\label{eqn:decomp2}
-\Hat{E(5|10)} = \bigoplus_{n \geq -1} V_n
+\Hat{E(5|10)} = \prod_{n \geq -1} V_n
 \eeqn
 We will refer to this as the \textit{fivebrane decomposition} of $\Hat{E(5|10)}$.
 Here $V_{-1}$ is a $\C$-extension of $\til V_{-1}$ defined in the decomposition \eqref{eqn:decomp1}.
@@ -836,11 +852,11 @@ where $\cG = \cG_Z$ is a sheaf of $L_\infty$ algebras on the worldvolume~$Z$ of 
 We have seen that $\cG$ is given as the sheaf of sections of a pro vector bundle. 
 In fact, the local $L_\infty$ algebra $\cG$ came with a natural decomposition 
 \[
-\cG = \bigoplus_{k \geq -1} \cG^{(k)} .
+\cG = \prod_{k \geq -1} \cG^{(k)} .
 \]
 There is a related local $L_\infty$ algebra 
 \beqn
-\til \cG \define \bigoplus_{k \geq 0} \cG^{(k)}
+\til \cG \define \prod_{k \geq 0} \cG^{(k)}
 \eeqn
 where we simply forget the weight $-1$ component. 
 These product decompositions also hold at the level of compactly supported sections. 
@@ -856,7 +872,7 @@ To construct the filtration, first consider the natural filtration on the local 
 \eeqn
 where for $N \geq 1$ we have
 \beqn
-F^N \cG = \cG^{(\geq N-2)} = \bigoplus_{j \geq N-2} \cG^{(j)} ,
+F^N \cG = \cG^{(\geq N-2)} = \prod_{j \geq N-2} \cG^{(j)} ,
 \eeqn
 and similarly for $\til \cG$. 
 If we define 
