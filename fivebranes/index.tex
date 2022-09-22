@@ -9,9 +9,13 @@
 \label{sec:states}
 
 The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT.
-The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. The state spaces on $AdS_{7}\times S^{4}$ and $AdS_{4}\times S^{7}$ have a remarkable property---they are naturally modules for certain infinite-dimensional exceptional super Lie algebras. We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
+The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. 
+The state space on the twisted version of $AdS_{7}\times S^{4}$ has a remarkable property---it is naturally a module for a certain infinite-dimensional exceptional super Lie algebra. 
+We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
 
-Before proceeding with the construction, let us first give some feel for the situation we hope to describe. Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{WittenHolography}. Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+Before proceeding with the construction, let us first give some feel for the situation we hope to describe.
+Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{WittenHolography}. 
+Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
 
 
 \subsection{Twisted Backreactions}
@@ -301,7 +305,7 @@ This cohomology can readily be identified with the subalgebra $\lie{osp}(6|2)$, 
 
 %Similarly, the minimal twisting supercharge in the three-dimensional $\cN=8$ supersymmetry algebra is an element $Q \in \Pi S^{3d} \otimes \C^8$ which is characterized (up to equivalence) by the property that $Q^2 = 0$ and that the image of $[Q,-]$ is two-dimensional. The cohomology of $\lie{osp}(8|4)$ with respect to this supercharge is also isomorphic to~$\lie{osp}(6|2)$.
 
-In \cite{RSW} we have shown that solutions to equations of motion of our eleven-dimensional theory in the twisted $AdS_{7}\times S^{4}$ background recalled in the previous subsection contains the symmetry algebra $\lie{osp}(6|2)$. This is precisely the twist of the superconformal algebra we just discussed, so this statement may be interpreted as the twisted avatar of the fact that $lie{osp}(8|4)$ acts as isometries on $AdS_{7}\times S^{4}.$ An easy consequence of the result of \cite{RSW} and the definition of $\cH_{sugra}$ in \ref{hilbert} is that the twisted symmetry algebra $\lie{osp}(6|2)$ acts on $\cH_{sugra}$.
+In \cite{RSW} we have shown that solutions to equations of motion of our eleven-dimensional theory in the twisted $AdS_{7}\times S^{4}$ background recalled in the previous subsection contains the symmetry algebra $\lie{osp}(6|2)$. This is precisely the twist of the superconformal algebra we just discussed, so this statement may be interpreted as the twisted avatar of the fact that $\lie{osp}(8|4)$ acts as isometries on $AdS_{7}\times S^{4}.$ An easy consequence of the result of \cite{RSW} and the definition of $\cH_{sugra}$ in~\ref{hilbert} is that the twisted symmetry algebra $\lie{osp}(6|2)$ acts on $\cH_{sugra}$.
 
 We will enumerate states via their weights a Cartan in the bosonic subalgebra of the twisted superconformal algebra.
 We recall below how the bosonic piece of the algebra
@@ -311,15 +315,47 @@ We recall below how the bosonic piece of the algebra
 \eeqn
 embeds as symmetries, or ghosts, of the eleven-dimensional theory in this twisted background.
 
-\brian{enhance to E(3|6)}.
-However, we first note that the hilbert space $\cH_{sugra}$ in fact enjoys an action of a much larger symmetry algebra.
+However, we first note that the state space $\cH_{sugra}$ in fact enjoys an action of a much larger symmetry algebra.
 
+\parsec
+Surprisingly, at the twisted level this symmetry by the super Lie algebra $\lie{osp}(6|2)$ is enhanced to a symmetry by an infinite-dimensional super Lie algebra called $E(3|6)$. 
+This is an exceptional simple super Lie algebra and was classified by Kac in \cite{KacClass}. 
+The even part $E(3|6)_{even}$ of this super Lie algebra is a semi-direct product 
+\beqn\label{eqn:evenE36}
+\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) 
+\eeqn
+where $\Vect(\Hat{D}^3)$ stands for the Lie algebra of (holomorphic) formal vector fields on the three-disk and $\cO(\Hat{D}^3)$ is the algebra of formal power series in three variables.
+The odd part $E(3|6)_{odd}$ is 
+\beqn\label{eqn:oddE36}
+\Omega^{1}(\Hat{D}^3, K^{-1/2}) \otimes \C^2  .
+\eeqn
+This is the tensor product of the fundamental $\lie{sl}(2)$ representation with the space of one-forms on the formal three-disk twisted by the line bundle $K^{-1/2}$.
+For a description of the Lie bracket we refer to \cite{KacClass}.
+%The non-obvious Lie bracket is of the form $E(3|6)_{odd} \otimes E(3|6)_{odd} \to E(3|6)_{even}$ and is defined by the composition
 
+The embedding $\lie{osp}(6|2)$ into $E(3|6)$ is described as follows.
+The even summand $\lie{sl}(4)$ simply embeds as the constant, linear, and quadratic vector fields which act on a formal neighborhood of $0 \in \C\mathbb{P}^3$.
+The even summand $\lie{sl}(2)$ embeds as the constant power series in $\lie{sl}(2) \otimes \cO(\Hat{D}^3)$. 
+The odd summand $\C^3 \otimes \C^2$ embeds as the constant one-forms and the other odd summand embeds as the linear one-forms 
+\beqn
+\frac12 (z_i \d z_j - z_j \d z_i) \otimes w_a
+\eeqn
+where, here $i \ne j$ and the fundamental $\lie{sl}(2)$ representation is spanned by $w_1,w_2$.
+We are leaving out the twist by the $-1/2$ root of the canonical bundle for simplicity.
+
+\begin{prop}
+The state space $\cH_{sugra}$ is a representation for $E(3|6)$.
+The representation restricts to the original $\lie{osp}(6|2)$ representation under the embedding above.
+\end{prop}
+\begin{proof}
+\brian{Surya can you fill this in}
+\end{proof}
 
 \subsection{Mass Spectroscopy on twisted $AdS_7\times S^{4}$}
 \label{s:ads7}
 
-For convenience we choose coordinates on the eleven manifold as
+We move on to enumerating the state space $\cH_{sugra}$ on the twisted version of $AdS_7 \times S^4$ in terms of the index. 
+We choose coordinates on flat space as
 \[
 \R \times \C^5 = \R_t \times \C^2_w \times \C_z^3 
 \]
@@ -375,7 +411,7 @@ We choose these explicitly as follows:
 \item $q$ denotes a generator for the Cartan of the~$\lie{gl}(1)$ which is generated by the element $\Delta$ from equation~$\eqref{eqn:Delta}$. 
 \end{itemize}
 
-The twisted supergravity states $\cH_{sugra}^{6d}$ form a representation for $\lie{osp}(6|2)$. 
+The twisted supergravity states $\cH_{sugra}$ form a representation for $\lie{osp}(6|2)$. 
 The weights of twisted supergravity states with respect to the generators of the Cartan subalgebra above are completely determined by the weights of the holomorphic coordinates on $\C^2_w \times \C^3_z$.
 These are summarized in table \ref{tbl:sugraM5}.
 
@@ -394,9 +430,9 @@ These are summarized in table \ref{tbl:sugraM5}.
 \end{center}
 \end{table}
 
-We enumerate single particle supergravity states via computing the super trace of the operator $q^Y t_1^{h_1} t_2^{h_2} r^h$ acting on $\cH^{6d}_{sugra}$:
+We enumerate single particle supergravity states via computing the super trace of the operator $q^Y t_1^{h_1} t_2^{h_2} r^h$ acting on $\cH_{sugra}$:
 \beqn
-f^{6d}_{sugra}(t_1,t_2,r,q) = \Tr_{\cH_{sugra}^{6d}} (-1)^F t_1^{h_1} t_2^{h_2} r^h q^\Delta .
+f_{sugra}(t_1,t_2,r,q) = \Tr_{\cH_{sugra}} (-1)^F t_1^{h_1} t_2^{h_2} r^h q^\Delta .
 \eeqn
 The super trace means that there is an extra factor of $(-1)^F$, where $F$ is parity (fermion number), when computing the ordinary trace. 
 That is, we compute the expression
@@ -404,14 +440,14 @@ That is, we compute the expression
 
 \begin{prop}
 \label{prop:sugraindex1}
-The single particle index of the space of twisted supergravity states~$\cH_{sugra}^{6d}$ is given by the following expression
+The single particle index of the space of twisted supergravity states~$\cH_{sugra}$ is given by the following expression
 \beqn
 \label{eqn:sugra_index}
-f_{sugra}^{6d} (t_1,t_2, r, q) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1})+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.
+f_{sugra} (t_1,t_2, r, q) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1})+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.
 \eeqn
 The full (multiparticle) index is defined to be the plethystic exponential 
 \beqn
-{\rm PExp}\left[f_{sugra}^{6d}(t_1,t_2,r,q)\right] .
+{\rm PExp}\left[f_{sugra}(t_1,t_2,r,q)\right] .
 \eeqn
 \end{prop}
 
@@ -442,7 +478,7 @@ y = q^{1/2} r .
 Using the paramterization fo the Cartan given by the variables $y_i,y,\Delta$ we obtain the equivalent expression for the index \eqref{eqn:sugra_index} as 
 \beqn
 \label{eqn:Kim_sugra}
-f_{sugra}^{6d} (y_i, y, q) = \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)},
+f_{sugra} (y_i, y, q) = \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)},
 \eeqn
 We note that this matches exactly with the index computed in \cite[Eq. (3.23)]{Kim:2013nva} with the change of variables.
 %\beqn
@@ -454,21 +490,23 @@ Our formula \eqref{eqn:sugra_index} also matches with \cite[Eq. (3.24)]{Bhattach
 q = x^4, \quad t_1 = y_2, \quad t_2 = y_1, \quad r^2 = z .
 \eeqn
 (Notice the variables $y_1,y_2$ used in \cite{Bhattacharya:2008zy} differ from the variables we introduced in \eqref{eqn:ys}.)
-We record a few specializations of this index which we will remark on further in~\S\ref{s:??}.
+%We record a few specializations of this index which we will remark on further in~\S\ref{s:??}.
 
 \parsec 
-The specialization of this index $q=r^2, t_2=1$ in \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
+We consider the specialization of this index 
+\beqn
+q=r^2, t_2=1 
+\eeqn
+which is known as the Schur limit.
+Applying this limit to \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
 \[
-f_{sugra}^{6d}(q, t_1, t_2=1, r = q^{1/2}) = \frac{q}{(1-q)^2}
+f_{sugra}(q, t_1, t_2=1, r = q^{1/2}) = \frac{q}{(1-q)^2}
 \]
+This plethystic exponential yields the MacMahon function, which is the character of the vacuum module of the $W_{1+\infty}$-algebra.
 
-This plethystic exponential yields the Macmahon function, which is the character of the vacuum module of the $W_{1+\infty}$-algebra.
-
-\parsec
-
-The specialization $t_1=t_2=r=1$ yields the single particle index
-\[
-f_{sugra}^{6d} (q, t_1=t_2=r=1) = \frac{3 q^4 - 3 q^2 + 2 q^{3/2} - 2 q^{9/2}}{(1-q)^3 (1-q^{3/2})^2} .
-\]
-
-\parsec The same change of variables in \eqref{eqn:special2} agrees with previously computed indices for single particle states for supergravity on $AdS_{7}\times S^{4}$
+%\parsec
+%
+%The specialization $t_1=t_2=r=1$ yields the single particle index
+%\[
+%f_{sugra}^{6d} (q, t_1=t_2=r=1) = \frac{3 q^4 - 3 q^2 + 2 q^{3/2} - 2 q^{9/2}}{(1-q)^3 (1-q^{3/2})^2} .
+%\]
