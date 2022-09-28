@@ -66,14 +66,14 @@ There is a map of factorization algebras
 that becomes an equivalence in the large $N$ limit.
 \end{expect}
 
-It is natural to wonder how this statement relates to more traditional formulations of the AdS/CFT correspondence, where local operators of the CFT are related to certain states of the gravitational theory on AdS. A precise relation will be articulated in section \ref{sec:states} where we argue that one can indeed understand $(\Obs_{grav}|_{Y})^{!}$ as a factorization algebra enhancement of the space of (twisted) multi-particle states of the gravitational theory on the backreacted geometry. Explicitly, this geometry refers to the manifold $X - Y$ obtained by subtracting the brane together with the data of a certain Maurer-Cartan element deforming the geometric structure used to define the gravitational theory on $X - Y$.
+It is natural to wonder how this statement relates to more traditional formulations of the AdS/CFT correspondence, where local operators of the CFT are related to certain states of the gravitational theory on AdS. A precise relation will be articulated in \S\ref{sec:states} where we argue that one can indeed understand $(\Obs_{grav}|_{Y})^{!}$ as a factorization algebra enhancement of the space of (twisted) multi-particle states of the gravitational theory on the backreacted geometry. Explicitly, this geometry refers to the manifold $X - Y$ obtained by subtracting the brane together with the data of a certain Maurer-Cartan element deforming the geometric structure used to define the gravitational theory on $X - Y$.
 
 The above expectation can be tested in instances where both sides of the duality admit explicit descriptions.
 This has been carried out in many examples including:
 \begin{itemize}
   \item A stack of $D3$ branes in twisted $\Omega$-deformed type IIB supergravity on flat space. The theory on the stack of $D3$ branes is dual to the closed string B-model on the deformed conifold \cite{costello2021twisted}. This can be understood as a twisted $\Omega$-deformed version of the physical AdS/CFT duality between 4d $\cN=4$ super Yang-Mills and type IIB string theory on $AdS_{5}\times S^{5}$. Here, the duality is formulated in terms of vertex algebras which are avatars of holomorphic factorization algebras on a Riemann surface.
 
-  \item A system of twisted $D1-D5$ branes in a $T^{4}$-compactification of a twist of type IIB string theory. Upon compactifying along $T^4$ this can be understood as a variant of the above example where the deformed conifold is replaced by a certain superspace. The duality is understood as a twisted version of the duality between type IIB supergravity on $AdS_{3}\times S^{3}\times T^{4}$ and the symmetric orbifold CFT $Sym^{N}(T^{4})$.
+  \item A system of twisted $D1-D5$ branes in a $T^{4}$-compactification of a twist of type IIB string theory. Upon compactifying along $T^4$ this can be understood as a variant of the above example where the deformed conifold is replaced by a certain superspace \cite{CP}. The duality is understood as a twisted version of the duality between type IIB supergravity on $AdS_{3}\times S^{3}\times T^{4}$ and the symmetric orbifold CFT $Sym^{N}(T^{4})$.
 
   \item Membranes and fivebranes in twisted $\Omega$-deformed $M$-theory on Taub-NUT space \cite{CostelloM5,CostelloM2}.
 In the particular $\Omega$-background, membranes are localized to a topological quantum mechanical system where the duality can be phrased in terms of associative algebras and ordinary Koszul duality. Moreover, the $\Omega$-background localizes fivebranes to a complex plane and the observables of the localized theory are an affine $W_{N}$ vertex algebra. The holomorphic factorization algebras we seek in the present paper may be thought of as enhancements of these vertex algebras to three-complex dimensions.
@@ -231,30 +231,56 @@ Recall that the $\Omega$-deformed nonminimal twist is a holomorphic theory in on
 
 The precise relationship between the $\Omega$-deformed nonminimal twist of the six-dimensional $\cN=(2,0)$ $A_{N-1}$ theory and five-dimensional $\cN=2$ gauge theory for $SU(N)$ is articulated through the AGT correspondence \cite{AGT}. As we intimated, the observables of the $\Omega$-deformed nonminimal twist are expected to be a one-dimensional holomorphic factorization algebra which agrees with the $W_{N}$ vertex algebra. In the language of factorization algebras, the dimensional reduction along $S^{1}\subset \C^{\times}$ amounts to passing to the algebra of modes. The AGT correspondence posits that this mode algebra acts on the equivariant cohomology of the moduli of instantons of the five dimensional theory.
 
-We propose similar statements at the level of the minimal twist. We fix a complex surface $X$ together with a pair of complex vector bundles $W, M \to X$ of ranks 2 and 1 respectively, satisfying the condition that $\wedge^{3}(W \oplus M) = \det X$. This condition ensures that $Tot (W\oplus M)$ is a Calabi-Yau 5-fold.
+We propose similar statements at the level of the minimal twist. 
+We fix a complex surface $S$ together with a pair of complex vector bundles $L,W \to S$ of ranks $1$ and $2$ respectively, satisfying the condition that $X = \text{Tot} (L \oplus W)$ is a Calabi--Yau 5-fold.
+The twisted eleven-dimensional supergravity lives on the eleven-manifold $\R \times X$. 
 
 \subsection*{The abelian $\cN=(2,0)$ theory}
 
-The abelian six-dimensional $\cN=(2,0)$ theory is the worldvolume theory on a single fivebrane. 
+The abelian six-dimensional $\cN=(2,0)$ theory is also thought of as the worldvolume theory on a single fivebrane in $M$-theory. 
 It admits a field theoretic description as the so-called $\cN=(2,0)$ tensor multiplet. 
-In \cite{SWtensor} an explicit description of the minimal, holomorphic, twist of this theory is given---it defines a complex three-dimensional factorization algebra that we will denote by $\Obs_1$.
+In \cite{SWtensor} an explicit description of the minimal, holomorphic, twist of this theory is given.
+At the level of this twist, the theory is defined on any complex three-fold (equipped with a square root of its canonical bundle). 
+In this section, we consider the $\cN=(2,0)$ theory on the threefold $Y = \text{Tot}(L \to S)$ as a single fivebrane supported on the closed submanifold
+\beqn
+Y \hookrightarrow \R \times X .
+\eeqn
+We will denote the corresponding factorization algebra of observables on $Y$ by $\Obs_1$.
+
 In the main body of the paper, we show that this agrees with the factorization algebra we denoted $\Obs_{brane}(1)$ above. We emphasize that we only consider the classical limit of this factorization algebra in this paper. However as this is a free theory, there is a simple description of its quantization as a twisted enveloping algebra.\footnote{From the holographic point of view, this quantum parameter corresponds to including effects from the backreaction.}
 
-Let us place this factorization algebra on the three-fold $Tot (M)$. Choosing a fiberwise hermitian metric affords a norm map \[\pi : Tot (M) \to \R_{+}\] whose fibers away from $0$ are the unit $S^{1}$ bundle in $M$. The pushforward $\pi_{*}\Obs_{1}$ is a stratified factoization algebra on the half-line. This may be thought of as a pair consisting of an associative algebra, which may be thought of as the algebra of modes of $\Obs_{1}$ along the five-manifold $Tot (M)$, together with a module for the algebra of modes.
+We place this factorization algebra on the three-fold $Y$ which is the total space of the line bundle $L \to S$. 
+Choosing a fiberwise hermitian metric affords a norm map 
+\[
+\pi \colon Y \to \R_{+}
+\] 
+whose fiber away from $0$ is the total space of the unit sphere bundle.
+The pushforward factorization algebra $\pi_{*}\Obs_{1}$ is a stratified factorization algebra on the non-negative half-line $\R_+ = \{t \geq 0\}$. 
+We can tweak this factorization algebra slightly which gives rise to a constructible factorization algebra on $\R_+$.
+In turn, this is equivalent to a pair of an associative algebra (which may be thought of as the algebra of modes of $\Obs_{1}$ along the five-manifold which is the total space of the unit sphere bundle) together with a module for this algebra.
 
-In \cite{SWtensor} it is shown that in the case where $M$ is the trivial bundle, the naive dimensional reduction (where we discard higher Kaluza--Klein modes along the circle fiber) of this factorization algebra agrees with the factorization algebra associated to the minimal twist of five-dimensional $\cN = 2$ Yang--Mills theory on $\R\times M$ for the group $U(1)$ in perturbation theory around the zero instanton sector.
+In \cite{SWtensor} it is shown that in the case where $L$ is the trivial bundle, the naive dimensional reduction (where we discard higher Kaluza--Klein modes along the circle fiber) along 
+\beqn
+S \times \C \to S \times \R_+
+\eeqn
+agrees with the factorization algebra associated to the minimal twist of five-dimensional $\cN = 2$ supersymmetric Yang--Mills theory on $\R\times M$ for the group $U(1)$ in perturbation theory around the zero instanton sector.
 
 If we keep track of Kaluza--Klein modes, our expectation is that the full dimensional reduction $\pi_{*}\Obs_{1}|_{\R_{>0}}$ includes contributions from instanton operators.\footnote{The instanton charge turns out to be identical to the winding number around $S^1$.} Moreover, the module at zero $\pi_{*}\Obs_{1}|_{0}$ ought to be identified with the Hilbert space of the minimal twist of five-dimensional $\cN = 2$ gauge theory. We are left with the following conjecture.
 
 \begin{conj}
-The mode algebra $\pi_{*}\Obs_{1}|_{\R_{>0}}$ acts on $\cO (\operatorname{Higgs}^{W}_{GL(1)} X)$ where $\operatorname{Higgs}^{W}_{GL(1)} X$ denotes the moduli of $GL(1)$ Higgs bundles on $X$ whose higgs fields are $W[1]$-valued.
+Let $\operatorname{Higgs}_{GL(1)} (S,L)$ denote the moduli space of $GL(1)$ Higgs bundles on the complex surface $S$ where the Higgs fields take values in the rank two bundle $W$.
+The mode algebra $\pi_{*}\Obs_{1}|_{\R_{>0}}$ that we have just discussed acts on the space of functions on this moduli space
+\beqn
+\cO \left(\operatorname{Higgs}_{GL(1)} (S,L)\right) .
+\eeqn
 \end{conj}
 
 While we leave the precise relationship of this conjectural action with the usual abelian AGT correspondence to future work, we can highlight some compatibilities.
 
 Above, we have mentioned a particular deformation of the observables of the six-dimensional $\cN = (2,0)$ theory by an explicit Maurer--Cartan element in the residual superconformal algebra $\lie{osp}(6|2)$. We point out that this deformation is of the same spirit considered in \cite{BeemEtAl}. One can identify (though we do not do that in this paper) this deformation of $\pi_{*} \Obs_1|_{\R_{>0}}$ with the Heisenberg algebra.
 
-For a particular choice of $W, M, X$, we expect the superconformal element will deform the Hilbert space of the minimal twist in five dimensions to the equivariant cohomology of the moduli of abelian instantons on $\C^{2}$, and that the action of $\pi_{*}\Obs_{1}|_{\R_{>0}}$ compatibly deforms to the Heisenberg action studied by Grojnowski-Nakajima.
+For a particular choice of $S,L,W$, we expect the superconformal element will deform the Hilbert space of the minimal twist in five dimensions to the equivariant cohomology of the moduli of abelian instantons on $\C^{2}$, and that the action of $\pi_{*}\Obs_{1}|_{\R_{>0}}$ compatibly deforms to the Heisenberg action studied by Grojnowski-Nakajima.
+
 \subsection*{The $\cN=(2,0)$ theory of type $A_1$} 
 
 %In \S \ref{s:fact} we will explain a conjecture for the classical limit of $\Obs_{A_1}$ as a factorization enveloping algebra of a certain local Lie algebra enhancement of $E(3|6)$. 
