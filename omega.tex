@@ -35,7 +35,7 @@ a + b + c = 0 .
 Using this equation, we can eliminate a single variable. 
 We reparameterize using two new variables $a = \ep$, $b=\delta$, $c = -\ep - \delta$ and denote
 \[
-S(\vep, \delta) \define \ep \, w_1 \d w_2 \wedge \d w_3 + \delta \, w_2 \d w_3 \wedge \d w_1 - (\ep + \delta) \, w_3 \d w_1 \wedge \d w_2 .
+S(\vep, \delta) \define \ep \, w_3 \d w_1 \wedge \d w_2 + \delta \, w_2 \d w_3 \wedge \d w_1 - (\ep + \delta) \, w_1 \d w_2 \wedge \d w_3 .
 \]
 
 \subsection{Localized global symmetry algebra}
@@ -69,6 +69,67 @@ In other words, the annihilator of $[S,-]$ in $E(5,10)$ is, up to completions, i
 \[
 \CC[z_i, w_a] \{\del_{z_i}\} \oplus \CC\{\del_{w_a}\} .
 \]
+
+\subsection{Deformation of $M2$ and $M5$ branes}
+
+We argue that when restricted to $M2$ and $M5$ branes that the supercharge $S(\ep, \delta)$ becomes explicit superconformal elements which live in the holomorphic twist of the relevant $3d$ and $6d$ superconformal algebras, respectively. 
+
+\parsec[]
+
+Let's first consider the $M2$ brane case. 
+In the notation of this section, let us take the $M2$ brane to live along $z_1 = z_2 = w_1 = w_2 = 0$:
+\[
+\{0\} \times \{0\} \times \CC_{w_3} \times \RR_t \subset \CC^2_{z_i} \times  \CC^3_{w_a} \times \RR_t .
+\]
+
+Recall that the odd part of the 3-dimensional superconformal algebra, which can be identified with $\lie{osp}(6|1)$, is 
+\[
+\wedge^2 W \otimes R 
+\]
+where $W$ is the defining $\lie{sl}(4)$ representation and $R$ is the defining $\lie{sl}(2)$ representation. 
+In \ref{s:m2embedding} we polarized $R$ and decomposed this as $(\wedge^2 W)_{+1} \oplus (\wedge^2 W)_{-1}$. 
+
+Along the brane, the first summand $(\wedge^2 W)_{+1}$ corresponds to the residual supertranslations in the twist of the 3d $\cN=8$ supersymmetry algebra. 
+The second summand $(\wedge^2 W)_{-1}$ corresponds to residual superconformal transformations. 
+It is spanned by elements of the form 
+\[
+w_3 \otimes (v_\alpha \wedge v_\beta)
+\]
+where $w_3$ is the holomorphic coordinate along the $M2$ brane and $\{v_\alpha\}$ is a basis for $W \cong \CC^4$.
+In the notation of the 11-dimensional theory, $W$ is spanned by translation invariant holomorphic one-forms $\{\d z_1, \d z_2, \d w_1, \d w_2\}$. 
+
+Restricting the element $S(\ep,\delta)$ to the $M2$ brane we obtain precisely an element of this form: 
+\[
+S(\ep,\delta)|_{M2} = \ep w_3 \otimes (v_3 \wedge v_4).
+\]
+Notice that the dependence on $\delta$ has completely dropped since $\delta$ is proportional to terms involving the linear functions $w_1,w_2$ which are set to zero along the brane. 
+
+
+\parsec[]
+Next, let's consider the restriction of the element $S(\ep, \delta)$ to an $M5$ brane. 
+
+We take the $M5$ brane to live along $z_2 = w_3 = t = 0$:
+\[
+\CC_{z_1} \times \{0\} \times \CC_{w_1} \times \CC_{w_2} \times \{0\} \subset \CC^2_{z_i} \times  \CC^3_{w_a} \times \RR_t .
+\] 
+
+\brian{I'm using $R_{6d} = \CC.\d z_2 \oplus \CC. \d w_3$.}
+Recall that the odd part of twist of the 6-dimensional superconformal algebra (which is also $\lie{osp}(6|1)$) can be identified with 
+\[
+L \otimes R \oplus \wedge^2 L \otimes R 
+\]
+where $L \cong \CC^3$ is the defining $\lie{sl}(3)$ representation and $R \cong \CC^2$ is the defining $\lie{sl}(2)$ representation. 
+A basis for $L$ is given by the constant holomorphic one-forms along the brane, which in this notation is $\{\d z_1, \d w_1, \d w_3\}$. 
+A basis $\{r_1,r_2\}$ for $R$ corresponds in 11-dimensions to the constant holomorphic one-forms $\{\d z_1, \d w_3\}$. 
+
+The first summand $L \otimes R$ corresponds to residual supertranslations of the 6d $\cN=(2,0)$ superconformal algebra after the holomorphic twist. 
+The second summand $\wedge^2 \otimes R$ corresponds to residual superconformal elements. 
+
+Following our embedding from \S \ref{s:m5embedding} we find that the restriction of $S(\ep, \delta)$ is precisely one of these superconformal elements:
+\[
+S(\ep, \delta) = - \left(\delta w_2 \d w_1 + (\ep + \delta) w_1 \d w_2 \right) \otimes r_2 .
+\]
+
 
 \subsection{Relationship to the $\Omega$-background}
 
@@ -111,6 +172,20 @@ a + b + c = 0 .
 Notice that we can add to this $\gamma(a,b,c)$ any holomorphic one-form on $\CC^2_z$ and it will still satisfy \eqref{eqn:euler}. 
 
  
+\subsection{Localization to 7d}
+
+Consider
+\[
+S(\ep) = \ep (w_1 \d w_2 \wedge \d w_3 + w_2 \d w_1 \wedge \d w_3) .
+\]
+
+The annihilator of $[S(\ep),-]$ in $E(5,10)$ is linearly spanned by the following elements
+\begin{itemize}
+\item Divergence-free vector fields of the form $f_i(z_1,z_2, w_3) \del_{z_i}$. 
+\item Vector fields of the form $(w_1 w_2)^n \del_{w_3}$. 
+\item $\cdots$
+\end{itemize}
+
 
 \appendix 
 

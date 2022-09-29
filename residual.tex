@@ -1,22 +1,11 @@
-% Created 2020-10-14 Wed 14:51
-% Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{amsart}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{grffile}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{amsmath}
-\usepackage{textcomp}
-\usepackage{amssymb}
-\usepackage{capt-of}
-\usepackage{hyperref}
-\usepackage{amsfonts}
-\usepackage{macros-mtheory}
-\usepackage{cmupint}
+
+\usepackage{macros-mtheory,amsaddr}
+
+\addbibresource{cfs.bib}
+
+%\linespread{1.2} %for editing
+%\usepackage{mathpazo}
 
 \author{Surya and Brian}
 \date{\today}
@@ -29,29 +18,15 @@
  pdfcreator={Emacs 27.1 (Org mode 9.4)}, 
  pdflang={English}}
 
-\def\pv{{\rm PV}}
-\def\PV{{\rm PV}}
-\def\T{{\rm T}}
-\def\del{\partial}
-\def\hotimes{\, \otimes \,}
-\def\ep{\epsilon}
-\def\div{\partial_{\Omega}}
-\def\m2{\mathfrak{m}2\mathfrak{brane}}
-\def\susy{\mathfrak{susy}}
-\def\so{\mathfrak{so}}
-\def\siso{\mathfrak{siso}}
-\def\fsl{\mathfrak{sl}}
-\def\lie#1{\ensuremath{\mathfrak{#1}}}
 
 \begin{document}
 
 \maketitle
-\tableofcontents
-
+%\tableofcontents
 
 \section{Residual supersymmetry}
 
-
+\paragraph{
 Recall, the (complexified) eleven-dimensional supertranslation algebra is a complex super Lie algebra of the form
 \[
   \ft_{11d} = V \oplus \Pi S
@@ -69,10 +44,11 @@ The bracket in $\ft_{11d}$ is defined using the first projection
 \]
 The super Poincar\'{e} algebra is
 \[
-  \siso_{11d} = \so(11 , \CC) \ltimes \ft_{11d} .
+  \lie{siso}_{11d} = \lie{so}(11 , \CC) \ltimes \ft_{11d} .
 \]
-The $R$-symmetry is trivial in 11-dimensional supersymmetry. 
+The $R$-symmetry is trivial in 11-dimensional supersymmetry. }
 
+\paragraph{
 We recall the so-called M2 brane central extension of the super Poincar\'e algebra.
 Introduce the cochain complex $\Omega^{\bu}(\RR^{11})$ of (complex valued) differential forms on $\RR^{11}$ equipped with the de Rham differential $\d$.  
 Let
@@ -80,29 +56,25 @@ Let
   \Gamma_{\wedge^2} : \Sym^2(S) \to \wedge^2 V \subset \Omega^2(\RR^{11}) 
 \]
 be the $\lie{so}(11,\CC)$-equivariant projection onto the $\wedge^2 V$ summand.
-
-The super dg Lie algebra $\m2$ is the central extension of $\siso_{11d}$ by the cocycle
+The super dg Lie algebra $\m2$ is the central extension of $\lie{siso}_{11d}$ by the cocycle
   \[
-    c_{M2} \in \clie^2\left(\siso_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
+    c_{M2} \in \clie^2\left(\lie{siso}_{11d} \; ; \; \Omega^\bu (\RR^{11})[2]\right)
   \]
   defined by the formula 
   \[c_{M2} (\psi, \psi') = \Gamma_{\wedge^2}(\psi, \psi') \in \Omega^2(\RR^{11})\]
-  where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$ as in the decomposition \eqref{eqn:decomp}. 
+  where $\Gamma_{\wedge^2}$ is the projection onto $\wedge^2 V$ as in the decomposition \eqref{eqn:decomp}. }
 
-Notice that $\m2$ is a $\ZZ \times \ZZ/2$-graded Lie algebra and the differential is of bidegree $(1,0)$.
+We view $\m2$ as a $\ZZ \times \ZZ/2$-graded Lie algebra where the differential is of bidegree $(1,+)$.
 Fix a rank one supercharge $Q \in S$ satisfying $Q^2 = 0$ for which we use to perform the a holomorphic twist of 11-dimensional supergravity.  
 We characterize the cohomology of the algebra $\m2$ with respect to this supercharge. 
 
+\paragraph{
 Such a supercharge defines a maximal isotropic subspace $L \subset V$. 
-We can decompose the algebra into $\lie{sl}(5)$ representations, using the isomorphisms
+We can decompose the algebra into $\lie{sl}(L) = \lie{sl}(5)$ representations by
 \deq{
   V = L \oplus L^\vee \oplus \CC_t, \qquad S = \wedge^\bu L^\vee.
 }
-As $\fsl(L) = \fsl(5)$-modules we have
-\[
-V = L \oplus L^\vee \oplus \CC_t
-\]
-and $\so(11, \CC)$ decomposes as
+Also, $\lie{so}(11, \CC)$ decomposes as
 \[
 \lie{sl}(5) \oplus \wedge^2 L \oplus \wedge^2 L^\vee \oplus L \oplus L^\vee .
 \]
@@ -112,7 +84,7 @@ S = \wedge^\bu (L^\vee) = \CC \oplus L^\vee \oplus \wedge^2 L^\vee \oplus \wedge
 \]
 The element $Q$ lives in the first summand.
 Let ${\rm Stab}(Q) \subset \lie{so}(11,\CC)$ be the stabilizer of $Q$. 
-This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$. 
+This is a parabolic subalgebra whose Levi factor is $\lie{sl}(5)$. }
 
 \begin{prop}\label{prop:model}
 Fix a holomorphic supercharge $Q \in S$ and let $\m2^Q$ be the dg Lie algebra with bracket that on $\m2$ and with the differential $\d + [Q,-]$. 
@@ -154,7 +126,7 @@ The image of $\wedge^4 L^\vee \cong L$ trivializes the antiholomorphic translati
 So, as expected, of the translations only the holomorphic ones $L^\vee$ survive.
 The map 
 \[
-[Q,-] \colon \lie{so}(11;\CC) \to S 
+[Q,-] \colon \lie{so}(11,\CC) \to S 
 \] 
 is the projection onto $\wedge^0 L^\vee \oplus \wedge^1 L^\vee \oplus \wedge^2 L^\vee$. 
 The kernel of $[Q,-]$ is the stabilizer ${\rm Stab}(Q)$.
@@ -215,7 +187,7 @@ In particular, the $Q$-twisted algebra $\m2^Q$ is a symmetry of eleven-dimension
 
 In this section we compare to the work of ??.
 In these references, the algebra $\m2$ is defined as an $L_\infty$  
-central extension of $\siso_{11d}$. 
+central extension of $\lie{siso}_{11d}$. 
 
 Recall that given two spinors $\psi, \psi' \in S$ we can form the constant coefficient two-form $\Gamma_{\wedge^2} (\psi, \psi')$. 
 Using this two-form we can define the following four-linear expression
@@ -318,7 +290,7 @@ blah
 \subsection{$D4$ branes in Type IIA}
 
 In \cite{CLsugra} it is shown how $D2k$ branes couple to type IIA supergravity in the twisted situation. 
-We have already shown how the dimensional reduction of 11-dimensional supergravity along a holomorphic circle $S^1 \subset \CC^\times$ is equivalent to the $\SU(4)$ invariant twist of type IIA supergravity
+We have already shown how the dimensional reduction of 11-dimensional supergravity along a holomorphic circle $S^1 \subset \CC^\times$ is equivalent to the $SU(4)$ invariant twist of type IIA supergravity
 \[
 \CC^4 \times \RR^2 .
 \]
