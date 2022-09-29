@@ -1,4 +1,5 @@
 \section{Conjectures for operators on fivebranes}
+\label{s:finite}
 
 In conjecture \ref{conj:fact} we have formulated a conjectural description of the factorization algebra of classical observables $\Obs_{N}$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
 In this section we begin to provide some evidence for this description at the level of local operators, which is just a small piece of the factorization algebra.
@@ -327,7 +328,7 @@ So, it suffices to observe that $g_k$ is the single particle index of the factor
 We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$.
 
 \begin{conj} 
-The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(N)$ is $\til \chi_{N}(y_1,y_2,y_3,y,q)$. 
+The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra of type $A_{N-1}$ is $\til \chi_{N}(y_1,y_2,y_3,y,q)$. 
 \end{conj}
 
 We proceed to give some concrete evidence for this conjecture.
@@ -421,7 +422,7 @@ z_i = y_i q, \quad w_1 = yq, \quad w_2 = y^{-1} q^2 .
 \eeqn
 These variables satisfy the constraint $z_1 z_2 z_3 = w_1 w_2$. 
 
-The limit that we consider is 
+This minimally reduced index corresponds to taking the following limit in the new fugacities
 \beqn\label{eqn:limitgaitto}
 z_3 , w_2 \to 0 .
 \eeqn
@@ -449,7 +450,7 @@ In the coordinates $z_i,w_a$ the expression $g_k$, for $k \geq 1$, in \eqref{eqn
 \label{eqn:gk}
 \begin{array}{lllll}
 g_k (z_i,w_a) \define & \left( z_1z_2z_3 p_k(w_1,w_2) (z_1+z_2+z_3) + p_{k+2}(w_1,w_2)  \right. \\
-&\displaystyle \frac{\left.  -z_1z_2z_3 p_{k-1}(w_1,w_2) - p_{k+2}(w_1,w_2) (z_1z_2+z_2z_3+z_1z_3) \right)}{(1-z_1)(1-z_2)(1-z_3)} .
+&\displaystyle \frac{\left.  -z_1z_2z_3 p_{k-1}(w_1,w_2) - p_{k+1}(w_1,w_2) (z_1z_2+z_2z_3+z_1z_3) \right)}{(1-z_1)(1-z_2)(1-z_3)} .
 \end{array}
 \eeqn
 Here $p_k(w_1,w_2) = \sum_{i+j=k} w_1^i w_2^j$. 
@@ -461,11 +462,12 @@ g_k(z_1,z_2,w_1) = w_1^{k+1} g_{-1}(z_1,z_2,w_1) .
 The result follows from applying the plethystic exponential.
 \end{proof}
 
-The $z_3,w_2 \to 0$ limit of our index is quite similar, though not exactly, the index of a four-dimensional $\cN=1$ theory.
+The $z_3,w_2 \to 0$ limit of our index is quite similar, though not exactly, the index of a four-dimensional $\cN=1$ theory on $\C^2$ where the fugacities $z_1,z_2$ count holomorphic derivatives in each of the complex directions.
+Also, note that this minimally reduced index further reduces to the Schur limit (so the character of the $W_N$ vertex algebra) by specializing $z_1 = w_1$.
 
 \subsection{Comparisons to expansions of superconformal indices}
 
-In the final section we would like to exhibit a series of direct consistency checks with our conjectural exact formula for the index of the non-abelian six-dimensional superconformal theory with a few expansions that have appeared in recent literature. 
+In the final section we would like to exhibit a series of direct consistency checks with our conjectural exact formula for the index of the non-abelian six-dimensional superconformal theory with a number of expansions that have appeared in recent literature. 
 
 \parsec
 Let us first focus on the superconformal theory associated to the Lie algebra $\lie{sl}(2)$ (so type $A_1$).
@@ -493,7 +495,7 @@ We observe that these $q$-expansions agree precisely with the expansions in \cit
 \parsec
 
 We proceed to compare expansions of our exact expression for the $\lie{gl}(3)$ theory to those in \cite{Kim:2013nva}. 
-Recall that the conjectural $\lie{gl}(3)$ index is given by the local character of the holomorphic factorization algebra $\Obs_3$:
+Recall that our conjectural $\lie{gl}(3)$ index is given by the local character of the holomorphic factorization algebra $\Obs_3$:
 \beqn
 \chi_3 (y_i,y,q) = \text{PExp}[f_3(y_i,y,q)] = \chi_2(y_i,y,q) \cdot \text{PExp}[g_3(y_i,y,q)]  .
 \eeqn
