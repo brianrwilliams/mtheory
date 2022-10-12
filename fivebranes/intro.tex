@@ -148,7 +148,7 @@ In fact, this decomposition is intimately related to a certain decomposition of 
 
 Using this presentation, our conjecture for the factorization algebra associated to the worldvolume theory on a stack of $N$ twisted fivebranes, after taking the same classical limit, has the form
 \beqn\label{eqn:finiteTensor}
-\Obs_{brane} (N) = \cF_{-1} \otimes \cF_2 \otimes \cdots \otimes \cF_{N-2} .
+\Obs_{N-branes} = \cF_{-1} \otimes \cF_2 \otimes \cdots \otimes \cF_{N-2} .
 \eeqn
 In other words, we simply truncate the tensor decomposition at order $N$.
 The surprising part is that the factorization algebras $\cF_k$ are directly identifiable from the point of view of the gravitational theory!
@@ -158,6 +158,7 @@ We denote the corresponding factorization algebra by $\Obs_{A_{N-1}}$ for now.
 This is obtained from the worldvolume theory simply by throwing away the modes propagating transverse to the brane, which in our presentation above corresponds to stripping off the first factor $\cF_{-1}$. 
 Thus, at the level of factorization algebras we have a similar proposed decomposition
 \beqn
+\label{eqn:AN-1}
 \Obs_{A_{N-1}} = \cF_0 \otimes \cF_1 \otimes \cdots \otimes \cF_{N-2} .
 \eeqn
 
@@ -222,7 +223,7 @@ We next provide some comparitive evidence for our claim that $\chi_N({\bf x})$ r
 In ~\S\ref{s:finite} we will show that for small values of $N$ of our closed formulas, appropriate expansions agree with expressions which have been found in the literature.
 We will also check that a number of specializations of the fugacities agree with certain unrefined indices which have been computed via other means.
 
-Even stronger evidence would involve the factorization algebras $\Obs_{brane}(N)$. We will outline some expectations in later sections but leave a full treatment to future work.
+Even stronger evidence would involve the factorization algebras $\Obs_{N-branes}$. We will outline some expectations in later sections but leave a full treatment to future work.
 
 \subsection{Modules and instantons}
 We conclude this introduction by outlining a further consistency check of our proposal that $\Obs_{A_{N-1}}$ describes the observables for the minimally twisted type $A_{N-1}$ six-dimensional $\cN=(2,0)$ theory, this time involving dimensional reduction. The statements outlined below will be pursued further in future work. We begin by giving a flavor of the desired statement at the level of the $\Omega$-deformed nonminimal twist.
@@ -247,7 +248,7 @@ Z \hookrightarrow \R \times X .
 \eeqn
 We will denote the corresponding factorization algebra of observables on $Z$ by $\Obs_1$.
 
-In the main body of the paper, we show that this agrees with the factorization algebra we denoted $\Obs_{brane}(1)$ above. We emphasize that we only consider the classical limit of this factorization algebra in this paper. However as this is a free theory, there is a simple description of its quantization as a twisted enveloping algebra.\footnote{From the holographic point of view, this quantum parameter corresponds to including effects from the backreaction.}
+In the main body of the paper, we show that this agrees with the factorization algebra we denoted $\Obs_{1-brane}$. We emphasize that we only consider the classical limit of this factorization algebra in this paper. However as this is a free theory, there is a simple description of its quantization as a twisted enveloping algebra.\footnote{From the holographic point of view, this quantum parameter corresponds to including effects from the backreaction.}
 
 Choosing a fiberwise hermitian metric affords a norm map 
 \[
@@ -267,35 +268,38 @@ agrees with the factorization algebra associated to the minimal twist of five-di
 If we keep track of Kaluza--Klein modes, our expectation is that the full dimensional reduction $\pi_{*}\Obs_{1}|_{\R_{>0}}$ includes contributions from instanton operators.\footnote{The instanton charge turns out to be identical to the winding number around $S^1$.} Moreover, the module at zero $\pi_{*}\Obs_{1}|_{0}$ ought to be identified with the Hilbert space of the minimal twist of five-dimensional $\cN = 2$ gauge theory. We are left with the following conjecture.
 
 \begin{conj}
-Let $\operatorname{Higgs}_{GL(1)} (S,L)$ denote the moduli space of $GL(1)$ Higgs bundles on the complex surface $S$ where the Higgs fields has coefficients in the rank two bundle $W$.
+\label{conj:AGT1}
+Let $\operatorname{Higgs}_{GL(1)} (S,W)$ denote the moduli space of $GL(1)$ Higgs bundles on the complex surface $S$ where the Higgs fields has coefficients in the rank two bundle $W$.
 The mode algebra $\pi_{*}\Obs_{1}|_{\R_{>0}}$ that we have just discussed acts on the space of functions on this moduli space
 \beqn
 \cO \left(\operatorname{Higgs}_{GL(1)} (S,W)\right) .
 \eeqn
 \end{conj}
 
-We emphasize that the moduli space in question is really sensitive to the complex geometry of the entire fivefold $X$, at least in the neighborhood of the total space of $L$.
+We emphasize that the moduli space in question is really sensitive to the complex geometry of the entire fivefold $X$, at least in the neighborhood of the total space of~$L$.
 
 While we leave the precise relationship of this conjectural action with the usual abelian AGT correspondence to future work, we can highlight some compatibilities. Above, we have mentioned a particular deformation of the observables of the six-dimensional $\cN = (2,0)$ theory by an explicit Maurer--Cartan element in the residual superconformal algebra $\lie{osp}(6|2)$. We point out that this deformation is of the same spirit considered in \cite{BeemEtAl}. For a particular choice of the fivefold $X$, one can identify (though we do not do that in this paper) this deformation of $\pi_{*} \Obs_1|_{\R_{>0}}$ with the Heisenberg algebra.
 
-We expect that one may judiciously choose $X$ such that the superconformal element will also deform the Hilbert space of the minimal twist in five dimensions to the equivariant cohomology of the moduli of abelian instantons on $\C^{2}$, and that the action of $\pi_{*}\Obs_{1}|_{\R_{>0}}$ compatibly deforms to the Heisenberg action studied by Grojnowski-Nakajima.
+We expect that one may judiciously choose $X$ such that the superconformal element will also deform the Hilbert space of the minimal twist in five dimensions to the equivariant cohomology of the moduli of abelian instantons on $\C^{2}$, and that the action of~$\pi_{*}\Obs_{1}|_{\R_{>0}}$ compatibly deforms to the Heisenberg action studied by Grojnowski-Nakajima.
 
 \subsection*{The $\cN=(2,0)$ theory of type $A_1$} 
 
 %In \S \ref{s:fact} we will explain a conjecture for the classical limit of $\Obs_{A_1}$ as a factorization enveloping algebra of a certain local Lie algebra enhancement of $E(3|6)$. 
 
+The next simplest application of our holographic approach is to describe the observables of the six-dimensional theory of type~$A_1$. 
 Proceeding as in the abelian case, we can place the factorization algebra $\Obs_{A_1}$ on $Z$ and pushforward along the norm map to obtain an associative dg algebra $\pi_{*} \Obs_{A_1}|_{\R_{>0}}$. We re-emphasize that in this paper we will only discuss a certain classical limit of the true factorization algebra associated to the holomorphic twist of the six-dimensional theory. At the quantum level, we expect that the algebra gets deformed twisted by a cocycle.
 
 \begin{conj}
-  The associative dg algebra $\pi_{*} \Obs_{A_1}|_{\R_{>0}}$ (after turning on the twisting cocycle) acts on
+Let $\operatorname{Higgs}_{SL(2)} (S,W)$ denote the moduli space of $SL(2)$ Higgs bundles on the complex surface~$S$ where the Higgs fields has coefficients in the rank two bundle~$W$.
+The associative dg algebra $\pi_{*} \Obs_{A_1}|_{\R_{>0}}$ (after turning on the twisting cocycle) acts on
   \beqn
-  \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)
+  \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right) .
   \eeqn
 \end{conj}
 
 As in the abelian case, we may hilight some compatibilities with the usual AGT correspondence. For a particular choice of the input geometric data, the same Maurer-Cartan element in $\lie{osp}(6|2)$ deforms the associative algebra $\pi_{*}\Obs_{A_{1}}|_{\R_{>0}}$ to the Virasoro algebra $U(\operatorname{Vir})$. We again expect that for a judicious choice of $X$, the Hilbert space deforms to the equivariant cohomology of the moduli of rank 2 instantons on $\C^{2}$, and the action compatibly deforms to the action in the rank 2 case of the AGT correspondence.
 
-A result in the main body of the paper may be viewed as a check of these conjectures in the case where $Z = \operatorname{Tot}(\cO(-1)\to \C\P^{2})$ and $W = K^{1/2}_{Z}\otimes \C^{2}$. In this case, the unit circle bundle in $L$ may be identified with the Hopf fibration $S^{5}\to \C\P^{2}$. In \cite{Kim:2013nva}, the superconformal index of the 6d $\cN=(2,0)$ theory is computed by identifying it with the $S^{1}\times S^{5}$ partition function, and reducing along the Hopf fiber of $S^{5}$ to further identify it with the superconformal index of 5d $\cN=2$ gauge theory on $\C\P^{2}$. The latter quantity is computed in terms of the Nekrasov instanton partition function, and is almost manifestly the character of $\cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$. The fact that we recover the same expressions as characters of the algebras of local operators $\Obs_{SL(2)}(0)$ corroborates the claim that $ \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$ is the vacuum module of $\pi_{*}\Obs_{SL(2)}|_{\R_{>0}}$.
+A result in the main body of the paper may be viewed as a check of these conjectures in the case where $Z = \operatorname{Tot}(\cO(-1)\to \C\PP^{2})$ and $W = K^{1/2}_{Z}\otimes \C^{2}$. In this case, the unit circle bundle in $L$ may be identified with the Hopf fibration $S^{5}\to \C\PP^{2}$. In \cite{Kim:2013nva}, the superconformal index of the 6d $\cN=(2,0)$ theory is computed by identifying it with the $S^{1}\times S^{5}$ partition function, and reducing along the Hopf fiber of $S^{5}$ to further identify it with the superconformal index of 5d $\cN=2$ gauge theory on $\C\PP^{2}$. The latter quantity is computed in terms of the Nekrasov instanton partition function, and is almost manifestly the character of $\cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$. The fact that we recover the same expressions as characters of the algebras of local operators $\Obs_{SL(2)}(0)$ corroborates the claim that $ \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$ is the vacuum module of $\pi_{*}\Obs_{SL(2)}|_{\R_{>0}}$.
 
 
 
