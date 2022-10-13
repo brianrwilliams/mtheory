@@ -95,8 +95,8 @@ Recall that we have a decomposition of local Lie algebras $\cG = \oplus_{j \geq 
 In Proposition \ref{lem:single} we have shown that $\clie_\bu (\cG_{c}^{(-1)})$ is equivalent to the factorization algebra $\Obs_{1}$.
 On $\C^3$, the global sections of the local Lie algebra $\cG^{(0)}$ is closely related to $E(3|6)$---the $\infty$-jets of $\cG^{(0)}$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$.
 Combining these facts we see that $\Obs_{1}(0)$ is a module for $E(3|6)$. 
-
-In appendix \S \ref{s:kr} we will describe this module from a purely representation theoretic point of view and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
+This module turns out to be a one-dimensional extension of an irreducible $E(3|6)$-module which was classified in~\cite{KR2}. 
+%and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
 
 %\parsec
 %
@@ -223,10 +223,14 @@ The character of local operators of the factorization algebra $\clie_\bu(\til \c
 
 Recall that our conjecture for the factorization algebra associated to the holomorphic twist of the six-dimensional worldvolume theory associated to a stack of two fivebranes is $\Obs_2 \simeq \clie_\bu(\cG_{2,c}) \cong \clie_\bu(\cG_{1,c}) \otimes \clie_\bu(\til \cG_{2,c})$. 
 And after removing the center of mass degrees of freedom, our conjecture is $\til \Obs_2 \simeq \clie_\bu(\til \cG_{2,c})$.
+
+Just as in the abelian case, the local operators $\til \Obs_2(0)$ form a module over $E(3|6)$.
+It turns out that this module is irreducible~\cite{KR2}.
+
 We can now state a decategorified version of conjecture \ref{conj:fact} at the level of superconformal indices, or local characters.
 
 \begin{conj}\label{conj:6dtwo}
-The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(2)$ is given by
+The superconformal index of the six-dimensional superconformal theory of type $A_1$ is given by
 \[
 \til \chi_{2} (y_i,y,q) = {\rm PExp} \left[\til f_2(y_i,y,q) \right] .
 \]
@@ -391,7 +395,7 @@ Upon specializing $y=1,y_3=1$ (so that $y_1 y_2 = 1$) one has the following sing
 \beqn
 f_N (y_1,y_2, y_3=1,y=1,q) = \frac{q^2 + q^3 + \cdots + q^{N}}{1-q} 
 \eeqn
-The plethystic exponential of the right hand side is the vacuum character of the $W_{N}$ vertex algebra.
+The plethystic exponential of the right hand side agrees with the vacuum character of the $W_{N}$ vertex algebra.\footnote{By this we mean the principal $W$-algebra of type $A_{N-1}$.}
 \end{prop}
 \begin{proof}
 By induction it suffices to show that the specialization of the single particle local character $g_k$ of the factorization algebra $\clie_\bu(\cG^{(k)})$ is $q^{k+2} / (1-q)$. 
@@ -414,7 +418,7 @@ The result follows.
 
 \parsec[]
 
-We would also like to point out compatibility of our expression with a certain ``minimally reduced'' index considered in \cite{GaiottoJihoon}. 
+We would also like to point out compatibility of our expression with a certain ``minimally reduced'' index considered in \cite{Gaiotto:2021xce}. 
 This minimal reduction is the result of sending certain parameters to zero while keeping some expression in the fugacities fixed.
 To consider it it is useful to make the following change of variables: 
 \beqn
@@ -426,6 +430,7 @@ This minimally reduced index corresponds to taking the following limit in the ne
 \beqn\label{eqn:limitgaitto}
 z_3 , w_2 \to 0 .
 \eeqn
+This yields an index which only accounts for operators which transform trivially with respect to the symmetries that the fugacities $z_3,w_2$ correspond to. 
 This will result in an index which has three remaining fugacities.
 
 \begin{prop}
@@ -509,7 +514,7 @@ This is again in exact agreement with the index for the $\lie{gl}(3)$ theory com
 
 \parsec
 
-Next, we compare to expansions for the $\lie{sl}(N)$ theory computed in \cite{Imamura}.
+Next, we compare to expansions for the $\lie{sl}(N)$ theory computed in \cite{Imamura}, where the method of the `giant graviton' expansion is used.
 It will be convenient to change the variables $(y_i, y, q) \to (y_i,x,q)$ where 
 \beqn
 x = qy .
@@ -532,14 +537,13 @@ It follows that the plethystic exponential $\til \chi_2(y_i,y,q)$ of this expres
 \end{align*}
 This agrees with the expansion in \cite{Imamura} (see equation (68)) except for the $\lie{sl}(3)$-scalar term at order $q^3$. 
 We find $(1-x-x^3+x^6) / (1-x^2) = (1-x^3-x^4-x^5) / (1+x)$ whereas Imamura's result is $1 / (1+x)$. 
-It would be interesting to explain the physical or representation theoretic source of this discrepancy.
 
 Similarly, we can obtain the $q$-expansions for the local character $\chi_3(y_i,x,q)$ of the factorization algebra $\Obs_3$ and compare it to the $q$-expansion for the superconformal index of the $\lie{sl}(3)$ theory in \cite{Imamura}. 
-Up to order $q^3$ we have
+Up to order $q^2$ we have
 \begin{align*}
 \chi_3(y_i,x,q) & = \frac{1}{(1-x^2)(1-x^3)} + \frac{x^2}{(1-x)(1-x^3)} \chi_{[1,0]}(y_i) q \\
 & + \left((-x -x^2 + x^5)\chi_{[0,1]}(y_i) + (x^2 + x^3 + x^4 + x^5+ x^6) \chi_{[2,0]}(y_i) \right) \frac{1}{(1-x^2)(1-x^3)} q^2 \\
-& + 
+& + O(q^3) .
 \end{align*}
-
-\brian{finish}
+Again, we find a discrepancy of our expansion compared to \cite{Imamura} at order~$q^3$.
+It would be interesting to explain the physical or representation theoretic sources of these discrepancies in each of these cases.
