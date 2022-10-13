@@ -132,7 +132,7 @@ We will compute the pushforward using the prescription for pushing forward a $\c
     0 \ar[r] & T_{M/Z}\ar[r] & T_{M}\ar[r] & T_{Z}\ar[r] & 0.
   \end{tikzcd}
 \]
-We note that all vector bundles in the above diagram are complexified.
+We will assume that the top left corner $F_{M}\cap T_{M/Z}$ is again a vector bundle. Moreover, we adopt the convention that all vector bundles are complex unless otherwise mentioned.
 
 The existence of a partially flat connection amounts to a choice of splitting \[\sigma \colon \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
 
@@ -144,9 +144,7 @@ We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_
   \end{tikzcd}
 \]
 
-\surya{conditions for top left to be a vector bundle}
-
-We claim that the splitting $\sigma$ induces a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$. \surya{is this obvious?} It is clear that $\mathring \sigma$ preserves lie brackets.
+It follows from the assumption that $F_{M}\cap T_{M/Z}$ is a vector bundle that the top left hand corner of the above diagram is as well. Moreover, the splitting $\sigma$ can be extended to a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$; the extension is an adapted connection in the language of \cite{KamberTondeur}.
 
 For each of the involutive subbundles $F$ appearing in the top row of the above diagram, we wish to describe certain  To make the burden less cumbersome, we will drop mention of the foliation and instead refer to the whether the leaves lie along the base or fiber of the submersion $p$.
 
@@ -160,11 +158,11 @@ Likewise, we let
 \[
   F_{\R_{>0}\times Z} = T_{\R_{>0}}\oplus T^{0,1}_{Z}
 \] 
-be the subbundle of the tangent bundle of the base locally spanned by $\del_{}t, \del_{z_{i}}$ and $(p|\mathring M)^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}$ the pullback, which is a subbundle of $T_{\mathring M}$. We will let $\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{F _{\R_{>0}\times Z}}$ denote the THF complex resolving functions constant along the elaves of this foliation on the base.
+be the subbundle of the tangent bundle of the base locally spanned by $\del_{r}, \del_{z_{i}}$ and $(p|\mathring M)^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}$ the pullback, which is a subbundle of $T_{\mathring M}$. We will let $\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{F _{\R_{>0}\times Z}}$ denote the THF complex resolving functions constant along the leaves of this foliation on the base.
 
 Our goal is to describe the derived pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
 
-We first note that the splitting gives us an isomorphism of $C^{\infty}_{\mathring M}$-modules
+We first note that the splitting $\mathring \sigma$ gives us an isomorphism of $C^{\infty}_{\mathring M}$-modules
 \begin{align*}
   \cA^{\bu}_{\mathring M}(L) & \cong \cA^{\bu}_{(p|\mathring M)^{*}F_{\R_{>0}\times Z}}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
                          & \cong (p|\mathring M)^{*}\cA ^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
@@ -209,16 +207,42 @@ In \cite{KormanThesis} it is shown that though the above decomposition depends o
 with the $\cA^{\bullet}_{\R_{>0}\times Z}$-module structure coming from the partial flat connection induced by $\thfd_{1}$.
 \end{prop}
 
-The BV pairing naturally descends to the above complex of sheaves. We can explicitly describe it as follows. First note that the fiber of $\mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)$ at $(t,p)\in \R_{>0}\times Z$ can be computed as the cohomology of the complex
+The BV pairing naturally descends to the above complex of sheaves. It is induced from an explicit fiberwise pairing, which we may write as follows. First note that the fiber of $\mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)$ at $(t,p)\in \R_{>0}\times Z$ can be computed as the cohomology of the complex
 \[
 H^{\bullet}\left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right ).
 \]
 
-We denote the resulting infinite dimensional vector space.
-%Moreover, the deformation retraction along the fibers $(R\times \C^{2})_{(t,p)}- 0 \to S^{4}_{(t,p)}$ induces a quasi-isomorphism
-%\[
-%\left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right) \cong
-%\]
+Moreover, the deformation retraction along the fibers $(R\times \C^{2})_{(t,p)}- 0 \to S^{4}_{(t,p)}$ induces a quasi-isomorphism
+\[
+\left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right) \cong \left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}) \right ); \thfd \right )
+\]
+
+where the fibers $\R\times \C^{2}_{(t,p)}$ are equipped with the obvious transversely holomorphic foliation.
+
+The cohomology of the last complex can be readily computed.
+
+\begin{lem}
+  The cohomology of
+
+  \[\left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}) \right ); \thfd \right ) \]
+
+    is the complex given by
+     \beqn
+  %\begin{tikzcd}
+  %  + & - \\ \hline
+%H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )\{\partial_{w_a}, \partial_{z_i}\}  \ar[r, dotted, "D_{\Omega}"] & %H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  [z_1,z_2,z_3] \\
+%H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  \ar[r, dotted, "D"] & H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  [z_1,z_2,z_3]\{dw_a, dz_i\}
+
+ %\end{tikzcd}
+\eeqn
+\end{lem}
+
+Now the THF cohomology
+\[\left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )\]
+has a natural pairing, which combines with the natural pairing between vector fields and one-forms to give the desired pairing.
+
+\surya{brian can you add something here?}
+
 Thus, we have a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $R_{>0}\times Z$.
 
 For computing the space of states, it will be useful to have a description of its global sections. The global sections of the sheaf in proposition \ref{p:dimred} appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KamberTondeur}
