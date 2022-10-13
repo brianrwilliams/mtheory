@@ -22,10 +22,11 @@ Typically, this definition is made in situations where the relevant boundary val
 We begin by describing the relevant backgrounds. In eleven-dimensional supergravity, the $AdS_7 \times S^4$ background is obtained by backreacting a number of fivebranes in flat space \cite{Maldacena:1997re,WittenAdS}.
 In \cite{RSW} we gave descriptions of twisted versions of this background. We will recall this construction, adapted to a slightly more global situation than considered previously.
 
-We will consider the eleven-dimensional theory on eleven-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a 2-step procedure:
+We will consider the eleven-dimensional theory on eleven-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a two step procedure:
 
 \begin{itemize}
-  \item Place the eleven-dimensional theory on the complement of the zero section. To do so, we will wish to describe the complement of the zero-section in a way that facilitates natural operations on holomorphic-topological local $L_{\infty}$-algebras.
+  \item Place the eleven-dimensional theory on the complement of the zero section. 
+  To do so, we will wish to describe the complement of the zero-section in a way that facilitates a description of the perturbative theory in terms of natural operations on holomorphic-topological local $L_{\infty}$-algebras.
 
   \item Deform the theory on the complement of the zero section by a certain Maurer--Cartan element.
   The Maurer--Cartan element is thought of as the flux sourced by branes wrapping the zero section.
@@ -94,17 +95,15 @@ Let $Z$ be a three-fold that the fivebranes wrap.
 We also fix a rank 2 holomorphic vector bundle $W\to Z$ such that $\wedge^{2} W \cong K_{Z}$;
 this condition ensures that the total space of $W$ is a Calabi-Yau five-fold. In the main body of the paper we will choose $W$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
 
-Consider the bundle $\R\oplus W$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $M = Tot (\R\oplus W)$ which is the total space of the \textit{real} rank five bundle $\R\oplus W$ over $Z$. The partially flat connection on $\R\oplus W$ equips $M$ with a canonical THF structure $F_{M}\subset T_{M}^{\C}$.
+Consider the bundle $\R\oplus W$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $M = \text{Tot} (\R\oplus W)$ which is the total space of the \textit{real} rank five bundle $\R\oplus W$ over $Z$. The partially flat connection on $\R\oplus W$ equips $M$ with a canonical THF structure $F_{M}\subset T_{M}^{\C}$.
 
 We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus W$.
 Denote the complement of the zero section by
 \[
 \mathring{M} = \text{Tot}(\R\oplus W) - 0(Z).
 \]
-
-We may choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus W$ over $Z$ and a fiberwise partially hermitian metric.
-
-Explicitly, the corresponding norm defines a map
+We choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus W$ over $Z$ and a fiberwise partially hermitian metric.
+The corresponding norm defines a map
 \begin{align*}
  h \colon  M & \to \R_{+} \\
   (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
@@ -124,7 +123,7 @@ These embeddings and projections fit inside of the following commutative diagram
 The inclusions on the left are the natural embeddings.
 The top right inclusion is the zero section of $M = {\rm Tot}(\R \oplus V)$ and the bottom right inclusion is the embedding at radius $r = 0$.
 
-As we elaborated in section \ref{s:thfmflds}, the eleven-dimensional theory is defined on the THF manifold $\mathring M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $\mathring M$. Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$. The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
+As we elaborated in \S \ref{s:thfmflds}, the eleven-dimensional theory is defined on the THF manifold $\mathring M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $\mathring M$. Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$. The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
 
 We will compute the pushforward using the prescription for pushing forward a $\cA^{\bu}_{F}$-module along a compatible submersion outlined in \cite{KormanThesis}. Recall that we have a THF structure on $M$, given by an involutive subbundle $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
 \[
@@ -135,7 +134,7 @@ We will compute the pushforward using the prescription for pushing forward a $\c
 \]
 We note that all vector bundles in the above diagram are complexified.
 
-The existence of a partially flat connection amounts to a choice of splitting \[\sigma: \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
+The existence of a partially flat connection amounts to a choice of splitting \[\sigma \colon \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
 
 We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_{>0}\times Z$ is a map of THF manifolds when both the domain and codomain are equipped with the induced THF structures.
 \[
@@ -153,26 +152,24 @@ For each of the involutive subbundles $F$ appearing in the top row of the above 
 
 Explicitly, we set
 \[
-  \cA^{\bu}_{\mathring M/\R_{>0}\times Z} & = \cA^{\bu}_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}}
+  \cA^{\bu}_{\mathring M/\R_{>0}\times Z} = \cA^{\bu}_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}}
 \]
-for the complex resoling functions on $\mathring M$ constant in the directions of $F_{\mathing M}$ that are tangent to the fibers of $(p|\mathring M)$.
+for the complex resoling functions on $\mathring M$ constant in the directions of $F_{\mathring M}$ that are tangent to the fibers of $(p|\mathring M)$.
 
 Likewise, we let
 \[
   F_{\R_{>0}\times Z} = T_{\R_{>0}}\oplus T^{0,1}_{Z}
-\] be the subbundle of the tangent bundle of the base locally spanned by $\del_{}t, \del_{z_{i}}$ and $(p|\mathring M)^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}$ the pullback, which is a subbundle of $T_{\mathring M}$. We will let $\cA^{\bu}_{\R_{>0}\times Z}&  = \cA^{\bu}_{F _{\R_{>0}\times Z}}$ denote the THF complex resolving functions constant along the elaves of this foliation on the base.
+\] 
+be the subbundle of the tangent bundle of the base locally spanned by $\del_{}t, \del_{z_{i}}$ and $(p|\mathring M)^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}$ the pullback, which is a subbundle of $T_{\mathring M}$. We will let $\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{F _{\R_{>0}\times Z}}$ denote the THF complex resolving functions constant along the elaves of this foliation on the base.
 
 Our goal is to describe the derived pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
 
 We first note that the splitting gives us an isomorphism of $C^{\infty}_{\mathring M}$-modules
 \begin{align*}
   \cA^{\bu}_{\mathring M}(L) & \cong \cA^{\bu}_{(p|\mathring M)^{*}F_{\R_{>0}\times Z}}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
-
                          & \cong (p|\mathring M)^{*}\cA ^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
-
 \end{align*}
-
-where we have just used that pullback commutes with taking the exterior power. Here, the tensor product is take in $C^{\infty}_{\mathing M}$-modules.
+where we have used the fact that pullback commutes with taking the exterior power. Here, the tensor product is take in $C^{\infty}_{\mathring M}$-modules.
 
 %Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the derived pushforward along $(p|\mathring M)_{*}$ coincides with the orinary pushforward. Moreover since the derived pushforward commutes with tensor product, we have that the $(p|\mathring M)_{*}\cL_{sugra}$ is given by
 
@@ -185,11 +182,12 @@ By the projection formula, there is an isomorphism of $C^{\infty}_{\R_{>0}\times
 %  \cA^{#}_{\R_{>0}\times Z} \to (p|\mathring M)_{*}(p|\mathring M)^{*}\cA ^{#}_{\R_{>0}\times Z}
 %\]
 
- The left hand side of the above isomorphism has a canonical $\cA ^{#}_{\R_{>0}\times Z}$-modules structure. It remains to discuss compatibility with the differential along the base. The compatibility condition is expressed through the observation that the pro-vector bundle \[(p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\] will have the structure of a partial flat connection defined along the leaves of $F_{\R_{>0}\times Z}$. We can construct such a connection from analyzing the behavior of the THF differential $\thfd$ under the splitting.
+The left hand side of the above isomorphism has a canonical $\cA ^{\#}_{\R_{>0}\times Z}$-module structure. 
+It remains to discuss compatibility with the differential along the base. The compatibility condition is expressed through the observation that the pro-vector bundle \[(p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\] will have the structure of a partial flat connection defined along the leaves of $F_{\R_{>0}\times Z}$. We can construct such a connection from analyzing the behavior of the THF differential $\thfd$ under the splitting.
 
  The THF differential induces a derivation of total degree 1 on the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ so it is determined by its restrictions
 
-\[\thfd_{i} :  (p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \to \cA^{i}_{\R_{\geq >0} \times Z}\otimes _{C^{\infty}_{\R_{>0}\times Z}}(p|\mathring M)_{*} \cA^{\bullet-i+1}_{\mathring M/\R_{>0}\times Z}(L).\]
+\[\thfd_{i} \colon  (p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \to \cA^{i}_{\R_{\geq >0} \times Z}\otimes _{C^{\infty}_{\R_{>0}\times Z}}(p|\mathring M)_{*} \cA^{\bullet-i+1}_{\mathring M/\R_{>0}\times Z}(L).\]
 
 We may understand the first few terms, along with the relations implied by $\thfd^{2} = 0$:
 \begin{itemize}
@@ -208,8 +206,7 @@ In \cite{KormanThesis} it is shown that though the above decomposition depends o
   \beqn
   \cA^\bu_{\R_{>0}\times Z}\otimes \mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)
   \eeqn
-
-  with the $\cA^{\bullet}_{\R_{>0}\times Z}$-module structure coming from the partial flat connection induced by $\thfd_{1}$.
+with the $\cA^{\bullet}_{\R_{>0}\times Z}$-module structure coming from the partial flat connection induced by $\thfd_{1}$.
 \end{prop}
 
 The BV pairing naturally descends to the above complex of sheaves. We can explicitly describe it as follows. First note that the fiber of $\mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)$ at $(t,p)\in \R_{>0}\times Z$ can be computed as the cohomology of the complex
@@ -237,7 +234,7 @@ E_2^{p,q} = \Gamma_{\thfd_1} \left (\R_{>0}\times Z; \cA^p_{\R_{>0}\times Z}\oti
 
 In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where
 \beqn
-M = Tot (\R\oplus \C^{2}\to \C^{3}), \ \ \ \ \ \ \mathring M = \R\times \C^2\times \C^3 \setminus (0 \times \C^3).
+M = \text{Tot} (\R\oplus \C^{2}\to \C^{3}), \ \ \ \ \ \ \mathring M = \R\times \C^2\times \C^3 - (0 \times \C^3).
 \eeqn
 In this case, the above spectral sequence clearly degenerates at the $E_{2}$-page.
 
