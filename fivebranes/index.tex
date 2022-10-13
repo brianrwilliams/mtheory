@@ -216,7 +216,6 @@ Moreover, the deformation retraction along the fibers $(R\times \C^{2})_{(t,p)}-
 \[
 \left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right) \cong \left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}}) \right ); \thfd \right )
 \]
-
 where the fibers $\R\times \C^{2}_{(t,p)}$ are equipped with the obvious transversely holomorphic foliation.
 
 The cohomology of the last complex can be readily computed.
@@ -227,7 +226,7 @@ The cohomology of
 \left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}}) \right ); \thfd \right ) 
 \]
 is the complex given by
-\beqn
+\beqn\label{eqn:bigcplx}
 \begin{tikzcd}
   + & - \\ \hline
 H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )\{\partial_{w_a}, \partial_{z_i}\}  \ar[r, dotted, "D_{\Omega}"] & H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  \\
@@ -236,15 +235,26 @@ H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  \ar[r, dot
 \eeqn
 \end{lem}
 
-Now the THF cohomology
-\[
-\left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )
-\]
-has a natural pairing, which combines with the natural pairing between vector fields and one-forms to give the desired pairing.
+Now, the THF complex
+\beqn\label{eqn:thfcohomology1}
+\left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}) \, , \, \thfd \right )
+\eeqn
+has a natural even pairing given by the residue along the four-sphere~$S^4$.
+This combines with the natural odd pairing between vector fields and one-forms to give an odd pairing on the complex~\eqref{eqn:bigcplx}.
+At the level of cohomology, the pairing on \eqref{eqn:thfcohomology1} is even symplectic and it is equipped with a standard polarization. 
+In degree zero, the cohomology can be identified with holomorphic functions $\cO(\C^2)$, and the full cohomology is of the form $\T^*[-4] \cO(\C^2)$. 
+So, as a $\Z/2$ graded object the cohomology of~\eqref{eqn:thfcohomology1} can be identified with $\T^* \cO(\C^2)$. 
+This endows the cohomology of the complex \eqref{eqn:bigcplx}, which has an odd shifted symplectic structure, with a polarization.
+Explicitly, we can describe this polarization at the first page in a spectral sequence which simply takes the $\thfd$-cohomology of \eqref{eqn:bigcplx} as follows. 
+Let $V$ be the super vector space $\C\{\del_{w_a}, \del_{z_i}\} \oplus \Pi \C$. 
+Then, this page in the spectral sequence is isomorphic to
+\beqn
+\Pi \T^* \left(\cO(\C^2) \otimes V\right) ,
+\eeqn
+where $\Pi \T^*$ denotes the odd shifted cotangent bundle.
+The differential on this page of the spectral sequence, given by turning on $D, D_\Omega$ preserves this polarization.
 
-\surya{brian can you add something here?}
-
-Thus, we have a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $R_{>0}\times Z$.
+Thus, we have a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $\R_{>0}\times Z$.
 
 For computing the space of states, it will be useful to have a description of its global sections. The global sections of the sheaf in proposition \ref{p:dimred} appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KamberTondeur}
 \beqn
