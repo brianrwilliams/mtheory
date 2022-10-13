@@ -359,26 +359,27 @@ Deforming by the Maurer-Cartan element turns on a differential given by bracketi
 %\]
 %\end{cor}
 \parsec[s:hilbertspace]
-The description of the $S^{4}$ compactification of eleven dimensional supergravity obtained in the previous subsection facilitates a straightforward construciton of the Hilbert space. The compactification is described by the pro-local Lie algebra $(p|\mathring M)_{*} \cL_{sugra}$ on the seven-manifold $\R_{>0}\times Z$ in proposition \ref{p:dimred}. We will construct the Hilbert space by applying geometric quantization ansatz to the phase space at $\infty \in \R_{>0}$.
+The description of the $S^{4}$ compactification of eleven dimensional supergravity obtained in the previous subsection facilitates a straightforward construction of the twisted supergravity states. 
+The compactification is described by the pro-local Lie algebra $(p|\mathring M)_{*} \cL_{sugra}$ on the seven-manifold $\R_{>0}\times Z$ in proposition \ref{p:dimred}. We will construct the twisted supergravity states by applying geometric quantization ansatz to the phase space at $\infty \in \R_{>0}$.
 
 Our ansatz for geometric quantization will avoid discussion of subtler aspects such as the metaplectic correction. We define the geometric quantization to be given by functions that are constant along the leaves of a lagrangian foliation of the phase space.
 
 The phase space at $\infty\in \R_{>0}$ is computed by restricting to a neighborhood $(a, \infty)\subset \R_{>0}$:
 \beqn
-(p| \mathring M)_* \cL_{sugra}|_{\infty \times Z}= \cA^\bullet_Z \otimes \left ( \cO (\C^{2})\otimes V \xrightarrow{D\gamma_{BR}} \Pi (\cO (\C^{2})\otimes V)^{*} \right )
+(p| \mathring M)_* \cL_{sugra}|_{\infty \times Z}= \Omega^{0,\bu}_Z \otimes \left ( \cO (\C^{2})\otimes V \xrightarrow{D\gamma_{BR}} \Pi (\cO (\C^{2})\otimes V)^{*} \right )
 \eeqn
 
 There is an obvious polarization whose base is given by
 \beqn
-\cA^\bullet_Z \otimes \left (\cO (\C^{2})\otimes V \right )
+\Omega^{0,\bullet}_Z \otimes \left (\cO (\C^{2})\otimes V \right )
 \eeqn
 
 
 \begin{dfn}
-  The hilbert space is given by
-  \[ \cH_{sugra} = \Sym (\overline \cA^{\bullet}_{Z, c} \otimes (\cO (\C^{2}) \otimes V)^{*} )\]
-
-  where the source denotes compactly supported distributional sections.
+\label{dfn:states}
+  The space of twisted supergravity states is
+  \[ \cH_{sugra} = \Sym \left(\overline \Omega^{0,\bullet}_{Z, c} \otimes (\cO (\C^{2}) \otimes V)^{*} \right)\]
+where the source denotes compactly supported distributional sections.
 \end{dfn}
 
 \subsection{Global symmetry for twisted $AdS$}
@@ -441,13 +442,14 @@ The odd summand $\C^3 \otimes \C^2$ embeds as the constant one-forms and the oth
 where, here $i \ne j$ and the fundamental $\lie{sl}(2)$ representation is spanned by $w_1,w_2$.
 We are leaving out the twist by the $-1/2$ root of the canonical bundle for simplicity.
 
+The embedding of $E(3|6)$ into our twisted description of supergravity immediately yields the following.
 \begin{prop}
 The state space $\cH_{sugra}$ is a representation for $E(3|6)$.
 The representation restricts to the original $\lie{osp}(6|2)$ representation under the embedding above.
 \end{prop}
-\begin{proof}
-\brian{Surya can you fill this in}
-\end{proof}
+%\begin{proof}
+
+%\end{proof}
 
 \subsection{Mass Spectroscopy on twisted $AdS_7\times S^{4}$}
 \label{s:ads7}
@@ -532,9 +534,15 @@ We enumerate single particle supergravity states via computing the super trace o
 \beqn
 f_{sugra}(t_1,t_2,r,q) = \Tr_{\cH_{sugra}} (-1)^F t_1^{h_1} t_2^{h_2} r^h q^\Delta .
 \eeqn
-The super trace means that there is an extra factor of $(-1)^F$, where $F$ is parity (fermion number), when computing the ordinary trace. 
-That is, we compute the expression
+The super trace means that there is an extra factor of $(-1)^F$, where $F$ is parity (fermion number), when computing the ordinary trace.
 
+The space of supergravity states given in definition \ref{dfn:states} is given in terms of compactly supported Dolbeault forms on $\C^3$. 
+On $Z = \C^3$, the compactly supported distributions defined by 
+\beqn
+\alpha \mapsto \del_{z_1}^{n_1} \del_{z_2}^{n_2} \del_{z_3}^{n_3} \alpha |_{z=0}
+\eeqn
+combine to span a dense subspace of $\Bar{\Omega}^{0,\bu}_c(\C^3)$.
+Using this topological basis for distributions and the explicit description of $\cH_{sugra}$ in definition \ref{dfn:states} the following proposition is an immediate computation.
 
 \begin{prop}
 \label{prop:sugraindex1}
