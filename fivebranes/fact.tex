@@ -92,54 +92,54 @@ This grading is determined by looking at an eigenspace decomposition of a certai
 
 Like $\Obs_{sugra}$ in equation \eqref{eqn:sugraobs}, the factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is of the form $\clie^\bu(\cG)$.
 Here, $\cG$ is a sheaf of $L_\infty$ algebras on $Z$ which is presented as the $C^\infty$-sections of an $\infty$-dimensional pro vector bundle.
-To get a sense of the construction of this factorization algebra we take a brief excursion to a simpler situation related to branes in five-dimensional Chern--Simons theory. 
+%To get a sense of the construction of this factorization algebra we take a brief excursion to a simpler situation related to branes in five-dimensional Chern--Simons theory. 
 
-\parsec[]
-
-In~\S \ref{s:twistedsugra} we recalled some features of a five-dimensional Chern--Simons type theory that Costello has shown to be the result of applying the $\Omega$-background to $M$-theory on a Taub--NUT space \cite{CostelloM5}.
-In this setting fivebranes which hit the tip of the Taub--NUT are deformed into chiral defects supported along a Riemann surface~$C$ in the five-manifold. 
-In analogy with our eleven-dimensional setup, we take the five-manifold to be $\R \times {\rm Tot}(K_C)$ with the deformed fivebranes wrapping the zero section.
-Denote by $\Obs_{CS}$ the classical observables\footnote{We treat the theory classically as a perturbative theory on $\R \times {\rm Tot}(K_C)$.
-We note that the theory is defined in terms of two parameters $\ep, \delta$ where $\delta$ is the Chern--Simons coupling and $\ep$ is the non-commutative parameter controlling the deformation quantization of the holomorphic symplectic manifold ${\rm Tot}(K_C)$.
-For convenience we set both $\ep, \delta$ to be one.}
-of the non-commmutative five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
-Let 
-\beqn
-\pi \colon \R \times {\rm Tot}(K_C) \to C
-\eeqn
-be the natural projection and consider the factorization algebra $\pi_* \Obs_{CS}$ on $C$. 
-
-Notice that there is a $U(1)$ action on the fields of the five-dimensional theory induced by the $U(1)$ action on the five-manifold which scales the fiber of~$K_C$.
-Using this we can look at the subfactorization algebra 
-\beqn\label{eqn:taylor1a}
-\Bar{\pi}_* \Obs_{CS} \subset \pi_* \Obs_{CS}
-\eeqn
-which to an open set $U \subset C$ assigns the complex of observables in $\Obs_{CS} (\pi^{-1} U)$ which are finite sums of integral eigenvectors for this $U(1)$ action.
-
-For the rank one abelian gauge group, the space of fields of the five-dimensional theory on $\R \times {\rm Tot}(K_C)$ is
-\[
-\Omega^\bu(\R) \otimes \Omega^{0,\bu}({\rm Tot}(K_C)) [1] .
-\]
-The interaction is encoded by the symplectic structure on ${\rm Tot}(K_C)$.
-%For simplicity, let us assume that the canonical bundle on $C$ is trivializable. 
-For $U \subset C$, the complex of observables is given in terms of the Lie algebra cohomology
-\[
-(\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(p^{-1}U)\right)
-\]
-where $p \colon K_C \to C$.
-The Chevalley--Eilenberg complex is taken with respect to the dg Lie algebra structure coming from the holomorphic Poisson structure on the total space of~$K_C$. 
-If $U$ is a trivializing cover then
-\[
-(\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(C) \otimes \cO^{hol}(\C)\right) .
-\]
-On the other hand, we have
-\[
-(\Bar{\pi}_* \Obs_{CS})(U) \simeq \clie^\bu\left(\Omega^{0,\bu}(C) [[w]] \right) .
-\]
-Here, $w$ plays the role of a formal coordinate on the fiber of $K_C$ and $w^{k}$ as parametrizes the weight $k$ eigenspace---locally, $w$ is simply the one-form $\d z$.
-Using this notation, the embedding \eqref{eqn:taylor1a} is induced by the Taylor series expansion map $\cO(\C) \to \C[[w]]$.
-The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is given by the Moyal commutator. 
-This is similar to the non-formal case---it is the natural bracket if we understand $\cO(C)[[w]]$ as functions on the formal neighborhood of the zero section in~$K_C$.
+%\parsec[]
+%
+%In~\S \ref{s:twistedsugra} we recalled some features of a five-dimensional Chern--Simons type theory that Costello has shown to be the result of applying the $\Omega$-background to $M$-theory on a Taub--NUT space \cite{CostelloM5}.
+%In this setting fivebranes which hit the tip of the Taub--NUT are deformed into chiral defects supported along a Riemann surface~$C$ in the five-manifold. 
+%In analogy with our eleven-dimensional setup, we take the five-manifold to be $\R \times {\rm Tot}(K_C)$ with the deformed fivebranes wrapping the zero section.
+%Denote by $\Obs_{CS}$ the classical observables\footnote{We treat the theory classically as a perturbative theory on $\R \times {\rm Tot}(K_C)$.
+%We note that the theory is defined in terms of two parameters $\ep, \delta$ where $\delta$ is the Chern--Simons coupling and $\ep$ is the non-commutative parameter controlling the deformation quantization of the holomorphic symplectic manifold ${\rm Tot}(K_C)$.
+%For convenience we set both $\ep, \delta$ to be one.}
+%of the non-commmutative five-dimensional Chern--Simons theory on $\R \times {\rm Tot}(K_C)$.
+%Let 
+%\beqn
+%\pi \colon \R \times {\rm Tot}(K_C) \to C
+%\eeqn
+%be the natural projection and consider the factorization algebra $\pi_* \Obs_{CS}$ on $C$. 
+%
+%Notice that there is a $U(1)$ action on the fields of the five-dimensional theory induced by the $U(1)$ action on the five-manifold which scales the fiber of~$K_C$.
+%Using this we can look at the subfactorization algebra 
+%\beqn\label{eqn:taylor1a}
+%\Bar{\pi}_* \Obs_{CS} \subset \pi_* \Obs_{CS}
+%\eeqn
+%which to an open set $U \subset C$ assigns the complex of observables in $\Obs_{CS} (\pi^{-1} U)$ which are finite sums of integral eigenvectors for this $U(1)$ action.
+%
+%For the rank one abelian gauge group, the space of fields of the five-dimensional theory on $\R \times {\rm Tot}(K_C)$ is
+%\[
+%\Omega^\bu(\R) \otimes \Omega^{0,\bu}({\rm Tot}(K_C)) [1] .
+%\]
+%The interaction is encoded by the symplectic structure on ${\rm Tot}(K_C)$.
+%%For simplicity, let us assume that the canonical bundle on $C$ is trivializable. 
+%For $U \subset C$, the complex of observables is given in terms of the Lie algebra cohomology
+%\[
+%(\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(p^{-1}U)\right)
+%\]
+%where $p \colon K_C \to C$.
+%The Chevalley--Eilenberg complex is taken with respect to the dg Lie algebra structure coming from the holomorphic Poisson structure on the total space of~$K_C$. 
+%If $U$ is a trivializing cover then
+%\[
+%(\pi_* \Obs_{CS})(U) \simeq \clie^\bu \left(\Omega^{0,\bu}(C) \otimes \cO^{hol}(\C)\right) .
+%\]
+%On the other hand, we have
+%\[
+%(\Bar{\pi}_* \Obs_{CS})(U) \simeq \clie^\bu\left(\Omega^{0,\bu}(C) [[w]] \right) .
+%\]
+%Here, $w$ plays the role of a formal coordinate on the fiber of $K_C$ and $w^{k}$ as parametrizes the weight $k$ eigenspace---locally, $w$ is simply the one-form $\d z$.
+%Using this notation, the embedding \eqref{eqn:taylor1a} is induced by the Taylor series expansion map $\cO(\C) \to \C[[w]]$.
+%The dg Lie algebra structure on $\Omega^{0,\bu}(C) [[w]]$ is given by the Moyal commutator. 
+%This is similar to the non-formal case---it is the natural bracket if we understand $\cO(C)[[w]]$ as functions on the formal neighborhood of the zero section in~$K_C$.
 
 %The differential is simply $\dbar$ in the direction of the curve $C$. 
 %If we write an arbitrary element of this complex as $w^k \alpha$, where $\alpha \in \Omega^{0,\bu}(C)$, then the Lie bracket is
@@ -148,10 +148,9 @@ This is similar to the non-formal case---it is the natural bracket if we underst
 
 \parsec[]
 
-Let us return to the situation of a complex three-fold $Z$ as submanifold the eleven-manifold~$\R \times \text{Tot}(K_{Z}^{1/2} \otimes \C^2)$. 
-The construction of the restricted factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is completely similar to the simple case of five-dimensional Chern--Simons theory as we just discussed.
-
-This time we consider the group $U(1) \times U(1)$ rotating the fibers of the rank two bundle $K_Z^{1/2} \otimes \C^2$. 
+We are in the situation of a complex three-fold $Z$ embedded as a submanifold of the eleven-manifold~$\R \times \text{Tot}(K_{Z}^{1/2} \otimes \C^2)$. 
+%The construction of the restricted factorization algebra $\Bar{\pi}_* \Obs_{sugra}$ is completely similar to the simple case of five-dimensional Chern--Simons theory as we just discussed.
+Consider the group $U(1) \times U(1)$ rotating the fibers of the rank two bundle $K_Z^{1/2} \otimes \C^2$. 
 Using this we can define the subfactorization algebra 
 \beqn\label{eqn:taylor1b}
 \Bar{\pi}_* \Obs_{sugra} \subset \pi_* \Obs_{sugra}
@@ -160,10 +159,10 @@ which to an open set~$U \subset Z$ assigns the subcomplex of observables in~$\Ob
 
 By construction, the restricted factorization algebra is of the form
 \[
-\pi_*\Obs_{sugra} = \clie^\bu(\cG_Z) 
+\Bar{\pi}_*\Obs_{sugra} = \clie^\bu(\cG_Z) 
 \]
 where $\cG_Z$ is an infinite-rank local $L_\infty$ algebra on $Z$. 
-Just as in the case of five-dimensional Chern--Simons theory, the embedding of factorization algebras \eqref{eqn:taylor1b} is induced by a partial Taylor expansion map
+The embedding of factorization algebras \eqref{eqn:taylor1b} is induced by a partial Taylor expansion map
 \[
 \pi_* \cL_{sugra} \to \cG_Z .
 \]
