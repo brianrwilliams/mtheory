@@ -21,7 +21,8 @@ One of the insights of \cite{SWchar} was that superconformal indices count exact
 Moreover, the space of local operators, together with its algebra structure under operator product expansion, is part of the richer structure of a \textit{factorization algebra}.
 Whilst the former governs the behavior of observables supported at points, the latter organizes observables that are supported on any open set including for example, non-local operators obtained from local ones via a descent procedure.
 
-A principal goal of the present paper is to initiate the study of the factorization algebras of observables associated to the minimal twists of the six-dimensional~$\cN=(2,0)$ superconformal field theories. The full factorization structure is extremely rich, and in this paper, we only discuss a small part of it: the costalk at a point as a vector space---otherwise known as the space of local operators at the point. 
+A principal goal of the present paper is to initiate the study of the factorization algebras of observables associated to the minimal twists of the six-dimensional~$\cN=(2,0)$ superconformal field theories. The full factorization structure is extremely rich, and in this paper we only discuss a small part of it, namely the costalk at a point as a vector space.
+This is otherwise known as the space of local operators at the point. 
 However, this information is enough to extract familiar quantities like the superconformal index.
 
 %Moreover, the six dimensional $\cN = (2,0)$ theory plays a distinguished role: many interesting lower dimensional superconformal field theories are obtained from it via dimensional reduction. Accordingly, the desired factorization algebras should serve to organize many of the mathematical structures associated to lower dimensional superconformal field theories.
@@ -35,7 +36,8 @@ In light of this, we propose to access the minimal twist and its local operators
 Introduced by Costello and Li in \cite{CLsugra}, the twisted holography proposal posits an avatar of the AdS/CFT correspondence that holds at the level of supersymmetric twists.
 Fundamentally, it conjectures a duality between the algebra of observables of a twisted gravitational theory and the algebra of observables of a twisted gauge theory describing the dynamics of a stack of branes coupled to the gravitational theory. There is an exciting body of work being developed around this program including tests of this proposal from both the gravitational and gauge theory sides.
 
-To describe the kinds of theories on either side of the correspondence, we should comment on what it means to twist a theory of supergravity. We will provide more details in \S \ref{s:twisted}. Since the action of supersymmetry is gagued in theories of supergavity, the aforementioned twisting procedure does not quite make sense. Instead, Costello and Li define twisted supergravity to be the theory in perturbation theory around a background where the bosonic ghost for local supertranslations takes a nonzero nilpotent VEV. Coupling the worldvolume theory of a brane to such a background has the effect of twisting the worldvolume theory in the usual sense.
+To describe the kinds of theories on either side of the correspondence, we should comment on what it means to twist a theory of supergravity. We will provide more details in \S \ref{s:twisted}. Since the action of supersymmetry is gagued in theories of supergavity, the aforementioned twisting procedure does not quite make sense. Instead, Costello and Li define twisted supergravity to be the theory in perturbation theory around a background where the bosonic ghost for local supertranslations takes a nonzero nilpotent vacuum expectation value. 
+Coupling the worldvolume theory of a brane to such a background has the effect of twisting the worldvolume theory in the usual sense.
 
 It is expected that the six-dimensional $\cN=(2,0)$ superconformal field theory of type $A_{N-1}$ describes the low energy dynamics of a stack of fivebranes in M-theory on flat space. Accordingly, there is a minimal twist of the low energy limit of M-theory, eleven-dimensional supergravity, which induces the minimal twist on a stack of fivebranes. We will be interested in a twisted version of the $AdS_{7}/CFT_{6}$ correspondence which will relate the large $N$ limit of the minimally twisted six-dimensional $\cN=(2,0)$ theory with minimally twisted eleven-dimensional supergravity on $AdS_{7}\times S^{4}$.
 
@@ -141,7 +143,7 @@ We will say more about a six-dimensional lift of this object later on in this in
 
 \subsection{The fivebrane decomposition}
 We will argue that the value of the factorization algebra associated to the worldvolume theory on a finite number of minimally twisted fivebranes on an arbitrary open set is a particular piece of the $!$-dual of the factorization algebra associated to the bulk gravitational theory.
-After taking a certain classical limit, this argument relies on a presentation of the $!$-dual as
+After taking a certain limit, this argument relies on a presentation of the $!$-dual as
 \beqn
 (\Obs_{grav}|_{Y})^{!} \simeq \cF_{-1} \otimes \cF_0 \otimes \cF_1 \otimes \cdots 
 \eeqn
@@ -161,12 +163,12 @@ This is obtained from the worldvolume theory simply by throwing away the modes p
 Thus, at the level of factorization algebras we have a similar proposed decomposition
 \beqn
 \label{eqn:AN-1}
-\Obs_{A_{N-1}} = \cF_0 \otimes \cF_1 \otimes \cdots \otimes \cF_{N-2} .
+\Obs_{A_{N-1}} (U) \simeq \cF_0 (U) \otimes \cF_1 (U) \otimes \cdots \otimes \cF_{N-2} (U).
 \eeqn
 
 We want to emphasize that these expressions only hold after taking this classical limit and taking some truncation of the differential present on the left-hand side.\footnote{An instructive avatar of this decomposition to keep in mind is the description of the $W_N$ vertex algebra as being generated by a collection of operators of spins $2,3,\ldots, N$.
 Only in the classical limit does the $W_N$ vertex algebra decompose as a pure tensor product.}
-This decomposition as a tensor product of factorization algebras will break down at the quantum level.
+This decomposition as a tensor product of graded vector spaces will break down at the quantum level and when we take into account the factorization algebra structure.
 Nevertheless, the description provides a very effective way to compute certain protected quantities like the superconformal index.
 
 Though the formalism we employ of Koszul duality and factorization algebras is rather abstract, it has concrete and fruitful consequences at the level of the superconformal index.
@@ -181,9 +183,9 @@ If we are working simply on the worldvolume $\C^3 \cong \R^6$, our description i
 \beqn
 \cF_{-1}(0) \otimes \cF_0(0) \otimes \cdots \otimes \cF_{N-2}(0) ,
 \eeqn
-where $\cF_k(0)$ stands for the algebra of local operators associated to the factorization algebra $\cF_k$.
-Forgetting about the differentials for the time being, the local operators $\cF_k(0)$ are given as the free algebra on some vector space $V_k$ of linear local opeartors.
-Thus, to compute the index of local operators of $\Obs_{brane}(N)$ it suffices to compute the index of each of the $V_k$---this is the single particle index---and then apply the plethystic exponential.
+where $\cF_k(0)$ stands for the space of local operators associated to the factorization algebra $\cF_k$.
+Forgetting about the differentials for the time being, the local operators $\cF_k(0)$ are given as the free symmetric algebra on some vector space $V_k$ of linear local opeartors.
+Thus, to compute the supersymmetric index of the space of local operators of $\Obs_{N-branes}$ it suffices to compute the index of each of the $V_k$---this is the single particle index---and then apply the plethystic exponential.
 For now, denote by $g_k({\bf x})$ the index of the vector space $V_k$.
 This quantity is directly computable from the gravitational side.
 
@@ -225,7 +227,8 @@ We next provide some comparitive evidence for our claim that $\chi_N({\bf x})$ r
 In ~\S\ref{s:finite} we will show that for small values of $N$, appropriate expansions of our closed formulas agree with expressions which have been found in the literature.
 We will also check that a number of specializations of the fugacities agree with certain unrefined indices which have been computed via other means.
 
-Even stronger evidence would involve the factorization algebras $\Obs_{N-branes}$. We will outline some expectations in later sections but leave a full treatment to future work.
+Even stronger evidence would involve understanding what the gravitational side can say about the factorization algebras $\Obs_{N-branes}$. 
+We will return to a treatment of this in future work.
 
 \subsection{Modules and instantons}
 We conclude this introduction by outlining a further consistency check of our proposal that $\Obs_{A_{N-1}}$ describes the observables for the minimally twisted type $A_{N-1}$ six-dimensional $\cN=(2,0)$ theory, this time involving dimensional reduction. The statements outlined below will be pursued further in future work. We begin by giving a flavor of the desired statement at the level of the $\Omega$-deformed nonminimal twist.
@@ -235,7 +238,7 @@ Recall that the $\Omega$-deformed nonminimal twist is a holomorphic theory in on
 The precise relationship between the $\Omega$-deformed nonminimal twist of the six-dimensional $\cN=(2,0)$ $A_{N-1}$ theory and five-dimensional $\cN=2$ gauge theory for $SU(N)$ is articulated through the AGT correspondence \cite{AGT}. As we intimated, the observables of the $\Omega$-deformed nonminimal twist are expected to be a one-dimensional holomorphic factorization algebra which agrees with the $W_{N}$ vertex algebra. In the language of factorization algebras, the dimensional reduction along $S^{1}\subset \C^{\times}$ amounts to passing to the algebra of modes. The AGT correspondence posits that this mode algebra acts on the equivariant cohomology of the moduli of instantons of the five dimensional theory.
 
 We propose similar statements at the level of the minimal twist. 
-We fix a complex surface $S$ together with a pair of complex vector bundles $L,W \to S$ of ranks $1$ and $2$ respectively, satisfying the condition that $X = \text{Tot} (L \oplus W)$ is a Calabi--Yau 5-fold.
+We fix a complex surface $S$ together with a pair of complex vector bundles $L,W \to S$ of ranks one and two respectively, satisfying the condition that $X = \text{Tot} (L \oplus W)$ is a Calabi--Yau fivefold.
 The twisted eleven-dimensional supergravity lives on the eleven-manifold $\R \times X$. 
 
 \subsection*{The abelian $\cN=(2,0)$ theory}
@@ -307,9 +310,10 @@ The associative dg algebra $\pi_{*} \Obs_{A_1}|_{\R_{>0}}$ acts on
 \end{conj}
 
 As in the abelian case, we may highlight some compatibilities with the usual AGT correspondence. 
-For a particular choice of the input geometric data, the same Maurer-Cartan element in $\lie{osp}(6|2)$ deforms the associative algebra $\pi_{*}\Obs_{A_{1}}|_{\R_{>0}}$ to the Virasoro algebra $U(\operatorname{Vir})$. We again expect that for a judicious choice of $X$, the Hilbert space deforms to the equivariant cohomology of the moduli of rank 2 instantons on $\C^{2}$, and the action compatibly deforms to the action in the rank 2 case of the AGT correspondence.
+For a particular choice of the input geometric data, the same Maurer-Cartan element in $\lie{osp}(6|2)$ will deform the associative algebra $\pi_{*}\Obs_{A_{1}}|_{\R_{>0}}$ to the Virasoro algebra $U(\operatorname{Vir})$. We again expect that for a judicious choice of $X$, the Hilbert space deforms to the equivariant cohomology of the moduli of rank 2 instantons on $\C^{2}$, and the action compatibly deforms to the action in the rank 2 case of the AGT correspondence.
 
-A result in the main body of the paper may be viewed as a check of these conjectures in the case where $Z = \operatorname{Tot}(\cO(-1)\to \C\PP^{2})$ and $W = K^{1/2}_{Z}\otimes \C^{2}$. In this case, the unit circle bundle in $L$ may be identified with the Hopf fibration $S^{5}\to \C\PP^{2}$. In \cite{Kim:2013nva}, the superconformal index of the 6d $\cN=(2,0)$ theory is computed by identifying it with the $S^{1}\times S^{5}$ partition function, and reducing along the Hopf fiber of $S^{5}$ to further identify it with the superconformal index of 5d $\cN=2$ gauge theory on $\C\PP^{2}$. The latter quantity is computed in terms of the Nekrasov instanton partition function, and is almost manifestly the character of $\cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$. The fact that we recover the same expressions as characters of the algebras of local operators $\Obs_{SL(2)}(0)$ corroborates the claim that $ \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$ is the vacuum module of $\pi_{*}\Obs_{SL(2)}|_{\R_{>0}}$.
+A result in the main body of the paper may be viewed as a check of these conjectures in the case where $Z = \operatorname{Tot}(\cO(-1)\to \C\PP^{2})$ and $W = K^{1/2}_{Z}\otimes \C^{2}$. In this case, the unit circle bundle in $L$ may be identified with the Hopf fibration $S^{5}\to \C\PP^{2}$. In \cite{Kim:2013nva}, the superconformal index of the six-dimensional $\cN=(2,0)$ theory is computed by identifying it with the $S^{1}\times S^{5}$ partition function, and reducing along the Hopf fiber of $S^{5}$ to further identify it with the superconformal index of five-dimensional $\cN=2$ gauge theory on $\C\PP^{2}$. The latter quantity is computed in terms of the Nekrasov instanton partition function, and is almost manifestly the character of $\cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$. 
+The fact that we recover the same expression as the character of the space of local operators $\Obs_{A_1}(0)$ corroborates the claim that $ \cO \left ( \operatorname{Higgs} _{SL(2)}(S, W)\right)$ is the vacuum module of $\pi_{*}\Obs_{A_1}|_{\R_{>0}}$.
 
 
 
