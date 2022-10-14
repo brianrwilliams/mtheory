@@ -8,7 +8,7 @@
 \section{Factorization algebras in twisted $M$ theory}
 \label{s:fact}
 
-In this section we use the formalism of factorization algebras to give a conjectural description of observables of the universal fivebrane theory after performing the holomorphic twist.
+In this section we use the formalism of factorization algebras to give a conjectural description of the space of observables of the universal fivebrane theory after performing the holomorphic twist.
 For the case at hand, our expectation for the universal theory can be understood as the worldvolume theory on a large number of fivebranes. 
 We will see how this relates to the description of the states in twisted supergravity as defined in the last section.
 Later, we see how our interpretation is supported by a relationship of the supergravity index to the fivebrane superconformal index.
@@ -29,7 +29,7 @@ The differential on this cochain complex is precisely the Chevalley--Eilenberg d
 At the quantum level the factorization algebra of observables is deformed.
 Perturbatively, Costello and Gwilliam use the BV formalism to give a systematic way to study quantization within the context of factorization algebras~\cite{CG2}. 
 Even in perturbation theory, the full quantum behavior of our proposal for the minimal twist of eleven-dimensional theory is an open question. 
-We leave the problem to characterize the quantization to future work, and in this paper we do not address anything past tree-level in the bulk eleven-dimensional theory.
+We leave the problem to characterize the quantum algebra structure to future work, and in this paper we do not address anything past tree-level in the bulk eleven-dimensional theory.
 
 We start with the factorization algebra of classical observables of our prototype for the minimal twist of eleven-dimensional supergravity which we recalled in \S \ref{s:twisted}. 
 This model is defined on any eleven-manifold $S \times X$ where $X$ is a Calabi--Yau fivefold and $S$ a real oriented one-manifold. 
@@ -926,7 +926,7 @@ The first term in the limit \eqref{eqn:lim} is
 \]
 where $\cG_1$ is the abelian local Lie algebra $\cG_{1} \cong \cG^{(-1)}$---this is just the weight $(-1)$ piece of the decomposition of $\cG$. 
 In \cite{SWtensor}, Saberi and the second author have given an explicit description of the holomorphic twist of the worldvolume theory on a single fivebrane, that is, the six-dimensional superconformal theory associated to the abelian Lie algebra~$\lie{gl}(1)$.
-We denote the corresponding factorization algebra on the three-fold~$Z$ by~$\Obs_1$.
+We denote the corresponding factorization algebra of classical observables on the three-fold~$Z$ by~$\Obs^{cl}_1$.
 
 We recollected the description of the holomorphic twist of the theory on a single fivebrane in~\S\ref{s:single}. 
 This is a free theory and the underlying $\Z \times \Z/2$ graded cochain complex of fields $\cE_{\lie{gl(1)}}$ with linear BRST differential is
@@ -944,7 +944,7 @@ The factorization algebra $\Obs_1$ is given by~$\cO(\cE_1)$.
 \label{prop:factabelian}
 There is a quasi-isomorphism of factorization algebras valued in $\Z/2$ graded commutative dg algebras on the three-fold~$Z$
 \[
-\clie_\bu(\cG_{1,c}) \xto{\simeq} \Obs_{1} .
+\clie_\bu(\cG_{1,c}) \xto{\simeq} \Obs^{cl}_{1} .
 \]
 \end{prop}
 
@@ -972,25 +972,28 @@ The result then follows by applying ellipticity.
 
 We remark that the Chevalley--Eilenberg complex of an $L_\infty$ algebra $\clie_\bu(\lie{g})$ does not have the structure of a commutative dg algebra.
 However, when $\lie{g}$ is abelian (so, a cochain complex) we can identify this complex with the symmetric algebra on the cochain complex $\fg^*[-1]$.
+In order to see the quantum observables on a single fivebrane from our holographic analysis we must include effects from the backreaction, which we do not do here.
 
-We now formulate a conjecture about the worldvolume theory on a stack of holomorphically twisted fivebranes.
-Evidence for this conjecture will be given in the remaining parts of this paper.
-In this conjecrture, we recall that the holomorphic, or minimal, twist of a theory with six-dimensional $\cN=(2,0)$ supersymmetry exists on any complex three-fold $Z$ equipped with $K_Z^{1/2}$.
+We now formulate an expectation about the worldvolume theory on a stack of holomorphically twisted fivebranes.
+Evidence for this description be given in the remaining parts of this paper, and we will formulate a more refined conjecture in the next section at the level of local operators.
 
-\begin{conj}
-\label{conj:fact}
-For $N \geq 1$, let $\Obs_{N}$ be the factorization algebra of classical observables of the holomorphic twist of the worldvolume theory on a stack of $N$ fivebranes. 
-Then, there is an equivalence of factorization algebras
+Recall that the holomorphic, or minimal, twist of a theory with six-dimensional $\cN=(2,0)$ supersymmetry exists on any complex three-fold $Z$ equipped with $K_Z^{1/2}$.
+For $N \geq 1$, let $\Obs_{N}$ be the factorization algebra of observables of the holomorphic twist of the worldvolume theory on a stack of $N$ fivebranes wrapping a threefold~$Z$. 
+For each open set $U \subset Z$ our expectation is that there is an isomorphism of vector spaces
 \beqn
-\Obs_N \simeq \clie_\bu(\cG_{N,c}) .
+H^\bu \left(\Obs_N(U) \right) \simeq H_\bu (\cG_{N,c}(U)) ,
 \eeqn
+where $H_\bu$ is the Lie algebra homology.
 
 Similarly, for $N > 1$, let $\til \Obs_N$ be the factorization algebra of classical observables of the holomorphic twist of the worldvolume theory on a stack of $N$ fivebranes with the center of mass degrees of freedom removed.
-Then, there is an equivalence of factorization algebras
+Then, for each open set $U \subset Z$ we similarly expect
 \beqn
-\til\Obs_N \simeq \clie_\bu(\til \cG_{N,c}) .
+H^\bu \left(\til\Obs_N(U) \right) \simeq H_\bu (\til \cG_{N,c}(U)) .
 \eeqn
-In the language of superconformal $\cN=(2,0)$ theories our conjecture is that $\clie_\bu(\til \cG_{N,c})$ is the factorization algebra of classical observables of the holomorphic twist of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(N)$.
-\end{conj}
+In the language of superconformal $\cN=(2,0)$ theories our conjecture is that the value of the factorization algebra $\clie_\bu(\til \cG_{N,c})$ on an open set $U$ is equivalent to the space of observables of the holomorphic twist of the six-dimensional superconformal field theory associated to the Lie algebra $\lie{sl}(N)$ supported on $U$.
+
+We leave the study of the full factorization algebra structure present in $\Obs_N$ for future work, and emphasize here that we are only making expectations for the space of observables supported an open set.
+In the next section we consider local operators, and we will formulate a refined conjecture of the space of local operators as a module for the exceptional super Lie algebra $E(3|6)$. 
+
 
 %\end{document}

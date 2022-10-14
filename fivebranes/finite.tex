@@ -1,9 +1,10 @@
 \section{Conjectures for operators on fivebranes}
 \label{s:finite}
 
-In conjecture \ref{conj:fact} we have formulated a conjectural description of the factorization algebra of classical observables $\Obs_{N}$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
-In this section we begin to provide some evidence for this description at the level of local operators, which is just a small piece of the factorization algebra.
-As we reviewed just in the previous section, the space of local operators is what categorifies the specific superconformal index that we study in this paper.
+In conjecture \ref{conj:ops} we have formulated a conjectural description of the space of local operators $\Obs_{N}(0)$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
+As we reviewed just in the previous section, the space of local operators is what categorifies the superconformal index that we study in this paper.
+In this section we begin to provide some evidence for this description at the level of characters.
+%Of course, this is just a small piece of the full algebra structure present in the local operators.
 %The structure of a three-dimensional holomorphic factorization algebra induces algebraic operations on the algebra of local operators
 
 For each $N$ we have constructed a local Lie algebra $\cG_N$ on the worldvolume three-fold $Z$. 
@@ -11,10 +12,10 @@ Our conjecture is that the factorization algebra associated to a stack of $N$ ho
 The main goal of this section is to extract the algebra of local operators from this factorization algebra and to then deduce explicit formulas for the local character, and hence the superconformal index.
 
 For a stack of $N=1$ fivebranes, which corresponds to the abelian six-dimensional superconformal field theory, we find that our local character matches exactly with the expressions in the literature. 
-This is not a surprise as we have shown that even at the level of factorization algebras $\clie_\bu(\cG_{1,c})$ is quasi-isomorphic to~$\Obs_1$, see Proposition~\ref{prop:factabelian}.
+This is not a surprise as we have shown that even at the level of factorization algebras $\clie_\bu(\cG_{1,c})$ is quasi-isomorphic to the classical limit of~$\Obs_1$, see Proposition~\ref{prop:factabelian}.
 
 The main computation of this section is a closed formula for the local character of the factorization algebra $\clie_\bu(\cG_{N,c})$ for $N > 1$, see Theorem \ref{thm:finite}. 
-Following conjecture \ref{conj:fact} and the general discussion of \S \ref{sec:sucaindex} we are led to hypothesize a closed formula for the superconformal index for the theory on a finite number of fivebranes (in flat space).
+Following conjecture \ref{conj:ops} and the general discussion of \S \ref{sec:sucaindex} we are led to hypothesize a closed formula for the superconformal index for the theory on a finite number of fivebranes (in flat space).
 As far as the authors are aware of there is no closed formula for the refined superconformal index (with four independent fugacities) for the theory on a stack of $N > 1$ fivebranes.
 For small values of $N$ we expand our closed formulas to low orders in the fugacity $q$ (which roughly counts instanton charge) to match exactly with expressions in the literature. 
 
@@ -85,17 +86,11 @@ The expression matches exactly with the index of the abelian six-dimensional sup
 For example, compare with \cite[Eq. (3.1)]{Kim:2013nva} or \cite[Eq. (3.35)]{Bhattacharya:2008zy}.
 From now on, we will give all formulas for the index in terms of the parameters $y_1,y_2,y_3,y,q$.
 
-Generally speaking, after twisting there are enhancements of symmetries which are present in the original theory. 
-In \cite{SW6d} we have shown that at the level of the holomorphic twist the twisted superconformal algebra $\lie{osp}(6|2)$ gets enhanced to the infinite-dimensional exceptional super Lie algebra $E(3|6)$ \cite{KacClass}. 
-For the case of the single fivebrane theory, this implies that the local operators $\Obs_{1}(0)$ form a representation for $E(3|6)$. 
-
-This fact also follows from our holographic analysis. 
-In \S \ref{s:fact} we have expressed the restriction of the factorization algebra of observables of twisted eleven-dimensional supergravity to the three-fold $Z$ as the Chevalley--Eilenberg cochains of a local $L_\infty$ algebra $\cG$. 
-Recall that we have a decomposition of local Lie algebras $\cG = \oplus_{j \geq -1} \cG^{(j)}$ on the three-fold $Z$. 
-In Proposition \ref{lem:single} we have shown that $\clie_\bu (\cG_{c}^{(-1)})$ is equivalent to the factorization algebra $\Obs_{1}$.
+In Proposition \ref{lem:single} we have shown that $\clie_\bu (\cG_{c}^{(-1)})$ is equivalent to the factorization algebra $\Obs^{cl}_{1}$ encoding the classical observables  of the holomorphic twist on a single fivebrane.
 On $\C^3$, the global sections of the local Lie algebra $\cG^{(0)}$ is closely related to $E(3|6)$---the $\infty$-jets of $\cG^{(0)}$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$.
 Combining these facts we see that $\Obs_{1}(0)$ is a module for $E(3|6)$. 
 This module turns out to be a one-dimensional extension of an irreducible $E(3|6)$-module which was classified in~\cite{KR2}. 
+
 %and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
 
 %\parsec
@@ -227,7 +222,7 @@ And after removing the center of mass degrees of freedom, our conjecture is $\ti
 Just as in the abelian case, the local operators $\til \Obs_2(0)$ form a module over $E(3|6)$.
 It turns out that this module is irreducible~\cite{KR2}.
 
-We can now state a decategorified version of conjecture \ref{conj:fact} at the level of superconformal indices, or local characters.
+We can now state a decategorified version of conjecture \ref{conj:ops} at the level of superconformal indices, or local characters.
 
 \begin{conj}\label{conj:6dtwo}
 The superconformal index of the six-dimensional superconformal theory of type $A_1$ is given by

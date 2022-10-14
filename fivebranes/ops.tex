@@ -8,7 +8,7 @@
 \section{Local operators in twisted $M$ theory}
 
 The notion of a factorization algebra captures both the local operators of a theory together with the non-local operators that on can define from the local ones via descent.
-From the data of a factorization algebra, one can recover local operators by the following formal construction. 
+From the data of a factorization algebra, one can recover the space of local operators by the following formal construction. 
 Let $\Obs$ be the factorization algebra of observables of some theory defined on a smooth manifold $M$.
 The space of local operators at point $p \in M$ is, in a precise sense, the limiting behavior of the factorization algebra evaluated on the system of open sets which contain the point~$p$. 
 
@@ -453,6 +453,38 @@ To fit with the notation used in this paper, the superconformal index can be wri
 \cI(y_i,y,q) = \Tr_{\cH^Q} (-1)^F q^{H + \frac13 (J_1+J_2+J_3)} y_1^{J_1} y_2^{J_2} y_3^{J_3} y^{R_1 - R_2} .
 \eeqn
 This agrees precisely with the local character $\chi(y_i,y,q)$ with the evident change of coordinates for the Cartan of $\lie{osp}(6|2)$. 
+
+\subsection{Exceptional symmetry and a finite $N$ conjecture}
+
+Generally speaking, after twisting there are enhancements of symmetries which are present in the original theory. 
+We expect that the same occurs for any six-dimensional superconformal theory. 
+In \cite{SW6d} we have shown that at the level of the holomorphic twist the twisted superconformal algebra $\lie{osp}(6|2)$ gets enhanced to the infinite-dimensional exceptional super Lie algebra $E(3|6)$ \cite{KacClass}. 
+For the case of the theory on a stack of $N$ fivebranes, whose factorization algebra we denote by $\Obs_N$, this implies that the local operators $\Obs_{N}(0)$ form a representation for $E(3|6)$.
+
+Our goal is to gain knowledge of the structure of $\Obs_N(0)$ as an $E(3|6)$-representation from our holographic analysis of the previous section.
+Indeed, in \S \ref{s:fact} we have expressed the restriction of the factorization algebra of observables of twisted eleven-dimensional supergravity to the three-fold $Z$ as the Chevalley--Eilenberg cochains of a local $L_\infty$ algebra $\cG$. 
+Recall that we have a decomposition of local Lie algebras $\cG = \oplus_{j \geq -1} \cG^{(j)}$ on the three-fold $Z$. 
+From this decomposition we have defined a family of local Lie algebras $\cG_{N}$ on $Z = \C^3$ for $N=1,2,\ldots$.
+
+In \S \ref{sec:factsummary} we explained the expectation that to an open set $U \subset \C^3$, the Lie algebra cohomology of $\cG_{N,c}(U)$ is equivalent to the observables $\Obs_N(U)$ of the six-dimensional theory supported on $U$. 
+Each $\cG_N$ is acted on by the local Lie algebra $\cG^{(0)} = \cE(3|6)$.
+The $\infty$-jets of $\cE(3|6)$ at $0 \in \C^3$ is exactly the exceptional super Lie algebra $E(3|6)$.  
+Thus, for every $N$, the space of local operators of the factorization algebra $\clie_\bu(\cG_{N,c})$ is naturally and $E(3|6)$-representation. 
+At the level of local operators we can make the following conjecture, which we will further elucidate at the level of characters for $E(3|6)$ in the next section.
+
+\begin{conj}
+\label{conj:ops}
+Let $\Obs_N(0)$ be the local operators of the theory on a stack of $N$ fivebranes wrapping $\C^3$ in $\R \times \C^5$. 
+There is an equivalence of $E(3|6)$-representations
+\beqn
+\Obs_N(0) \simeq \clie_\bu (\cG_{N,c}) (0) .
+\eeqn
+Similarly, let $\til \Obs_{N}(0)$ be the local operators of the theory on a stack of $N \geq 2$ fivebranes with the center of mass degrees of freedom removed. 
+There is an equivalence of $E(3|6)$-representations
+\beqn
+\til \Obs_N(0) \simeq \clie_\bu (\til\cG_{N,c}) (0) .
+\eeqn
+\end{conj}
 
 
 %The Witten index is protected under twisting---in our setup the index $\cI(t_1,t_2,r,q)$ can be computed in the minimal twist of the superconformal theory we start with.
