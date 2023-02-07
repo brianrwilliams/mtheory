@@ -1,29 +1,33 @@
 %%% GENERAL PACKAGES
-\usepackage{mathrsfs,amsmath,amscd,amsthm,amssymb,verbatim,subfigure,enumerate,graphicx,todonotes,grffile,longtable,wrapfig,rotating,textcomp,capt-of,xcolor,eurosym,amsfonts,amsaddr,tikz-feynman}
+\usepackage{mathrsfs,amsmath,amscd,amsthm,amssymb,verbatim,subfigure,enumerate,graphicx,todonotes,grffile,longtable,wrapfig,rotating,textcomp,capt-of,xcolor,eurosym}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[normalem]{ulem}
-\usepackage[centerboxes,boxsize=1ex,nobaseline,aligntableaux=center]{ytableau}
-\usepackage{enumitem}
 
-\usepackage{breakurl}
 
 %%% FORMATTING
-\usepackage[top=1in, bottom=1.25in, left=1in, right=1in,footskip=.5in]{geometry}
+%\usepackage[top=1in, bottom=1.2in, left=1in, right=1in,footskip=.5in]{geometry}
+
+\usepackage[top=1in, bottom=1.2in, left=1.5in, right=1.5in,footskip=.5in]{geometry} %for editing
+
 %\linespread{1.2}
 %\textwidth=14.5cm 
 %\oddsidemargin=1cm
 %\evensidemargin=1cm
 \setlength{\parskip}{7pt}
 %\setlength{\headsep}{20pt}
-\usepackage{mathabx} %nicer looking tensor products / derivatives
+%\usepackage{mathabx} %nicer looking tensor products / derivatives
+
+\numberwithin{equation}{section} %equations numbered by section
 
 %%% FONT PACKAGES
 \usepackage{amsfonts,slashed}
 \usepackage[bbgreekl]{mathbbol}
-\usepackage[mathscr,mathcal]{euscript}
 \usepackage{cmupint} %cool integrals
- 
+\usepackage{mathpazo}
+%\usepackage{fouriernc}
+\usepackage[mathscr,mathcal]{euscript}
+
 %%% BIB
 
 \usepackage[backend=biber,
@@ -40,7 +44,7 @@
 \renewbibmacro{in:}{}
 %\usepackage[capitalise]{cleveref}
 \setlength{\headheight}{14pt}
-\renewcommand*{\bibfont}{\footnotesize}
+\renewcommand*{\bibfont}{\footnotesize}         
 
 %%% REFS
 
@@ -109,10 +113,13 @@
 \newtheorem{dfn}[thm]{Definition}
 \newtheorem{dfn/lem}{Definition/Lemma}
 \newtheorem{assumption}{Assumption}
-
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{slogan}[thm]{Slogan}
 \theoremstyle{remark}
 \newtheorem{rmk}[thm]{Remark}
 \newtheorem{eg}[thm]{Example}
+\newtheorem{obs}[thm]{Observation}
 
 %%% EQUATION MACROS
 
@@ -150,32 +157,26 @@
 \def\til{\Tilde}
 
 % rm shortcuts
+\newcommand{\op}{\operatorname}
 \def\ev{{\rm ev}}
-\def\Obs{{\rm Obs}}
 \def\Ch{{\rm Ch}}
-\def\dgLie{{\rm dgLie}}
 \def\dR{{\rm dR}}
 \DeclareMathOperator{\Sym}{Sym}
 \def\d{{\rm d}}
 \DeclareMathOperator{\GL}{GL}
-\def\ch{{\rm ch}}
+\DeclareMathOperator{\ch}{ch}
 \def\Def{{\rm Def}}
 \def\Map{{\rm Map}}
 \def\id{\mathbb{1}}
-\def\ch{{\rm ch}}
 \def\Aut{{\rm Aut}}
 \def\Rep{{\rm Rep}}
 \def\Fr{{\rm Fr}}
 \def\Mod{{\rm Mod}}
 \def\Bun{{\rm Bun}}
-\def\End{{\rm End}}
-\def\ad{{\rm ad}}
 \def\Ext{{\rm Ext}}
-\def\Gr{{\rm Gr}}
 \def\Sect{{\rm Sect}}
 \def\Hom{{\rm Hom}}
 \def\dvol{{\rm dvol}}
-\def\Vect{{\rm Vect}}
 
 % font macros
 \def\cA{\mathcal A}\def\cB{\mathcal B}\def\cC{\mathcal C}\def\cD{\mathcal D}
@@ -235,7 +236,6 @@
 %random
 \def\Reszero{\underset{z=0}{\rm Res}}
 \def\Res{{\rm Res}}
-\def\L8{L_\infty}
 \def\Vert{\mathbb{V}{\rm ert}}
 \def\hSym{\Hat{\Sym}}
 \def\ll{\llbracket}
@@ -279,10 +279,10 @@
 
 %% Note: I did this to avoid clutter, but I'm not wedded to the change!
 
-\def\R{\mathbb{R}}
-\def\C{\mathbb{C}}
-\def\Q{\mathbb{Q}}
-\def\Z{\mathbb{Z}}
+\def\R{\mathbf{R}}
+\def\C{\mathbf{C}}
+\def\Q{\mathbf{Q}}
+\def\Z{\mathbf{Z}}
 \def\N{\mathcal{N}}
 \def\FSF{\mathscr{F}}
 \def\Berk{\mathscr{D}}
@@ -293,16 +293,11 @@
 \DeclareMathOperator{\Spin}{Spin}
 \DeclareMathOperator{\spin}{spin}
 \DeclareMathOperator{\Span}{span}
-\DeclareMathOperator{\Dol}{Dol}
 \def\lie#1{\ensuremath{\mathfrak{#1}}}
 \def\su{\mathfrak{su}}
 \def\so{\lie{so}}
-\def\Sy{\ensuremath{\mathsf{S}}}
 \def\O{\ensuremath{\mathscr{O}}}
-\def\ST{M}
-\def\STlie{\st^0}
 \def\bu{\bullet}
-\def\strict{\ensuremath{\text{strict}}}
 
 \hyphenation{su-per-sym-me-try}
 \hyphenation{Che-val-ley}
@@ -311,3 +306,70 @@
 \hyphenation{Lo-ren-tz-ian}
 \hyphenation{Eu-clid-ean}
 \def\N{\cN}
+
+%superconformal
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\Ham}{Ham}
+\DeclareMathOperator{\HamVect}{HamVect}
+%\def\Vect{{\rm Vect}}
+\def\hol{\ensuremath{\text{\protect\textrm{hol}}}}
+\def\hVect{\Vect^{\hol}}
+\def\cl{\ensuremath{\text{\protect\textrm{cl}}}}
+
+\def\Res{{\rm Res}}
+
+\def\Bar{\overline}
+\def\zbar{\Bar{z}}
+\def\wbar{\Bar{w}}
+
+\def\dslash{\slashed{\partial}}
+\def\codslash{\left(\slashed{\partial} + \slashed{A}\right)}
+\def\codslashbar{\left(\bar{\slashed{\partial}} + \slashed{\bar{A}}\right)}
+%\def\codslashbar{CB}
+\def\dCE{\kappa}
+\DeclareMathOperator{\Fl}{Fl}
+\def\QBV{\ensuremath{Q_\text{BV}}}
+\def\sca{\lie{c}}
+\def\hattensor{\mathbin{\Hat{\otimes}}}
+\def\ev{{\rm ev}}
+\def\Wedge{\bigwedge}
+\def\hD{\Hat{D}}
+\def\hT{\Hat{\sT}}
+\def\W{{\rm W}}
+\def\U{\ensuremath{\mathrm{U}}}
+\def\SU{\ensuremath{\mathrm{SU}}}
+\def\MU{\ensuremath{\mathrm{MU}}}
+\def\O{\ensuremath{\mathrm{O}}}
+\def\SO{\ensuremath{\mathrm{SO}}}
+\DeclareMathOperator{\curv}{curv}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Conf}{Conf}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Obs}{Obs}
+\DeclareMathOperator{\PolyVec}{PV}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\deRham}{deRham}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\SAff}{SAff}
+\DeclareMathOperator{\SConf}{SConf}
+\def\ep{\varepsilon}
+\def\cred{{\rm C}_{\rm red}}
+\newcommand{\thfd}{\Bar{D}}
+\newcommand{\thfdel}{D} 
+
+\DeclareMathOperator{\wt}{wt}
+
+%%%RANDOM
+
+\newcommand{\defterm}[1]{\textbf{\emph{#1}}}
+
+%circled numbers to use in diagrams
+\newcommand*\circleds[1]{\tikz[baseline=(char.base), transform canvas={scale=0.6}]{
+            \node[shape=circle,draw,solid,inner sep=2pt] (char) {#1};}}
+%circled numbers to use in line
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,solid,inner sep=2pt] (char) {#1};}}   

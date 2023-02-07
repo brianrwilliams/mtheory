@@ -77,14 +77,14 @@ The only component of the Lie bracket involving two fields of type $\gamma$ is o
 Next, we expand the action functional near the background where $(1,0)$ component of $\gamma$ takes the value $\gamma^{1,0}$ satisfying Equation \eqref{eqn:background}.
 This will generate new kinetic and interacting terms which we can extract by inserting a formal parameter $\delta$ and expressing the action functional in terms of the deformed field $\Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
 
-There are two types of interactions in the original theory.
+In addition to the kinetic terms, there are two types of interactions in the original theory.
 The first is
 \begin{equation}\label{eqn:int1}
   \frac12 \int_{X\times Z \times L} \frac{1}{1-\nu} \left(\del \gamma \vee \mu^2 \right) \wedge (\omega_Z \wedge \Omega_X)
 \end{equation}
 and the second is
 \begin{equation} \label{eqn:int2}
-  \frac16\int_{X \times Z \times L} \frac{1}{1-\nu} \gamma \partial \gamma \partial \gamma .
+  \frac16\int_{X \times Z \times L} \gamma \partial \gamma \partial \gamma .
 \end{equation}
 
 %We can integrate Equation (\ref{eqn:int1}) by parts to put it in the form $\frac12 \int_{X \times Z \times L} \left[(\partial \gamma) \vee (\mu \wedge \mu) \right]$ where $\mu \wedge \mu$ is the wedge product of polvector fields.\brian{there might be some factors I'm being sloppy with here}
@@ -104,14 +104,14 @@ It will be convenient to further expand this into the components $\mu_X, \mu_Y, 
 Next, we expand Equation (\ref{eqn:int2}) around $\gamma \to \Tilde{\gamma} = \gamma + \delta \gamma^{1,0}$.
 This is
 \[
-  \frac16 \int \frac{1}{1-\nu} \gamma \partial \gamma \partial \gamma + \frac{\delta}{2} \int \frac{1}{1-\nu} \left(\gamma \partial \gamma\right) \wedge \omega_Z .
+  \frac16 \int \gamma \partial \gamma \partial \gamma + \frac{\delta}{2} \int \left(\gamma \partial \gamma\right) \wedge \omega_Z .
 \]
 Notice that there are no $\delta^2$ terms since $\partial \gamma^{1,0} \partial \gamma^{1,0} = 0$.
 Again, we further expand this into holomorphic components along $X,Z$:
 \begin{multline}
-\frac16 \int \frac{1}{1-\nu} \left(\gamma_X \partial^Z \gamma_X \partial^Z \gamma_X +\gamma_X \partial^X \gamma_X \partial^Z \gamma_Z +  \gamma_X \partial^X \gamma_Z \partial^X \gamma_Z \right)
+\frac16 \int \left(\gamma_X \partial^Z \gamma_X \partial^Z \gamma_X +\gamma_X \partial^X \gamma_X \partial^Z \gamma_Z +  \gamma_X \partial^X \gamma_Z \partial^X \gamma_Z \right)
 \\
-\frac{\delta}{2} \int \frac{1}{1-\nu} \left(\gamma_X \partial^X \gamma_X \right) \wedge \omega_Z 
++ \frac{\delta}{2} \int \left(\gamma_X \partial^X \gamma_X \right) \wedge \omega_Z 
 \label{eqn:delta2}
 \end{multline}
 
@@ -202,7 +202,7 @@ It is given by the composition
 \]
 given by applying the holomorphic de Rham operator along $X$ followed by contracting with the inverse holomorphic volume form along $X$. 
 
-We identify this linear BRST complex, up to quasi-isomorphism, with a smaller BRST complex. 
+We replace this linear BRST complex, up to quasi-isomorphism, with a smaller BRST complex. 
 Consider the complex
 \beqn
 \Omega^{0,\bu}_Z \hotimes \Omega^{\bu,\bu}_X \hotimes \Omega^\bu_L = \oplus_{k =0}^3 \Omega^{0,\bu}_Z \hotimes \Omega^{k,\bu}_X \hotimes \Omega^\bu_L [-k] 
@@ -210,15 +210,26 @@ Consider the complex
 which is equipped with the differential $\dbar^Z + \dbar^X + \del^X + \d^L_{\dR}$. 
 Write $\alpha = \alpha^0 + \cdots + \alpha^3$ for a field in this complex, using the decomposition on the right hand side. 
 
-There is a map from this smaller BRST complex to the original defined by the following equations 
+There is a non-linear map of BRST complexes from this one to the original one defined by the following equations 
 \begin{multline}
-\mu_Z = \omega_Z^{-1} \del^Z \alpha^0, \quad \mu_X = \Omega_X^{-1} \alpha^2, \quad \nu = \Omega_X^{-1} \alpha^3 \\
-\beta = \alpha^0, \quad \gamma_X = \alpha^1 , \quad \gamma_Z = 0 .
+\mu_Z = e^{-\til{\alpha}^3} \omega_Z^{-1} \del^Z \alpha^0, \quad \mu_X = e^{-\til{\alpha}^3} \Omega_X^{-1} \alpha^2, \quad \nu = e^{-\til{\alpha}^3} \til{\alpha}^3 \\
+\beta = e^{\til{\alpha}^3} (\alpha^0 + \Omega_X^{-1} \alpha^1 \alpha^2), \quad \gamma_X = e^{\til{\alpha}^3} \alpha^1 , \quad \gamma_Z = 0 .
+\label{eqn:g2map}
 \end{multline}
-This map is a quasi-isomorphism of linear BRST complexes. 
+In the above equation we have introduced the notation $\til{\alpha}^3 = \Omega_X^{-1} \vee \alpha^3$. 
+The induced map of linear BRST complexes is a quasi-isomorphism. 
+We show that the full non-linear map intertwines the action functionals and hence defines an equivalence of BV theories. 
 
-Restricting the deformed BV action $I(\gamma+\gamma^{1,0})$ along this map we obtain a new interaction $\Tilde{I}(\alpha)$. 
-It has the following form
+The restriction of the kinetic term $\beta \div \mu$ along \eqref{eqn:g2map} is
+\beqn
+\alpha^0 \alpha^2 \del^X \til{\alpha}^3 + \alpha^1 (\alpha^2)^2 \del^X \til{\alpha}^3 + \alpha^0 \del^X \alpha^2 + \alpha^1 \alpha^2 \del^X \alpha^2 .
+\eeqn
+
+Restricting the action \eqref{eqn:delta1} along the map \eqref{eqn:g2map} we obtain
+\begin{multline}
+\frac12 \alpha^1 (\alpha^2)^2 \del^X \til{\alpha}^3 + \frac12 \del^X \alpha^1 (\alpha^2)^2 
+\end{multline}
+
 \begin{multline}
 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \left(\frac12 \del^X \alpha^1  [ \alpha^2 \vee (\alpha^2 \vee \Omega_X^{-1})] + \alpha^2 \del^Z \alpha^1 \del^Z \alpha^0\right) \\
 + \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^1 \partial^Z \alpha^1 \partial^Z \alpha^1 \\ + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \alpha^3 \partial^Z \alpha^0 \partial^Z \alpha^0 + \frac{\delta}{2} \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha^3} \partial^X \alpha^1 (\alpha^1 \Omega^{-1}_X \alpha^3) .
@@ -251,7 +262,7 @@ This is the first term in \eqref{eqn:Iprime}.
 
 Next, we compute
 \[
-\{I_{CS}, K\} = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_Z)] \{\alpha,\alpha\} 
+\{I_{CS}, K\} = \frac16 \int \frac{\omega_Z}{1-\Omega^{-1}_X \alpha} [\alpha \vee (\alpha \vee \Omega^{-1}_X)] \{\alpha,\alpha\} 
 \]
 which is the second term in \eqref{eqn:Iprime}. 
 \end{proof}

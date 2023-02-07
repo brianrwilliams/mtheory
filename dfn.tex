@@ -189,7 +189,7 @@ The pairing is defined by the formula
 \[
 \int^\Omega_{X \times S} \mu \vee \gamma + \int^\Omega_{X \times S} \nu \beta 
 \]
-where $\int^\Omega_{X \times S} \alpha = \int_{X \times S} \alpha \wedge \Omega$. 
+where $\int^\Omega_{X \times S} \alpha \define \int_{X \times S} \alpha \wedge \Omega$. 
 
 We have constructed two equivalent descriptions of the BF theory which share the linear BRST complex \eqref{eq:sympfields}.
 Explicitly, the action functional for BF theory associated to the local dg Lie algebra $\cL_0(X) \otimes \Omega^{\bu}(S)$ is
@@ -260,7 +260,7 @@ The main result of this section is the following.
 \label{thm:dfn}
 Let $X$ be a Calabi--Yau five-fold and $S$ a smooth one-dimensional manifold, and consider the BV theory $(\cE, S_{BF,\infty})$ on $X \times S$ defined above. The local functional 
   \deq{
-    J = \frac16 \gamma \wedge \del \gamma \wedge \del \gamma ,
+    J = \frac16 \int_{X \times S} \gamma \wedge \del \gamma \wedge \del \gamma ,
   }
   where $\gamma \in \Omega^{1,\bu}(X;S)$, defines a deformation of~$(\cE,S_{BF,\infty})$ as a $\Z/2$-graded BV theory.
 \end{thm}
@@ -616,6 +616,8 @@ Recall that the plethystic exponential takes sums to products and monomials to g
 \subsection{One-loop quantization}
 
 In \cite{GRWthf} an existence result for one-loop quantizations of mixed topological-holomorphic theories was established. 
+The crucial thing is that these results apply to more than just topological-holomorphic theories arising from twists of supersymmetric gauge theories.
+They also apply to twists of supergravity theories. 
 We apply this to the eleven-dimensional model at hand. 
 
 The eleven-dimensional theory is a mixed topological-holomorphic theory.
@@ -625,7 +627,7 @@ On flat space $\CC^5_z \times \RR_t$, this means that the theory is translation 
 \item the vector field $\partial_t$ corresponding to infinitesimal translations in the $\RR_t$ direction. 
 \end{itemize}
 
-Recall that the action functional of the eleven-dimensional theory is $S_{BF, \infty} + c J$. 
+Recall that the action functional of the eleven-dimensional theory is $S_{BF, \infty} + g J$. 
 Since the cubic and higher interactions only involve holomorphic derivatives, we obtain the following directly from the main result of \cite{GRWthf}. 
 
 \begin{thm}
@@ -641,4 +643,4 @@ The presence of the functional $J = \frac16 \int \gamma \del \gamma \del \gamma$
 %see \S \ref{s:omega},
 In \cite{CostelloM5}, Costello argues that, upon performing the $\Omega$-background, the theory localizes to a five-dimensional theory on $\CC^2 \times \RR$. 
 Via a cohomological argument, it is shown that this effective five-dimensional theory exhibits an essentially unique quantization in perturbation theory. 
-We will return to the existence and uniqueness of a higher order quantization of the eleven-dimensional theory in future work. 
+We will return to the existence and uniqueness of a higher order quantization of the eleven-dimensional theory (before turning on the $\Omega$-background) in future work. 

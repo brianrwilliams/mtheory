@@ -1,0 +1,831 @@
+%\documentclass[11pt]{amsart}
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
+%
+%\begin{document}
+
+\section{Representations for the super Lie algebra $E(3|6)$}
+\label{s:kr}
+
+A result of \cite{RSW} relates the global sections of the $L_\infty$ algebra $\cL_{sugra}$ describing the minimal twist of eleven-dimensional supergravity on $\R \times \C^5$ with a central ($L_\infty$) extension of the exceptional super Lie algebra $E(5|10)$.
+From the point of view of (twisted) extended objects in $M$ theory like membranes and fivebranes there are two very important subalgebras of $E(5|10)$: the exceptional super Lie algebras $E(1|6)$ and $E(3|6)$. 
+
+The exceptional super Lie algebras $E(1|6)$ and $E(3|6)$ play the role of infinite-dimensional `enhanced' superconformal algebras---we expect that they act on the holomorphic twist of any superconformal field theory in dimensions three and six, respectively.
+From the point of view of $M$ theory these super Lie algebras act as symmetries of supergravity backgrounds which are twisted analogs of $AdS_4 \times S^7$ and $AdS_7 \times S^4$, respectively---these arise from backreacting, in flat space, some number of twisted membranes and fivebranes, respectively. 
+
+Given this elegant relationship between twisted supergravity and these exceptional super Lie algebras, we ask the natural question of the consequences of the representation theory of such exceptional algebras to $M$-theory. 
+The goal in this section is to relate a particular decomposition of the central extension of $E(5|10)$ to local operators on a stack of membranes and fivebranes.
+
+In \cite{KR2}, a $\Z$-graded decomposition of $E(5|10)$ is defined which has the property that the weight zero subalgebra is isomorphic to the exceptional super Lie algebra $E(3|6)$.
+We compare our decomposition of the $!$-dual factorization algebra of $\clie^\bu(\cL_{sugra})$ on the complex three-fold $Z = \C^3$, see \S \ref{s:fact}, to this decomposition considered in \cite{KR2}.
+Naturally, every other graded summand appearing in the decomposition of $E(5|10)$ is a module for $E(3|6)$---it turns out that every module that appears in this way is irreducible.
+Following the description of these irreducible modules constructed in \cite{KR1,KR2} we compute (un)refined characters and proceed to give a conjectural procedure for computing (un)refined fivebrane indices.
+
+There is a different decomposition of $E(5|10)$ (and its central extension) which has as its weight zero piece the subalgebra $E(1|6)$; this decomposition is natural from the point of view of membranes.
+We comment on this in \S \ref{sec:kacmembrane}.
+%an embedding of $E(3|6)$ into $E(5|10)$ is constructed by considering the following auxiliary weight grading on the super Lie algebra $E(5|10)$. 
+%We first split the coordinates on the formal five-disk as
+%\[
+%(z_i ; w_a) \in \Hat{D}^3 \times \Hat{D}^2 .
+%\]
+%In the fivebrane picture, the coordinates $z_i$ parameterize the holomorphic directions along the brane and the coordinates $w_a$ are the holomorphic coordinates transverse to the brane.
+
+\subsection{The fivebrane decomposition of $\Hat{E(5|10)}$}
+
+%Following the prescription of twisted holography our ansatz for 
+
+We begin by turning to the algebraic side of things and start by recalling the weight decomposition of $E(5|10)$ constructed in \cite{KR2}.
+In \S \ref{s:kacfivebrane} we return to fivebranes and use this to give a  characterization of local operators of the twisted theory.
+
+\parsec[s:e510weight]
+
+As above, we denote by $\{z_i\}$ the local coordinates along the three-fold $Z=\C^3$ that the fivebrane wraps and $\{w_a\}$ for the transverse holomorphic coordinates to the zero section in the five-fold ${\rm Tot}(K_{\C^3}^{1/2} \otimes \C^2)$.
+
+The even part of the super Lie algebra $E(5|10)$ is formal vector fields on the formal disk $\Hat{D}^3_z \times \Hat{D}^2_w$, whose elements we denote by $\mu$. 
+The odd part is given by the space of closed two-forms on the formal disk, whose elements we denote by~$\alpha$.
+Equivalently, by the formal Poincar\'e lemma we can think of the space of closed two-forms as the space of equivalence classes of one-forms $\Omega^1(\Hat{D}^3_z \times \Hat{D}^2) / \text{Im}(\del)$. 
+
+Assign the following weights to the super Lie algebra $E(5|10)$. 
+\begin{itemize} 
+\item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
+\item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
+\item the parity of an element carries an additional weight of $-1$. 
+Thus, for example, the odd element $[w_1 \d z_1] \in \Pi \Omega^1(\Hat{D}^5)/{\rm Im}(\del)$ carries weight $+1 - 1 = 0$. 
+(If we think about the odd part as the space of closed two-forms then equivalently this grading translates to the one-form symbol $\d(-)$ as carrying weight $-1/2$.)
+\end{itemize} 
+The weight grading is concentrated in degrees $\geq -1$. 
+In particular, there is a decomposition of super vector spaces
+\beqn\label{eqn:decomp1}
+E(5|10) = \til V_{-1} \times \prod_{n \geq 0} V_n 
+\eeqn
+with $\til V_{-1}$ being the weight $-1$ subspace and $V_n$ being the weight $n$ subspace for $n \geq 0$.  
+It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. 
+In weight zero, $V_0$ is isomorphic to the super Lie algebra $E(3|6)$.
+In particular, 
+\beqn 
+\label{eqn:e36iso}
+E(3|6) \cong V_0 \subset E(5|10)
+\eeqn
+is a sub super Lie algebra and $\til{V}_{-1}, V_n, n \geq 0$ is a module for $E(3|6)$. 
+
+\parsec[s:e510central]
+
+The twist of eleven-dimensional supergravity is more closely related to an $L_\infty$ central extension of $E(5|10)$ of the form
+\[
+0 \to \C \to \Hat{E(5|10)} \to E(5|10) \to 0 .
+\]
+See \cite[\S 3]{RSW}, and \S \ref{s:kacfivebrane}.
+The central extension is defined by the (totally even) three-linear cocycle
+\beqn\label{eqn:e510central}
+(\mu, \mu' , \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>_{z=w=0} \in \C .
+\eeqn
+Since this is a three-linear functional the model we use for the central extension is a super $L_\infty$ algebra (with zero one-ary operation) rather than just a super Lie algebra.
+
+We can extend the weight grading of $E(5|10)$ from \S \ref{s:e510weight} to a weight grading of the central extension $\Hat{E(5|10)}$ by declaring that the central term have weight $-1$.
+In this way, we get a related decomposition of super $L_\infty$ algebras
+\beqn\label{eqn:decomp1}
+\Hat{E(5|10)} = \prod_{n \geq -1} V_n
+\eeqn
+We will refer to this as the \textit{fivebrane decomposition} of $\Hat{E(5|10)}$.
+Here $V_{-1}$ is a $\C$-extension of the module $\til V_{-1}$ defined in the decomposition above.
+Notice that for $n \geq 0$ the $V_n$'s are the same as in the non centrally extended case.
+In particular, we have the following. 
+
+\begin{lem} 
+The embedding $E(3|6) \hookrightarrow E(5|10)$ lifts to a map of super $L_\infty$ algebras 
+\[
+E(3|6) \hookrightarrow \Hat{E(5|10)} .
+\]
+\end{lem}
+%\begin{proof}
+%It suffices to show that the central extension of $E(5|10)$ splits when restricted to the subalgebra $E(3|6)$. 
+%Recall that the even cocycle defining this extension is 
+%\[
+%(\mu, \mu', \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>|_{z=0} .
+%\]
+%This is clearly zero since the image 
+%\end{proof}
+
+%\parsec[s:localopsdecompose]
+%Notice that as a consequence of this decomposition there is a corresponding decomposition of local operators of the eleven-dimensional theory on $\C^5 \times \R$. 
+%By corollary \ref{cor:sugraops} there is a decomposition of $\Z/2$-graded cochain complexes 
+%\begin{align*}
+%\Obs_{sugra} (0) & = \clie^\bu \left( \Hat{V}_{-1} \times \prod_{n \geq 0} V_n \right) \\
+%& = \Sym(\Pi \Hat{V}^*_{-1}) \otimes \bigotimes_{n \geq 0} \Sym\left(\Pi V^*_n\right) .
+%\end{align*}
+%The differential $Q$, which is defined using the Lie bracket on $\Hat{E(5|10)}$ is of the form
+%$Q = Q_0 + \Hat{Q}$ where $Q_0$ acts on linear generators via
+%\[
+%Q_0 \colon V^*_n \to \oplus_{m + \ell = n} V^*_m \otimes V^*_\ell
+%\]
+%and $\Hat{Q}$ acts on linear generators via
+%\[
+%\Hat{Q} \colon \CC \to \oplus_{m + \ell + n = -1} V^*_m \otimes V^*_\ell \otimes V^*_n .
+%\]
+
+\parsec[s:e510grading]
+
+There is another auxiliary grading that we will make use of which is also defined in \cite{KR2,KacClass}. 
+The super Lie algebra $E(5|10)$ carries a (non-cohomological) consistent $\Z$-grading by declaring 
+\begin{itemize}
+\item $\deg z_i = \deg w_a = 2$, so that $\deg \del_{z_i} = \deg \del_{w_a} = -2$. 
+\item Parity carries an additional degree of $-3/2$, so that $\deg \d z_i = \deg \d w_a = -1/2$.
+\end{itemize}
+This consistent $\Z$-grading extends to the central extension of $E(5|10)$ by declaring that the central term has degree $-5$. 
+To distinguish this from the `weight' grading above, we will refer to this grading as `degree'.
+
+\subsection{Irreducible representations of $E(3|6)$}
+We recall the requisite knowledge of irreducible representations of $E(3|6)$ as characterized in~\cite{KR1,KR2,KR3}.
+The main goal of this section is to deduce explicit formulas for certain irreducible modules which we will, in turn, relate to indices of local operators of the twisted fivebrane theory. 
+
+Since we have realized the super Lie algebra $E(3|6)$ as the weight zero subalgebra of the central extension of $E(5|10)$ we see that it carries an induced consistent $\Z$-grading by degree. 
+Denote by $\fg_j$ the degree $j$ super subspace of $E(3|6)$.
+One can check that the algebra is supported in degrees $j \geq -2$ so that as a super vector space
+\[
+E(3|6) = \prod_{j \geq -2} \fg_j
+\]
+where for small values of $j$ we have:
+\begin{itemize}
+\item $\fg_{-2} = {\rm span}\{\del_{z_i}\; | \; {i=1,2,3}\}$ which is a completely even super vector space. 
+\item $\fg_{-1} = {\rm span}\{\d z_i \wedge \d w_a \; | \; i=1,2,3, a=1,2\}$ which is a completely odd super vector space.
+\item $\fg_0 \cong \lie{sl}(3) \oplus \lie{sl}(2) \oplus \lie{gl}(1)$ which is a completely even super vector space.
+Explicitly, the Cartan of $\lie{sl}(3)$ is spanned by 
+\[
+h_1 = z_1 \del_{z_1} - z_2 \del_{z_2}, \quad h_2 = z_2 \del_{z_2} - z_3 \del_{z_3} .
+\]
+The Cartan of $\lie{sl}(2)$ is spanned by
+\[
+h_3 = w_1 \del_{w_1} - w_2 \del_{w_2} .
+\]
+The Cartan of $\lie{gl}(1)$ is spanned by
+\[
+Y = \frac23 \sum_{i=1,2,3} z_i \del_{z_i} - \sum_{a=1,2} w_a \del_{w_a} .
+\]
+\end{itemize}
+
+\parsec[s:vermas]
+
+We are interested in a class of irreducible modules for $E(3|6)$ that can be constructed via resolutions of particular Verma modules \cite{KR2} that we now recall.
+Denote by $\fg = E(3|6)$ and let 
+\[
+\fg_{<0} = \fg_{-2} \oplus \fg_{-1} , \quad \lie{g}_{>0} = \oplus_{j>0} \fg_j 
+\]
+so that $\fg = \fg_{<0} \oplus \fg_0 \oplus \fg_{>0}$. 
+Given a $\fg_0$-module $V$ let 
+\beqn\label{eqn:verma1}
+M (V) \define U(\fg) \otimes_{U(\fg_{\geq 0})} V 
+\eeqn
+be the induced $\fg$-module. 
+Notice that as super vector spaces we have 
+\beqn
+M(V) = \Sym(\fg_{<0}) \otimes_\C V .
+\eeqn
+
+We will be interested in Verma modules associated to two particular types of $\fg_0$-modules
+\begin{align*}
+V_A & = \C[z_i, w_a] \\
+V_B & = \C[z_i, \del_{w_a}]_{[2]} .
+\end{align*}
+Here, the subscript $[2]$ means that we shift $\lie{gl}(1)$ to act by the differential operator 
+\[
+Y_{[2]} = Y + 2 \id_{V_B} .
+\]
+For $X = A,B$ we let 
+\[
+V_X^{m,n} = \{f \in V_X \; | \; \sum z_i \del_{z_i} f = m f , \quad \sum w_a \del_{w_a} f = n f.\} \subset V_X
+\]
+so that $V_X = \oplus_{m,n} V_X^{m,n}$. 
+There is a similar decomposition of the resulting Verma modules $M(V_X)$ in terms of the Verma modules $M(V_{X}^{m,n})$. 
+
+An irreducible $\fg_0$-module $F(\lambda_1,\lambda_2,\lambda_3,y)$ is characterized by a highest weight $\lambda = (\lambda_1,\lambda_2,\lambda_3,y)$ whose components we denote by
+\begin{align*}
+\lambda_i & = \lambda (h_i) \in \Z_{\geq 0}, \\
+ y & = \lambda(Y)\in \C . 
+\end{align*}
+Actually, for the remainder of this section we will be interested in the case $\lambda_2 = 0$; the modules with $\lambda_2 \ne 0$ will play no role.
+ 
+For $\lambda_1,\lambda_3 \geq 0$ there are isomorphisms of $\fg_0$-modules
+\begin{align*}
+V_A^{\lambda_1,\lambda_3} & \simeq F(\lambda_1,0,\lambda_3,\frac23 \lambda_1 - \lambda_3) \\
+V_B^{\lambda_1,-\lambda_3} & \simeq F(\lambda_1,0,\lambda_3,\frac23 \lambda_1 + \lambda_3 +2) .
+\end{align*} 
+To simplify notation we will get rid of the dependence on $\lambda_2$ and write 
+\begin{align*}
+F_A(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 - \lambda_3) \\
+F_B(\lambda_1,\lambda_3) & \define F(\lambda_1,0;\lambda_3;\frac23 \lambda_1 + \lambda_3 +2)  
+\end{align*}
+and similarly $M_A(\lambda_1,\lambda_3)$, $M_B(\lambda_1,\lambda_3)$ for the associated Verma modules \eqref{eqn:verma1}.
+
+Particularly important for us will be Verma modules associated with the linear duals of the above $\fg_0$-modules.
+We let 
+\begin{align*}
+\til{M}_A(\lambda_1,\lambda_3) &\define M \left( (V_A^{\lambda_1,\lambda_3})^* \right) \\
+\til{M}_B(\lambda_1,\lambda_3) &\define M \left( (V_B^{\lambda_1,\lambda_3})^* \right) .
+\end{align*}
+As supervector spaces one has, for example
+\beqn
+\til{M}_A(\lambda_1,\lambda_3) = \Sym(\fg_{<0}) \otimes_\C (V_A^{\lambda_1,\lambda_3})^* .
+\eeqn
+We will refer to $\til{M}_A(\lambda_1,\lambda_3)$ and $\til{M}_A (\lambda_1,\lambda_3)$ as `modified' Verma modules to decipher them from $M_A(\lambda_1,\lambda_3)$ and $M_B(\lambda_1,\lambda_3)$. 
+
+One of the main results of \cite{KR1} characterizes the irreducible quotients of these Verma modules. 
+\begin{thm}[\cite{KR1}]
+The Verma modules $M_A(\lambda_1,\lambda_3)$ and $M_A(\lambda_1,\lambda_3)$ have unique irreducible quotients denoted by 
+\beqn
+I_A(\lambda_1,\lambda_3), \quad \text{and} \quad I_B(\lambda_1,\lambda_3)
+\eeqn
+respectively. 
+Furthermore, for any $\lambda_1,\lambda_3 \in \Z_+$ one has $M_A(\lambda_1,\lambda_3) \ne I_A(\lambda_1,\lambda_3)$ and $M_B(\lambda_1,\lambda_3) \ne I_B(\lambda_1,\lambda_3)$.
+\end{thm}
+
+In \textit{loc. cit.} they refer to such irreducible modules $I_A,I_B$ as `degenerate'.
+Similarly, the modified Verma modules have irreducible quotients that we will denote by 
+\beqn
+\til{I}_A(\lambda_1,\lambda_3), \quad \text{and} \quad \til{I}_B(\lambda_1,\lambda_3) .
+\eeqn
+
+\parsec[]
+
+The last bit of algebraic input we need is a result of \cite{KR2} which uses these irreducible quotients $I_A(\lambda_1,\lambda_3)$ and $I_{B} (\lambda_1,\lambda_3)$ to characterize the $E(3|6)$-representations which appear in the decomposition of $E(5|10)$. 
+
+\begin{thm}[\cite{KR2}]
+Consider the decomposition \eqref{eqn:decomp1} of the super Lie algebra
+\beqn
+E(5|10) = \til V_{-1} \times \prod_{i \geq -1} V_n
+\eeqn
+where $V_0 \simeq E(3|6)$. 
+Then, there are isomorphisms of $E(3|6)$-modules
+\begin{align*}
+\til V_{-1}^* & \simeq I_A(0,1) \\
+E(3|6)^* = V_0^* & \simeq I_A(1,0) \\
+V_j^* & \simeq I_B(0,j-1), \quad j \geq 1
+\end{align*}
+where $(-)^*$ denotes the topological dual.
+\end{thm}
+
+For the centrally extension of $E(5|10)$ we need to adjust things slightly. 
+The decomposition of the central extension is $\prod_{j \geq -1} V_j$, where only $V_{-1}$ differs from the weight $(-1)$ part $\til V_{-1}$ of $E(5|10)$.
+It is easy to see that as $E(3|6)$-modules $V_{-1}^*$ is a direct sum 
+\[
+V_{-1}^* = \til V_{-1}^* \oplus \C = I_A(0,1) \oplus \C
+\]
+with $\C$ the trivial module. 
+(In \cite[\S 5]{KR2} they refer to the module $V_{-1}^*$ as~$P$.)
+
+\subsection{Character of modified type $A$ modules} \label{s:typeA}
+
+The (super) character of an $E(3|6)$-module $M$ is given by the formula
+\[
+\ch (M) \define {\rm str}_M q^{Y} t_1^{h_1} t_2^{h_2} r^{h_3} .
+\]
+Our goal in this section is to compute the explicit formula for this character in the case of the degenerate modules $I_A(\lambda_1,\lambda_3)$ of type $A$ (and its modified version $\til I_A(\lambda_1,\lambda_3)$) which are irreducible quotients of the Verma modules $M_A(\lambda_1,\lambda_3)$ (respectively, $\til M_A(\lambda_1,\lambda_3)$).
+
+%Recall that $\lie{g}_{<0} = \lie{g}_{-2} \oplus \lie{g}_{-1}$ where $\lie{g}_{-2} \cong \C^3$ spanned by $\del_{z_i}$ and $\lie{g}_{-1} \cong \Pi \C^6$ spanned by the odd elements $r_a \d z_i$ for $a=1,2$ and $i=1,2,3$.
+
+Our computation of the character relies on a cohomological description of the irreducible modules $I_A(\lambda_1,\lambda_3)$ of type~$A$.
+%\[
+%I_A(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3) .
+%\]
+In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
+\beqn\label{eqn:les1}
+0 \leftarrow I_A(\lambda_1,\lambda_3)\leftarrow M_A(\lambda_1,\lambda_3) \leftarrow M_A(\lambda_1+1,\lambda_3+1) \leftarrow \cdots .
+\eeqn 
+From the long exact sequence \eqref{eqn:les1} we have the following expression for the character
+\beqn
+\label{eqn:chA1}
+\ch I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch M_A(\lambda_1+j,\lambda_3+j)  .
+\eeqn 
+There is a similar formula for the module $\til{I}_A(\lambda_1,\lambda_3)$ in terms of the modified Verma modules
+\beqn
+\label{eqn:chA2}
+\ch \, \til I_A(\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch \, \til M_A(\lambda_1+j,\lambda_3+j)  .
+\eeqn 
+
+As a super vector space, the Verma module $M(V)$ associated to a $\fg_0$-module $V$ is 
+\[
+M(V) = \Sym(\lie{g}_{<0}) \otimes V .
+\]
+%We define the modified character of a Verma module by the formula
+%\[
+%\til{\ch} \, M(V) = \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) \cdot \ch (V) \left(q^{-1}, t_1^{-1}, t_2^{-1}, r^{-1} \right)  .
+%\]
+Define
+\[
+R(q,t_1,t_2,r) \define \ch \left(\Sym(\lie{g}_{<0}) \right)(q, t_1,t_2,r) ,
+\]
+so that the character of the Verma module $M(V)$ is a product of $R$ with the character of the finite-dimensional $\fg_0$-representation $V$
+\[
+\ch M(V) (q,t_1,t_2,r) = R(q,t_1,t_2,r) \cdot \ch (V) (q,t_1,t_2,r).
+\]
+In the computations of the sections that follow we will make the substitution $\boxed{q = t^2}$ for notational simplicity.
+
+The first ingredient in determining an explicit formula for Verma modules is a direct calculation.
+\begin{lem}
+\label{lem:R}
+The explicit formula for $R = R(t,t_1,t_2,r)$ is
+%\beqn
+%R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1^{-1} q^{1/2} r^a)(1-t_1 t_2^{-1} q^{1/2} r^a)(1-t_2 q^{1/2} r^a)
+%\eeqn
+\beqn
+R = \frac{1}{(1-t_1^{-1} q)(1-t_1t_2^{-1}q)(1-t_2 q)}\prod_{a=+1,-1}(1-t_1 q^{1/2} r^a)(1-t_1^{-1} t_2 q^{1/2} r^a)(1-t_2^{-1} q^{1/2} r^a)
+\eeqn
+\end{lem}
+
+
+Recall that the type $A$ degenerate modules are defined by induction from the $\fg_0$-module 
+\[
+V = V^{\lambda_1,\lambda_3}_A \subset \C[z_i,w_a]
+\] 
+given by polynomials of homogenous degree $\lambda_1,\lambda_3$ in the variables $z_i,w_a$ respectively.
+Thus, we have the following explicit presentation for the modified character of type $A$ modules. 
+\begin{prop}
+One has
+\beqn\label{eqn:MA}
+\ch \, \til M_A(\lambda_1,\lambda_3) = t^{y_A} R(t,r,t_1,t_2) \cdot \ch (V_A^{\lambda_1,\lambda_3}) (t_1^{-1},t_2^{-1},r)
+\eeqn
+where $y_A = 2\lambda_1 - 3 \lambda_3$, $R$ is as in Lemma \ref{lem:R} and 
+\beqn\label{eqn:su}
+\ch(V_A^{\lambda_1,\lambda_3})(t_1,t_2,r) = \ch_{SU(3)}^{\lambda_1}(t_1,t_2) \ch_{SU(2)}^{\lambda_3} (r) 
+\eeqn
+is the $SU(3) \times SU(2)$ character of the representation $V_A^{\lambda_1,\lambda_3}$. 
+\end{prop}
+
+In expression \eqref{eqn:su}, $\ch_{SU(3)}^{\lambda_1}$ denotes the character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1,0)$ and $\ch^{\lambda_3}_{SU(2)}$ is the character of the irreducible $SU(2)$ representation of highest weight $\lambda_3$.
+
+%which is
+%\[
+%0 \leftarrow I(p,0;r;\frac23 p - r) \leftarrow M(V^{p,r}) \leftarrow M(V^{p+1,r+1}) \leftarrow \cdots .
+%\]
+Applying the Weyl character formula we obtain the explicit expressions for the $SU(3)$ character
+\begin{align*}
+\ch_{SU(3)}^{\lambda_1+j} (t_1^{-1},t_2^{-1}) & = t_1^{\lambda_1+j} t_2^{-\lambda_1 -j} \sum_{k=0}^{\lambda_1 + j} t_1^{-k} t_2^{2k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}} 
+%\\ 
+%& = t_1^{-2/3} t_2^{2/3} \sum_{k=0}^{\lambda_1 + j} t_1^{k/2} t_2^{-3k/2} \sum_{l = 0}^k (t_1 t_2)^l .
+\end{align*}
+and $SU(2)$ character
+\begin{align*}
+\ch_{SU(2)}^{\lambda_3+j} (r) & = r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} \\ & = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} .
+\end{align*}
+
+We can apply formula \eqref{eqn:MA} to get an expression for the $j$th term the sum in \eqref{eqn:chA1}
+\beqn\label{eqn:chA3}
+\ch M_A(\lambda_1+j,\lambda_3+j) = t^{3 \lambda_3 - 2 \lambda_1+j} R(t,r,t_1,t_2) \ch_{SU(3)}^{\lambda_1+j}(t_1,t_2) \ch_{SU(2)}^{\lambda_3+j} (r)  .
+\eeqn
+And similarly for the sum in \eqref{eqn:chA2}---the $SU(2)$ part of the character remains the same and the $SU(3)$ part is related by $t_i\leftrightarrow t_i^{-1}$. 
+
+%\parsec[s:unrefinedA]
+%
+%In this section we deduce an explicit formula for the character of the type $A$ modules $I_A(\lambda_1,\lambda_3)$ after specializing $t_1=t_2=1$. 
+%
+%\begin{prop}
+%\label{prop:chA}
+%Let $\lambda_1,\lambda_3 \geq 0$. 
+%The $t_1=t_2=1$ specialization of $\ch \, \til I_A(\lambda_1,\lambda_3)$ is given by the expression
+%\beqn
+%\frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) 
+%\eeqn
+%where $p_{\lambda_1}(x) = \frac12 \left(\lambda_1^2 x^2 + \lambda_1 x^2 - 2\lambda_1^2x -4 \lambda_1 x + \lambda_1^2 + 3\lambda_1 +2\right)$. 
+%\end{prop}
+%
+%\begin{proof}
+%In this specialization we just see the dimension of the highest weight $SU(3)$ representations
+%\[
+%\ch_{SU(3)}^{\lambda_1+j}(t_1=t_2=1) = \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} .
+%\]
+%
+%We thus arrive at the expression for the $j$th term in the sum appearing in equation \eqref{eqn:chA2}:
+%\beqn\label{eqn:MA2}
+%\ch \til M_A(\lambda_1+j,\lambda_3+j)_{t_1=t_2=1} = R(t,r) t^{2 \lambda_1-3\lambda_3-j} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} 
+%\eeqn
+%where $R(t,r)$ is the specialization at $t_1=t_2=1$ of $R$ from Lemma \ref{lem:R}:
+%\[
+%R(t,r) = R|_{t_1=t_2=1} = \frac{(1-tr)^3 (1-t r^{-1})^3}{(1-t^2)^3} .
+%\]
+%In equation \eqref{eqn:MA2} we have also utilized the $SU(2)$ character formula for the irreducible module of heighest weight $\lambda_3+j$. 
+%%\[
+%%r^{\lambda_3+j}+ r^{\lambda_3+j-2} + \cdots + r^{-\lambda_3-j} = \frac{r^{\lambda_3+j}-r^{-\lambda_3-j-2}}{1-r^{-2}} ,
+%%\]
+%
+%Now, observe the formal identity 
+%\[
+%\sum_{j \geq 0} \frac{(\lambda_1+j+1)(\lambda_1+j+2)}{2} x^j = \frac{p_{\lambda_1}(x)}{(1-x)^3}  
+%\]
+%where $p_{\lambda_1}(x)$ is as in the statement of the proposition.
+%Using this identity, we evaluate
+%\begin{align*}
+%\ch \til I_A(\lambda_1,\lambda_3)|_{t_1=t_2=1} & = \frac{R(r,t) t^{2 \lambda_1-3 \lambda_3}}{1-r^{-2}} \left(\frac{r^{\lambda_3} p_{\lambda_1}(t^{-1}r)}{(1-t^{-1}r)^3} - \frac{r^{-\lambda_3-2}p_{\lambda_1}(t^{-1}r^{-1})}{(1-t^{-1}r^{-1})^3} \right) \\ 
+%& = \frac{t^{2\lambda_1-3 \lambda_3+6}}{(1-t^2)^3(1-r^{-2})} \left(r^{\lambda_3} p_{\lambda_1}(t^{-1}r) (1-t^{-1}r^{-1})^3 \right. \\ & \left. - r^{-\lambda_3-2} p_{\lambda_1}(t^{-1}r^{-1})(1-t^{-1}r)^3 \right) .
+%\end{align*}
+%This completes the proof
+%\end{proof}
+%
+%In the case that $\lambda_1=0$ and $\lambda_3=1$ we see that this specialized character simplifies to
+%\beqn
+%\ch \til I_A(0,1)|_{t_1=t_2=1} = \frac{t^3(r+r^{-1}) + 1 - 3 t^2}{(1-t^2)^3} .
+%\eeqn
+%
+%In the case that $\lambda_1 = 1$ and $\lambda_3 = 0$ we see that this unrefined character simplifies to
+%\beqn
+% \ch \til I_A(1,0)|_{t_1=t_2=1} = \frac{t^6(r^2 + r^{-2} + 1) - 3 t^7 (r + r^{-1}) + 3t^8 }{(1-t^2)^3} .
+%\eeqn
+%
+%Finally, for general $\lambda_1,\lambda_3$ we specialize further $t=r$ and substitute $q = t^2$ to obtain
+%\beqn
+%\ch \til I_A(\lambda_1,\lambda_3) = \frac{t^{2 \lambda_1 - 2 \lambda_3 + 2}}{1 - t^2} = \frac{q^{\lambda_1-\lambda_3+1}}{1-q} .
+%\eeqn
+
+\parsec[s:refinedA]
+
+We now turn to the formula for the totally unrefined character of $\til I_A(\lambda_1,\lambda_3)$ as a function of the fugacities $t,t_1,t_2,r$.
+To state the result we introduce some notation.  
+
+For $\lambda_1 \geq 0$ define the polynomial in the variables $t_i^{\pm 1}$ and an auxiliary variable $x$
+\beqn\label{eqn:p}
+p_{\lambda_1}(t_1,t_2,x) = t_1^{\lambda_1} t_2^{-\lambda_1} \left(1 + (1+t_1^{-1} t_2^{-1} - t_1^{-1} x) h_{\lambda_1}(t_1,t_2,x)\right) 
+\eeqn
+where for $\lambda_1 > 0$
+\beqn\label{eqn:h1}
+h_{\lambda_1}(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_1 -2}\right)  
+\eeqn
+where the sum in parentheses has $\lambda_1$ terms.
+For $\lambda_1 = 0$ we set $h_0 (t_1,t_2,x) = 0$. 
+
+Our main result of this section is the following.
+\begin{thm}
+\label{thm:refinedA}
+For any $\lambda_1,\lambda_3 \geq 0$ the character of $\ch \til I_A(\lambda_1,\lambda_3)$ is given by the following expression
+\begin{multline}
+\frac{t^{2 \lambda_1 - 3 \lambda_3+6}}{(1-t_1^{-1} t^2)(1-t_1t_2^{-1}t^2)(1-t_2 t^2)(1-r^{-2})} \times \\
+\left(r^{\lambda_3} p_{\lambda_1}(t_1,t_2,t^{-1} r) (1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1}) \right.
+\\
+- \left. r^{-\lambda_3 - 2} p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1}) \right)
+\end{multline}
+where $p_{\lambda_1}$ is as in equation \eqref{eqn:p}.
+\end{thm}
+
+Recall that the character is given by the infinite sum
+\beqn
+\ch \til I_A (\lambda_1,\lambda_3) = \sum_{j \geq 0} \ch \til M_A(\lambda_1+j, \lambda_3+j)
+\eeqn
+For each $j \geq 0$ we have
+\begin{multline}
+\ch \til M_A(\lambda_1+j, \lambda_3+j) = R \cdot t^{2 \lambda_1-3 \lambda_3-j} \cdot \ch_{SU(3)}^{\lambda_1+j}(t_1^{-1},t_2^{-1}) \cdot \ch^{\lambda_3+j}_{SU(2)}(r) \\ =
+\frac{t^{2 \lambda_1 - 3 \lambda_3} R}{1-r^{-2}} \ch_{SU(3)}^{\lambda_1+j} (t_1^{-1},t_2^{-1}) t^{-j} (r^{\lambda_3 + j} - r^{-\lambda_3 - j - 2}).
+\end{multline}
+
+The first step is to deduce a closed formula for the following generating function
+\beqn
+\til p^{\lambda_1} (x,t_1,t_2) = \sum_{j \geq 0} \ch_{SU(3)}^{\lambda_1+j} (t_1^{-1},t_2^{-1}) x^j .
+\eeqn
+where we recall that $\ch_{SU(3)}^{\lambda_3+j} (t_1,t_2)$ is the $SU(3)$ character of the irreducible $SU(3)$ representation of highest weight $(\lambda_1+j,0)$. 
+
+\begin{lem}
+\label{lem:generating}
+One has
+\beqn
+\til p_{\lambda_1} (t_1,t_2,x) = \frac{p_{\lambda_1}(t_1,t_2,x)}{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)} .
+\eeqn
+where the polynomial $p_{\lambda_1}(t_1,t_2,x)$ is given by equation \eqref{eqn:p}.
+
+\end{lem} 
+\begin{proof}
+We start by expanding the expression for the generating function $\til p_{\lambda_1}(t_1,t_2,x)$:
+\begin{multline}
+\label{eqn:long}
+t_1^{\lambda_1} t_2^{-\lambda_1} \sum_{j \geq 0} t_1^{j} t_2^{-j} x^j \sum_{k=0}^{\lambda_1 + j}t_1^{-k} t_2^{2k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j \geq 0} \sum_{k=0}^{\lambda_1 + j} t_1^{j-k} t_2^{-j+2k} x^j \left(1 - t_1^{-k-1} t_2^{-k-1}\right) \\ 
+= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{1-t_1^{-1} t_2^{-1}} \sum_{j \geq 0} \left(t_1^j t_2^{-j} \frac{1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1}}{1-t_1^{-1} t_2^{2}} - t_1^{j-1} t_2^{-j-1} \frac{1 - (t_1^{-2} t_2)^{\lambda_1+j+1}}{1 - t_1^{-2} t_2} \right) x^j  \\
+%= \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{(1-t_1^{-1} t_2^{2})} \sum_{j \geq 0} \left( t_1^j t_2^{-j} (1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1})(1 - t_1^{-2} t_2) \right. \\ \left. - t_1^{j-1} t_2^{-j-1} (1 - (t_1^{-2} t_2)^{\lambda_1+j+1})(1-t_1^{-1} t_2^{2}) \right) x^j \\ 
+= F(t_1,t_2) \left( G_1 (t_1,t_2,x) - t_1^{-1} t_2^{-1} G_2 (t_1,t_2,x)\right) .
+\end{multline}
+
+Here, we have introduced the following functions
+\begin{itemize}
+\item $F(t_1,t_2) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{(1-t_1^{-1} t_2^{-1}) (1-t_1^{-1} t_2^{2}) (1 - t_1^{-2} t_2)}$. 
+\item $G_1(t_1,t_2,x) = \frac{1}{1 - t_1^{-1} t_2^2} \sum_{j \geq 0}  t_1^j t_2^{-j} (1-(t_1^{-1} t_2^{2})^{\lambda_1+j+1}) x^j$. 
+\item $G_2(t_1,t_2,x) = \frac{1}{1 - t_1^{-2} t_2}\sum_{j \geq 0} t_1^{j} t_2^{-j} (1 - (t_1^{-2} t_2)^{\lambda_1+j+1}) x^j$. 
+\end{itemize}
+%
+%Directly, we compute
+%\begin{align*}
+%G_1(t_1,t_2,x) & = \frac{1}{1 - t_1 t_2^{-1} x} - \frac{t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2}}{1 - t_2 x} \\
+%G_2(t_1,t_2,x) & = \frac{1}{1-t_1 t_2^{-1} x} - \frac{t_1^{-2\lambda_1-2}t_2^{\lambda_1+1}}{1-t_1^{-1}x}
+%\end{align*}
+We state an intermediate lemma.
+\begin{lem}
+One has
+\begin{align*}
+G_1(t_1,t_2,x) & = \frac{1}{(1 - t_1 t_2^{-1} x)(1-t_2 x)} \big(1 + h(t_1,t_2,x) \big) \\
+G_2(t_1,t_2,x) & = \frac{1}{(1 - t_1 t_2^{-1} x)(1-t_1^{-1} x)} \left(1 + t_1^{-1} t_2^{-1} h(t_1,t_2,x) \right) .
+\end{align*}
+where $h_{\lambda_1}(t_1,t_2,x)$ is as in equation \eqref{eqn:h1}. 
+\end{lem}
+
+\begin{proof}
+Formally evaluating the sum over $j$ we obtain
+\begin{align*}
+G_1(t_1,t_2,x) & = \frac{1}{1 - t_1^{-1} t_2^2} \left(\frac{1}{1 - t_1 t_2^{-1} x} - \frac{t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2}}{1 - t_2 x} \right) \\
+G_2(t_1,t_2,x) & = \frac{1}{1 - t_1^{-2} t_2} \left(\frac{1}{1-t_1 t_2^{-1} x} - \frac{t_1^{-2\lambda_1-2}t_2^{\lambda_1+1}}{1-t_1^{-1}x}\right) .
+\end{align*}
+
+Write $G_1 = g_1 / (1- t_1^{-1} t_2^2)$ and consider the polynomial
+\beqn
+\label{eqn:h2}
+ (1-t_2 x)(1-t_1 t_2^{-1} x) g_1(t_1,t_2,x)
+= 1 - t_1^{-\lambda_1-1} t_2^{2 \lambda_1 + 2} - t_2 x + t_1^{-\lambda_1} t_2^{2 \lambda_1 + 1} x .
+\eeqn
+This polynomial is clearly divisible by $1-t_1^{-1} t_2^2$ so we can define the polynomial
+\beqn
+\til h_{\lambda_1}(t_1,t_2,x) = \frac{(1-t_2 x)(1-t_1 t_2^{-1} x) g_1(t_1,t_2,x)}{1-t_1^{-1} t_2^2} 
+\eeqn
+By definition we have
+\beqn
+G_1(t_1,t_2,x) = \frac{\til h (t_1, t_2,x)}{(1-t_2 x)(1-t_1 t_2^{-1} x)} .
+\eeqn
+
+We are interested in the polynomial $h_{\lambda_1} = \til h_{\lambda_1} - 1$. 
+By equation \eqref{eqn:h2} we see that 
+\beqn
+h_{\lambda_1} (t_1,t_2,x) = \frac{t_2 (t_1^{-1} t_2 - x) (1-t_1^{-\lambda_1} t_2^{2\lambda_1})}{1-t_1^{-1} t_2^2} .
+\eeqn
+The lemma immediately follows.
+%\beqn
+%h(t_1,t_2,x) = t_2 (t_1^{-1} t_2 - x) \left(1 + t_1^{-1} t_2^2 + \cdots + t_1^{-\lambda_1+1} t_2^{2 \lambda_2 -2}\right)  .
+%\eeqn
+\end{proof}
+
+From this intermediate lemma we conclude that
+\beqn
+\til{p}_{\lambda_1}(t_1,t_2,x) = \frac{t_1^{\lambda_1} t_2^{-\lambda_1}}{{(1-t_1^{-1} x)(1-t_1t_2^{-1} x)(1-t_2 x)}} \left(1 + (1 +t_1^{-1}t_2^{-1}- t_1^{-1} x) h(t_1,t_2,x)\right)
+\eeqn
+Which completes the proof of Lemma \ref{lem:generating}. 
+\end{proof}
+
+Now, we plug these expressions into \eqref{eqn:long} and simplify to obtain
+\begin{multline}
+\ch \til I_A(\lambda_1,\lambda_3) = \frac{t^{2 \lambda_1 - 3 \lambda_3} R}{1-r^{-2}} \left(r^{\lambda_3} \frac{p_{\lambda_1}(t_1,t_2,r t^{-1})}{(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1})}  \right. \\ \left. - r^{-\lambda_3-2} \frac{p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})}{(1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1})}\right) \\  
+= \frac{t^{2 \lambda_1 - 3 \lambda_3+6}}{(1-t_1^{-1} t^2)(1-t_1t_2^{-1}t^2)(1-t_2 t^2)(1-r^{-2})} \times \\
+\left(r^{\lambda_3} p_{\lambda_1}(t_1,t_2,t^{-1} r) (1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1}) \right.
+\\
+- \left. r^{-\lambda_3 - 2} p_{\lambda_1}(t_1,t_2,r^{-1} t^{-1})(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1}) \right) .
+\end{multline} 
+This completes the proof of Theorem \ref{thm:refinedA}.
+
+\parsec[s:tests]
+
+We can greatly simplify expressions for the character of $\til I_A(\lambda_1,\lambda_3)$ for small values of $\lambda_1,\lambda_3$. 
+The following corollaries are immediate computations. 
+
+\begin{cor} 
+\label{cor:6dtest1}
+When $(\lambda_1,\lambda_3) = (0,1)$ one has 
+\beqn\label{eqn:6doneTest}
+\ch \til I_A(0,1) = \frac{(r + r^{-1})t^{3} - (t_1 + t_1^{-1} t_2 + t_2^{-1} )t^4 + t^6}{(1-t_1^{-1}t^2) (1-t_1 t_2^{-1} t^2) (1-t_2 t^2)} .
+\eeqn
+\end{cor}
+
+We note that upon substituting $q = t^2$ this agrees with $\chi_{\lie{u}(1)}^{6d}(t_1,t_2,q,r)$---the character of local operators on the holomorphic twist of the abelian six-dimensional superconformal theory, see Proposition \ref{prop:6done}.
+
+The next easy case is the following.
+\begin{cor}
+\label{cor:6dtest2}
+When $(\lambda_1,\lambda_3) = (1,0)$ one has  
+\beqn\label{eqn:6dtwo1}
+\ch \til I_A(1,0) = \frac{t^8(t_1^{-1} + t_1 t_2^{-1}  + t_2) + t^6 (r^2 + r^{-2} + 1) - t^{7} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}t^2) (1-t_1 t_2^{-1} t^2) (1-t_2 t^2)} .
+\eeqn
+\end{cor}
+
+Again, we note that upon substituting $q = t^2$ this agrees with $\chi_{\lie{sl}(2)}^{6d}(t_1,t_2,q,r)$---the character of local operators on the holomorphic twist of our conjectural description of the six-dimensional superconformal theory associated to the Lie algebra $\lie{sl}(2)$, see Proposition \ref{prop:6dtwo}.
+
+We will see how these agreements for small values of $\lambda_1,\lambda_3$ fit into a more general relationship between the irreducible modules $\til I_A(\lambda_1,\lambda_3)$ and $\til I_{B} (\lambda_1,\lambda_3)$ and local operators of the universal fivebrane theory in \S \ref{s:kacfivebrane}. 
+
+
+%\begin{multline}
+%t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1} \sum_{j \geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) R \sum_{k=0}^{\lambda_1 + j}t_1^{2k} t_2^{-k} \frac{1 - t_1^{-k-1} t_2^{-k-1}}{1-t_1^{-1} t_2^{-1}}  \\
+%= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \sum_{k=0}^{\lambda_1 + j} t_1^{2k} t_2^{-k} \left(1 - (t_1t_2)^{-k-1}\right) \\
+%= \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{1-t_1^{-1} t_2^{-1}} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \left(\frac{1 - (t_1^2 t_2^{-1})^{\lambda_1 + j + 1}}{1 - t_1^2 t_2^{-1}} - t_1^{-1} t_2^{-1} \frac{1 - (t_1 t_2^{-2})^{\lambda_1 + j + 1}}{1 - t_1 t_2^{-2}} \right) \\ =
+%\frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} R \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \times \\ 
+%\left[(1-t_1 t_2^{-2})(1-(t_1^2 t_2^{-1})^{\lambda_1+j+1}) - t_1^{-1}t_2^{-1} (1-t_1^2 t_2^{-1}) (1 - (t_1 t_2^{-2})^{\lambda_1+j+1}) \right]
+%%
+%%\\ = \frac{t^{3\lambda_3-2 \lambda_1} t_1^{-\lambda_1} t_2^{\lambda_1}}{(1-t_1^{-1} t_2^{-1})(1 - t_1^2 t_2^{-1})(1-t_1t_2^{-1})} \sum_{j\geq 0} t^j t_1^{-j} t_2^{j} \left(r^{\lambda_3+j}-r^{-\lambda_3-j-2}\right) \\ \times \left(1 + t_1^{2\lambda_1 +2j+3}t_2^{-\lambda_1-j-1} - t_1 t_2^{-2} - t_1^{2 \lambda_1 + 2j + 2} t_2^{-\lambda_1 - j -1} \right. \\ \left. - t_1^{-1} t_2^{-1} + t_1^{\lambda_1+j+2} t_2^{-2 \lambda_1 - 2j-4} + t_1 t_2^{-2} + t_1^{\lambda_1 + j} t_2^{-2\lambda_1 - 2 j - 3} \right)
+%\end{multline}
+%
+%We split the sum $\sum_{j \geq 0}$ into four terms
+%\begin{itemize}
+%\item the first term is 
+%\beqn
+%(1-t_1t_2^{-2}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{2 \lambda_1 + j + 2} t_2^{-\lambda_1 - 1} \right) .
+%\eeqn
+%Evaluating the infinite series this becomes
+%\begin{multline} 
+%r^{\lambda_3} (1-t_1 t_2^{-2}) \left(\frac1{1-trt_1^{-1}t_2} - \frac{t_1^{2\lambda_1+2}t_2^{-\lambda_1-1}}{1 - t r t_1} \right) \\ = \frac{r^{\lambda_3}(1-t_1 t_2^{-2})}{(1-trt_1^{-1}t_2)(1 - t r t_1)} \left(1 - trt_1-t_1^{2\lambda_1+2} t_2^{-\lambda_1-1}+tr t_1^{2 \lambda_1+1} t_2^{-\lambda_2}\right)
+%\end{multline}
+%\item the second term is
+%\beqn
+%t_1^{-1} t_2^{-1}(1-t_1^2 t_2^{-1}) \sum_{j \geq 0} t^j r^{\lambda_3 + j} \left(t_1^{-j} t_2^j - t_1^{\lambda_1+1} t_2^{-2\lambda_1 - j - 2}\right) .
+%\eeqn
+%\end{itemize}
+
+
+\subsection{Character of modified type $B$ modules} \label{s:typeB}
+
+There is a cohomological description of the irreducible modules of type B similar to the type A case above.
+Recall that the degenerate module of type $B$ is $I_B(\lambda_1,\lambda_3) = I(\lambda_1,0,\lambda_3;\frac23 \lambda_1 - \lambda_3+2)$. 
+We are only interested in the case $\lambda_1 = 0$ with $\lambda_3\geq 0$.  
+In \cite{KR2}, an exact sequence of $E(3|6)$-modules is constructed
+\begin{multline}\label{eqn:les1}
+0 \leftarrow  I_B(0,\lambda_3) \\ \leftarrow M_B(0,\lambda_3) \leftarrow  M_B(1,\lambda_3-1)  \leftarrow \cdots \leftarrow M(\lambda_3, 0) \\
+ \leftarrow M_A(\lambda_3+2, 0) \leftarrow M_A(\lambda_3+3,1) \leftarrow \cdots .
+\end{multline}
+There are $\lambda_3+1$ terms in the second line above .  
+Notice that the bottom line is simply the resolution for the module $I(\lambda_3+2, 0)$ of type $A$. 
+Using this long exact sequence we obtain a simple formula for the character of type $B$ modules
+\beqn\label{eqn:chB1}
+\ch I_B(0,\lambda_3) = \sum_{k=0}^{\lambda_3} \ch M_B(k, \lambda_3-k) + \ch I_A(\lambda_3+2,0) .
+\eeqn
+And similarly we have the following formula for character of the module $\til I_B(0,\lambda_3)$ as
+\beqn\label{eqn:chB2}
+ \ch \til I_B(0,\lambda_3) = \sum_{k=0}^{\lambda_3} \ch \til M_B(k, \lambda_3-k) + \ch \til I_A(\lambda_3+2,0) .
+\eeqn
+
+Recall that the type $B$ degenerate modules are defined by induction from the $\fg_0$-module 
+\[
+V = V^{\lambda_1,\lambda_3}_B \subset \C[z_i,\del_{w_a}]
+\] 
+given by polynomials of homogenous degree $\lambda_1,\lambda_3$ in the variables $z_i,\del_{w_a}$ respectively.
+As in the type $A$ case, we have the following expression for the character of the modified type $B$ module.
+
+%\begin{prop}
+%One has
+%\beqn\label{eqn:MA}
+%\ch \, \til M_B(\lambda_1,\lambda_3) = t^{y_B} R(t,r,t_1,t_2) \cdot \ch (V_B^{\lambda_1,\lambda_3}) (t_1^{-1},t_2^{-1},r)
+%\eeqn
+%where $y_B = 2\lambda_1 + 3 \lambda_3+6$, $R$ is as in Lemma \ref{lem:R} and
+%\beqn\label{eqn:suB}
+%\ch(V_B^{\lambda_1,\lambda_3})(t_1,t_2,r) = \ch_{SU(3)}^{\lambda_1}(t_1,t_2) \ch_{SU(2)}^{\lambda_3} (r) 
+%\eeqn
+%is the $SU(3) \times SU(2)$ character of the representation $V_B^{\lambda_1,\lambda_3}$.
+%\end{prop}
+
+Just as in the type A case we can compute the character of the Verma module $\til M_B(l,\lambda_3-l)$, for $0 \leq l \leq \lambda_3$ by the formula
+\beqn\label{eqn:chMB}
+\ch \til M_B(l,\lambda_3-l) = t^{3 \lambda_3 - l + 6} R(t,t_1,t_2,r) \ch_{SU(3)}^{l}(t_1^{-1},t_2^{-1}) \ch_{SU(2)}^{\lambda_3-l} (r)  .
+\eeqn
+Introduce the generating function
+\beqn
+\til q_{\lambda_3} (t_1,t_2,x) = \sum_{l=0}^{\lambda_3} \ch^l_{SU(3)} (t_1^{-1},t_2^{-1}) x^l 
+\eeqn
+
+
+%\begin{prop}
+%\label{prop:chB}
+%For $\lambda_3 \geq 0$ the character $\ch \til I_B(0,\lambda_3)$ specialized at $t_1=t_2=1$ is given by the expression
+%\begin{multline}
+%\label{eqn:chB3}
+%t^{2 \lambda_3 + 6} R(t,r) \frac{1-t^{\lambda_3+1}}{1 - t} \\ + \frac{t^{2\lambda_3 + 10}}{(1-t^2)^3 (1-r^{-2})} \left(p_{\lambda_3+2} (t^{-1} r) (1 - t^{-1} r^{-1})^3 - r^{-2} p_{\lambda_3}(t^{-1} r^{-1})(1-t^{-1}r)^3 \right) 
+%\end{multline}
+%where the polynomial $p_{\lambda_3 + 2}(x)$ is as in Proposition \ref{prop:chB}. 
+%\end{prop}
+
+\begin{thm}
+\label{thm:chB}
+For $\lambda_3 \geq 0$ the character $\ch \til I_B(0,\lambda_3)$ is given by the expression
+\begin{multline}
+\label{eqn:chB3}
+\frac{t^{2 \lambda_3 + 6} R(t,t_1,t_2,r)}{1-r^{-2}} \left(r^{\lambda_3} \til q_{\lambda_3} (t_1,t_2,t^{-1}r^{-1}) - r^{-\lambda_3-2} \til q_{\lambda_3} (t_1,t_2,t^{-1}r) \right) \\ + \frac{t^{2 \lambda_3+10}}{(1-t_1^{-1} t^2)(1-t_1t_2^{-1}t^2)(1-t_2 t^2)(1-r^{-2})} \times \\
+\left(p_{\lambda_3+2}(t_1,t_2,t^{-1} r) (1-t_1^{-1} r^{-1} t^{-1})(1-t_1t_2^{-1} r^{-1} t^{-1})(1-t_2 r^{-1} t^{-1}) \right.
+\\
+- \left. r^{-2} p_{\lambda_3+2}(t_1,t_2,r^{-1} t^{-1})(1-t_1^{-1} r t^{-1})(1-t_1t_2^{-1} r t^{-1})(1-t_2 r t^{-1}) \right)
+\end{multline}
+where the polynomial $p_{\lambda_3 + 2}(x)$ is as in Theorem \ref{thm:refinedB}.
+\end{thm}
+
+\begin{proof}
+We have already computed $\ch\til I_A(\lambda_1,\lambda_3)$ for any pair $(\lambda_1,\lambda_3)$ in Theorem~\ref{thm:refinedA}.
+The formula for $\ch \til I_A(\lambda_3+2,0)$ accounts for the last three lines equation \eqref{eqn:chB3}.
+
+It suffices to compute the character of the modified type $B$ Verma modules 
+\[
+\til M_{B}(l,\lambda_3-l) ,
+\]
+and to sum from $l = 0$ to $l = \lambda_3$. 
+This is precisely the first line of \eqref{eqn:chB3}.
+
+%Thus, \eqref{eqn:chB2} simplifies to 
+%\[
+%\ch \til I_B(0,\lambda_3) = t^{2 \lambda_3 + 6} R(t,r) \frac{1-t^{\lambda_3+1}}{1 - t} + \ch \til I_{A}(\lambda_3+2,0) .
+%\]
+%The result now follows from the formula for $\ch \til I_A(\lambda_3+2,0)$ given in Proposition~\ref{prop:chA}.
+\end{proof}
+
+Notice that since $R(t=r) = 0$ and that $\ch \til M_B$ is regular along $t=r$ it follows that if we specialize at $t = r$ and substitute $q = t^2$ then the first line of \eqref{eqn:chB3} vanishes so that
+\beqn
+\ch \til I_B(0,\lambda_3)|_{t=r, t_i=1} = \ch \til I_A(\lambda_3+2,0)|_{t=r, t_i=1} = \frac{q^{\lambda_3 + 1}}{1 - q} .
+\eeqn
+
+\parsec[s:Bfirstcase]
+
+Let's unpack the character of the simplest module of type $B$, namely $\til I_B(0,0)$, that is $\lambda_3 = 0$ in equation \ref{eqn:chB2}.
+Notice that $\til q_0 (t_1,t_2,x) = 1$, thus
+\beqn
+\ch \til M_B(0,0) = t^6 R(t_1,t_2,t,r) .
+\eeqn
+
+Next we need to compute $\ch \til I_A(2, 0)$.
+For this we refer to Theorem \ref{thm:refinedA}.
+Notice that 
+
+
+\parsec[s:typeBunrefinedKR]
+
+
+For integer $N$ let 
+\[
+p_{N}(x) = \frac12 \left(N^2 x^2 + N x^2 - 2N^2x -4 N x + N^2 + 3N +2\right) .
+\]
+Then the index for $N > 2$ fivebranes after specializing the $SU(3)$ fugacities is
+\begin{multline}
+t^{2 N} \frac{(1-tr)^3 (1-tr^{-1})^3 (1-t^{N+2})}{(1-t^2)^3(1 - t)} \\ + \frac{t^{2N + 4}}{(1-t^2)^3 (1-r^{-2})} \left(p_{N-1} (t^{-1} r) (1 - t^{-1} r^{-1})^3 - r^{-2} p_{N-1}(t^{-1} r^{-1})(1-t^{-1}r)^3 \right) 
+\end{multline}
+
+\subsection{Decomposing fivebrane local operators}
+\label{s:kacfivebrane}
+
+The factorization algebra of classical observables for our model of twisted supergravity is $\Obs_{sugra} = \clie^\bu(\cL_{sugra})$ where $\cL_{sugra}$ is the local $L_\infty$ algebra of \S\ref{s:sugraL}. 
+As in \S\ref{s:fact}, let us take the eleven-manifold that this theory is defined on to be $\R \times {\rm Tot}(K^{1/2}_Z \otimes \C^2)$ where $Z$ is a complex three-fold.
+In \S\ref{s:??}, we defined the restriction $\Obs_{sugra}|_{Z}$ of the factorization algebra of twisted supergravity observables to the submanifold~$Z$.
+%is a dense subfactorization algebra of the pushforward of $\clie^\bu(\cL_{sugra})$ along the obvious projection. 
+
+The general prescription of twisted holography is that the $!$-dual of $\Obs_{sugra}|_Z$ is the factorization algebra of the universal defect supported along $Z$ in the eleven-dimensional theory---this is our ansatz for the large $N$ limit of local operators along the brane.
+The $!$-dual of the factorization algebra $\Obs_{sugra}|_Z$ is of the form $\clie_\bu (\cG_c)$ where $\cG$ is an infinite-dimensional local $L_\infty$ algebra on $Z$.
+In \S \ref{s:weight1} we defined a $\C^\times$ action on $\cG$ which determines a (non-cohomological) weight grading
+\beqn\label{eqn:decomp2a}
+\cG = \bigoplus_{n \geq -1} \Omega^{0,\bu}(Z, \cV^{(n)}) 
+\eeqn
+where $\cV^{(n)}$ is some holomorphic vector bundle on $Z$.
+
+For the remainder of this section we focus on the case $Z = \C^3$ and local operators at~$0 \in \C^3$. 
+Our goal is to show that this weight grading is compatible with the one on the central extension of $E(5|10)$ that we recalled in \S \ref{s:e510central}. 
+In turn, this will give us a description of fivebrane local operators supported at $0 \in \C^3$ in terms of irreducible representations of the super Lie algebra $E(3|6)$. 
+
+\parsec[]
+
+First, we recall the precise relationship between the central extension of the super Lie algebra $E(5|10)$ and the local Lie algebra~$\cL_{sugra}$ on~$\R \times \C^5$.
+The local $L_\infty$ algebra $\cL_{sugra}$ on $\R \times \C^5$ can be written as 
+\[
+\cL_{sugra} = \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^5, L) \simeq \Omega^\bu(\R) \otimes \Omega^{0,\bu}(\C^5) \otimes L_0 ,
+\]
+where $L$ is a translation invariant holomorphic vector bundle and~$L_0$ its fiber over~$0 \in \C^5$.
+As in \S \ref{s:interacting}, the local $L_\infty$ algebra structure on $\cL_{sugra}$ induces an $L_\infty$ structure on the $\infty$-jets at~$0 \in \R \times \C^5$ of $\cL_{sugra}$, which we can identify using the Poincar\'e lemma with~$L_0[[z_1,\ldots,z_5]]$.
+Furthermore, the Taylor expansion map at $0 \in \R \times \C^5$ defines an $L_\infty$ map
+\beqn
+T_0 \colon \cL_{sugra}(\R \times \C^5) \to L_0[[w_1,w_2, z_1,z_2,z_3]] 
+\eeqn
+where we recall that we have used $\{z_i\}$ for the coordinates along the directions the fivebrane wraps in 
+\[
+\C^5 \simeq {\rm Tot}(K^{1/2}_Z \otimes \C^2)
+\]
+and $\{w_a\}$ for the transverse holomorphic coordinates. 
+
+In~\cite{RSW} it is shown that $L_0[[w_1,w_2, z_1,z_2,z_3]]$ is equivalent to the super Lie algebra $\Hat{E(5|10)}$ which is the central extension of $E(5|10)$ by the cocycle in \brian{finish}. 
+The restricted local $L_\infty$ algebra $\cG$ sits somewhere in-between $\cL_{sugra}(\R \times \C^5)$ and $\Hat{E(5,10)}$. 
+
+The sheaf of local $L_\infty$ algebras $\cG$ on $\C^3$ is the smooth sections of a holomorphic translation invariant pro vector bundle $G$. 
+Let $G_0$ be the fiber over $0 \in \C^3$. 
+Similarly as above, since the space $G_0[[z_1,z_2,z_3]]$ is the $\infty$-jets of $\cG$ at $0 \in \C^3$ it is equipped with the structure of an $L_\infty$ algebra and the Taylor expansion map 
+\[
+T_0^{\C^3} \colon \cG(\C^3) \to G_0[[z_1,z_2,z_3]] 
+\]
+is a map of $L_\infty$ algebras. 
+
+\begin{lem}
+\begin{itemize}
+\item[(1)]
+There is an equivalence of $L_\infty$ algebras
+\[
+\Hat{E(5|10)} \simeq G_0 [[z_1,z_2,z_3]] .
+\]
+\item[(2)]The partial Taylor expansion of sections of $\cL_{sugra}(\R \times \C^5)$ at $w_1=w_2 = 0$ defines a map of $L_\infty$ algebras 
+\[
+\cL_{sugra}(\R \times \C^5) \to \cG(\C^3) ,
+\]
+and makes the following diagram commute
+\[
+\begin{tikzcd}
+\cL_{sugra}(\R \times \C^5) \ar[dr,dotted] \ar[rr,"T_0^{\R \times \C^5}"] & &  \Hat{E(5|10)} \\ 
+& \cG(\C^3) \ar[ur,"T_0^{\C^3}"'] & .
+\end{tikzcd} 
+\]
+\item[(3)] 
+The Taylor expansion map $T_0^{\C^3}$ is $\C^\times$-equivariant. 
+\end{itemize}
+\end{lem}
+%First, we will see how to relate the decomposition at the level of global sections of~$\cL_{sugra}$ over~$Z = \C^3$. 
+
+%In the decomposition \eqref{eqn:decomp2a} the 
+
+In \S \ref{s:}. \brian{finish}
+
+
+%\end{document}
