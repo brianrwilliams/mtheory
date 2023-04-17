@@ -1,27 +1,27 @@
 \documentclass{amsart}
-\usepackage{fullpage}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{enumerate}
-\usepackage[titletoc]{appendix}
-\usepackage{hyperref}
+%\usepackage{fullpage}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{amsfonts}
+%\usepackage{amsthm}
+%\usepackage{enumerate}
+%\usepackage[titletoc]{appendix}
+%\usepackage{hyperref}
+%
+%%\usepackage{tikz} 	  % Replaced with tikz-cd, but am
+%\usepackage{tikz-cd}  % willing to learn tikz if necessary
+%	\usetikzlibrary{decorations.pathmorphing}
+%
+%\usepackage[all]{xy}
+%\usepackage{stmaryrd}
+%\usepackage{indentfirst}
+%\usepackage{graphicx}
+%\usepackage{tabularx}
 
-%\usepackage{tikz} 	  % Replaced with tikz-cd, but am
-\usepackage{tikz-cd}  % willing to learn tikz if necessary
-	\usetikzlibrary{decorations.pathmorphing}
+\usepackage{../macros-mtheory}
 
-\usepackage[all]{xy}
-\usepackage{stmaryrd}
-\usepackage{indentfirst}
-\usepackage{graphicx}
-\usepackage{tabularx}
-
-\usepackage{macros}
-
-\renewcommand\tabularxcolumn[1]{m{#1}}
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\renewcommand\tabularxcolumn[1]{m{#1}}
+%\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 
 \begin{document}
@@ -51,6 +51,102 @@
 
 
 \section{Coproducts}
+
+\appendix
+
+\section{Costello's treatment}
+
+Given a super vector space $V$ one can consider the free chiral conformal field theory of spin $1/2$ fields $\psi$ taking values in $V$ and $\chi$ taking values in $V^*$.
+When $V$ is purely odd then this describes a number of complex free fermions.
+When $V$ is purely even this is a version of the $\beta-\gamma$ system.
+
+Let $GL(V)$ (respectively, $\lie{gl}(V)$) be the super general linear group (respectively, Lie algebra) acting on the super vector space $V$.
+Then, along a Riemann surface defect we can couple this chiral CFT to $GL(V)$ valued five-dimensional Chern--Simons theory. 
+Explicitly, if we place five-dimensional Chern--Simons theory on $\R \times \C^2$ and the defect along
+\beqn
+0 \times \C_z \times 0 \subset \R \times \C^2
+\eeqn
+then the five-dimensional Chern--Simons gauge field $A \in \Omega^{0,\bu}(\R \times \C^2) \otimes \lie{gl}(V)$ couples via the Lagrangian
+\beqn
+\int_{\C_z} \chi (A \cdot \psi) .
+\eeqn
+
+For $N,M \geq 1$ we will take $V$ to be the dimension $N+M|M$ superspace~$\C^{N+M|M}$.
+Let $\cF(N+M|M)$ be the $GL(N+M|M)$-invariants of the vertex algebra corresponding to the free CFT along the defect.
+This is a sub vertex algebra of some tensor product of $M$ free $\beta-\gamma$ systems and $(N+M)$ pairs of chiral free fermions.
+Notice that for $M<M'$ the decomposition $\C^{N+M'|M} = \C^{N+M|M} \oplus \C^{M'-M|M'-M}$ determines a $GL(N+M'|M')$-invariant map of vertex algebras
+\beqn
+\cF (N+M'|M') \to \cF(N+M|M) .
+\eeqn
+Denote by $\cF(N+\infty|\infty)$ the resulting limit vertex algebra
+\beqn
+\cF(N+\infty|\infty) = \lim_{M<M'} \left(\cF (N+M'|M') \to \cF(N+M|M) \right) .
+\eeqn
+
+Consider the algebra 
+\beqn
+\cO_\ep (\C^\times \times \C) 
+\eeqn
+which as an underlying vector space is $\C[z,z^{-1},w]$ and the commutator is the $\star_\ep$ commutator.
+Viewing this as a Lie algebra, it admits a central extension that we denote by $\lie{w}_{1+\infty}(\ep)$.
+We denote the central element by~$K$.
+When $\ep = 1$ denote this simply by $\lie{w}_{1+\infty}$.
+Notice that for $\ep \ne 0$ there is an isomorphism of Lie algebras
+\beqn
+\lie{w}_{1+\infty} \xto{\simeq} \lie{w}_{1+\infty}(\ep) .
+\eeqn
+which sends $z \mapsto z$ and $w \mapsto \ep w$.
+By setting $w = \frac{\del}{\del z}$ observe that the Lie algebra $\lie{w}_{1+\infty}$ is a central extension of the Lie algebra of differential operators on $\C^\times$
+
+Let $\lie{w}_{1+\infty}(\ep)_+$ be the subalgebra of positive modes (in the variable $z$) and consider the module
+\beqn
+W_{1+\infty}(\ep) \define U(\lie{w}_{1+\infty}(\ep)) \slash {U(\lie{w}_{1+\infty}(\ep)_+)} .
+\eeqn
+This has the natural structure of a vertex algebra in the category of $\C[K]$-modules.
+For $c \in \C$ let $W_{1+\infty}(\ep,c)$ denote the vertex algebra which is the further quotient where we set the central element~$K = c$. 
+For $\ep \ne 1$, and for fixed $c$, the vertex algebras $W_{1+\infty}(\ep,c)$ are all isomorphic.
+Denote by $W_{1+\infty}(c) = W_{1+\infty}(1,c)$.
+
+When $c = N$ the vertex algebra $W_{1+\infty}(N)$ admits a quotient which is isomorphic to the vertex algebra~$W_N = W(\lie{sl}(N))$.
+
+\begin{prop}
+Let $W_{1+\infty}$
+There is an isomorphism of vertex algebras
+\beqn
+\cF(N+\infty|\infty) \simeq W_{1+\infty}(c=N) .
+\eeqn
+\end{prop}
+
+\section{Higher free fermion} 
+
+Consider the line bundle on $\Sigma \times \C^2$
+\beqn
+L_r \define K^{r/2}_\Sigma \boxtimes \ul{\C} 
+\eeqn
+where $\ul{\C}$ denotes the trivial line bundle on $\C^2$.
+
+Consider the following $\Z \times\Z/2$ complex of sheaves $\cE_r$ whose even part is
+\beqn
+\cE_{r}^{ev} = \Omega^{0,\bu}(\Sigma \times \C^2 , K^{1/2} \otimes L_r) .
+\eeqn
+And whose odd part is 
+\beqn
+\cE_r^{odd} = \Omega^{0,\bu}(\Sigma \times \C^2 , L)[2] \xto{\del} \Omega^{1,\bu}(\Sigma,L)[1] .
+\eeqn
+
+There is a local action of $\cE(3|6)$.
+
+\subsection{Characters} 
+
+The character for the chiral free fermion is 
+\beqn
+\ch_{\bF}(q,t) = \prod_{n \geq 1} (1+t q^{n-1/2})(1+t^{-1} q^{n-1/2}) = \sum_{m \in \Z} Z_m (q) t^m .
+\eeqn
+From this one can see that 
+\beqn
+Z_0(q) = \oint \frac{\d t}{2\pi i t} \ch_{\bF}(q,t) = \prod_{n \geq 1} \frac{1}{1 - q^{n}} .
+\eeqn
+This is the character level version of the statement that the $\C^\times$-invariants of the chiral free fermion is equivalent to the free chiral boson.
 
 
 \end{document}
