@@ -1,0 +1,44 @@
+Let $S$ be a complex surface.
+Let $p_W \colon W \to S$ be a rank two holomorphic vector bundle on $S$ and let $p_L \colon L \to S$ be a holomorphic line bundle on $S$.
+We require that these bundles satisfy
+\beqn
+\det (W \oplus L) = K_S 
+\eeqn
+where $K_S$ is the canonical bundle of $S$.
+This condition guarauntees that
+\beqn
+X = \text{Tot}(W \oplus L)
+\eeqn
+is a Calabi--Yau five-fold.
+We will also assume that $L$ has a real structure with compatible fiberwise hermitian metric.
+
+We place the holomorphic twist of $M$-theory on 
+\beqn
+\R \times X
+\eeqn
+and consider fivebranes wrapping $Z = \text{Tot}(L)$.
+
+Reduction to IIA is described by a diagram
+\beqn
+\begin{tikzcd}
+S^1 \ar[r] \ar[d] & X \ar[d] & \ar[l] {pt} \ar[d] \\
+(pt \ne 0, t, z) \ar[r] & \text{Tot}(\R_{\geq 0} \to \R \times \text{Tot}(W)) & \ar[l] (0,t,z) .
+\end{tikzcd} .
+\eeqn
+When $L$ is trivial this is simply
+\beqn
+\R \times \C \to \text{Tot}(W) \to \R \times \R_+ \times \text{Tot}(W).
+\eeqn
+The fivebranes become fourbranes wrapping
+\beqn
+\text{Tot}(\R_+ \to \text{Tot}(W)) .
+\eeqn
+When $L$ is trivial then the fourbranes wrap
+\beqn
+0 \times \R_+ \times S .
+\eeqn
+
+Equations of motion for the open string theory describes moduli space of pairs $\{(\cL, \cF)\}$ where $\cL$ is a local system on $\R_+$ of rank one and $\cF$ is a perfect complex on $\text{Tot}(W)$ which is finite over $S$.
+This space is naturally $(-3)$-shifted symplectic.
+If we polarize $W = L_1 \oplus L_2$ to $L_1 \oplus L_2[2]$ then this becomes $(-1)$-shifted symplectic.
+There is a forgetful functor to just remembering the perfect complex over $\text{Tot}(W)$ (which is fine over $S$), and the claim is that this is $0$-shifted symplectic.
