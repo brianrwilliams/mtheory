@@ -1,0 +1,63 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\let\ref\hyperref
+\let\hat\widehat
+\usepackage{amsfonts} %necessary for Blackboard Bold
+\usepackage{amsmath} %does A LOT
+\usepackage{amssymb} %necessary for things like \partial
+\usepackage{amsthm} %for thms and such
+\usepackage{macros}
+\usepackage{tikz-cd}
+\usepackage{tikz-feynman}
+\usepackage{xparse}
+\usepackage[centerboxes,boxsize=1ex,nobaseline,aligntableaux=center]{ytableau}
+\setcounter{secnumdepth}{4}
+
+
+\title{Twisted graviton spectra of $AdS_4\times S^7$ and $AdS_7\times S^4$} 
+\author{Surya Raghavendran and Brian R. Williams}
+\begin{document}
+
+\maketitle
+
+\begin{abstract} %required
+\end{abstract}
+
+\tableofcontents
+
+Having described our eleven-dimensional model on flat spacetimes, we now pursue descriptions on maximally symmetric spacetimes. We begin by describing twisted versions of the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds. In eleven-dimensional supergravity, these backgrounds arise as near-horizon limits of the backgrounds sourced by some number of M2 and M5 branes in flat space respectively. In the first section of this chapter \ref{sec:ads}, we describe an analogous procedure natively in our twisted context. 
+
+To do so, we motivate ansatzae for the leading order couplings of our eleven-dimensional model to M2 and M5 branes. These couplings determine certain curved deformations of the $L_\infty$-algebra underlying our model - we conjecture that deforming the theory in the complement of the brane by a solution to the resulting curved Maurer-Cartan equation is perturbatively equivalent to the twist of the theory on $AdS_4\times S^7$ and $AdS_7\times S^4$. 
+
+The next two sections provide evidence for this conjecture. We begin in section \ref{sec:states} with numerical checks. We give definitions of supergravity states in our twisted $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds, which can be thought of as particular field configurations that are localized at points on the conformal boundary of $AdS$. We compute characters of the proposed state spaces and find exact matches with counts of gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively. 
+
+The next strand of evidence we pursue is by matching symmetries. In the physical theory, the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds carry actions of the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras. We show that our conjectural descriptions of twists of these backgrounds carry actions of the minimal twists of the corresponding superconformal algebras. 
+
+With these pieces of evidence in hand, in sections \ref{sec:e16}, \ref{sec:e36},  we then turn to study some representation theoretic aspects of the state spaces constructed in section \ref{sec:states}. We identify certain $\C^\times$ actions on our eleven-dimensional model that combine rescalings in directions normal to branes with a certain rescaling of the space of fields - this induces a decomposition of the space of fields that we dub the \textit{graviton decomposition}. The weight $0$ parts of these decompositions are certain local $L_\infty$-algebras whose costalks recover the linearly compact super-Lie algebras $E(1|6)$ and $E(3|6)$. We thus see that these linearly compact super-Lie algebras act on the spaces of supergravity states constructed in section \ref{sec:states}. We explicate their action on nonzero weight spaces of the graviton decomposition.
+
+In the final section of the chapter, we motivate some current work in progress that leverages the uncovered appearance of exceptional linearly compact super-Lie algebras for holographic means. Eleven-dimensional supergravity on $AdS_4\times S^7$ and $AdS_7\times S^4$ is expected to be equivalent to the large $N$ limit of the worldvolume theories of $N$ M2 branes and $N$ M5 branes respectively. 
+%Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+
+
+\input{content/br}
+
+\input{content/index}
+
+\input{content/suco}
+
+\input{content/e16}
+
+\input{content/e36}
+
+%\input{chapters/4-ads/ops}
+
+%\input{chapters/4-ads/finite}
+
+\input{content/holography}
+
+
+\bibliographystyle{amsalpha}
+\bibliography{bibliography.bib}
+
+\end{document}

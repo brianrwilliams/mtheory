@@ -1,0 +1,315 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{BBMR08}
+
+\bibitem[AFI{\etalchar{+}}20]{Arai_2020}
+Reona Arai, Shota Fujiwara, Yosuke Imamura, Tatsuya Mori, and Daisuke Yokoyama,
+  \emph{Finite-n corrections to the m-brane indices}, Journal of High Energy
+  Physics \textbf{2020} (2020), no.~11.
+
+\bibitem[BBMR08]{Bhattacharya:2008zy}
+Jyotirmoy Bhattacharya, Sayantani Bhattacharyya, Shiraz Minwalla, and Suvrat
+  Raju, \emph{{Indices for Superconformal Field Theories in 3,5 and 6
+  Dimensions}}, JHEP \textbf{02} (2008), 064.
+
+\bibitem[BBRT91]{BlauThompson}
+Danny Birmingham, Matthias Blau, Mark Rakowski, and George Thompson,
+  \emph{Topological field theory}, Physics Reports \textbf{209} (1991),
+  no.~4-5, 129--340.
+
+\bibitem[BCOV94]{BCOV}
+M.~Bershadsky, S.~Cecotti, H.~Ooguri, and C.~Vafa, \emph{{Kodaira--Spencer}
+  theory of gravity and exact results for quantum string amplitudes}, Commun.
+  Math. Phys. \textbf{165} (1994), 311--428.
+
+\bibitem[BH05]{Basu_2005}
+Anirban Basu and Jeffrey~A. Harvey, \emph{The m2-m5 brane system and a
+  generalized nahm's equation}, Nuclear Physics B \textbf{713} (2005), no.~1-3,
+  136–150.
+
+\bibitem[BH11]{BHsusyII}
+John~C. Baez and John Huerta, \emph{Division algebras and supersymmetry {II}},
+  Adv. Theor. Math. Phys. \textbf{15} (2011), no.~5, 1373--1410. \MR{2989835}
+
+\bibitem[BL07]{Bagger_2007}
+Jonathan Bagger and Neil Lambert, \emph{Modeling multiple m2-branes}, Physical
+  Review D \textbf{75} (2007), no.~4.
+
+\bibitem[BL08]{Bagger:2007jr}
+\bysame, \emph{{Gauge symmetry and supersymmetry of multiple M2-branes}}, Phys.
+  Rev. D \textbf{77} (2008), 065008.
+
+\bibitem[BRvR15]{BeemEtAl}
+Christopher Beem, Leonardo Rastelli, and Balt~C. van Rees, \emph{{W} symmetry
+  in six dimensions}, J. High Energy Phys. (2015), no.~5, 017, front matter+37.
+  \MR{3359380}
+
+\bibitem[BY16]{BY}
+Dylan Butson and Philsang Yoo, \emph{Degenerate classical field theories and
+  boundary theories}.
+
+\bibitem[CCDF95]{CCDF}
+A.~C. Cadavid, A.~Ceresole, R.~D'Auria, and S.~Ferrara,
+  \emph{Eleven-dimensional supergravity compactified on {C}alabi--{Y}au
+  threefolds}, Phys. Lett. B \textbf{357} (1995), no.~1-2, 76--80. \MR{1352855}
+
+\bibitem[CDF91]{CDF}
+Leonardo Castellani, Riccardo D'Auria, and Pietro Fr\'{e}, \emph{Supergravity
+  and superstrings. {A} geometric perspective. {V}ol. 1}, World Scientific
+  Publishing Co., Inc., Teaneck, NJ, 1991, Mathematical foundations.
+  \MR{1120022}
+
+\bibitem[CDI16]{cordova2016multiplets}
+Clay Cordova, Thomas~T. Dumitrescu, and Kenneth Intriligator, \emph{Multiplets
+  of superconformal symmetry in diverse dimensions}, 2016.
+
+\bibitem[Ced10a]{Ced-11d}
+Martin Cederwall, \emph{{$D=11$ supergravity with manifest supersymmetry}},
+  Mod. Phys. Lett. A \textbf{25} (2010), 3201--3212.
+
+\bibitem[Ced10b]{Ced-towards}
+\bysame, \emph{Towards a manifestly supersymmetric action for
+  eleven-dimensional supergravity}, Journal of High Energy Physics
+  \textbf{2010} (2010), no.~1, 1--19.
+
+\bibitem[Ced14]{Cederwall}
+\bysame, \emph{Pure spinor superfields: an overview}, Breaking of Supersymmetry
+  and Ultraviolet Divergences in Extended Supergravity (2014), 61--93.
+
+\bibitem[Ced21]{martinSL5}
+\bysame, \emph{{$SL(5)$} supersymmetry}.
+
+\bibitem[CG17]{CG1}
+Kevin Costello and Owen Gwilliam, \emph{Factorization algebras in quantum field
+  theory. {V}ol. 1}, New Mathematical Monographs, vol.~31, Cambridge University
+  Press, Cambridge, 2017. \MR{3586504}
+
+\bibitem[CG21a]{costello2021twisted}
+Kevin Costello and Davide Gaiotto, \emph{Twisted holography}, 2021.
+
+\bibitem[CG21b]{CG2}
+Kevin Costello and Owen Gwilliam, \emph{Factorization algebras in quantum field
+  theory. {V}ol. 2}, New Mathematical Monographs, vol.~41, Cambridge University
+  Press, Cambridge, 2021.
+
+\bibitem[CKL{\etalchar{+}}23]{choi2023quantum}
+Sunjin Choi, Seok Kim, Eunwoo Lee, Siyul Lee, and Jaemo Park, \emph{Towards
+  quantum black hole microstates}, 2023.
+
+\bibitem[CL15]{CLbcov1}
+Kevin Costello and Si~Li, \emph{{Quantization of open-closed BCOV theory, I}}.
+
+\bibitem[CL16]{CLSugra}
+\bysame, \emph{{Twisted supergravity and its quantization}}.
+
+\bibitem[CL20]{CLtypeI}
+\bysame, \emph{{Anomaly cancellation in the topological string}}, Adv. Theor.
+  Math. Phys. \textbf{24} (2020), no.~7, 1723--1771.
+
+\bibitem[CL23]{Chang_2023}
+Chi-Ming Chang and Ying-Hsuan Lin, \emph{Words to describe a black hole},
+  Journal of High Energy Physics \textbf{2023} (2023), no.~2.
+
+\bibitem[Cos11]{costello2011renormalization}
+K.~Costello, \emph{Renormalization and effective field theory}, Mathematical
+  surveys and monographs, American Mathematical Society, 2011.
+
+\bibitem[Cos13]{CostelloHol}
+Kevin Costello, \emph{Notes on supersymmetric and holomorphic field theories in
+  dimensions two and four}, Pure Appl. Math. Q. \textbf{9} (2013), no.~1,
+  73--165. \MR{3126501}
+
+\bibitem[Cos16]{CostelloM5}
+\bysame, \emph{{M-theory in the Omega-background and five-dimensional
+  noncommutative gauge theory}}.
+
+\bibitem[Cos17]{CostelloM2}
+\bysame, \emph{Holography and {Koszul} duality: the example of the {M2} brane}.
+
+\bibitem[CY13]{Chang_2013}
+Chi-Ming Chang and Xi~Yin, \emph{1/16 bps states in n=4 sym}, Physical Review D
+  \textbf{88} (2013), no.~10.
+
+\bibitem[EH21]{EagerHahner}
+Richard Eager and Fabian Hahner, \emph{{Maximally twisted eleven-dimensional
+  supergravity}}.
+
+\bibitem[EHSW21]{EHSW}
+Richard Eager, Fabian Hahner, Ingmar Saberi, and Brian~R. Williams,
+  \emph{Perspectives on the pure spinor formalism}.
+
+\bibitem[ESW20]{ESW}
+Chris Elliott, Pavel Safronov, and Brian~R. Williams, \emph{A taxonomy of
+  twists of supersymmetric {Yang--Mills} theory}.
+
+\bibitem[ESW21]{NV}
+Richard Eager, Ingmar Saberi, and Johannes Walcher, \emph{Nilpotence
+  varieties}, Annales Henri Poincar{\'e} \textbf{22} (2021), no.~4, 1319--1376.
+
+\bibitem[EW21]{EWpoisson}
+Chris Elliott and Brian~R. Williams, \emph{Holomorphic {P}oisson field
+  theories}, High. Struct. \textbf{5} (2021), no.~1, 1--28.
+
+\bibitem[FSS15]{FSS}
+Domenico Fiorenza, Hisham Sati, and Urs Schreiber, \emph{Super-{L}ie
+  {$n$}-algebra extensions, higher {WZW} models and super-{$p$}-branes with
+  tensor multiplet fields}, Int. J. Geom. Methods Mod. Phys. \textbf{12}
+  (2015), no.~2, 1550018, 35.
+
+\bibitem[Fuk86]{Fuks}
+D.~B. Fuks, \emph{Cohomology of infinite-dimensional {L}ie algebras},
+  Contemporary Soviet Mathematics, Consultants Bureau, New York, 1986,
+  Translated from the Russian by A. B. Sosinski. \MR{874337}
+
+\bibitem[GL21]{Gaiotto:2021xce}
+Davide Gaiotto and Ji~Hoon Lee, \emph{{The Giant Graviton Expansion}}.
+
+\bibitem[GLZ22]{gui2022quadratic}
+Zhengping Gui, Si~Li, and Keyou Zeng, \emph{Quadratic duality for chiral
+  algebras}, 2022.
+
+\bibitem[GR20]{gaiotto2020miura}
+Davide Gaiotto and Miroslav Rapcak, \emph{Miura operators, degenerate fields
+  and the m2-m5 intersection}, 2020.
+
+\bibitem[GRW21]{GRWthf}
+Owen Gwilliam, Eugene Rabinovich, and Brian~R. Williams, \emph{{Quantization of
+  topological-holomorphic field theories: local aspects}}.
+
+\bibitem[Gus09]{Gustavsson:2007vu}
+Andreas Gustavsson, \emph{{Algebraic structures on parallel M2-branes}}, Nucl.
+  Phys. B \textbf{811} (2009), 66--76.
+
+\bibitem[Igu70]{Igusa}
+Jun-ichi Igusa, \emph{A classification of spinors up to dimension twelve},
+  American Journal of Mathematics \textbf{92} (1970), no.~4, 997--1028.
+
+\bibitem[Ima22]{Imamura}
+Yosuke Imamura, \emph{{Analytic continuation for giant gravitons}}.
+
+\bibitem[Kac98]{KacBible}
+Victor~G. Kac, \emph{Classification of infinite-dimensional simple linearly
+  compact {L}ie superalgebras}, Adv. Math. \textbf{139} (1998), no.~1, 1--55.
+  \MR{1652530}
+
+\bibitem[KKKL13]{Kim:2013nva}
+Hee-Cheol Kim, Seok Kim, Sung-Soo Kim, and Kimyeong Lee, \emph{{The general
+  M5-brane superconformal index}}.
+
+\bibitem[Kor14]{KormanThesis}
+Eric~O. Korman, \emph{Elliptic involutive structures and generalized {H}iggs
+  algebroids}, ProQuest LLC, Ann Arbor, MI, 2014, Thesis (Ph.D.)--University of
+  Pennsylvania. \MR{3251109}
+
+\bibitem[KR01]{KR2}
+Victor~G. Kac and Alexei Rudakov, \emph{Representations of the exceptional
+  {L}ie superalgebra {$E(3,6)$}. {II}. {F}our series of degenerate modules},
+  Comm. Math. Phys. \textbf{222} (2001), no.~3, 611--661. \MR{1888090}
+
+\bibitem[KR02]{KacE510}
+\bysame, \emph{Complexes of modules over exceptional {L}ie superalgebras
+  {$E(3,8)$} and {$E(5,10)$}}, Int. Math. Res. Not. (2002), no.~19, 1007--1025.
+  \MR{1903328}
+
+\bibitem[KT75]{KamberTondeur}
+Franz~W. Kamber and Philippe Tondeur, \emph{Foliated bundles and characteristic
+  classes}, Lecture Notes in Mathematics, Vol. 493, Springer-Verlag, Berlin-New
+  York, 1975. \MR{0402773}
+
+\bibitem[Li11]{SiThesis}
+Si~Li, \emph{Calabi--{Y}au geometry and higher-genus mirror symmetry}, ProQuest
+  LLC, Ann Arbor, MI, 2011, Thesis (Ph.D.)--Harvard University. \MR{2898602}
+
+\bibitem[LMNS96]{NekThesis}
+Andrei Losev, Gregory~W. Moore, Nikita Nekrasov, and Samson Shatashvili,
+  \emph{{Four-dimensional avatars of two-dimensional RCFT}}, Nucl. Phys. B
+  Proc. Suppl. \textbf{46} (1996), 130--145.
+
+\bibitem[Lur11]{luriedagx}
+Jacob Lurie, \emph{Derived algebraic geometry x: Formal moduli problems}, 2011.
+
+\bibitem[Lur17]{LurieHA}
+\bysame, \emph{Higher algebra}, 2017.
+
+\bibitem[Mal98]{Maldacena:1997re}
+Juan~Martin Maldacena, \emph{{The Large N limit of superconformal field
+  theories and supergravity}}, Adv. Theor. Math. Phys. \textbf{2} (1998),
+  231--252.
+
+\bibitem[Mur20]{murthy2020growth}
+Sameer Murthy, \emph{The growth of the $\frac{1}{16}$-bps index in 4d
+  $\mathcal{N}=4$ sym}, 2020.
+
+\bibitem[Nek09]{NekrasovInstanton}
+Nikita~A. Nekrasov, \emph{Instanton partition functions and {M}-theory}, Jpn.
+  J. Math. \textbf{4} (2009), no.~1, 63--93. \MR{2491283}
+
+\bibitem[OZ21]{Oh:2021wes}
+Jihwan Oh and Yehao Zhou, \emph{{Twisted holography of defect fusions}},
+  SciPost Phys. \textbf{10} (2021), no.~5, 105.
+
+\bibitem[Pri19]{pridham2019unifying}
+J.~P. Pridham, \emph{Unifying derived deformation theories}, 2019.
+
+\bibitem[PW21]{PWkoszul}
+Natalie~M. Paquette and Brian~R. Williams, \emph{{Koszul duality in quantum
+  field theory}}.
+
+\bibitem[Rab]{Eugene}
+Eugene Rabinovich, \emph{Factorization algebras for bulk-boundary systems},
+  Thesis (Ph.D.), University of California, Berkeley.
+
+\bibitem[R{\"o}m06]{Romelsberger}
+Christian R{\"o}melsberger, \emph{Counting chiral primaries in {$\N= 1$}, {$d=
+  4$} superconformal field theories}, Nuclear Physics B \textbf{747} (2006),
+  no.~3, 329--353.
+
+\bibitem[RSW21]{RSW}
+Surya Raghavendran, Ingmar Saberi, and Brian~R. Williams, \emph{Twisted
+  eleven-dimensional supergravity}, 2021.
+
+\bibitem[RW22]{raghavendran2022holographic}
+Surya Raghavendran and Brian~R. Williams, \emph{A holographic approach to the
+  six-dimensional superconformal index}, 2022.
+
+\bibitem[RY19]{RY}
+Surya Raghavendran and Philsang Yoo, \emph{Twisted {$S$}-duality}, 2019.
+
+\bibitem[SSS09]{SSS}
+Hisham Sati, Urs Schreiber, and Jim Stasheff, \emph{Fivebrane structures}, Rev.
+  Math. Phys. \textbf{21} (2009), no.~10, 1197--1240. \MR{2588823}
+
+\bibitem[SW20]{SWtensor}
+Ingmar Saberi and Brian~R. Williams, \emph{{Constraints in the BV formalism:
+  six-dimensional supersymmetry and its twists}}.
+
+\bibitem[SW21]{SWspinor}
+\bysame, \emph{{Twisting pure spinor superfields, with applications to
+  supergravity}}.
+
+\bibitem[SW22]{SWsuco2}
+\bysame, \emph{Derived enhancements of superconformal symmetry in six
+  dimensions}, To appear, 2022.
+
+\bibitem[Tam03]{tamarkin2003deformations}
+Dimitri Tamarkin, \emph{Deformations of chiral algebras}, 2003.
+
+\bibitem[Wit88]{WittenTwist}
+Edward Witten, \emph{Topological quantum field theory}, Communications in
+  Mathematical Physics \textbf{117} (1988), no.~3, 353--386.
+
+\bibitem[Wit95]{WittenOpen}
+E.~Witten, \emph{{Chern--Simons} gauge theory as a string theory}, The {F}loer
+  memorial volume, Progr. Math., vol. 133, Birkh\"{a}user, Basel, 1995,
+  pp.~637--678. \MR{1362846}
+
+\bibitem[Wit98]{WittenAdS}
+Edward Witten, \emph{Anti de sitter space and holography}.
+
+\end{thebibliography}

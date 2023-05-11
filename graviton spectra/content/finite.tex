@@ -1,0 +1,300 @@
+\section{Conjectures for indices of operators on fivebranes}
+\label{s:finite}
+
+In conjecture \ref{conj:ops} we have formulated a conjectural description of the space of local operators $\Obs_{N}(0)$ associated to the worldvolume theory on a stack of $N$ fivebranes in the holomorphic twist.
+As we reviewed just in the previous section, the space of local operators is what categorifies the superconformal index that we study in this paper.
+In this section we begin to provide some evidence for this description at the level of characters.
+%Of course, this is just a small piece of the full algebra structure present in the local operators.
+%The structure of a three-dimensional holomorphic factorization algebra induces algebraic operations on the algebra of local operators
+
+
+For a stack of $N=1$ fivebranes, which corresponds to the abelian six-dimensional superconformal field theory, we find that our local character matches exactly with the expressions in the literature. 
+This is not a surprise as we have shown that even at the level of factorization algebras $\clie_\bullet(\mc{G}_{1,c})$ is quasi-isomorphic to the classical limit of~$\Obs_1$, see Proposition~\ref{prop:factabelian}.
+
+The main computation of this section is a closed formula for the local character of the factorization algebra $\clie_\bullet(\mc{G}_{N,c})$ for $N > 1$, see Theorem \ref{thm:finite}. 
+Following conjecture \ref{conj:ops} and the general discussion of \S \ref{sec:sucaindex} we are led to hypothesize a closed formula for the superconformal index for the theory on a finite number of fivebranes (in flat space).
+As far as the authors are aware of there is no closed formula for the refined superconformal index (with four independent fugacities) for the theory on a stack of $N > 1$ fivebranes.
+For small values of $N$ we expand our closed formulas to low orders in the fugacity $q$ (which roughly counts instanton charge) to match exactly with expressions in the literature. 
+
+\subsection{Operators on a single fivebrane}
+
+
+In Proposition \ref{lem:single} we have shown that $\clie_\bullet (\mc{G}_{c}^{(-1)})$ is equivalent to the factorization algebra $\Obs^{cl}_{1}$ encoding the classical observables  of the holomorphic twist on a single fivebrane.
+On $\C^3$, the global sections of the local Lie algebra $\mc{G}^{(0)}$ is closely related to $E(3|6)$---the $\infty$-jets of $\mc{G}^{(0)}$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$.
+Combining these facts we see that $\Obs_{1}(0)$ is a module for $E(3|6)$. 
+This module turns out to be a one-dimensional extension of an irreducible $E(3|6)$-module which was classified in~\cite{KR2}. 
+
+%and compare our expression for the character to the character of a certain irreducible module for the exceptional super Lie algebra $E(3|6)$ considered in~\cite{KR2}.
+
+%\parsec
+%
+%There are various degenerations, or specializations, of this character which are interesting to consider.
+%These specializations involve restricting the character above to a subalgebra of the full Cartan that we considered above.
+%
+%One degeneration of this character involves specializing $t_1=t_2=1$ which results in the $U(1) \times SU(2)$ character:
+%\begin{equation}
+%f_{1}(r,q) = \frac{(r+r^{-1})q^{3/2} - 3 q^{2} + q^3}{(1-q)^3} .
+%\end{equation}
+%They compute the absolute (non-super) character of the module $I(0,0;1;-1)$ where they additionally specialize $t_1=t_2=r=1$. 
+%In a similar method to the one used in \cite{KR1}, one can compute the specialized (super) character of $I(0,0;1;-1)$ to find
+%\[
+%\chi_{u(1)} (q,t_1=t_2=r=1) = \frac{2 q^{3/2} - 3 q^2 + q^3}{(1-q)^3} .
+%\]
+
+\parsec
+There are various degenerations, or specializations, of this character which are interesting to consider.
+A particularly meaningful one is related to two different deformations of the theory by elements in the (twisted) superconformal algebra and is known as the Schur limit of the index.
+
+Recall that after performing the holomorphic twist the residual superconformal algebra is~$\mf{osp}(6|2)$.
+We have recalled in \S\ref{s:global1} how the bosonic part of this algebra is represented by fields of the eleven-dimensional theory. 
+There are two types of odd elements of~$\mf{osp}(6|2)$ that also have a natural interpretation in the eleven-dimensional theory.
+The odd part of~$\mf{osp}(6|2)$ can be identified with the twelve-dimensional space
+\[
+\C^3 \otimes \C^2 \oplus \wedge^2(\C^3) \otimes \C^2 
+\]
+where $\C^3, \C^2$ are the fundamental $\mf{sl}(3)$ and $\mf{sl}(2)$ representations, respectively. 
+The $\mf{gl}(1)$ factor in the bosonic part of $\mf{osp}(6|2)$ acts with weight $1/2$ on both summands. 
+
+\begin{itemize}
+\item The summand $\C^3 \otimes \C^2$ embeds into the ghosts of twisted supergravity via the $\gamma$-type fields which satisfy
+\[
+\del \gamma = \d w_a \d z_i .
+\]
+where $i=1,2,3$ and $a = 1,2$.
+Note that $\gamma$ appears to be ambiguous up to a closed holomorphic one-form, but since there is a linear gauge symmetry which sends $\beta \mapsto \del \beta$, it implies that $\gamma$ is unique up to a BRST exact term. 
+Since in our model all closed one-forms are rendered trivial in cohomology
+\item The summand $\wedge^2(\C^3) \otimes \C^2$ embeds as another $\gamma$-type field which satisfies 
+\[
+\del \gamma = w_a \d z_i \d z_j .
+\]
+\end{itemize}
+
+Both deformations break the global Cartan subalgebra down to $\mf{gl}(1) \times \mf{gl}(1)$ according to the specializations
+\begin{equation}\label{eqn:special1}
+y=1 , \quad y_3 = 1 .
+\end{equation}
+Notice that due to the constraint $y_1y_2y_3=1$ this forces $y_1 = y_2^{-1}$.
+As one can easily check, this specialization yields the following single particle index
+\[
+f_{1}(y_1, y_1^{-1},y_3=1, y=1, q) = \frac{q}{1-q} 
+\]
+which recovers the single particle index of a single chiral boson on the Riemann surface $\Sigma = \C_{z_1}$. 
+Notice that the dependence on the parameter $y_1$ has completely dropped out even though we have not specialized it to any value.
+%Notice that although the Cartan subalgebra generated by the vector field $z_1 \del_{z_1} - z_2 \del_{z_2}$ is unbroken by this deformation, the dependence on its fugacity $t_1$ completely drops out of the expression.
+
+\subsection{A conjectural description of operators on a stack of two fivebranes}
+
+In \S\ref{sec:factsummary} we saw that the decomposition of the local $L_\infty$ algebra $\mc{G} = \mc{G}_Z$ on $Z$ induces a filtration of the factorization algebra $\clie_\bullet(\mc{G}_c)$. 
+\[
+\clie_{\bullet}(\mc{G}_{1,c}) \subset \clie_{\bullet}(\mc{G}_{2,c}) \subset \cdots .
+\]
+We now turn to the factorization algebra $\clie_{\bullet}(\mc{G}_{2,c})$.
+
+Recall that $\mc{G}_{2}$ is the local $L_\infty$ algebra on $Z$ defined as $\mc{G}_{2} = \mc{G} / \mc{G}^{\geq 1}$. 
+Since $\mc{G}$ is concentrated in weights $\geq -1$ we see that $\tilde {\mc{G}}_{2}$ is of the form
+\[
+\mc{G}_2 = \tilde {\mc{G}}_2 \ltimes \mc{G}_1 
+\]
+where $\mc{G}_1 = \mc{G}^{(-1)}$ is the weight $(-1)$ piece and $\tilde {\mc{G}}_2 = \mc{G}^{\geq 0} / \mc{G}^{\geq 1} = \mc{G}^{(0)}$.  
+We focus mostly on the factorization algebra $\clie_\bullet(\tilde {\mc{G}}_{2,c})$.
+
+We have already characterized the local dg Lie algebra $\tilde {\mc{G}}_{2} = \mc{G}^{(0)}$ as the weight zero part of $\mc{G}$ on on any threefold $Z$ in \S\ref{s:weight0}. 
+We have also shown that $\mc{G}^{(0)}$ is equivalent to the local Lie algebra $\mc{E}(3|6)$. 
+The even part of $\mc{E}(3|6)$ is
+\[
+\Omega^{0,\bullet}(Z, \T_Z) \oplus \Omega^{0,\bullet}(Z) \otimes \mf{sl}(2) 
+\]
+with its natural cohomological grading by Dolbeault form type. 
+The odd part of $\mc{E}(3|6)$ is
+\[
+\Omega^{1,\bullet}(Z, K_Z^{-1/2}) \otimes \C^2 .
+\]
+The differential is $\dbar$ and the Lie bracket has been described in \S\ref{s:weight0}.
+
+%On $Z = \C^3$ this local dg Lie algebra is related to the exceptional simple super Lie algebra $E(3|6)$ classified by Kac \cite{KacClass}. 
+%Indeed, one can show (see the forthcoming work \cite{SW6d}) that the fiber of the $\infty$-jet bundle of $\mc{G}_2$ at $0 \in \C^3$ is quasi-isomorphic to $E(3|6)$. 
+
+\parsec
+
+We continue by computing the character of local operators associated to the factorization algebra $\clie_\bullet(\mc{G}_{2,c})$ using Lemma~\ref{lem:envelope}.
+For simplicity we will use the fugacities $y_i, y, q$.
+
+
+
+Combining these expressions we obtain the following.
+
+\begin{prop} \label{prop:6dtwo}
+The character of local operators of the factorization algebra $\clie_\bullet(\tilde {\mc{G}}_{2,c})$ on $\C^3$ is given by the plethystic exponential of the following expression
+\begin{equation}\label{eqn:6dtwo}
+\tilde f_{2} (y_i,y,q) = \frac{q^4(y_1+y_2+y_3) + q^2 (y^2 + q + q^2 y^{-2}) - q^{3} (y + q y^{-1})(y_1^{-1} + y_2^{-1} + y_3^{-1})}{(1-y_1q) (1-y_2 q) (1-y_3 q)}.
+\end{equation}
+%\begin{equation}\label{eqn:6dtwo}
+%f_{2} (t_1,t_2,r,q) = \frac{q^4(t_1^{-1} + t_1 t_2^{-1}  + t_2) + q^3 (r^2 + r^{-2} + 1) - q^{7/2} (r + r^{-1})(t_1 + t_1^{-1} t_2 + t_2^{-1})}{(1-t_1^{-1}q) (1-t_1 t_2^{-1} q) (1-t_2 q)} .
+%\end{equation}
+\end{prop}
+
+Recall that our conjecture for the space of local operators associated to the holomorphic twist of the six-dimensional worldvolume theory on a stack of two fivebranes is $\Obs_2 (0) \simeq \clie_\bullet(\mc{G}_{2,c})(0) \mc{O}ng \clie_\bullet(\mc{G}_{1,c})(0) \otimes \clie_\bullet(\tilde {\mc{G}}_{2,c})(0)$. 
+And after removing the center of mass degrees of freedom, our conjecture is $\tilde \Obs_2 \simeq \clie_\bullet(\tilde {\mc{G}}_{2,c})$.
+
+Just as in the abelian case, the local operators $\tilde \Obs_2(0)$ form a module over $E(3|6)$.
+It turns out that this module is irreducible~\cite{KR2}.
+
+We can now state a decategorified version of conjecture \ref{conj:ops} at the level of superconformal indices, or local characters.
+
+\begin{conj}\label{conj:6dtwo}
+The superconformal index of the six-dimensional superconformal theory of type $A_1$ is given by
+\[
+\tilde \chi_{2} (y_i,y,q) = {\rm PExp} \left[\tilde f_2(y_i,y,q) \right] .
+\]
+where $\tilde f_2(y_i,y,q)$ is as in \eqref{eqn:6dtwo}.
+\end{conj}
+
+Similarly, the index associated to the $\mf{gl}(2)$ theory, which is the local character of $\clie_\bullet(\mc{G}_{2,c})$, is conjectured to be simply the product 
+\[
+\chi_{2} (y_i,y,q) = \chi_{2} (y_i,y,q) \cdot \chi_{1}(y_i,y,q)
+\]
+where the character $\chi_{1}$ for the $\mf{gl}(1)$ theory is given in proposition~\ref{prop:6done}
+Equivalently, $\chi_2$ is the plethystic exponential of $f_2 = f_1 + \tilde f_2$. 
+
+%\parsec[]
+%
+%The specialization of this index $t_1=t_2=r=1$ yields the single particle index
+%\[
+%\frac{3q^4 + 3 q^3 - 6 q^{7/2}}{(1-q)^3}. 
+%\]
+
+\parsec[]
+
+The Schur limit $y=1, y_3=1$ of $\tilde f_2$ in \eqref{eqn:special1} yields 
+\[
+\tilde f_{2}(y_1, y_2, y_3=1, y=1, q) = \frac{q^2}{1-q} 
+\]
+which is the single particle index of Virasoro vacuum module on the Riemann surface $\Sigma = \C_{z_1}$. 
+
+\subsection{A closed formula for the finite $N$ index}
+
+Before exhibiting the general formula for the local character of the factorization algebra $\clie_\bullet(\mc{G}_{N,c})$ on $\C^3$ we set up some notation. 
+As above, we let $\chi_k^{\mf{sl}(2)}$ and $\chi^{\mf{sl}(3)}_{[k,l]}$ denote the highest weight $\mf{sl}(2)$ and $\mf{sl}(3)$ characters. 
+We also define the following expression which appears in the denominator in all of our characters
+\begin{equation}
+d(y_i,y,q) = (1-y_1 q)(1-y_2q)(1-y_3q) .
+\end{equation} 
+To simplify formulas, we will temporarily denote the single particle character for the $N=1$ theory $\Obs_1$ by 
+\begin{equation}
+g_{-1} (y_i,y,q) = f_1(y_i,y,q)
+\end{equation}
+where $f_1(y_i,y,q)$ is as in equation \eqref{eqn:6done1} and also denote by 
+\begin{equation}
+g_0 (y_i,y,q) = \tilde f_2(y_i,y,q)
+\end{equation}
+where $\tilde f_2(y_i,y,q)$ is as in equation \eqref{eqn:6dtwo}. 
+Thus $g_2$ is the single particle local character of $\clie_\bullet(\tilde {\mc{G}}_{2,c}) = \clie_{\bullet}(\mc{G}_c^{(0)})$.
+Finally, for $k \geq 1$ let
+%\begin{align*}
+%f_k (y_1,y_2,y_3,y,q) & \define q^{3k/2} \left(q \chi^{\mf{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + \chi^{\mf{sl}(2)}_k(q^{-1/2} y) \right. \\
+%& \left.  - q \chi^{\mf{sl}(2)}_{k-3}(q^{-1/2}y) - \chi^{\mf{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right) .
+%\end{align*}
+%\begin{align*}
+%g_k (y_i,y,q) & \define q^{3} \left(q^{1 + 3 (k-2)/2} \chi^{\mf{sl}(2)}_{k-2}(q^{-1/2} y)(y_1 + y_2 + y_3) + q^{3(k-2)/2} \chi^{\mf{sl}(2)}_k(q^{-1/2} y) \right. \\
+%& \frac{\left.  - q^{3(k-1)/2} \chi^{\mf{sl}(2)}_{k-3}(q^{-1/2}y) - q^{-1 + 3(k-1)/2} \chi^{\mf{sl}(2)}_{k-1} (q^{-1/2} y) (y_1^{-1} + y_2^{-1} + y_3^{-1} ) \right)}{d(y_i,y,q)} .
+%\end{align*}
+\begin{equation}
+\label{eqn:gk}
+\begin{array}{lllll}
+g_k (y_i,y,q) \define & q^{3} \left(q^{1 + 3 k/2} \chi^{\mf{sl}(2)}_{k}(q^{-1/2} y)\chi^{\mf{sl}(3)}_{[1,0]}(y_i) + q^{3k/2} \chi^{\mf{sl}(2)}_{k+2}(q^{-1/2} y) \right. \\
+&\displaystyle \frac{\left.  - q^{3(k+1)/2} \chi^{\mf{sl}(2)}_{k-1}(q^{-1/2}y) - q^{-1 + 3(k+1)/2} \chi^{\mf{sl}(2)}_{k+1} (q^{-1/2} y) \chi^{\mf{sl}(3)}_{[0,1]}(y_i) \right)}{d(y_i,y,q)} .
+\end{array}
+\end{equation}
+%and hence the conjectural single particle index for the superconformal theory associated to the Lie algebra $\mf{sl}(2)$. 
+
+\begin{thm}
+\label{thm:finite}
+Let $N \geq 3$. 
+The local character of the factorization algebra $\clie_{\bullet}(\mc{G}_{N,c})$ is
+\begin{equation}
+\chi_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=-1}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
+\end{equation}
+Similarly, the local character of the factorization algebra $\clie_\bullet(\tilde{\mc{G}}_{N,c})$ is 
+\begin{equation}
+\tilde{\chi}_{N}(y_1,y_2,y_3,y,q) = \text{PExp}\left[\sum_{k=0}^{N-2} g_k(y_1,y_2,y_3,y,q)\right].
+\end{equation}
+\end{thm}
+\begin{proof}
+By Lemma~\ref{lem:envelope} the character of $\clie_\bullet (\mc{G}_{N,c})$ is given by 
+\begin{equation}
+\chi_N = \text{PExp} \left[f_N\right]
+\end{equation}
+where $f_N$ is the single particle local character.
+Thus, it suffices to show that $f_N = \sum_{k = -1}^{N-2} g_k$.
+Recall that from the description \eqref{eqn:gN} we have, as local Lie algebras:
+\begin{equation}
+\mc{G}_N = \mc{G} / \mc{G}^{(\geq N-2)} ,
+\end{equation} 
+for $N \geq 1$. 
+In particular, as a super vector bundle on the threefold $Z = \C^3$ we have
+\[
+\mc{G}_N = \mc{G}^{(-1)} \oplus \mc{G}^{(0)} \oplus \cdots \oplus \mc{G}^{(N-2)} .
+\]
+%\begin{equation}
+%\clie_{\bullet}(\mc{G}_{2,c}) \leftarrow \clie_{\bullet}(\mc{G}_{3,c}) \leftarrow \cdots \leftarrow \clie_\bullet (\mc{G}_{N,c}) .
+%\end{equation}
+So, it suffices to observe that $g_k$ is the single particle index of the factorization algebra $\clie_\bullet(\mc{G}^{(k)}_c)$, which is a direct observation using the description of $\mc{G}^{(k)}$ we have given in Proposition \ref{prop:Vj}.
+\end{proof}
+
+We thus arrive at the following conjecture for the index of the worldvolume theory on a stack of a finite number of fivebranes which we phrase in terms of the six-dimensional superconformal theory associated to the Lie algebra $\mf{sl}(N)$.
+
+\begin{conj} 
+The superconformal index of the six-dimensional superconformal theory associated to the Lie algebra of type $A_{N-1}$ is $\tilde \chi_{N}(y_1,y_2,y_3,y,q)$. 
+\end{conj}
+
+We proceed to give some concrete evidence for this conjecture.
+First, we show that when we take the limit as $N \to \infty$ that we recover the index computed from the gravitational side.
+
+\parsec
+
+It follows from the limit description in \eqref{eqn:lim} that the large $N$ limit of $\chi_N$ is precisely the multiparticle supergravity index we computed in proposition~\ref{prop:sugraindex1}. 
+Alternatively, we have the following direct proof of this fact. 
+
+\begin{prop}
+One has
+\begin{equation}
+\chi_{sugra}(y_i, y, q) = \lim_{N \to \infty} \chi_N(y_i,y,q)
+\end{equation}
+\end{prop}
+
+\begin{proof}
+It suffices to show that at the level of single particle indices one has
+\begin{equation}
+f_{sugra}(y_i, y, q) = \lim_{N \to \infty} f_N(y_i,y,q) ,
+\end{equation}
+where $f_N = \sum_{k = -1}^{N-2} g_k$. 
+
+We will use the following identity 
+\begin{equation}
+\sum_{k=0}^\infty q^{3k/2} \chi_{k}^{\mf{sl}(2)}(q^{-1/2}y) = \frac{1}{(1-q y)(1-q^2 y^{-1})} .
+\end{equation}
+We will denote this expression by $S(y,q)$.
+
+Using this identity one can directly see that the result reduces to observing that
+\begin{multline}
+\left(q^4 (y_1+y_2+y_3) + 1 - q^6 - q^2 (y_1^{-1} + y_2^{-1} + y_3^{-1})\right)S(y,q) - 1 + q^3= \\
+\left(q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2) \right) S(y,q) .
+\end{multline}
+
+
+%\begin{itemize}
+%\item $q^4 \sum_{k=0}^\infty q^{3k/2} \chi_{k}^{\mf{sl}(2)}(q^{-1/2} y)(y_1+y_2+y_3) = \frac{q^4(y_1+y_2+y_3)}{(1-q y)(1-q^2 y^{-1})}$. 
+%\end{itemize}
+
+\end{proof}
+
+As an immediate corollary we have the following result.
+\begin{cor}
+For any $N \geq 1$ one has
+\begin{equation}
+\chi_{sugra}(y_i,y,q) = \tilde{\chi}_N(y_i,y,q) \mod q^{N+1} .
+\end{equation}
+\end{cor}
+\begin{proof}
+This follows from observing that at the level of single particle states $f_N$ is of order $q^{N}$.
+\end{proof}
