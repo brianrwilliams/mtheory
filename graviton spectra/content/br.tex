@@ -1,4 +1,7 @@
-\section{Twisted Backreactions}
+\documentclass[../main.tex]{subfiles}
+
+\begin{document} 
+\section{Twisted AdS space}
 \label{sec:ads}
 
 As remarked above, in eleven-dimensional supergravity, the $AdS_7 \times S^4$ and $AdS_4\times S^7$ backgrounds are obtained by backreacting a number of M5 branes and M2 branes in flat space \cite{Maldacena:1997re,WittenAdS}. In this section, we wish to give an account of this procedure at the level of our twisted theory in eleven-dimensions. Before describing the specific examples of interest, we begin with some generalities.
@@ -12,6 +15,217 @@ Suppose we have a theory of gravity on the total space of a vector bundle. In th
 
 This procedure is implemented at the level of the $\Omega$-deformed nonminimal twist on flat space in the appendix of \cite{CostelloM5}, and in \cite{raghavendran2022holographic} the procedure is carried about for M5 branes in our eleven-dimensional model in some global generality. For the purposes of this thesis however, we will content ourselves with examples on flat space. 
 
+\subsection{Twisted supergravity}
+
+In \cite{CLsugra}, Costello and Li gave a rigorous definition of what it means to {\em twist} supergravity, which is nicely compatible with the mathematically more familiar notion of twisting supersymmetric gauge theories \cite{WittenTwist}.
+In physical terms, twisted supergravity is supergravity in a background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge.
+In principle, one can take the supercharge to be any square-zero covariantly constant spinor (so it satisfies the equations of motion of supergravity).
+A class of such supercharges lie in the supersymmetry algebra.
+
+The eleven-dimensional supersymmetry algebra admits two types of twists characterized by the number of invariant directions that the supercharge determines:
+\begin{itemize}
+\item 
+The $SU(5)$ twist. 
+This twist leaves six real directions invariant and is stabilized by the subgroup $SU(5)$ of the eleven-dimensional Lorentz group.\footnote{We always work in Euclidean signature.}
+\item 
+The $G_2$ twist.
+This twist leaves nine real directions invariant and is preserved by the subgroup $SU(2) \times G_2$ of the Lorentz group. 
+\end{itemize}
+
+In \cite{RSW} we have proposed a mathematical model for the $SU(5)$-twist of eleven-dimensional supergravity.
+Many tests of this proposal were performed, including a consistency check that the dimensional reduction of the model agrees with proposals for twists of type IIA supergravity given in terms of topological strings~\cite{CLsugra}.
+
+The eleven-dimensional theory exists on any manifold which is locally of the form 
+\[
+\R \times Z
+\] 
+where $Z$ is a Calabi--Yau fivefold.
+The model is topological along $\R$ in the sense that translations in this direction act in a homotopically trivial way on the theory.
+Likewise, locally on the Calabi--Yau fivefold, all anti-holomorphic translations act in a homotopically trivial way---in this sense, the theory is {\em holomorphic} along $Z$ \cite{BWhol}.
+More generally, the eleven-dimensional theory can be constructed on any eleven-manifold equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
+
+In \cite{RSW,RWindex} we describe how physical fields in supergravity are manifest in the twisted model.
+\brian{expand this}
+Here, we will jump straight to describing the twisted model.
+Fields generally live in spaces of the form
+\beqn
+\Omega^\bu(\R) \otimes \Omega^{0,\bu}(Z, V)
+\eeqn
+where $V$ is some holomorphic vector bundle on $Z$.\footnote{The tensor product $\otimes$ is the completed tensor product with respect to natural topologies present in the space of sections of a smooth vector bundle.}
+Since the theory is of topological/holomorphic nature, there is a linear part of the BRST differential of the form $\d + \dbar$ where $\d$ is the de Rham differential on $\R$ and $\dbar$ corresponds to the holomorphic structure on the bundle $V$.
+
+Deformations of the background metric which survive the twist can be identified with Beltrami differentials, that is, sections of 
+\[
+\Bar{\T}_Z^* \otimes \T_Z \cong \Bar{\T}^*_Z \otimes \Bar{\T}_Z^* . 
+\]
+More generally, the fields of this model include sections of the holomorphic tangent bundle with coefficients in Dolbeault forms on $Z$ of arbitrary Dolbeault type and de Rham forms on $\R$, which we can write in superfield notation as 
+\[
+\mu = \mu^{\Bar{I}}_j (t;z,\zbar) \d \zbar_{\Bar{I}} \otimes \del_{z_j} + \mu^{\Bar{I}}_{t,j} (t;z,\zbar) \d t \d \zbar_{\Bar{I}} \otimes \del_{z_j}
+\]
+where the sum over the multi-index $\Bar{I}$ ranges over subsets of $\{1,\ldots,5\}$.
+We view this as a section
+\beqn
+\mu \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(Z, \Pi \T_Z) .
+\eeqn
+In this notation, the component $\mu^{\Bar{I}}_j$ is {\em odd} if $|\Bar{I}|=0,2,4$ is even and {\em even} if $|I| = 1,3,5$ is odd.
+The parity shift of the holomorphic tangent bundle is to ensure that deformations of the background metric which survive the twist are viewed as even fields.
+In particular we have odd fields $\mu_j(t;z,\zbar) \del_{z_j}$ which play the role of ghosts for infinitesimal changes of coordinates.
+
+Part of the linear equations of motion in our model imply that the field $\mu$ satisfies a condition that it be {\em divergence-free} for the Calabi--Yau structure on the fivefold~$Z$.
+This condition is imposed, cohomologically, by adding another field which is simply a differential form
+\beqn
+\nu \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(Z) 
+\eeqn
+and a linear part of the differential $\delta \nu = \div \mu$ encoding the divergence-free condition.
+Another piece of the linear equations of motion imply that it $\mu$ be constant along~$\R$. 
+
+Ordinarily, for $\mu$ to describe a deformation of complex structure in the $Z$ direction we would require that it satisfy the Maurer--Cartan equation.
+For twisted supergravity, however, we find a modification of this equation which involves the twisted analog of another familiar field---the higher form gauge field in supergravity.
+
+In the BV formalism one will see all types of differential forms corresponding to a tower of ghosts for this higher gauge field together with antifields and antighosts.
+In local coordinates, the only components of this tower of differential forms which survives the twist are
+\begin{align*}
+\beta & = \beta^{\Bar{I}} \d \zbar_{\Bar{I}} + \beta_t^{\Bar{J}} \d t \d \zbar_{\Bar{J}} \in \Omega^{\bu}(\R) \otimes \Omega^{0,\bu}(Z) \\
+\gamma & = \gamma^{i \Bar{I}} \d z_i \d \zbar_{\Bar{I}} + \gamma_t^{j \Bar{J}} \d t \d z_j \d \zbar_{\Bar{J}} \in \Omega^{\bu} (\R) \otimes \Omega^{1,\bu}(Z).
+\end{align*}
+%When we want to be specific by the form type we use the notation $\beta^{k;q}(t;z,\zbar)$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}(t;z,\zbar)$ for the $(k;1,q)$ component of the three-form.
+Fields $\beta^{\Bar{I}}, \gamma_t^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em even} (resp. {\em odd}) and fields $\beta_t^{\Bar{I}}, \gamma^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em odd} (resp. {\em even}). 
+
+The most important equation of motion of the eleven-dimensional theory involves both the fields $\mu$ and $\gamma$. 
+When $\div \mu = 0$ it takes the form
+\beqn\label{eqn:eom2}
+\dbar \mu + \frac12 [\mu,\mu] = \del \gamma \del \gamma .
+\eeqn
+Because of the term on the right hand side this equation is not exactly the usual Beltrami equation for deformations of complex structures.
+On the left hand side we are implicitly using an identification between the holomorphic tangent bundle $\T_Z$ and the bundle $\wedge^4 \T^*_Z$ granted by the holomorphic volume form on $Z$.
+
+In \cite{RSW} we find the above equation of motion together with its gauge symmetries by formulating the theory within the BV formalism.
+We briefly recount what this entails.
+In the BV formalism, the space of BV fields $\cE$ is given as the sections of some graded vector bundle on spacetime. 
+The grading is typically by the abelian group $\Z$, which is usually referred to as the cohomological grading.
+In cohomological degree zero of $\cE$ sit the usual (sometimes called {\em physical}) fields.
+The ghosts comprise the cohomological degree $-1$ part of $\cE$. 
+In cohomological degree one sit the antifields, etc..
+Another key piece of structure is a skew symmetric pairing $\omega_{BV}$ of cohomological degree $-1$ on $\cE$ which is concretely a pairing between the fields and antifields (and ghosts and antighosts).
+The full BV action functional $S_{BV}$ is a functional on the space of fields which encodes not only the original action functional on fields, but through its dependence on ghosts and antifields it also encodes the gauge symmetries (and gauge symmetries for gauge symmetries, etc.) of the theory. 
+
+For our eleven-dimensional model the BV action functional takes the following form
+\begin{multline}
+S_{BV} = \int_{\R \times Z} \bigg[\beta \wedge (\dbar + \d) \nu + \gamma \wedge (\dbar + \d) \mu +  \beta \wedge \div \mu  \bigg] \\
++ \frac{1}{2} \int_{\R \times Z}  \mu^2 \vee \del \gamma + \int_{\R \times Z} \gamma \del \gamma \del \gamma + \cdots .
+\end{multline}
+Here:
+\begin{itemize}
+\item the first line is the free part of the action.
+The operator $\dbar$ is the $\dbar$-operator on $Z$, the operator $\d$ is the de Rham operator on $\R$, and the operator $\div$ is the holomorphic divergence operator on $Z$ corresponding to the holomorphic volume form.
+\item We implicitly use the holomorphic volume form in the above integrals.
+\item The term 
+\beqn\label{eqn:J}
+J(\gamma) \define \int_{\R \times Z} \gamma \del \gamma \del \gamma .
+\eeqn
+is the holomorphic avatar of the famous Chern--Simons term of the higher form gauge field present in supergravity.
+\item The $\cdots$ indicate additional terms needed so that this functional satisfies the classical master equation (in this presentation there are, in fact, infinitely many terms).
+They take a form which is reminiscent of the genus zero BCOV action for the fivefold $Z$ (we make a further comment on this below).
+\end{itemize}
+
+In what follows we will define $S_{BF}$ as
+\beqn
+S_{BV} = S_{BF} + J ,
+\eeqn
+with $J$ the Chern-Simons term \eqref{eqn:J}.
+We will not need an explicit formula for $S_{BF}$ but we remark that reason for the terminology $S_{BF}$ is that this term in the action is homotopy equivalent to a standard BF type action, see \cite{RSW}.
+
+In \cite{RSW} we have performed a number of consistency checks that this model indeed describes the $SU(5)$ twist of supergravity.
+Famously, $M$-theory on a circle is expected to be equivalent to type IIA string theory where the length of the circle is proportional to the string coupling constant.
+At the level of supergravity, the $S^1$-reduction of eleven-dimensional supergravity is ten-dimensional supergravity of type IIA.
+Here we utilize a description of the twist of type IIA strings using a version of Kodaira--Spencer theory developed in \cite{CLbcov1,CLsugra}.
+
+From the point of view of the $SU(5)$ twist there are essentially two types of circles one can consider.
+The first is a `holomorphic circle'.
+This is present when we assume our Calabi--Yau fivefold is of the form $Z = \C^\times \times Y$ with $Y$ a Calabi--Yau fourfold.
+We assume that $\C^\times$ is equipped with the standard volume form $\d z$.
+The $S^1$ reduction along a circle in $\C^\times$ results in a twist of type IIA supergravity with global symmetry $SU(4)$ on the manifold
+\beqn
+\R \times \R \times Y .
+\eeqn
+More generally, this twist can be defined when $\R^2$ is replaced by a smooth oriented two-dimensional manifold $M^2$.
+In \cite{CLsugra}, Costello and Li have given a conjectural description of this particular twist of type IIA (and many other twists) using methods of topological string theory.
+In this case, the conjecture of Costello and Li is that the twist is equivalent to a mixed topological string theory which is given by the A-model along $M^2$ and the B-model along $Y$.
+In perturbation theory, this admits a description in terms of Kodaira--Spencer theory along the fourfold $Y$.
+Via an explicit dimensional reduction of our model we find an exact match with this expectation \cite{RSW}.
+The dimensional reduction of our eleven-dimensional model on
+\beqn
+\R \times \C \times Y
+\eeqn
+along $S^1 \subset \C$ is equivalent to the mixed topological A-model along $\R^2$ and B-model along $Y$ as considered in \cite{CLsugra}.
+
+The other type of reduction one can consider is that along a `topological' circle.
+This corresponds to placing our eleven-dimensional model on
+\beqn
+S^1 \times Z
+\eeqn
+and performing reduction along $S^1 \times Z \to Z$.
+What results is a theory with $SU(5)$ global symmetry.
+We conjecture that this is the $SU(5)$ twist of type IIA supergravity.
+There is no expected description of the $SU(5)$ twist in terms of topological strings like in the $SU(4)$ or $SU(2)$ cases.
+
+%
+%There are two bosonic fields of particular importance.
+%First is a section
+%\beqn
+%\mu^{0;0,1} \in \Omega^0(\R) \otimes \Omega^{0,1}(X, \T_X) .
+%\eeqn
+%Here $\T_X$ is the holomorphic tangent bundle on $X$.
+%The linear part of the BRST differential requires this field be constant in the real direction.
+%Thus, this field has the same form as a Beltrami differential on $X$.
+%There are particular field configurations where the non-linear equations of motion for $\mu$ imply that it is a complex structure deformation of $X$, but the full equations of motion are more complicated.
+%Another bosonic field of importance is a section
+%\beqn
+%\gamma^{0;0,1} \in \Omega^0(\R) \otimes \Omega^{1,1}(X) .
+%\eeqn
+%
+%The field $\mu$ satisfies a condition that it be {\em divergence-free} for the Calabi--Yau structure on the fivefold~$X$.
+%This means that it is required to satisfy the equation
+%\beqn
+%\div \mu = 0
+%\eeqn
+%where $\div(-)$ is the divergence with respect to the holomorphic volume form $\Omega$ on $X$.
+
+%\subsection{The $G_2$ twist}
+%
+%We will give a description to of the $G_2$ twist of eleven-dimensional supergravity.
+%Independent derivations of this twist have appeared in \cite{CostelloM5, EagerHahner}.
+%The theory is defined on any manifold of the form
+%\beqn
+%M \times Y
+%\eeqn
+%where $M$ is a manifold with $G_2$ holonomy and $Y$ is a manifold with $SU(2)$ holonomy.
+%Unfortunately, the perturbative description we are about to give depends in no way on the $G_2$ structure and can be defined when $M$ is any smooth seven-dimensional manifold.
+%To see the full $G_2$ structure appearing one must take into account non-perturbative effects (much like in the target space description of the topological A-model).
+%
+%The fundamental field is simply a differential form
+%\beqn
+%\alpha \in \Omega^\bu(M) \otimes \Omega^{0,\bu}(Y) [1] .
+%\eeqn
+%The linear BRST differential is simply $\d + \dbar$ where $\d$ is the de Rham differential on $M$ and $\dbar$ is the Dolbeault operator for $Y$.
+%
+%Being a manifold with $SU(2)$ holonomy, the algebra of holomorphic fnuctions on $Z$ is equipped with a holomorphic Poisson bracket $\{-,-\}$.
+%Since this bracket involves only holomorphic differntial operators, it can be extended to a Poisson bracket on the dg algebra $\Omega^{0,\bu}(Y)$.
+%The theory utilizes this bracket in an essential way.
+%Indeed, the full BV action is
+%\beqn
+%\frac12 \int_{M \times Y} \Omega \, \alpha \d \alpha + \frac16 \int_{M \times Y} \Omega \, \alpha \{\alpha, \alpha\} .
+%\eeqn
+%where $\Omega \in \Omega^{2,0}(Y)$ is the holomorphic volume form.
+%This description appeared in \cite{RYsduality} and was independently derived from a further twist of the $SU(5)$ twist in \cite{RSW}. 
+%
+%Like the $SU(5)$ twist, this theory is only $\Z/2$ graded.
+%Nevertheless, one convenient way to think about this theory is as a higher dimensional Chern--Simons theory for a particular (dg) Lie algebra.
+%Given any odd-dimensional smooth manifold $M$ and a Lie algebra $\lie{g}$ equipped with an invariant non-degenerate symmetric inner product one can consider a $\Z/2$ graded version of Chern--Simons theory whose BV action is given by the usual formula $\int_M CS(A)$.
+%It is only in the case that $\dim M = 3$ that this theory admits a $\Z$-grading.
+%The theory we are considering here can be interpreted as $\Z/2$ graded Chern--Simons theory on the seven-manifold $M$ for the Lie algebra of holomorphic functions on $Y$ equipped with the holomorphic Poisson bracket.
+%Here, the invariant pairing is given by integrating against the holomorphic volume form $\Omega$.
+
 \subsection{The ${\mr AdS}_4 \times S^7$ background}
 
 In this section we introduce the analog of the ${\mr AdS}_4 \times S^7$ background in our conjectural description of the minimal twist of eleven-dimensional supergravity. 
@@ -24,7 +238,9 @@ We begin by viewing the eleven-dimensional manifold $\R\times \C^5$ as
 \]
 where we have abusively used $K^{1/4}_\C\otimes \C^4$ to denote its pullback along the natural projection $\R\times \C\to \C$. Thinking of flat space in this way is simply a way to record weights under natural scaling actions. We will use $w_a$ to denote holomorphic fiber coordinates on $K^{1/4}_\C\otimes \C^4$.
 
-We carry out the above procedure. Consider a stack of $N$ M2 branes wrapping the zero section $\R\times \C_z$. A natural interaction to consider is 
+We carry out the above procedure. 
+Consider a stack of $N$ twisted M2 branes wrapping the zero section $\R\times \C_z$.
+Our ansatz for this coupling is heuristically of the form
 \[
 I_{M2}(\gamma) = N\int_{\C_z} \gamma + \cdots
 \] 
@@ -76,18 +292,24 @@ It is clear that $\div F_{M2} = 0$ and
 by simple type reasons. 
 \end{proof}
 
-We summarize the output of our computation with a definition. 
+We summarize the output of our computation with a definition.
 
 \begin{defn}\label{defn:ads4}
-Let $\mc E^N_{AdS_4\times S^7}$ denote the classical BV theory on $\operatorname{Tot} (K_\C^{1/4}\otimes \C^4 \to \R\times \C_z)\setminus 0(\R\times \C)$ given by the sheaf of cochain complexes $\mc E |_{(\R\times \C)\times (\C^4\setminus \{0\} )}$, with BV pairing induced from $\mc E$, deformed by the interaction \[S_{BF,\infty}(\mu + NF_{M2}, \nu, \beta, \gamma) + J(\gamma).\]
+Let $\mc E^N_{AdS_4}$ denote the classical BV theory on 
+\beqn\label{eqn:totalm2}
+\operatorname{Tot} (K_\C^{1/4}\otimes \C^4 \to \R\times \C_z)\setminus 0(\R\times \C)
+\eeqn
+given by the sheaf of cochain complexes $\mc E |_{(\R\times \C)\times (\C^4\setminus \{0\} )}$, with BV pairing induced from $\mc E$, deformed by the interaction \[S_{BF,\infty}(\mu + NF_{M2}, \nu, \beta, \gamma) + J(\gamma).\]
 \end{defn}
 
+
 \begin{rmk}
-Note that upon expanding the interaction around $NF_{M2}$, the cubic term in $S_{BF,\infty}$ will contribute a differential which acts on $\gamma$ and $\mu$ by bracketing with $NF_{M2}$. We accordingly denote this differential $[NF_{M2}, - ] $, and we see that the sheaf of cochain complexes underlying $\mc E_{AdS_4\times S^7}$ is in fact \[\left ( \mc E |_{(\R\times \C)\times (\C^4\setminus \{0\} ) }, \delta^{(1)} + [NF_{M2},-] \right )\] where $\delta^{(1)}$ denotes the original linearized BRST differential.
+By definition, the theory $\cE_{AdS_4}^N$ is a deformation of our eleven-dimensional model on \eqref{eqn:totalm2} by the $N$-dependent action functional $S_{BF, \infty}(\mu = N F_{M2})$.
+Upon expanding this action around $NF_{M2}$, the cubic term in $S_{BF,\infty}$ will contribute a differential which acts on $\gamma$ and $\mu$ by bracketing with $NF_{M2}$. We accordingly denote this differential $[NF_{M2}, - ] $, and we see that that linearized BRST complex underlying $\mc E_{AdS_4}$ is \[\left ( \mc E |_{(\R\times \C)\times (\C^4\setminus \{0\} ) }, \delta^{(1)} + [NF_{M2},-] \right )\] where $\delta^{(1)}$ denotes the original linearized BRST differential of the eleven-dimensional theory defined on flat space.
 \end{rmk}
 
 \begin{conj}\label{conj:ads4}
-The minimal twist of eleven-dimensional supergravity on the $AdS_4\times S^7$ background with $N$ units of M2 brane flux supported on $S^7$ is perturbatively equivalent to $\mc E^N_{AdS_4\times S^7}$.
+The minimal twist of eleven-dimensional supergravity on the $AdS_4\times S^7$ background with $N$ units of M2 brane flux supported on $S^7$ is perturbatively equivalent to $\mc E^N_{AdS_4}$.
 \end{conj}
 
 To verify this conjecture, we should directly twist eleven-dimensional supergravity on the $AdS_4\times S^7$ spacetime. Doing so seems difficult - while it is likely not hard to identify the covariantly constant nilpotent spinors which define the twist, it seems more difficult to establish a perturbative equivalence with our description above. A modification of the pure spinor superfield formalism to symmetric spaces such as cosets for the superconformal group might make such checks more feasible. In lieu of such, we will instead pursue other consistency checks in the following two sections{}. 
@@ -102,10 +324,9 @@ to record weights under natural scaling actions. We once again will use $w_a$ to
 
 \parsec[sec:m5coupling]
 
-To repeat the procedure in the previous subsection, we begin by discussing how the eleven-dimensional theory couples to M5 branes. 
+To repeat the procedure in the previous subsection, we begin by defining our eleven-dimensional theory couples to M5 branes (to first order).
 Consider a stack of $N$ M5 branes wrapping the zero section $\C^3_z$. 
-
-It is natural to consider the nonlocal interaction 
+We consider the heuristic nonlocal coupling 
 \[
 I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega +\cdots 
 \]
@@ -173,17 +394,28 @@ for any four-sphere centered at $0 \in \C^2 \times \R$.
 The second equation $F \wedge F = 0$ follows by simple type reasons. 
 \end{proof}
 
-Once again, we summarize our findings in a definition. 
+Once again, we summarize the lemma above with a definition.
+
 \begin{defn}\label{defn:ads7}
-Let $\mc E^N_{AdS_7\times S^4}$ denote the classical BV theory on $\operatorname{Tot}(\R \oplus K_{\C^3}^{1/2}\otimes \C^2 \to \C^3_z)\setminus 0(\C^3_z)$ given by the sheaf of cochain complexes $\mc E |_{\C^3\times (\R\times \C^2\setminus \{0\} )}$, with BV pairing induced from that on $\mc E$, deformed by the interaction \[S_{BF,\infty}(\mu, \nu, \beta, \gamma +N\del^{-1} F_{M5}) + J(\gamma + N \del^{-1} F_{M5}).\]
+Let $\mc E^N_{AdS_7}$ denote the classical BV theory on 
+\beqn
+\operatorname{Tot}(\R \oplus K_{\C^3}^{1/2}\otimes \C^2 \to \C^3_z)\setminus 0(\C^3_z)
+\eeqn
+given by the sheaf of cochain complexes $\mc E |_{\C^3\times (\R\times \C^2\setminus \{0\} )}$, with BV pairing induced from that on $\mc E$, deformed by the interaction \[S_{BF,\infty}(\mu, \nu, \beta, \gamma +N\del^{-1} F_{M5}) + J(\gamma + N \del^{-1} F_{M5}).\]
 \end{defn}
 
 \begin{rmk}
 Note that both terms in the action only depend on $\gamma$ through its holomorphic derivatives so the above expression for the action is indeed well-defined. 
 
-As before, upon expanding the interactions around $NF_{M5}$, the cubic terms in both $S_{BF,\infty}$ and $J$ will contribute differentials. From $S_{BF,\infty}$, we get a differential which takes a $\mu$ type field to the Schouten bracket $N[F_{M5}, \mu]$ and from $J$, we get a differential which acts as $\gamma\mapsto N F_{M5} \wedge \del \gamma$. We accordingly denote this differential $[NF_{M5}, - ] $, and the sheaf of cochain complexes underlying $\mc E_{AdS_7\times S^4}$ is in fact \[\left (\mc E |_{\C^3\times (\R\times \C^2\setminus \{0\} )}, \delta^{(1)} + [NF_{M5},-] \right )\] where $\delta^{(1)}$ denotes the original linearized BRST differential.
+As before, upon expanding the interactions around $NF_{M5}$, the cubic terms in both $S_{BF,\infty}$ and $J$ will contribute differentials. From $S_{BF,\infty}$, we get a differential which takes a $\mu$ type field to the Schouten bracket $N[F_{M5}, \mu]$ and from $J$, we get a differential which acts as $\gamma\mapsto N F_{M5} \wedge \del \gamma$. We accordingly denote this differential $[NF_{M5}, - ] $, and linear BRST complex is
+\[
+\left (\mc E |_{\C^3\times (\R\times \C^2\setminus \{0\} )}, \delta^{(1)} + [NF_{M5},-] \right )
+\] where $\delta^{(1)}$ denotes the original linearized BRST differential.
 \end{rmk}
 
 \begin{conj}\label{conj:ads7}
-The minimal twist of eleven-dimensional supergravity on the $AdS_7\times S^4$ background with $N$ units of M5 brane flux supported on $S^4$ is perturbatively equivalent to $\mc E_{AdS_7\times S^4}$. 
+The minimal twist of eleven-dimensional supergravity on the $AdS_7\times S^4$ background with $N$ units of M5 brane flux supported on $S^4$ is perturbatively equivalent to $\mc E_{AdS_7}$. 
 \end{conj}
+
+Part of our goal in the remainder of the paper is to justify conjectures \ref{conj:ads4} and \ref{conj:ads7}.
+\end{document}

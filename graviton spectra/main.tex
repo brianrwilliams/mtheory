@@ -1,18 +1,13 @@
 \documentclass{amsart}
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\let\ref\hyperref
-\let\hat\widehat
-\usepackage{amsfonts} %necessary for Blackboard Bold
-\usepackage{amsmath} %does A LOT
-\usepackage{amssymb} %necessary for things like \partial
-\usepackage{amsthm} %for thms and such
+\usepackage[dvipsnames]{xcolor}
+
 \usepackage{macros}
-\usepackage{tikz-cd}
-\usepackage{tikz-feynman}
-\usepackage{xparse}
-\usepackage[centerboxes,boxsize=1ex,nobaseline,aligntableaux=center]{ytableau}
 \setcounter{secnumdepth}{4}
+
+\usepackage{subfiles}
+
+\newcommand\brian[1]{\colorbox{BurntOrange}{#1}}
+\newcommand\surya{\todo[color={blue!100!green!33},author=Surya]}
 
 
 \title{Twisted graviton spectra of $AdS_4\times S^7$ and $AdS_7\times S^4$} 
@@ -28,7 +23,7 @@
 
 Having described our eleven-dimensional model on flat spacetimes, we now pursue descriptions on maximally symmetric spacetimes. We begin by describing twisted versions of the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds. In eleven-dimensional supergravity, these backgrounds arise as near-horizon limits of the backgrounds sourced by some number of M2 and M5 branes in flat space respectively. In the first section of this chapter \ref{sec:ads}, we describe an analogous procedure natively in our twisted context. 
 
-To do so, we motivate ansatzae for the leading order couplings of our eleven-dimensional model to M2 and M5 branes. These couplings determine certain curved deformations of the $L_\infty$-algebra underlying our model - we conjecture that deforming the theory in the complement of the brane by a solution to the resulting curved Maurer-Cartan equation is perturbatively equivalent to the twist of the theory on $AdS_4\times S^7$ and $AdS_7\times S^4$. 
+To do so, we motivate ansatz for the leading order couplings of our eleven-dimensional model to M2 and M5 branes. These couplings determine certain curved deformations of the $L_\infty$-algebra underlying our model - we conjecture that deforming the theory in the complement of the brane by a solution to the resulting curved Maurer-Cartan equation is perturbatively equivalent to the twist of the theory on $AdS_4\times S^7$ and $AdS_7\times S^4$. 
 
 The next two sections provide evidence for this conjecture. We begin in section \ref{sec:states} with numerical checks. We give definitions of supergravity states in our twisted $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds, which can be thought of as particular field configurations that are localized at points on the conformal boundary of $AdS$. We compute characters of the proposed state spaces and find exact matches with counts of gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively. 
 
@@ -40,15 +35,15 @@ In the final section of the chapter, we motivate some current work in progress t
 %Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
 
 
-\input{content/br}
+\subfile{content/br}
 
-\input{content/index}
+\subfile{content/index}
 
-\input{content/suco}
+\subfile{content/suco}
 
-\input{content/e16}
+\subfile{content/e16}
 
-\input{content/e36}
+\subfile{content/e36}
 
 %\input{chapters/4-ads/ops}
 

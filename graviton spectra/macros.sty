@@ -1,5 +1,19 @@
 \ProvidesPackage{macros}
 
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{xparse}
+\let\ref\hyperref
+\let\hat\widehat
+\usepackage{amsfonts} %necessary for Blackboard Bold
+\usepackage{amsmath} %does A LOT
+\usepackage{amssymb} %necessary for things like \partial
+\usepackage{amsthm} %for thms and such
+\usepackage{tikz-cd}
+\usepackage{tikz-feynman}
+
+\usepackage[centerboxes,boxsize=1ex,nobaseline,aligntableaux=center]{ytableau}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Theorem environments (need amsthm package)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,13 +62,13 @@
                                      {\normalfont\normalsize\bfseries}}
 \makeatother
 
-
-\NewDocumentCommand \deq { o m }{
-\begin{equation}
-#2
-\IfNoValueF{#1}{\label{#1}}
-\end{equation}
-}
+%
+%\NewDocumentCommand \deq { o m }{
+%\begin{equation}
+%#2
+%\IfNoValueF{#1}{\label{#1}}
+%\end{equation}
+%}
 
 \NewDocumentCommand \parsec { o }{
 \subsubsection{}
@@ -137,12 +151,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Shortcuts for Fields
-\newcommand{\C}{\mb{C}}
-\newcommand{\R}{\mb{R}}
-\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Q}{\mathbf{Q}}
 
 %Shortcuts for Rings
-\newcommand{\Z}{\mb{Z}}
+\newcommand{\Z}{\mathbf{Z}}
 
 %Shortcuts for Lie Groups
 \newcommand{\GL}{\text{GL}}
@@ -179,7 +193,7 @@
 \def\div{\partial_{\Omega}} 
 \def\dbar{\bar{\partial}}
 \def\T{{\mr T}}
-\def\define{\overset{\mr def}{=}}
+\def\define{\overset{\text{def}}{=}}
 \def\xto{\xrightarrow}
 \def\hotimes{\, \wh{\otimes} \,}
 \newcommand{\thfd}{\Bar{D}}
@@ -216,3 +230,20 @@
 \newcommand{\Obs}{\text{Obs}}
 \newcommand{\oloc}{\mathcal{O}_{loc}}
 \def\m2{\mathfrak{m}2\mathfrak{brane}}
+
+%Brian's stuff
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+
+\def\cA{\mathcal A}\def\cB{\mathcal B}\def\cC{\mathcal C}\def\cD{\mathcal D}
+\def\cE{\mathcal E}\def\cF{\mathcal F}\def\cG{\mathcal G}\def\cH{\mathcal H}
+\def\cI{\mathcal I}\def\cJ{\mathcal J}\def\cK{\mathcal K}\def\cL{\mathcal L}
+\def\cM{\mathcal M}\def\cN{\mathcal N}\def\cO{\mathcal O}\def\cP{\mathcal P}
+\def\cQ{\mathcal Q}\def\cR{\mathcal R}\def\cS{\mathcal S}\def\cT{\mathcal T}
+\def\cU{\mathcal U}\def\cV{\mathcal V}\def\cW{\mathcal W}\def\cX{\mathcal X}
+\def\cY{\mathcal Y}\def\cZ{\mathcal Z}
+
+\newcommand{\bu}{\bullet}
+\newcommand{\lie}{\mathfrak}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
