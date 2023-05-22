@@ -12,13 +12,26 @@
 
 In this section, we pursue a check of conjectures \ref{conj:ads4} and \ref{conj:ads7}. We enumerate supergravity states in the twists of the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds and compare them with expressions in the literature enumerating gravitons in these geometries. 
 
-We begin by giving a definition of supergravity states suited to our context. The definition is meant to codify the following situation. Suppose we have a theory of gravity defined on a background of the form $AdS_{d+1} \times S^{d^\prime}$ where the conformal boundary of $AdS_{d+1}$ is a $d$ manifold $M$. We can compactify the theory, retaining all the Kaluza-Klein harmonics, to get a theory on $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion in this compactified theory with a given boundary value on $M^{d}$ \cite{WittenAdS}. Often, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+We begin by giving a definition of supergravity states suited to our context. 
+The definition is meant to codify the following situation. 
+Suppose we have a bulk gravitational theory defined on a background of the form $AdS_{d+1} \times S^{d^\prime}$ where the conformal boundary of $AdS_{d+1}$ is a $d$-dimensional manifold $M$. 
+We can compactify the theory, retaining all the Kaluza-Klein harmonics, to get a theory on $AdS_{d+1}$. 
+A gravitational state is traditionally defined to be a solution to linearized equations of motion in this compactified theory with a given boundary value on $M^{d}$ \cite{WittenAdS}. Often, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
 
-\parsec[]
+For twists of supergravity, we procedurally implement this as follows. First, we wish to describe a model for sphere compactification on twisted $AdS$ backgrounds. 
+As we saw in the last section, our proposal for describing twists backgrounds of the form $AdS_{d+1}\times S^{d^\prime}$ involve elliptic complexes defined on certain manifolds of the form 
+\beqn
+X = \operatorname{Tot }(V\to Z)\setminus 0(Z)
+\eeqn
+Note that $Z$ can be written as a sphere bundle over $\R_{>0}\times Z$ - the sphere compactification of our theory on $X$ is given by the pushforward to $\R_{>0}\times Z$. 
+Such sphere compactifications can be described using a method for computing pushforwards of modules for Lie algebroids associated to foliations \cite[section 4.2]{KormanThesis}, \cite{KamberTondeur}.
 
-For twists of supergravity, we procedurally implement this as follows. First, we wish to describe a model for sphere compactification on twisted $AdS$ backgrounds. As we saw in the last section, our proposal for twists of backgrounds of the form $AdS_{d+1}\times S^{d^\prime}$ involve placing certain local $L_\infty$-algebras on certain manifolds of the form $X = \operatorname{Tot }(V\to Z)\setminus 0(Z)$. Note that $Z$ can be written as a sphere bundle over $\R_{>0}\times Z$ - the sphere compactification of our theory on $X$ is given by the pushforward to $\R_{>0}\times Z$. Such sphere compactifications can be described using a method for computing pushforwards of modules for Lie algebroids associated to foliations \cite[Sec. 4.2]{KormanThesis}, \cite{KamberTondeur}.
-
-The compactified theory will admit a natural boundary condition at $\{\infty\}\times Z\subset \R_{>0}\times Z$, given by certain local $L_\infty$-algebras $\mc L$. In fact, the presence of extra differentials involving bracketing with the flux sourced by branes wrapping $Z$ will induce an interesting shifted-Poisosn structure on $\mc L$. Given a local $L_\infty$-algebra $\mc L$ underlying a perturbative classical field theory, the Chevalley-Eilenberg cochains $\clie^\bullet (\mc L)$ carry the structure of a $\mb{P}_0$-factorization algebra \cite{CG1}, \cite{CG2}. Associated to a factorization algebra, we can define a space of local operators, which is the costalk at a point of the underlying cosheaf. The sought-after spaces of supergravity states will be a space of local operators associated to $\clie^\bullet (\mc L)$. 
+The compactified theory will admit a natural boundary condition at $\{\infty\}\times Z\subset \R_{>0}\times Z$.
+Such a boundary condition also admits a perturbative description in terms of some elliptic complex $\mc L$ on $Z$.
+In fact, the presence of extra differentials involving bracketing with the flux sourced by branes wrapping $Z$ will induce an odd Poisson structure on $\mc L$.
+Given an elliptic complex $\cL$ underlying a perturbative classical field theory, the algebra of observables $\cO(\cL)$ carries the structure of a $\mb{P}_0$-factorization algebra \cite{CG1}, \cite{CG2}. 
+Associated to a factorization algebra, we can define a space of local operators, which is the costalk at a point of the underlying cosheaf.
+The sought-after spaces of supergravity states will be a space of local operators associated to $\cO(\cL)$. 
 
 \begin{rmk}
 Crucially, we will only implement this procedure at the level of the free limits of the theories defined in \ref{defn:ads4}, \ref{defn:ads7} - this will suffice for the purposes of extracting spaces of states and will allow us to forgo discussion involving homotopy transfer of $L_\infty$ structure. As such, the boundary conditions we specify at $\{\infty\}\times Z$ will in fact be abelian local Lie algebras. On the other hand, in subsection \ref{sec:transversebc} we will identify boundary conditions for the pushforward of the \textit{interacting} theories that exist after turning off the flux, which yield the same spaces of supergravity states. 
@@ -81,31 +94,36 @@ Let us now carry out this construction for the theories defined in \ref{defn:ads
 %There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bullet}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C - 0$ which extends to zero.
 %The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$
 \subsection{States on twisted $AdS_4\times S^7$}\label{s:ads4states}
+We begin more generally with the input being a three-manifold $M$ equipped with a THF structure of codimension one.
+As in \S \ref{s:??} the elliptic complex $\cA^\bu_M$ computes the THF cohomology of $M$.
+We denote by $K$ the holomorphic canonical bundle of $M$ which has a local frame given by $\d z$.
+The case of $AdS_4 \times S^7$ corresponds to taking $M = \R \times \C$, which we will do momentarily.
+
+We will also fix a fourth-root $K^{1/4}$ of this bundle.
 Following the above prescription, we consider the $S^7$ bundle 
 \[
 \begin{tikzcd}
-S^7 \ar[r] & \operatorname{Tot} (K^{1/4}_\C\otimes \C^4 \to \R\times \C) \setminus 0(\R\times \C) \ar[d, "p"] \\ & \R_{>0}\times \R\times \C
+S^7 \ar[r] & \operatorname{Tot} (K^{1/4} \otimes \C^4 \to M) \setminus 0(M) \ar[d, "p"] \\ & \R_{>0}\times M
 \end{tikzcd}
 \]
-We wish to describe the free limit of the pushforward $p_* \mc E^N_{AdS_4\times S^7}$ as a sheaf of cochain complexes on $\R_{>0}\times \R\times \C$. 
+We wish to describe the free limit of the pushforward $p_* \mc E^N_{AdS_4}$ as a sheaf of cochain complexes on $\R_{>0}\times M$. 
 
 \begin{prop}\label{prop:pushads4}
-The pushforward is given by the sheaf of complexes $\Omega^\bullet_{\R_{>0}\times \R} \otimes \Omega^{0,\bullet}_{\C} (\mc V^N_\C)$ on $\R_{>0}\times \R\times \C$, where $\mc V^N_\C$ is the following dg-vector bundle on $\C$:
+The pushforward is given by the sheaf of complexes $\Omega^\bullet_{\R_{>0}} \otimes \cA^{\bullet}_{M} (\mc V^N)$ on $\R_{>0}\times M$, where $\mc V^N$ is the following complex of vector bundles on $M$:
 
 \begin{equation}
   \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\ 
 H^\bullet (\C^{4}\setminus 0, \T) \otimes \mc{O}\ar[r, "\del^W_\Omega" description] & H^\bullet (\C^{4}\setminus 0) \otimes \mc O \\
-H^\bullet (\C^{4}\setminus 0)  \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-H^\bullet (\C^{4}\setminus 0)\otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & H^\bullet (\C^{4}\setminus 0) \otimes \Omega^1 \\ & H^\bullet (\C^{4}\setminus 0, \Omega^1)  \otimes \mc O
+H^\bullet (\C^{4}\setminus 0)  \otimes \T\ar[ur, "\del^M_\Omega" description] \\
+H^\bullet (\C^{4}\setminus 0)\otimes \mc{O}\ar[r, "\del_M" description]\ar[dr, "\del_W" description] & H^\bullet (\C^{4}\setminus 0) \otimes \Omega^1 \\ & H^\bullet (\C^{4}\setminus 0, \Omega^1)  \otimes \mc O
 \end{tikzcd}
 \end{equation}
-
 where the differentials are as follows:
 \begin{itemize}
-\item The differentials $\del_\Omega^Z$ and $\del_\Omega^W$ are the divergence operators along the base and fiber respectively.
-\item The differentials $\del_Z$ and $\del_W$ are components of the holomorphic deRham differentials along the base and fiber respectively.
-\item  Internal to each summand is a differential given by bracketing with the flux $NF_{M2}$. 
+\item The differentials $\del_\Omega^M$ and $\del_\Omega^W$ are the divergence operators along the base and fiber respectively.
+\item The differentials $\del_M$ and $\del_W$ are components of the holomorphic de Rham differentials along the base and fiber respectively.
+\item  Internal to each summand is a differential given by bracketing with the flux $NF_{M2}$, see equation \eqref{eqn:FM2}. 
 \end{itemize}
 \end{prop} 
 
@@ -122,20 +140,20 @@ and
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\} & \hookrightarrow H^3(\C^4 \setminus 0, \Omega^1) .
 \end{align*}
 
-The flux $NF_{M2}$ of lemma \ref{lem:m2flux} is represented by the section $N (w_1\cdots w_4)^{-1}\del_z \in H^3 (\C^4\setminus 0)\otimes \T$ and acts on each summand by Lie derivative along $z$ and multiplying by $(w_1\cdots w_4)^{-1}$
+The flux $NF_{M2}$ of lemma \ref{lem:m2flux} is represented by the section $N (w_1\cdots w_4)^{-1}\del_z \in H^3 (\C^4\setminus 0)\otimes \T$ and acts on each summand by Lie derivative along $z$ and multiplying by $(w_1\cdots w_4)^{-1}$.
 
 \begin{proof}
-To compute the pushforward of the kind of local $L_\infty$-algebra associated to a holomorphic-topological field theory along a map of THF manifolds, we can use a result of \cite[Sec. 4.2]{KormanThesis}, \cite{KamberTondeur} for describing direct images of Lie algebroid modules along maps of Lie algebroids. Schematically, if we have a proper submersion $p : X\to Z$ of THF manifolds, and a sheaf of complexes $\mc E$ on $X$ which resolves sections of some bundle flat along the leaves of the foliation on $X$, then the pushforward $p_*\mc E$ has a model as a partially flat bundle on $Z$. The fiber of this partially flat bundle on $Z$ is the THF cohomology of the fiber of $p$, with respect to the induced foliation on the fiber, with coefficients in the pullback of the bundle to the fiber. In the case of a holomorphic submersion, this recovers the usual construction of the Gauss-Manin connection for instance. 
+To compute the pushforward of this sort of elliptic complex associated to a holomorphic-topological field theory along a map of THF manifolds, we can use a result of \cite[section 4.2]{KormanThesis}, \cite{KamberTondeur} for describing direct images of Lie algebroid modules along maps of Lie algebroids. Schematically, if we have a proper submersion $p : X\to Z$ of THF manifolds, and a sheaf of complexes $\mc E$ on $X$ which resolves sections of some bundle flat along the leaves of the foliation on $X$, then the pushforward $p_*\mc E$ has a model as a partially flat bundle on $Z$. The fiber of this partially flat bundle on $Z$ is the THF cohomology of the fiber of $p$, with respect to the induced foliation on the fiber, with coefficients in the pullback of the bundle to the fiber. In the case of a holomorphic submersion, this recovers the usual construction of the Gauss-Manin connection for instance. 
 
-In our case, the pushforward $p_* \mc E_{AdS_4\times S^7}$ is a complex of $\Omega^\bullet_{\R_{>0}} \otimes \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C$- modules given by 
+In our case, the pushforward $p_* \mc E_{AdS_4}$ is a complex of $\Omega^\bullet_{\R_{>0}} \otimes \cA^\bu_M$- modules given by 
 
 \begin{equation}
   \label{eqn:ads4ss} 
   \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\ 
 H^\bullet_{\mr{THF}}(S^7, \T) \otimes \mc{O}\ar[r, "\del^W_\Omega" description] & H^\bullet_{\mr{THF}} (S^7) \otimes \mc O \\
-H^\bullet_{\mr{THF}} (S^7)  \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-H^\bullet_{\mr{THF}} (S^7)\otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & H^\bullet_{\mr{THF}} (S^7) \otimes \Omega^1
+H^\bullet_{\mr{THF}} (S^7)  \otimes \T\ar[ur, "\del^X_\Omega" description] \\
+H^\bullet_{\mr{THF}} (S^7)\otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & H^\bullet_{\mr{THF}} (S^7) \otimes \Omega^1
  \\ & H^\bullet_{\mr{THF}} (S^7, \Omega^1)  \otimes \mc O
  \end{tikzcd}
 \end{equation}
@@ -144,63 +162,67 @@ Then the proposition follows from the fact that the map $S^7\to \C^4\setminus \{
 \end{proof}
 
 \parsec{}
-Continuing, we wish to understand a natural boundary condition we can place on the fields at $\{\infty\} \times\R\times \C\subset \R_{>0} \times \R\times \C$. Such a boundary condition is specified by a Lagrangian in the phase space. The restriction $(p_* \mc E^N_{AdS_4\times S^7})|_{\{\infty\}\times \C}$ describes the phase space and is easily seen to be $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc V^N_{\C})$. We wish to describe a shifted Lagrangian therein.
+We proceed to define a natural boundary condition of the twisted $AdS_4$-type theory at $\{\infty\} \times M \subset \R_{>0} \times M$. 
+Such a boundary condition is specified by a Lagrangian in the phase space whose symplectic structure uses Serre duality on the THF manifold $M$ together with the higher residue pairing along the THF structure of the sphere $S^7$. 
+The restriction $(p_* \mc E^N_{AdS_4})|_{\{\infty\}\times \C}$ describes the phase space and is easily seen to be $\cA_M^\bu (\mc V^N)$. We wish to describe a shifted Lagrangian therein.
 
-We begin by rewriting the phase space in the following form. Note that there is a higher residue pairing 
-\[H^0(\C^4\setminus 0) \otimes H^3(\C^4\setminus 0) \to \C;\]
-together with the natural pairings between $T, \Omega^1$ and the integration pairing along $\R\times \C_z$, this equips $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc V^N_{\C})$ with a local even-shifted symplectic structure.
+We begin by rewriting the phase space in the following form. 
+Using the holomorphic volume form, there is a higher residue pairing 
+\[H^0(\C^4\setminus 0, \cO) \otimes H^3(\C^4\setminus 0, \cO) \to \C;\]
+together with the natural pairings between $T, \Omega^1$ and the integration along $M$, this equips $\cA_M^\bu (\mc V^N)$ with a local even-shifted symplectic structure.
 
-Together with this shifted symplectic structure, we can identify the phase space with a twisted cotangent bundle
+Via this symplectic structure, we can identify the phase space with a twisted cotangent bundle
 \[
- \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc V^N_{\C}) = T^* _{\Pi} \left (\begin{tikzcd}[row sep = 1 ex]
+\cA_M^\bu (\mc V^N) = T^* _{\alpha} \left (\begin{tikzcd}[row sep = 1 ex]
  \ul{-} & \ul{+} \\ 
 \C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del^W_\Omega" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C \\
-\C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\T)\ar[ur, "\del^Z_\Omega" description] \\
+\C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\T)\ar[ur, "\del^M_\Omega" description] \\
 \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\Omega^1)\\ & \C[w_1,\ldots, w_4] \{\d w_a\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C   \end{tikzcd} \right) 
 \]
-For now, the subscript of $\Pi$ is just meant to indicate that the extra differential given by bracketing with the flux constitutes a deformation of the cotangent bundle. 
+For now, the subscript of $\alpha$ is just meant to indicate that the extra differential given by bracketing with the flux constitutes a deformation of the cotangent bundle. 
 
-Thus we see that a natural Lagrangian in the phase space is given by the sheaf of cochain complexes $\Omega^\bullet_\R\otimes\Omega^\bullet_\C (\mc L^N_{AdS_4\times S^7})$ where $\mc L^N_{AdS_4\times S^7}$ is the following dg-vector bundle 
+Thus we see that a natural Lagrangian in the phase space is given by the sheaf of cochain complexes $\cA^\bu_M(\mc L^N_{AdS_4})$ where $\mc L^N_{AdS_4}$ is the following complex of vector bundles on $M$:
  
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
        \ul{+} & \ul{-} \\ 
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]  \otimes \mc O \\
-(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
+(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \T\ar[ur, "\del^M_\Omega" description] \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \Omega^1
 \\ & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\}  \otimes \mc O \end{tikzcd}
 \end{equation}
 
-\begin{rmk}
-The extra term in the differential in fact equips $\Omega^\bullet_\R\otimes \Omega^\bullet_\C (\mc L^N_{AdS_4\times S^7} )$ with an interesting $N$ dependent odd-shifted Poisson structure. This will not play a significant role in the narrative of this thesis, but we flag it for later commentary nonetheless.
-\end{rmk}
+We now specialize to the case $M = \R \times \C$.
 
 \begin{defn}\label{defn:ads4states}
- The \emph{space of supergravity states} on twisted $AdS_4\times S^7$ is given by the costalk at zero of the factorization algebra on $\R\times \C$ given by $\clie^\bullet \left (  \Pi \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C (\mc L^N_{AdS_4\times S^7}) \right )$
+ The \emph{space of supergravity states} on twisted $AdS_4\times S^7$ is given by the costalk at zero of the factorization algebra on $\R\times \C$ given by 
+ \beqn
+ \cO\left(\Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C (\mc L^N_{AdS_4}) \right ) .
+ \eeqn
 \end{defn}
 
 
 \parsec{}
-Let us explicate definition \ref{defn:ads4states} a bit. We wish to first understand the space of supergravity states as a cochain complex. 
+We explicate definition \ref{defn:ads4states} and characterize the cochain complex underlying the space of supergravity states.
 
 \begin{lem}\label{lem:ads4states}
-The space of supergravity states on twisted $AdS_4\times S^7$ is the symmetric algebra $\Sym (\mc H_{AdS_4\times S^7})$ where $\mc H_{AdS_4\times S^7}$ is the cochain complex
+The space of supergravity states on twisted $AdS_4\times S^7$ is the symmetric algebra $\Sym (\mc H_{AdS_4})$ where $\mc H_{AdS_4}$ is the cochain complex
  \begin{equation} 
  \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\ 
 \C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \C[\del_z]\delta_{z=0}\ar[r, "\del^W_\Omega" description] & \C[w_1,\ldots, w_4]  \otimes \C[\del_z]\delta_{z=0} \\
-\C[w_1,\ldots, w_4] \del_z  \otimes \C[\del_z]\delta_{z=0}\ar[ur, "\del^Z_\Omega" description] \\
+\C[w_1,\ldots, w_4] \del_z  \otimes \C[\del_z]\delta_{z=0}\ar[ur, "\del^M_\Omega" description] \\
 \C[w_1,\ldots, w_4] \otimes \C[\del_z]\delta_{z=0}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4] \d z \otimes \C[\del_z]\delta_{z=0} \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \C[\del_z]\delta_{z=0}
 \end{tikzcd}
 \end{equation}
 \end{lem}
 
 \begin{proof}
-To compute the costalk at $0$ of a factorization algebra, we consider a nested sequence of open sets containing the origin and compute the limit of the value of the factorization algebra over this sequence. Consider open sets in $\R\times \C$ of the form $I\times D$ where $I\subset \R$ is an interval and $D\subset \C$ is a disc. The sections of the sheaf of cochain complexes $\Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C(\mc L^N_{AdS_4\times S^7} ) $ over this open set is given by \begin{equation}
+To characterize the costalk at $0 \in \R \times \C$ of a factorization algebra, we consider a nested sequence of open sets containing the origin and compute the limit of the value of the factorization algebra over this sequence. Consider open sets in $\R\times \C$ of the form $I\times D$ where $I\subset \R$ is an interval and $D\subset \C$ is a disc. The sections of the sheaf of cochain complexes $\Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C(\mc L^N_{AdS_4\times S^7} ) $ over this open set is given by \begin{equation}
 \begin{tikzcd}[row sep = 1 ex]
     \ul{+} & \ul{-} \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_a}\} \otimes \mc{O}(D)\ar[r, "\del^W_\Omega" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]  \otimes \mc O(D) \\
-(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \Gamma (D, \T)\ar[ur, "\del^Z_\Omega" description] \\
+(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \Gamma (D, \T)\ar[ur, "\del^M_\Omega" description] \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \mc{O}(D)\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \Gamma (D, \Omega^1) \\ & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\}  \otimes \mc O(D)
 \end{tikzcd}
 \end{equation}
@@ -208,15 +230,16 @@ To compute the costalk at $0$ of a factorization algebra, we consider a nested s
 Now note that there is a canonical map $\mc O(D) \to \C[\![z]\!] $ given by taking the Taylor expansion at the origin. Given a functional on the fields that only depends on the value of their derivatives at the origin, then the functional must factor through the Taylor expansion. Therefore, we have that the costalk of our factorization algebra is given by 
 
 \begin{equation}
- \clie^\bullet \left (\begin{tikzcd}[row sep = 1 ex]
-        \ul{-} & \ul{+} \\ 
+\cO\left (\begin{tikzcd}[row sep = 1 ex]
+        \ul{+} & \ul{-} \\ 
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_a}\} \otimes \C[\![z]\!] \ar[r, "\del^W_\Omega" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]  \otimes \C[\![z]\!] \\
-(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \C[\![z]\!]\del_z\ar[ur, "\del^Z_\Omega" description] \\
+(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \C[\![z]\!]\del_z\ar[ur, "\del^M_\Omega" description] \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \C[\![z]\!]\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \C[\![z]\!]\d z \\ & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\}  \otimes \C[\![z]\!]
 \end{tikzcd} \right )
 \end{equation}
 
-The definition of the Chevalley-Eilenberg complex above involves the continuous linear dual of a chain complex of topological vector spaces. The duals of each of the tensor factors are as follows:
+The definition of algebraic functions $\cO(-)$ involves the continuous linear dual of a chain complex of topological vector spaces. 
+The duals of each of the tensor factors are as follows:
 
 \begin{itemize}
 \item There is an isomorphism between the continuous linear dual of $\C[\![ z]\!]$ and $\C[\del_z]\delta_{z=0}$: every continuous linear functional on $\C[\![ z]\!]$ is given by a derivative of the $\delta$-function at zero. 
@@ -224,13 +247,13 @@ The definition of the Chevalley-Eilenberg complex above involves the continuous 
 \item The tensor factors involving one-forms and vector fields are dual to each other in the obvious way.
 \end{itemize}
 
-Thus, we see that $\mc H_{AdS_4\times S^7}$ is indeed as claimed.
+Thus, we see that $\mc H_{AdS_4}$ is indeed as claimed.
 \end{proof}
 
 \parsec{}
-We proceed to computing a local character for the factorization algebra defined in \ref{defn:ads4states}; thanks to lemma \ref{lem:ads4states} we can compute this as a character of $\Sym(\mc H_{AdS_4\times S^7})$. 
+We proceed to computing a local character for the factorization algebra defined in \ref{defn:ads4states}; thanks to lemma \ref{lem:ads4states} we can compute this as a character of $\Sym(\mc H_{AdS_4})$. 
 
-We first observe the following action of $\mf{sl}(4)\oplus \mf {sl}(2)$ on $\mc H_{AdS_4\times S^7}$. The $\mf{sl}(4)$ summand acts on the tensor factor $\C[w_1,w_2,w_3,w_4]$ in the obvious way - it's the symmetric algebra on the fundamental representation. The $\mf{sl}(2)$ summand acts by bracketing with the vector fields 
+We first observe the following action of $\mf{sl}(4)\oplus \mf {sl}(2)$ on $\mc H_{AdS_4}$. The $\mf{sl}(4)$ summand acts on the tensor factor $\C[w_1,w_2,w_3,w_4]$ in the obvious way - it's the symmetric algebra on the fundamental representation. The $\mf{sl}(2)$ summand acts by bracketing with the vector fields 
 \[
 \frac{\del}{\del z} ,\quad z \frac{\del}{\del z} - \frac14 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} , \quad z \left(z \frac{\del}{\del z} - \frac12 \sum_{a=1}^4 w_a \frac{\del}{\del w_a} \right).
 \]
@@ -241,7 +264,7 @@ We choose the following explicit generators for a choice of Cartan as follows:
 \item $q$ denotes a generator for the Cartan of $\mf{sl}_2$ which is spanned by the vector field \[\Delta = \frac14\sum_{a=1}^4 w_a \frac{\del }{\del w_a}-z\frac{\del}{\del z}.\]
 \end{itemize}
 
-The weights of $\mc H_{AdS_4\times S^7}$ with respect to the generators of this Cartan subalgebra are entirely determined by the weights of the holomorphic coordinates $z, w_a, a= 1, \cdots, 4$, which we summarize in table \ref{tbl:sugraM2}
+The weights of $\mc H_{AdS_4}$ with respect to the generators of this Cartan subalgebra are entirely determined by the weights of the holomorphic coordinates $z, w_a, a= 1, \cdots, 4$, which we summarize in table \ref{tbl:sugraM2}
 
 \begin{table}
 \begin{center}
@@ -258,16 +281,16 @@ The weights of $\mc H_{AdS_4\times S^7}$ with respect to the generators of this 
 \end{center}
 \end{table}
 
-With this in hand, we wish to compute the character of the space of supergravity states $\Sym (\mc H_{AdS_4\times S^7})$. Note that the space of supergravity states was defined to be a symmetric algebra - therefore its character can be computed using plethystic exponentiation of the character of $\mc H_{AdS_4\times S^7}$ - the latter may be referred to as a \textit{single particle index} and is defined by 
+With this in hand, we wish to compute the character of the space of supergravity states $\Sym (\mc H_{AdS_4})$. Note that the space of supergravity states was defined to be a symmetric algebra - therefore its character can be computed using plethystic exponentiation of the character of $\mc H_{AdS_4}$ - the latter may be referred to as a \textit{single particle index} and is defined by 
 
 \[
-f_{AdS_4\times S^7} (t_1, t_2, t_3, q) = \tr_{\mc H_{AdS_4\times S^7}} (-1)^F q^\Delta t_1^{h_1} t_2^{h_2} t_3^{h_3}.
+f_{AdS_4} (t_1, t_2, t_3, q) = \tr_{\mc H_{AdS_4}} (-1)^F q^\Delta t_1^{h_1} t_2^{h_2} t_3^{h_3}.
 \]
 
 \begin{prop}
-The single particle index of the space of supergravity states $\mc H_{AdS_4\times S^7}$ is given by 
+The single particle index of the space of supergravity states $\mc H_{AdS_4}$ is given by 
 \[
-f_{AdS_4\times S^7} (t_1, t_2, t_3, q)  = \frac{q\left (\begin{aligned} q^{1/4}(t_1+ t_2 + t_3+t_1^{-1}t_2^{-1}t_3^{-1}) &+ q^{-1} \\- q^{-1/4}(t_1^{-1}+ t_2^{-1} + t_3^{-1}+t_1t_2t_3) &- q   \end{aligned}\right)}{(1-q)(1-q^{1/4}t_1)(1-q^{1/4}t_2)(1-q^{1/4}t_3)(1-q^{1/4}t_1^{-1}t_2^{-1}t_3^{-1})}
+f_{AdS_4} (t_1, t_2, t_3, q)  = \frac{q\left (\begin{aligned} q^{1/4}(t_1+ t_2 + t_3+t_1^{-1}t_2^{-1}t_3^{-1}) &+ q^{-1} \\- q^{-1/4}(t_1^{-1}+ t_2^{-1} + t_3^{-1}+t_1t_2t_3) &- q   \end{aligned}\right)}{(1-q)(1-q^{1/4}t_1)(1-q^{1/4}t_2)(1-q^{1/4}t_3)(1-q^{1/4}t_1^{-1}t_2^{-1}t_3^{-1})}
 \]
 \end{prop}
 \begin{proof}
@@ -283,38 +306,41 @@ The two summands not involving holomorphic vector fields or forms appear with op
 \[
 q = x^2, \ \ \ \ \ t_1 = (y_2y_3)^{1/2}/y_1^{1/2}, \ \ \ \ \ t_2 = (y_1y_3)^{1/2}/y_2^{1/2}, \ \ \ \ \ t_3 = (y_1y_2)^{1/2}/y_3^{1/2}
 \]
-this character matches the expression in \cite[Eq. 2.17]{Bhattacharya:2008zy}. The discrepancy of one is accounted for by a zero mode that we have introduced in writing our theory in such a way that M2 branes couple electrically. Indeed, this is an avatar of the central element in the central extension $\widehat{E(5|10)}$ of section \ref{thm:global}.
+this character matches the expression in \cite[equation (2.17)]{Bhattacharya:2008zy}. The discrepancy of one is accounted for by a zero mode that we have introduced in writing our theory in such a way that M2 branes couple electrically. Indeed, this is an avatar of the central element in the central extension $\widehat{E(5|10)}$ of section \ref{thm:global}.
 
 \subsection{States on twisted $AdS_7\times S^{4}$}
 \label{s:ads7states}
-Next, we consider the sphere reduction of $\mc E^N_{AdS_7\times S^4}$ As before, we consider the $S^4$ bundle 
+Next, we consider the sphere reduction of $\mc E^N_{AdS_7}$.
+We begin more generally with the case that $X$ is an arbitrary complex three-fold equipped with a square-root of its canonical bundle.
+The case of twisted $AdS_7 \times S^4$ corresponds to $X = \C^3$.
+As before, we consider the $S^4$ bundle 
 \[
 \begin{tikzcd}
-S^4 \ar[r] & \operatorname{Tot} (\R\oplus K^{1/2}\otimes \C^2\to \C^3) \setminus 0(\C^3) \ar[d, "p"] \\ & \R_{>0}\times \C^3
+S^4 \ar[r] & \operatorname{Tot} (\R\oplus K^{1/2}\otimes \C^2\to X) \setminus 0(X) \ar[d, "p"] \\ & \R_{>0}\times X
 \end{tikzcd}
 \]
 
-We wish to describe the free limit of the pushforward $p_* \mc E_{AdS_7\times S^4}$ as a sheaf of cochain complexes on $\R_{>0}\times \C^3$. 
+We wish to describe the free limit of the pushforward $p_* \mc E_{AdS_7}$ as a sheaf of cochain complexes on $\R_{>0}\times X$. 
 
 \begin{prop}\label{prop:ads7push}
-The pushforward $p_* \mc E^N_{AdS_7\times S^4}$ is given by the sheaf of cochain complexes $\Omega^\bullet_{\R_{>0}} \otimes \Omega^{0,\bullet}_{\C^3} (\mc V^N_{\C^3})$ where $\mc V^N_{\C^3}$ is the following dg-vector bundle on $\C^3$:
+The pushforward $p_* \mc E^N_{AdS_7}$ is given by the sheaf of cochain complexes $\Omega^\bullet_{\R_{>0}} \otimes \Omega^{0,\bullet}_{X} (\mc V^N_X)$ where $\mc V^N_{X}$ is the following complex of vector bundles on~$X$:
 
 \begin{equation}
   \label{eqn:ads7push} 
   \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\
 H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0, \T \right ) \otimes \mc{O}\ar[r, "\del^W_\Omega" description]\ar[ddr, dotted] & H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right ) \otimes \mc O \\
-H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right )  \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right )\otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right ) \otimes \Omega^1 \\ & H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0, \Omega^1 \right )  \otimes \mc O\ar[uul, dotted]
+H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right )  \otimes \T\ar[ur, "\del^X_\Omega" description] \\
+H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right )\otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0 \right ) \otimes \Omega^1 \\ & H^\bullet_{\mr{THF}} \left ((\R\times \C^2)\setminus 0, \Omega^1 \right )  \otimes \mc O\ar[uul, dotted]
 \end{tikzcd}
 \end{equation}
 
 where the differentials are as follows:
 
 \begin{itemize}
-\item The differentials $\del_\Omega^Z$ and $\del_\Omega^W$ are the divergence operators along the base and fiber respectively.
-\item The differentials $\del_Z$ and $\del_W$ are components of the holomorphic deRham differentials along the base and fiber respectively.
-\item The dotted arrows are $N$ dependent differentials roughly given by bracketing with the flux, and are explicated below. 
+\item The differentials $\del_\Omega^X$ and $\del_\Omega^W$ are the divergence operators along the base and fiber respectively.
+\item The differentials $\del_X$ and $\del_W$ are components of the holomorphic deRham differentials along the base and fiber respectively.
+\item The dotted arrows are $N$ dependent differentials roughly given by bracketing with the flux $N F_{M5}$, see \eqref{eqn:FM5}, and are explicated below. 
 \end{itemize}
 \end{prop}
 
@@ -333,63 +359,68 @@ The flux $NF_{M5}$ is then represented by a class of the form $N(w_1w_2)^{-1} \d
 \C[w_1,w_2]\{\del_{w_a}\} \otimes \mc O &\to (w_1w_2)^{-1}\C[w_1^{-1}, w_2^{-1}] \{\d w_a\}\otimes \mc O \\
 \C [w_1, w_2] \otimes \Omega^1 &\to (w_1w_2)^{-1}\C[w_1^{-1}, w_2^{-1}] \otimes \T  
 \end{align*}
-where the first map is given by contracting with $\d w_1 \d w_2$ and multiplying by $(w_1w_2)^{-1}$, while the second map is given by applying $\del_Z$, wedging with the $\d w_1 \d w_2$ and contracting with the inverse of the holomorphic volume form on $\C^5$ to get a vector field along $\C^3$. 
+where the first map is given by contracting with $\d w_1 \d w_2$ and multiplying by $(w_1w_2)^{-1}$, while the second map is given by applying $\del_X$, wedging with the $\d w_1 \d w_2$ and contracting with the inverse of the holomorphic volume form on $\C^5$ to get a vector field along $X$. 
 
 \begin{proof}
-The proof is exactly analogous to that of proposition \ref{prop:pushads4} . Using results from \cite[Sec. 4.2]{KormanThesis}, \cite{KamberTondeur}  to compute the pushforward, we find a sheaf of $\Omega^\bullet_{\R_{>0}}\otimes \Omega^{0,\bullet}_{\C^3}$-modules whose sections have a tensor factor given by the THF cohomology of $S^4$. Next, we use the isomorphism in THF cohomology afforded by the deformation retraction of $(\R\times \C^2)\setminus 0$ onto $S^4$. 
+The proof is exactly analogous to that of proposition \ref{prop:pushads4} . Using results from \cite[section 4.2]{KormanThesis}, \cite{KamberTondeur}  to compute the pushforward, we find a sheaf of $\Omega^\bullet_{\R_{>0}}\otimes \Omega^{0,\bullet}_{X}$-modules whose sections have a tensor factor given by the THF cohomology of $S^4$. Next, we use the isomorphism in THF cohomology afforded by the deformation retraction of $(\R\times \C^2)\setminus 0$ onto $S^4$. 
 \end{proof}
 
 \parsec{}
 
-As in the previous subsection, we ask for a boundary condition we can place on the fields at $\{\infty\}\times \C^3\subset \R_{>0}\times \C^3$. The phase space, given by $(p_* \mc E^N_{AdS_7\times S^4})|_{\{\infty\} \times \C^3}$, is seen to be $\Omega^{0,\bullet}_{\C^3} (\mc V_{\C^3} )$, and we search for a shifted Lagrangian therein. 
+As in the previous subsection, we ask for a boundary condition we can place on the fields at $\{\infty\}\times X\subset \R_{>0}\times X$. The phase space, given by $(p_* \mc E^N_{AdS_7})|_{\{\infty\} \times X}$, is seen to be $\Omega^{0,\bullet}_{X} (\mc V_{X} )$, and we search for a shifted Lagrangian therein. 
 
-Completely analogously to before, we may rewrite the phase space as a shifted cotangent bundle. The higher residue pairing, the natural pairing between $T, \Omega^1$, and the integration pairing along $\C^3$, all conspire to give the phase space an even-shifted symplectic structure. Together with this, we may ionce again identify the phase space with a twisted cotangent bundle 
+Completely analogously to before, we may rewrite the phase space as a shifted cotangent bundle. The higher residue pairing, the natural pairing between $T, \Omega^1$, and Serre duality along $X$, all conspire to give the phase space an even-shifted symplectic structure. Together with this, we may once again identify the phase space with a twisted cotangent bundle 
 
 \[
-\Omega^{0,\bullet}_{\C^3} (\mc V_{\C^3}) = T^* _{\Pi} \left (\begin{tikzcd}[row sep = 1 ex] 
+\Omega^{0,\bullet}_{X} (\mc V_{X}) = T^* _{\Pi} \left (\begin{tikzcd}[row sep = 1 ex] 
 \ul{-} & \ul{+} \\
-\C[w_1,w_2] \{\partial_{w_a}\} \otimes \Omega^{0,\bullet}_{\C^3} \ar[r, "\del^W_\Omega" description] & \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{\C^3}  \\
-\C[w_1,w_2] \otimes \Omega^{0,\bullet}_{\C^3} (\T)\ar[ur, "\del^Z_\Omega" description] \\
-\C[w_1,w_2] \otimes \Omega^{0,\bullet}_{\C^3} \ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^{0,\bullet}_{\C^3} (\Omega^1) \\ &  \C[w_1,w_2] \{\d w_a\} \otimes \Omega^{0,\bullet}_{\C^3} 
+\C[w_1,w_2] \{\partial_{w_a}\} \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del^W_\Omega" description] & \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X}  \\
+\C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} (\T)\ar[ur, "\del^X_\Omega" description] \\
+\C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^{0,\bullet}_{X} (\Omega^1) \\ &  \C[w_1,w_2] \{\d w_a\} \otimes \Omega^{0,\bullet}_{X} 
 \end{tikzcd} \right) 
 \]
 
 Exactly analogously to the case of $AdS_4\times S^7$, $\Pi$ here denotes the extra $N$-dependent differential induced by bracketing with the flux, which deforms the cotangent bundle. 
 
-A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{\C^3} (\mc L_{AdS_7\times S^4})$ where $\mc L_{AdS_7\times S^4}$ is the dg-vector bundle given by  
+A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7})$ where $\mc L_{AdS_7}$ is the complex of vector bundles given by  
 \begin{equation}
 \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\
 (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] & (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \otimes \mc O \\
-(w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-(w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}]  \otimes \Omega^1 \\ & (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \{\d w_a\} \otimes \mc O
+(w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \otimes \T\ar[ur, "\del^X_\Omega" description] \\
+(w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}]  \otimes \Omega^1 \\ & (w_1w_2)^{-1} \C[w_1^{-1}, w_2^{-1}] \{\d w_a\} \otimes \mc O
 \end{tikzcd}
 \end{equation}
 
+We now specialize to $X = \C^3$.
+
 \begin{defn}\label{defn:ads7states}
-The space of supergravity states on twisted $AdS_7\times S^4$ is given by the costalk at zero of the factorization algebra on $\C^3$ given by $\clie^\bullet \left (\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^N_{AdS_7\times S^4} ) \right )$.
+The space of supergravity states on twisted $AdS_7\times S^4$ is given by the costalk at zero of the factorization algebra on $\C^3$ given by 
+\beqn
+\cO \left(\Omega^{0,\bullet}_{\C^3} (\mc L^N_{AdS_7} ) \right ) .
+\eeqn
 \end{defn}
 
 \parsec{}
 An argument exactly analogous to the proof of lemma \ref{lem:ads4states} gives us the following
 
 \begin{lem}
-The space of supergravity states on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7\times S^4} )$ where $\mc H_{AdS_7\times S^4}$ is given by the cochain complex
+The space of supergravity states on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7} )$ where $\mc H_{AdS_7}$ is given by the cochain complex
 
  \begin{equation} 
  \begin{tikzcd}[row sep = 1 ex]
     + & - \\ \hline
 \C[w_1,w_2] \{\partial_{w_a}\} \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}\ar[r, "\del^W_\Omega" description] & \C[w_1,w_2]  \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0} \\
-\C[w_1,w_2]  \{\del_{z_i}\}  \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}\ar[ur, "\del^Z_\Omega" description] \\
-\C[w_1,w_2] \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,w_2] \{\d z_a\} \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0} \\ & \C[w_1, w_2] \{\d w_a\} \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}
+\C[w_1,w_2]  \{\del_{z_i}\}  \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}\ar[ur, "\del^X_\Omega" description] \\
+\C[w_1,w_2] \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2] \{\d z_a\} \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0} \\ & \C[w_1, w_2] \{\d w_a\} \otimes \C[\del_{z_1}, \del_{z_2}, \del_{z_3}]\delta_{z_i=0}
 \end{tikzcd}
 \end{equation}
 \end{lem}
 
 \parsec{}
-As before, we may compute the local character of the factorization algebra defined in \ref{defn:ads7states} as a character of $\Sym (\mc H_{AdS_7\times S^4})$. 
+As before, we may compute the local character of the factorization algebra defined in \ref{defn:ads7states} as a character of $\Sym (\mc H_{AdS_7})$. 
 
-We will use an action of $\mf{sl}(3)\oplus \mf {sl}(2)\oplus \mf{gl}(1)$ on $\mc H_{AdS_7\times S^4}$ which we may explicitly realize as follows:
+We will use an action of $\mf{sl}(3)\oplus \mf {sl}(2)\oplus \mf{gl}(1)$ on $\mc H_{AdS_7}$ which we may explicitly realize as follows:
 \begin{itemize}\label{eqn:im5}
 \item
 The subalgebra $\mf{sl}(3)$ acts as vector fields rotating the plane $\C^3_z$
@@ -444,21 +475,21 @@ The weights of twisted supergravity states with respect to the generators of the
 \end{center}
 \end{table}
 
-We enumerate single particle supergravity states via computing the super trace of the operator $q^\Delta t_1^{h_1} t_2^{h_2} r^h$ acting on $\mc{H}_{AdS_7\times S^4}$:
+We enumerate single particle supergravity states via computing the super trace of the operator $q^\Delta t_1^{h_1} t_2^{h_2} r^h$ acting on $\mc{H}_{AdS_7}$:
 \begin{equation}
-f_{AdS_7\times S^4}(t_1,t_2,r,q) = \tr_{\mc{H}_{AdS_7\times S^4}} (-1)^F q^\Delta t_1^{h_1} t_2^{h_2} r^h  .
+f_{AdS_7}(t_1,t_2,r,q) = \tr_{\mc{H}_{AdS_7}} (-1)^F q^\Delta t_1^{h_1} t_2^{h_2} r^h  .
 \end{equation}
 
 \begin{prop}
 \label{prop:sugraindex1}
-The single particle index of the space of twisted supergravity states~$\mc{H}_{AdS_7\times S^4}$ is given by the following expression
+The single particle index of the space of twisted supergravity states~$\mc{H}_{AdS_7}$ is given by the following expression
 \begin{equation}
 \label{eqn:sugra_index}
-f_{AdS_7\times S^4} (t_1,t_2, r, q) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1})+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.
+f_{AdS_7} (t_1,t_2, r, q) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1})+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.
 \end{equation}
 The full (multiparticle) index is defined to be the plethystic exponential 
 \begin{equation}
-{\rm PExp}\left[f_{AdS_7\times S^4}(t_1,t_2,r,q)\right] .
+{\rm PExp}\left[f_{AdS_7}(t_1,t_2,r,q)\right] .
 \end{equation}
 \end{prop}
 
@@ -499,14 +530,14 @@ y = q^{1/2} r .
 Using the parametrization of the Cartan given by the variables $y_i, y,\Delta$ we obtain the equivalent expression for the index \eqref{eqn:sugra_index} as 
 \begin{equation}
 \label{eqn:Kim_sugra}
-f_{AdS_7\times S^4} (y_i, y, q) = \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)},
+f_{AdS_7} (y_i, y, q) = \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)},
 \end{equation}
-We note that this matches exactly with the index computed in \cite[Eq. (3.23)]{Kim:2013nva} with the change of variables.
+We note that this matches exactly with the index computed in \cite[equation (3.23)]{Kim:2013nva} with the change of variables.
 %\begin{equation}
 %t_1 = y_1^{-1} , \quad t_2 = y_3, \quad r = q^{-1/2} y 
 %\end{equation} 
 
-Our formula \eqref{eqn:sugra_index} also matches with \cite[Eq. (3.24)]{Bhattacharya:2008zy} where we use the change of variables
+Our formula \eqref{eqn:sugra_index} also matches with \cite[equation (3.24)]{Bhattacharya:2008zy} where we use the change of variables
 \begin{equation}
 q = x^4, \quad t_1 = y_2, \quad t_2 = y_1, \quad r^2 = z .
 \end{equation}
@@ -521,46 +552,49 @@ q=r^2, t_2=1
 which is known as the Schur limit.
 Applying this limit to \eqref{eqn:sugra_index} yields the plethystic exponential of the following single particle index
 \[
-f_{AdS_7\times S^4}(q, t_1, t_2=1, r = q^{1/2}) = \frac{q}{(1-q)^2} 
+f_{AdS_7}(q, t_1, t_2=1, r = q^{1/2}) = \frac{q}{(1-q)^2} 
 \]
 This plethystic exponential yields the MacMahon function, which is the character of the vacuum module of the $W_{1+\infty}$-algebra. We will revisit this observation in section \ref{sec:holspec}.
 
 \subsection{Transverse boundary conditions}\label{sec:transversebc}
-In the previous subsections, we discussed boundary conditions in the phase spaces of the sphere compactifications $p_* \mc E^N_{AdS_4\times S^7}$ and $p_* \mc E^N_{AdS_7\times S^4}$ viewed as free theories, that exist for generic values of $N$. However, there are distinguished boundary conditions that exist for $N = 0$ that we will use in the sequel. Moreover, these distinguished boundary conditions are in fact boundary conditions for the interacting theory. 
+
+\brian{edit this section to emphasize that we aren't fully characterizing the interacting structure, just free limit.}
+
+In the previous subsections, we discussed boundary conditions in the phase spaces of the sphere compactifications $p_* \mc E^N_{AdS_4}$ and $p_* \mc E^N_{AdS_7}$ viewed as free theories, that exist for generic values of $N$. However, there are distinguished boundary conditions that exist for $N = 0$ that we will use in the sequel. Moreover, these distinguished boundary conditions are in fact boundary conditions for the interacting theory. 
 
 Indeed, recall that in equations \eqref{}, \eqref{} we wrote the phase spaces as twisted cotangent bundles, where the nontrivial Poisson tensor was induced by the terms in the differential coming from bracketing with the flux. When we specialize $N=0$, this Poisson tensor vanishes, and there is an additional Lagrangian given by the zero section. 
 
 Explicitly these Lagrangians in the phase space are described as follows.
 \begin{itemize}
-\item Let $\mc L_{AdS_4\times S^7}^{r=0}$ denote the following dg-vector bundle on $\C$ 
+\item Let $\mc L_{AdS_4}^{r=0}$ denote the following complex of vector bundles on $\C$ 
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
    \ul{-} & \ul{+} \\
 \C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] &\C[w_1,\ldots, w_4]  \otimes \mc O \\
-\C[w_1,\ldots, w_4]   \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-\C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
+\C[w_1,\ldots, w_4]   \otimes \T\ar[ur, "\del^M_\Omega" description] \\
+\C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
 
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4\times S^7})|_{\{\infty\} \times\R\times\C}$ is given by $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L_{AdS_4\times S^7}^{r=0})$.
+The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4})|_{\{\infty\} \times\R\times\C}$ is given by $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L_{AdS_4}^{r=0})$.
 
 
-\item Let $\mc L_{AdS_7\times S^4}^{r=0}$ denote the following dg-vector bundle on $\C^3$
+\item Let $\mc L_{AdS_7}^{r=0}$ denote the following complex of vector bundles on $\C^3$
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
    \ul{+} & \ul{-} \\
 \C[w_1, w_2] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] &\C[w_1,w_2]  \otimes \mc O \\
-\C[w_1, w_2]   \otimes \T\ar[ur, "\del^Z_\Omega" description] \\
-\C[w_1, w_2] \otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^1 \\ & \C[w_1, w_2] \{\d w_a\}  \otimes \mc O
+\C[w_1, w_2]   \otimes \T\ar[ur, "\del^X_\Omega" description] \\
+\C[w_1, w_2] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^1 \\ & \C[w_1, w_2] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_7\times S^4})|_{\{\infty\} \times\C^3}$ is given by $\Omega^{0,\bullet}_{\C^3} (\mc L_{AdS_7\times S^4}^{r=0})$.
+The desired Lagrangian in $(p_*\mc E^{0}_{AdS_7})|_{\{\infty\} \times\C^3}$ is given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7}^{r=0})$.
 \end{itemize}
 
 
 Note that the same formulae defining the $L_\infty$ structure on the parity shift of the eleven-dimensional theory $\mc E$ \ref{thm:dfn} equip these Lagrangians in the $N=0$ phase spaces with $L_\infty$ structures. Moreover, the canonical maps
 \[
-\Omega^\bullet_{\R} \otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4\times S^7} ) \to (p_* \mc E^0 _{AdS_4\times S^7})|_{\{\infty\} \times \R\times \C}, \quad \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} ) \to (p_* \mc E^0 _{AdS_7\times S^4})|_{\{\infty\} \times \C^3}
+\Omega^\bullet_{\R} \otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4} ) \to (p_* \mc E^0 _{AdS_4})|_{\{\infty\} \times \R\times \C}, \quad \Omega^{0,\bullet}_{X} (\mc L^{r=0}_{AdS_7} ) \to (p_* \mc E^0 _{AdS_7})|_{\{\infty\} \times \C^3}
 \]
 preserve the $L_\infty$ brackets even taking into account the potential for additional higher brackets on the target coming from homotopy transfer. Indeed, such brackets must necessarily involve classes in $H^2_{\mr{THF}} \left ( (\R\times \C^2)\setminus 0 \right )$
 
@@ -575,14 +609,14 @@ The following lemma illustrates that the state space of definitions \ref{defn:ad
 These Lagrangians afford an alternative description of twisted supergravity states, which will be used to investigate their representation theoretic properties.
 
 \begin{prop}\label{prop:altstates}
-There are isomorphisms
+There are isomorphisms of cochain complexes
 \begin{center}
-$\mc U \left ( \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L_{AdS_4\times S^7}^{r=0} ) \right )(0)\cong \Sym( \mc {H}_{AdS_4\times S^7} )$ \\
-$\mc U \left ( \Omega^{0,\bullet}_{\C^3}(\mc L_{AdS_7\times S^S}^{r=0})\right )(0)\cong \Sym( \mc {H}_{AdS_7\times S^4} )$
+$\mc U \left ( \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L_{AdS_4}^{r=0} ) \right )(0)\cong \Sym( \mc {H}_{AdS_4} )$ \\
+$\mc U \left ( \Omega^{0,\bullet}_{X}(\mc L_{AdS_7}^{r=0})\right )(0)\cong \Sym( \mc {H}_{AdS_7} )$
 \end{center}
 \end{prop}
 \begin{proof}
-For a local $L_\infty$ algebra $\mc L$, its factorization envelope $\mc U(L)$ is defined to be $\clie_\bullet (\mc L_c)$ the Lie algebra chains on the cosheaf of compactly supported sections. Therefore, it suffices to show that in each case, the costalk of the cosheaf of comapctly supported sections is quasi-isomorphic to $\mc H_{AdS_4\times S^7}$ and $\mc H_{AdS_7\times S^4}$ respectively. This is a consequence of the following observations.
+For a local $L_\infty$ algebra $\mc L$, its factorization envelope $\mc U(L)$ is defined to be $\clie_\bullet (\mc L_c)$ the Lie algebra chains on the cosheaf of compactly supported sections. Therefore, it suffices to show that in each case, the costalk of the cosheaf of comapctly supported sections is quasi-isomorphic to $\mc H_{AdS_4}$ and $\mc H_{AdS_7}$ respectively. This is a consequence of the following observations.
 
 Note that by ellipticity, there are quasi-isomorphisms 
 \[\overline \Omega^{0,\bullet}_{\C,c} (D) \to \Omega^{0,\bullet}_{\C,c} (D), \ \ \ \ \overline \Omega^{0,\bullet}_{\C^3,c} \to \Omega^{0,\bullet}_{\C^3,c} (D^3).\]
