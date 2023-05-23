@@ -1,19 +1,25 @@
 \documentclass[../main.tex]{subfiles}
 
+\newcommand\til{\widetilde}
 \begin{document} 
 \section{Twisted AdS space}
 \label{sec:ads}
 
-As remarked above, in eleven-dimensional supergravity, the $AdS_7 \times S^4$ and $AdS_4\times S^7$ backgrounds are obtained by backreacting a number of M5 branes and M2 branes in flat space \cite{Maldacena:1997re,WittenAdS}. In this section, we wish to give an account of this procedure at the level of our twisted theory in eleven-dimensions. Before describing the specific examples of interest, we begin with some generalities.
+In eleven-dimensional supergravity the $AdS_7 \times S^4$ and $AdS_4\times S^7$ backgrounds are obtained by backreacting a number of M5 branes and M2 branes in flat space \cite{Maldacena:1997re,WittenAdS}. In this section, we will give an account of this procedure at the level of our twisted theory in eleven-dimensions. 
+The main outcome is a geometric definition of twisted analogs of $AdS$ spaces. 
+Before describing the specific examples of interest, we begin with some generalities.
 
 Suppose we have a theory of gravity on the total space of a vector bundle. In this thesis, we are interested in holomorphic-topological field theories, and in this context, the bundle projection is a map of THF manifolds, and the gravitational theory is a local moduli problem that describes, in part, deformations of the THF structure on the total space. Operationally, producing the theory in the backreacted geometry is the output of the following two-step procedure. 
 
 \begin{itemize}
-  \item Place the theory on the complement of the zero section. 
+  \item Restrict the theory on the complement of the zero section. 
+  If the theory is defined on flat space $\R^d$ to begin with, and the brane lives a long a coordinate plane $\R^{n} \subset \R^d$, then this amounts to restricting the theory on $\R^d \setminus \R^n$.
   \item Deform the theory on the complement of the zero section by a certain Maurer--Cartan element, thought of as the flux sourced by branes wrapping the zero section. More rigorously, the zero section determines a certain curved Maurer-Cartan equation, and the desired Maurer-Cartan element is a solution to this equation. 
 \end{itemize}
 
-This procedure is implemented at the level of the $\Omega$-deformed nonminimal twist on flat space in the appendix of \cite{CostelloM5}, and in \cite{raghavendran2022holographic} the procedure is carried about for M5 branes in our eleven-dimensional model in some global generality. For the purposes of this thesis however, we will content ourselves with examples on flat space. 
+This procedure is implemented at the level of the $\Omega$-deformed nonminimal twist on flat space in the appendix of \cite{CostelloM5}, and in \cite{raghavendran2022holographic} the procedure is carried about for M5 branes in our eleven-dimensional model in some global generality. 
+As another example, in \cite{CGhol} the authors show that carrying out this procedure for branes in the topological $B$-model on $\C^3$ results in the deformed conifold.
+For the purposes of this thesis, we will mostly content ourselves with examples on flat space.
 
 \subsection{Twisted supergravity}
 
@@ -36,18 +42,49 @@ In \cite{RSW} we have proposed a mathematical model for the $SU(5)$-twist of ele
 Many tests of this proposal were performed, including a consistency check that the dimensional reduction of the model agrees with proposals for twists of type IIA supergravity given in terms of topological strings~\cite{CLsugra}.
 
 The eleven-dimensional theory exists on any manifold which is locally of the form 
-\[
+\beqn\label{eqn:local}
 \R \times Z
-\] 
+\eeqn
 where $Z$ is a Calabi--Yau fivefold.
 The model is topological along $\R$ in the sense that translations in this direction act in a homotopically trivial way on the theory.
 Likewise, locally on the Calabi--Yau fivefold, all anti-holomorphic translations act in a homotopically trivial way---in this sense, the theory is {\em holomorphic} along $Z$ \cite{BWhol}.
 More generally, the eleven-dimensional theory can be constructed on any eleven-manifold equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
 
+As examples, we point out two classes of THF eleven-manifolds which we will consider in this paper, depending on whether we consider stack of M2 or M5 branes respectively:
+\begin{itemize}
+\item Let $M$ be a three-manifold equipped with a THF of real codimension two. 
+Locally such a manifold is of the form $\R \times \C$.
+Let $K_M$ be the canonical bundle of $M$ and suppose we have fixed a fourth-root $K^{1/4}$.\footnote{If $\cF$ is a THF of codimension two then $\T_M / \T_\cF \otimes_\R \C = Q \oplus \bar{Q}$ for the bundle $Q$ which is locally spanned by $\del_z$.
+We let $K = Q^\vee$.}
+Then we consider the THF eleven-manifold 
+\beqn\label{eqn:thfm2}
+\text{Tot} \left(K_M^{1/4} \otimes \C^4 \to M\right) .
+\eeqn
+The M2 branes will wrap the zero section of this total bundle.
+Notice that the power of $1/4$ is to guarantee the Calabi--Yau condition.
+\item Let $X$ be a complex threefold equipped with $K_X^{1/2}$.
+We can consider the THF eleven-manifold
+\beqn\label{eqn:thfm5}
+\R \times \text{Tot} \left(K_X^{1/2} \otimes \C^2 \to X \right) .
+\eeqn
+The M5 branes will wrap the zero section and lie at a point in $\R$.
+Notice that in this case the manifold is globally of the form $\R \times Z$ where $Z$ is a Calabi--Yau fivefold.
+\end{itemize}
+
+
 In \cite{RSW,RWindex} we describe how physical fields in supergravity are manifest in the twisted model.
-\brian{expand this}
-Here, we will jump straight to describing the twisted model.
-Fields generally live in spaces of the form
+We review a small part of this.
+If $\til{Z}$ is an eleven-manifold equipped with a THF structure as above, the fields will live in a space of the form
+\beqn
+\cA^\bu(\til{Z}, \til{V})
+\eeqn
+where
+\begin{itemize}
+\item The graded bundle $\til{V}$ is holomorphic with respect to the THF structure.
+\item $\cA^\bu (\til{Z}, \til{V})$ denotes the THF cohomology of $\til{Z}$ with coefficients in $\til{V}$.
+\end{itemize}
+To simplify discussion in the remainder of this section we will only work in the local model~\eqref{eqn:local} where $\til{Z} = \R \times Z$ for $Z$ a Calabi--Yau fivefold.
+Then, the space of fields is of the form
 \beqn
 \Omega^\bu(\R) \otimes \Omega^{0,\bu}(Z, V)
 \eeqn
@@ -90,6 +127,7 @@ In local coordinates, the only components of this tower of differential forms wh
 \end{align*}
 %When we want to be specific by the form type we use the notation $\beta^{k;q}(t;z,\zbar)$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}(t;z,\zbar)$ for the $(k;1,q)$ component of the three-form.
 Fields $\beta^{\Bar{I}}, \gamma_t^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em even} (resp. {\em odd}) and fields $\beta_t^{\Bar{I}}, \gamma^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em odd} (resp. {\em even}). 
+The three-forms $\beta^{\Bar{i}\Bar{j}\Bar{k}} \d \zbar_{\Bar{i}} \d \zbar_{\Bar{j}} \d \zbar_{\Bar{k}}$, $\beta_t^{\Bar{i}\Bar{j}} \d t \ \zbar_{\Bar{i}} \d \zbar_{\Bar{j}}$, $\gamma^{i \Bar{j} \Bar{k}} \d z_i \d \zbar_{\Bar{j}} \d \zbar_{\Bar{k}}$, and $\gamma_t^{i \Bar{j}} \d t \d z_i \d \zbar_{\Bar{j}}$ comprise components of the supergravity three-form $C$ which survive the $SU(5)$ twist. 
 
 The most important equation of motion of the eleven-dimensional theory involves both the fields $\mu$ and $\gamma$. 
 When $\div \mu = 0$ it takes the form
@@ -140,34 +178,34 @@ Famously, $M$-theory on a circle is expected to be equivalent to type IIA string
 At the level of supergravity, the $S^1$-reduction of eleven-dimensional supergravity is ten-dimensional supergravity of type IIA.
 Here we utilize a description of the twist of type IIA strings using a version of Kodaira--Spencer theory developed in \cite{CLbcov1,CLsugra}.
 
-From the point of view of the $SU(5)$ twist there are essentially two types of circles one can consider.
-The first is a `holomorphic circle'.
-This is present when we assume our Calabi--Yau fivefold is of the form $Z = \C^\times \times Y$ with $Y$ a Calabi--Yau fourfold.
-We assume that $\C^\times$ is equipped with the standard volume form $\d z$.
-The $S^1$ reduction along a circle in $\C^\times$ results in a twist of type IIA supergravity with global symmetry $SU(4)$ on the manifold
-\beqn
-\R \times \R \times Y .
-\eeqn
-More generally, this twist can be defined when $\R^2$ is replaced by a smooth oriented two-dimensional manifold $M^2$.
-In \cite{CLsugra}, Costello and Li have given a conjectural description of this particular twist of type IIA (and many other twists) using methods of topological string theory.
-In this case, the conjecture of Costello and Li is that the twist is equivalent to a mixed topological string theory which is given by the A-model along $M^2$ and the B-model along $Y$.
-In perturbation theory, this admits a description in terms of Kodaira--Spencer theory along the fourfold $Y$.
-Via an explicit dimensional reduction of our model we find an exact match with this expectation \cite{RSW}.
-The dimensional reduction of our eleven-dimensional model on
-\beqn
-\R \times \C \times Y
-\eeqn
-along $S^1 \subset \C$ is equivalent to the mixed topological A-model along $\R^2$ and B-model along $Y$ as considered in \cite{CLsugra}.
-
-The other type of reduction one can consider is that along a `topological' circle.
-This corresponds to placing our eleven-dimensional model on
-\beqn
-S^1 \times Z
-\eeqn
-and performing reduction along $S^1 \times Z \to Z$.
-What results is a theory with $SU(5)$ global symmetry.
-We conjecture that this is the $SU(5)$ twist of type IIA supergravity.
-There is no expected description of the $SU(5)$ twist in terms of topological strings like in the $SU(4)$ or $SU(2)$ cases.
+%From the point of view of the $SU(5)$ twist there are essentially two types of circles one can consider.
+%The first is a `holomorphic circle'.
+%This is present when we assume our Calabi--Yau fivefold is of the form $Z = \C^\times \times Y$ with $Y$ a Calabi--Yau fourfold.
+%We assume that $\C^\times$ is equipped with the standard volume form $\d z$.
+%The $S^1$ reduction along a circle in $\C^\times$ results in a twist of type IIA supergravity with global symmetry $SU(4)$ on the manifold
+%\beqn
+%\R \times \R \times Y .
+%\eeqn
+%More generally, this twist can be defined when $\R^2$ is replaced by a smooth oriented two-dimensional manifold $M^2$.
+%In \cite{CLsugra}, Costello and Li have given a conjectural description of this particular twist of type IIA (and many other twists) using methods of topological string theory.
+%In this case, the conjecture of Costello and Li is that the twist is equivalent to a mixed topological string theory which is given by the A-model along $M^2$ and the B-model along $Y$.
+%In perturbation theory, this admits a description in terms of Kodaira--Spencer theory along the fourfold $Y$.
+%Via an explicit dimensional reduction of our model we find an exact match with this expectation \cite{RSW}.
+%The dimensional reduction of our eleven-dimensional model on
+%\beqn
+%\R \times \C \times Y
+%\eeqn
+%along $S^1 \subset \C$ is equivalent to the mixed topological A-model along $\R^2$ and B-model along $Y$ as considered in \cite{CLsugra}.
+%
+%The other type of reduction one can consider is that along a `topological' circle.
+%This corresponds to placing our eleven-dimensional model on
+%\beqn
+%S^1 \times Z
+%\eeqn
+%and performing reduction along $S^1 \times Z \to Z$.
+%What results is a theory with $SU(5)$ global symmetry.
+%We conjecture that this is the $SU(5)$ twist of type IIA supergravity.
+%There is no expected description of the $SU(5)$ twist in terms of topological strings like in the $SU(4)$ or $SU(2)$ cases.
 
 %
 %There are two bosonic fields of particular importance.
@@ -232,32 +270,39 @@ In this section we introduce the analog of the ${\mr AdS}_4 \times S^7$ backgrou
 
 \parsec[]
 
-We begin by viewing the eleven-dimensional manifold $\R\times \C^5$ as 
+We begin by viewing the eleven-dimensional manifold
 \[
-\operatorname{Tot}(K^{1/4}_\C\otimes \C^4\to \R\times \C_z)
+\operatorname{Tot}(K^{1/4}_M \otimes \C^4\to M)
 \]
-where we have abusively used $K^{1/4}_\C\otimes \C^4$ to denote its pullback along the natural projection $\R\times \C\to \C$. Thinking of flat space in this way is simply a way to record weights under natural scaling actions. We will use $w_a$ to denote holomorphic fiber coordinates on $K^{1/4}_\C\otimes \C^4$.
+as in \eqref{eqn:thfm2}.
+Even when we restrict ourselves to flat space $M = \R \times \C$ this way of presenting the eleven-manifold $\R \times \C^5$ is a convenient mechanism to record weights under natural scaling actions. 
+We will use $w_a$ to denote holomorphic fiber coordinates on $K^{1/4}_M \otimes \C^4$.
 
 We carry out the above procedure. 
-Consider a stack of $N$ twisted M2 branes wrapping the zero section $\R\times \C_z$.
+Consider a stack of $N$ twisted M2 branes wrapping the zero section $M$.
 Our ansatz for this coupling is heuristically of the form
 \[
-I_{M2}(\gamma) = N\int_{\C_z} \gamma + \cdots
+I_{M2}(\gamma) = N\int_{M} \gamma + \cdots
 \] 
-which is nonzero only on the component of $\gamma$ in $\Omega^1(\R)\otimes \Omega^{1,1}(\C^5)$. We have only indicated the lowest order coupling, the $\cdots$ indicate higher-order couplings which will be higher order in the fields of the eleven-dimensional theory and explicitly involve the fields in the worldvolume theory. 
+which is nonzero only on the component of $\gamma$ which is a top form along $M$.
+We have only indicated the lowest order coupling, the $\cdots$ indicate higher-order couplings which will be higher order in the fields of the eleven-dimensional theory and explicitly involve the fields in the worldvolume theory. 
 
 This coupling is justified by comparison with the physical theory and by dimensional reduction. 
-Indeed, as discussed in~\S\ref{s:components}, the component of $\gamma$ which participates in the above coupling is a component of the $C$-field of eleven dimensional supergravity. Thus, the proposal mirrors electric couplings of M2 branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
+Indeed, as discussed in the previous section, the component of $\gamma$ which participates in the above coupling is a component of the three-form $C$-field of eleven dimensional supergravity. 
+Thus, the proposal mirrors electric couplings of M2 branes in the physical theory, which simply involves integrating the $C$-field over the worldvolume of the brane. 
 
-Moreover, reducing on a circle transverse to the M2 brane yields the $SU(4)$ twist of type IIA supergravity on $\R^2\times \C_z\times \C^3$ with $N$ $D2$ branes wrapping $\R\times \C_z$. As is shown in \cite{CLsugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
+Moreover, reducing on a circle transverse to the M2 brane yields the $SU(4)$ twist of type IIA supergravity with $N$ $D2$ branes wrapping $M$. 
+As is shown in \cite{CLsugra}, an electric coupling of D2 branes to the $SU(4)$ twist of type IIA supergravity is given by 
 \[
-I_{D2}(\gamma) = N \int_{\R\times\C_z} \gamma + \cdots
+I_{D2}(\gamma) = N \int_{M} \gamma + \cdots
 \] 
 where $\gamma$ now denotes the 1-form field of the $SU(4)$ twist of type IIA supergravity. It is immediate that the pullback of $I_{M2}$ along the map in the proof of proposition \ref{prop:dimred} recovers $I_{D2}$. 
 
 \parsec[sec:m2backreact]
 
-The backreacted geometry will be given by a solution to the equations of motion upon deforming the eleven-dimensional action by the interaction $I_{M2}(\gamma)$. 
+The backreacted geometry will be given by a solution to the equations of motion upon deforming the eleven-dimensional action by the interaction $I_{M2}(\gamma)$.
+For the twisted version of $AdS$ space we should start with the three-manifold $M$ being just $\R \times \C$, so that the resulting theory is defined originally just on flat space.
+
 Varying the deformed action with respect to $\gamma$,
 we obtain the equation of motion
 \begin{equation}\label{eqn:ads4eom1}
@@ -272,7 +317,7 @@ Varying $\beta$, we obtain the equation of motion
 \begin{lem}\label{lem:m2flux}
 Let
 \beqn\label{eqn:FM2}
- F_{M2} = \frac{6}{(2\pi i)^4} \frac{\sum_{a=1}^4 \bar{w}_a \d \bar{w}_1 \cdots \widehat{\d \bar{w}_a} \cdots \d \bar{w}_4}{\|w\|^{8}} \partial_z .
+ F_{M2} = \Omega^{-1} \frac{6}{(2\pi i)^4} \frac{\sum_{a=1}^4 \bar{w}_a \d \bar{w}_1 \cdots \widehat{\d \bar{w}_a} \cdots \d \bar{w}_4}{\|w\|^{8}} \d w_1 \d w_2 \d w_3 \d w_4 .
 \eeqn
 Then the background where $\mu = N F_{M2}$ and $\gamma = 0$
 satisfies the above equations of motion in the presence of a stack of $N$ M2 branes:
@@ -316,27 +361,31 @@ To verify this conjecture, we should directly twist eleven-dimensional supergrav
 
 \subsection{The ${\mr AdS}_7 \times S^4$ background}
 
-We similarly introduce an analog of the ${\mr AdS}_7 \times S^4$ background in our description of the minimal twist of eleven-dimensional supergravity. As before, we begin by viewing our eleven-dimensional manifold $\R\times \C^5$ as 
+We similarly introduce an analog of the ${\mr AdS}_7 \times S^4$ background in our description of the minimal twist of eleven-dimensional supergravity.
+We begin with our twisted theory defined on
 \[
-\operatorname{Tot}(\R \oplus K_{\C^3}^{1/2}\otimes \C^2 \to \C^3_z)
+\R \times \operatorname{Tot}(K_{\C^3}^{1/2}\otimes \C^2 \to X)
 \]
-to record weights under natural scaling actions. We once again will use $w_a$ to denote holomorphic fiber coordinates on $K^{1/2}_{\C^3}\otimes \C^2$, and we use $t$ to denote a fiber coordinate on the trivial bundle $\R \to \C^3_z$.  
+with $X$ a complex threefold as in \eqref{eqn:thfm5}.
+As above, we will momentarily be only concerned with flat space which means taking $X = \C^3$.
+We once again will use $w_a$ to denote holomorphic fiber coordinates on $K^{1/2}_{X}\otimes \C^2$, and we use $t$ to denote a fiber coordinate on $\R$.
 
 \parsec[sec:m5coupling]
 
 To repeat the procedure in the previous subsection, we begin by defining our eleven-dimensional theory couples to M5 branes (to first order).
-Consider a stack of $N$ M5 branes wrapping the zero section $\C^3_z$. 
+Consider a stack of $N$ M5 branes wrapping the zero section $X$. 
 We consider the heuristic nonlocal coupling 
 \[
-I_{M5} = N\int_{\C^3_z} \div^{-1}\mu \vee \Omega +\cdots 
+I_{M5} = N\int_{X} \div^{-1}\mu \vee \Omega +\cdots 
 \]
-Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}$. 
+Note that this expression is only nonzero on the component of $\mu$ in $\PV^{1,3}(X)$. 
 We argue that this coupling is consistent with expectations from the physical theory and from dimensional reduction. 
 
-The twisted field $\mu^{1,3}$ is a component of the Hodge star of the $G$-flux in the physical theory (\S\ref{s:components}). 
+The twisted field $\mu^{1,3}$ is a component of the Hodge star of the metric flux in the physical theory.
 In the physical theory, M5 branes magnetically couple to the $C$-field; the coupling involves choosing a primitive for the Hodge star of the $G$-flux and integrating it over the M5 worldvolume. Our twist contains no fields corresponding to components of such a primitive; hence such a magnetic coupling is reflected in the appearance of $\div^{-1}$. 
 
-We may once again justify this coupling by dimensional reduction to IIA supergravity. Reducing on the circle along the directions the M5 branes wrap yields the $SU(4)$ invariant twist of type IIA supergravity on $\C^4 \times \R^2$ with $N$ $D4$ branes wrapping $\C^2 \times \R$. 
+We may once again justify this coupling by dimensional reduction to IIA supergravity. 
+When $X = \C^2 \times \C$ we reduce on the circle along the last copy of $\C$ that the M5 branes wrap to get the $SU(4)$ invariant twist of type IIA supergravity on $\C^4 \times \R^2$ with $N$ $D4$ branes wrapping $\C^2 \times \R$.
 
 In \cite{CLsugra}, it is shown that the magnetic coupling of $D4$ branes to the $SU(4)$ twist of IIA is of the form
 \[
@@ -346,21 +395,21 @@ Again, we have only explicitly indicated the first-order piece of the coupling.
 
 \parsec[s:m5backreact]
 
-The backreacted geometry will be given by a solution to the equations of motion upon deforming the eleven-dimensional action by the interaction $I_{M5}(\mu)$. 
+The backreacted geometry will be given by a solution to the equations of motion upon deforming the eleven-dimensional action by the interaction $I_{M5}(\mu)$.
 
 Varying the potential $\div^{-1} \mu$, we obtain the following equation of motion involving the field $\gamma$:
 \begin{equation}\label{eqn:m5eom1}
 \dbar \del \gamma + \div \left(\frac{1}{1-\nu} \mu\right) \wedge \del \gamma = N \delta_{w_1=w_2=t=0} .
 \end{equation}
 Notice that there is an extra derivative compared to the equation of motion arising from varying the field $\mu$. 
-This equation only depends on $\gamma$ through its field strength $\del \gamma$. 
+This equation only depends on $\gamma$ through its field strength $\del \gamma$.
 
 Varying $\gamma$ we obtain the equation of motion 
 \begin{equation}\label{eqn:m5eom2}
 (\dbar + \d_\R) \mu + \del \gamma \del \gamma = 0 .
 \end{equation} 
 Again, this only depends on $\gamma$ through its field strength $\del \gamma$.
-
+It is at this point that we restrict ourselves to the case $X = \C^3$.
 
 \begin{lem}
 \label{lem:ads7flux}
