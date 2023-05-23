@@ -172,13 +172,13 @@ Using the holomorphic volume form, there is a higher residue pairing
 together with the natural pairings between $T, \Omega^1$ and the integration along $M$, this equips $\cA_M^\bu (\mc V^N)$ with a local even-shifted symplectic structure.
 
 Via this symplectic structure, we can identify the phase space with a twisted cotangent bundle
-\[
+\beqn\label{eqn:cotm2}
 \cA_M^\bu (\mc V^N) = T^* _{\alpha} \left (\begin{tikzcd}[row sep = 1 ex]
  \ul{-} & \ul{+} \\ 
 \C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del^W_\Omega" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C \\
 \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\T)\ar[ur, "\del^M_\Omega" description] \\
 \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\Omega^1)\\ & \C[w_1,\ldots, w_4] \{\d w_a\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C   \end{tikzcd} \right) 
-\]
+\eeqn
 For now, the subscript of $\alpha$ is just meant to indicate that the extra differential given by bracketing with the flux constitutes a deformation of the cotangent bundle. 
 
 Thus we see that a natural Lagrangian in the phase space is given by the sheaf of cochain complexes $\cA^\bu_M(\mc L^N_{AdS_4})$ where $\mc L^N_{AdS_4}$ is the following complex of vector bundles on $M$:
@@ -371,16 +371,15 @@ As in the previous subsection, we ask for a boundary condition we can place on t
 
 Completely analogously to before, we may rewrite the phase space as a shifted cotangent bundle. The higher residue pairing, the natural pairing between $T, \Omega^1$, and Serre duality along $X$, all conspire to give the phase space an even-shifted symplectic structure. Together with this, we may once again identify the phase space with a twisted cotangent bundle 
 
-\[
-\Omega^{0,\bullet}_{X} (\mc V_{X}) = T^* _{\Pi} \left (\begin{tikzcd}[row sep = 1 ex] 
+\beqn\label{eqn:cotm5}
+\Omega^{0,\bullet}_{X} (\mc V_{X}) = T^* _{\alpha} \left (\begin{tikzcd}[row sep = 1 ex] 
 \ul{-} & \ul{+} \\
 \C[w_1,w_2] \{\partial_{w_a}\} \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del^W_\Omega" description] & \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X}  \\
 \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} (\T)\ar[ur, "\del^X_\Omega" description] \\
 \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^{0,\bullet}_{X} (\Omega^1) \\ &  \C[w_1,w_2] \{\d w_a\} \otimes \Omega^{0,\bullet}_{X} 
 \end{tikzcd} \right) 
-\]
-
-Exactly analogously to the case of $AdS_4\times S^7$, $\Pi$ here denotes the extra $N$-dependent differential induced by bracketing with the flux, which deforms the cotangent bundle. 
+\eeqn
+Analogously to the case of $AdS_4\times S^7$, $\alpha$ here denotes the extra $N$-dependent differential induced by bracketing with the flux, which deforms the cotangent bundle. 
 
 A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7})$ where $\mc L_{AdS_7}$ is the complex of vector bundles given by  
 \begin{equation}
@@ -558,11 +557,9 @@ This plethystic exponential yields the MacMahon function, which is the character
 
 \subsection{Transverse boundary conditions}\label{sec:transversebc}
 
-\brian{edit this section to emphasize that we aren't fully characterizing the interacting structure, just free limit.}
-
 In the previous subsections, we discussed boundary conditions in the phase spaces of the sphere compactifications $p_* \mc E^N_{AdS_4}$ and $p_* \mc E^N_{AdS_7}$ viewed as free theories, that exist for generic values of $N$. However, there are distinguished boundary conditions that exist for $N = 0$ that we will use in the sequel. Moreover, these distinguished boundary conditions are in fact boundary conditions for the interacting theory. 
 
-Indeed, recall that in equations \eqref{}, \eqref{} we wrote the phase spaces as twisted cotangent bundles, where the nontrivial Poisson tensor was induced by the terms in the differential coming from bracketing with the flux. When we specialize $N=0$, this Poisson tensor vanishes, and there is an additional Lagrangian given by the zero section. 
+Indeed, recall that in equations \eqref{eqn:cotm2}, \eqref{eqn:cotm5} we wrote the phase spaces as twisted cotangent bundles, where the nontrivial Poisson tensor was induced by the terms in the differential coming from bracketing with the flux. When we specialize $N=0$, this Poisson tensor vanishes, and there is an additional Lagrangian given by the zero section. 
 
 Explicitly these Lagrangians in the phase space are described as follows.
 \begin{itemize}
@@ -572,7 +569,7 @@ Explicitly these Lagrangians in the phase space are described as follows.
    \ul{-} & \ul{+} \\
 \C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] &\C[w_1,\ldots, w_4]  \otimes \mc O \\
 \C[w_1,\ldots, w_4]   \otimes \T\ar[ur, "\del^M_\Omega" description] \\
-\C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
+\C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_M" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
 
