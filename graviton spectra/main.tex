@@ -21,18 +21,38 @@
 
 \tableofcontents
 
-Having described our eleven-dimensional model on flat spacetimes, we now pursue descriptions on maximally symmetric spacetimes. We begin by describing twisted versions of the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds. In eleven-dimensional supergravity, these backgrounds arise as near-horizon limits of the backgrounds sourced by some number of M2 and M5 branes in flat space respectively. In the first section of this chapter \ref{sec:ads}, we describe an analogous procedure natively in our twisted context. 
+In \cite{CLsugra}, Costello and Li gave a rigorous definition of what it means to {\em twist} a theory of supergravity, which is nicely compatible with the mathematically more familiar notion of twisting supersymmetric gauge theories \cite{WittenTwist}.
+In physical terms, twisted supergravity is supergravity in a background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge.
+In principle, one can take the supercharge to be any square-zero covariantly constant spinor (so it satisfies the equations of motion of supergravity).
+A class of such supercharges lie in the supersymmetry algebra, which is of the sort that we will focus on in this paper.
 
-To do so, we motivate ansatz for the leading order couplings of our eleven-dimensional model to M2 and M5 branes. These couplings determine certain curved deformations of the $L_\infty$-algebra underlying our model - we conjecture that deforming the theory in the complement of the brane by a solution to the resulting curved Maurer-Cartan equation is perturbatively equivalent to the twist of the theory on $AdS_4\times S^7$ and $AdS_7\times S^4$. 
+Following this procedure, we have given a proposal for the twists of eleven-dimensional supergravity on flat space in \cite{RSW,SWspinor}.
+See also \cite{EHsugra} for details on the further topological, non-minimal, twist.
+The model is akin to models of ten-dimensional twisted supergravity in terms of a certain part of topological string theory proposed in \cite{CLsugra} and further pursued in \cite{CLtypeI,CLbcov,CPkoszul} which generalizes the use of Kodaira--Spencer theory of Calabi--Yau manifolds in the ordinary $B$-model on Calabi--Yau threefolds \cite{bcov}.
+The goal of this paper is to give a descriptions of the minimally twisted model of eleven-dimensional supergravity placed on maximally symmetric spacetimes; thus providing further evidence for our model as a twist of supergravity.
+Insomuch, we produce definitions of twisted versions of the $AdS_4\times S^7$ and $AdS_7\times S^4$ spacetimes.
 
-The next two sections provide evidence for this conjecture. We begin in section \ref{sec:states} with numerical checks. We give definitions of supergravity states in our twisted $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds, which can be thought of as particular field configurations that are localized at points on the conformal boundary of $AdS$. We compute characters of the proposed state spaces and find exact matches with counts of gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively. 
+In supergravity, these backgrounds arise as near-horizon limits of the backgrounds sourced by some number of M2 and M5 branes in flat space respectively. 
+To follow an analogous procedure natively in our twisted context we introduce leading order couplings of our eleven-dimensional model to twisted M2 and M5 branes. 
+These couplings determine explicit deformations of formal moduli problem described by our twisted model on complement of the brane in flat spacetime.
+Perturbatively, the undeformed formal moduli space can be captured by the data of an $L_\infty$ algebra; we conjecture that deforming the theory in the complement of the brane by a solution to the resulting curved Maurer-Cartan equation is perturbatively equivalent to the twist of the theory on $AdS_4\times S^7$ and $AdS_7\times S^4$.
+
+We give definitions of supergravity states in our twisted $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds, which can be thought of as particular field configurations that are localized at points on the conformal boundary of $AdS$. 
+We compute graded characters of the proposed state spaces and find exact matches with counts of gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively.
+
+One of the insights of \cite{SWchar} was that supersymmetric indices count exactly local operators in the minimal twist---accordingly, we may think of the space of local operators in the minimal twist as categorifying the index.
+Of course, combining observables also endows local operators with an algebraic structure.
+In the approach to quantum field theory developed by Costello and Gwilliam \cite{fact2} that we follow here, the local operators quantum field theory are endowed with the structure of a factorization algebra.
+Therefore, an appealing aspect of our approach is that the space of supergravity states is obtained as the value of a factorization algebra on a small open disk.
+A complete characterization of this factorization algebra would follow, in principle, from the twisted holography proposal of by Costello, Gaiotto, Li, and Paquette in \cite{CLsugra,CGhol,CPkoszul} which is a highly structured avatar of the AdS/CFT correspondence that is expected to hold at the level of supersymmetric twists.
+We do not pursue that proposal in our context here.
 
 The next strand of evidence we pursue is by matching symmetries. In the physical theory, the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds carry actions of the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras. We show that our conjectural descriptions of twists of these backgrounds carry actions of the minimal twists of the corresponding superconformal algebras. 
 
-With these pieces of evidence in hand, in sections \ref{sec:e16}, \ref{sec:e36},  we then turn to study some representation theoretic aspects of the state spaces constructed in section \ref{sec:states}. We identify certain $\C^\times$ actions on our eleven-dimensional model that combine rescalings in directions normal to branes with a certain rescaling of the space of fields - this induces a decomposition of the space of fields that we dub the \textit{graviton decomposition}. The weight $0$ parts of these decompositions are certain local $L_\infty$-algebras whose costalks recover the linearly compact super-Lie algebras $E(1|6)$ and $E(3|6)$. We thus see that these linearly compact super-Lie algebras act on the spaces of supergravity states constructed in section \ref{sec:states}. We explicate their action on nonzero weight spaces of the graviton decomposition.
+With these pieces of evidence in hand, in sections \ref{sec:e16}, \ref{sec:e36},  we then turn to study some representation theoretic aspects of the state spaces constructed in section~\ref{sec:states}. We identify certain $\C^\times$ actions on our eleven-dimensional model that combine rescalings in directions normal to branes withoh a certain rescaling of the space of fields---this induces a decomposition of the space of fields that we dub the \textit{graviton decomposition}. The weight $0$ parts of these decompositions are certain local $L_\infty$-algebras whose costalks recover the linearly compact super-Lie algebras $E(1|6)$ and $E(3|6)$. We thus see that these linearly compact super-Lie algebras act on the spaces of supergravity states constructed in section \ref{sec:states}. We explicate their action on nonzero weight spaces of the graviton decomposition.
 
 In the final section of the chapter, we motivate some current work in progress that leverages the uncovered appearance of exceptional linearly compact super-Lie algebras for holographic means. Eleven-dimensional supergravity on $AdS_4\times S^7$ and $AdS_7\times S^4$ is expected to be equivalent to the large $N$ limit of the worldvolume theories of $N$ M2 branes and $N$ M5 branes respectively. 
-%Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+%Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at
 
 
 \subfile{content/br}
