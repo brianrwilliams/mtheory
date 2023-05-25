@@ -313,9 +313,10 @@ The relationship between this super-Lie algebra and our decomposition is establi
 \begin{prop}\label{prop:g0e36}
 There is an equivalence of super-Lie algebras
 \[
-\mc G^{(0)}_{\C^3, c} (0) \cong E(3|6)
+J^\infty_0\mc G^{(0)}_{\C^3} \cong E(3|6)
 \]
 \end{prop}
+where the left-hand side denotes the $\infty$-jets at zero of the local $L_\infty$ algebra $\mc G^{(0)}_{\C^3}$. 
 \begin{proof}
 We begin by characterizing the local $L_\infty$-algebra $\mc G^{(0)}_{\C^3}$. We claim that it is quasi-isomorphic to a local version of $E(3|6)$. 
 
@@ -367,7 +368,7 @@ To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^{
 \end{align*}
 \end{itemize}
 
-The result then follows from computing the limit of $\mc E(3|6)_c (D^3)$ over open sets containing the origin.
+The result then follows from computing the limit of $\mc E(3|6) (D^3)$ over open sets containing the origin.
 \end{proof}
 
 \begin{rmk}
@@ -596,8 +597,8 @@ The decomposition of $\Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )
 
 In \cite{KR2} the following weight decomposition of $E(5|10)$ is constructed. Splitting $\C^5 = \C^2_{w_a}\times \C^3_{z_i}$ as we have been doing, we stipulate that
 \begin{itemize} 
-\item the coordinate $z_i$ has weight zero, $\wt(z_i) = 0$. 
-\item the coordinate $w_a$ has weight $+1$, $\wt(w_a) = +1$. 
+\item the coordinate $z_i$ has weight zero. 
+\item the coordinate $w_a$ has weight $+1$.
 \item the parity of an element carries an additional weight of $-1$. 
 Thus, for example, the odd element $[\d w_1 \d z_1] \in \Omega^{2,cl}(\widehat{D}^5)$ carries weight $+1 - 1 = 0$. Viewing the odd part as the space of closed two-forms, then equivalently this grading translates to the one-form symbol $\d(-)$ as carrying weight $-1/2$.
 \end{itemize} 
@@ -606,14 +607,14 @@ It is straightforward to verify that this weight grading is compatible with the 
 \begin{equation}\label{eqn:decomp1}
 E(5|10) = \tilde U_{-1} \times \prod_{j \geq 0} U_j 
 \end{equation}
-Further, this decomposition also has the property that the 0-th piece $U_0$ is isomorphic to $E(3|6)$. As such, each $U_j$ is an $E(3|6)$-module; Kac characterizes these modules explicitly and identifies them as certain irreducible $E(3|6)$-modules. In the notation of \cite{KR2} we have that $U_{-1} = I(0,0;1;-1)^*$ and for $j\geq 1$, $U_j = I(0,0;j-1;j+1)^*$. 
+Further, this decomposition also has the property that the 0-th piece $U_0$ is isomorphic to $E(3|6)$. As such, each $U_j$ is an $E(3|6)$-module; Kac characterizes these modules explicitly and identifies them as certain irreducible $E(3|6)$-modules. In the notation of \cite{KR2} we have that $\tilde U_{-1} = I(0,0;1;-1)^*$ and for $j\geq 1$, $U_j = I(0,0;j-1;j+1)^*$. 
 
-The decomposition of $\mc H_{AdS_7\times S^4}$ afforded by proposition \ref{prop:ads7decomp} induces a weight grading of $\widehat{E(5|10)}$ which extends the one on $E(5|10)$ that we have just described by declaring that the central term have weight $-1$.
+The decomposition of the local $L_\infty$-algebra $\Omega^{0,\bullet}_{\C^3}(\mc L^{r=0}_{AdS_7} )$ afforded by proposition \ref{prop:ads7decomp} induces a weight grading of $\widehat{E(5|10)}$ which extends the one on $E(5|10)$ that we have just described by declaring that the central term have weight $-1$.
 In this way, we get a related decomposition of super $L_\infty$ algebras
 \begin{equation}\label{eqn:decomp2}
 \widehat{E(5|10)} = \prod_{j \geq -1} U_j            
 \end{equation}                      
-were $U_{-1}$ is a $\C$-extension of $\tilde U_{-1}$ defined in the decomposition \eqref{eqn:decomp1} and for $j \geq 0$ the $U_j$'s are the same as in the non centrally extended case. As a corollary, we see that each of the $E(3|6)$ modules which we have identified as the costalk at 0 $\mc G^{(j)}_{\C^3, c} (0)$ is in fact irreducible.
+were $U_{-1}$ is a $\C$-extension of $\tilde U_{-1}$ defined in the decomposition \eqref{eqn:decomp1} and for $j \geq 0$ the $U_j$'s are the same as in the non centrally extended case. As a corollary, we see that each of the $E(3|6)$ modules which we have identified as the costalk at 0 $\mc G^{(j)}_{\C^3, c} (0)$ is in fact irreducible \surya{is this last sentence actually true? these aren't the same modules}
 
 \subsection{Characters of $E(3|6)$-modules}\label{e36char}
 The decomposition of the state space $\Sym \left (\mc H_{AdS_7\times S^4}\right ) = \prod_{j\geq -1} \mc U (\mc G^{(j)})(0)$ gives a product formula for the characters computed in proposition \ref{prop:sugraindex1}

@@ -84,6 +84,8 @@ The sheaf of complexes $\mc F^{(-1)}_{\R\times \C}$ matches the field contents o
 
 \brian{it's an abelian L-infinity structure right? So we can just say complexes.}
 
+\surya{i thought the BLG theory has a quartic superpotential.}
+
 \brian{The thing we don't mention so much is the BV structure.}
 
 \brian{I think we can at least comment that the BV structure comes from the BR.}
@@ -124,18 +126,14 @@ The relationship between this super Lie algebra and our decomposition is establi
 
 \brian{Need to be careful about holomorphic versus formal disks in this proposition.}
 
-\brian{Did we define what $\mc F (0)$ means?}
-
-\brian{I'm confused by the appearance of compact support.}
-
-\brian{I would have said that the jets at 0 of $\cF^{(0)}$ is quasi-isomorphic to $E(1|6)$.}
 
 \begin{prop}
 There is a quasi-isomorphism of super Lie algebras
 \[
-\mc F^{(0)}_{\R\times \C, c}  (0) \simeq E(1|6).
+J^\infty_0\mc F^{(0)}_{\R\times \C} \simeq E(1|6).
 \]
 \end{prop}
+where the left hand side denotes the $\infty$-jets at $0\in \R\times \C$ of the local super-Lie algebra $\mc F^{(0)}_{\R\times \C}$. 
 \begin{proof}
 We will begin by trying to characterize the local $L_\infty$-algebra $\mc F^{(0)}_{\R\times \C}$. We claim that it is quasi-isomorphic to a local version of $E(1|6)$. 
 
@@ -144,9 +142,9 @@ Indeed, it is easy to see that the weight zero sections consists of the followin
 \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (
 \begin{tikzcd}
 \ul{even} & \ul{odd} \\
-\C[w_a\del_{w_b}]\otimes \mc O\ar[r, "\del^W_\Omega"]  & \mc O \\ 
+\C\{w_a\del_{w_b}\}\otimes \mc O\ar[r, "\del^W_\Omega"]  & \mc O \\ 
 \T \ar[ur] & \\
-\Sym^2 (\C^4)\ar[r, "\del_W"]\ar[dr] & \C[w_adw_b] \otimes K^{-1/2}\ \\
+\Sym^2 (\C^4)\ar[r, "\del_W"]\ar[dr] & \C\{w_a\d w_b\} \otimes K^{-1/2}\ \\
 & \Sym^2 (\C^4)\otimes \Omega^1\otimes K^{-1/2}
 \end{tikzcd} \right)
 \end{equation}
@@ -192,7 +190,7 @@ $A_{ab} \otimes g(t; z)\d z^{1/2} \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bu
 &\in \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C \left ( D, \Sym^2 (\C^4) \otimes \Omega^1 \otimes K^{-1/2} \right )
 \end{align*}
 \end{itemize}
-It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward if lengthy check confirms that it preserves Lie brackets. The result then follows from computing the limit of $\mc E(1|6)_c (I\times D)$ over open sets containing the origin. 
+It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward if lengthy check confirms that it preserves Lie brackets. The result then follows from computing the limit of $\mc E(1|6)(I\times D)$ over open sets containing the origin. 
 \end{proof}
 
 \begin{rmk}
@@ -245,9 +243,7 @@ We can compute the cohomology using a spectral sequence whose first page is give
 
 \subsection{Characters of $E(1|6)$-modules}
 
-Note that the decomposition of the state space $\Sym (\mc H_{AdS_4} ) = \prod_{j\geq -2} \mc U (\mc F^{(j)} _{\R\times \C} )(0)$ gives a product formula for the characters computed in proposition \ref{??}
-
-\brian{which proposition?} 
+Note that the decomposition of the state space $\Sym (\mc H_{AdS_4} ) = \prod_{j\geq -2} \mc U (\mc F^{(j)} _{\R\times \C} )(0)$ gives a product formula for the characters computed in proposition \ref{prop:ads4index}
 
 \brian{Might be useful to point out that a systematic characterization of irreps of $E(1|6)$ is incomplete.}
 
