@@ -4,13 +4,14 @@
 
 \section{$E(1|6)$ modules from gravitons on $AdS_4\times S^7$}\label{sec:e16}
 
-Having justified that the spaces of supergravity states constructed in the previous subsection are in fact counting gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively, we turn to studying representation theoretic properties of these state spaces. In this section, we focus on the case of gravitons on $AdS_4\times S^7$, using the description of the state space afforded by proposition \ref{prop:altstates} which describes it as the costalk of a factorization envelopes of the boundary conditions $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4\times S^7} )$.
+Having justified that the spaces of supergravity states constructed in the previous subsection are in fact counting gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively, we turn to studying representation theoretic properties of these state spaces. In this section, we focus on the case of gravitons on $AdS_4\times S^7$, using the description of the state space afforded by proposition \ref{prop:altstates} which describes it as the costalk of a factorization envelopes of the boundary conditions $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4} )$.
 
-We construct a certain $\C^\times$-action on the boundary fields $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4\times S^7} )$ equipped with the $L_\infty$ structure from remark \label{rmk:nottransferred} with the feature that the zeroth weight spaces are a local version of another exceptional linearly compact super-Lie algebras, $E(1|6)$. This in particular readily gives a decomposition of the state space $\mc H_{AdS_4\times S^7}$ into $E(1|6)$-modules. We explicitly characterize the summands of this decomposition with their module structures and give closed form expressions for their characters.
+We construct a certain $\C^\times$-action on the boundary fields $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4} )$ equipped with the $L_\infty$ structure from remark \label{rmk:nottransferred} with the feature that the zeroth weight spaces are a local version of another exceptional linearly compact super-Lie algebras, $E(1|6)$. This in particular readily gives a decomposition of the state space $\mc H_{AdS_4}$ into $E(1|6)$-modules. We explicitly characterize the summands of this decomposition with their module structures and give closed form expressions for their characters.
 
 \subsection{The graviton decomposition of twisted $AdS_4\times S^7$}
 \parsec{}
-We consider a particular decomposition of the space of states $\mc H_{AdS_4\times S^7}$. It is induced by a decomposition of the boundary fields $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{{r=0}}_{AdS_4\times S^7} )$ introduced in section \ref{sec:transversebc}  The decomposition is induced by a $\C^\times$ action on the boundary fieldsboundary fields $\Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4\times S^7} )$ that mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
+We define a decomposition of the space of states $\mc H_{AdS_4}$. 
+It is induced by a decomposition of the boundary fields $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{{r=0}}_{AdS_4} )$ introduced in section \ref{sec:transversebc}  arising from a $\C^\times$ action which mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
 
 Explicitly, the action is given as follows 
 \begin{itemize}
@@ -39,33 +40,34 @@ the action is
 \]
 \end{itemize}
 
-The following result is a straightforward if lengthy computation. We state it without proof.
+The following result is straightforward.
 
 \begin{prop}\label{prop:ads4decomp}
-The $L_\infty$ structure on $\Pi\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4\times S^7} )$ identified in section \ref{sec:transversebc} is equivariant for this $\C^\times$ action.
+The $L_\infty$ structure on $\Pi\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} )$ identified in section \ref{sec:transversebc} is equivariant for this $\C^\times$ action.
 \end{prop}
 
 This result induces a product decomposition 
 \[
-\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4\times S^7} ) = \prod _{n\geq 2} \mc F^{(n)}_{\R\times \C}
+\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} ) = \prod _{n\geq -2} \mc F^{(n)}_{\R\times \C}
 \]
 
-where for each open set $I\times U\subset\R\times \C$, we have that \[\mc F_{\R\times \C}^{(n)} (I\times U) \subset \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C (U, \mc L^{r=0}_{AdS_4\times S^7} )\] is the weight $n$ eigenspace with respect to the above $\C^\times$ action. In particular, we see that $\mc F^{(0)}_{\R\times \C}$ is itself a local dg-Lie algebra, for which  every $\mc F^{(n)}_{\R\times \C}$ is a module.
+where for each open set $I\times U\subset\R\times \C$, we have that \[\mc F_{\R\times \C}^{(n)} (I\times U) \subset \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C (U, \mc L^{r=0}_{AdS_4} )\] is the weight $n$ eigenspace with respect to the above $\C^\times$ action. In particular, we see that $\mc F^{(0)}_{\R\times \C}$ is itself a local dg Lie algebra, for which  every $\mc F^{(n)}_{\R\times \C}$ is a module.
 
-\subsection{The lowest piece: the holomorphic-topological twist of the 3d $\mc N=8$ BLG theory}\label{sec:BLG}
+\subsection{The lowest pieces and 3d $\mc N=8$ BLG theory}\label{sec:BLG}
 \parsec[] The first nontrivial case is the weight ${(-2)}$ piece. We have the following
 
 \begin{lem}
-There is a quasi-isomorphism \[\mc F^{(-2)}_{\R\times \C} \cong \Omega^\bullet_{\R\times \C}.\]
+There is an isomorphism of elliptic complexes \[\mc F^{(-2)}_{\R\times \C} \simeq \Omega^\bullet_{\R\times \C}.\]
 \end{lem}
 \begin{proof}
-The only sections which contribute are those of type $\beta$ or $\gamma$ with no form components along the fiber directions. Therefore, we see directly that \[\mc F^{(-2)}_{\R\times \C} \cong \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C ( \mc O \xrightarrow{\del} \Omega^1 ).\] 
+The only sections which contribute are those of type $\beta$ or $\gamma$ with no form components along the fiber directions. Therefore, we see directly that \[\mc F^{(-2)}_{\R\times \C} \simeq \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C ( \mc O \xrightarrow{\del} \Omega^1 ).\] 
 \end{proof}
 
 \parsec[] The next nontrivial case is the weight ${(-1)}$ piece. 
 
 \begin{lem}
-There is a quasi-isomorphism \[ \mc F^{(-1)}_{\R\times \C} \cong \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (K^{1/4}\otimes (\C^4)^* \oplus \Pi K^{3/4}\otimes \C^4 \right ) \]
+There is an isomorphism of elliptic complexes 
+\[ \mc F^{(-1)}_{\R\times \C} \cong \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (K^{1/4}\otimes (\C^4)^* \oplus \Pi K^{3/4}\otimes \C^4 \right ) \]
 \end{lem}
 \begin{proof}
 On an open set of the form $I\times U$, the sections of the specified weight are:
@@ -76,45 +78,62 @@ On an open set of the form $I\times U$, the sections of the specified weight are
 \end{proof}
 
 \parsec[]
-We wish to flag an appearance of $\mc F^{(-1)}_{\R\times \C}$ in supersymmetric physics in three-dimensions. There is a highly supersymmetric Chern-Simons-matter theory discovered independently by Bagger-Lambert \cite{Bagger_2007}, \cite{Bagger:2007jr} and Gustavsson \cite{Gustavsson:2007vu}. The aptly named BLG theory has $\mc N=8$ superconformal symmetry, and admits a holomorphic-topological twist that was computed by Garner in \cite{Garner2022vds}. 
+We wish to flag an appearance of $\mc F^{(-1)}_{\R\times \C}$ in supersymmetric physics in three-dimensions. There is a highly supersymmetric Chern-Simons-matter theory discovered independently by Bagger-Lambert \cite{Bagger_2007}, \cite{Bagger:2007jr} and Gustavsson \cite{Gustavsson:2007vu}. The aptly named BLG theory has $\mc N=8$ superconformal symmetry, and admits a holomorphic-topological twist that was characterized by Garner in \cite{Garner2022vds}.
 
 The sheaf of complexes $\mc F^{(-1)}_{\R\times \C}$ matches the field contents of the holmorphic-topological twist of the BLG theory, and as such, it can be equipped with an $L_\infty$ structure under which it is perturbatively equivalent to the twisted BLG theory. In work-in-progress with Garner and Williams, we show that the action of $\mc F^{(0)}_{\R\times \C}$ on $\mc F^{(-1)}_{\R\times \C}$ in fact preserves this $L_\infty$-structure. 
+
+\brian{it's an abelian L-infinity structure right? So we can just say complexes.}
+
+\brian{The thing we don't mention so much is the BV structure.}
+
+\brian{I think we can at least comment that the BV structure comes from the BR.}
 
 \subsection{The zero-th piece: A local version of $E(1|6)$}
 \parsec[] The next nontrivial case is the weight ${(0)}$ piece. This factor is special because it carries the induced structure of a local $L_\infty$ algebra on $\R\times \C$. We will prove that it is equivalent to a local Lie algebra version of the exceptional super-Lie algebra $E(1|6)$. 
 
-We first recall the definition of this super-Lie algebra \cite{KacBible}
-\begin{defn}\label{defn:e(1|6)}
-Let $E(1|6)$ be the following super-Lie algebra. 
-\begin{itemize}
-\item The even part of $E(1|6)_0$ given by the semidirect product Lie algebra $\Gamma (\hat D, T) \ltimes \left( \Gamma (\hat D, \mc O) \otimes \mf{sl}(4) \right )$
-\item The odd part $E(1|6)_1$ is given by the (unique) nontrivial extension of $E(1|6)_0$-modules 
-\[0\to \Sym^2 (\C^4)\otimes K^{1/2}_\C \to E(1|6)_1 \to \wedge^2 (\C^4) \otimes K^{-1/2}_\C \to 0.\]
+We first recall the definition of this super Lie algebra \cite{KacBible}. 
+The even part $E(1|6)_0$ is the semidirect product Lie algebra 
+\beqn
+\Vect(\Hat{D}) \ltimes \left( \cO(\Hat{D}) \otimes \mf{sl}(4) \right )
+\eeqn
+where $\Vect(\Hat{D})$ and $\cO(\Hat{D})$ denote vector fields and functions on the formal disk.
 
-\end{itemize}
-The only remaining bracket to be specified, the odd bracket, is given as follows.
-\begin{itemize}
-\item Given sections $A \otimes f \d z^{1/2}\in \Sym^2 (\C^4)\otimes K^{1/2}_\C$ and $B\otimes g \del_z^{1/2}\in \wedge^2 (\C^4)\otimes K^{-1/2}_\C$, we have that
-\[
-[A \otimes f \d z^{1/2}, B\otimes g \del_z^{1/2}] = A*B \otimes fg \in \mf{sl}(4)\otimes \mc O.
+The odd part is the (unique) nontrivial extension of $E(1|6)_0$-modules 
+\[0\to \Sym^2 (\C^4)\otimes \Gamma(\Hat{D}, K^{1/2}_{\Hat{D}}) \to E(1|6)_1 \to \wedge^2 (\C^4) \otimes \Gamma(\Hat{D}, K^{-1/2}_{\Hat{D}}) \to 0 
 \]
-Here, $*$ refers to the hodge star of $B$ and we are viewing $A$ and $*B$ as symmetric and skew-symmetric $4\times 4$ matrices respectively; their product is traceless. 
+where $K^{\pm 1/2}_{\Hat{D}}$ are positive and negative square roots of the canonical bundle on $\Hat{D}$.
 
-\item Given sections $A \otimes f \del_z^{1/2}, B\otimes g \del_z^{1/2} \in \Gamma( \hat D, \wedge^2 (\C^4) \otimes K^{1/2}_\C)$, we have that 
+To characterize this super Lie algebra we must define the following brackets.
+\begin{itemize}
+\item Given elements $A \otimes f \d z^{1/2}\in \Sym^2 (\C^4)\otimes K^{1/2}_\C$ and $B\otimes g \del_z^{1/2}\in \wedge^2 (\C^4)\otimes K^{-1/2}_\C$, we have that
+\[
+[A \otimes f \d z^{1/2}, B\otimes g \del_z^{1/2}] = A \star B \otimes fg \in \mf{sl}(4)\otimes \mc O.
+\]
+Here, $\star$ refers to the hodge star of $B$ and we are viewing $A$ and $*B$ as symmetric and skew-symmetric $4\times 4$ matrices respectively; their product is traceless. 
+
+\item The final nontrivial bracket is more complicated. 
+Given elements $A \otimes f \del_z^{1/2}, B\otimes g \del_z^{1/2} \in \Gamma( \hat D, \wedge^2 (\C^4) \otimes K^{1/2}_\C)$, we have that 
 \begin{align*}
-[A\otimes f \d z^{-1/2} , B \otimes g \d z^{-1/2} ] & = \tr (A * B) \otimes fg \del_z + \frac12 (A*B)_0 \otimes \left (\del (f \d z^{-1/2} ) g \d z^{-1/2} + f \d z^{-1/2} \del (g \d z^{-1/2} ) \right ) \\
+[A\otimes f \d z^{-1/2} , B \otimes g \d z^{-1/2} ] & = \tr (A \star B) \otimes fg \del_z \\ & + \frac12 (A*B)_0 \otimes \left (\del (f \d z^{-1/2} ) g \d z^{-1/2} + f \d z^{-1/2} \del (g \d z^{-1/2} ) \right ) \\
 & \in \Gamma (\hat D, T) \ltimes \left (\mf {sl}(4) \otimes \Gamma (\hat D, \mc O) \right ) .
 \end{align*}
-where again $*$ denotes the Hodge star and the subscript of zero denotes projection to the traceless part. 
+where again $\star$ denotes the Hodge star and the subscript of zero denotes projection to the traceless part. 
 \end{itemize}
-\end{defn}
 
-The relationship between this super-Lie algebra and our decomposition is established through the following result.
+The relationship between this super Lie algebra and our decomposition is established through the following result.
+
+\brian{Need to be careful about holomorphic versus formal disks in this proposition.}
+
+\brian{Did we define what $\mc F (0)$ means?}
+
+\brian{I'm confused by the appearance of compact support.}
+
+\brian{I would have said that the jets at 0 of $\cF^{(0)}$ is quasi-isomorphic to $E(1|6)$.}
 
 \begin{prop}
-There is an equivalence of super-Lie algebras
+There is a quasi-isomorphism of super Lie algebras
 \[
-\mc F^{(0)}_{\R\times \C, c}  (0) \cong E(1|6).
+\mc F^{(0)}_{\R\times \C, c}  (0) \simeq E(1|6).
 \]
 \end{prop}
 \begin{proof}
@@ -144,7 +163,7 @@ Thus, we see that this page of the spectral sequence is given by
 \end{equation}
 and there are no non-zero differentials so the spectral sequence degenerates.
 
-To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4\times S^7} )$ is in fact given by the same formulae as the brackets on $E(1|6)$ in equation \ref{defn:e(1|6)}, it will be useful to provide an explicit quasi-isomorphism $\Psi^{(0)} : \mc E(1|6) \to \mc F^{(0)}_{\R\times \C}$. On an open set $I\times D\subset \R\times \C$, this is defined as follows
+To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} )$ is in fact given by the same formulae as the brackets on $E(1|6)$ in equation \ref{defn:e(1|6)}, it will be useful to provide an explicit quasi-isomorphism $\Psi^{(0)} : \mc E(1|6) \to \mc F^{(0)}_{\R\times \C}$. On an open set $I\times D\subset \R\times \C$, this is defined as follows
 
 \begin{itemize}
 \item Given a section $g(t; z) \del_z \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bullet}_\C (D, T)$ where $g(t;z)$ is a mixed deRham-Dolbeault form on $I \times D$, we define
@@ -177,7 +196,7 @@ It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward
 \end{proof}
 
 \begin{rmk}
-We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\Pi \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4\times S^7} )$ over every open set containing the origin. The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
+We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\Pi \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4} )$ over every open set containing the origin. The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
 \end{rmk}
 
 \subsection{General summands and $E(1|6)$-modules}
@@ -225,9 +244,16 @@ We can compute the cohomology using a spectral sequence whose first page is give
 \end{proof}
 
 \subsection{Characters of $E(1|6)$-modules}
-Note that the decomposition of the state space $\Sym (\mc H_{AdS_4\times S^7} ) = \prod_{j\geq -2} \mc U (\mc F^{(j)} _{\R\times \C} )(0)$ gives a product formula for the characters computed in proposition \ref{} 
 
-\[\chi \left (\Sym (\mc H_{AdS_4\times S^7} ) \right )= \prod_{j\geq -2} \chi \left ( \mc U (\mc F^{(j)} _{\R\times \C} )(0)\right ).\]
+Note that the decomposition of the state space $\Sym (\mc H_{AdS_4} ) = \prod_{j\geq -2} \mc U (\mc F^{(j)} _{\R\times \C} )(0)$ gives a product formula for the characters computed in proposition \ref{??}
+
+\brian{which proposition?} 
+
+\brian{Might be useful to point out that a systematic characterization of irreps of $E(1|6)$ is incomplete.}
+
+\brian{But, we expect the modules appearing above to be irreducible.}
+
+\[\chi \left (\Sym (\mc H_{AdS_4} ) \right )= \prod_{j\geq -2} \chi \left ( \mc U (\mc F^{(j)} _{\R\times \C} )(0)\right ).\]
 
 We end this section by computing each of the characters $\chi \left ( \mc U (\mc F^{(j)} _{\R\times \C} )(0)\right )$. We will express our characters in terms of characters of highest weight respresentations of $\mf{sl(4)}$ which we denote $\chi^{\mf{sl}(4)}(\Gamma_{a_1,a_2, a_3} )$.
 
@@ -283,14 +309,14 @@ f_j(t_1, t_2, t_3, q) = \frac{q}{(1-q)}\left (\begin{aligned} q^{(j-2)/4}\chi^{\
 \end{prop}
 
 \parsec[]
-As a consequence, of the above we have that $f_{AdS_4\times S^7} (t_i, q) = \sum_{j\geq -2} f_j (t_i, q)$, or explicitly:
+As a consequence, of the above we have that $f_{AdS_4} (t_i, q) = \sum_{j\geq -2} f_j (t_i, q)$, or explicitly:
 \begin{align*}
 & \frac{q\left (\begin{aligned} q^{1/4}(t_1+ t_2 + t_3+t_1^{-1}t_2^{-1}t_3^{-1}) &+ q^{-1} \\- q^{-1/4}(t_1^{-1}+ t_2^{-1} + t_3^{-1}+t_1t_2t_3) &- q   \end{aligned}\right)}{(1-q)(1-q^{1/4}t_1)(1-q^{1/4}t_2)(1-q^{1/4}t_3)(1-q^{1/4}t_1^{-1}t_2^{-1}t_3^{-1})}  \\ 
 & =  1 + \frac{q}{1-q} \left (\begin{aligned} & q^{-3/4}\chi^{\mf{sl}(4)}(\Gamma_{1,0,0}) - q^{-1/4}\chi^{\mf{sl}(4)}(\Gamma_{0,0,1}) \\+ & q^{1/2}\chi^{\mf{sl}(4)}(\Gamma_{0,1,0})  + q^{-1/2}\chi^{\mf{sl}(4)}(\Gamma_{2,0,0})  - q - \chi^{\mf{sl}(4)}(\Gamma_{1,0,1}) \end{aligned}\right ) \\
 & + \frac{q}{1-q} \sum_{j\geq 1} \left (\begin{aligned} q^{(j-2)/4}\chi^{\mf{sl}(4)}(\Gamma_{j+2,0,0})  &+ q^{(j+2)/4}\chi^{\mf{sl}(4)}(\Gamma_{j+1,0,1}) \\ - q^{j/4}\chi^{\mf{sl}(4)}(\Gamma_{j,1,0}) & - q^{(j+1)/4}\chi^{\mf{sl}(4)}(\Gamma_{j,0,0}) \end{aligned}\right ) 
 \end{align*}
 
-In \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_4\times S^7}$ is expressed as a sum of characters of irreducible representations of the 3d $\mc N = 8$ superconformal algebra that the authors call \textit{graviton representations}. Comparison with the above expansion suggests the following conjecture
+In \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_4}$ is expressed as a sum of characters of irreducible representations of the 3d $\mc N = 8$ superconformal algebra that the authors call \textit{graviton representations}. Comparison with the above expansion suggests the following conjecture
 
 \begin{conj}\label{conj:e16gravitonrep}
 For $j\geq -1$, the minimal twist of the $j+2$nd graviton representation in \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy} is exactly $\mc F^{(j)}_{\R\times \C, c}(0)$. 
