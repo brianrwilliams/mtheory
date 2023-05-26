@@ -6,31 +6,30 @@
 \label{sec:ads}
 As we indicated in the beginning of this chapter, a feature of the physical $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds is that they have as isometries, the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras respectively. In fact, the complex forms of these two super-Lie algebras are the same. 
 
-In this section we provide evidence for conjectures \ref{conj:ads4}\ref{conj:ads7} by arguing that the global sections of the local moduli problems $p_*\mc E_{AdS_4\times S^7}$ and $p_* \mc E_{AdS_7\times S^4}$ carry actions by the minimal twists of the relevant superconformal algebras. We will find that the twist of the superconformal algebra is the same in each case, but the actions are slightly different. 
+In this section we provide evidence for conjectures \ref{conj:ads4} and \ref{conj:ads7} by arguing that the global sections of the local moduli problems $p_*\mc E_{AdS_4}$ and $p_* \mc E_{AdS_7}$ carry actions by the minimal twists of the relevant superconformal algebras. We will find that the twist of the superconformal algebra is the same in each case, but the actions are slightly different. 
 
 \subsection{Superconformal algebras}
 
-The complex form of the algebra of isometries for supergravity in both the ${\mr AdS}_4$ and ${\mr AdS}_7$ backgrounds is $\mf{osp}(8|4)$ (though, their real forms differ). 
+The complex form of the algebra of isometries for supergravity in both the ${\mr AdS}_4 \times S^7$ and ${\mr AdS}_7 \times S^4$ backgrounds is $\mf{osp}(8|4)$ (though, their real forms differ). 
 This agrees with the complex form of the 6d $\mc{N}=(2,0)$ superconformal algebra and the 3d $\mc{N}=8$ superconformal algebra. The bosonic part of this algebra is isomorphic to $\mf{so}(8) \oplus \mf{sp}(2) \cong \mf{so}(8) \oplus \mf{so}(5)$. 
 
-The following is a mild rephrasing of a result in \cite{SWsuco2} where twisted superconformal symmetry in six dimensions is studied in some detail. 
-\begin{thm}[Saberi-Williams]
-There is a map of super-Lie algebras $\phi: \mf {siso}_{11d} \to \mf {osp}(8|4)$. Letting $Q\in \mf{siso}_{11d}$ be the odd square-zero element used to define the minimal twist of eleven-dimensional supergravity, there is an equivalence of dg super-Lie algebras \[\left ( \mf {osp}(8|4), [\phi(Q), - ]\right )\cong \mf {osp}(6|2).\]
-\end{thm}
+%The following is a mild rephrasing of a result in \cite{SWsuco2} where twisted superconformal symmetry in six dimensions is studied in some detail.
+There is a map of super Lie algebras $\phi: \mf {siso}_{11d} \to \mf {osp}(8|4)$. 
+Further, it is observed in \cite{SWsuco2} that if $Q\in \mf{siso}_{11d}$ is the odd square-zero element used to define the minimal twist of eleven-dimensional supergravity, then there is an equivalence of dg super-Lie algebras \[\left ( \mf {osp}(8|4), [\phi(Q), - ]\right )\cong \mf {osp}(6|2).\]
 
 The super-Lie algebra $\mf{osp}(6|2)$ will therefore play the role of the residual isometries of the twisted AdS background. The bosonic part of $\mf{osp}(6|2)$ is the direct sum Lie algebra $\mf{sl}(4) \oplus \mf{sl}(2)$. The odd part of the algebra $\mf{osp}(6|2)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\mf{sl}(4)$ representation and $R$ is the fundamental $\mf{sl}(2)$ representation. 
 
 \subsection{Global symmetries of twisted ${\mr AdS}_4 \times S^7$}
 
-To provide further evidence for conjecture \ref{conj:ads4} we wish to articulate a sense in which $\mf{osp}(6|2)$ is witnessed as a symmetry of $\mc E^N_{AdS_4\times S^7}$. To this end, we will provide evidence for the claim that there is a Lie map 
-\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ).\]
+To provide further evidence for conjecture \ref{conj:ads4} we wish to articulate a sense in which $\mf{osp}(6|2)$ is witnessed as a symmetry of $\mc E^N_{AdS_4}$. To this end, we will provide evidence for the claim that there is a Lie map 
+\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ).\]
 
 We first focus on the case where the flux $N=0$. In this case, we will show that the embedding factors through the natural restriction map from the theory on flat space
 
 \[ 
 \begin{tikzcd}
 & H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }\ar[d, "\mr{res}"] \\
-\mf{osp}(6|2)\ar[ur, "i_{M2}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )
+\mf{osp}(6|2)\ar[ur, "i_{M2}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )
 \end{tikzcd}
 \]
 \parsec[] 
@@ -74,27 +73,30 @@ The following is a straightforward check.
 The map $i_{M2}$ is a Lie map.
 \end{lem} 
 
-It is clear that the image of the chain-level map $i_{M2}$ defined above is closed for the linearized BRST differential $\delta^{(1)}$ so descends to a map $i_{M2}: \mf{osp}(6|2) \to H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }$ as claimed. As such, the composition $\mr{res}\circ i_{M2}$ defines an inner action of $\mf{osp}(6|2)$ on the cohomology of global sections $H^\bullet \left ( \Pi \mc E^0_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )$. 
+It is clear that the image of the chain-level map $i_{M2}$ defined above is closed for the linearized BRST differential $\delta^{(1)}$ so descends to a map $i_{M2}: \mf{osp}(6|2) \to H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }$ as claimed. As such, the composition $\mr{res}\circ i_{M2}$ defines an inner action of $\mf{osp}(6|2)$ on the cohomology of global sections 
+\beqn
+H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ) .
+\eeqn
 
 \parsec[]
 
-Next, we turn on $N \ne 0$ units of nontrivial flux. Note that not all fields in the image of the map $\mr{res}\circ i_{M2}$ commute with bracketing with the flux $N F_{M2}$, and as such are not compatible with the total differential $\delta^{(1)} + [N F_{M2}, -]$ on $\Pi \mc E^N_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right )$. Nevertheless, we have the following:
+Next, we turn on $N \ne 0$ units of nontrivial flux. Note that not all fields in the image of the map $\mr{res}\circ i_{M2}$ commute with bracketing with the flux $N F_{M2}$, and as such are not compatible with the total differential $\delta^{(1)} + [N F_{M2}, -]$ on $\Pi \mc E^N_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right )$. Nevertheless, we have the following:
 
 \begin{prop}
 \label{prop:brads4}
 There exist $N$-dependent corrections to the fields defining the embedding of $\mf{osp}(6|2)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F_{M2},-]$. 
 Furthermore, these order $N$ corrections define an embedding of 
-\[\mf{osp}(6|2) \to H^\bullet \left ( \Pi \mc E^N_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ) .\]
+\[\mf{osp}(6|2) \to H^\bullet \left ( \Pi \mc E^N_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ) .\]
 \end{prop}
 
 \begin{proof}
-For notational convenience, we will let $\mc L$ denote the local $L_\infty$ algebra on  $(\R\times \C) \times (\C^4\setminus \{0\} )$ given by $\Pi\mc E^N_{AdS_4\times S^7}$ and set $F = F_{M2}$. We will show that the image of the map $\mr{res}\circ i_{M2}$ survives to the last page of a spectral sequence that abuts to the target of the above map. The spectral sequence is the one associated to the bicomplex whose differentials are the linearized BRST differential $\delta^{(1)}$ and the operator $[F,- ]$ given by bracketing with the flux. Recall from \ref{} that $F$ is an element of  $\PV^{1,3}(\C_w^4 \setminus 0) \otimes \Omega^{0,0}(\C_z) \otimes \Omega^0(\R)$ and $[F,-]$ acts on the fields according to two types of maps:
+For notational convenience, we will let $\mc L$ denote the local $L_\infty$ algebra on  $(\R\times \C) \times (\C^4\setminus \{0\} )$ given by $\Pi\mc E^N_{AdS_4}$ and set $F = F_{M2}$. We will show that the image of the map $\mr{res}\circ i_{M2}$ survives to the last page of a spectral sequence that abuts to the target of the above map. The spectral sequence is the one associated to the bicomplex whose differentials are the linearized BRST differential $\delta^{(1)}$ and the operator $[F,- ]$ given by bracketing with the flux. Recall from \ref{} that $F$ is an element of  $\PV^{1,3}(\C_w^4 \setminus 0) \otimes \Omega^{0,0}(\C_z) \otimes \Omega^0(\R)$ and $[F,-]$ acts on the fields according to two types of maps:
 \begin{align*}
 [F ,-] & : \PV^{i,\bullet}(\C^4_w \setminus 0) \otimes \PV^{j,\bullet} (\C_z) \otimes \Omega^\bullet (\R) \to \PV^{i,\bullet+3}(\C^4_w \setminus 0) \otimes \PV^{j,\bullet} (\C_z) \otimes \Omega^\bullet (\R) \\
 [F,-] & : \Omega^{i,\bullet}(\C^4_w \setminus 0) \otimes \Omega^{j,\bullet} (\C_z) \otimes \Omega^\bullet (\R) \to \Omega^{i,\bullet+3}(\C^4_w \setminus 0) \otimes \Omega^{j,\bullet} (\C_z) \otimes \Omega^\bullet (\R).
 \end{align*}
 
-The first page of the spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$; this is exactly $H^\bullet \left ( \Pi \mc E^0_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )$. It will be useful to compute this page explicitly.
+The first page of the spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$; this is exactly $H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )$. It will be useful to compute this page explicitly.
 
 Recall that the linearized BRST differential decomposes as
 \[
@@ -126,7 +128,7 @@ The cohomology of $\C$ is of course concentrated in degree zero and there is a d
 \end{equation}
 
 The remaining piece of the original BRST operator is drawn in dotted lines. 
-The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is thus given by the cohomology of the global symmetry algebra on $\C^5 \times \R$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to the dotted-line operators. Indeed, this is exactly $H^\bullet \left ( \Pi \mc E^0_{AdS_4\times S^7} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )$
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is thus given by the cohomology of the global symmetry algebra on $\C^5 \times \R$, which we computed in \S \ref{sec:global}, plus the cohomology of the above complex with respect to the dotted-line operators. Indeed, this is exactly $H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )$
 
 Recall that the image of the flux $F$ at this page in the spectral sequence corresponds to the class 
 \[
@@ -146,20 +148,20 @@ since the class $(w_1\cdots w_4)^{-1}$ is in the kernel of the operator given by
 
 
 \begin{rmk}\label{rmk:altss}
-We comment on an alternate method to compute the first page of the auxiliary spectral sequence we used to compute the first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [NF, - ]$. We could have used a Serre-type spectral sequence for certain kinds of sheaves on THF manifolds \cite{KamberTondeur}, \cite{KormanThesis}, applied to the pushforward $ p_* \Pi \mc E^N_{AdS_4\times S^7}$ from section \ref{prop:ads7push}. In this case, this Serre-type spectral sequence degenerates at the $E_2$-page.
+We comment on an alternate method to compute the first page of the auxiliary spectral sequence we used to compute the first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [NF, - ]$. We could have used a Serre-type spectral sequence for certain kinds of sheaves on THF manifolds \cite{KamberTondeur}, \cite{KormanThesis}, applied to the pushforward $ p_* \Pi \mc E^N_{AdS_4}$ from section \ref{prop:ads7push}. In this case, this Serre-type spectral sequence degenerates at the $E_2$-page.
 \end{rmk}
 
 \subsection{Global symmetries of twisted $AdS_7 \times S^4$}
 We now wish to repeat the analysis of the previous section for the twisted $AdS_7\times S^4$ background so as to provide evidence for conjecture \ref{conj:ads7}. As before, we wish to provide evidence for the claim that there is a Lie map 
 
-\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_7\times S^4} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right ).\]
+\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_7} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right ).\]
 
 We first focus on the case $N=0$ where once again the embedding factors through the natural restriction map from the theory on flat space
 
 \[ 
 \begin{tikzcd}
 & H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }\ar[d, "\mr{res}"] \\
-\mf{osp}(6|2)\ar[ur, "i_{M5}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_7\times S^4} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right )
+\mf{osp}(6|2)\ar[ur, "i_{M5}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_7} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right )
 \end{tikzcd}
 \]
 
@@ -223,17 +225,17 @@ The following is a straightforward check.
 The map $i_{M5}$ is a Lie map.
 \end{lem} 
 
-It is again clear that the image of the chain-level map $i_{M5}$ defined above is closed for the linearized BRST differential $\delta^{(1)}$ on $\Pi \mc E$ so descends to a map $i_{M5} : \mf{osp}(6|2) \to H^\bullet (\Pi \mc E (\R\times \C^5))\cong \widehat{E (5|10)}$ as claimed. As such, the composition $\mr{res}\circ i_{M5}$ will define an inner action of $\mf{osp}(6|2)$ on the cohomology of the global sections $H^\bullet \left ( \Pi \mc E^{0}_{AdS_7\times S^4} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$. 
+It is again clear that the image of the chain-level map $i_{M5}$ defined above is closed for the linearized BRST differential $\delta^{(1)}$ on $\Pi \mc E$ so descends to a map $i_{M5} : \mf{osp}(6|2) \to H^\bullet (\Pi \mc E (\R\times \C^5))\cong \widehat{E (5|10)}$ as claimed. As such, the composition $\mr{res}\circ i_{M5}$ will define an inner action of $\mf{osp}(6|2)$ on the cohomology of the global sections $H^\bullet \left ( \Pi \mc E^{0}_{AdS_7} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$. 
 
 \parsec[]
 
-Next, we turn on $N \ne 0$  units of nontrivial flux. Again, not all fields in the image of the map $\mr{res}\circ i_{M5}$ are compatible with the total differential $\delta^{(1)} + [N F, -]$ on $\Pi \mc E^{N}_{AdS_7\times S^4} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )$. Nevertheless, we have the following version of proposition \ref{prop:brads4}
+Next, we turn on $N \ne 0$  units of nontrivial flux. Again, not all fields in the image of the map $\mr{res}\circ i_{M5}$ are compatible with the total differential $\delta^{(1)} + [N F, -]$ on $\Pi \mc E^{N}_{AdS_7} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )$. Nevertheless, we have the following version of proposition \ref{prop:brads4}
 
 \begin{prop}
 \label{prop:brads7}
 There exist $N$-dependent corrections to the fields defining the embedding of $\mf {osp}(6|2)$ summarized above which are closed for the modified BRST differential $\delta^{(1)} + [N F_{M5},-]$. Furthermore, these $N$-dependent corrections define an embedding 
 
-\[ H^\bullet \left ( \Pi \mc E^N_{AdS_7\times S^4} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right). \]
+\[ H^\bullet \left ( \Pi \mc E^N_{AdS_7} \left ( \C^3 \times (\R\times \C^2)\setminus 0 \right ) \right). \]
 
 \end{prop}
 
@@ -303,9 +305,9 @@ We proceed completely analogously to the case of backreacted M2 branes as in the
 \fi
 
 \begin{proof}
-We proceed exactly analogously to the proof of proposition \ref{prop:brads4}. For notational convenience, we will let $\mc L$ denote the local $L_\infty$ algebra on  $\C^3\times (\R\times \C^2)\setminus 0$ given by $\Pi\mc E^N_{AdS_7\times S^4}$ and set $F = F_{M5}$. We will show that the image of the map $\mr{res}\circ i_{M5}$ survives to the last page of a spectral sequence that abuts to the target of the above map. The spectral sequence is the one associated to the bicomplex whose differentials are the linearized BRST differential $\delta^{(1)}$ and the operator $[F,- ]$ given by bracketing with the flux.
+We proceed exactly analogously to the proof of proposition \ref{prop:brads4}. For notational convenience, we will let $\mc L$ denote the local $L_\infty$ algebra on  $\C^3\times (\R\times \C^2)\setminus 0$ given by $\Pi\mc E^N_{AdS_7}$ and set $F = F_{M5}$. We will show that the image of the map $\mr{res}\circ i_{M5}$ survives to the last page of a spectral sequence that abuts to the target of the above map. The spectral sequence is the one associated to the bicomplex whose differentials are the linearized BRST differential $\delta^{(1)}$ and the operator $[F,- ]$ given by bracketing with the flux.
 
-The first page of this spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$; this is exactly $H^\bullet \left ( \Pi \mc E^0 _{AdS_7\times S^4} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$. It will be useful to compute this page explicitly.
+The first page of this spectral sequence is the cohomology with respect to the original linearized BRST differential $\delta^{(1)}$; this is exactly $H^\bullet \left ( \Pi \mc E^0 _{AdS_7} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$. It will be useful to compute this page explicitly.
 
 We once again do so by way of an auxiliary spectral sequence which simply filters by the holomorphic form and polyvector field type. 
 This first page of this auxiliary spectral sequence is simply given by the cohomology with respect to $\d_\R+\dbar$. 
@@ -321,7 +323,7 @@ w_1^{-1} w_2^{-1} \C[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \ar[r, dotted, "\del_W"] 
 \end{tikzcd}
 \end{equation}
 
-The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\C^5 \times \R$, which we computed in \S \ref{sec:global}, plus the cohomology with respect to the dotted-line operators in~\eqref{eqn:ads7ss2}. This is indeed the cohomology of global sections $H^\bullet \left ( \Pi \mc E^0 _{AdS_7\times S^4} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$.
+The first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [N F, -]$ is given by the cohomology of the global symmetry algebra on $\C^5 \times \R$, which we computed in \S \ref{sec:global}, plus the cohomology with respect to the dotted-line operators in~\eqref{eqn:ads7ss2}. This is indeed the cohomology of global sections $H^\bullet \left ( \Pi \mc E^0 _{AdS_7} \left ( \C^3\times (\R\times \C^2)\setminus 0\right )\right )$.
 
 Recall that the flux $F$ was defined as the image under $\del$ of some $\gamma$-type field. Therefore, the class $[F]$ does not live inside this page of the spectral sequence, but the operator $[[F], -]$ does act on this page nevertheless. For instance, if $f^i(z,w) \d z_i$ is a one-form living in $H^0(\C^5, \Omega^1) \otimes H^0(\R)$, then
 \[
@@ -329,7 +331,7 @@ Recall that the flux $F$ was defined as the image under $\del$ of some $\gamma$-
 \]
 which is an element in 
 \[
-\C[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\del_{z_i}\} \subset H^0(\C^3, \T) \otimes H^2 \big(\Omega^\bullet(\C^2 \times \R \setminus 0) / (\d w_1 , \d w_2) \big) .
+\C[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\del_{z_i}\} \subset \text{Vect}(\C^3) \otimes H^2 \big(\Omega^\bullet(\C^2 \times \R \setminus 0) / (\d w_1 , \d w_2) \big) .
 \]
 
 The next page of the spectral sequence is given by computing the cohomology with respect to the operator $[N F,-]$. This operator maps Dolbeault-de Rham degree zero elements to Dolbeault-de Rham degree two elements. For degree reasons, there are no further differentials and the spectral sequence collapses after the second page. 
@@ -345,7 +347,7 @@ This completes the proof.
 \end{proof}
 
 \begin{rmk}
-As in remark \ref{rmk:altss} comment on an alternate method to compute the first page of the auxiliary spectral sequence we used to compute the first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [NF, - ]$. We could have used a Serre-type spectral sequence for certain kinds of sheaves on THF manifolds \cite{KamberTondeur}, \cite{KormanThesis}, applied to the pushforward $ p_* \Pi \mc E^N_{AdS_7\times S^4}$ from section \ref{prop:ads7push}. In this case, this Serre-type spectral sequence degenerates at the $E_2$-page. We will return to similarly flavored constructions in later work.
+As in remark \ref{rmk:altss} comment on an alternate method to compute the first page of the auxiliary spectral sequence we used to compute the first page of the spectral sequence converging to the cohomology with respect to $\delta^{(1)} + [NF, - ]$. We could have used a Serre-type spectral sequence for certain kinds of sheaves on THF manifolds \cite{KamberTondeur}, \cite{KormanThesis}, applied to the pushforward $ p_* \Pi \mc E^N_{AdS_7}$ from section \ref{prop:ads7push}. In this case, this Serre-type spectral sequence degenerates at the $E_2$-page. We will return to similarly flavored constructions in later work.
 \end{rmk}
 
 \end{document}
