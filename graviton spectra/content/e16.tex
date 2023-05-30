@@ -10,70 +10,75 @@ We construct a certain $\C^\times$-action on the boundary fields $\Omega^\bullet
 
 \subsection{The graviton decomposition of twisted $AdS_4\times S^7$}
 \parsec{}
-We define a decomposition of the space of states $\mc H_{AdS_4}$. 
-It is induced by a decomposition of the boundary fields $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{{r=0}}_{AdS_4} )$ introduced in section \ref{sec:transversebc}  arising from a $\C^\times$ action which mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
+We define a decomposition of the space of states $\mc H_{AdS_4}$.
+It is induced by a decomposition of the boundary fields $\cA^\bu_{M} (\mc L^{{r=0}}_{AdS_4} )$ introduced in section \ref{sec:transversebc}  arising from a $\C^\times$ action which mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
+We first consider a general three-manifold $M$ equipped with a THF; we specialize to $M = \R \times \C$ shortly.
 
-Explicitly, the action is given as follows 
+Define the $\C^*$-action on holomorphic sections of $\cL_{AdS_4}^{r=0}$:
 \begin{itemize}
-\item On the fields 
+\item On the sections 
 \[
-\mu(t; w_a,z) \in \C[w_1, \cdots, w_4]\{\del_{w_a}\} \otimes \Omega^\bullet_\R(I) \otimes \Omega^{0,\bullet}_{\C} (U) \oplus \C[w_1, \cdots, w_4]\otimes \Omega^\bullet_\R(I)\otimes \Omega^{0,\bullet}_{\C}(U, T)\] 
+\mu(w_a,z) \in \C[w_1, \cdots, w_4]\{\del_{w_a}\} \otimes \cO_M \oplus \C[w_1, \cdots, w_4]\otimes T_M \] 
 the action is
 \[
-\lambda \cdot \mu(t; w_a,z) = \mu(t; \lambda w_a , z).
+\lambda \cdot \mu(w_a,z) = \mu(\lambda w_a , z).
 \]
-\item On the fields $\nu(t; w_a,z) \in \C[w_1, \cdots, w_4] \otimes \Omega^{\bullet}_\R(I) \otimes \Omega^{0,\bullet}_{\C}(U)$ the action is
+\item On the fields $\nu(w_a,z) \in \C[w_1, \cdots, w_4] \otimes \cO_M$ the action is
 \[
-\lambda \cdot \nu(t; w_a,z) = \nu(t; \lambda w , z).
+\lambda \cdot \nu(w_a,z) = \nu(\lambda w , z).
 \]
-\item On the fields $\beta(t; w_a,z) \in  \C[w_1, \cdots, w_4] \otimes \Omega^{\bullet}_\R(I) \otimes \Omega^{0,\bullet}_{\C}(U)$ the action is
+\item On the fields $\beta(w_a,z) \in  \C[w_1, \cdots, w_4] \otimes \cO_M$ the action is
 \[
-\lambda \cdot \beta(t; w_a,z) = \lambda^{-2} \beta(t; \lambda w_a , z).
+\lambda \cdot \beta(w_a,z) = \lambda^{-2} \beta(\lambda w_a , z).
 \]
 \item On the fields 
 \[
-\gamma(t; w_a,z) \in  \C[w_1, \cdots, w_4] \{\d w_a\} \otimes \Omega^{\bullet}_\R(I) \otimes\Omega^{0,\bullet}_{\C} (U) \oplus  \C[w_1, \cdots, w_4] \otimes \Omega^{\bullet}_\R(I) \otimes\Omega^{0,\bullet}_{\C}(U, \Omega^1)
+\gamma(w_a,z) \in  \C[w_1, \cdots, w_4] \{\d w_a\} \otimes \cO_M \oplus  \C[w_1, \cdots, w_4] \otimes \Omega^1_M
 \] 
 the action is
 \[
-\lambda \cdot \gamma(t; w_a,z) = \lambda^{-2} \gamma(t; \lambda w _a, z).
+\lambda \cdot \gamma(w_a,z) = \lambda^{-2} \gamma(\lambda w _a, z).
 \]
 \end{itemize}
 
-The following result is straightforward.
+This $\C^*$-action on holomorphic sections extends to an action on the de Rham--Dolbeault complex $\cA^\bu_M(\cL_{AdS_7}^{r=0})$ in such a way that preserves the de Rham--Dolbeault operator.
+In fact, this $\C^*$-action preserves the full local $L_\infty$ structure present on the parity shift of this complex of vector bundles.
 
 \begin{prop}\label{prop:ads4decomp}
-The $L_\infty$ structure on $\Pi\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} )$ identified in section \ref{sec:transversebc} is equivariant for this $\C^\times$ action.
+The $L_\infty$ structure on $\Pi \cA_M^\bu(\mc L^{r=0}_{AdS_4} )$ identified in section \ref{sec:transversebc} is equivariant for this $\C^\times$ action.
 \end{prop}
 
 This result induces a product decomposition 
 \[
-\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} ) = \prod _{n\geq -2} \mc F^{(n)}_{\R\times \C}
+ \cA_M^\bu(\mc L^{r=0}_{AdS_4} ) = \prod _{n\geq -2} \mc F^{(n)}_{M}
 \]
-
-where for each open set $I\times U\subset\R\times \C$, we have that \[\mc F_{\R\times \C}^{(n)} (I\times U) \subset \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C (U, \mc L^{r=0}_{AdS_4} )\] is the weight $n$ eigenspace with respect to the above $\C^\times$ action. In particular, we see that $\mc F^{(0)}_{\R\times \C}$ is itself a local dg Lie algebra, for which  every $\mc F^{(n)}_{\R\times \C}$ is a module.
+\brian{gradings again}
+where $\cF^{(n)}_M \subset \cA_M^\bu(\mc L^{r=0}_{AdS_4} )$ is the weight $n$ eigenspace with respect to the above $\C^\times$ action thought of as a complex of super vector bundles on $M$. 
+In particular, we see that $\mc F^{(0)}_{M}$ is itself a local dg Lie algebra, for which  every $\mc F^{(n)}_{M}$ is a module.
 
 \subsection{The lowest pieces and 3d $\mc N=8$ BLG theory}\label{sec:BLG}
 \parsec[] The first nontrivial case is the weight ${(-2)}$ piece. We have the following
 
 \begin{lem}
-There is an isomorphism of elliptic complexes \[\mc F^{(-2)}_{\R\times \C} \simeq \Omega^\bullet_{\R\times \C}.\]
+There is an isomorphism of elliptic complexes \[\mc F^{(-2)}_{M} \simeq \Omega^\bullet_{M}.\]
 \end{lem}
 \begin{proof}
-The only sections which contribute are those of type $\beta$ or $\gamma$ with no form components along the fiber directions. Therefore, we see directly that \[\mc F^{(-2)}_{\R\times \C} \simeq \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C ( \mc O \xrightarrow{\del} \Omega^1 ).\] 
+The only sections which contribute are those of type $\beta$ or $\gamma$ with no form components along the fiber directions. Therefore, we see directly that \[\mc F^{(-2)}_{M} \simeq \cA^\bu_M \xrightarrow{\del} \cA^\bu_M(\Omega^1) = \Omega^\bu_M.\] 
 \end{proof}
 
 \parsec[] The next nontrivial case is the weight ${(-1)}$ piece. 
 
 \begin{lem}
 There is an isomorphism of elliptic complexes 
-\[ \mc F^{(-1)}_{\R\times \C} \cong \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (K^{1/4}\otimes (\C^4)^* \oplus \Pi K^{3/4}\otimes \C^4 \right ) \]
+\[ \mc F^{(-1)}_{M} \cong \cA^\bu_M \left (K^{1/4}\otimes (\C^4)^* \oplus \Pi K^{3/4}\otimes \C^4 \right ) \]
 \end{lem}
 \begin{proof}
-On an open set of the form $I\times U$, the sections of the specified weight are:
+The sections of this specified weight are:
 \begin{itemize}
-\item fields of type $\mu$ of the form $\mu_a(t; z) \del_{w_a}$. As the $w_a$ are fiber coordinates on $K^{1/4}_\C$, these fields transform as sections of $K^{1/4}_\C$.
-\item fields of type $\gamma$ of the form $\gamma_a(t;z) \d w_a$. These fields transform as sections of $K^{3/4}_\C$. 
+\item sections of type $\mu$ of the form $\mu_a(z) \del_{w_a}$. 
+As the $w_a$ are fiber coordinates on $K^{1/4}$, these fields transform as sections of $K^{1/4}_\C$.
+\item sections of type $\gamma$ of the form $\gamma_a(z) \d w_a$. 
+These fields transform as sections of $K^{3/4}$. 
 \end{itemize}
 \end{proof}
 
@@ -91,7 +96,9 @@ The sheaf of complexes $\mc F^{(-1)}_{\R\times \C}$ matches the field contents o
 \brian{I think we can at least comment that the BV structure comes from the BR.}
 
 \subsection{The zero-th piece: A local version of $E(1|6)$}
-\parsec[] The next nontrivial case is the weight ${(0)}$ piece. This factor is special because it carries the induced structure of a local $L_\infty$ algebra on $\R\times \C$. We will prove that it is equivalent to a local Lie algebra version of the exceptional super-Lie algebra $E(1|6)$. 
+\parsec[] The next nontrivial case is the weight zero piece $\cF^{(0)}_M$. 
+This factor is special because it carries the induced structure of a local $L_\infty$ algebra on $M$. 
+We will prove that it is equivalent to a local Lie algebra version of the exceptional super Lie algebra $E(1|6)$. 
 
 We first recall the definition of this super Lie algebra \cite{KacBible}. 
 The even part $E(1|6)_0$ is the semidirect product Lie algebra 
@@ -114,45 +121,47 @@ To characterize this super Lie algebra we must define the following brackets.
 Here, $\star$ refers to the hodge star of $B$ and we are viewing $A$ and $*B$ as symmetric and skew-symmetric $4\times 4$ matrices respectively; their product is traceless. 
 
 \item The final nontrivial bracket is more complicated. 
-Given elements $A \otimes f \del_z^{1/2}, B\otimes g \del_z^{1/2} \in \Gamma( \hat D, \wedge^2 (\C^4) \otimes K^{1/2}_\C)$, we have that 
+Given elements $B \otimes f \del_z^{1/2}, B'\otimes g \del_z^{1/2} \in \Gamma( \hat D, \wedge^2 (\C^4) \otimes K^{1/2}_\C)$, we have
 \begin{align*}
-[A\otimes f \d z^{-1/2} , B \otimes g \d z^{-1/2} ] & = \tr (A \star B) \otimes fg \del_z \\ & + \frac12 (A \star B)_0 \otimes \left (\del (f \d z^{-1/2} ) g \d z^{-1/2} + f \d z^{-1/2} \del (g \d z^{-1/2} ) \right ) \\
+[B\otimes f \d z^{-1/2} , B' \otimes g \d z^{-1/2} ] & = \tr (B \star B') \otimes fg \del_z \\ & + \frac12 (B \star B')_0 \otimes \left (\del (f \d z^{-1/2} ) g \d z^{-1/2} + f \d z^{-1/2} \del (g \d z^{-1/2} ) \right ) \\
 & \in \Gamma (\hat D, T) \ltimes \left (\mf {sl}(4) \otimes \Gamma (\hat D, \mc O) \right ) .
 \end{align*}
 where again $\star$ denotes the Hodge star and the subscript of zero denotes projection to the traceless part. 
+\brian{simplify last line so it is obviously a vector field}
+
+\brian{Choose $\d z^{-1/2}$ or $\del_z^{1/2}$}
 \end{itemize}
 
 The relationship between this super Lie algebra and our decomposition is established through the following result.
 
-\brian{Need to be careful about holomorphic versus formal disks in this proposition.}
-
-
 \begin{prop}
+Consider the case $M = \R \times \C$.
 There is a quasi-isomorphism of super Lie algebras
 \[
 J^\infty_0\mc F^{(0)}_{\R\times \C} \simeq E(1|6).
 \]
-\end{prop}
 where the left hand side denotes the $\infty$-jets at $0\in \R\times \C$ of the local super-Lie algebra $\mc F^{(0)}_{\R\times \C}$. 
+\end{prop}
 \begin{proof}
-We will begin by trying to characterize the local $L_\infty$-algebra $\mc F^{(0)}_{\R\times \C}$. We claim that it is quasi-isomorphic to a local version of $E(1|6)$. 
+We will characterize the local $L_\infty$-algebra $\mc F^{(0)}_{M}$ for general $M$. 
+We will show that it is quasi-isomorphic to a local version of $E(1|6)$ where sections over the formal disk can be upgraded to sections over any open set in the THF manifold $M$.
 
-Indeed, it is easy to see that the weight zero sections consists of the following cochain complex 
+The underlying complex of vector bundles $\mc F^{(0)}_{M}$ is the de Rham--Dolbeault complex of the complex of bundles 
 \begin{equation}
-\Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (
 \begin{tikzcd}
 \ul{even} & \ul{odd} \\
 \C\{w_a\del_{w_b}\}\otimes \mc O\ar[r, "\del^W_\Omega"]  & \mc O \\ 
 \T \ar[ur] & \\
 \Sym^2 (\C^4)\ar[r, "\del_W"]\ar[dr] & \C\{w_a\d w_b\} \otimes K^{-1/2}\ \\
 & \Sym^2 (\C^4)\otimes \Omega^1\otimes K^{-1/2}
-\end{tikzcd} \right)
+\end{tikzcd}
 \end{equation}
-Of course, the differentials are just appropriate components of the divergence operator and holomorphic deRham operator. We can compute cohomology by way of a spectral sequence whose first page is the cohomology with respect to $\del^W_\Omega + \del_W$. We see that the differential $\del^W$ maps surjectively onto functions and its kernel is isomorphic to $\mf{sl}(4)\otimes \mc O$. Likewise, the differential $\del_W$ is the canonical inclusion of $\mf{sl}(4)$ representations $\Sym^2 (\C^4)\to \C^4\otimes \C^4$. Its cokernel is a copy of $\wedge^2 \C^4$. 
+Of course, the differentials are just appropriate components of the divergence operator and holomorphic deRham operator. We can compute cohomology by way of a spectral sequence whose first page is the cohomology with respect to $\del^W_\Omega + \del_W$. We see that the differential $\del^W$ maps surjectively onto functions and its kernel is isomorphic to $\mf{sl}(4)\otimes \mc O$. Likewise, the differential $\del_W$ is the canonical inclusion of $\mf{sl}(4)$ representations $\Sym^2 (\C^4)\to \C^4\otimes \C^4$. 
+Its cokernel is a copy of $\wedge^2 \C^4$. 
 
 Thus, we see that this page of the spectral sequence is given by
 \begin{equation}
-\mc E(1|6) \define \Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C \left (
+\mc E_M(1|6) \define \cA^\bu_M \left (
 \begin{tikzcd}
 \ul{even} & \ul{odd} \\
 \T & \wedge^2 (\C^4) \otimes K^{-1/2} \\
@@ -161,40 +170,41 @@ Thus, we see that this page of the spectral sequence is given by
 \end{equation}
 and there are no non-zero differentials so the spectral sequence degenerates.
 
-To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L^{r=0}_{AdS_4} )$ is in fact given by the same formulae as the brackets on $E(1|6)$ in equation \ref{defn:e(1|6)}, it will be useful to provide an explicit quasi-isomorphism $\Psi^{(0)} : \mc E(1|6) \to \mc F^{(0)}_{\R\times \C}$. On an open set $I\times D\subset \R\times \C$, this is defined as follows
+To see that the Lie structure induced from the $L_\infty$-structure on $\cA_M^\bu (\mc L^{r=0}_{AdS_4} )$ is in fact given by the same formulae as the brackets on $E(1|6)$ in equation \ref{defn:e(1|6)}, we provide an explicit quasi-isomorphism $\Psi^{(0)} \colon \mc E_M(1|6) \to \mc F^{(0)}_{M}$.
+This quasi-isomorphism arises from a map on holomorphic sections.
 
 \begin{itemize}
-\item Given a section $g(t; z) \del_z \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bullet}_\C (D, T)$ where $g(t;z)$ is a mixed deRham-Dolbeault form on $I \times D$, we define
+\item Given a section $\mu$ of $\T_M$ define
 \begin{align*}
-\Psi^{(0)} (g(t;z)\del_z) &= g(t;z)\del_z - \frac 14 (\del_z g(t; z)) w_a\del_{w_a} \\
-&\in \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C \left ( D, T \oplus \C\{w_a\del _{w_b} \} \right )
+\Psi^{(0)} (\mu) &= \mu - \frac 14 (\del_\Omega \mu) w_a\del_{w_a} 
 \end{align*}
-\item Given a section $A_{ab} \otimes g(t; z) \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bullet}_\C \left (D, \mf{sl}(4)\otimes \mc O \right )$ where $g(t;z)$ is a mixed deRham-Dolbeault form on $I \times D$ and $A_{ab}\in \mf {sl}(4)$
-\begin{align*}
-\Psi^{(0)} (A_{ab} \otimes g(t;z)) &= g(t;z)A_{ab}w_a\del_{w_b} \\
-&\in \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C \left ( D, \C\{w_a\del _{w_b}\} \right )
-\end{align*}
-
-\item Given a section $A_{ab} \otimes g(t; z)\d z^{-1/2} \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bullet}_\C \left (D, \wedge^2 (\C^4) \otimes K^{-1/2}\right )$
-where $g(t;z)$ is a mixed deRham-Dolbeault form on $I\times D$ and $A_{ab} \in \wedge^2 (\C^4)$ we define
-\begin{align*}
-\Psi^{(0)} (A_{ab} \otimes g(t; z)\d z^{-1/2}) &= g(t;z)  A_{ab} w_a \del_{w_b} \\
-&\in \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C \left ( D, \C\{w_a\del _{w_b} \}\otimes K^{-1/2} \right )
-\end{align*}
-
-
+where we view the right hand side as a section of $\T \oplus \C\{w_a \del_{w_a}\} \otimes \cO$.
+\item Given a section $C = (C_{ab})$ of $\mf{sl}(4)\otimes \mc O$ define
+\[
+\Psi^{(0)} (C) = C_{ab}w_a\del_{w_b}
+\]
+which we view as a section of $\C\{w_a \del_{w_a}\} \otimes \cO$.
+\item Given a section $B = (B_{ab})$ of $\wedge^2 (\C^4) \otimes K^{-1/2}$ define
+\[
+\Psi^{(0)} (B) = B_{ab} w_a \d w_b .
+\]
+which we view as a section of $\C\{w_{[a} \d w_{b]}\} \otimes K^{-1/2} = \wedge^2 \C^4 \otimes K^{-1/2}$.
 \item Given a section 
-$A_{ab} \otimes g(t; z)\d z^{1/2} \in \Omega^\bullet_\R (I)\otimes \Omega^{0,\bullet}_\C \left (D, \Sym^2 (\C^4) \otimes K^{1/2}\right )$ where $g(t;z)$ is a mixed deRham-Dolbeault form on $I\times D$ and $A_{ab} \in \Sym^2 (\C^4)$ we define
+$A=(A_{ab})$ of $\Sym^2 (\C^4) \otimes K^{1/2}$ define
 \begin{align*}
-\Psi^{(0)} (A_{ab} \otimes g(t; z)\d z^{1/2}) &= g(t;z)  A_{ab} w_a w_b \d z \\
-&\in \Omega^\bullet_\R (I) \otimes \Omega^{0,\bullet}_\C \left ( D, \Sym^2 (\C^4) \otimes \Omega^1 \otimes K^{-1/2} \right )
+\Psi^{(0)} (A_{ab}) = A_{ab} w_a w_b 
 \end{align*}
+which we view as a section of $\Sym^2 (\C^4) \otimes \Omega^1 \otimes K^{-1/2}$.
 \end{itemize}
-It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward if lengthy check confirms that it preserves Lie brackets. The result then follows from computing the limit of $\mc E(1|6)(I\times D)$ over open sets containing the origin. 
+It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward if lengthy check confirms that it preserves brackets. 
+
+The result about $\infty$-jets at $0$ in affine space $M = \R \times \C$ follows immediately.
 \end{proof}
 
 \begin{rmk}
-We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\Pi \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4} )$ over every open set containing the origin. The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
+We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\cA_{\R \times \C}^\bu (\mc L^{r=0}_{AdS_4} )$ over every open set containing the origin. 
+The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. 
+Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
 \end{rmk}
 
 \subsection{General summands and $E(1|6)$-modules}

@@ -97,15 +97,15 @@ Let us now carry out this construction for the theories defined in \ref{defn:ads
 We begin more generally with the input being a three-manifold $M$ equipped with a THF structure of codimension one.
 As in \S \ref{s:??} the elliptic complex $\cA^\bu_M$ computes the THF cohomology of $M$.
 We denote by $K$ the holomorphic canonical bundle of $M$ which has a local frame given by $\d z$.
-The case of $AdS_4 \times S^7$ corresponds to taking $M = \R \times \C$, which we will do momentarily.
+The case of $AdS_4 \times S^7$ corresponds to taking $M = \R \times \C$, which we do throughout this section.
 
 We will also fix a fourth-root $K^{1/4}$ of this bundle.
 Following the above prescription, we consider the $S^7$ bundle 
-\[
+\beqn\label{eqn:geomads4}
 \begin{tikzcd}
 S^7 \ar[r] & \operatorname{Tot} (K^{1/4} \otimes \C^4 \to M) \setminus 0(M) \ar[d, "p"] \\ & \R_{>0}\times M
 \end{tikzcd}
-\]
+\eeqn
 We wish to describe the free limit of the pushforward $p_* \mc E^N_{AdS_4}$ as a sheaf of cochain complexes on $\R_{>0}\times M$. 
 
 \begin{prop}\label{prop:pushads4}
@@ -162,9 +162,10 @@ Then the proposition follows from the fact that the map $S^7\to \C^4\setminus \{
 \end{proof}
 
 \parsec{}
-We proceed to define a natural boundary condition of the twisted $AdS_4$-type theory at $\{\infty\} \times M \subset \R_{>0} \times M$. 
+We proceed to define a natural boundary condition of the twisted $AdS_4$ theory at $\{\infty\} \times M \subset \R_{>0} \times M$. 
 Such a boundary condition is specified by a Lagrangian in the phase space whose symplectic structure uses Serre duality on the THF manifold $M$ together with the higher residue pairing along the THF structure of the sphere $S^7$. 
-The restriction $(p_* \mc E^N_{AdS_4})|_{\{\infty\}\times \C}$ describes the phase space and is easily seen to be $\cA_M^\bu (\mc V^N)$. We wish to describe a shifted Lagrangian therein.
+The restriction $(p_* \mc E^N_{AdS_4})|_{\{\infty\}\times \C}$ describes the phase space and is easily seen to be the complex of vector bundles $\cA_M^\bu (\mc V^N)$. 
+We wish to describe a shifted Lagrangian therein.
 
 We begin by rewriting the phase space in the following form. 
 Using the holomorphic volume form, there is a higher residue pairing 
@@ -181,7 +182,7 @@ Via this symplectic structure, we can identify the phase space with a twisted co
 \eeqn
 For now, the subscript of $\alpha$ is just meant to indicate that the extra differential given by bracketing with the flux constitutes a deformation of the cotangent bundle. 
 
-Thus we see that a natural Lagrangian in the phase space is given by the sheaf of cochain complexes $\cA^\bu_M(\mc L^N_{AdS_4})$ where $\mc L^N_{AdS_4}$ is the following complex of vector bundles on $M$:
+Thus we see that a natural Lagrangian in the phase space is given by the sheaf of cochain complexes $\cA^\bu_M(\mc L^N_{AdS_4})$ where $\mc L^N_{AdS_4}$ is the following complex of holomorphic vector bundles on $M$:
  
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
@@ -192,21 +193,30 @@ Thus we see that a natural Lagrangian in the phase space is given by the sheaf o
 \\ & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\}  \otimes \mc O \end{tikzcd}
 \end{equation}
 
-We now specialize to the case $M = \R \times \C$.
+We denote by $\cF_{AdS_4}$ the factorization algebra on $M = \R\times \C$ which assigns to an open set $U \subset \R \times \C$ the cochain complex
+\beqn
+ \cF_{AdS_4} (U) = \cO\left(\cA^\bu(U,\mc L^N_{AdS_4}) \right ) .
+\eeqn
+%Here, $\cA^\bu(U, \cL^N_{AdS_4}$ 
+
+\brian{what's the dependence on $N$?}
 
 \begin{defn}\label{defn:ads4states}
- The \emph{space of supergravity states} on twisted $AdS_4\times S^7$ is given by the costalk at zero of the factorization algebra on $\R\times \C$ given by 
- \beqn
- \cO\left(\Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C (\mc L^N_{AdS_4}) \right ) .
- \eeqn
+The \emph{space of supergravity states} $\cS_{AdS_4}$ on twisted $AdS_4\times S^7$ is given by the cochain complex given by the costalk at zero of the factorization algebra $\cF_{AdS_4}$:
+\beqn
+\cS_{AdS_4} \define \cF_{AdS_4} (0) .
+\eeqn
 \end{defn}
-
 
 \parsec{}
 We explicate definition \ref{defn:ads4states} and characterize the cochain complex underlying the space of supergravity states.
 
 \begin{lem}\label{lem:ads4states}
-The space of supergravity states on twisted $AdS_4\times S^7$ is the symmetric algebra $\Sym (\mc H_{AdS_4})$ where $\mc H_{AdS_4}$ is the cochain complex
+The space of supergravity states on twisted $AdS_4\times S^7$ is the symmetric algebra 
+\beqn
+\cS_{AdS_4} = \Sym (\mc H_{AdS_4})
+\eeqn
+where $\mc H_{AdS_4}$ is the cochain complex
  \begin{equation} 
  \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\ 
@@ -314,11 +324,11 @@ Next, we consider the sphere reduction of $\mc E^N_{AdS_7}$.
 We begin more generally with the case that $X$ is an arbitrary complex three-fold equipped with a square-root of its canonical bundle.
 The case of twisted $AdS_7 \times S^4$ corresponds to $X = \C^3$.
 As before, we consider the $S^4$ bundle 
-\[
+\beqn\label{eqn:geomads7}
 \begin{tikzcd}
 S^4 \ar[r] & \operatorname{Tot} (\R\oplus K^{1/2}\otimes \C^2\to X) \setminus 0(X) \ar[d, "p"] \\ & \R_{>0}\times X
 \end{tikzcd}
-\]
+\eeqn
 
 We wish to describe the free limit of the pushforward $p_* \mc E_{AdS_7}$ as a sheaf of cochain complexes on $\R_{>0}\times X$. 
 
@@ -372,16 +382,16 @@ As in the previous subsection, we ask for a boundary condition we can place on t
 Completely analogously to before, we may rewrite the phase space as a shifted cotangent bundle. The higher residue pairing, the natural pairing between $T, \Omega^1$, and Serre duality along $X$, all conspire to give the phase space an even-shifted symplectic structure. Together with this, we may once again identify the phase space with a twisted cotangent bundle 
 
 \beqn\label{eqn:cotm5}
-\Omega^{0,\bullet}_{X} (\mc V_{X}) = T^* _{\alpha} \left (\begin{tikzcd}[row sep = 1 ex] 
+\Omega^{0,\bullet}_{X} (\mc V_{X}) = T^* _{\alpha_N} \left (\begin{tikzcd}[row sep = 1 ex] 
 \ul{-} & \ul{+} \\
 \C[w_1,w_2] \{\partial_{w_a}\} \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del^W_\Omega" description] & \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X}  \\
 \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} (\T)\ar[ur, "\del^X_\Omega" description] \\
 \C[w_1,w_2] \otimes \Omega^{0,\bullet}_{X} \ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^{0,\bullet}_{X} (\Omega^1) \\ &  \C[w_1,w_2] \{\d w_a\} \otimes \Omega^{0,\bullet}_{X} 
 \end{tikzcd} \right) 
 \eeqn
-Analogously to the case of $AdS_4\times S^7$, $\alpha$ here denotes the extra $N$-dependent differential induced by bracketing with the flux, which deforms the cotangent bundle. 
+Analogously to the case of $AdS_4\times S^7$, $\alpha_N$ here denotes the extra $N$-dependent differential induced by bracketing with the flux, which deforms the cotangent bundle. 
 
-A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7})$ where $\mc L_{AdS_7}$ is the complex of vector bundles given by  
+A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7})$ where $\mc L^N_{AdS_7}$ is the complex of vector bundles given by  
 \begin{equation}
 \begin{tikzcd}[row sep = 1 ex]
     \ul{-} & \ul{+} \\
@@ -391,12 +401,17 @@ A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X}
 \end{tikzcd}
 \end{equation}
 
-We now specialize to $X = \C^3$.
+We denote by $\cF_{AdS_7}$ the factorization algebra on $X = \C^3$ which assigns to an open set $U \subset \C^3$ the cochain complex
+\beqn
+ \cF_{AdS_7} (U) = \cO\left(\Omega^{0,\bu}(U,\mc L^N_{AdS_7}) \right ) .
+\eeqn
+\brian{what's the dependence on $N$?}
+%Here, $\cA^\bu(U, \cL^N_{AdS_4}$ 
 
 \begin{defn}\label{defn:ads7states}
-The space of supergravity states on twisted $AdS_7\times S^4$ is given by the costalk at zero of the factorization algebra on $\C^3$ given by 
+The \emph{space of supergravity states} $\cS_{AdS_7}$ on twisted $AdS_7\times S^4$ is given by the cochain complex given by the costalk at zero of the factorization algebra $\cF_{AdS_7}$:
 \beqn
-\cO \left(\Omega^{0,\bullet}_{\C^3} (\mc L^N_{AdS_7} ) \right ) .
+\cS_{AdS_7} \define \cF_{AdS_7} (0) .
 \eeqn
 \end{defn}
 
@@ -404,7 +419,7 @@ The space of supergravity states on twisted $AdS_7\times S^4$ is given by the co
 An argument exactly analogous to the proof of lemma \ref{lem:ads4states} gives us the following
 
 \begin{lem}
-The space of supergravity states on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7} )$ where $\mc H_{AdS_7}$ is given by the cochain complex
+The space of supergravity states $\cS_{AdS_7}$ on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7} )$ where $\mc H_{AdS_7}$ is given by the cochain complex
 
  \begin{equation} 
  \begin{tikzcd}[row sep = 1 ex]
@@ -559,11 +574,13 @@ This plethystic exponential yields the MacMahon function, which is the character
 
 In the previous subsections, we discussed boundary conditions in the phase spaces of the sphere compactifications $p_* \mc E^N_{AdS_4}$ and $p_* \mc E^N_{AdS_7}$ viewed as free theories, that exist for generic values of $N$. However, there are distinguished boundary conditions that exist for $N = 0$ that we will use in the sequel. Moreover, these distinguished boundary conditions are in fact boundary conditions for the interacting theory. 
 
-Indeed, recall that in equations \eqref{eqn:cotm2}, \eqref{eqn:cotm5} we wrote the phase spaces as twisted cotangent bundles, where the nontrivial Poisson tensor was induced by the terms in the differential coming from bracketing with the flux. When we specialize $N=0$, this Poisson tensor vanishes, and there is an additional Lagrangian given by the zero section. 
+Indeed, recall that in equations \eqref{eqn:cotm2}, \eqref{eqn:cotm5} we wrote the phase spaces as twisted cotangent bundles, where the nontrivial Poisson tensor was induced by the terms in the differential coming from bracketing with the flux. When we specialize $N=0$, this Poisson tensor vanishes, and there is an additional Lagrangian given by the zero section.
+Since the back reactions do not appear, these boundary conditions make sense for arbitrary THF three-manifold $M$ in \eqref{eqn:geomads4} and arbitrary threefold $X$ in \eqref{eqn:geomads7}.
+We will specialize to $M = \R \times \C$ and $X =\C^3$ again momentarily.
 
 Explicitly these Lagrangians in the phase space are described as follows.
 \begin{itemize}
-\item Let $\mc L_{AdS_4}^{r=0}$ denote the following complex of vector bundles on $\C$ 
+\item Let $\mc L_{AdS_4}^{r=0}$ denote the following complex of vector bundles on $M$
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
    \ul{-} & \ul{+} \\
@@ -572,11 +589,9 @@ Explicitly these Lagrangians in the phase space are described as follows.
 \C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_M" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
+The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4})|_{\{\infty\} \times M}$ is given by the complex of bundles $\cA^\bu_{M}(\mc L_{AdS_4}^{r=0})$ on $M$.
 
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4})|_{\{\infty\} \times\R\times\C}$ is given by $\Omega^\bullet_\R\otimes \Omega^{0,\bullet}_\C (\mc L_{AdS_4}^{r=0})$.
-
-
-\item Let $\mc L_{AdS_7}^{r=0}$ denote the following complex of vector bundles on $\C^3$
+\item Let $\mc L_{AdS_7}^{r=0}$ denote the following complex of vector bundles on $X$
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
    \ul{+} & \ul{-} \\
@@ -585,15 +600,17 @@ The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4})|_{\{\infty\} \times\R\times\C}
 \C[w_1, w_2] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^1 \\ & \C[w_1, w_2] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_7})|_{\{\infty\} \times\C^3}$ is given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7}^{r=0})$.
+The desired Lagrangian in $(p_*\mc E^{0}_{AdS_7})|_{\{\infty\} \times X}$ is given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7}^{r=0})$.
 \end{itemize}
 
-
-Note that the same formulae defining the $L_\infty$ structure on the parity shift of the eleven-dimensional theory $\mc E$ \ref{thm:dfn} equip these Lagrangians in the $N=0$ phase spaces with $L_\infty$ structures. Moreover, the canonical maps
-\[
-\Omega^\bullet_{\R} \otimes \Omega^{0,\bullet}_{\C} (\mc L^{r=0}_{AdS_4} ) \to (p_* \mc E^0 _{AdS_4})|_{\{\infty\} \times \R\times \C}, \quad \Omega^{0,\bullet}_{X} (\mc L^{r=0}_{AdS_7} ) \to (p_* \mc E^0 _{AdS_7})|_{\{\infty\} \times \C^3}
-\]
-preserve the $L_\infty$ brackets even taking into account the potential for additional higher brackets on the target coming from homotopy transfer. Indeed, such brackets must necessarily involve classes in $H^2_{\mr{THF}} \left ( (\R\times \C^2)\setminus 0 \right )$
+These Lagrangians exist in the fully interacting eleven-dimensional model, which we can encode perturbatively in terms of an $L_\infty$ structure.
+In particular, the parity shift of these Lagrangians are equipped with $L_\infty$ structures compatible with the interacting bulk theory in the sense that the morphisms
+\begin{align*}
+\cA_M^\bu (\mc L^{r=0}_{AdS_4} ) & \to (p_* \mc E^0 _{AdS_4})|_{\{\infty\} \times M}\\
+\Omega^{0,\bullet}_{X} (\mc L^{r=0}_{AdS_7} ) & \to (p_* \mc E^0 _{AdS_7})|_{\{\infty\} \times X}
+\end{align*}
+preserve the $L_\infty$ brackets even taking into account the potential for additional higher brackets on the target coming from homotopy transfer. 
+%Indeed, such brackets must necessarily involve classes in $H^2_{\mr{THF}} \left ( (\R\times \C^2)\setminus 0 \right )$
 
 \begin{rmk}
 These boundary conditions have a very natural physical interpretation. Recall that we constructed our avatars of the $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds by codifying their appearance as backreactions of M2 and M5 branes respectively. In the absence of the fluxes sourced by these branes, we may ask that the supergravity fields extend over the former locations of these branes. As such, we can think of the boundary conditions defined above as finite-type models for the restriction of the fields of the eleven-dimensional theory to the location of branes. 
@@ -601,16 +618,22 @@ These boundary conditions have a very natural physical interpretation. Recall th
 
 \parsec[]
 
-The following lemma illustrates that the state space of definitions \ref{defn:ads4states} \ref{defn:ads7states} can also be computed using these alternate boundary conditions.
-
+We restrict to the case $M = \R \times \C$ and $X = \C^3$.
+The following lemma illustrates that the state space of definitions \ref{defn:ads4states}, \ref{defn:ads7states} can also be computed using these alternate boundary conditions.
 These Lagrangians afford an alternative description of twisted supergravity states, which will be used to investigate their representation theoretic properties.
+
+Given any local $L_\infty$ algebra $\cL$ we can consider the factorization algebra $\clie_\bu(\cL_c)$ which assigns to an open set $U$ the cochain complex computing the Lie algebra homology of the $L_\infty$ algebra of compactly supported sections $\clie_\bu (\cL_c(U))$.
+
+\brian{I think gradings need to be fixed.}
+
+\brian{The dependence on $N$ on the RHS is implicit in above definitions. Explain we are setting $N=0$.}
 
 \begin{prop}\label{prop:altstates}
 There are isomorphisms of cochain complexes
-\begin{center}
-$\mc U \left ( \Omega^\bullet_\R\otimes \Omega^{0,\bullet}_{\C} (\mc L_{AdS_4}^{r=0} ) \right )(0)\cong \Sym( \mc {H}_{AdS_4} )$ \\
-$\mc U \left ( \Omega^{0,\bullet}_{X}(\mc L_{AdS_7}^{r=0})\right )(0)\cong \Sym( \mc {H}_{AdS_7} )$
-\end{center}
+\begin{align*}
+ \left ( \clie_\bu(\cA^\bu_c (\mc L_{AdS_4}^{r=0} )) \right )(0) & \cong \Sym( \mc {H}_{AdS_4} ) \\
+\left ( \clie_\bu ( \Omega^{0,\bullet}_{c}(\mc L_{AdS_7}^{r=0})) \right )(0) & \cong \Sym( \mc {H}_{AdS_7} )
+\end{align*}
 \end{prop}
 \begin{proof}
 For a local $L_\infty$ algebra $\mc L$, its factorization envelope $\mc U(L)$ is defined to be $\clie_\bullet (\mc L_c)$ the Lie algebra chains on the cosheaf of compactly supported sections. Therefore, it suffices to show that in each case, the costalk of the cosheaf of comapctly supported sections is quasi-isomorphic to $\mc H_{AdS_4}$ and $\mc H_{AdS_7}$ respectively. This is a consequence of the following observations.
