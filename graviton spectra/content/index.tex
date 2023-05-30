@@ -176,9 +176,9 @@ Via this symplectic structure, we can identify the phase space with a twisted co
 \beqn\label{eqn:cotm2}
 \cA_M^\bu (\mc V^N) = T^* _{\alpha} \left (\begin{tikzcd}[row sep = 1 ex]
  \ul{-} & \ul{+} \\ 
-\C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del^W_\Omega" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C \\
-\C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\T)\ar[ur, "\del^M_\Omega" description] \\
-\C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4] \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C(\Omega^1)\\ & \C[w_1,\ldots, w_4] \{\d w_a\} \otimes \Omega^\bullet_\R \otimes \Omega^{0,\bullet}_\C   \end{tikzcd} \right) 
+\C[w_1,\ldots, w_4] \{\partial_{w_a}\} \otimes \cA_M^\bu \ar[r, "\del^W_\Omega" description] & \C[w_1,\ldots, w_4] \otimes \cA_M^\bu  \\
+\C[w_1,\ldots, w_4] \otimes \cA_M^\bu (\T) \ar[ur, "\del^M_\Omega" description] \\
+\C[w_1,\ldots, w_4] \otimes \cA_M^\bu \ar[r, "\del_M" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4] \otimes \cA_M^\bu(\Omega^1)\\ & \C[w_1,\ldots, w_4] \{\d w_a\} \otimes \cA_M^\bu  \end{tikzcd} \right) 
 \eeqn
 For now, the subscript of $\alpha$ is just meant to indicate that the extra differential given by bracketing with the flux constitutes a deformation of the cotangent bundle. 
 
@@ -189,22 +189,22 @@ Thus we see that a natural Lagrangian in the phase space is given by the sheaf o
        \ul{+} & \ul{-} \\ 
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]  \otimes \mc O \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]   \otimes \T\ar[ur, "\del^M_\Omega" description] \\
-(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \mc{O}\ar[r, "\del_Z" description]\ar[dr, "\del_W" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \Omega^1
+(w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \mc{O}\ar[r, "\del_M" description]\ar[dr, "\del_W" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \otimes \Omega^1
 \\ & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\d w_a\}  \otimes \mc O \end{tikzcd}
 \end{equation}
 
-We denote by $\cF_{AdS_4}$ the factorization algebra on $M = \R\times \C$ which assigns to an open set $U \subset \R \times \C$ the cochain complex
+We denote by $\Obs_{AdS_4}$ the factorization algebra on $M = \R\times \C$ which assigns to an open set $U \subset \R \times \C$ the cochain complex
 \beqn
- \cF_{AdS_4} (U) = \cO\left(\cA^\bu(U,\mc L^N_{AdS_4}) \right ) .
+ \Obs^N_{AdS_4} (U) = \cO\left(\cA^\bu(U,\mc L^N_{AdS_4}) \right ) .
 \eeqn
 %Here, $\cA^\bu(U, \cL^N_{AdS_4}$ 
 
 \brian{what's the dependence on $N$?}
 
 \begin{defn}\label{defn:ads4states}
-The \emph{space of supergravity states} $\cS_{AdS_4}$ on twisted $AdS_4\times S^7$ is given by the cochain complex given by the costalk at zero of the factorization algebra $\cF_{AdS_4}$:
+The \emph{space of supergravity states} $\cS^N_{AdS_4}$ on twisted $AdS_4\times S^7$ is given by the cochain complex given by the costalk at zero of $\Obs_{AdS_4}^N$:
 \beqn
-\cS_{AdS_4} \define \cF_{AdS_4} (0) .
+\cS^N_{AdS_4} \define \Obs^N_{AdS_4} (0) .
 \eeqn
 \end{defn}
 
@@ -214,7 +214,7 @@ We explicate definition \ref{defn:ads4states} and characterize the cochain compl
 \begin{lem}\label{lem:ads4states}
 The space of supergravity states on twisted $AdS_4\times S^7$ is the symmetric algebra 
 \beqn
-\cS_{AdS_4} = \Sym (\mc H_{AdS_4})
+\cS^N_{AdS_4} = \Sym (\mc H_{AdS_4})
 \eeqn
 where $\mc H_{AdS_4}$ is the cochain complex
  \begin{equation} 
@@ -228,7 +228,7 @@ where $\mc H_{AdS_4}$ is the cochain complex
 \end{lem}
 
 \begin{proof}
-To characterize the costalk at $0 \in \R \times \C$ of a factorization algebra, we consider a nested sequence of open sets containing the origin and compute the limit of the value of the factorization algebra over this sequence. Consider open sets in $\R\times \C$ of the form $I\times D$ where $I\subset \R$ is an interval and $D\subset \C$ is a disc. The sections of the sheaf of cochain complexes $\Omega^\bullet _\R \otimes \Omega^{0,\bullet}_\C(\mc L^N_{AdS_4\times S^7} ) $ over this open set is given by \begin{equation}
+To characterize the costalk at $0 \in \R \times \C$ of a factorization algebra, we consider a nested sequence of open sets containing the origin and compute the limit of the value of the factorization algebra over this sequence. Consider open sets in $\R\times \C$ of the form $I\times D$ where $I\subset \R$ is an interval and $D\subset \C$ is a disc. The sections of the sheaf of cochain complexes $\cA^\bu_{\R \times \C}(\mc L^N_{AdS_4\times S^7} ) $ over this open set is given by \begin{equation}
 \begin{tikzcd}[row sep = 1 ex]
     \ul{+} & \ul{-} \\
 (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}] \{\partial_{w_a}\} \otimes \mc{O}(D)\ar[r, "\del^W_\Omega" description] & (w_1\cdots w_4)^{-1} \C[w_1^{-1},\ldots, w_4^{-1}]  \otimes \mc O(D) \\
@@ -401,17 +401,17 @@ A natural Lagrangian in the phase space is thus given by $\Omega^{0,\bullet}_{X}
 \end{tikzcd}
 \end{equation}
 
-We denote by $\cF_{AdS_7}$ the factorization algebra on $X = \C^3$ which assigns to an open set $U \subset \C^3$ the cochain complex
+We denote by $\Obs_{AdS_7}$ the factorization algebra on $X = \C^3$ which assigns to an open set $U \subset \C^3$ the cochain complex
 \beqn
- \cF_{AdS_7} (U) = \cO\left(\Omega^{0,\bu}(U,\mc L^N_{AdS_7}) \right ) .
+ \Obs_{AdS_7}^N (U) = \cO\left(\Omega^{0,\bu}(U,\mc L^N_{AdS_7}) \right ) .
 \eeqn
 \brian{what's the dependence on $N$?}
 %Here, $\cA^\bu(U, \cL^N_{AdS_4}$ 
 
 \begin{defn}\label{defn:ads7states}
-The \emph{space of supergravity states} $\cS_{AdS_7}$ on twisted $AdS_7\times S^4$ is given by the cochain complex given by the costalk at zero of the factorization algebra $\cF_{AdS_7}$:
+The \emph{space of supergravity states} $\cS^N_{AdS_7}$ on twisted $AdS_7\times S^4$ is given by the cochain complex given by the costalk at zero of the factorization algebra $\cF_{AdS_7}$:
 \beqn
-\cS_{AdS_7} \define \cF_{AdS_7} (0) .
+\cS_{AdS_7}^N \define \cF_{AdS_7} (0) .
 \eeqn
 \end{defn}
 
@@ -419,7 +419,7 @@ The \emph{space of supergravity states} $\cS_{AdS_7}$ on twisted $AdS_7\times S^
 An argument exactly analogous to the proof of lemma \ref{lem:ads4states} gives us the following
 
 \begin{lem}
-The space of supergravity states $\cS_{AdS_7}$ on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7} )$ where $\mc H_{AdS_7}$ is given by the cochain complex
+The space of supergravity states $\cS_{AdS_7}^N$ on twisted $AdS_7\times S^4$ is the symmetric algebra $\Sym (\mc H_{AdS_7} )$ where $\mc H_{AdS_7}$ is given by the cochain complex
 
  \begin{equation} 
  \begin{tikzcd}[row sep = 1 ex]
@@ -589,25 +589,25 @@ Explicitly these Lagrangians in the phase space are described as follows.
 \C[w_1,\ldots, w_4] \otimes \mc{O}\ar[r, "\del_M" description]\ar[dr, "\del_W" description] & \C[w_1,\ldots, w_4]\otimes \Omega^1 \\ & \C[w_1,\ldots, w_4] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_4})|_{\{\infty\} \times M}$ is given by the complex of bundles $\cA^\bu_{M}(\mc L_{AdS_4}^{r=0})$ on $M$.
+The desired Lagrangian in $(p_*\mc E^{N=0}_{AdS_4})|_{\{\infty\} \times M}$ is given by the complex of bundles $\cA^\bu_{M}(\mc L_{AdS_4}^{r=0})$ on $M$.
 
 \item Let $\mc L_{AdS_7}^{r=0}$ denote the following complex of vector bundles on $X$
  \begin{equation}
  \begin{tikzcd}[row sep = 1 ex]
-   \ul{+} & \ul{-} \\
+   \ul{-} & \ul{+} \\
 \C[w_1, w_2] \{\partial_{w_a}\} \otimes \mc{O}\ar[r, "\del^W_\Omega" description] &\C[w_1,w_2]  \otimes \mc O \\
 \C[w_1, w_2]   \otimes \T\ar[ur, "\del^X_\Omega" description] \\
 \C[w_1, w_2] \otimes \mc{O}\ar[r, "\del_X" description]\ar[dr, "\del_W" description] & \C[w_1,w_2]\otimes \Omega^1 \\ & \C[w_1, w_2] \{\d w_a\}  \otimes \mc O
 \end{tikzcd}
 \end{equation}
-The desired Lagrangian in $(p_*\mc E^{0}_{AdS_7})|_{\{\infty\} \times X}$ is given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7}^{r=0})$.
+The desired Lagrangian in $(p_*\mc E^{N=0}_{AdS_7})|_{\{\infty\} \times X}$ is given by $\Omega^{0,\bullet}_{X} (\mc L_{AdS_7}^{r=0})$.
 \end{itemize}
 
 These Lagrangians exist in the fully interacting eleven-dimensional model, which we can encode perturbatively in terms of an $L_\infty$ structure.
 In particular, the parity shift of these Lagrangians are equipped with $L_\infty$ structures compatible with the interacting bulk theory in the sense that the morphisms
 \begin{align*}
-\cA_M^\bu (\mc L^{r=0}_{AdS_4} ) & \to (p_* \mc E^0 _{AdS_4})|_{\{\infty\} \times M}\\
-\Omega^{0,\bullet}_{X} (\mc L^{r=0}_{AdS_7} ) & \to (p_* \mc E^0 _{AdS_7})|_{\{\infty\} \times X}
+\cA_M^\bu (\mc L^{r=0}_{AdS_4} ) & \to (p_* \mc E^{N=0} _{AdS_4})|_{\{\infty\} \times M}\\
+\Omega^{0,\bullet}_{X} (\mc L^{r=0}_{AdS_7} ) & \to (p_* \mc E^{N=0} _{AdS_7})|_{\{\infty\} \times X}
 \end{align*}
 preserve the $L_\infty$ brackets even taking into account the potential for additional higher brackets on the target coming from homotopy transfer. 
 %Indeed, such brackets must necessarily involve classes in $H^2_{\mr{THF}} \left ( (\R\times \C^2)\setminus 0 \right )$
@@ -623,10 +623,6 @@ The following lemma illustrates that the state space of definitions \ref{defn:ad
 These Lagrangians afford an alternative description of twisted supergravity states, which will be used to investigate their representation theoretic properties.
 
 Given any local $L_\infty$ algebra $\cL$ we can consider the factorization algebra $\clie_\bu(\cL_c)$ which assigns to an open set $U$ the cochain complex computing the Lie algebra homology of the $L_\infty$ algebra of compactly supported sections $\clie_\bu (\cL_c(U))$.
-
-\brian{I think gradings need to be fixed.}
-
-\brian{The dependence on $N$ on the RHS is implicit in above definitions. Explain we are setting $N=0$.}
 
 \begin{prop}\label{prop:altstates}
 There are isomorphisms of cochain complexes
