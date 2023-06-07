@@ -4,9 +4,10 @@
 
 \section{Twisted global symmetries}
 \label{sec:ads}
-As we indicated in the beginning of this chapter, a feature of the physical $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds is that they have as isometries, the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras respectively. In fact, the complex forms of these two super-Lie algebras are the same. 
 
-In this section we provide evidence for conjectures \ref{conj:ads4} and \ref{conj:ads7} by arguing that the global sections of the local moduli problems $p_*\mc E_{AdS_4}$ and $p_* \mc E_{AdS_7}$ carry actions by the minimal twists of the relevant superconformal algebras. We will find that the twist of the superconformal algebra is the same in each case, but the actions are slightly different. 
+As we indicated in the beginning of this chapter, a feature of the physical $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds is that they have as isometries, the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras respectively. In fact, the complex forms of these two super Lie algebras are the same. 
+
+In this section we provide evidence for conjectures \ref{conj:ads4} and \ref{conj:ads7} by arguing that the global sections of the local moduli problems $p_*\mc E_{AdS_4}$ and $p_* \mc E_{AdS_7}$ obtained by sphere compactification carry actions by the minimal twists of the relevant superconformal algebras. We will find that the twist of the superconformal algebra is the same in each case, but the actions are slightly different. 
 
 \subsection{Superconformal algebras}
 
@@ -15,23 +16,31 @@ This agrees with the complex form of the 6d $\mc{N}=(2,0)$ superconformal algebr
 
 %The following is a mild rephrasing of a result in \cite{SWsuco2} where twisted superconformal symmetry in six dimensions is studied in some detail.
 There is a map of super Lie algebras $\phi: \mf {siso}_{11d} \to \mf {osp}(8|4)$. 
-Further, it is observed in \cite{SWsuco2} that if $Q\in \mf{siso}_{11d}$ is the odd square-zero element used to define the minimal twist of eleven-dimensional supergravity, then there is an equivalence of dg super-Lie algebras \[\left ( \mf {osp}(8|4), [\phi(Q), - ]\right )\cong \mf {osp}(6|2).\]
+Further, it is observed in \cite{SWsuco2} that if $Q\in \mf{siso}_{11d}$ is the odd square-zero element used to define the minimal twist of eleven-dimensional supergravity, then the $\phi(Q)$-cohomology of the superconformal algebra is 
+\[ H^\bu \left ( \mf {osp}(8|4), [\phi(Q), - ]\right )\cong \mf {osp}(6|2).\]
 
-The super-Lie algebra $\mf{osp}(6|2)$ will therefore play the role of the residual isometries of the twisted AdS background. The bosonic part of $\mf{osp}(6|2)$ is the direct sum Lie algebra $\mf{sl}(4) \oplus \mf{sl}(2)$. The odd part of the algebra $\mf{osp}(6|2)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\mf{sl}(4)$ representation and $R$ is the fundamental $\mf{sl}(2)$ representation. 
+The super Lie algebra $\mf{osp}(6|2)$ will therefore play the role of the residual isometries of the twisted $AdS$ background. The bosonic part of $\mf{osp}(6|2)$ is the direct sum Lie algebra $\mf{sl}(4) \oplus \mf{sl}(2)$. The odd part of the algebra $\mf{osp}(6|2)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\mf{sl}(4)$ representation and $R$ is the fundamental $\mf{sl}(2)$ representation.
+The super Lie bracket is determined by the natural invariant symmetric-symmetric and anti-symmetric-anti-symmetric pairings.
 
 \subsection{Global symmetries of twisted ${\mr AdS}_4 \times S^7$}
 
-To provide further evidence for conjecture \ref{conj:ads4} we wish to articulate a sense in which $\mf{osp}(6|2)$ is witnessed as a symmetry of $\mc E^N_{AdS_4}$. To this end, we will provide evidence for the claim that there is a Lie map 
-\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right ).\]
+To provide further evidence for conjecture \ref{conj:ads4} we will articulate a sense in which $\mf{osp}(6|2)$ can be witnessed as a symmetry of $\mc E^N_{AdS_4}$ on the eleven-manifold obtained by subtracting the location of the brane
+\beqn
+\til Z = \R \times \C^5 - (\R \times \C \times 0) .
+\eeqn
+To this end, we will provide evidence for the claim that $\lie{osp}(6|2)$ sits inside of the eleven-dimensional theory on this space as symmetries.
+We denote by $(t,z)$ coordinates along the brane and $(w_1,\ldots,w_4)$ the holomorphic coordinates transverse to the brane.
+%\[\mf{osp}(6|2)\to H^\bullet \left ( \Pi \mc E^N_{AdS_4} \left ( \til Z \right ) \right ).\]
 
-We first focus on the case where the flux $N=0$. In this case, we will show that the embedding factors through the natural restriction map from the theory on flat space
+We first focus on the case where the flux is zero $N=0$. 
+%In this case, we will show that the embedding factors through the natural restriction map from the theory on flat space.
 
-\[ 
-\begin{tikzcd}
-& H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }\ar[d, "\mr{res}"] \\
-\mf{osp}(6|2)\ar[ur, "i_{M2}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )
-\end{tikzcd}
-\]
+%\[ 
+%\begin{tikzcd}
+%& H^\bullet \left ( \Pi \mc E (R\times \C^5)\right )\cong\widehat{E(5|10) }\ar[d, "\mr{res}"] \\
+%\mf{osp}(6|2)\ar[ur, "i_{M2}"]\ar[r] & H^\bullet \left ( \Pi \mc E^0_{AdS_4} \left ( (\R\times \C) \times \C^4\setminus \{0\} \right ) \right )
+%\end{tikzcd}
+%\]
 \parsec[] 
 
 We begin by describing the map $i_{M2}$. As recalled above, the bosonic part of $\mf{osp}(6|2)$ is $\mf{sl}(4)\oplus \mf {sl}(2)$. In its incarnation as a twist of 3d $\mc N=8$ superconformal symmetry, it is useful to think of the $\mf{sl}(2)$-summand as describing conformal transformations on $\C_z$, while the Lie algebra $\mf{sl}(4)$ is a residual R-symmetry describing rotations on $\C^4_w$.

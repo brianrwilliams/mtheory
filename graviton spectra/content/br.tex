@@ -42,7 +42,7 @@ The eleven-dimensional theory exists on any manifold which is locally of the for
 where $Z$ is a Calabi--Yau fivefold.
 The model is topological along $\R$ in the sense that translations in this direction act in a homotopically trivial way on the theory.
 Likewise, locally on the Calabi--Yau fivefold, all anti-holomorphic translations act in a homotopically trivial way---in this sense, the theory is {\em holomorphic} along $Z$ \cite{BWhol}.
-More generally, the eleven-dimensional theory can be constructed on any eleven-manifold equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
+More generally, the eleven-dimensional theory can be constructed on any eleven-manifold $\til Z$ equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
 
 As examples, we point out two classes of THF eleven-manifolds which we will consider in this paper, depending on whether we consider stack of M2 or M5 branes respectively:
 \begin{itemize}
@@ -52,22 +52,22 @@ Let $K_M$ be the canonical bundle of $M$ and suppose we have fixed a fourth-root
 We let $K = Q^\vee$.}
 Then we consider the THF eleven-manifold 
 \beqn\label{eqn:thfm2}
-\text{Tot} \left(K_M^{1/4} \otimes \C^4 \to M\right) .
+\til Z = \text{Tot} \left(K_M^{1/4} \otimes \C^4 \to M\right) .
 \eeqn
 The M2 branes will wrap the zero section of this total bundle.
 Notice that the power of $1/4$ is to guarantee the Calabi--Yau condition.
 \item Let $X$ be a complex threefold equipped with $K_X^{1/2}$.
 We can consider the THF eleven-manifold
 \beqn\label{eqn:thfm5}
-\R \times \text{Tot} \left(K_X^{1/2} \otimes \C^2 \to X \right) .
+\til Z = \R \times \text{Tot} \left(K_X^{1/2} \otimes \C^2 \to X \right) .
 \eeqn
 The M5 branes will wrap the zero section and lie at a point in $\R$.
-Notice that in this case the manifold is globally of the form $\R \times Z$ where $Z$ is a Calabi--Yau fivefold.
+Notice that in this case the manifold is globally of the form $\R \times Z$ where $Z$ is the Calabi--Yau fivefold above.
 \end{itemize}
 
 
 In \cite{RSW,RWindex} we describe how physical fields in supergravity are manifest in the twisted model.
-We review a small part of this.
+We review part of this.
 If $\til{Z}$ is an eleven-manifold equipped with a THF structure as above, the fields will live in a space of the form
 \beqn
 \cA^\bu(\til{Z}, \til{V})
@@ -77,7 +77,7 @@ where
 \item The graded bundle $\til{V}$ is holomorphic with respect to the THF structure.
 \item $\cA^\bu (\til{Z}, \til{V})$ denotes the THF cohomology of $\til{Z}$ with coefficients in $\til{V}$. \brian{elaborate}
 \end{itemize}
-To simplify discussion in the remainder of this section we will only work in the local model~\eqref{eqn:local} where $\til{Z} = \R \times Z$ for $Z$ a Calabi--Yau fivefold.
+To simplify discussion we point out the explicit form of the fields in the split case~\eqref{eqn:local} where $\til{Z} = \R \times Z$ for $Z$ a Calabi--Yau fivefold.
 Then, the space of fields is of the form
 \beqn
 \Omega^\bu(\R) \otimes \Omega^{0,\bu}(Z, V)
@@ -143,14 +143,22 @@ The full BV action functional $S_{BV}$ is a functional on the space of fields wh
 
 For our eleven-dimensional model the BV action functional takes the following form
 \begin{multline}
-S_{BV} = \int_{\R \times Z} \bigg[\beta \wedge (\dbar + \d) \nu + \gamma \wedge (\dbar + \d) \mu +  \beta \wedge \div \mu  \bigg] \\
-+ \frac{1}{2} \int_{\R \times Z}  \mu^2 \vee \del \gamma + \int_{\R \times Z} \gamma \del \gamma \del \gamma + \cdots .
+S_{BV} = \int_{\til Z}^\Omega \bigg[\beta \wedge (\dbar + \d) \nu + \gamma \wedge (\dbar + \d) \mu +  \beta \wedge \div \mu  \bigg] \\
++ \frac{1}{2} \int_{\til Z}^\Omega  \mu^2 \vee \del \gamma + \int_{\til Z} \gamma \del \gamma \del \gamma + \cdots .
 \end{multline}
 Here:
 \begin{itemize}
 \item the first line is the free part of the action.
 The operator $\dbar$ is the $\dbar$-operator on $Z$, the operator $\d$ is the de Rham operator on $\R$, and the operator $\div$ is the holomorphic divergence operator on $Z$ corresponding to the holomorphic volume form.
-\item We implicitly use the holomorphic volume form in the above integrals.
+Together with the BV pairing, then, this first line defines the following linearized BRST complex
+\beqn
+\begin{tikzcd}
+\underline{-} & \underline{+} \\
+\cA^\bu(\til Z , \T_{\til Z})_\mu \ar[r,"\div"] & \cA^\bu(\til Z)_\nu \\
+\cA^\bu(\til Z)_\beta \ar[r,"\del"] & \cA^\bu(\til Z, \T^*_{\til Z})_\gamma .
+\end{tikzcd}
+\eeqn
+\item We implicitly use the holomorphic volume form in the integrals denoted~$\int^\Omega$.
 \item The term 
 \beqn\label{eqn:J}
 J(\gamma) \define \int_{\R \times Z} \gamma \del \gamma \del \gamma .
@@ -172,91 +180,7 @@ Famously, $M$-theory on a circle is expected to be equivalent to type IIA string
 At the level of supergravity, the $S^1$-reduction of eleven-dimensional supergravity is ten-dimensional supergravity of type IIA.
 Here we utilize a description of the twist of type IIA strings using a version of Kodaira--Spencer theory developed in \cite{CLbcov1,CLsugra}.
 
-%From the point of view of the $SU(5)$ twist there are essentially two types of circles one can consider.
-%The first is a `holomorphic circle'.
-%This is present when we assume our Calabi--Yau fivefold is of the form $Z = \C^\times \times Y$ with $Y$ a Calabi--Yau fourfold.
-%We assume that $\C^\times$ is equipped with the standard volume form $\d z$.
-%The $S^1$ reduction along a circle in $\C^\times$ results in a twist of type IIA supergravity with global symmetry $SU(4)$ on the manifold
-%\beqn
-%\R \times \R \times Y .
-%\eeqn
-%More generally, this twist can be defined when $\R^2$ is replaced by a smooth oriented two-dimensional manifold $M^2$.
-%In \cite{CLsugra}, Costello and Li have given a conjectural description of this particular twist of type IIA (and many other twists) using methods of topological string theory.
-%In this case, the conjecture of Costello and Li is that the twist is equivalent to a mixed topological string theory which is given by the A-model along $M^2$ and the B-model along $Y$.
-%In perturbation theory, this admits a description in terms of Kodaira--Spencer theory along the fourfold $Y$.
-%Via an explicit dimensional reduction of our model we find an exact match with this expectation \cite{RSW}.
-%The dimensional reduction of our eleven-dimensional model on
-%\beqn
-%\R \times \C \times Y
-%\eeqn
-%along $S^1 \subset \C$ is equivalent to the mixed topological A-model along $\R^2$ and B-model along $Y$ as considered in \cite{CLsugra}.
-%
-%The other type of reduction one can consider is that along a `topological' circle.
-%This corresponds to placing our eleven-dimensional model on
-%\beqn
-%S^1 \times Z
-%\eeqn
-%and performing reduction along $S^1 \times Z \to Z$.
-%What results is a theory with $SU(5)$ global symmetry.
-%We conjecture that this is the $SU(5)$ twist of type IIA supergravity.
-%There is no expected description of the $SU(5)$ twist in terms of topological strings like in the $SU(4)$ or $SU(2)$ cases.
 
-%
-%There are two bosonic fields of particular importance.
-%First is a section
-%\beqn
-%\mu^{0;0,1} \in \Omega^0(\R) \otimes \Omega^{0,1}(X, \T_X) .
-%\eeqn
-%Here $\T_X$ is the holomorphic tangent bundle on $X$.
-%The linear part of the BRST differential requires this field be constant in the real direction.
-%Thus, this field has the same form as a Beltrami differential on $X$.
-%There are particular field configurations where the non-linear equations of motion for $\mu$ imply that it is a complex structure deformation of $X$, but the full equations of motion are more complicated.
-%Another bosonic field of importance is a section
-%\beqn
-%\gamma^{0;0,1} \in \Omega^0(\R) \otimes \Omega^{1,1}(X) .
-%\eeqn
-%
-%The field $\mu$ satisfies a condition that it be {\em divergence-free} for the Calabi--Yau structure on the fivefold~$X$.
-%This means that it is required to satisfy the equation
-%\beqn
-%\div \mu = 0
-%\eeqn
-%where $\div(-)$ is the divergence with respect to the holomorphic volume form $\Omega$ on $X$.
-
-%\subsection{The $G_2$ twist}
-%
-%We will give a description to of the $G_2$ twist of eleven-dimensional supergravity.
-%Independent derivations of this twist have appeared in \cite{CostelloM5, EagerHahner}.
-%The theory is defined on any manifold of the form
-%\beqn
-%M \times Y
-%\eeqn
-%where $M$ is a manifold with $G_2$ holonomy and $Y$ is a manifold with $SU(2)$ holonomy.
-%Unfortunately, the perturbative description we are about to give depends in no way on the $G_2$ structure and can be defined when $M$ is any smooth seven-dimensional manifold.
-%To see the full $G_2$ structure appearing one must take into account non-perturbative effects (much like in the target space description of the topological A-model).
-%
-%The fundamental field is simply a differential form
-%\beqn
-%\alpha \in \Omega^\bu(M) \otimes \Omega^{0,\bu}(Y) [1] .
-%\eeqn
-%The linear BRST differential is simply $\d + \dbar$ where $\d$ is the de Rham differential on $M$ and $\dbar$ is the Dolbeault operator for $Y$.
-%
-%Being a manifold with $SU(2)$ holonomy, the algebra of holomorphic fnuctions on $Z$ is equipped with a holomorphic Poisson bracket $\{-,-\}$.
-%Since this bracket involves only holomorphic differntial operators, it can be extended to a Poisson bracket on the dg algebra $\Omega^{0,\bu}(Y)$.
-%The theory utilizes this bracket in an essential way.
-%Indeed, the full BV action is
-%\beqn
-%\frac12 \int_{M \times Y} \Omega \, \alpha \d \alpha + \frac16 \int_{M \times Y} \Omega \, \alpha \{\alpha, \alpha\} .
-%\eeqn
-%where $\Omega \in \Omega^{2,0}(Y)$ is the holomorphic volume form.
-%This description appeared in \cite{RYsduality} and was independently derived from a further twist of the $SU(5)$ twist in \cite{RSW}. 
-%
-%Like the $SU(5)$ twist, this theory is only $\Z/2$ graded.
-%Nevertheless, one convenient way to think about this theory is as a higher dimensional Chern--Simons theory for a particular (dg) Lie algebra.
-%Given any odd-dimensional smooth manifold $M$ and a Lie algebra $\lie{g}$ equipped with an invariant non-degenerate symmetric inner product one can consider a $\Z/2$ graded version of Chern--Simons theory whose BV action is given by the usual formula $\int_M CS(A)$.
-%It is only in the case that $\dim M = 3$ that this theory admits a $\Z$-grading.
-%The theory we are considering here can be interpreted as $\Z/2$ graded Chern--Simons theory on the seven-manifold $M$ for the Lie algebra of holomorphic functions on $Y$ equipped with the holomorphic Poisson bracket.
-%Here, the invariant pairing is given by integrating against the holomorphic volume form $\Omega$.
 
 \subsection{The ${\mr AdS}_4 \times S^7$ background}
 
@@ -266,7 +190,7 @@ In this section we introduce the analog of the ${\mr AdS}_4 \times S^7$ backgrou
 
 We begin by viewing the eleven-dimensional manifold
 \[
-\operatorname{Tot}(K^{1/4}_M \otimes \C^4\to M)
+\til Z = \operatorname{Tot}(K^{1/4}_M \otimes \C^4\to M)
 \]
 as in \eqref{eqn:thfm2}.
 Even when we restrict ourselves to flat space $M = \R \times \C$ this way of presenting the eleven-manifold $\R \times \C^5$ is a convenient mechanism to record weights under natural scaling actions. 

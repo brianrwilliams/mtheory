@@ -4,12 +4,12 @@
 
 \section{$E(3|6)$-modules from gravitons on $AdS_7\times S^4$}\label{sec:e36}
 
-We now repeat the analysis of the previous subsection for gravitons on $AdS_7\times S^4$ respectively, making use of the description of supergravity states on $AdS_7\times S^4$ as the costalk of the factorization envelopes of the boundary condition and $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\times S^4})$
+We now repeat the analysis of the previous subsection for gravitons on $AdS_7\times S^4$ respectively, making use of the description of supergravity states on $AdS_7\times S^4$ as the costalk of the factorization envelopes of the boundary condition and $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7})$
 
-As before, we construct certain $\C^\times$ actions on the boundary fields $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\times S^4})$; we find that the zeroth weight space is a local version of another exceptional linearly compact super-Lie algebra $E(3|6)$. The decomposition of $\mc H_{AdS_7\times S^4}$ as a direct sum of $E(3|6)$ modules incidentally turns out to be very closely related to a decomposition of $E(5|10)$ into $E(3|6)$ modules studied by Cheng-Kac \cite{}.
+As before, we construct certain $\C^\times$ actions on the boundary fields $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7})$; we find that the zeroth weight space is a local version of another exceptional linearly compact super-Lie algebra $E(3|6)$. The decomposition of $\mc H_{AdS_7}$ as a direct sum of $E(3|6)$ modules incidentally turns out to be very closely related to a decomposition of $E(5|10)$ into $E(3|6)$ modules studied in \cite{KacRudakov}.
 
 \subsection{The graviton decomposition of twisted $AdS_7\times S^4$}
-We wish to consider a particular decomposition of the space of states $\mc H_{AdS_7\times S^4}$. It is induced by a decomposition of the boundary fields $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\times S^4} )$ introduced in section \ref{sec:transversebc}. 
+%We wish to consider a particular decomposition of the space of states $\mc H_{AdS_7}$. It is induced by a decomposition of the boundary fields $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7} )$ introduced in section \ref{sec:transversebc}. 
 
 %For simplicity let us consider the eleven-dimensional theory on flat space $\R \times \C^5$ with some number of fivebranes supported on
 %\[
@@ -38,21 +38,25 @@ We wish to consider a particular decomposition of the space of states $\mc H_{Ad
 %This factorization algebra is not the factorization algebra associated to an ordinary sort of field theory on $\C^3$. 
 %Nevertheless there is a subfactorization algebra which admits a natural grading so that each filtered component can be understood as such.
 
-Let $U\subset \C^3$ be an open; explicitly, the $\C^\times$ action on $\Omega^{0,\bullet}_{\C^3} (U, \mc L^{{r=0}}_{AdS_7\times S^4} )$ is given as follows.
+Recall the boundary condition at zero in twisted $AdS$ space $\Omega^{0,\bu}(\cL_{AdS_7}^{r=0})$ that we introduced in section \ref{sec:transversebc}.
+Recall that this boundary condition makes sense for any complex threefold $X$ equipped with $K^{1/2}_X$.
+The parity shift of these boundary fields $\Omega^{0,\bu}(\Pi \cL_{AdS_7}^{r=0})$ is equipped with an $L_\infty$ structure inherited from the BV action of the eleven-dimensional theory.
+
+Define the $\C^\times$ action on $\mc L^{{r=0}}_{AdS_7}$ as follows.
 \begin{itemize}
-\item On the fields $\mu(w_a,z_i) \in \C[w_1, w_2]\{\del_{w_a}\} \otimes \Omega^{0,\bullet}_{\C^3} (U) \oplus \C[w_1, w_2]\otimes \Omega^{0,\bullet}_{\C^3}(U, T)$ the action is
+\item On the fields $\mu(w_a,z_i) \in \C[w_1, w_2]\{\del_{w_a}\} \otimes \cO_X \oplus \C[w_1, w_2] \otimes \T_X$ the action is
 \[
 \lambda \cdot \mu(w_a,z_i) = \mu(\lambda w_a , z_i).
 \]
-\item On the fields $\nu(w_a,z_i) \in \C[w_1, w_2] \otimes \Omega^{0,\bullet}_{\C^3}(U)$ the action is
+\item On the fields $\nu(w_a,z_i) \in \C[w_1, w_2]\otimes \cO_X$ the action is
 \[
-\lambda \cdot \nu(w_a,z_i) = \nu(\lambda w , z).
+\lambda \cdot \nu(w_a,z_i) = \nu(\lambda w_a , z).
 \]
-\item On the fields $\beta(w_a,z_i) \in \C[w_1, w_2] \otimes \Omega^{0,\bullet}_{\C^3}(U)$ the action is
+\item On the fields $\beta(w_a,z_i) \in \C[w_1, w_2]\otimes \cO_X$ the action is
 \[
 \lambda \cdot \beta(w_a,z_i) = \lambda^{-1} \beta(\lambda w_a , z_i).
 \]
-\item On the fields $\gamma(w_a,z_i) \in \C[w_1, w_2] \{\d w_a\} \otimes \Omega^{0,\bullet}_{\C^3} (U) \oplus \C[w_1, w_2]\otimes \Omega^{0,\bullet}_{\C^3}(U, \Omega^1)$ the action is
+\item On the fields $\gamma(w_a,z_i) \in \C[w_1, w_2] \{\d w_a\}\otimes \cO_X \oplus \C[w_1, w_2]\otimes \Omega^1_X$ the action is
 \[
 \lambda \cdot \gamma(w_a,z_i) = \lambda^{-1} \gamma(\lambda w _a, z_i).
 \]
@@ -60,7 +64,7 @@ Let $U\subset \C^3$ be an open; explicitly, the $\C^\times$ action on $\Omega^{0
 
 The following proposition is a straightforward if lengthy computation - we state it without proof.
 \begin{prop}\label{prop:ads7decomp}
-The $L_\infty$ structure on $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\times S^4} )$ identified in remark \ref{} is equivariant for this $\C^\times$ action. 
+The $L_\infty$ structure on $\Omega^{0,\bullet}_{X} (\mc L^{{r=0}}_{AdS_7} )$ is equivariant for this $\C^\times$ action. 
 \end{prop}
 
 %\begin{proof}
@@ -130,14 +134,15 @@ The $L_\infty$ structure on $\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\tim
 This result induces a product decomposition 
 \begin{equation}
 \label{eqn:Gdecomp}
-\Omega^{0,\bullet}_{\C^3} (\mc L^{{r=0}}_{AdS_7\times S^4}) = \prod_{n \geq -1} \mc{G}_{\C^3}^{(n)}
+\Omega^{0,\bullet}_{X} (\mc L^{{r=0}}_{AdS_7}) = \prod_{n \geq -1} \mc{G}_{X}^{(n)}
 \end{equation}
-where for each open set $U \subset \C^3$
+where
 \[
-\mc{G}_\C^3(U)^{(n)}\subset \Omega^{0,\bullet}_{\C^3} (U, \mc L^{{r=0}}_{AdS_7\times S^4} )
+\mc{G}_X^{(n)}\subset \Omega^{0,\bullet}_{X} (\mc L^{{r=0}}_{AdS_7} )
 \]
-is the weight $n$ eigenspace with respect to the above $\C^\times$ action.  In particular, we see that $\mc{G}^{(0)}_{\C^3}$ is itself a local dg-Lie algebra (that we will soon describe). 
-Moreover, every $\mc{G}_{\C^3}^{(n)}$, $n \geq -1$ is a (local) module for this local dg-Lie algebra.
+is the weight $n$ eigenspace with respect to the above $\C^\times$ action.  
+In particular, we see that $\mc{G}^{(0)}_{X}$ is itself a local Lie algebra (that we will soon describe). 
+Moreover, every $\mc{G}_{X}^{(n)}$, $n \geq -1$ is a (local) module for this local dg-Lie algebra.
 
 %The $\C^\times$ action is compatible with the $\Z/2$ graded $L_\infty$ structure on $\mc{L}_{sugra}$. 
 %Since the $n$th eigenspace is trivial when $n < -1$, we see that the product
@@ -198,18 +203,18 @@ Moreover, every $\mc{G}_{\C^3}^{(n)}$, $n \geq -1$ is a (local) module for this 
 %\end{proof}
 
 
-\subsection{The lowest piece: the holomorphic twist of the abelian 6d $\mc N=(2,0)$ tensor multiplet}\label{subsec:g-1}
+\subsection{The lowest piece}
 
 The first non trivial case is the weight $(-1)$ piece.
 
 \begin{lem}
 There is an equivalence of abelian local Lie algebras 
 \[
-\mc{G}_{\C^3} ^{(-1)}\cong \Omega^{0,\bullet}_{\C^3} \left ( 
+\mc{G}_{X} ^{(-1)}\cong \Omega^{0,\bullet}_{X} \left ( 
 \begin{tikzcd}
 \ul{+} & \ul{-} \\
-\C^2\otimes K^{1/2}_{\C^3} & \\ 
-\mc{O}_{\C^3} \ar[r, "\del"] & \Omega^1_{\C^3} 
+\C^2\otimes K^{1/2}_{X} & \\ 
+\mc{O}_{X} \ar[r, "\del"] & \Omega^1_{X} 
 \end{tikzcd}
 \right )
 \] 
@@ -218,27 +223,27 @@ There is an equivalence of abelian local Lie algebras
 We readily see that the fields of weight $-1$ include
 \begin{itemize}
 \item 
-fields of type $\mu$ of the form $\mu_a (z_i)\del_{w_a}$. As $w_a$ are fiber coordinates on $K^{1/2}_{\C^3}$, these fields transform as sections of $K^{1/2}_{\C^3}$. 
+fields of type $\mu$ of the form $\mu_a (z_i)\del_{w_a}$. As $w_a$ are fiber coordinates on $K^{1/2}_{X}$, these fields transform as sections of $K^{1/2}_{X}$. 
 \item 
-fields of type $\beta$ with no $w_a$-dependence. These fields constitute a copy of $\mc {O}_{\C^3}$.
+fields of type $\beta$ with no $w_a$-dependence. These fields constitute a copy of $\mc {O}_{X}$.
 \item 
-fields of type $\gamma$ of the form $\gamma_i(z_i)\d z_i$. These fields constitute a copy of $\Pi \Omega^1_{\C^3}$. 
+fields of type $\gamma$ of the form $\gamma_i(z_i)\d z_i$. These fields constitute a copy of $\Pi \Omega^1_{X}$. 
 \end{itemize}
 Since $\del$ is weight zero for this $\C^\times$ action, the fields of the last two type combine to give the complex of sheaves
 \[
-\mc{O}_{\C^3}  \xto{\del} \Pi \Omega^{1}_{\C^3}  .
+\mc{O}_{X}  \xto{\del} \Pi \Omega^{1}_{X}  .
 \]
 
 \end{proof}
 
 \parsec[]
-In \cite{SWtensor} Saberi and Williams, the authors studied the minimal twist of the 6d $\mc N=(2,0)$ abelian tensor multiplet. The twist is a free theory and can be defined on any complex three-fold admitting a square root of its canonical bundle. On $\C^3$, the $\Z\times \Z/2$ graded sheaf of complexes $\mc E_{tens}$ encoding its field content is given by 
+In \cite{SWtensor} Saberi and Williams, the authors studied the minimal twist of the 6d $\mc N=(2,0)$ abelian tensor multiplet. The twist is a free theory and can be defined on any complex three-fold admitting a square root of its canonical bundle. On $X$, the $\Z\times \Z/2$ graded sheaf of complexes $\mc E_{tens}$ encoding its field content is given by 
 
 \begin{equation}
 \begin{tikzcd}
 \ul{-1} & \ul{0} \\
-\Pi \C^2\otimes \Omega^{0,\bullet}_{\C^3} \otimes  K_{\C^3}^{1/2}  & \\
-\Omega^{2,\bullet}_{\C^3} \ar[r,"\del"] & \Omega^{3,\bullet}_{\C^3} 
+\Pi \C^2\otimes \Omega^{0,\bullet}_{X} \otimes  K_{X}^{1/2}  & \\
+\Omega^{2,\bullet}_{X} \ar[r,"\del"] & \Omega^{3,\bullet}_{X} 
 \end{tikzcd} 
 \end{equation}
 Here we recall in the $\Z \times \Z/2$ bigrading the differential has bidegree $(1,0)$. 
@@ -246,27 +251,27 @@ Here we recall in the $\Z \times \Z/2$ bigrading the differential has bidegree $
 We observe the following:
 \begin{prop}
 \label{prop:factabelian}
-There is a quasi-isomorphism of factorization algebras valued in $\Z/2$ graded commutative dg algebras on $\C^3$
+There is a quasi-isomorphism of factorization algebras valued in $\Z/2$ graded commutative dg algebras on $X$
 \[
-\mc U (\mc G^{(-1)}_{\C^3} )\xto{\simeq} \clie^\bullet(\Pi \mc E_{tens})
+\mc U (\mc G^{(-1)}_{X} )\xto{\simeq} \clie^\bullet(\Pi \mc E_{tens})
 \]
 \end{prop}
 
 \begin{proof}
-Recall that the factorization algebra $\mc U(\mc{G}_{\C^3}^{(-1)})$ assigns to an open set $U\subset \C^3$ the graded symmetric algebra on the complex
+Recall that the factorization algebra $\mc U(\mc{G}_{X}^{(-1)})$ assigns to an open set $U\subset X$ the graded symmetric algebra on the complex
 \begin{equation}\label{eqn:weight-1}
 \begin{tikzcd}
 \ul{-} & \ul{+}\\
-\Omega_{\C^3, c}^{0,\bullet}(U) \ar[r,"\del"] & \Omega_{\C^3, c}^{1,\bullet}(U) \\
-\Omega_{\C^3, c}^{0,\bullet}(U, \C^2\otimes K^{1/2}) & 
+\Omega_{X, c}^{0,\bullet}(U) \ar[r,"\del"] & \Omega_{X, c}^{1,\bullet}(U) \\
+\Omega_{X, c}^{0,\bullet}(U, \C^2\otimes K^{1/2}) & 
 \end{tikzcd}
 \end{equation}
-On the other hand, if we totalize the $\Z\times\Z/2$-grading on $\mc E_{tens}$ to a $\Z/2$-grading, the factorization algebra $\clie^\bullet (\Pi \mc E_{tens})$ assigns to an open set $U\subset \C^3$ the symmetric algebra on the complex 
+On the other hand, if we totalize the $\Z\times\Z/2$-grading on $\mc E_{tens}$ to a $\Z/2$-grading, the factorization algebra $\clie^\bullet (\Pi \mc E_{tens})$ assigns to an open set $U\subset X$ the symmetric algebra on the complex 
 \begin{equation}
 \begin{tikzcd}
 \ul{-} & \ul{+}\\
-\Omega_{\C^3}^{2,\bullet}(U)^\vee \ar[r,"\del"] & \Omega_{\C^3}^{3,\bullet}(U)^\vee \\
-& \Omega_{\C^3}^{0,\bullet}(U, \C^2\otimes K^{1/2})^\vee \\
+\Omega_{X}^{2,\bullet}(U)^\vee \ar[r,"\del"] & \Omega_{X}^{3,\bullet}(U)^\vee \\
+& \Omega_{X}^{0,\bullet}(U, \C^2\otimes K^{1/2})^\vee \\
 \end{tikzcd}
 \end{equation}
 
@@ -275,17 +280,16 @@ Here the superscript refers to the topological dual, which is described in terms
 \begin{equation}
 \begin{tikzcd}
 \ul{-} & \ul{+}\\
-\overline \Omega_{\C^3, c}^{0,\bullet}(U) \ar[r,"\del"] & \overline \Omega_{\C^3, c}^{1,\bullet}(U) \\
-\overline \Omega_{\C^3, c}^{0,\bullet}(U, \C^2\otimes K^{1/2}) & 
+\overline \Omega_{X, c}^{0,\bullet}(U) \ar[r,"\del"] & \overline \Omega_{X, c}^{1,\bullet}(U) \\
+\overline \Omega_{X, c}^{0,\bullet}(U, \C^2\otimes K^{1/2}) & 
 \end{tikzcd}
 \end{equation}
-
-where the degree shift is coming from Serre duality. The result then follows from the fact that by ellipticity, the natural inclusion $\Omega^{0,\bullet}_{\C^3,c}\to\overline \Omega^{0,\bullet}_{\C^3,c}$ is a quasi-isomorphism.
+where the degree shift is coming from Serre duality. The result then follows from the fact that by ellipticity, the natural inclusion $\Omega^{0,\bullet}_{X,c}\to\overline \Omega^{0,\bullet}_{X,c}$ is a quasi-isomorphism.
 \end{proof}
 
 \subsection{The zero-th piece: a local version of $E(3|6)$}
 
-As before, the weight zero summand $\mc{G}_{\C^3} ^{(0)}$ is special because it carries the induced structure of a local $L_\infty$-algebra on ${\C^3} $ inherited from the $L_\infty$ structure on $\Pi\Omega^{0,\bullet} (\mc L^{r = 0}_{AdS_7\times S^4} )$ identified in section \ref{sec:transversebc}. We will prove that it is equivalent to a local Lie algebra version of the exceptional super-Lie algebra $E(3|6)$ \cite{KacBible}.
+As before, the weight zero summand $\mc{G}_{X} ^{(0)}$ is special because it carries the induced structure of a local $L_\infty$-algebra on ${X} $ inherited from the $L_\infty$ structure on $\Pi\Omega^{0,\bullet} (\mc L^{r = 0}_{AdS_7} )$ identified in section \ref{sec:transversebc}. We will prove that it is equivalent to a local Lie algebra version of the exceptional super-Lie algebra $E(3|6)$ \cite{KacBible}.
 
 We first recall the definition of this super-Lie algebra. 
 
@@ -346,7 +350,7 @@ Thus we see that this page of the spectral sequence is given by
 \end{equation}
 and there are no non-zero differentials so the spectral sequence degenerates.
 
-To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )$ is in fact given by the same formulae as the brackets on $E(3|6)$ given in \ref{defn:e(3|6)}, it will be useful to provide an explicit quasi-isomorphism $\Phi^{(0)} : \mc E(3|6) \to \mc G^{(0)}_{\C^3}$. On an open set $U\subset \C^3$, this is defined as follows.
+To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7} )$ is in fact given by the same formulae as the brackets on $E(3|6)$ given in \ref{defn:e(3|6)}, it will be useful to provide an explicit quasi-isomorphism $\Phi^{(0)} : \mc E(3|6) \to \mc G^{(0)}_{\C^3}$. On an open set $U\subset \C^3$, this is defined as follows.
 
 \begin{itemize}
 \item Given a section $g_i(z)\del_{z_i}\in \Omega^{0,\bullet}_{\C^3} (U, T)$ where $g_i(z)$ is a Dolbeault form on $U$, we define
@@ -370,10 +374,10 @@ To see that the Lie structure induced from the $L_\infty$-structure on $\Omega^{
 
 The result then follows from computing the limit of $\mc E(3|6) (D^3)$ over open sets containing the origin.
 \end{proof}
-
-\begin{rmk}
-We note that the map $i_{M5}$ from lemma \ref{lem:m5emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )$ over every open set containing the origin. The image of the map lands exactly in the step $\mc G^{(0)}_{\C^3}$ of the decomposition from proposition \ref{prop:ads7decomp}. Therefore we see that $E(3|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
-\end{rmk}
+%
+%\begin{rmk}
+%We note that the map $i_{M5}$ from lemma \ref{lem:m5emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7} )$ over every open set containing the origin. The image of the map lands exactly in the step $\mc G^{(0)}_{\C^3}$ of the decomposition from proposition \ref{prop:ads7decomp}. Therefore we see that $E(3|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
+%\end{rmk}
 %\begin{rmk}
 %In \cite{KacClass} an embedding of super Lie algebras from $E(3|6)$ into $E(5|10)$ is constructed.
 %Recall that in the case $Z = \C^3$, the $\infty$-jets at $0 \in \C^3$ of the local Lie algebra $\mc{E}(3|6)$ is precisely the exceptional super Lie algebra $E(3|6)$.
@@ -443,7 +447,7 @@ Let $j \geq 1$.
 The complex of vector bundles $\mc{G}^{(j)}$ is quasi-isomorphic to
 \begin{equation}
 \label{eqn:Gj}
-\Omega^{0,\bullet}_{\C^3} \left (\begin{tikzcd}
+\Omega^{0,\bullet}_{X} \left (\begin{tikzcd}
 \ul{even} & \ul{odd} \\
 \Sym^{j}(\C^2) \otimes \T \otimes K^{-j/2} & \Sym^{j-1}(\C^2) \otimes K^{-(j+1)/2}\\
 \Sym^{j+2}(\C^2) \otimes K^{-j/2} & \Sym^{j+1}(\C^2) \otimes \T^* \otimes K^{-(j+1)/2} .
@@ -452,7 +456,7 @@ The complex of vector bundles $\mc{G}^{(j)}$ is quasi-isomorphic to
 \end{prop}
 
 \begin{proof}
-We begin by noting that we can explicitly describe the weight $j$ component $\mc G^{(j)}_{\C^3}$ as $\Omega^{0,\bullet}_{\C^3} (G^{(j)})$ where $G^{(j)}$ is the following dg-vector bundle
+We begin by noting that we can explicitly describe the weight $j$ component $\mc G^{(j)}_{X}$ as $\Omega^{0,\bullet}_{X} (G^{(j)})$ where $G^{(j)}$ is the following dg-vector bundle
 \begin{equation}
 \begin{tikzcd}
 \ul{even} & \ul{odd} \\
@@ -465,7 +469,7 @@ We begin by noting that we can explicitly describe the weight $j$ component $\mc
 \end{tikzcd}
 \end{equation}
 
-Note that the differentials here are $\mf{sl}(2)$-equivariant maps, tensored with a differential operator acting on sections of a bundle on $\C^3$. In particular
+Note that the differentials here are $\mf{sl}(2)$-equivariant maps, tensored with a differential operator acting on sections of a bundle on $X$. In particular
 
 \begin{itemize}
 \item The differential $\del^W_\Omega$ is the canonical projection \[\Sym^{j+1}(\C^2) \otimes \C^2 \cong \Sym^{j+2} (\C^2) \oplus \Sym ^j (\C^2) \twoheadrightarrow \Sym^j (\C^2)\] tensored with the identity acting on $K^{-j/2}$. 
@@ -593,7 +597,7 @@ The rightmost downward arrow is induced by the remaining $\mf{sl}(2)$ projection
 
 \parsec[s:kacrelation]
 
-The decomposition of $\Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )$ in equation \eqref{eqn:Gdecomp} is closely related to a decomposition of the exceptional simple super Lie algebra $E(5|10)$ studied in \cite{KR2}. In \ref{thm:global}, we showed that the global sections of the parity shifted fields of our eleven-dimensional theory on flat space is quasi-isomorphic to a Lie 2-extension of $E(5|10)$, which we denoted $\widehat{E(5|10)}$. More precisely, we found a Lie 2-extension of a version of $E(5|10)$ built out of polynomials rather than Taylor series. Given that the $L_\infty$ structure on $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )$ is given by the same formulas as that on $\Pi \mc E$, it is easy to see that the space of $\infty$-jets of $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7\times S^4} )$ at the origin, which following lemma \ref{} has underlying vector space $\mc H_{AdS_7\times S^4}$, is quasi-isomorphic to $\widehat{E(5|10)}$. 
+In the case $X = \C^3$, the decomposition of $\Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7} )$ in equation \eqref{eqn:Gdecomp} is closely related to a decomposition of the exceptional simple super Lie algebra $E(5|10)$ studied in \cite{KR2}. In \ref{thm:global}, we showed that the global sections of the parity shifted fields of our eleven-dimensional theory on flat space is quasi-isomorphic to a Lie 2-extension of $E(5|10)$, which we denoted $\widehat{E(5|10)}$. More precisely, we found a Lie 2-extension of a version of $E(5|10)$ built out of polynomials rather than Taylor series. Given that the $L_\infty$ structure on $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7} )$ is given by the same formulas as that on $\Pi \mc E$, it is easy to see that the space of $\infty$-jets of $\Pi \Omega^{0,\bullet}_{\C^3} (\mc L^{r=0}_{AdS_7} )$ at the origin, which following lemma \ref{} has underlying vector space $\mc H_{AdS_7}$, is quasi-isomorphic to $\widehat{E(5|10)}$. 
 
 In \cite{KR2} the following weight decomposition of $E(5|10)$ is constructed. Splitting $\C^5 = \C^2_{w_a}\times \C^3_{z_i}$ as we have been doing, we stipulate that
 \begin{itemize} 
@@ -603,7 +607,7 @@ In \cite{KR2} the following weight decomposition of $E(5|10)$ is constructed. Sp
 Thus, for example, the odd element $[\d w_1 \d z_1] \in \Omega^{2,cl}(\widehat{D}^5)$ carries weight $+1 - 1 = 0$. Viewing the odd part as the space of closed two-forms, then equivalently this grading translates to the one-form symbol $\d(-)$ as carrying weight $-1/2$.
 \end{itemize} 
 
-It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. Moreover, we see that similarly to the decomposition of $\mc H_{AdS_7\times S^4}$ induced by our $\C^\times$ action in \ref{prop:ads7decomp}, the weight grading is concentrated in degrees $\geq -1$.  In particular, there is a decomposition of super vector spaces
+It is straightforward to verify that this weight grading is compatible with the super Lie algebra structure on $E(5|10)$. Moreover, we see that similarly to the decomposition of $\mc H_{AdS_7}$ induced by our $\C^\times$ action in \ref{prop:ads7decomp}, the weight grading is concentrated in degrees $\geq -1$.  In particular, there is a decomposition of super vector spaces
 \begin{equation}\label{eqn:decomp1}
 E(5|10) = \tilde U_{-1} \times \prod_{j \geq 0} U_j 
 \end{equation}
@@ -617,9 +621,13 @@ In this way, we get a related decomposition of super $L_\infty$ algebras
 were $U_{-1}$ is a $\C$-extension of $\tilde U_{-1}$ defined in the decomposition \eqref{eqn:decomp1} and for $j \geq 0$ the $U_j$'s are the same as in the non centrally extended case. As a corollary, we see that each of the $E(3|6)$ modules which we have identified as the costalk at 0 $\mc G^{(j)}_{\C^3, c} (0)$ is in fact irreducible \surya{is this last sentence actually true? these aren't the same modules}
 
 \subsection{Characters of $E(3|6)$-modules}\label{e36char}
-The decomposition of the state space $\Sym \left (\mc H_{AdS_7\times S^4}\right ) = \prod_{j\geq -1} \mc U (\mc G^{(j)})(0)$ gives a product formula for the characters computed in proposition \ref{prop:sugraindex1}
+The decomposition of the state space 
+\[
+\Sym \left (\mc H_{AdS_7}\right ) = \prod_{j\geq -1} \mc U (\mc G^{(j)})(0) 
+\] 
+gives a product formula for the characters computed in proposition \ref{prop:sugraindex1}
 
-\[ \chi \left ( \Sym \mc H_{AdS_7\times S^4} \right ) = \prod_{j\geq -1} \chi \left (\mc U (\mc G^{(j)})(0) \right ) \]
+\[ \chi \left ( \Sym \mc H_{AdS_7} \right ) = \prod_{j\geq -1} \chi \left (\mc U (\mc G^{(j)})(0) \right ) \]
 
 We end this section by computing each of the characters $\chi \left (\mc U (\mc G^{(j)})(0) \right )$. We will express our characters in terms of characters of highest weight representations of $\mf{sl}(2)$ and $\mf {sl}(3)$, which we denote by $\chi_k^{\mf{sl}(2)}$ and $\chi^{\mf{sl}(3)}_{[k,l]}$.
 
@@ -739,7 +747,7 @@ We proceed exactly analogously to all the previous cases. Using elliptic regular
 \end{proof}
 
 \parsec[]
-As a consequence, we have that $f_{AdS_7\times S^4} (y_i, y, q) = \sum_{j\geq -1} g_j (y_i, y, q)$, or explicitly:
+As a consequence, we have that $f_{AdS_7} (y_i, y, q) = \sum_{j\geq -1} g_j (y_i, y, q)$, or explicitly:
 \begin{align*}
 & \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+ (1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)}  \\ 
 & =  \frac{qy + q^2y^{-1} - q^2(y^{-1}_1+y^{-1}_2+y^{-1}_3) + q^3}{(1-y_1q) (1-y_2 q) (1-y_3 q)} \\
@@ -748,7 +756,7 @@ As a consequence, we have that $f_{AdS_7\times S^4} (y_i, y, q) = \sum_{j\geq -1
  - q^{3(j+1)/2} \chi^{\mf{sl}(2)}_{j-1}(q^{-1/2}y) - \ & q^{-1 + 3(j+1)/2} \chi^{\mf{sl}(2)}_{j+1} (q^{-1/2} y) \chi^{\mf{sl}(3)}_{[0,1]}(y_i) \end{aligned} \right)}{(1-y_1 q)(1-y_2q)(1-y_3q)}
 \end{align*}
 
-In \cite[Eq. (3.22, 3.23)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_7\times S^4}$ is expressed as a sum of characters of irreducible representations of the 6d $\mc N = (2,0)$ superconformal algebra. In \cite[Table 24]{cordova2016multiplets} these representations are labeled as $\mc D_1[0,0,0]^{(0,m)}_{2m}$ where $m \geq 1$. The characters of these modules have been computed (see for example \cite[Eq. (166)]{Arai_2020} and match exactly with $g_{m-2}(y_i, y, q)$ after a suitable change of variables. Thus, we conjecture the following
+In \cite[Eq. (3.22, 3.23)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_7}$ is expressed as a sum of characters of irreducible representations of the 6d $\mc N = (2,0)$ superconformal algebra. In \cite[Table 24]{cordova2016multiplets} these representations are labeled as $\mc D_1[0,0,0]^{(0,m)}_{2m}$ where $m \geq 1$. The characters of these modules have been computed (see for example \cite[Eq. (166)]{Arai_2020} and match exactly with $g_{m-2}(y_i, y, q)$ after a suitable change of variables. Thus, we conjecture the following
 
 \begin{conj}
 For $j\geq -1$, the minimal twist of $\mc D_1[0,0,0]^{(0,j+2)}_{2(j+2)}$ is exactly $\mc G^{(j)}_{\C^3, c}(0)$.

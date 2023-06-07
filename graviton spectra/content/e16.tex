@@ -4,17 +4,56 @@
 
 \section{$E(1|6)$ modules from gravitons on $AdS_4\times S^7$}\label{sec:e16}
 
-Having justified that the spaces of supergravity states constructed in the previous subsection are in fact counting gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively, we turn to studying representation theoretic properties of these state spaces. In this section, we focus on the case of gravitons on $AdS_4\times S^7$, using the description of the state space afforded by proposition \ref{prop:altstates} which describes it as the costalk of a factorization envelopes of the boundary conditions $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4} )$.
+Having justified that the spaces of supergravity states constructed in the previous subsection are in fact counting gravitons on $AdS_4\times S^7$ and $AdS_7\times S^4$ respectively, we turn to studying representation theoretic properties of these state spaces.
 
-We construct a certain $\C^\times$-action on the boundary fields $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4} )$ equipped with the $L_\infty$ structure from remark \label{rmk:nottransferred} with the feature that the zeroth weight spaces are a local version of another exceptional linearly compact super-Lie algebras, $E(1|6)$. This in particular readily gives a decomposition of the state space $\mc H_{AdS_4}$ into $E(1|6)$-modules. We explicitly characterize the summands of this decomposition with their module structures and give closed form expressions for their characters.
+A feature of the physical $AdS_4\times S^7$ and $AdS_7\times S^4$ backgrounds is that they have as isometries, the 3d $\mc N=8$ and 6d $\mc N=(2,0)$ superconformal algebras respectively.
+In each case, the complex form of the superconformal algebra is $\lie{osp}(8|4)$ (though their real forms differ).
+In both the $AdS_4$ and $AdS_7$ cases there is a map of super Lie algebras 
+\[
+\phi \colon \mf {siso}_{11d} \to \mf {osp}(8|4).
+\]
+Further, it is observed in \cite{SWsuco2} that if $Q\in \mf{siso}_{11d}$ is the odd square-zero element used to define the minimal twist of eleven-dimensional supergravity, then the $\phi(Q)$-cohomology of the superconformal algebra is 
+\[ H^\bu \left ( \mf {osp}(8|4), [\phi(Q), - ]\right )\cong \mf {osp}(6|2).\]
+
+The super Lie algebra $\mf{osp}(6|2)$ plays the role of the residual isometries of the twisted $AdS$ background. 
+The bosonic part of $\mf{osp}(6|2)$ is the direct sum Lie algebra $\mf{sl}(4) \oplus \mf{sl}(2)$. The odd part of the algebra $\mf{osp}(6|2)$ is $\wedge^4 W \otimes R$ where $W$ is the fundamental $\mf{sl}(4)$ representation and $R$ is the fundamental $\mf{sl}(2)$ representation.
+The super Lie bracket is determined by the natural invariant symmetric-symmetric and anti-symmetric-anti-symmetric pairings.
+
+In this section we will focus on $AdS_4$.
+In \cite{RSW} we have witnessed the super Lie algebra $\lie{osp}(6|2)$ as symmetries of our eleven-dimensional model on the eleven-manifold obtained by subtracting the location of the brane
+\beqn
+\til Z = \R \times \C^5 - (\R \times \C \times 0) .
+\eeqn
+We have further checked that these symmetries extend to symmetries in the theory $\mc E^N_{AdS_4}$ for nonzero flux $N \ne 0$; thus providing evidence that $\lie{osp}(6|2)$ is a global symmetry of twisted $AdS$ space.
+
+As a consequence, the space of twisted supergravity states $\cH_{AdS_4}$ as a representation for $\lie{osp}(6|2)$.
+In this section we argue that the symmetries of twisted $AdS$ space enhance to an infinite-dimensional symmetry algebra called $E(1|6)$, which is also of exceptional type \cite{KacClass}.
+As a consequence, we understand $\cH_{AdS_4}$ as a representation for this infinite-dimensional enhancement of the three-dimensional twisted superconformal algebra.
+
+%In this section, we focus on the case of gravitons on $AdS_4\times S^7$, using the description of the state space afforded by proposition \ref{prop:altstates} which describes it as the costalk of a factorization envelopes of the boundary conditions $\Omega^\bullet _\R\otimes \Omega^{0,\bullet}_\C (\mc L^{{r=0}}_{AdS_4} )$.
+
+To this end, we construct a $\C^\times$-action on our eleven-dimensional model on twisted $AdS_4$ space.
+The homogenous components of this $\C^\times$-action should be understood as a twisted version of excited gravitational states at a particular charge.
+The weight zero part of this $\C^\times$-action is endowed with the structure of a Lie algebra, and we will see that it is precisely $E(1|6)$.
+This action readily gives a decomposition of the state space $\mc H_{AdS_4}$ into $E(1|6)$-representations.
+We explicitly characterize the summands of this decomposition with their module structures and give closed form expressions for their characters.
+
+%As is usual in the perturbative BV formalism, the BV action functional equips the parity shift of the fields $\Pi \cE$ with the structure of an $L_\infty$ algebra.
+%Consider the eleven-dimensional model that we introduced in the first section describing the putative holomorphic twist of supergravity.
+%On flat space $\til Z = \R \times \C^5$ we have shown in \cite{RSW} that there is a quasi-isomorphism of $\Pi \cE (\R \times \C^5)$ with a central extension of the exceptional super Lie algebra $E(5|10)$.
+%In this section we will deduce the analogous symmetry algebra on the twisted analogs of AdS space.
 
 \subsection{The graviton decomposition of twisted $AdS_4\times S^7$}
-\parsec{}
-We define a decomposition of the space of states $\mc H_{AdS_4}$.
-It is induced by a decomposition of the boundary fields $\cA^\bu_{M} (\mc L^{{r=0}}_{AdS_4} )$ introduced in section \ref{sec:transversebc}  arising from a $\C^\times$ action which mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
-We first consider a general three-manifold $M$ equipped with a THF; we specialize to $M = \R \times \C$ shortly.
 
-Define the $\C^*$-action on holomorphic sections of $\cL_{AdS_4}^{r=0}$:
+Recall the boundary condition at zero in twisted $AdS$ space $\cA^\bu(\cL_{AdS_4}^{r=0})$ that we introduced in section \ref{sec:transversebc}.
+Recall that this boundary condition makes sense for any three-manifold $M$ equipped with a THF.
+The parity shift of these boundary fields $\cA^\bu(\Pi \cL_{AdS_4}^{r=0})$ is equipped with an $L_\infty$ structure inherited from the BV action of the eleven-dimensional theory.
+
+%We define a decomposition of the space of states $\mc H_{AdS_4}$.
+%It is induced by a decomposition of the boundary fields $\cA^\bu_{M} (\mc L^{{r=0}}_{AdS_4} )$ introduced in section \ref{sec:transversebc}  arising from a $\C^\times$ action which mixes fiberwise rescalings on spacetime with a fiberwise rescaling of the space of fields. 
+%We first consider a general three-manifold $M$ equipped with a THF; we specialize to $M = \R \times \C$ shortly.
+
+Define the $\C^\times$-action on holomorphic sections of $\cL_{AdS_4}^{r=0}$:
 \begin{itemize}
 \item On the sections 
 \[
@@ -41,8 +80,8 @@ the action is
 \]
 \end{itemize}
 
-This $\C^*$-action on holomorphic sections extends to an action on the de Rham--Dolbeault complex $\cA^\bu_M(\cL_{AdS_7}^{r=0})$ in such a way that preserves the de Rham--Dolbeault operator.
-In fact, this $\C^*$-action preserves the full local $L_\infty$ structure present on the parity shift of this complex of vector bundles.
+This $\C^\times$-action on holomorphic sections extends to an action on the de Rham--Dolbeault complex $\cA^\bu_M(\cL_{AdS_7}^{r=0})$ in such a way that preserves the de Rham--Dolbeault operator.
+In fact, this $\C^\times$-action preserves the full local $L_\infty$ structure present on the parity shift of this complex of vector bundles.
 
 \begin{prop}\label{prop:ads4decomp}
 The $L_\infty$ structure on $\Pi \cA_M^\bu(\mc L^{r=0}_{AdS_4} )$ identified in section \ref{sec:transversebc} is equivariant for this $\C^\times$ action.
@@ -200,11 +239,11 @@ It is easy to see that $\Psi^{(0)}$ is a quasi-isomorphism and a straightforward
 The result about $\infty$-jets at $0$ in affine space $M = \R \times \C$ follows immediately.
 \end{proof}
 
-\begin{rmk}
-We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\cA_{\R \times \C}^\bu (\mc L^{r=0}_{AdS_4} )$ over every open set containing the origin. 
-The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. 
-Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
-\end{rmk}
+%\begin{rmk}
+%We note that the map $i_{M2}$ from lemma \ref{lem:m2emb} in fact defines a Lie map from $\mf{osp}(6|2)$ to the sections of the boundary condition $\cA_{\R \times \C}^\bu (\mc L^{r=0}_{AdS_4} )$ over every open set containing the origin. 
+%The image of the map lands exactly in the step $\mc F^{(0)}_{\R\times \C}$ of the decomposition from proposition \ref{prop:ads4decomp}. 
+%Therefore we see that $E(1|6)$ contains $\mf{osp}(6|2)$ as a finite dimensional subalgebra.  
+%\end{rmk}
 
 \subsection{General summands and $E(1|6)$-modules}
 We now move on to giving an explicit description of the general summand $\mc F^{(j)}$ for $j \geq 1$. 
@@ -324,7 +363,7 @@ As a consequence, of the above we have that $f_{AdS_4} (t_i, q) = \sum_{j\geq -2
 In \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_4}$ is expressed as a sum of characters of irreducible representations of the 3d $\mc N = 8$ superconformal algebra that the authors call \textit{graviton representations}. Comparison with the above expansion suggests the following conjecture
 
 \begin{conj}\label{conj:e16gravitonrep}
-For $j\geq -1$, the minimal twist of the $j+2$nd graviton representation in \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy} is exactly $\mc F^{(j)}_{\R\times \C, c}(0)$. 
+For $j\geq -1$, the minimal twist of the $(j+2)$-weight graviton representation in \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy} is exactly $\mc F^{(j)}_{\R\times \C, c}(0)$. 
 \end{conj}
 
 \begin{rmk}\label{rmk:e16enhance}
