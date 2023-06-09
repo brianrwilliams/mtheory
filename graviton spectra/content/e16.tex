@@ -94,7 +94,7 @@ This result induces a product decomposition
 where $\cF^{(n)}_M \subset \cA_M^\bu(\mc L^{r=0}_{AdS_4} )$ is the weight $n$ eigenspace with respect to the above $\C^\times$ action thought of as a complex of super vector bundles on $M$. 
 In particular, we see that $\mc F^{(0)}_{M}$ is itself a local dg Lie algebra, for which  every $\mc F^{(n)}_{M}$ is a module.
 
-\subsection{The lowest pieces and 3d $\mc N=8$ BLG theory}\label{sec:BLG}
+\subsection{The lowest pieces and minimally twisted rank 1 ABJM}\label{sec:BLG}
 \parsec[] The first nontrivial case is the weight ${(-2)}$ piece. We have the following
 
 \begin{lem}
@@ -121,17 +121,9 @@ These fields transform as sections of $K^{3/4}$.
 \end{proof}
 
 \parsec[]
-We wish to flag an appearance of $\mc F^{(-1)}_{\R\times \C}$ in supersymmetric physics in three-dimensions. There is a highly supersymmetric Chern-Simons-matter theory discovered independently by Bagger-Lambert \cite{Bagger_2007}, \cite{Bagger:2007jr} and Gustavsson \cite{Gustavsson:2007vu}. The aptly named BLG theory has $\mc N=8$ superconformal symmetry, and admits a holomorphic-topological twist that was characterized by Garner in \cite{Garner2022vds}.
+We wish to flag an appearance of $\mc F^{(-1)}_{\R\times \C}$ in supersymmetric physics in three-dimensions. There is a highly supersymmetric Chern-Simons-matter theory discovered by \cite{} which describes the low-energy dynamics of a single M2 brane probing the origin in $\C^4$. The aptly named ABJM theory has a manifest $\mc N=6$ superconformal symmetry, and admits a holomorphic-topological twist that was characterized by Garner in \cite{Garner2022vds}. Non-perturbatively, it has an $\mc N=8$ superconformal symmetry, the enhancement to which is furnished by monopole operators. 
 
-The sheaf of complexes $\mc F^{(-1)}_{\R\times \C}$ matches the field contents of the holmorphic-topological twist of the BLG theory, and as such, it can be equipped with an $L_\infty$ structure under which it is perturbatively equivalent to the twisted BLG theory. In work-in-progress with Garner and Williams, we show that the action of $\mc F^{(0)}_{\R\times \C}$ on $\mc F^{(-1)}_{\R\times \C}$ in fact preserves this $L_\infty$-structure. 
-
-\brian{it's an abelian L-infinity structure right? So we can just say complexes.}
-
-\surya{i thought the BLG theory has a quartic superpotential.}
-
-\brian{The thing we don't mention so much is the BV structure.}
-
-\brian{I think we can at least comment that the BV structure comes from the BR.}
+The sheaf of complexes $\mc F^{(-1)}_{\R\times \C}$ matches the field contents of the holmorphic-topological twist of the rank 1 ABJM theory at level 1. In work-in-progress with Garner and Williams, we explicate the action of $\mc F^{(0)}_{\R\times \C}$ on $\mc F^{(-1)}_{\R\times \C}$ at the level of local operators in terms of currents. As we describe in the next subsection, the infinity jets at the origin of $\mc F^{(0)}_{\R\times \C}$ contain a copy of the minimally twisted three-dimensional $\mc N=8$ superconformal algebra. In keeping with the fact that the rank 1 level 1 ABJM theory only admits three-dimensional $\mc N=8$ superconformal symmetry after taking into account monopoles, we see that the currents realizing the $\mc F^{(0)}_{\R\times \C}$ action involves monopoles. The fact that the action is manifest from the perspective of this paper articulates a sense in which perturbative gravity may contain information about non-perturbative brane dynamics.
 
 \subsection{The zero-th piece: A local version of $E(1|6)$}
 \parsec[] The next nontrivial case is the weight zero piece $\cF^{(0)}_M$. 
@@ -166,7 +158,7 @@ Given elements $B \otimes f \del_z^{1/2}, B'\otimes g \del_z^{1/2} \in \Gamma( \
 \end{align*}
 where again $\star$ denotes the Hodge star and the subscript of zero denotes projection to the traceless part. 
 \brian{simplify last line so it is obviously a vector field}
-
+\surya{isnt the last line an $\mf{sl}_4$ current ?}
 \brian{Choose $\d z^{-1/2}$ or $\del_z^{1/2}$}
 \end{itemize}
 
@@ -246,7 +238,9 @@ The result about $\infty$-jets at $0$ in affine space $M = \R \times \C$ follows
 %\end{rmk}
 
 \subsection{General summands and $E(1|6)$-modules}
-We now move on to giving an explicit description of the general summand $\mc F^{(j)}$ for $j \geq 1$. 
+We now move on to giving an explicit description of the general summand $\mc F^{(j)}_{\R\times \C}$ for $j \geq 1$. By proposition \ref{prrop:ads4decomp} the costalks $\mc F^{(j)}_{\R\times \C, c} (0)$ are $E(1|6)$-modules. A full classification of irreducible $E(1|6)$-modules is incomplete. Nevertheless, we expect the modules we find are irreducible.
+
+\surya{i think this is probably pretty quick just using $\mf{sl}_4$-rep theory}
 
 We first fix some notation for irreducible highest weight representations of $\mf{sl}(4)$. Let $\mf {h}\subset \mf{sl}$ be the Cartan given by diagonal matrices and let $L_i\in \mf {h}^*$ be the linear functional that picks out the $i$-th diagonal entry. We may accordingly write $\mf h^* = \C \{L_1, L_2, L_3, L_4\}/(L_1+\cdots + L_4)$. We will write $\Gamma_{a_1,a_2, a_3}$ for the irreducible representation of $\mf {sl}(4)$ of highest weight $(a_1+a_2+a_3)L_1+(a_2+a_3)L_2 + a_3L_3$. 
 
@@ -293,9 +287,6 @@ We can compute the cohomology using a spectral sequence whose first page is give
 
 Note that the decomposition of the state space $\Sym (\mc H_{AdS_4} ) = \prod_{j\geq -2} \mc U (\mc F^{(j)} _{\R\times \C} )(0)$ gives a product formula for the characters computed in proposition \ref{prop:ads4index}
 
-\brian{Might be useful to point out that a systematic characterization of irreps of $E(1|6)$ is incomplete.}
-
-\brian{But, we expect the modules appearing above to be irreducible.}
 
 \[\chi \left (\Sym (\mc H_{AdS_4} ) \right )= \prod_{j\geq -2} \chi \left ( \mc U (\mc F^{(j)} _{\R\times \C} )(0)\right ).\]
 
@@ -360,7 +351,11 @@ As a consequence, of the above we have that $f_{AdS_4} (t_i, q) = \sum_{j\geq -2
 & + \frac{q}{1-q} \sum_{j\geq 1} \left (\begin{aligned} q^{(j-2)/4}\chi^{\mf{sl}(4)}(\Gamma_{j+2,0,0})  &+ q^{(j+2)/4}\chi^{\mf{sl}(4)}(\Gamma_{j+1,0,1}) \\ - q^{j/4}\chi^{\mf{sl}(4)}(\Gamma_{j,1,0}) & - q^{(j+1)/4}\chi^{\mf{sl}(4)}(\Gamma_{j,0,0}) \end{aligned}\right ) 
 \end{align*}
 
-In \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_4}$ is expressed as a sum of characters of irreducible representations of the 3d $\mc N = 8$ superconformal algebra that the authors call \textit{graviton representations}. Comparison with the above expansion suggests the following conjecture
+In \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy}, the index counting gravitons on $f_{AdS_4}$ is expressed as a sum of characters of irreducible representations of the 3d $\mc N = 8$ superconformal algebra that the authors call \textit{graviton representations}. In \cite[Table 9]{cordova2016multiplets} these representations are examples of short representations labeled $B_1(0)_{\Delta}^{(R_1,\cdots, R_4)}$. Here the superscripts and subscript denote the $\mf{so}(8)_R$ weights and scaling dimensions of a superconformal primary respectively. 
+
+\surya{we should pin down what values of $\Delta, R_i$ appear for us}
+
+Comparison with the above expansion suggests the following conjecture
 
 \begin{conj}\label{conj:e16gravitonrep}
 For $j\geq -1$, the minimal twist of the $(j+2)$-weight graviton representation in \cite[Eq. (2.15, 2.16)]{Bhattacharya:2008zy} is exactly $\mc F^{(j)}_{\R\times \C, c}(0)$. 
