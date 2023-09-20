@@ -1,0 +1,618 @@
+%\documentclass[11pt]{amsart}
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
+%
+%\begin{document}
+
+\section{Twisted supergravity states}
+\label{sec:states}
+
+The first entry of the AdS/CFT dictionary in traditional treatments is a matching between \textit{supergravity states} and local operators in the CFT.
+The goal of this section is to provide constructions of spaces of twisted supergravity states in our eleven-dimensional model, via geometric quantization. 
+The state space on the twisted version of $AdS_{7}\times S^{4}$ has a remarkable property---it is naturally a module for a certain infinite-dimensional exceptional super Lie algebra. 
+We conclude the section by computing characters for these modules and comparing them with large $N$ indices for fivebranes and membranes in the literature.
+
+Before proceeding with the construction, let us first give some feel for the situation we hope to describe.
+Suppose we consider a gravitational theory on $AdS_{d+1}\times S^{d^{\prime}}$, which we compactify to view as a theory on $AdS_{d+1}$ with all Kaluza-Klein harmonics included. Let $M^{d}$ denote the conformal boundary of $AdS_{d+1}$. A supergravity state is traditionally defined to be a solution to linearized equations of motion with a given boundary value \cite{WittenAdS}. 
+Typically, this definition is made in situations where the relevant boundary value problem has a unique solution, in which case one may label states by the corresponding boundary values. Moreover, one may think of such boundary values as arising from modifications of a vacuum boundary condition at a point.
+
+
+\subsection{Twisted Backreactions}
+We begin by describing the relevant backgrounds. In eleven-dimensional supergravity, the $AdS_7 \times S^4$ background is obtained by backreacting a number of fivebranes in flat space \cite{Maldacena:1997re,WittenAdS}.
+In \cite{RSW} we gave descriptions of twisted versions of this background. We will recall this construction, adapted to a slightly more global situation than considered previously.
+
+We will consider the eleven-dimensional theory on eleven-manifolds that arise as total spaces of vector bundles. Placing the theory in the backreacted geometry is a two step procedure:
+
+\begin{itemize}
+  \item Place the eleven-dimensional theory on the complement of the zero section. 
+  To do so, we will wish to describe the complement of the zero-section in a way that facilitates a description of the perturbative theory in terms of natural operations on holomorphic-topological local $L_{\infty}$-algebras.
+
+  \item Deform the theory on the complement of the zero section by a certain Maurer--Cartan element.
+  The Maurer--Cartan element is thought of as the flux sourced by branes wrapping the zero section.
+\end{itemize}
+
+This procedure is implemented at the level of the $\Omega$-deformed nonminimal twist on flat space in the appendix of \cite{CostelloM5}.
+%\parsec[s:brkevin]
+%As a way to highlight the key aspects of the construction, we detail the ingredients in the simplified model of Costello's twisted $M$ theory. The relevant local calculation can be found in the appendix of \cite{}; our goal here is to simply identify the salient global features that allow one to reduce to said local calculation.
+
+%We consider the theory on $M = \text{Tot} (\R\oplus K_{C})$, with some number of twisted `fivebranes' wrapping the zero section
+%\[
+%0 \times C \subset \R \times \T^* C .
+%\]
+%Denote by $t$ the real coordinate and by $w$ the fiber coordinate in $\T^* C$. We wish to describe the complement of the zero section $\mathring M = M - 0 \times C$.
+
+%Note that the bundle $\R\oplus K_{C}$ is equipped with a partially flat connection - this data equips the total space $M$ with the data of a transversely holomorphic foliation (THF) \cite{DuchampKalka}.
+
+%If we choose a fiberwise partially hermitian metric on the bundle $\R \oplus K_C$ we obtain a projection $p: \R \times \T^*C \to \R_{+} \times C$ which combines the fiberwise norm with the natural bundle projection. The restriction $p| \mathring M$ equips $\mathring M$ with the structure of an $S^{2}$-bundle over $\R_{>0}\times C$. Moreover, the partial flat connection on $\R\oplus K_{C}$ induces a partially flat connection on $\mathring M$. As part of this data, each of the fiber spheres is equipped with a complex foliation of rank 1.
+
+%Compactification amounts to pushing forward a local $L_{\infty}$-algebra along $p| \mathring M$. The result is a theory with infinitely many Kaluza--Klein modes along the fiber spheres. In the holomorphic-topological setting, the Kaluza-Klein modes will be modeled by a variant of Cauchy-Riemann cohomology.
+
+%Moreover, including the flux sourced by the brane deforms this structure. The lowest lying Kaluza-Klein modes in the deformed theory are equivalent to three-dimensional Chern-Simons theory.
+
+%For sake of analogy, we think of the resulting deformation as being a twisted version of $AdS_3 \times S^2$.\footnote{It is an interesting question if this corresponds the actual twist of a five--dimensional supersymmetric background of this form.}
+%We proceed to describe the twisted version of states at the boundary of this version of $AdS$.
+%We first proceed before turning on the flux sourced by the brane.
+
+%The theory admits a natural `vacuum' boundary condition at $r=0$.
+%In local coordinates, these are fields $\alpha(t,z,w)$ on the complement to the brane which extend to regular functions along the brane.
+
+%The `supergravity states' are, by definition, fields which satisfy the linearized equations of motion and satisfy the vacuum boundary condition except at a single point.
+%The linearized equations of motion are simply $(\d_{dR} + \dbar) \alpha = 0$.
+%Thus, up to equivalence, all solutions to the linearized equations of motion are constant in the real variable $t$, and holomorphic in $z,w$.
+
+%Modifications of the boundary condition at the point~$z = 0$ on the boundary take the form
+%\[
+%\alpha = f(w) \delta^{(r)}_{z=0}
+%\]
+%where $f$ is some holomorphic function.
+%Here $\delta^{(r)}_{z=0}$ denotes the $r$th derivative of the $\delta$-function at $z=0$.
+%It is convenient to parameterize such boundary modifications algebraically by expressions of the form
+%\[
+%\alpha_{k,r} = w^k \delta^{(r)}_{z=0} .
+%\]
+%Linear combinations of such states form a dense subspace of all possible modifications at the boundary.
+
+%The reason that the boundary modifications take this form can be seen by understanding in more explicit terms the vacuum boundary condition.
+%The phase space at the boundary $C$ can be identified with the following cohomology
+%\[
+%\Omega^{0,\bu}(C) \otimes \cA^{0;\bu}(\R \times \C - 0) [1]
+%\]
+%where $\cA^{0;\bu}$ denotes the mixed de Rham--Dolbeault cohomology of $\R \times \C - 0$ as a manifold equipped with a transversely holomorphic foliation \cite{DuchampKalka}.
+%We refer to the section below for a reminder on this geometric structure.
+
+%The phase space is equipped with a natural symplectic form given by
+%\[
+%\int_C \d z \oint_{S^2} \d w \, \alpha \wedge \alpha' .
+%\]
+%There is a natural Lagrangian inside of the phase space which consists of linear combinations of elements $\alpha(z) \otimes f(t,w)$ where $\alpha(z) \in \Omega^{0,\bu}(C)$ and $f(t,w)$ is a smooth function on $\R \times \C - 0$ which extends to zero.
+%The linearized equations of motion simply say that $\alpha$ is holomorphic, $f$ is independent of $t$ and depends holomorphically on $w$
+
+\parsec[s:brfive]
+
+We now carry out the above procedure to backreact fivebranes in our eleven-dimensional model.
+Let $Z$ be a three-fold that the fivebranes wrap.
+We also fix a rank 2 holomorphic vector bundle $W\to Z$ such that $\wedge^{2} W \cong K_{Z}$;
+this condition ensures that the total space of $W$ is a Calabi-Yau five-fold. In the main body of the paper we will choose $W$ to be the bundle $K_{Z}^{1/2}\otimes \C^{2}$.
+
+Consider the bundle $\R\oplus W$; this bundle has a canonical partially flat connection. We wish to consider our eleven dimensional model on $M = \text{Tot} (\R\oplus W)$ which is the total space of the \textit{real} rank five bundle $\R\oplus W$ over $Z$. The partially flat connection on $\R\oplus W$ equips $M$ with a canonical THF structure $F_{M}\subset T_{M}^{\C}$.
+
+We place a stack of $N$ fivebranes wrapping the zero section in $\R\oplus W$.
+Denote the complement of the zero section by
+\[
+\mathring{M} = \text{Tot}(\R\oplus W) - 0(Z).
+\]
+We choose fiber coordinates of the bundle $t, w_{1}, w_{2}$ of $\R \oplus W$ over $Z$ and a fiberwise partially hermitian metric.
+The corresponding norm defines a map
+\begin{align*}
+ h \colon  M & \to \R_{+} \\
+  (t, w_{i}, \bar{w_{i}}, p)& \mapsto t^{2} + |w_{1}|^{2}+|w_{2}|^{2}
+\end{align*}
+Letting $\pi \colon M \to Z$ be the natural projection, we obtain the projection
+\[
+p \define (h,\pi) \colon M \to \R_{+}\times Z
+\]
+which restricts to an $S^4$ bundle $p|\mathring {M} \colon \mathring{M} \to \R_{>0} \times Z$.
+These embeddings and projections fit inside of the following commutative diagram
+\[
+\begin{tikzcd}
+\mathring{M} \ar[d,"p|\mathring M"'] \ar[r,hook] & M \ar[d,"p"] & \ar[l,hook',"0"'] Z \ar[d,"="] \\
+\R_{>0} \times Z \ar[r,hook] & \R_{+} \times Z & \ar[l,hook',"0 \times \id"] Z.
+\end{tikzcd}
+\]
+The inclusions on the left are the natural embeddings.
+The top right inclusion is the zero section of $M = {\rm Tot}(\R \oplus V)$ and the bottom right inclusion is the embedding at radius $r = 0$.
+
+As we elaborated in \S \ref{s:thfmflds}, the eleven-dimensional theory is defined on the THF manifold $\mathring M$---in the BV formalism this is encoded, in part, by the sheaf of $L_\infty$ algebras $\cL_{sugra}$ on $\mathring M$. Compactification of this theory along the $S^4$ link corresponds to pushing forward this sheaf along $p|\mathring M$. The resulting sheaf of $L_\infty$ algebras $(p|\mathring M)_*\cL_{sugra}$ describes, in the BV formalism, the compactified theory on the seven-manifold $\R_{>0} \times Z$.
+
+We will compute the pushforward using the prescription for pushing forward a $\cA^{\bu}_{F}$-module along a compatible submersion outlined in \cite{KormanThesis}. Recall that we have a THF structure on $M$, given by an involutive subbundle $F_{M}\subset T^{\C}_{M}$, induced from a partially flat conneciton on $\R\oplus W$. The situation is summarized in the diagram below.
+\[
+  \begin{tikzcd}
+    0 \ar[r] & F_{M}\cap T_{M/Z}\ar[r]\ar[d] & F_{M}\ar[r]\ar[d]  & \pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{M/Z}\ar[r] & T_{M}\ar[r] & T_{Z}\ar[r] & 0.
+  \end{tikzcd}
+\]
+We will assume that the top left corner $F_{M}\cap T_{M/Z}$ is again a vector bundle. Moreover, we adopt the convention that all vector bundles are complex unless otherwise mentioned.
+
+The existence of a partially flat connection amounts to a choice of splitting \[\sigma \colon \pi^{*}T^{0,1}_{Z}\to F_{M}\] of the top row. Both $F_{M}$ and $\pi^{*}T^{1,0}_{Z}$ are involutive, and the flatness of the connection implies that $\sigma$ preserves the lie brackets on sections.
+
+We have a similar diagram expressing that the sphere bundle $\mathring M \to \R_{>0}\times Z$ is a map of THF manifolds when both the domain and codomain are equipped with the induced THF structures.
+\[
+  \begin{tikzcd}
+    0 \ar[r] & F_{\mathring M}\cap T_{\mathring M/\R_{>0}\times Z}\ar[r]\ar[d] & F_{\mathring M}\ar[r]\ar[d]  & h^{*}T_{\R_{>0}}\oplus\pi^{*}T^{0,1}_{Z}\ar[r]\ar[d] & 0 \\
+    0 \ar[r] & T_{\mathring M/\R_{>0}\times Z}\ar[r] & T_{\mathring M}\ar[r] & h^{*}T_{\R_{>o}}\oplus T_{Z}\ar[r] & 0.
+  \end{tikzcd}
+\]
+
+It follows from the assumption that $F_{M}\cap T_{M/Z}$ is a vector bundle that the top left hand corner of the above diagram is as well. Moreover, the splitting $\sigma$ can be extended to a splitting $\mathring \sigma : h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}\to F_{\mathring M}$; the extension is an adapted connection in the language of \cite{KamberTondeur}.
+
+For each of the involutive subbundles $F$ appearing in the top row of the above diagram, we wish to describe certain  To make the burden less cumbersome, we will drop mention of the foliation and instead refer to the whether the leaves lie along the base or fiber of the submersion $p$.
+
+Explicitly, we set
+\[
+  \cA^{\bu}_{\mathring M/\R_{>0}\times Z} = \cA^{\bu}_{F_{\mathring M}\cap T^{\C}_{\mathring M/ \R_{>0}\times Z}}
+\]
+for the complex resoling functions on $\mathring M$ constant in the directions of $F_{\mathring M}$ that are tangent to the fibers of $(p|\mathring M)$.
+
+Likewise, we let
+\[
+  F_{\R_{>0}\times Z} = T_{\R_{>0}}\oplus T^{0,1}_{Z}
+\] 
+be the subbundle of the tangent bundle of the base locally spanned by $\del_{r}, \del_{z_{i}}$ and $(p|\mathring M)^{*}F_{\R_{>0}\times Z} = h^{*}T_{\R_{>0}}\oplus \pi^{*}T^{0,1}_{Z}$ the pullback, which is a subbundle of $T_{\mathring M}$. We will let $\cA^{\bu}_{\R_{>0}\times Z} = \cA^{\bu}_{F _{\R_{>0}\times Z}}$ denote the THF complex resolving functions constant along the leaves of this foliation on the base.
+
+Our goal is to describe the derived pushforward $(p|\mathring M)_{*}\cL_{sugra}$ as a $\cA^{\bu}_{\R_{>0}\times Z}$-module.
+
+We first note that the splitting $\mathring \sigma$ gives us an isomorphism of $C^{\infty}_{\mathring M}$-modules
+\begin{align*}
+  \cA^{\bu}_{\mathring M}(L) & \cong \cA^{\bu}_{(p|\mathring M)^{*}F_{\R_{>0}\times Z}}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
+                         & \cong (p|\mathring M)^{*}\cA ^{\bu}_{\R_{>0}\times Z}\otimes \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \\
+\end{align*}
+where we have used the fact that pullback commutes with taking the exterior power. Here, the tensor product is take in $C^{\infty}_{\mathring M}$-modules.
+
+%Note that since we have a complex of locally free $C^{\infty}_{\mathring M}$-modules, the derived pushforward along $(p|\mathring M)_{*}$ coincides with the orinary pushforward. Moreover since the derived pushforward commutes with tensor product, we have that the $(p|\mathring M)_{*}\cL_{sugra}$ is given by
+
+By the projection formula, there is an isomorphism of $C^{\infty}_{\R_{>0}\times Z}$-modules
+\[
+\cA ^{\bu}_{\R_{>0}\times Z}\otimes_{C^{\infty}_{\R_{>0}\times Z}} (p|\mathring M)_{*}\cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \to (p|\mathring M)_{*}\left ( (p|\mathring M)^{*}\cA ^{\bu}_{\R_{>0}\times Z}\otimes_{C^{\infty}_{\mathring M}} \cA^{\bu}_{{\mathring M/ \R_{>0}\times Z}}(L) \right )\]
+
+%Now the unit of the adjunction between inverse and direct image of $C^{\infty}_{M}$-modules induces a map
+%\[
+%  \cA^{#}_{\R_{>0}\times Z} \to (p|\mathring M)_{*}(p|\mathring M)^{*}\cA ^{#}_{\R_{>0}\times Z}
+%\]
+
+The left hand side of the above isomorphism has a canonical $\cA ^{\#}_{\R_{>0}\times Z}$-module structure. 
+It remains to discuss compatibility with the differential along the base. The compatibility condition is expressed through the observation that the pro-vector bundle \[(p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\] will have the structure of a partial flat connection defined along the leaves of $F_{\R_{>0}\times Z}$. We can construct such a connection from analyzing the behavior of the THF differential $\thfd$ under the splitting.
+
+ The THF differential induces a derivation of total degree 1 on the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ so it is determined by its restrictions
+
+\[\thfd_{i} \colon  (p|\mathring M)_{*} \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \to \cA^{i}_{\R_{\geq >0} \times Z}\otimes _{C^{\infty}_{\R_{>0}\times Z}}(p|\mathring M)_{*} \cA^{\bullet-i+1}_{\mathring M/\R_{>0}\times Z}(L).\]
+
+We may understand the first few terms, along with the relations implied by $\thfd^{2} = 0$:
+\begin{itemize}
+  \item The first term \[\thfd_{0} : (p|\mathring M_{*})\cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\to (p|\mathring M_{*})\cA^{\bullet+1}_{\mathring M/\R_{>0}\times Z}(L)\] is the internal differential.
+
+  \item The second term \[\thfd_{0} : (p|\mathring M_{*})\cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\to \cA^{1}_{\R_{\geq 0}\times Z}\otimes _{C^{\infty}_{\R_{>0}\times Z}}(p|\mathring M_{*})\cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\] is a partial connection. However, it is not flat. Rather the failure for flatness is captured by \[ \thfd_{1}^{2} + [\thfd_{0}, \thfd_{2}] = 0 \] where \[ \thfd_{2} : (p|\mathring M_{*})\cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L)\to \cA^{2}_{\R_{\geq 0}\times Z}\otimes _{C^{\infty}_{\R_{>0}\times Z}}(p|\mathring M_{*})\cA^{\bullet-1}_{\mathring M/\R_{>0}\times Z}(L) \] is a nullhomotopy.
+\end{itemize}
+In particular, $\thfd_{1}$ induces a partial flat connection along $F_{\R_{>0}\times Z}$ the hypercohomology \[\mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L)\right )\].
+
+In \cite{KormanThesis} it is shown that though the above decomposition depends on the choice of splitting $\mathring \sigma$ initially chosen, the flat connection induced by $\thfd_{1}$ on the hypercohomology does not.
+
+  In sum, we have proven the following:
+
+\begin{prop}\label{p:dimred}
+  The pushforward $(p| \mathring M)_{*}\cL_{sugra}$ is described by the following complex of sheaves
+  \beqn
+  \cA^\bu_{\R_{>0}\times Z}\otimes \mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)
+  \eeqn
+with the $\cA^{\bullet}_{\R_{>0}\times Z}$-module structure coming from the partial flat connection induced by $\thfd_{1}$.
+\end{prop}
+
+The BV pairing naturally descends to the above complex of sheaves. It is induced from an explicit fiberwise pairing, which we may write as follows. First note that the fiber of $\mathbb{R}^\bu (p|\mathring M)_* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L) \right)$ at $(t,p)\in \R_{>0}\times Z$ can be computed as the cohomology of the complex
+\[
+H^{\bullet}\left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right ).
+\]
+
+Moreover, the deformation retraction along the fibers $(R\times \C^{2})_{(t,p)}- 0 \to S^{4}_{(t,p)}$ induces a quasi-isomorphism
+\[
+\left (\Gamma \left (S^{4}_{(t,p)}, \cA^{\bullet}_{\mathring M/\R_{>0}\times Z}(L) \right ) ; \thfd_{0}\right) \cong \left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}}) \right ); \thfd \right )
+\]
+where the fibers $\R\times \C^{2}_{(t,p)}$ are equipped with the obvious transversely holomorphic foliation.
+
+The cohomology of the last complex can be readily computed.
+
+\begin{lem}
+The cohomology of
+\[
+\left ( \Gamma \left ( \cA^{\bullet}_{(\R\times \C^{2})_{(t,p)} - 0}(L|_{{(\R\times \C^{2})_{(t,p)} - 0}}) \right ); \thfd \right ) 
+\]
+is the complex given by
+\beqn\label{eqn:bigcplx}
+\begin{tikzcd}
+  \ul{even} & \ul{odd} \\ \hline
+H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )\{\partial_{w_a}, \partial_{z_i}\}  \ar[r, dotted, "D_{\Omega}"] & H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  \\
+H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right )  \ar[r, dotted, "D"] & H^\bu \left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}), \thfd \right ) \{dw_a, dz_i\}
+\end{tikzcd}
+\eeqn
+\end{lem}
+
+Now, the THF complex
+\beqn\label{eqn:thfcohomology1}
+\left ( \Gamma ( \cA^{\bu}_{(\R\times\C^2)-0}) \, , \, \thfd \right )
+\eeqn
+has a natural even pairing given by the residue along the four-sphere~$S^4$.
+This combines with the natural odd pairing between vector fields and one-forms to give an odd pairing on the complex~\eqref{eqn:bigcplx}.
+At the level of cohomology, the pairing on \eqref{eqn:thfcohomology1} is even symplectic and it is equipped with a standard polarization. 
+In degree zero, the cohomology can be identified with holomorphic functions $\cO(\C^2)$, and the full cohomology is of the form $\T^*[-4] \cO(\C^2)$. 
+So, as a $\Z/2$ graded object the cohomology of~\eqref{eqn:thfcohomology1} can be identified with $\T^* \cO(\C^2)$. 
+This endows the cohomology of the complex \eqref{eqn:bigcplx}, which has an odd shifted symplectic structure, with a polarization.
+Explicitly, we can describe this polarization at the first page in a spectral sequence which simply takes the $\thfd$-cohomology of \eqref{eqn:bigcplx} as follows. 
+Let $V$ be the super vector space $\C\{\del_{w_a}, \del_{z_i}\} \oplus \Pi \C$. 
+Then, this page in the spectral sequence is isomorphic to
+\beqn
+\Pi \T^* \left(\cO(\C^2) \otimes V\right) ,
+\eeqn
+where $\Pi \T^*$ denotes the odd shifted cotangent bundle.
+The differential on this page of the spectral sequence, given by turning on $D, D_\Omega$ preserves this polarization.
+
+Thus, we have a description of the compactification of $\cL_{sugra}$ on the link of fivebranes as a free holomorphic-topological BV theory on $\R_{>0}\times Z$. In particular, the result is local on $\R_{>0}\times Z$.
+
+For computing the space of states, it will be useful to have a description of its global sections. The global sections of the sheaf in proposition \ref{p:dimred} appears naturally on the $E_{1}$-page of a Leray-Serre-type spectral sequence \cite{KamberTondeur}
+\beqn
+E_1^{p,q} = \Gamma \left (\R_{>0}\times Z; \cA^p_{\R_{>0}\times Z}\otimes \mathbb{R}^q(p|\mathring M) _* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L)\right) \right)\implies \mathbb{H}^{p+q} (\cA^\bu_{\mathring M}(L)).
+\eeqn\label{thfss}
+We emphasize that no page of this spectral sequence involves cohomology with respect to the operators $D, D_{\Omega}$; these differentials are kept internal.
+
+The $E_{2}$ page is similarly given by flat sections with respect to $\thfd_{1}$
+\beqn
+E_2^{p,q} = \Gamma_{\thfd_1} \left (\R_{>0}\times Z; \cA^p_{\R_{>0}\times Z}\otimes \mathbb{R}^q (p|\mathring M) _* \left (\cA^\bu_{\mathring M / \R_{>0}\times Z}(L)\right) \right)
+\eeqn
+
+In \cite{RSW}, this spectral sequence was implicitly used to give a concrete description of the pushforward $(p|\mathring M)_{*}\cL_{sugra}$ in the case where
+\beqn
+M = \text{Tot} (\R\oplus \C^{2}\to \C^{3}), \ \ \ \ \ \ \mathring M = \R\times \C^2\times \C^3 - (0 \times \C^3).
+\eeqn
+In this case, the above spectral sequence clearly degenerates at the $E_{2}$-page.
+
+To recall the result, fix holomorphic coordinates $z_{i}, i=1, 2, 3$ on $\C^{3}$ and holomorphic fiber coordinates $w_{a}, a= 1, 2$ on $\C^{2}$.
+
+\begin{prop}
+  Up to completion, the cohomology
+  \beqn
+  \mathbb H^{\bu} (\cA_{\mathring M}^\bu (L) ) = H^{\bu}\left (\Gamma(\cA_{\mathring M}^{\bu}(L)), \thfd\right)
+  \eeqn
+  is a direct sum of the cohomology on flat space $H^{\bu}(\Gamma(\cA_{M}^{\bu}(L), \thfd)$ with the complex
+
+  \beqn
+  \begin{tikzcd}[row sep = 1 ex]
+    \ul{even} & \ul{odd} \\ \hline
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\partial_{w_i}\}  \ar[r, dotted, "D_{\Omega}"] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \{\del_{z_i}\} \ar[ur, dotted, "D_{\Omega}"'] \\
+w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}] [z_1,z_2,z_3] \ar[r, dotted, "D"] \ar[dr, dotted, "D"'] & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d z_i\} \\ & w_1^{-1} w_2^{-1} \CC[w_1^{-1}, w_2^{-1}][z_1,z_2,z_3] \{\d w_i\} .
+\end{tikzcd}
+\eeqn
+\end{prop}
+
+\parsec[s:flux]
+The second step in the construction of the backreacted geometry involves deforming the pushforward $(p| \mathring{M})_{*}\cL_{sugra}$ by a certain Maurer-Cartan element. The Maurer-Cartan element is determined by the lowest order term in the coupling between the eleven dimensional theory and the stack of fivebranes. It was argued in \cite{RSW} that the relevant coupling is given by the nonlocal interaction
+\beqn\label{eqn:br1}
+I_{fivebrane} = N\int_{Z} D_\Omega^{-1}\mu \vee \Omega +\cdots
+\eeqn
+where $\mu \in \Omega^0 (\R) \hotimes \PV^{1,3}(X)\subset \cA^{\bullet}_{F}(Q)$ is a component of a field in the eleven-dimensional theory which satisfies $\thfd_{\Omega} \mu = 0$.
+
+The relevant Maurer-Cartan element is a solution to the equations of motion for the eleven-dimensional theory deformed by this interaction. After deforming with this interaction, varying with respect to $D_{\Omega}^{-1}\mu$ yields an equation for $\gamma$ that to linear order reads:
+\beqn
+\thfd D \gamma  = N \delta_Z.
+\eeqn
+
+The existence of a solution to this equation is a strong constraint on the THF manifold $M$. The relevant consequence for us is that it implies the degeneration of the spectral sequence \ref{thfss} at the $E_{2}$-page. From this point onwards, we assume that there exists a solution $\gamma_{BR}$ to the above equation.
+
+Accordingly, the dimensional reduction takes the form
+
+\[
+\cA^{\bu}_{\R_{>0}\times Z} \otimes \left ( \Pi T^{*} (\cO (\C^{2}) \otimes V) \right)
+\]
+
+Deforming by the Maurer-Cartan element turns on a differential given by bracketing with $\thfd D\gamma_{BR}$. Thus the theory in the backreacted geometry is given by
+
+\[
+\cA^{\bu}_{\R_{>0}\times Z} \otimes \left ( \cO (\C^{2})\otimes V \xrightarrow{D\gamma_{BR}} \Pi (\cO (\C^{2})\otimes V)^{*} \right )
+\]
+
+%\parsec
+%Let $C$ be a curve, and let $V\to C$ be a rank 4-holomorphic vector bundle over $C$ such that $\wedge^{4} V = K_{C}$. This condition again ensures that $X = {\rm Tot} V$ is a Calabi-Yau five-fold - in the main body of the paper, we will take $V = K^{1/2}_{C}\otimes \C^{4}$. Abusively letting $V$ also denote its pullback along the canonical projection $\R\times C \to C$, we may view $\R\times X$ as the total space of $V$ on $\R\times C$. As before we will consider wrapping a stack of $N$ membranes along the zero section.
+
+%Since $V$ is a complex vector bundle, we may choose a fiberwise hermitian metric, and as before, we may view $\R\times X \setminus \R\times C$ as an $S^{7}$-bundle over $\R_{>0}\times \R\times C$.
+
+
+
+%\parsec[s:sugraops]
+%
+%By the usual methods of the BV formalism the action functional $S_{sugra}$ described above endows the parity shift of the fields $\cL_{sugra} = \Pi \cF_{sugra}$ with the structure of a holomorphic-topological local $\Z/2$ graded $L_\infty$ algebra. 
+%
+%On $\C^5 \times \R$ we can describe this super Lie algebra structure explicitly. 
+%First, by the Dolbeault and de Rham Poincar\'e lemmas it is easy that the even part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to a one-dimensional central summand $\C$ plus the Lie algebra of divergence-free vector fields on $\C^5$:
+%\[
+%\Vect_0 (\C^5) = \{X \in \Vect(\C^5) \; | \; \div X = 0\} .
+%\]
+%The odd part of the super Lie algebra $\cL(\C^5 \times \R)$ is equivalent to the space of holomorphic one-forms on $\C^5$ modulo exact one-forms
+%\[
+%\Omega^{1,hol}(\C^5) / {\rm Im}(\del) 
+%\]
+%which is, of course, equivalent to the space of closed holomorphic two-forms $\Omega^{2,hol}_{cl}(\C^5)$. 
+%
+%\begin{thm}[\cite{RSW}[Theorem 2.1]]
+%The Taylor expansion map determines a map of $\Z/2$ graded $L_\infty$ algebras
+%\[
+%j_\infty \colon \cL_{sugra}(\C^5 \times \R) \to L_{sugra} .
+%\]
+%Furthermore, $L_{sugra}$ is equivalent as a $\Z/2$ graded $L_\infty$ algebra to $\Hat{E(5|10)}$. 
+%\end{thm} 
+%
+%As an immediate corollary of this result we obtain by Lemma \ref{lem:localops} the following.
+%
+%\begin{cor}
+%\label{cor:sugraops}
+%Let $\Obs_{sugra}$ be the factorization algebra on $\C^5 \times \R$ of classical observables of the minimal twist of eleven-dimensional supergravity.
+%There is a quasi-isomorphism of commutative dg algebras
+%\[
+%\Obs_{sugra} (0) \simeq \clie^\bu \left( \Hat{E(5|10)} \right) .
+%\]
+%\end{cor}
+\parsec[s:hilbertspace]
+The description of the $S^{4}$ compactification of eleven dimensional supergravity obtained in the previous subsection facilitates a straightforward construction of the twisted supergravity states. 
+The compactification is described by the pro-local Lie algebra $(p|\mathring M)_{*} \cL_{sugra}$ on the seven-manifold $\R_{>0}\times Z$ in proposition \ref{p:dimred}. We will construct the twisted supergravity states by applying geometric quantization ansatz to the phase space at $\infty \in \R_{>0}$.
+
+Our ansatz for geometric quantization will avoid discussion of subtler aspects such as the metaplectic correction. We define the geometric quantization to be given by functions that are constant along the leaves of a lagrangian foliation of the phase space.
+
+The phase space at $\infty\in \R_{>0}$ is computed by restricting to a neighborhood $(a, \infty)\subset \R_{>0}$:
+\beqn
+(p| \mathring M)_* \cL_{sugra}|_{\infty \times Z}= \Omega^{0,\bu}_Z \otimes \left ( \cO (\C^{2})\otimes V \xrightarrow{D\gamma_{BR}} \Pi (\cO (\C^{2})\otimes V)^{*} \right )
+\eeqn
+
+There is an obvious polarization whose base is given by
+\beqn
+\Omega^{0,\bullet}_Z \otimes \left (\cO (\C^{2})\otimes V \right )
+\eeqn
+
+
+\begin{dfn}
+\label{dfn:states}
+  The space of twisted supergravity states is
+  \[ \cH_{sugra} = \Sym \left(\overline \Omega^{0,\bullet}_{Z, c} \otimes (\cO (\C^{2}) \otimes V)^{*} \right)\]
+where the source denotes compactly supported distributional sections.
+\end{dfn}
+
+\subsection{Global symmetry for twisted $AdS$}
+\label{s:global1}
+
+After complexification, the~six-dimensional superconformal algebra is isomorphic to $\lie{osp}(8|4)$.
+The even part of this algebra is $\lie{so}(8) \times \lie{sp}(4)$.
+This algebra contains the six-dimensional $\cN=(2,0)$ supersymmetry algebra whose odd part is four copies of $S^{6d}_+$, the positive irreducible complex spin representation of $\lie{so}(6)$.
+%It also contains the three-dimensional $\cN=8$ supersymmetry algebra whose odd part is eight copies of $S^{3d}$, the irreducible complex spin representation of $\lie{so}(3)$.
+
+The holomorphic supercharge is a supertranslation
+\[
+Q \in \Pi S^{6d}_+ \otimes \C^4 \subset \lie{osp}(8|4)
+\]
+which is characterized (up to equivalence) by the properties that $Q^2 = 0$ and that its image
+\[
+{\rm Im}\left(Q|_{\Pi S_+ \otimes \C^4} \right) \subset \R^6 \otimes_\R \C \cong \C^6
+\]
+is three-dimensional (spanned by the anti-holomorphic translations). 
+The supercharge $Q$ acts on $\lie{osp}(8|4)$ by commutator and the resulting cohomology will automatically act on the holomorphic twist of any six-dimensional superconformal field theory. 
+This cohomology can readily be identified with the subalgebra $\lie{osp}(6|2)$, see \cite{SWsuco2}. 
+
+%Similarly, the minimal twisting supercharge in the three-dimensional $\cN=8$ supersymmetry algebra is an element $Q \in \Pi S^{3d} \otimes \C^8$ which is characterized (up to equivalence) by the property that $Q^2 = 0$ and that the image of $[Q,-]$ is two-dimensional. The cohomology of $\lie{osp}(8|4)$ with respect to this supercharge is also isomorphic to~$\lie{osp}(6|2)$.
+
+In \cite{RSW} we have shown that solutions to equations of motion of our eleven-dimensional theory in the twisted $AdS_{7}\times S^{4}$ background recalled in the previous subsection contains the symmetry algebra $\lie{osp}(6|2)$. This is precisely the twist of the superconformal algebra we just discussed, so this statement may be interpreted as the twisted avatar of the fact that $\lie{osp}(8|4)$ acts as isometries on $AdS_{7}\times S^{4}.$ An easy consequence of the result of \cite{RSW} and the definition of $\cH_{sugra}$ in~\ref{dfn:states} is that the twisted symmetry algebra $\lie{osp}(6|2)$ acts on $\cH_{sugra}$.
+
+We will enumerate states via their weights a Cartan in the bosonic subalgebra of the twisted superconformal algebra.
+We recall below how the bosonic piece of the algebra
+\beqn
+\label{eqn:gut}
+\lie{sl}(4) \times \lie{sl}(2) \subset \lie{osp}(6|2) 
+\eeqn
+embeds as symmetries, or ghosts, of the eleven-dimensional theory in this twisted background.
+
+However, we first note that the state space $\cH_{sugra}$ in fact enjoys an action of a much larger symmetry algebra.
+
+\parsec
+Surprisingly, at the twisted level this symmetry by the super Lie algebra $\lie{osp}(6|2)$ is enhanced to a symmetry by an infinite-dimensional super Lie algebra called $E(3|6)$. 
+This is an exceptional simple super Lie algebra and was classified by Kac in \cite{KacClass}. 
+The even part $E(3|6)_{even}$ of this super Lie algebra is a semi-direct product 
+\beqn\label{eqn:evenE36}
+\Vect(\Hat{D}^3) \oplus \lie{sl}(2) \otimes \cO(\Hat{D}^3) 
+\eeqn
+where $\Vect(\Hat{D}^3)$ stands for the Lie algebra of (holomorphic) formal vector fields on the three-disk and $\cO(\Hat{D}^3)$ is the algebra of formal power series in three variables.
+The odd part $E(3|6)_{odd}$ is 
+\beqn\label{eqn:oddE36}
+\Omega^{1}(\Hat{D}^3, K^{-1/2}) \otimes \C^2  .
+\eeqn
+This is the tensor product of the fundamental $\lie{sl}(2)$ representation with the space of one-forms on the formal three-disk twisted by the line bundle $K^{-1/2}$.
+For a description of the Lie bracket we refer to \cite{KacClass}.
+%The non-obvious Lie bracket is of the form $E(3|6)_{odd} \otimes E(3|6)_{odd} \to E(3|6)_{even}$ and is defined by the composition
+
+The embedding $\lie{osp}(6|2)$ into $E(3|6)$ is described as follows.
+The even summand $\lie{sl}(4)$ simply embeds as the constant, linear, and quadratic vector fields which act on a formal neighborhood of $0 \in \C\mathbb{P}^3$.
+The even summand $\lie{sl}(2)$ embeds as the constant power series in $\lie{sl}(2) \otimes \cO(\Hat{D}^3)$. 
+The odd summand $\C^3 \otimes \C^2$ embeds as the constant one-forms and the other odd summand embeds as the linear one-forms 
+\beqn
+\frac12 (z_i \d z_j - z_j \d z_i) \otimes w_a
+\eeqn
+where, here $i \ne j$ and the fundamental $\lie{sl}(2)$ representation is spanned by $w_1,w_2$.
+We are leaving out the twist by the $-1/2$ root of the canonical bundle for simplicity.
+
+The embedding of $E(3|6)$ into our twisted description of supergravity immediately yields the following.
+\begin{prop}
+The state space $\cH_{sugra}$ is a representation for $E(3|6)$.
+The representation restricts to the original $\lie{osp}(6|2)$ representation under the embedding above.
+\end{prop}
+%\begin{proof}
+
+%\end{proof}
+
+\subsection{Mass Spectroscopy on twisted $AdS_7\times S^{4}$}
+\label{s:ads7}
+
+We move on to enumerating the state space $\cH_{sugra}$ on the twisted version of $AdS_7 \times S^4$ in terms of the index. 
+We choose coordinates on flat space as
+\[
+\R \times \C^5 = \R_t \times \C^2_w \times \C_z^3 
+\]
+with $z = (z_i), i=1,2,3$ and $w = (w_a), a=1,2$.
+The stack of fivebranes wrap 
+\beqn
+w_1=w_2=t=0 .
+\eeqn
+Important for us is to recall that part of the ghost system for our eleven-dimensional theory consists of divergence-free vector fields on $\C^5$ which are locally constant along $\R$. 
+
+The subalgebra \eqref{eqn:gut} of the twisted superconformal algebra $\lie{osp}(6|2)$ embeds as ghosts in our eleven-dimensional model as follows.
+\begin{itemize}
+\item
+The subalgebra $\lie{sl}(3) \subset \lie{sl}(4)$ embeds as vector fields rotating the plane $\C^3_z$
+\beqn
+\sum_{ij} A_{ij} z_i \frac{\del}{\del z_j} \in \PV^{1,0}(\C^5)\otimes \Omega^0(\R) , \quad (A_{ij}) \in \lie{sl}(3) .
+\eeqn
+By definition, these vector fields are automatically divergence-free.
+Notice that this vector field is divergence-free and restricts to the Euler vector field along $t=w_{a} = 0$.
+\item 
+The subalgebra $\lie{sl}(2)$ ($R$-symmetry) is mapped to the triple
+\beqn
+ w_1 \frac{\del}{\del w_2}, \quad w_2 \frac{\del}{\del w_1}, \quad \frac{1}{2}\left (w_1\frac{\del}{\del w_1}-w_2\frac{\del}{\del w_2}\right) \in \PV^{1,0}(\C^5) \otimes \Omega^0(\R) .
+\eeqn
+\item Scaling on the plane $\C^3$ embeds as the vector field
+\beqn\label{eqn:Delta}
+        \Delta = \sum_{i=1}^3 z_i\frac{\del}{\del z_i} - \frac 32\sum_{a=1}^2 w_a\frac{\del}{\del w_a}\in \PV^{1,0}(\C^5)\otimes \Omega^0 (\R).
+\eeqn
+\end{itemize}
+
+%\begin{rmk}
+%In the classification of simple super Lie algebras, Kac makes use of a weight grading $\oplus_{j \geq -2} \fg_j$ of the exceptional Lie algebra $E(3|6)$ for which the finite-dimensional subalgebra above is the weight zero piece
+%\cite{KacClass}.
+%We will make use of this grading in \S \ref{s:kr}.
+%\end{rmk}
+This describes an embedding of the algebra 
+\beqn\label{eqn:gut2}
+\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1) \subset \lie{sl}(4) \times \lie{sl}(2) 
+\eeqn
+into the ghosts of our model.
+The dimension of a Cartan subalgebra of $\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1)$ is four and accordingly, the equivariant character we study has four fugacities.
+We choose these explicitly as follows:
+\begin{itemize}
+  \item $t_{1}, t_{2}$ denote generators for the Cartan of $\lie{sl}(3)$ which is spanned by the vector fields
+  \beqn
+  h_1 = z_1 \frac{\del}{\del {z_1}} - z_2 \frac{\del}{\del{z_2}} , \quad h_2 = z_2 \frac{\del}{\del{z_2}} - z_3 \frac{\del}{\del{z_3}}.
+  \eeqn
+  \item $r$ denotes a generator for the Cartan of a $\lie{sl}(2)$ which is generated by the element 
+  \beqn
+  \label{eqn:hCartan}
+  h = \frac12 \left(w_1 \frac{\del}{\del w_1} - w_2 \frac{\del}{\del w_2}\right) .
+  \eeqn
+\item $q$ denotes a generator for the Cartan of the~$\lie{gl}(1)$ which is generated by the element $\Delta$ from equation~$\eqref{eqn:Delta}$. 
+\end{itemize}
+
+The twisted supergravity states $\cH_{sugra}$ form a representation for $\lie{osp}(6|2)$. 
+The weights of twisted supergravity states with respect to the generators of the Cartan subalgebra above are completely determined by the weights of the holomorphic coordinates on $\C^2_w \times \C^3_z$.
+These are summarized in table \ref{tbl:sugraM5}.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{c c c c c c}
+  & $z_{1}$ & $z_{2}$ & $z_{3}$ & $w_{1}$ & $w_{2}$ \\
+  \hline
+  $t_{1}$ & $1$ & 0 & $-1$ & 0 & 0 \\
+  $t_{2}$ & 0 & 1 & $-1$ & 0 & 0 \\
+  $r$ & 0 & 0 & 0 & 1 & $-1$ \\
+  $q$ & $-1$ & $-1$ & $-1$ & $\frac{3}{2}$ & $\frac{3}{2}$
+\end{tabular}
+\caption{Fugacities for the fields of the holomorphic twist of eleven-dimensional supergravity for the geometry $\R \times \C^5 \setminus \C^3$.}
+\label{tbl:sugraM5}
+\end{center}
+\end{table}
+
+We enumerate single particle supergravity states via computing the super trace of the operator $q^Y t_1^{h_1} t_2^{h_2} r^h$ acting on $\cH_{sugra}$:
+\beqn
+f_{sugra}(t_1,t_2,r,q) = \Tr_{\cH_{sugra}} (-1)^F t_1^{h_1} t_2^{h_2} r^h q^\Delta .
+\eeqn
+The super trace means that there is an extra factor of $(-1)^F$, where $F$ is parity (fermion number), when computing the ordinary trace.
+
+The space of supergravity states given in definition \ref{dfn:states} is given in terms of compactly supported Dolbeault forms on $\C^3$. 
+On $Z = \C^3$, the compactly supported distributions defined by 
+\beqn
+\alpha \mapsto \del_{z_1}^{n_1} \del_{z_2}^{n_2} \del_{z_3}^{n_3} \alpha |_{z=0}
+\eeqn
+combine to span a dense subspace of $\Bar{\Omega}^{0,\bu}_c(\C^3)$.
+Using this topological basis for distributions and the explicit description of $\cH_{sugra}$ in definition \ref{dfn:states} the following proposition is an immediate computation.
+
+\begin{prop}
+\label{prop:sugraindex1}
+The single particle index of the space of twisted supergravity states~$\cH_{sugra}$ is given by the following expression
+\beqn
+\label{eqn:sugra_index}
+f_{sugra} (t_1,t_2, r, q) = \frac{q^4(t_1^{-1}+t_1t_2^{-1}+t_2)-q^2(t_1+t_1^{-1}t_2+t_2^{-1})+(q^{3/2}-q^{9/2})(r+r^{-1})}{(1-t_{1}^{-1}q)(1-t_{2}q)(1-t_{1}t_{2}^{-1}q)(1-rq^{3/2})(1-r^{-1}q^{3/2})}.
+\eeqn
+The full (multiparticle) index is defined to be the plethystic exponential 
+\beqn
+{\rm PExp}\left[f_{sugra}(t_1,t_2,r,q)\right] .
+\eeqn
+\end{prop}
+
+To simplify the form of this index we can introduce a different parametrization of the Cartan of $\lie{sl}(3) \times \lie{sl}(2) \times \lie{gl}(1)$.
+First, we can parameterize the Cartan of $\lie{sl}(3)$ by the vector fields
+  \beqn\label{eqn:ys}
+  -(\log y_1) z_1 \frac{\del}{\del {z_1}} - (\log y_2) z_2 \frac{\del}{\del{z_2}} - (\log y_3) z_3 \frac{\del}{\del{z_3}} .
+  \eeqn
+where $y_1,y_2,y_3$ are parameters which satisfy the single constraint
+\beqn
+y_1 y_2 y_3 = 1 .
+\eeqn
+In terms of the variables $t_1,t_2$ used above we have
+\beqn
+y_1 = t_1^{-1},\quad y_2 = t_1 t_2^{-1}, \quad y_3 = t_2 .
+\eeqn
+Second, we can parametrize the Cartan of the remaining subalgebra $\lie{sl}(2) \times \lie{gl}(1)$ by the two vector fields
+\beqn
+\til{h} = h + \frac12 \Delta \quad \text{and} \quad \Delta
+\eeqn
+where $\Delta$ is as in equation \eqref{eqn:Delta} and $h$ is as in \eqref{eqn:hCartan}.
+We denote by $y$ the generator of the Cartan corresponding to the vector field $\til{h}$ and by $q$ (as above) the generator corresponding to~$\Delta$.
+In terms of the variable~$r$ used above we have 
+\beqn
+y = q^{1/2} r .
+\eeqn
+
+Using the paramterization fo the Cartan given by the variables $y_i,y,\Delta$ we obtain the equivalent expression for the index \eqref{eqn:sugra_index} as 
+\beqn
+\label{eqn:Kim_sugra}
+f_{sugra} (y_i, y, q) = \frac{q^4(y_1+y_2+y_3)-q^2(y_1^{-1} + y_2^{-1} + y_3^{-1})+(1-q^3)(yq + y^{-1} q^2)}{(1-y_1 q)(1-y_2 q)(1-y_3 q)(1-yq)(1-y^{-1} q^2)},
+\eeqn
+We note that this matches exactly with the index computed in \cite[Eq. (3.23)]{Kim:2013nva} with the change of variables.
+%\beqn
+%t_1 = y_1^{-1} , \quad t_2 = y_3, \quad r = q^{-1/2} y 
+%\eeqn 
+
+Our formula \eqref{eqn:sugra_index} also matches with \cite[Eq. (3.24)]{Bhattacharya:2008zy} where we use the change of variables
+\beqn
+q = x^4, \quad t_1 = y_2, \quad t_2 = y_1, \quad r^2 = z .
+\eeqn
+(Notice the variables $y_1,y_2$ used in \cite{Bhattacharya:2008zy} differ from the variables we introduced in \eqref{eqn:ys}.)
+%We record a few specializations of this index which we will remark on further in~\S\ref{s:??}.
+
+\parsec 
+We consider the specialization of this index 
+\beqn
+q=r^2, t_2=1 
+\eeqn
+which is known as the Schur limit.
+Applying this limit to \eqref{eqn:special1} yields the plethystic exponential of the following single particle index
+\[
+f_{sugra}(q, t_1, t_2=1, r = q^{1/2}) = \frac{q}{(1-q)^2}
+\]
+This plethystic exponential yields the MacMahon function, which is the character of the vacuum module of the $W_{1+\infty}$-algebra.
+
+%\parsec
+%
+%The specialization $t_1=t_2=r=1$ yields the single particle index
+%\[
+%f_{sugra}^{6d} (q, t_1=t_2=r=1) = \frac{3 q^4 - 3 q^2 + 2 q^{3/2} - 2 q^{9/2}}{(1-q)^3 (1-q^{3/2})^2} .
+%\]

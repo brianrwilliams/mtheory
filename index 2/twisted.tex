@@ -1,0 +1,548 @@
+%\documentclass[11pt]{amsart}%
+%
+%%\usepackage{../macros-master}
+%\usepackage{macros-fivebrane}
+
+%
+%\begin{document}
+%
+
+\section{Twists in dimensions eleven and six}
+\label{s:twisted}
+
+In this section we review the descriptions of twists of the key players in $M$-theory including eleven-dimensional supergravity as well as the six-dimensional superconformal field theory associated to the abelian Lie algebra~$\lie{gl}(1)$.
+
+\subsection{A model for minimally twisted supergravity}
+
+%Eleven-dimensional supergravity is the unique supersymmetric theory in eleven dimensions.
+%It plays an important role as the low energy limit of $M$-theory.
+
+Recently in \cite{CLsugra}, Costello and Li gave a rigorous definition of twisted supergravity.
+The idea is roughly the following.
+In any theory of supergravity, the action of supersymmetry is gauged. 
+When one treats the theory in the BRST formalism, the fields then include a collection of bosonic ghosts which homologically enforce invariance under the odd gauge symmetries.
+By definition, twisted supergravity is supergravity in the background where a bosonic ghost for supersymmetry takes a nonzero value $Q$, where $Q$ is a nilpotent supercharge. 
+Such backgrounds have the feature that the worldvolume theories of branes in their presence are twisted in a way that is compatible with the usual notion of twisting supersymmetric gauge theories.
+
+Eleven-dimensional supersymmetry admits two inequivalent classes of twists characterized by the dimension of the subspace of translations spanned by the image of bracketing with the twisting supercharge.
+\begin{itemize}
+\item 
+The minimal twist. 
+This twist leaves six real directions invariant and is preserved by the subgroup $SU(5)$ of the Lorentz group. 
+\item 
+The non-minimal twist. 
+This twist leaves nine real directions invariant and is preserved by the subgroup $SU(2) \times G_2$ of the Lorentz group. 
+\end{itemize}
+
+In this paper we will focus primarily on the minimal twist. 
+In \cite{SWspinor} a complete description of the free limit of this twist of eleven-dimensional supergravity is given.
+Within the BV formalism, the theory is only $\Z/2$ graded, a point we will elaborate on further soon. 
+In \cite{RSW} we have given a proposal for the minimal twist of fully interacting eleven-dimensional supergravity as a $\Z/2$ graded interacting BV theory in a background with global symmetry group $SU(5)$.
+
+The eleven-dimensional theory described in \cite{RSW} exists on any manifold which is locally of the form 
+\[
+S \times X 
+\] 
+where $X$ is a Calabi--Yau fivefold and $S$ is a real oriented smooth one-dimensional manifold.
+More generally, the eleven-dimensional theory can be constructed on any eleven-manifold equipped with a transversely holomorphic foliation which is equipped with an appropriate holomorphic volume form on the leaves of the foliation.
+We will elaborate on this further in \S \ref{sec:states}.
+
+We recall the fields and equations of motion of this eleven-dimensional theory. 
+
+%\parsec[s:e510]
+%
+%Let $\Hat{D}^5$ denote the formal five-disk whose algebra of functions is 
+%\[
+%\cO(\Hat{D}^5) = \C[[z_1,\ldots,z_5]] .
+%\]
+
+\parsec[s:sugrafields]
+
+%To begin this section we highlight some of the important features of the eleven-dimensional model considered in \cite{RSW}. 
+%Let's first consider the case that the eleven-dimensional manifold is of the form $S \times X$, where $X$ is a Calabi--Yau fivefold.
+Let $\T_X$ stand for the holomorphic tangent bundle of the Calabi--Yau fivefold $X$ and $\Bar{\T}_X$ its complex conjugate.
+The complexified tangent bundle of the eleven-manifold $S \times X$ decomposes as
+\[
+\T_S \oplus \T_X \oplus \Bar{\T}_X 
+\]
+where $\T_S$ is the complexified tangent bundle of the smooth one-manifold $S$.
+Locally, we choose coordinates $(t;z,\zbar)$ where $t$ is a smooth coordinate for $S$ and $z$ is a holomorphic coordinate for $X$. 
+
+Momentarily we will give a full presentation of the fields and equations of motion within the Batalin--Vilkovisky (BV) formalism.
+But first, we will give a more direct description of the equations of motion and gauge symmetries of the model.
+ 
+One of the primary fields of eleven-dimensional supergravity describes deformations of the metric $g$.
+Since we work in a background which has $SU(5)$ holonomy we can take the background metric on $S \times X$ to be the product of the flat metric on $S$ with a Calabi--Yau metric $g_{X}$ on $X$. 
+
+Deformations of the background metric which survive the twist can be identified with Beltrami differentials, that is, sections of 
+\[
+\Bar{\T}_X^* \otimes \T_X \cong \Bar{\T}^*_X \otimes \Bar{\T}_X^* . 
+\]
+Here, we have used the isomorphism granted by the K\"ahler metric $g_{X}$.
+In local holomorphic coordinates $\mu$ admits a description like
+\[
+\mu^{\Bar{i}}_j (t;z,\zbar) \d \zbar_{\Bar{i}} \otimes \del_{z_j} .
+\]
+More generally, the fields of this model include sections of the holomorphic tangent bundle with coefficients in Dolbeault forms on $X$ of arbitrary Dolbeault type and de Rham forms on $S$, which we can write in superfield notation as 
+\[
+\mu = \mu^{\Bar{I}}_j (t;z,\zbar) \d \zbar_{\Bar{I}} \otimes \del_{z_j} + \mu^{\Bar{I}}_{t,j} (t;z,\zbar) \d t \d \zbar_{\Bar{I}} \otimes \del_{z_j}
+\]
+where there is a sum over the multi-index $\Bar{I}$ as it ranges over subsets of $\{1,\ldots,5\}$.
+In this notation, the component $\mu^{\Bar{I}}_j$ is {\em odd} if $|\Bar{I}|=0,2,4$ is even and {\em even} if $|I| = 1,3,5$ is odd.
+Similarly, the component $\mu^{\Bar{I}}_{t,j}$ is {\em even} if $|\Bar{I}|=0,2,4$ is even and {\em odd} if $|I| = 1,3,5$ is odd.
+In particular we have odd fields $\mu_j(t;z,\zbar) \del_{z_j}$ which play the role of ghosts for infinitesimal changes of coordinates.
+We will see that the equations of motion dictate that we only see changes of holomorphic coordinates.
+
+The field $\mu$ satisfies a condition that it be {\em divergence-free} for the Calabi--Yau structure on the fivefold~$X$.
+This means that it is required to satisfy the equation
+\beqn
+\div \mu = 0
+\eeqn
+where $\div(-)$ is the divergence with respect to the holomorphic volume form $\Omega$ on $X$.
+By including the full space of BV fields, this condition does arise from an action functional principle---it is not an additional constraint like the one present in the six-dimensional superconformal theory.
+The field to add in this situation is a Dolbeault form $\nu \in \Omega^{0,\bu}(X)$ which imposes the equation above upon setting $\nu = 0$.
+Another piece of the equations of motion for~$\mu$ dictate that it be locally constant along~$S$. 
+
+Ordinarily, for $\mu$ to describe a deformation of complex structure in the $X$ direction we would require that it satisfy the Maurer--Cartan equation.
+For twisted supergravity, however, we find a modification of this equation which involves the twisted analog of another familiar field.
+
+The other primary bosonic field of eleven-dimensional supergravity is a three-form.
+In the BV formalism we see all types of differential forms corresponding to a tower of ghosts for this higher gauge field together with antifields and antighosts.
+ 
+On $S \times X$ the space of complex-valued differential forms decomposes into de Rham--Dolbeault forms as in
+\[
+\oplus_{k,p,q} \Omega^k(S) \otimes \Omega^{p,q}(X) .
+\]
+We refer to the homogenous pieces as the space of $(k;p,q)$ forms, these admit local presentations as
+\[
+\sum_{P,Q} f_{PQ} (t;z,\zbar) \d z_P \d \zbar_Q + \sum_{P',Q'} g_{P'Q'}(t;z,\zbar) \d t \d z_{P'}\d \zbar_{Q'} 
+\]
+where the first sum is over tuples~$P=(p_1,p_2,p_3),Q=(q_1,q_2,q_3)$ and
+the second sum is over tuples~$P'=(p'_1,p'_2,p'_3),Q=(q'_1,q'_2,q'_3)$
+
+In the minimal twist only forms with $p_i ,p_i'\leq 1$ survive. 
+Thus, we have as part of the complex of fields in the twisted theory the space of forms
+\[
+\left(\oplus_{k,q} \Omega^k(S) \otimes \Omega^{0,q}(X)\right) \oplus 
+\left(\oplus_{k',q'} \Omega^{k'}(S) \otimes \Omega^{1,q'}(X)\right) .
+\]
+We denote a general (non-homogenous) element in the first summand by $\beta$ and an element in the second summand by $\gamma$.
+As above we can expand such fields in local coordinates using multi-indices by 
+\begin{align*}
+\beta & = \beta^{\Bar{I}} \d \zbar_{\Bar{I}} + \beta_t^{\Bar{J}} \d t \d \zbar_{\Bar{J}}\\
+\gamma & = \gamma^{i \Bar{I}} \d z_i \d \zbar_{\Bar{I}} + \gamma_t^{j \Bar{J}} \d t \d z_j \d \zbar_{\Bar{J}}.
+\end{align*}
+%When we want to be specific by the form type we use the notation $\beta^{k;q}(t;z,\zbar)$ for the $(k;0,q)$ component of the three-form and $\gamma^{k;q}(t;z,\zbar)$ for the $(k;1,q)$ component of the three-form.
+Fields $\beta^{\Bar{I}}, \gamma_t^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em even} (resp. {\em odd}) and fields $\beta_t^{\Bar{I}}, \gamma^{i \Bar{I}}$ with $|\Bar{I}| = $odd (resp. even) are {\em odd} (resp. {\em even}). 
+
+The most important equation of motion of the eleven-dimensional theory involves both the fields $\mu$ and $\gamma$. 
+When $\div \mu = 0$ it takes the form
+\beqn\label{eqn:eom2}
+\dbar \mu + \frac12 [\mu,\mu] = \del \gamma \del \gamma .
+\eeqn
+Because of the term on the right hand side this equation is not exactly the usual Beltrami equation for deformations of complex structures.
+On the left hand side we are implicitly using an identification between the holomorphic tangent bundle $\T_X$ and the bundle $\wedge^4 \T^*_X$ granted by the holomorphic volume form on $X$.
+This allows us to view this equation as taking place entirely in the graded space $\Omega^\bu(S) \hotimes \Omega^{4,\bu}(X)$. 
+In particular, this equation is inhomogenous in form type.
+As an example of the homogenous form type $(0;4,2)$ piece of this equation we have 
+\[
+\ep^{ijklm} \del_{\zbar_{\bar{j}}} \mu_m^{\bar{i}} + \ep^{ijkmn} \del_{z_l} (\mu^{\bar{i}}_{m} \mu^{\bar{j}}_{n}) =\del_{z_i} \gamma^{j \bar{i}} \del_{z_k} \gamma^{l \bar{j}} 
+\]
+
+%Along $S$, $\beta$ and $\gamma$ behave like abelian gauge fields.
+%Thus, locally we can assume that the $\Omega^1(S)$ components are exact and the $\Omega^0(S)$ components are locally constant.
+
+
+\parsec[s:Lsugra]
+
+We move on to give a complete description of our eleven-dimensional model within the Batalin--Vilkovisky (BV) formalism.
+In the superfield notation above we have implicitly provided all components of the ghosts, fields, anti-fields, and anti-ghosts.
+One of the key structures in the BV formalism is the graded skew-symmetric pairing between fields and antifields (ghosts and antighosts).
+Once such a pairing $\omega_{BV}$ is introduced, one can opt to describe solutions to the equations of motion as Maurer--Cartan elements of a certain sheaf of ($\Z/2$-graded) $L_\infty$ algebras on $X \times S$.
+
+An $L_\infty$ algebra is a graded vector space~$L=\oplus_{p\in \Z} L^p$ equipped with a collection of operations $\{[-]_k\}_{k = 1,2,\ldots}$ where 
+\[
+[-]_k \colon L^{\times k} \to L[2-k] 
+\]
+are multilinear maps which satisfy the ordinary higher Jacobi relations defining an $L_\infty$ algebra.
+The shift $[2-k]$ means that $[-]_k$ is of cohomological degree $k-2$. 
+
+The BV fields arise as the sections of a sheaf of $L_\infty$ algebras $\cL$ over the spacetime manifold $M$.
+There is an overall shift in the relationship between the cohomological grading of $\cL$ and the ghost number in physics terminology. 
+In cohomological degree zero of $\cL$ sit the ghosts, in cohomological degree one sit the fields, etc..
+In this sense it is more accurate to refer to the BV fields as sections of the shift of the sheaf of $L_\infty$ algebras $\cL[1]$. 
+We refer to \cite{CG2,ESW} for a further review of these conventions.
+Together with the skew symmetric pairing $\omega_{BV}$ of cohomological degree $-1$ on $\cL[1]$, the structure maps $[-]_k$ organize together to define the full BV action which takes the general form
+\beqn
+\label{eqn:Sbv}
+S(\Phi) = \sum_{k \geq 1} \omega_{BV} \left(\Phi , [\Phi,\ldots,\Phi]_{k}\right) ,
+\eeqn
+which we can think of as a functional on $\cL[1]$ of cohomological degree zero.
+
+One feature of our proposal for the minimal twist of eleven-dimensional supergravity is that it only carries an overall $\Z/2$ grading. 
+This $\Z/2$ grading totalizes the original ghost grading (which is by the group $\Z$) and the fermion number which is present in the untwisted theory.
+We thus make use of $\Z/2$ graded versions of the usual BV formalism.
+In this paper $\Z/2$ graded $L_\infty$ algebra means that we just have a $\Z/2$ graded vector space.
+There are operations $\{[-]_k\}_{k = 1,2,\ldots}$ which satisfy the same higher Jacobi identities.
+The operation $[-]_k$ is even if $k$ is even and odd if $k$ is odd.\footnote{This is not to be confused with a super $L_\infty$ algebra which is an $L_\infty$ algebra internal to the category of super vector spaces.
+A $\Z/2$ graded $L_\infty$ algebra is simply what one gets when they apply the forgetful function from $\Z$ graded vector spaces to $\Z/2$ graded vector spaces.}
+
+To build the $L_\infty$ algebra associated to the eleven-dimensional theory, we first introduce a sheaf of $\Z/2$ graded $L_\infty$ algebras on the Calabi--Yau fivefold $X$.
+As a sheaf of super vector spaces, it will be given as the holomorphic sections of a super vector bundle that we denote by $L_X$. 
+The even part of this super vector bundle is
+\[
+\T_X \oplus \C_X 
+\]
+where $\T_X$ is the holomorphic tangent bundle and $\C_X$ is the trivial bundle.
+We will denote even sections by $(\mu, \beta)$ according to the decomposition. 
+The odd part is 
+\[
+\C_X \oplus \T^*_X .
+\]
+We will denote odd elements by $(\nu, \gamma)$ according to the decomposition. 
+
+The $L_\infty$ structure on the sheaf of holomorphic sections of $L_X$ is described as follows. 
+First, $\d = [-]_1$, the differential, is simply given by 
+\begin{align*}
+\d \beta & = \del \beta \in \Omega^1_X \subset L_{X,-} \\
+\d \mu & = \div \mu \in \cO_{X,\nu} \subset L_{X, -}
+\end{align*}
+and $\d \gamma = \d \nu = 0$. 
+For $k \geq 2$ the general formula for the $k$-ary brackets is 
+\begin{align*}
+[\nu_1, \ldots, \nu_{k-2}, \mu_1,\mu_2]_{k} & = \div(\nu_1 \cdots \nu_k \mu_1 \wedge \mu_2) \in \PV^1_X \\
+[\nu_1,\ldots, \nu_{k-3}, \mu_1,\mu_2,\gamma]_k & = \nu_1 \cdots \nu_{k-3} (\mu \wedge \mu') \vee \del \gamma \in \cO_{X,\beta} .\\
+[\nu_1,\ldots,\nu_{k-2}, \mu, \gamma]_k & = \nu_1 \cdots \nu_{k-2} \mu \vee \del \gamma \in \Omega^1_X \\
+[\gamma_1,\gamma_2] & = \Omega_X \vee (\del \gamma_1 \wedge \del \gamma_2) \in \PV^1_X .
+\end{align*}
+In \cite{RSW} it is shown that this endows $L_{X}$ with the structure of a sheaf of $\Z/2$ graded $L_\infty$ algebras.
+There is a sub sheaf given by the sections $\mu$ and $\nu$ which is $L_\infty$-equivalent to the sheaf of holomorphic divergence-free vector fields on $X$. 
+
+As all operations above are given in terms of holomorphic polydifferential operators, the $L_\infty$ algebra structure above induces a $\Z/2$ graded $L_\infty$ algebra structure on the Dolbeault resolution $\Omega^{0,\bu}(X,L_X)$ of the holomorphic vector bundle $L_X$.
+
+Finally, to obtain a local $L_\infty$ algebra on $S \times X$, where $S$ denotes a real oriented smooth one-manifold, we simply tensor with the de Rham complex along~$S$.
+We denote by $\cL_{sugra}$ the following local $\Z/2$ graded $L_\infty$ algebra on $X \times S$
+\beqn
+\cL_{sugra} \define \Omega^\bu(S) \hotimes \Omega^{0,\bu}(X,L_X) .
+\eeqn
+
+It is shown in \cite{RSW} that $\cL_{sugra}$ is equipped with a non-degenerate skew symmetric odd pairing $\omega_{BV,sugra}$ which is compatible with the $L_\infty$ structure above.
+All together, this data prescribes the structure of a $\Z/2$ graded theory in the BV formalism where the BV action is as in \eqref{eqn:Sbv}.
+
+The free part of the BV action is easy to describe
+\beqn
+\label{eqn:free}
+\int_{S \times X} \left(\gamma (\d_{dR} + \dbar) \mu\right) \Omega_X + \int_{S \times X} (\beta (\d_{dR} + \dbar) \nu) \Omega_X + \int_{S \times X} (\beta \div \mu) \Omega_X ,
+\eeqn
+where $\Omega_X$ is the holomorphic volume form on~$X$.
+Notice that in the first two terms no holomorphic derivatives appear in the direction of $X$ due to the presence of this holomorphic volume form.
+
+The interacting part of the action is more complicated, partly for the reason that in our presentation above it is given by a formal series in the space of fields, rather than just a polynomial in the fields. 
+Explicitly, the interaction can be written as
+\beqn
+\label{eqn:int}
+\frac12 \int_{S \times X} (\mu^2 \del \gamma) \frac{\Omega_X}{1- \nu} + \frac16 \int_{S \times X} \gamma \del \gamma \del \gamma .
+\eeqn
+Notice that upon varying the field $\gamma$ and assuming that $\d_{dR} \mu = 0$ and $\nu = \div \mu = 0$ we recover the equation of motion \eqref{eqn:eom2} from this action functional. 
+%
+%Notice that the Beltrami differential $\mu^{\Bar{i}}_j \d \zbar_{\Bar{i}} \otimes \del_z$ as well as the components of the three-form which survive the minimal twist sit inside as odd sections of this sheaf of $L_\infty$ algebras.
+
+\parsec[s:e510]
+
+In the case that $X = \C^5$ and $S = \R$ the eleven-dimensional model we have just described bears a close relationship to the exceptional simple super Lie algebra $E(5|10)$ classified in \cite{KacClass}.
+The even part of $E(5|10)$ is the Lie algebra of divergence-free vector fields on the formal five-disk $\Hat{D}^5$. 
+The odd part of $E(5|10)$ is the space of closed two-forms $\Omega^{2,cl}(\Hat{D}^5)$ on the formal five-disk.
+There is a natural action of divergence-free vector fields on closed two forms. 
+Additionally there is a Lie bracket between two closed two-forms $\alpha,\alpha'$ which produces a divergence-free vector field via the standard holomorphic volume form on the five-disk:
+\beqn
+[\alpha,\alpha'] = \Omega_{\Hat{D}^5}^{-1} \vee ( \alpha \wedge \alpha' ) .
+\eeqn
+
+Given a vector bundle $E \to M$, the bundle of $\infty$-jets $J^\infty E \to M$ is a $\infty$-dimensional pro vector bundle whose sections consist of $\infty$-jets of sections of $E$.
+If $M = \R^d$ and $E$ is translation invariant, then the bundle of $\infty$-jets can be identified with $E_0 \times \C[[x_i]]$ where $\{x_i\}$ is a chosen coordinate on~$\R^d$. 
+The process of taking $\infty$-jets is well-behaved for local Lie algebras:
+the $\infty$-jets of a translation invariant local Lie algebra on $\R^d$ at a point carries the natural structure of a Lie algebra.
+
+In \cite{RSW} it is shown that the $\infty$-jets of $\cL_{sugra}$ at $0 \in \R \times \C^5$ is quasi-isomorphic to a central extension $\Hat{E(5|10)}$ of the super Lie algebra $E(5|10)$.
+The central extension is defined by the (totally even) three-linear cocycle
+\beqn\label{eqn:e510central}
+(\mu, \mu' , \alpha) \mapsto \<\mu \wedge \mu' , \alpha\>_{z=w=0} \in \C .
+\eeqn
+Since this is a three-linear functional the model we use for the central extension is a super $L_\infty$ algebra (with zero one-ary operation) rather than just a super Lie algebra.
+
+%parsec[s:twistedsugra]
+
+%Before proceeding with the appearance of fivebranes in the minimal twist of eleven-dimensional supergravity we discuss a related, but simpler, five-dimensional theory.
+%This five-dimensional theory, as argued by Costello \cite{CostelloM5}, arises from placing eleven-dimensional supergravity in the so-called `twisted $\Omega$-background'.
+%We will use this theory for the sake of highlighting more accessible examples of the constructions later on in the paper.
+
+%In the works \cite{CostelloM5,CostelloM2} Costello has introduced a program to analyze holography for membranes and fivebranes in the $\Omega$-deformation of nonminimally twisted supergravity defined on multi Taub--NUT spaces.
+%The $\Omega$-deformation of the nonminimal twist of eleven dimensional supergravity was constructed directly from the physical theory and was argued to admit a description in terms of a holomorphic-topological gauge theory in five dimensions.
+%We do not recall the precise relationship between this five-dimensional theory and eleven-dimensional supergravity, but it will be helpful to recall some features of the five-dimensional theory.
+
+%This five-dimensional theory is formally similar to a non-commutative version of Chern--Simons theory.
+%It exists on any manifold of the form
+%\[
+%  S\times Y
+%\]
+%where $Y$ is a complex surface equipped with a holomorphic symplectic structure and $S$ is a real oriented smooth one-dimensional manifold.
+%We denote the corresponding holomorphic two-form on $Y$ by $\Omega_Y$.
+
+%There are two parameters in this theory $\delta$ and $\ep$, see \textit{loc. cit.}.
+%The parameter $\delta$ controls the coupling of the Chern--Simons action, which in this section and going forward we will simply set to be the unit.
+%The parameter $\ep$ measures the non-commutativity---
+%it appears through the formal deformation quantization of~$Y$ which is the associative algebra $\cO(Y)[[\ep]]$ equipped with the Moyal product $\star_\ep$.
+
+%We consider the following subalgebra of complex-valued forms on $S\times Y$:
+%\[
+%\cL_{5d} \define \oplus_{k,q}\Omega^{k}(S)\hotimes \Omega^{0,q}(Y) \subset \Omega^\bu(S \times Y) .
+%\]
+%In local coordinates a general differential form in $\cL_{5d}$ admits a decomposition as
+%\[
+%\alpha = \alpha^{\Bar I} \d \zbar_{\Bar I} + \alpha^{\Bar I}_t \d t \d \zbar_{\Bar I} .
+%\]
+%We will use the notation $\alpha^{k;q}$ with $k+q=$ for the corresponding homogenous components.
+%We can understand the Moyal product along the holomorphic symplectic surface $Y$ as endowing $\cL_{5d}[[\ep]]$ with the structure of a dg algebra.
+%Of course, we can forget down to a dg Lie algebra structure with respect to the Moyal commutator $[-,-]_{\star_{\ep}}$.
+
+%In the BV formalism the space of fields of the five-dimensional theory is $\cL_{5d}[[\ep]] [1]$.
+%The fundamental field of the five-dimensional theory is a $\C[[\ep]]$ one-form on~$S \times Y$, which is a degree $0$ element in $\cL_{5d}[[\ep]] [1]$.
+
+%We can take a gauge condition where the $\d t$ component of the one-form $\alpha_t$ vanishes.
+%In this case the equations of motion for the one-form field, in components, simply reads
+%\beqn
+%\del_{\zbar_{\Bar{i}}} \alpha^{\Bar{j}} + \alpha^{\Bar{i}} \star_\ep \alpha^{\Bar{j}} = 0,
+%\eeqn
+%together with the condition that $\del_t \alpha^{\Bar{i}} = 0$ for all $\Bar{i}, \Bar{j}$.
+%Here $\star_{\ep}$ denotes the holomorphic Moyal product on $Y$ and $\del_t$, $$ denote the de Rham and Dolbeault differentials along $S$,$Y$ respectively.
+
+%We may get a better feeling for these equations after assuming that $\alpha^{1;0}$ is holomorphic $\alpha^{{1;0}}$ a VEV such that $\dbar\alpha^{{1;0}}=0$. 
+%The second equation then reads
+%
+%\beqn
+%0 = d\alpha^{0;1} + \{\alpha^{1;0}, \alpha^{0;1}\}
+%\eeqn
+
+%Gauge symmetries are given by degree $-1$ elements in $\cL_{5d}[[\ep]][1]$ which are simply functions $f \in C^\infty (S\times Y)[[\ep]]$.
+%Explicitly, the corresponding infinitesimal gauge transformation for the one-form component of $\alpha$ is given by
+%\[
+%\alpha \mapsto \alpha + \del_t f \d t +\del_{\zbar_{\Bar{i}}} f \d \zbar_{\Bar{i}} + [f, \alpha]_{\star_\ep} .
+%\]
+%Here, $[-,-]_{\star_{\ep}}$ is the commutator with respect to the Moyal product $\star_\ep$.
+
+%The full BV action functional describing this model is the non-commutative Chern--Simons action
+%\beqn
+%S(\alpha) = \int_{S \times Y} \left(\frac12 \alpha \d \alpha + \frac13 \alpha \star_\ep \alpha \star_\ep \alpha \right) \wedge \Omega_Y .
+%\eeqn
+%Here, $\alpha$ represents an arbitrary element of $\cL_{5d}[[\ep]]$ and $\d$ is the full de Rham differential on $S \times Y$ (notice that that no holomorphic derivatives appear in the kinetic term due to the appearance of $\Omega_Y$).
+
+%In the BV formalism, the full space of BV fields together with equations of motion and gauge symmetries can described by a local dg Lie algebra on $S\times Y$ whose underlying sheaf of cochain complexes is
+%\beqn
+%\Omega^\bu(S) \hotimes \Omega^{0,\bu}(Y) .
+%\eeqn
+%The holomorphic poisson bracket $\{-,-\}_{Y}$ can be extended to define a Lie bracket on the entire Dolbeault complex $\Omega^{0,\bu}(Y)$.
+%The dg lie algebra structure is then obtained by the tensor product with the commutative dg algebra $\Omega^\bu(S)$. 
+%The BV pairing is given by integrating against the holomorphic volume form on $Y$.
+
+\subsection{A more general background}
+\label{s:thfmflds}
+The eleven-dimensional model for twisted supergravity can be extended to more general geometries than products $S \times X$ where $S$ is a real one-dimensional manifold and $X$ is a Calabi--Yau fivefold.
+More generally, we can define the model on an eleven-manifold $M$ equipped with a transversely holomorphic foliation (THF) equipped with the data of a non-vanishing volume form on the leaf space.
+For general background on the theory of THFs we refer the reader to \cite{DuchampKalka, KamberTondeur, Rawnsley}.
+
+A THF structure on a smooth manifold $M$ is an integrable subbundle $F \subset \T_M \otimes \C$ such that $F + \Bar{F} = \T_M \otimes \C$.
+Equivalently, this allows you to choose an atlas of coordinates $(t_i, z_j)$ on $M$ which transform smoothly in the $t_i$-variables and holomorphically in the $z_j$-variables. 
+Accordingly, we may take a local patch in a THF manifold to be of the form $\R^m \times \C^n$.
+%Suppose $M$ is a manifold equipped with a THF structure and let $\cF$ be the corresponding foliation of even codimension.
+%he product $M = S \times X$, where $X$ is a complex manifold and $S$ is a smooth manifold has a natural THF structure with $F$ the restriction of the tangent bundle of $M$ along the projection.
+%Locally, any THF manifold is split of the form $\R^d \times \C^n$, whose coordinates we will denote by $(x_i ;  z_j)$.
+The bundle $F$ is locally spanned by the vector fields $\partial / \partial t_i$'s and $\del/\del \zbar_j$'s.
+(Notice that when $F \cap \Bar{F} = 0$ we are just describing an ordinary complex structure on $M$.)
+We will say that $M$ is of dimension $(m,n)$ (so it is a manifold of real dimension $m + 2n$).
+
+There is a notion of the sheaf of `holomorphic functions' $\cO_F$ on any manifold $M$ equipped with a THF~$F$---in the language of foliations these are the functions on $M$ which are constant along the leaves of $F$.
+Locally, on a coordinate patch it is given by functions which only depend on the holomorphic variables $z_i$.
+There is a resolution $\cA^\bu_F$ for $\cO_F$ by locally free sheaves on $M$ which is the THF analog of the de Rham and Dolbeault complexes. 
+In degree zero $\cA^0_F$ is just the sheaf of smooth functions on $M$.
+In degree $k$ one takes $\cA^k_F$ the sheaf of sections of the bundle $\wedge^k F^*$.
+The derivative along the leaves of the foliation defined by $F$ defines a map of sheaves
+\[
+\thfd \colon \cA^{q}_F \to \cA^{q+1}_F  .
+\]
+By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and one can show that the natural map $\cO_F \xto{\simeq} \cA^\bu_F$ provides a resolution.
+% and so $\thfd$ equips $\cA^{\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
+Locally in a split THF structure like $\R^m \times \C^n$ the operator $\thfd$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
+
+
+The fields of our eleven-dimensional theory may be described as sheaves of flat sections of some natural partially flat bundles on $M$. Associated to a foliation $F$, its normal bundle is the quotient bundle $Q = T^{\C}_{M}/F$. The normal bundle $Q$ and its dual $Q^{*}$ admit natural connections defined along the leaves of $F$, the so-called Bott connection \cite{KamberTondeur}.
+
+These furnish the notion of the sheaf of holomorphic vector fields $\vartheta_F$ and a sheaf of holomorphic one-forms $\Omega^1_F$ on a manifold $M$ equipped with a THF~$F$. These are the sheaves of sections of $Q$ and $Q^{*}$ that are flat with respect to the Bott connection. Locally, on $\R^m \times \C^n$ these are of the form $f^i \del / \del z_i$ and $f^{i}dz_{i}$ where each $f^i \in \cO_F$.
+
+Let $\cA^k_{F}(Q), \cA^{k}_{F}(Q^{*})$ be the sheaves of $C^\infty$-sections of the bundles $\wedge^k F^{*} \otimes Q$ and $\wedge^{k}F^{*}\otimes Q^{*}$ respectively. Then we have fine resolutions
+
+\beqn
+\vartheta_F \xto{\simeq} \cA_F^\bu(Q) \ \ \ \ \ \ \ \Omega^1_F \xto{\simeq}  \cA_F^\bu(Q^*)
+\eeqn
+The sheaf $\vartheta_F$ is equipped with a Lie bracket which extends to endow $\cA^\bu(Q)$ the structure of a dg Lie algebra. Likewise, the sheaf $\Omega^{1}_{F}$ carries the contragradient action of $\vartheta_{F}$ which likewise extends to equip $\cA^{\bu}(Q^{*})$ with the structure of a dg-module over $\cA_{F}^{\bu}(Q)$.
+
+The holomorphic deRham and divergence operators also have analogues in the THF setting, which are now defined on the leaf space. First, for a vector bundle with  $\cA_{F}^{p,q}(Q)$ denote the sheaf of $C^{\infty}$ sections of $\wedge^{q} F^{*}\otimes \wedge^p Q$.
+The fields of the eleven-dimensional theory, which we phrased in terms of a mixed type of de Rham and Dolbeault cohomology, can now be elegantly repackaged in terms of the above.
+
+For illustration, let us focus on the fields $\beta,\gamma$ which on $S \times X$ combine to form the complex
+\beqn\label{eqn:drdol}
+\Omega^{\bu}(S) \otimes \Omega^{0,\bu}(X) \xto{1 \otimes \del} \Omega^{\bu}(S) \otimes \Omega^{1,\bu}(X) .
+\eeqn
+As usual, we leave the $\d_{dR}$ and $\dbar$ operators implicit.
+There is an analog of this operator $1 \otimes \del$ on a manifold $M$ equipped with a THF~$F$.
+It is a differential operator 
+\beqn
+D \colon \cA^{p,\bu}_F \to \cA^{p+1,\bu}_F
+\eeqn
+which locally is just the holomorphic de Rham operator. 
+This operator commutes with $\thfd$.
+The generalized $\beta$ and $\gamma$ fields will be sections of the two-term complex of sheaves $\cA^\bu_F \xto{D} \cA^{1,\bu}_F$.
+
+\newcommand\Div{D_\Omega}
+
+To make sense of a THF analogue of the holomorphic divergence operator, we will assume that in addition to having a THF structure that $M$ is equipped with the data of a trivialization $\wedge^{n} Q^* \cong \C_{M}$ which we will denote by~$\Omega_F$. We require that the trivialization is constant along the leaves of $F$, i.e. that $D\Omega_{F} = 0$. If $F \cap \Bar{F} = 0$, then $\Omega_F$ returns the usual notion of a non-vanishing holomorphic top form. For our purposes, this is the appropriate notion of a transverse Calabi--Yau structure
+
+Next we should say where the generalized $\mu$ and $\nu$ fields live. 
+The volume form $\Omega_F \colon \C \cong \wedge^n Q^*$ determines an isomorphism $\cA^{p,q}_F \cong \cA^{n-p,q}_F$ for each $p,q$.
+Via this isomorphism we can identify $D \colon \cA^{n-1,\bu}_F \to \cA^{n,\bu}_F$ with a differential operator
+\beqn
+\Div \colon \cA_F^{\bu}(Q) \to \cA^\bu_F .
+\eeqn
+The $\mu$ and $\nu$ fields will be sections of the two-term complex of sheaves $\cA^\bu_F(\theta_F) \xto{\Div} \cA^\bu_F$. 
+This resolves the THF version of the sheaf of holomorphic vector fields on $M$ which preserve the form $\Omega_F$. 
+
+Now we are in a place to describe a BV theory defined on an eleven-manifold $M$ equipped with a THF $F$ and a volume form $\Omega_F$ on the leaf space.
+The space of fields of the theory consist of fields $\beta,\gamma, \mu, \nu$ as before but where
+\beqn
+\beta \in \Pi \cA_F^\bu , \quad \gamma \in \cA^{\bu}_F (Q^*) , \quad \mu \in \Pi \cA^\bu_F(Q), \quad \nu \in \cA_F^\bu  .
+\eeqn
+
+Notice that there is a natural odd pairing between the fields $\mu, \gamma$ and $\beta, \nu$.
+
+For convenience, we will let $L$ denote the dg vector bundle
+\beqn
+\Pi (\C \oplus Q)\to Q^* \oplus \C
+\eeqn
+
+with differential given by the block matrix $\operatorname{diag}(D, \Div)$ and succinctly write the space of fields as $\cA^{\bu}_{F}(L)$.
+
+The free part of the action functional (cf. \eqref{eqn:free}) is 
+\beqn
+\int_M (\gamma \thfd \mu) \Omega_F + \int_M (\beta \thfd \gamma) \Omega_F + \int_M (\beta \Div \mu) \Omega_F .
+\eeqn
+The interaction (cf. \eqref{eqn:int}) is
+\beqn
+\label{eqn:int}
+\frac12 \int_{M} (\mu^2 D \gamma) \frac{\Omega_F}{1- \nu} + \frac16 \int_{M} \gamma D \gamma D \gamma .
+\eeqn
+If we assume that $\nu = \Div \mu = 0$ we recover the following equation of motion upon varying $\gamma$
+\beqn
+\thfd \mu + \frac12 [\mu,\mu] = D \gamma D \gamma .
+\eeqn
+This is a generalization of equation \eqref{eqn:eom2} for a general THF $F$ on the eleven-manifold~$M$.
+
+\subsection{Twisted fivebranes}
+
+It is expected that the worldvolume theory of fivebranes in $M$-theory on flat space is equipped with $\cN=(2,0)$ superconformal symmetry.
+Six-dimensional $\cN=(2,0)$ supersymmetry admits two inequivalent classes of twists characterized by the number of directions which are left invariant:
+\begin{itemize}
+\item
+The holomorphic, or minimal, twist.
+This twist leaves three real directions invariant and is stabilized by the double cover of the group $U(3)$.
+The holomorphic twist of any $\cN=(2,0)$ theory can be defined on any complex three-fold $Z$ equipped with a square-root of its canonical bundle.
+\item
+The non-minimal twist.
+This twist leaves five real directions invariant and is stabilized by the group $SO(4) \times U(1)$.
+The non-minimal twist of any $\cN=(2,0)$ theory can be defined on a six-manifold of the form $M^4 \times \Sigma$ where $M^4$ is a smooth four-manifold and $\Sigma$ is a Riemann surface.
+\end{itemize}
+
+An explicit characterization of these twists in the case of the stack of a single fivebrane has been given in \cite{SWtensor}.
+We recall the description of the minimal twist.
+
+\parsec[s:single]
+
+The holomorphic twist of the fivebrane theory is defined on any complex three-fold $Z$ (which is not necessarily equipped with a Calabi--Yau structure).
+In the particular twist we will use we must assume, however, that $Z$ is equipped with a square-root of the canonical bundle $K_Z^{1/2}$.
+
+The theory is $\Z \times \Z/2$ graded where $\Z$ is the ghost number (or cohomological degree) and $\Z/2$ is parity.
+There are four fundamental fields of ghost number zero $(\alpha, \omega, \phi_1,\phi_2)$ which consist of even Dolbeault forms of type $(2,1)$ and $(3,0)$ on $Z$:
+\[
+\alpha \in \Omega^{2,1}(Z), \quad \omega \in \Omega^{3,0}(Z),
+\]
+and a pair of odd $(0,1)$ forms twisted by the line bundle $K^{1/2}_Z$:
+\[
+(\phi_1,\phi_2) \in \Pi \Omega^{0,1}(Z , K^{1/2}_Z) \otimes \C^2 .
+\]
+%where $R \cong \CC^2$ is the fundamental $Sp(1)$ representation.
+The equations of motion read
+\beqn
+\label{eqn:eom}
+\begin{split}
+\del \alpha + \dbar \omega & = 0 \\
+\dbar \alpha = \dbar \phi_i & = 0 .
+\end{split}
+\eeqn
+
+There are gauge symmetries for the fields $\mu, \Omega$ determined by a ghost $b$ which is a Dolbeault form of type $(2,0)$ which acts simply by
+\beqn
+\label{eqn:ghost}
+\begin{split}
+\mu & \mapsto \mu + \dbar b  \\
+\Omega & \mapsto \Omega + \del b .
+\end{split}
+\eeqn
+There are also odd gauge symmetries for the odd fields $\phi_i$ given by
+\beqn
+\phi_i \mapsto \phi_i + \dbar \chi
+\eeqn
+where $\chi \in \Omega^0(Z, K_{Z}^{1/2}) \otimes \C^2$.
+
+This theory notoriously does not admit a Lagrangian description.
+However, it can still be put in a degenerate form of the BV formalism where the space of fields above is equipped with an odd Poisson bivector \cite{SWtensor}.
+In the (degenerate) BV formalism, the space of fields of the theory is
+\beqn
+\cE_{\lie{gl}(1)} = \Omega^{\geq 2, \bu}(Z)[1] \oplus \Pi \Omega^{0,\bu}(Z, K^{1/2}_Z) \otimes \C^2 [1] ,
+\eeqn
+and the linear BRST differential is described by the following diagram
+\beqn\label{eqn:weight-1a}
+\begin{tikzcd}
+\ul{-1} & \ul{0}\\
+\Pi \Omega^{0,\bu}(Z, K_Z^{1/2} \otimes \C^2) & \\
+\Omega^{2,\bu}(Z) \ar[r,"\del"] & \Omega^{3,\bu}(Z) ,
+\end{tikzcd}
+\eeqn
+where the $\dbar$ operator acts implicitly on each summand.
+
+%More generally, there is a natural cohomology associated to a THF structure.
+%Suppose $(M,F)$ is a THF structure and
+%denote by $Q$ the (complex) quotient bundle $\T_\C M / F$.
+%For each $p,q$ denote by $\cA^{p;q}$ smooth sections of the bundle $\wedge^p Q^\vee \otimes \wedge^q F^\vee$.
+%The derivative along the leaves of the foliation defined by $V$ defines a map
+%\[
+%\thfd \colon \cA^{p;q} \to \cA^{p;q+1}  .
+%\]
+%By integrability one has $\thfd^2 = \thfd \circ \thfd = 0$ and so $\thfd$ equips $\cA^{p;\bu} = \oplus_q \cA^{p;q}[-q]$ with the structure of a cochain complex for each $p$.
+%Locally in a split THF structure the operator $D$ is of the form $\d_{dR} + \dbar$ where $\d_{dR}$ is the de Rham differential along $\R^d$ and $\dbar$ is the Dolbeault operator along $\C^n$.
+%There is also an analog of the holomorphic $\del$ operator which takes the form $\thfdel \colon \cA^{p;q} \to \cA^{p+1;q}$.
+%The obvious exterior product $\cA^{p;q} \times \cA^{r;s} \to \cA^{p+r;q+s}$ further endows
+%\[
+%\left(\cA^{\bu;\bu} (M), \thfd + \thfdel\right) = \left(\oplus_p \cA^{p;\bu}[-p] , \thfd + \thfdel \right)
+%\]
+%with the structure of a bigraded commutative dg algebra.
+%This complex is simply isomorphic to the de Rham complex of $M$, but this presentation lends itself to more interesting quotient complexes.
+%For example, the forms of type $(p,\bu)$ with $p \geq 2$ form an ideal inside of this dg algebra; hence we get a quotient dg algebra
+%\beqn\label{thfcoh1}
+%\left(\cA^{\leq 1;\bu}(M), \thfd + \thfdel\right) = \quad \cA^{0;\bu} \xto{\thfdel} \cA^{1;\bu} .
+%\eeqn
+%We leave the $\thfd$ operator implicit in the presentation on the right hand side.
+%When $M = M_V$, it is this complex that is the THF generalization of the truncated de Rham--Dolbeault complex in \eqref{eqn:drdol}---it is easy to see that it agrees with this complex in the case of a split THF manifold.
+%There is a similar THF description for the fields $\mu,\nu$ in the eleven-dimensional theory.
+%
+%Any submanifold of a THF manifold is itself a THF manifold.
+%We are most interested in the submanifold $M_V \subset {\rm Tot}(\R \oplus V) = \R \times X$ where we equip $\R \times X$ with its standard split THF structure.
+%
+%\end{document}
