@@ -331,7 +331,7 @@ Recall that the $\Omega$-deformed nonminimal twist is a holomorphic theory in on
 The precise relationship between the $\Omega$-deformed nonminimal twist of the six-dimensional $\cN=(2,0)$ $A_{N-1}$ theory and five-dimensional $\cN=2$ gauge theory for $SU(N)$ is articulated through the AGT correspondence \cite{AGT}. As we intimated, the observables of the $\Omega$-deformed nonminimal twist are expected to be a one-dimensional holomorphic factorization algebra which agrees with the $W_{N}$ vertex algebra. In the language of factorization algebras, the dimensional reduction along $S^{1}\subset \C^{\times}$ amounts to passing to the algebra of modes. The AGT correspondence posits that this mode algebra acts on the equivariant cohomology of the moduli of instantons of the five dimensional theory.
 
 We propose similar statements at the level of the minimal twist. 
-We fix a complex surface $S$ together with a pair of complex vector bundles $L,W \to S$ of ranks one and two respectively, satisfying the condition that $X = \text{Tot} (L \oplus W)$ is a Calabi--Yau fivefold.
+We fix a complex surface $S$ together with a triple of complex line bundles $L, L_1, L_2\to S$ satisfying the condition that $X = \text{Tot} (L \oplus L_1 \oplus L_2)$ is a Calabi--Yau fivefold. 
 The twisted eleven-dimensional supergravity lives on the eleven-manifold $\R \times X$. 
 
 \subsection*{The abelian $\cN=(2,0)$ theory}
@@ -357,29 +357,65 @@ Choosing a fiberwise hermitian metric affords a norm map
 \] 
 whose fiber away from $0$ is the total space of the unit sphere bundle.
 The pushforward factorization algebra $\pi_{*}\Obs_{1}$ is a stratified factorization algebra on the non-negative half-line $\R_+ = \{t \geq 0\}$. 
-We can tweak this factorization algebra slightly which gives rise to a constructible factorization algebra on $\R_+$.
-In turn, this is equivalent to a pair of an associative algebra (which may be thought of as the algebra of modes of $\Obs_{1}$ along the five-manifold which is the total space of the unit sphere bundle) together with a module for this algebra.
+
+In turn, this is equivalent to a pair of an associative algebra (which may be thought of as the algebra of modes of $\Obs_{1}$ along the five-manifold which is the total space of the unit sphere bundle in $L$) together with a module for this algebra.
 
 In \cite{SWtensor} it is shown that in the case where $L$ is the trivial bundle, the naive dimensional reduction (where we discard higher Kaluza--Klein modes along the circle fiber) along 
 \beqn
 S \times \C \to S \times \R_+
 \eeqn
-agrees with the factorization algebra associated to the minimal twist of five-dimensional $\cN = 2$ supersymmetric Yang--Mills theory on $\R\times M$ for the group $U(1)$ in perturbation theory around the zero instanton sector.
+agrees with the factorization algebra associated to the minimal twist of five-dimensional $\cN = 2$ supersymmetric Yang--Mills theory on $\R\times M$ for the group $U(1)$ in perturbation theory around the zero instanton sector. Keeping track of Kaluza-Klein modes, one expects that the dimensional reduction $\pi_{*}\Obs_{1}|_{\R_{>0}}$ receives contributions from instanton operators codified by way of a certain Chern-Simons term. Let us explicate how these contributions manifest in the dimensionally reduced factorization algebra.
 
-If we keep track of Kaluza--Klein modes, our expectation is that the full dimensional reduction $\pi_{*}\Obs_{1}|_{\R_{>0}}$ includes contributions from instanton operators.\footnote{The instanton charge turns out to be identical to the winding number around $S^1$.} Moreover, the module at zero $\pi_{*}\Obs_{1}|_{0}$ ought to be identified with the Hilbert space of the minimal twist of five-dimensional $\cN = 2$ gauge theory. We are left with the following conjecture.
+Nonperturbatively, five-dimensional $\cN=2$ super Yang-Mills has a topological $U(1)$ symmetry, charges under which are instanton number. This charge can be measured by introducing a background gauge field $\theta$ for this symmetry and adding a Chern-Simons term of the form 
+\[
+\int Tr (\theta\wedge F\wedge F) = \int c_1 (L) \wedge CS (A)
+\]
+ to the action, where $F$ is the curvature of the five dimensional gauge field $A$ and $CS(A)$ denotes the corresponding Chern-Simons three-form. An ingredient in identifying the dimensional reduction of the six-dimensional $\cN=(2,0)$ theory on a circle with five-dimensional $\cN= (2,0)$ is an identification of the above $U(1)$-charge with one keeping track of Kaluza-Klein modes along the circle fiber of $Z \to S\times \R_{>0}$. Accordingly, the dimensional reduction along the circle fiber of a nontrivial line bundle will include the above term in the action.
+
+We claim that this term crucially enters into the description of the module at zero $\pi_{*}\Obs_{1}|_{0}$. This module ought to be identified with the Hilbert space of the minimal twist of five-dimensional $\cN = 2$ gauge theory, which can be calculated by geometrically quantizing the phase space. We will see that the phase space can naturally be written as a twisted cotangent bundle, where the twist depends on the above Chern-Simons term.
+
+Perturbatively, the phase space is described by the following local Lie algebra. 
+\beqn
+\begin{tikzcd}
+\underline{-2} & \underline{-1} & \underline{0} \\
+& \Omega_S^{0,\bullet}\arrow[dd, "c_1(L)\wedge\partial"] & \\
+\Omega_S^{0,\bullet}(L_2)& & \Omega^{0,\bullet}_S(L_1\otimes L_2) \\
+& \Omega_S^{0,\bullet}(K_S)  &
+\end{tikzcd}
+\eeqn
+
+We thus see that the phase space has a natural polarization whose base is given by $\Omega^{0,\bullet}_S(L_2)[2] \oplus \Omega^{0,\bullet}[1]$. The differential made explicit deforms the symplectic structure to that of a twisted cotangent bundle.
+
+Globally, we can describe an algebro-geometric model for the polarized phase space as 
+\[
+T^*_\Pi \operatorname{Higgs} _{GL(1)} (S, L_2)
+\]
+where $\operatorname{Higgs}_{GL(1)} (S, L_2)$ is the moduli of pairs of a rank 1 torsion free sheaf $Z$ on $S$ and a section $\phi \in \Gamma (Z\otimes L_2)$. We will call these \textit{rank 1 $L_2$ twisted Higgs sheaves}. Letting $TFS_1(S)$ denote the moduli of rank 1 torsion free sheaves on $S$, there is a natural projection 
+\[\operatorname{Higgs}_{GL(1)} (S, L_2)\] and a diagram
+\beqn
+\begin{tikzcd}
+S\times TFS_1 (S)\ar[r, "\pi_2"]\ar[d, "\pi_1"] & TFS_1 (S) \\
+S
+\end{tikzcd}
+\eeqn
+The global symplectic form on the phase space is given by 
+\[
+p^*{\pi_2}_*\left (\pi_1^* c_1 (L) \wedge ch_2 (Z_{univ})\right )
+\]
+where $Z_{univ}$ denotes the universal rank 1 torsion free sheaf. 
+
+We are thus left with the following conjecture.
 
 \begin{conj}
 \label{conj:AGT1}
-Let $\operatorname{Higgs}_{GL(1)} (S,W)$ denote the moduli space of $GL(1)$ Higgs bundles on the complex surface $S$ where the Higgs fields has coefficients in the rank two bundle $W$.
-The mode algebra $\pi_{*}\Obs_{1}|_{\R_{>0}}$ that we have just discussed acts on the space of functions on this moduli space
+Let $\operatorname{Higgs}_{GL(1)} (S,L_2)$ denote the moduli space of rank 1 $L_2$-twisted Higgs sheaves on $S$. The mode algebra $\pi_{*}\Obs_{1}|_{\R_{>0}}$ acts on the coherent cohomology 
 \beqn
-\cO \left(\operatorname{Higgs}_{GL(1)} (S,W)\right) .
+H^\bullet \left(\operatorname{Higgs}_{GL(1)} (S,L_2), \Theta \right) .
 \eeqn
+of a certain line bundle $\Theta$ whose first chern class is the above symplectic form.
 \end{conj}
 
-We emphasize that the moduli space in question is really sensitive to the complex geometry of the entire fivefold $X$, at least in the neighborhood of the total space of~$L$.
-
-While we leave the precise relationship of this conjectural action with the usual abelian AGT correspondence to future work, we can highlight some compatibilities. Above, we have mentioned a particular deformation of the observables of the six-dimensional $\cN = (2,0)$ theory by an explicit Maurer--Cartan element in the residual superconformal algebra $\lie{osp}(6|2)$. We point out that this deformation is of the same spirit considered in \cite{BeemEtAl}. For a particular choice of the fivefold $X$, one can identify (though we do not do that in this paper) this deformation of $\pi_{*} \Obs_1|_{\R_{>0}}$ with the Heisenberg algebra.
+While we leave the precise relationship of this conjectural action with the usual abelian AGT correspondence to future work, we can highlight some compatibilities \surya{FINISH}. Above, we have mentioned a particular deformation of the observables of the six-dimensional $\cN = (2,0)$ theory by an explicit Maurer--Cartan element in the residual superconformal algebra $\lie{osp}(6|2)$. We point out that this deformation is of the same spirit considered in \cite{BeemEtAl}. For a particular choice of the fivefold $X$, one can identify (though we do not do that in this paper) this deformation of $\pi_{*} \Obs_1|_{\R_{>0}}$ with the Heisenberg algebra.
 
 We expect that one may judiciously choose $X$ such that the superconformal element will also deform the Hilbert space of the minimal twist in five dimensions to the equivariant cohomology of the moduli of abelian instantons on $\C^{2}$, and that the action of~$\pi_{*}\Obs_{1}|_{\R_{>0}}$ compatibly deforms to the Heisenberg action studied by Grojnowski-Nakajima.
 
