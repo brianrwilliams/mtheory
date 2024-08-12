@@ -1,0 +1,198 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{macros-master,amsaddr,physics,amssymb}
+
+\addbibresource{refs}
+
+\renewcommand{\div}{\del_{\Omega}}
+\renewcommand{\PV}{\mathrm{PV}}
+\renewcommand{\op}{\operatorname}
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+\title{Notes on agt}
+\maketitle
+
+
+\section{The twisted brane construction}
+
+We will use the fact that the minimal twist of $M$-theory exists on geometries of the form
+\beqn
+Z \times \R
+\eeqn
+where $Z$ is a Calabi--Yau fivefold.
+
+We consider familiar extended objects, which in the twisted setting have the following flavor.
+\begin{itemize}
+\item[(M5)] Twisted fivebranes wrap an embedded threefold
+\beqn
+X \subset Z
+\eeqn
+with the property that $K_X \simeq \wedge^2 N_{X \subset Z}$ where $N_{X \subset Z}$ is the normal bundle to $X$ in $Z$.
+\item[(M2)] Twisted membranes wrap the real line times an embedded curve $\Sigma \subset Z$:
+\beqn
+\Sigma \times \R \subset Z \times \R
+\eeqn
+with the property that $K_\Sigma \simeq \wedge^4 N_{\Sigma \subset Z}$.
+\end{itemize}
+
+
+
+Some special cases of such twisted geometries are worth addressing.
+
+\begin{itemize}
+\item[(1)] First, consider the following local fivefold geometry
+\beqn
+Z = \op{Tot} \begin{pmatrix} W \\ \downarrow \\ X \end{pmatrix} 
+\eeqn
+where $W$ is a rank two vector bundle on a threefold $X$, which satisfies $\wedge^2 W = K_X$.
+The case $X = \C^3$ and $W = K^{1/2}_{\C^3} \otimes \C^2$.
+The worldvolume theory on $\C^3$ in this geometry is the (minimal) holomorphic twist of six-dimensional $\cN=(2,0)$ supersymmetry.
+More generally, if a threefold $X$ admits a square root of its canonical bundle $K^{1/2}_X$, then we can consider the geometry 
+\beqn
+Z = \op{Tot} \begin{pmatrix} K^{1/2}_X \otimes \C^2 \\ \downarrow \\ X \end{pmatrix} ,
+\eeqn
+with fivebranes wrapping the zero section $X \subset Z$.
+\item[(2)]
+Notice that in the above example there is a global $SU(2)$ symmetry.
+We can break this to $U(1)$ by assuming that $W = L_1 \oplus L_2$ where $L_1,L_2$ are line bundles on $X$ satisfying $L_1 \otimes L_2 = K_X$.
+Note that necessarily we have $L_2 = L^{-1} \otimes K_X$, $L=L_1$.
+\item[(3)] Suppose that $Y$ is a Calabi--Yau threefold with an embedded holomorphic curve $C$, and $S$ is a Calabi--Yau surface.
+Then $Z = Y \times S$ determines a twisted $M$-theory geometry with fivebranes that wrap 
+\beqn
+X = C \times S \subset Y \times S \times \R = Z \times \R .
+\eeqn
+\item[(4)]
+As a special case of (3), consider the Calabi--Yau threefold
+\beqn
+Y = \op{Tot} \begin{pmatrix} \C \oplus \T^*_C \\ \downarrow \\ C \end{pmatrix} \simeq \C \times \T^* C ,
+\eeqn
+where $C$ is an arbitrary Riemann surface.
+To phrase this as a special case of (2) one takes $W$ to be the rank two bundle obtained by restricting $\C \oplus \T^*_C$ along $C \times S \to C$.
+In this geometry, one can allow for $C$ to have punctures.
+The four-dimensional theory one obtains by compactifying the six-dimensional worldvolume theory of fivebranes along
+\beqn
+X = C \times S \to S 
+\eeqn
+in this geometry gives rise to the holomorphic twist of four-dimensional theories of class $\cS$ \cite{GaiottoS,GMN}.
+\item[(5)] 
+Again, as a special case of (3) (but more general than the last example), consider the Calabi--Yau threefold
+\beqn
+Y = \op{Tot} \begin{pmatrix} V \\ \downarrow \\ C \end{pmatrix} ,
+\eeqn
+where $V$ is an $SU(2)$ bundle over $C$.
+Compactification along $X = C \times S \to S$ gives rise to holomorphic twists of four-dimensional superconformal theories \cite{BeemM5}.
+This fits as a special case of (1) by taking $W$ to be the restriction of the bundle $V$ along the projection $X \to C$.
+\end{itemize}
+
+
+\section{Twisted fivebranes}
+
+We will work in the generality of the geometry in (1) where the fivefold is of the form $\op{Tot}(W \to X)$ with $\wedge^2 W = K_X$.
+
+The theory of a twisted fivebrane in this geometry admits the following description.
+In the Poisson BV formalism its sheaf of fields is of the form $\Omega^{0,\bu}(X,\mathbb{V})$ where $\mathbb{V}$ is the following super complex of holomorphic vector bundles
+\beqn
+\mathbb{V} \;\;\;\left\{
+\begin{tikzcd}
+& \ul{-1} & \ul{0} \\
+\ul{\text{even}} & \Omega^2_X \ar[r,"\del"] & \Omega^3_X \\
+\ul{\text{odd}} & \Pi W  
+\end{tikzcd} \right.
+\eeqn
+We will write Dolbeault valued fields of the bundle in the first line with the letter as~$\beta$ and in the bottom line as $\phi$. 
+
+The Poisson BV structure is determined by\brian{finish}
+
+\subsection{Five-dimensional supersymmetric Yang--Mills theory}
+
+Let $S$ be a complex surface and $W$ a rank two vector bundle on $S$ satisfying $\wedge^2 W = K_S$.
+Given any Lie algebra~$\lie{g}$ equipped with a non-degenerate invariant pairing, we consider the following $\Z \times \Z/2$ graded five-dimensional gauge theory which we refer to as generalized twisted five-dimensional $\cN=2$ Yang--Mills theory.
+
+The fields are
+\begin{itemize}
+\item Hybrid $BF$ theory with fields
+\begin{align*}
+A & \in \Omega^{\bu}(\R) \otimes \Omega^{0,\bu}(S) \otimes \lie{g} [1] \\
+B & \in \Omega^{\bu}(\R) \otimes \Omega^{2,\bu}(S)\otimes \lie{g} [1] .
+\end{align*}
+\item Hypermultiplet fields
+\beqn
+\phi \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(S,\Pi W) [1] .
+\eeqn
+In other words, $\phi^{0,0}$ is an odd field of cohomological degree $-1$.
+\end{itemize}
+The action functional is
+\beqn
+\int_{\R \times S} (B , F_A) + \frac12 \int_{\R \times S} (\phi, \dbar_A \phi) .
+\eeqn
+
+Alternatively, this theory is hybrid Chern--Simons theory associated to the cyclic, holomorphic, local Lie superalgebra
+\beqn
+\lie{g} \otimes \wedge^\bu W ,
+\eeqn
+where $\wedge^0, \wedge^2$ are even and $\wedge^1$ is odd.
+Here, we view $\wedge^\bu W$ as a bundle of commutative super algebras.
+Explicitly, the nonzero brackets $[-,-]$ in this Lie superalgebra is of the form
+\begin{align*}
+\lie{g} \otimes \wedge^0 W \times \lie{g} \otimes \wedge^0 W & \to \lie{g} \otimes \wedge^0 W  \\
+\lie{g} \otimes \wedge^0 W \times \lie{g} \otimes \wedge^1 W & \to \lie{g} \otimes \wedge^1 W \\
+\lie{g} \otimes \wedge^1 W \times \lie{g} \otimes \wedge^1 W & \to \lie{g} \otimes \wedge^2 W .
+\end{align*}
+
+The perturbative phase space on $S$ is the $\Z \times \Z/2$ even symplectic space
+\beqn
+\T^* \left( \lie{g} \otimes \Omega^{0,\bu}(S)[1] \right) \oplus \Pi \left(\lie{g} \otimes \Omega^{0,\bu}(S,W)[1] \right) .
+\eeqn
+A moduli theoretic interpretation of this is as follows.
+%Consider the moduli stack $\op{Bun}_G(S)$ of holomorphic $G$-bundles on $S$.
+%Let $\T^*_{\op{Bun}_G(S)}$ be its cotangent complex.
+Consider the moduli of triples
+\beqn
+(P, \eta, \phi)
+\eeqn
+where $P$ is a holomorphic $G$-bundle on $S$, $\eta \in \Omega^{2,1}(S, \op{ad} P)$, and $\phi \in \Omega^{0,1}(S,\op{ad}(P) \otimes W)$ which satisfy \brian{equations}.
+
+Let us now assume we have a polarization of $W = L_1 \oplus L_2$ into a sum of two line bundles on $S$ satisfying $L_1 \otimes L_2 = K_S$.
+Without loss of generality we set $L = L_1$ and $L_2 = L^{-1} \otimes K_S$.
+This allows us to consider a tilted (regraded) perturbative phase space\footnote{We should explain $\Pi W[1] \to L_2[2] \oplus L_1$.}
+\beqn
+\begin{tikzcd}
+\ul{-2} & \ul{-1} & \ul{0} \\
+& \Omega^{0,\bu}(S, \lie{g}) & \\
+\Omega^{2,\bu}(S,\lie{g} \otimes L^{-1}) & & \Omega^{0,\bu}(S, \lie{g} \otimes L) \\
+& \Omega^{2,\bu}(S, \lie{g}) & .
+\end{tikzcd}
+\eeqn
+Then, the perturbative phase space of generalized, twisted, five-dimensional $\cN=2$ supersymmetric Yang--Mills theory can be written as
+\beqn
+\op{Higgs}_G (S,L) .
+\eeqn
+Here $\op{Higgs}_G (S,L)$ is the moduli stack of quadruples $(P,\varphi, \varphi^*,B)$ where $P$ is a holomorphic $G$-bundle,
+\begin{align*}
+\varphi & \in \Gamma(S, \op{ad}(P) \otimes L) \\
+\varphi^* & \in \Omega^{2,2}(S, \op{ad}(P) \otimes L^{-1}) \\
+B & \in \Omega^{2,1}(S, \op{ad} P) 
+\end{align*}
+satisfying
+\begin{align*}
+\dbar \varphi = \dbar \varphi^* & = 0 \\
+\dbar B + [\varphi, \varphi^*] & = 0 .
+\end{align*}
+We can furthermore write this as a \textit{twisted} cotangent bundle to the moduli stack $\cM_{G}(S,L)$ of pairs $(P,\varphi)$ where $P$ is a holomorphic principal $G$-bundle and $\varphi \in \Gamma(S, \lie{g} \otimes L)$ satisfying $\dbar \varphi = 0$.
+The twist is by the two form \brian{finish}.
+
+\section{AGT statements}
+
+Let $S$ be a projective surface and $L_1,L_2,L_3$ line bundles on $S$ satisfying 
+\beqn
+L_1 \otimes L_2 \otimes L_3 = K_S .
+\eeqn
+We consider a special case of the geometry (2) where the threefold that twisted fivebranes $X$ is of the form
+\beqn
+X = \op{Tot} \begin{pmatrix} L_3 \\ \downarrow \\ S \end{pmatrix},
+\eeqn
+and where $W = L_1 \oplus L_2$ (or rather, the restrictions of these line bundles to $X$).
+In this case, the local Calabi--Yau fivefold geometry is $Z = \op{Tot}(L_1 \oplus L_2 \oplus L_3).$
+\end{document}
