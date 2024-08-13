@@ -92,9 +92,9 @@ This fits as a special case of (1) by taking $W$ to be the restriction of the bu
 We will work in the generality of the geometry in (1) where the fivefold is of the form $\op{Tot}(W \to X)$ with $\wedge^2 W = K_X$.
 
 The theory of a twisted fivebrane in this geometry admits the following description.
-In the Poisson BV formalism its sheaf of fields is of the form $\Omega^{0,\bu}(X,\mathbb{V})$ where $\mathbb{V}$ is the following super complex of holomorphic vector bundles
+In the Poisson BV formalism its sheaf of fields is of the form $\Omega^{0,\bu}(X,\bV)$ where $\bV$ is the following super complex of holomorphic vector bundles
 \beqn
-\mathbb{V} \;\;\;\left\{
+\bV \;\;\;\left\{
 \begin{tikzcd}
 & \ul{-1} & \ul{0} \\
 \ul{\text{even}} & \Omega^2_X \ar[r,"\del"] & \Omega^3_X \\
@@ -119,7 +119,7 @@ B & \in \Omega^{\bu}(\R) \otimes \Omega^{2,\bu}(S)\otimes \lie{g} [1] .
 \end{align*}
 \item Hypermultiplet fields
 \beqn
-\phi \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(S,\Pi W) [1] .
+\phi \in \Omega^\bu(\R) \otimes \Omega^{0,\bu}(S,\Pi W) \otimes \lie{g} [1] .
 \eeqn
 In other words, $\phi^{0,0}$ is an odd field of cohomological degree $-1$.
 \end{itemize}
@@ -149,10 +149,15 @@ A moduli theoretic interpretation of this is as follows.
 %Consider the moduli stack $\op{Bun}_G(S)$ of holomorphic $G$-bundles on $S$.
 %Let $\T^*_{\op{Bun}_G(S)}$ be its cotangent complex.
 Consider the moduli of triples
-\beqn
-(P, \eta, \phi)
+\beqn\label{eqn:pertphase1}
+(P, B, \phi)
 \eeqn
-where $P$ is a holomorphic $G$-bundle on $S$, $\eta \in \Omega^{2,1}(S, \op{ad} P)$, and $\phi \in \Omega^{0,1}(S,\op{ad}(P) \otimes W)$ which satisfy \brian{equations}.
+where $P$ is a holomorphic $G$-bundle on $S$, $\eta \in \Omega^{2,1}(S, \op{ad} P)$, and $\phi \in \Omega^{0,1}(S,\op{ad}(P) \otimes W)$ which satisfy 
+\begin{align*}
+\dbar \phi = 0 \\
+\dbar B + \frac12 [\phi,\phi] = 0 .
+\end{align*}
+The perturbative phase space in \eqref{eqn:pertphase1} is the tangent complex to this moduli stack at the trivial $G$-bundle (and $B = \phi = 0$).
 
 Let us now assume we have a polarization of $W = L_1 \oplus L_2$ into a sum of two line bundles on $S$ satisfying $L_1 \otimes L_2 = K_S$.
 Without loss of generality we set $L = L_1$ and $L_2 = L^{-1} \otimes K_S$.
@@ -165,23 +170,123 @@ This allows us to consider a tilted (regraded) perturbative phase space\footnote
 & \Omega^{2,\bu}(S, \lie{g}) & .
 \end{tikzcd}
 \eeqn
-Then, the perturbative phase space of generalized, twisted, five-dimensional $\cN=2$ supersymmetric Yang--Mills theory can be written as
+Then, the perturbative phase space of generalized, twisted, five-dimensional $\cN=2$ supersymmetric Yang--Mills theory can be written as the moduli stack
 \beqn
 \op{Higgs}_G (S,L) .
 \eeqn
-Here $\op{Higgs}_G (S,L)$ is the moduli stack of quadruples $(P,\varphi, \varphi^*,B)$ where $P$ is a holomorphic $G$-bundle,
+of quadruples $(P,\varphi, \varphi^*,B)$ where $P$ is a holomorphic $G$-bundle, and
 \begin{align*}
 \varphi & \in \Gamma(S, \op{ad}(P) \otimes L) \\
 \varphi^* & \in \Omega^{2,2}(S, \op{ad}(P) \otimes L^{-1}) \\
 B & \in \Omega^{2,1}(S, \op{ad} P) 
 \end{align*}
-satisfying
+which satisfy
 \begin{align*}
 \dbar \varphi = \dbar \varphi^* & = 0 \\
 \dbar B + [\varphi, \varphi^*] & = 0 .
 \end{align*}
-We can furthermore write this as a \textit{twisted} cotangent bundle to the moduli stack $\cM_{G}(S,L)$ of pairs $(P,\varphi)$ where $P$ is a holomorphic principal $G$-bundle and $\varphi \in \Gamma(S, \lie{g} \otimes L)$ satisfying $\dbar \varphi = 0$.
-The twist is by the two form \brian{finish}.
+We can furthermore write this as the cotangent bundle to the moduli stack $\cM_{G}(S,L)$ of pairs $(P,\varphi)$ where $P$ is a holomorphic principal $G$-bundle on $S$ and $\varphi \in \Gamma(S, \lie{g} \otimes L)$ satisfying $\dbar \varphi = 0$.
+
+In this example, the Hilbert space of states coming from geometric quantization is functions on the base of this cotangent bundle
+\beqn
+\cO \left( \cM_{G}(S,L) \right) .
+\eeqn 
+Notice that when $L = K_S$ we have the Hilbert space
+\beqn
+\cO \left( \T[1] \op{Bun}_G(S) \right) \simeq \Omega^{\bu}(\op{Bun}_G(S)) .
+\eeqn
+
+\subsection{Chern--Simons deformation}
+
+Let $\omega \in \Omega^{1,1}(S)$ be a $(1,1)$-form on $S$ with the property that $\dbar \omega = 0$ and $\del \omega = 0$.
+In other words, $\omega$ defines an element in $H^1(S, \Omega^{1,cl})$.
+Then, consider the deformation of generalized twisted five-dimensional $\cN=2$ Yang--Mills theory defined by
+\beqn
+S_\theta = \frac12 \int_{\R \times S} \omega \wedge (A, \del A) .
+\eeqn
+Locally, we can find a primitive $\omega = \del \theta$ and this deformation takes the more symmetric form $\frac12 \int \theta \wedge (\del A, \del A)$.
+
+Turning on this deformation leads to the deformed perturbative phase space
+\beqn
+\begin{tikzcd}
+\ul{-2} & \ul{-1} & \ul{0} \\
+& \Omega^{0,\bu}(S, \lie{g}) \ar[dd,dotted,"\omega \wedge \del"] & \\
+\Omega^{2,\bu}(S,\lie{g} \otimes L^{-1}) & & \Omega^{0,\bu}(S, \lie{g} \otimes L) \\
+& \Omega^{2,\bu}(S, \lie{g}) & .
+\end{tikzcd}
+\eeqn
+A more invariant way to construct this perturbative phase space is the following.
+By transgression, we can view the invariant form as a one-form on the moduli stack $\op{Bun}_G(S)$ of cohomological degree $-1$.
+We can pull this one-form back to get a one-form on $S \times \op{Bun}_G(S)$ also of cohomological degree $-1$.
+Integration of this one-form against $\omega$ along the fibers of $S \times \op{Bun}_G(S) \to \op{Bun}_G(S)$ yields a two-form on $\op{Bun}_G(S)$ (of cohomological degree zero).
+We can, in turn, further restrict this to a two-form on $\cM_{G}(S,L)$ that we will abusively still denote by $\omega$.
+The phase space is then the twisted cotangent bundle
+\beqn
+\T_{\omega}^* \left(\cM_{G}(S,L) \right) .
+\eeqn
+
+\section{The abelian case}
+
+We will work in the generality of the geometry in (1) where the fivefold is of the form $\op{Tot}(W \to X)$ with $\wedge^2 W = K_X$.
+
+\subsection{Nakajima, Grojnowksi, and the Heisenberg vertex algebra}
+
+Assume that $S$ is a projective surface equipped with a rank two vector bundle $V$ satisfying $\wedge^2 W = K_S$.
+Consider the resulting twisted fivebrane worldvolume theory on $X = S \times C$ where $W = V \boxtimes K_C^{1/2}$ (here, we are assuming that $C$ is equipped with a spin structure).
+In the Poisson BV formalism its sheaf of fields is of the form $\Omega^{0,\bu}(S \times C,\bV)$ where $\bV$ is the following super complex of holomorphic vector bundles
+\beqn
+\bV \colon \;\;\;\left\{
+\begin{tikzcd}
+& \ul{-1} & \ul{0} \\
+\ul{\text{even}} & \Omega^2_{S \times C} \ar[r,"\del"] & \Omega^3_{S \times C} \\
+\ul{\text{odd}} & \Pi p^* W  
+\end{tikzcd} \right.
+\eeqn
+We will write Dolbeault valued fields of the bundle in the first line with the letter as~$\beta$ and in the bottom line as $\phi$, as we did above.
+The BV quantization of this theory yields a factorization algebra on $S \times C$ that we will denote $\Obs_{S,W}$.
+Its compactification, or factorization homology, along $S$
+\beqn
+\int_S \Obs_{S,W} 
+\eeqn
+is a holomorphic factorization algebra on $C$.
+On $C = \C$ this determines a vertex algebra that we denote $\VV_{S,W}$.
+
+We describe this vertex algebra explicitly.
+Notice that since $S$ is projective there is a quasi-isomorphism of sheaves on $C$:
+\begin{align*}
+\Omega^{2,\bu}_{S \times C} & \simeq H^{\bu} (S, K_S) \otimes \Omega^{0,\bu}_C  \oplus H^\bu(S, \Omega^1_S) \otimes \Omega^{1,\bu}_C \\
+\Omega^{3,\bu}_{S \times C} & \simeq H^{\bu} (S, K_S) \otimes \Omega^{1,\bu}_C  \\
+\Omega^{0,\bu}_{S \times C}(W \boxtimes K_{C}^{1/2}) & \simeq H^\bu(S, W) \otimes \Omega^{0,\bu}_C(K^{1/2}_C) .
+\end{align*}
+
+Suppose that $V$ is a graded vector space equipped with a graded symmetric pairing of total degree zero.
+Let $\{e_i\}$ be a basis for $V$.
+There is a vertex algebra $\cC\cB(V)$ generated by fields $e_i(z)$ of spin one and with OPEs
+\beqn
+e_i(z) e_j(w) \simeq \frac{(e_i,e_j)}{(z-w)^2} .
+\eeqn
+This is a graded vertex algebra with grading inherited from that of $V$.
+Notice when $V = \C$ with the obvious pairing this is simply the chiral boson vertex algebra.
+
+Similarly, suppose that $U$ is a $\Z \times \Z/2$ vector space equipped with a graded totally anti-symmetric pairing $\<-,-\>$ of total degree zero.
+Then we can consider the symplectic boson vertex algebra valued in $U$ that we denote $\cS\cB(U)$.
+If $\{f_i\}$ is a basis for $U$ then the vertex algebra is generated by free fields $f_i(z)$ of spin $1/2$ and with OPEs
+\beqn
+f_i(z) f_j(w) \simeq \frac{\<f_i,f_j\>}{z-w} .
+\eeqn
+This vertex algebra inherits a $\Z \times \Z/2$ grading from $U$.
+
+\begin{prop}
+The vertex algebra $\VV_{S,W}$ is quasi-isomorphic to the vertex algebra
+\beqn
+\cC\cB(H^\bu(S,\Omega^1_S)) \otimes \cS\cB(\Pi H^\bu(S,W)[1]) \otimes T
+\eeqn 
+where $T$ is the vector space
+\beqn
+\Sym(H^\bu(S,K_S)[1])
+\eeqn
+equipped with the trivial vertex algebra structure.
+\end{prop}
 
 \section{AGT statements}
 
