@@ -95,7 +95,7 @@ We will work in the generality of the geometry in (1) where the fivefold is of t
 
 The theory of a twisted fivebrane in this geometry admits the following description.
 In the Poisson BV formalism its sheaf of fields is of the form $\Omega^{0,\bu}(X,\bV)$ where $\bV$ is the following super complex of holomorphic vector bundles
-\beqn
+\beqn\label{eqn:fivebranes}
 \bV \;\;\;\left\{
 \begin{tikzcd}
 & \ul{-1} & \ul{0} \\
@@ -227,7 +227,8 @@ to a four-form on $S \times \op{Bun}_G(S)$.
 Integration of the six-form $\omega \wedge \op{ev}^*\kappa$ along $S$ yields a two-form $\omega_{\kappa} = \int_S \omega \wedge \op{ev}^*\kappa$ on $\op{Bun}_G(S)$.
 We can, in turn, further restrict this to a two-form on $\cM_{G}(S,L)$ that we will abusively still denote by $\omega_{\kappa}$.
 The phase space is then the twisted cotangent bundle
-\beqn
+
+\beqn\label{eqn:5dphase}
 \T_{\omega_{\kappa}}^* \left(\cM_{G}(S,L) \right) .
 \eeqn
 
@@ -376,4 +377,43 @@ X = \op{Tot} \begin{pmatrix} L_3 \\ \downarrow \\ S \end{pmatrix},
 \eeqn
 and where $W = L_1 \oplus L_2$ (or rather, the restrictions of these line bundles to $X$).
 In this case, the local Calabi--Yau fivefold geometry is $Z = \op{Tot}(L_1 \oplus L_2 \oplus L_3).$
+
+We will consider a variant of the factorization algebra $\Obs_{S, W}$ in the case where $L_3$ is possibly a nontrivial line bundle. Indeed, BV quantization of the fields \eqref{eqn:fivebrane} of a twisted fivebrane on $X$ yields a holomorphic factorization algebra $\Obs_{X, W}$ that specializes to $\Obs_{S, W}$ in the case where $L_3$ is the trivial line bundle on $S$ \surya{introduce earlier}
+
+From the factorization algebra $\Obs_{X, W}$, we will produce a pair of an associative algebra and a module. To do so, we choose a Hermitian metric on $L_3$. Doing so gives us a norm map
+
+\beqn
+X\to X\times_S X \to S\times \C
+\eeqn
+
+which factors through the trivial $\R_{\geq 0}$-bundle on $S$ since a Hermitian metric is in particular positive definite. Let $p$ denote the composition of this map with the projection onto $\R_{\geq 0}$. 
+
+The geometry of the situation can be summarized in the following diagram
+
+\[
+\begin{tikzcd}
+X\setminus S \ar[d,"\mathring p"'] \ar[r,hook] & X \ar[d,"p"] & \ar[l,hook',"0"'] S \ar[d] \\
+\R_{>0} \ar[r,hook] & \R_{\geq 0} & \ar[l,hook'] \{0\}.
+\end{tikzcd}
+\]
+
+The pushforward
+\beqn
+p_* \Obs_{X,W}
+\eeqn
+
+is therefore a factorization algebra on $\R_{\geq 0}$. 
+
+We may extract from this data, an associative algebra and a module as follows. 
+
+\begin{itemize}
+\item Let $(a,b)\subset \R_{\geq 0}$. The sections $(p_* \Obs_{X, W})(a,b)$ are an associative algebra, which we will denote as $\AA(X, W)$. 
+
+This associative algebra can equivalently be computed by restricting away from $S$, and pushing forward along $\mathring p$. The fiber of this map at $r \in \R_{>0}$ is a copy of $S_r(L_3)\subset X$, the total space of the radius $r$ circle bundle in $L_3$. Notice that in the case when $L_3$ is trivial, this associative algebra is exactly the modes algebra of the vertex algebra $\VV_{S,W}$. 
+
+\item The costalk at zero $(p_*\Obs{X,W})_0$ is a module, which we denote as $\MM (X, W)$. 
+\end{itemize}
+
+The AGT relation asserts that $\MM(X,W)$ may equivalently be computed as the geometric quantization of \eqref{eqn:5dphase}
+
 \end{document}
